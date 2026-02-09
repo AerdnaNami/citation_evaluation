@@ -47,12 +47,6 @@ def merge_dicts(base: dict, override: dict) -> dict:
 # Dataset
 # -------------------------
 class PromptCompletionDataset(Dataset):
-    """
-    Loads either:
-      - JSONL: one object per line
-      - JSON: a list of objects OR dict with a list under one of: data/rows/examples/items
-    Each object must contain `prompt_key` and `completion_key`.
-    """
     def __init__(self, path: str, prompt_key: str = "prompt", completion_key: str = "completion"):
         self.rows: List[Dict[str, Any]] = []
         self.prompt_key = prompt_key
@@ -60,7 +54,6 @@ class PromptCompletionDataset(Dataset):
 
         with open(path, "r", encoding="utf-8-sig") as f:
             text = f.read().strip()
-
         if not text:
             raise ValueError(f"{path} is empty")
 
@@ -68,28 +61,26 @@ class PromptCompletionDataset(Dataset):
             try:
                 obj = json.loads(text)
                 self.rows = self._normalize_json(obj, path)
-                self._validate_rows(path)
-                return
             except json.JSONDecodeError:
-                pass
+                self.rows = self._load_jsonl(path)
+        else:
+            self.rows = self._load_jsonl(path)
 
-        # JSONL fallback
-        self.rows = []
+        self._validate_rows(path)
+
+    def _load_jsonl(self, path: str) -> List[Dict[str, Any]]:
+        rows = []
         with open(path, "r", encoding="utf-8-sig") as f:
             for lineno, line in enumerate(f, start=1):
                 line = line.strip()
                 if not line:
                     continue
                 try:
-                    self.rows.append(json.loads(line))
+                    rows.append(json.loads(line))
                 except json.JSONDecodeError as e:
                     preview = line[:200].replace("\n", "\\n")
-                    raise ValueError(
-                        f"Failed to parse JSON on line {lineno} in {path}: {e}\n"
-                        f"Line preview: {preview}"
-                    ) from e
-
-        self._validate_rows(path)
+                    raise ValueError(f"Bad JSON on line {lineno} in {path}: {e}\nPreview: {preview}") from e
+        return rows
 
     def _normalize_json(self, obj: Any, path: str) -> List[Dict[str, Any]]:
         if isinstance(obj, list):
@@ -98,76 +89,103 @@ class PromptCompletionDataset(Dataset):
             for k in ("data", "rows", "examples", "items"):
                 if k in obj and isinstance(obj[k], list):
                     return obj[k]
-        raise ValueError(
-            f"{path} parsed as JSON but is not a list of examples or a dict containing a list "
-            f"(expected e.g. [{{...}}, ...] or {{'data': [...]}}). Got: {type(obj)}"
-        )
+        raise ValueError(f"{path} JSON must be a list of examples (or dict containing one). Got: {type(obj)}")
 
     def _validate_rows(self, path: str) -> None:
-        if not isinstance(self.rows, list):
-            raise ValueError(f"{path}: expected a list of examples, got {type(self.rows)}")
-
+        cleaned = []
+        bad = 0
         for i, r in enumerate(self.rows):
-            if not isinstance(r, dict):
-                raise ValueError(f"{path}: example {i} is not a dict (got {type(r)})")
+            if not isinstance(r, dict) or len(r) == 0:
+                bad += 1
+                continue
             if self.prompt_key not in r or self.completion_key not in r:
-                raise ValueError(
-                    f"{path}: example {i} missing keys "
-                    f"'{self.prompt_key}' and/or '{self.completion_key}'. Keys: {list(r.keys())}"
-                )
+                bad += 1
+                continue
+            if not isinstance(r[self.prompt_key], str) or not isinstance(r[self.completion_key], str):
+                bad += 1
+                continue
+            if r[self.prompt_key].strip() == "" or r[self.completion_key].strip() == "":
+                bad += 1
+                continue
+            cleaned.append(r)
+
+        if bad > 0:
+            print(f"[WARN] Dropped {bad} invalid/empty examples from {path}. Kept {len(cleaned)}.")
+
+        if len(cleaned) == 0:
+            raise ValueError(f"{path}: no valid examples left after cleaning.")
+
+        self.rows = cleaned
 
     def __len__(self) -> int:
         return len(self.rows)
 
     def __getitem__(self, idx: int) -> Dict[str, str]:
         r = self.rows[idx]
+        # Always return canonical keys for the collator
         return {"prompt": r[self.prompt_key], "completion": r[self.completion_key]}
 
 
-# -------------------------
-# Collator
-# -------------------------
 @dataclass
 class PromptCompletionCollator:
     tokenizer: Any
     max_length: int = 2048
 
     def __call__(self, batch: List[Dict[str, str]]) -> Dict[str, torch.Tensor]:
-        prompts = [ex["prompt"] for ex in batch]
-        completions = [ex["completion"] for ex in batch]
+        input_ids_list = []
+        attention_mask_list = []
+        labels_list = []
 
-        full_texts = [p + c for p, c in zip(prompts, completions)]
+        eos_id = self.tokenizer.eos_token_id
+        pad_id = self.tokenizer.pad_token_id
 
-        enc_full = self.tokenizer(
-            full_texts,
-            truncation=True,
-            max_length=self.max_length,
-            padding=True,
-            return_tensors="pt",
+        for ex in batch:
+            prompt = ex.get("prompt", "")
+            completion = ex.get("completion", "")
+
+            prompt_ids = self.tokenizer(prompt, add_special_tokens=False)["input_ids"]
+            comp_ids = self.tokenizer(completion, add_special_tokens=False)["input_ids"]
+
+            # If completion tokenizes to nothing (e.g., whitespace), force EOS so we have supervision
+            if len(comp_ids) == 0:
+                comp_ids = [eos_id]
+
+            # If completion alone exceeds max_length, keep the tail (or head) so we still train
+            if len(comp_ids) > self.max_length:
+                comp_ids = comp_ids[-self.max_length:]
+
+            # Truncate prompt to make room for completion
+            max_prompt_len = max(0, self.max_length - len(comp_ids))
+            if len(prompt_ids) > max_prompt_len:
+                prompt_ids = prompt_ids[-max_prompt_len:]
+
+            input_ids = prompt_ids + comp_ids
+            attention_mask = [1] * len(input_ids)
+
+            labels = input_ids.copy()
+            labels[:len(prompt_ids)] = [IGNORE_INDEX] * len(prompt_ids)
+
+            # Final safety: ensure at least one label token
+            if all(x == IGNORE_INDEX for x in labels):
+                # shouldn't happen, but guard anyway
+                labels[-1] = input_ids[-1]
+
+            input_ids_list.append(torch.tensor(input_ids, dtype=torch.long))
+            attention_mask_list.append(torch.tensor(attention_mask, dtype=torch.long))
+            labels_list.append(torch.tensor(labels, dtype=torch.long))
+
+        input_ids = torch.nn.utils.rnn.pad_sequence(
+            input_ids_list, batch_first=True, padding_value=pad_id
+        )
+        attention_mask = torch.nn.utils.rnn.pad_sequence(
+            attention_mask_list, batch_first=True, padding_value=0
+        )
+        labels = torch.nn.utils.rnn.pad_sequence(
+            labels_list, batch_first=True, padding_value=IGNORE_INDEX
         )
 
-        enc_prompt = self.tokenizer(
-            prompts,
-            truncation=True,
-            max_length=self.max_length,
-            padding=True,
-            return_tensors="pt",
-        )
-
-        input_ids = enc_full["input_ids"]
-        attention_mask = enc_full["attention_mask"]
-
-        labels = input_ids.clone()
-        for i in range(len(batch)):
-            prompt_len = int(enc_prompt["attention_mask"][i].sum().item())
-            labels[i, :prompt_len] = IGNORE_INDEX
-
-        return {
-            "input_ids": input_ids,
-            "attention_mask": attention_mask,
-            "labels": labels,
-        }
-
+        return {"input_ids": input_ids, "attention_mask": attention_mask, "labels": labels}
+        
 
 # -------------------------
 # Checkpoint helpers
@@ -359,6 +377,7 @@ def main():
 
     # Training args
     train_args = TrainingArguments(
+        remove_unused_columns=False,
         output_dir=out_dir,
         overwrite_output_dir=False,
 
@@ -386,12 +405,40 @@ def main():
         save_safetensors=True,
         logging_dir=os.path.join(out_dir, "logs"),
 
-        evaluation_strategy="steps" if eval_ds is not None else "no",
+        eval_strategy="steps" if eval_ds is not None else "no",
         eval_steps=save_steps if eval_ds is not None else None,
 
         report_to="none",
         group_by_length=False,
     )
+
+    # --- SANITY CHECK: inspect one batch end-to-end ---
+    sample = [train_ds[0]]
+    batch = collator(sample)
+
+    num_label_tokens = (batch["labels"] != IGNORE_INDEX).sum().item()
+    seq_len = batch["input_ids"].shape[1]
+    print(f"[SANITY] seq_len={seq_len}, num_label_tokens={num_label_tokens}")
+
+    # Must have at least 1 supervised token
+    if num_label_tokens == 0:
+        raise RuntimeError(
+            "[SANITY FAIL] num_label_tokens == 0. Your collator is masking everything "
+            "(likely because completion is empty or being truncated away)."
+        )
+
+    # Run a single forward pass to confirm non-zero loss + that compute is happening
+    model.eval()
+    with torch.no_grad():
+        out = model(
+            input_ids=batch["input_ids"].to(model.device),
+            attention_mask=batch["attention_mask"].to(model.device),
+            labels=batch["labels"].to(model.device),
+        )
+    print(f"[SANITY] forward loss={out.loss.item()}")
+    if out.loss.item() == 0.0:
+        raise RuntimeError("[SANITY FAIL] forward loss is 0.0 even though label tokens exist.")
+    model.train()
 
     trainer = Trainer(
         model=model,
