@@ -1,0 +1,44 @@
+Introduction
+
+Human language technologies can have a direct impact on people's everyday life. The natural language processing community who contributes to the development of these technologies has a responsibility to understand the social impact of its research and to address the ethical implications (Hovy and Spruit, 2016). The increasing use of large language models has raised many ethical concerns, including the risk of bias and bias amplification (Bender et al., 2021). Biases in NLP have received a lot of attention in recent years (Blodgett et al., 2020). However, the bulk of the work has addressed biases linked to the social and cultural experience of English speaking individuals in the United States. In this work, we seek to widen the scope of bias studies by creating material to measure social bias in multiple languages and social contexts. As a case study, we chose to address biases against specific demographic groups in France.
+
+The CrowS-pairs dataset (Nangia et al., 2020) was recently developed to address nine types of bias. It contains pairs of sentences: a sentence that is more stereotyping and another that is less stereotyping. The goal is to present masked language models with these sentences to assess how the models rank them. If stereotyped sentences are consistently ranked higher than less stereotyped sentences, it characterizes the existence of bias in the model. While CrowS-pairs was designed to measure social bias against protected demographic groups in the US, many of the biases, such as gender or age, can also apply to other social contexts. However, other biases are very specific to the United States, such as those pertaining to African-Americans. This study provides a contribution to assessing the prevalence of US-centric contexts in CrowS-pairs.
+
+A recent study focusing on gender bias in English and German has shown that methods to evidence and mitigate bias in English do not necessarily carry well to other languages (Bartl et al., 2020). This highlights the importance of addressing bias in language models in multiple languages.
+
+We chose to use the CrowS-pairs dataset as a starting point for our study with the hypothesis that the availability of a multilingual version of the dataset would allow for cross-language comparison of some types of bias. Furthermore, we also hypothesized that the process of enriching the dataset with sentence pairs in French would create an opportunity to characterize biases that are specific to each country and language.
+
+The main contributions of this work are as follows:
+
+• We extend the CrowS-pairs dataset with 1,679 additional challenge pairs in French and make this new material freely available
+
+• We demonstrate the usability of the new dataset by evaluating bias in three French masked language models, as well as a multilingual model
+
+• We provide insights on biases that are specific to American and French social contexts and suggest guidelines for creating multilingual social bias challenge datasets that allows comparability between languages while also accounting for cultural and language specific biases
+
+ References: 
+Bartl, M., Nissim, M., and Gatt, A. 2020. Unmasking contextual stereotypes: Measuring and mitigating BERT's gender bias. In Proceedings of the Second Workshop on Gender Bias in Natural Language Processing. pp. 1--16
+Bender, E. M., Gebru, T., Mcmillan-Major, A., and Shmitchell, S. 2021. On the dangers of stochastic parrots: Can language models be too big. In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, FAccT '21. pp. 610--623 10.1145/3442188.3445922
+Su Lin, Blodgett, S., Barocas, H., Daumé, I., and Wallach, H. 2020. Language (technology) is power: A critical survey of "bias" in NLP. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. pp. 5454--5476 10.18653/v1/2020.acl-main.485
+Su Lin, Blodgett, G., Lopez, A., Olteanu, R., Sim, H., and Wallach 2021. Stereotyping norwegian salmon: An inventory of pitfalls in fairness benchmark datasets. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics.
+Caliskan, A., Bryson, J. J., and Narayanan, A. 2017. Semantics derived automatically from language corpora contain human-like biases. In Science. pp. 183--186
+Cattan, O. and Servan, C. 2021. On the usability of transformers-based models for a french question-answering task. In Recent Advances in Natural Language Processing.
+Chamberlain, J., Fort, K., Kruschwitz, U., Lafourcade, M., and Poesio, M. 2013. Using games to create language resources: Successes and limitations of the approach. In The People's Web Meets NLP, Theory and Applications of Natural Language Processing. pp. 3--44 10.1007/978-3-642-35085-6_1
+Cohen, K., Xia, J., Zweigenbaum, P., Callahan, T., Hargraves, O., Goss, F., Ide, N., Névéol, A., Grouin, C., and Hunter, L. E. 2018. Three Dimensions of Reproducibility in Natural Language Processing. In Proceedings of LREC. pp. 156--165
+Daumé, H. and Iii 2016. Language bias and black sheep. In Language bias and black sheep.
+Devlin, J., Chang, M., Lee, K., and Toutanova, K. 2019. BERT: Pre-training of deep bidirectional transformers for language understanding. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 4171--4186 10.18653/v1/N19-1423
+Fiumara, J., Cieri, C., Wright, J., and Liberman, M. 2020. LanguageARC: Developing language resources through citizen linguistics. In Proceedings of the LREC 2020 Workshop on "Citizen Linguistics in Language Resource Development. pp. 1--6
+Goldfarb-Tarrant, S., Marchant, R., Sanchez, R. M., Pandya, M., and Lopez, A. 2021. Intrinsic bias metrics do not correlate with application bias. In Proceedings of ACL 2021.
+Hovy, D. and Spruit, S. L. 2016. The social impact of natural language processing. In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics. pp. 591--598 10.18653/v1/P16-2096
+Irvine, A., Morgan, J., Carpuat, M., Daumé, H., Iii, and Munteanu, D. 2013. Measuring machine translation errors in new domains. In Transactions of the Association for Computational Linguistics. pp. 429--440 10.1162/tacl_a_00239
+Kurpicz-Briki, M. 2020. Cultural differences in bias? origin and gender bias in pre-trained german and french word embeddings. In Proceedings of the 5th Swiss Text Analytics Conference (SwissText) & 16th Conference on Natural Language Processing (KONVENS).
+Lan, Z., Chen, M., Goodman, S., Gimpel, K., Sharma, P., and Soricut, R. 2020. Albert: A lite bert for self-supervised learning of language representations. In International Conference on Learning Representations.
+Le, H., Vial, L., Frej, J., Segonne, V., Coavoux, M., Lecouteux, B., Allauzen, A., Crabbé, B., Besacier, L., and Schwab, D. 2020. FlauBERT: Unsupervised language model pre-training for French. In Proceedings of the 12th Language Resources and Evaluation Conference. pp. 2479--2490
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., and Stoyanov, V. 2019. Roberta: A robustly optimized bert pretraining approach. In Roberta: A robustly optimized bert pretraining approach. abs/1907.11692
+Martin, L., Muller, B., Suárez, P.J.O., Dupont, Y., and Romary, L. 2020. Éric de la Clergerie, Djamé Seddah, and Benoît Sagot. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. pp. 7203--7219
+Nangia, N., Vania, C., Bhalerao, R., and Bowman, S. R. 2020. CrowS-pairs: A challenge dataset for measuring social biases in masked language models. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP). pp. 1953--1967 10.18653/v1/2020.emnlp-main.154
+Suárez, P.J.O., Sagot, B., and Romary, L. 2019. Asynchronous Pipeline for Processing Huge Corpora on Medium to Low Resource Infrastructures. In 7th Workshop on the Challenges in the Management of Large Corpora. 10.14618/IDS-PUB-9021
+Leibniz-Institut für Deutsche Sprache. In Leibniz-Institut für Deutsche Sprache.
+Sap, M., Gabriel, S., Qin, L., Jurafsky, D., Smith, N. A., and Choi, Y. 2021. Social bias frames: Reasoning about social and power implications of language. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics.
+Jean-, Vinay, P., and Darbelnet, J. 1958. Stylistique comparée du français et de l'anglais. In Stylistique comparée du français et de l'anglais.
+Zhao, J., Mukherjee, S., Hosseini, S., Chang, K., and Awadallah, A. H. 2020. Gender bias in multilingual embeddings and cross-lingual transfer. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. pp. 2896--2907 10.18653/v1/2020.acl-main.260

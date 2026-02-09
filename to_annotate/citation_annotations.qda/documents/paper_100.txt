@@ -1,0 +1,41 @@
+Related work
+
+We describe related works on pinyin input method and pinyin-enhanced pretrained models here.
+
+Pinyin Input Method 
+
+We describe existing works based on whether the input pinyin is perfect or abbreviated. A majority of existing works focus on perfect pinyin. Traditional models are typically based on statistical language models (Chen and Lee, 2000) and statistical machine translation (Yang et al., 2012). Recent works are usually built with neural network. For example, Moon IME (Huang et al., 2018) integrates attention-based neural network and an information retrieval module. Zhang et al. (2019) improves an LSTM-
+based encoder-decoder model with online vocabulary adaptation. For abbreviated pinyin, CoCAT (Huang et al., 2015) uses machine translation technology to reduce the number of the typing letters. Huang and Zhao (2018) propose an LSTM-based encoder-decoder approach with the concatenation of context words and abbreviated pinyin as input. Our work differs from existing works in that we are the first one to exploit GPT and verify the pros and cons of GPT in different situations. In addition, there are some works handling
+pinyin with typing errors. Chen and Lee (2000) investigate a typing model which handles spelling correction in sentence-based pinyin input method. CHIME (Zheng et al., 2011) is a error-tolerant Chinese pinyin input method. It finds similar pinyin which will be further ranked with Chinese specific features. Jia and Zhao (2014) propose a joint graph model to globally optimize the tasks of pinyin input method and typo correction. We leave error-tolerant pinyin input method as a future work. 
+
+Pinyin-enhanced Pretrained Models 
+
+Our methodology also relates to pretrained models that use pinyin information. Sun et al. (2021) propose a general-purpose Chinese BERT with
+new embedding layers to inject pinyin and glyph information of characters. There are also task-specific BERT models, especially for the task of grammatical error correction since an important type of error is caused by characters pronounced with the same pinyin. Zhang et al. (2021a) add a pinyin embedding layer and learns to predict characters from similarly pronounced candidates. PLOME (Liu et al., 2021) add two embedding layers implemented with two GRU networks to inject both pinyin and shape of characters, respectively. Xu et al. (2021) add a hierarchical encoder to inject the pinyin letters at character and sentence levels, and add a ResNet encoder to use graphic features of character image.
+
+ References: 
+Chen, Z. and Lee, K. 2000. A new statistical approach to Chinese Pinyin input. In Proceedings of the 38th Annual Meeting of the Association for Computational Linguistics. pp. 241--247 10.3115/1075218.1075249
+Du, Z. 2019. Gpt2-chinese: Tools for training gpt2 model in chinese language. In Gpt2-chinese: Tools for training gpt2 model in chinese language.
+Huang, G., Zhang, J., Zhou, Y., and Zong, C. 2015. A new input method for human translators: Integrating machine translation effectively and imperceptibly. In Proceedings of the 24th International Conference on Artificial Intelligence, IJCAI'15. pp. 1163--1169
+Huang, Y., Li, Z., Zhang, Z., and Zhao, H. 2018. Moon IME: Neural-based Chinese Pinyin aided input method with customizable association. In Proceedings of ACL 2018, System Demonstrations. pp. 140--145 10.18653/v1/P18-4024
+Huang, Y. and Zhao, H. 2018. Chinese Pinyin aided IME, input what you have not keystroked yet. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. pp. 2923--2929 10.18653/v1/D18-1321
+Jia, Z. and Zhao, H. 2013. KySS 1.0: a framework for automatic evaluation of Chinese input method engines. In Proceedings of the Sixth International Joint Conference on Natural Language Processing. pp. 1195--1201
+Jia, Z. and Zhao, H. 2014. A joint graph model for Pinyin-to-Chinese conversion with typo correction. In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics. pp. 1512--1523 10.3115/v1/P14-1142
+Diederik, P., Kingma, J., and Ba 2015. Adam: A method for stochastic optimization. In 3rd International Conference on Learning Representations.
+Liu, S., Yang, T., Yue, T., Zhang, F., and Wang, D. 2021. PLOME: Pre-training with misspelled knowledge for Chinese spelling correction. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing. pp. 2991--3000 10.18653/v1/2021.acl-long.233
+Radford, A. and Narasimhan, K. 2018. Improving language understanding by generative pre-training. In Improving language understanding by generative pre-training.
+Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., and Sutskever, I. 2019. Language models are unsupervised multitask learners. In Language models are unsupervised multitask learners.
+Sun, Z., Li, X., Sun, X., Meng, Y., Ao, X., He, Q., Wu, F., and Li, J. 2021. Chi-neseBERT: Chinese pretraining enhanced by glyph and Pinyin information. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing. pp. 2065--2075 10.18653/v1/2021.acl-long.161
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., and Polosukhin, I. 2017. Attention is all you need. In Advances in neural information processing systems. pp. 5998--6008
+Heng-Da, Xu, Z., Li, Q., Zhou, C., Li, Z., Wang, Y., Cao, H., Huang, X., and Mao 2021. Read, listen, and see: Leveraging multimodal information helps Chinese spell checking. In Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021. pp. 716--728 10.18653/v1/2021.findings-acl.64
+Xu, L., Zhang, X., and Dong, Q. 1355. Cluecorpus2020: A large-scale chinese corpus for pre-training language model. ArXiv, abs. In Cluecorpus2020: A large-scale chinese corpus for pre-training language model. ArXiv, abs.
+Yang, S., Zhao, H., and Lu, B. 2012. Towards a semantic annotation of English television news -building and evaluating a constraint grammar FrameNet. In Proceedings of the 26th Pacific Asia Conference on Language, Information, and Computation. pp. 333--342
+Yuan, S., Zhao, H., Du, Z., Ding, M., Liu, X., Cen, Y., Zou, X., Yang, Z., and Tang, J. 2021. Wudaocorpora: A super large-scale chinese corpora for pre-training language models. In AI Open. pp. 65--68 10.1016/j.aiopen.2021.06.001
+Zhang, H., Liu, L., Jiang, H., Li, Y., Zhao, E., Xu, K., Song, L., Zheng, S., Zhou, B., Zhu, J., Feng, X., Chen, T., Yang, T., Yu, D., Zhang, F., Kang, Z., and Shi, S. 2020. Texsmart: A text understanding system for fine-grained ner and enhanced semantic analysis. In Texsmart: A text understanding system for fine-grained ner and enhanced semantic analysis. arXiv:2012.15639
+Zhang, R., Pang, C., Zhang, C., Wang, S., He, Z., Sun, Y., Wu, H., and Wang, H. 2021. Correcting Chinese spelling errors with phonetic pre-training. In Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021. pp. 2250--2261 10.18653/v1/2021.findings-acl.198
+Zhang, X., Wei, C., and Zhao, H. 2017. Tracing a loose wordhood for chinese input method engine. In Tracing a loose wordhood for chinese input method engine. abs/1712.04158
+Zhang, Z., Han, X., Zhou, H., Ke, P., Gu, Y., Ye, D., Qin, Y., Su, Y., Ji, H., and Guan, J. 2021. Cpm: A large-scale generative chinese pre-trained language model. In AI Open. pp. 93--99
+Zhang, Z., Huang, Y., and Zhao, H. 2019. Open vocabulary learning for neural Chinese Pinyin IME. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics. pp. 1584--1594 10.18653/v1/P19-1154
+Zhao, H., Huang, C., and Li, M. 2006. An improved Chinese word segmentation system with conditional random field. In Proceedings of the Fifth SIGHAN Workshop on Chinese Language Processing. pp. 162--165
+Zheng, Y., Li, C., and Sun, M. 2011. Chime: An efficient error-tolerant chinese pinyin input method. In IJCAI. pp. 2551--2556 IJ- CAI/AAAI
+Zhou, X., Hu, X., Zhang, X., and Shen, X. 2007. A segment-based hidden markov model for real-setting pinyin-to-chinese conversion. In Proceedings of the Sixteenth ACM Conference on Conference on Information and Knowledge Management, CIKM '07. pp. 1027--1030 10.1145/1321440.1321602

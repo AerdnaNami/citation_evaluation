@@ -1,0 +1,62 @@
+Introduction
+
+An explanation or rationale 2 , typically consists of a subset of the input that contributes more to the prediction. Extracting faithful explanations is important for studying model behavior (Adebayo et al., 2020) and assisting in tasks requiring human decision making, such as clinical text classification (Chakrabarty et al., 2019) and automatic fact-checking (Popat et al., 2018). A faithful explanation is one which accurately represents the 1 Code is attached to the submission and will be publicly released. 2 We use these terms interchangeably throughout our work.
+
+reasoning behind a model's prediction (Jacovi and Goldberg, 2020) Two popular methods for extracting explanations are through feature attribution approaches (i.e. posthoc explanation methods) or via inherently faithful classifiers (i.e. select-then-predict models). The first computes the contribution of different parts of the input with respect to a model's prediction (Sundararajan et al., 2017;Ribeiro et al., 2016;Shrikumar et al., 2017). The latter consists of using a rationale extractor to identify the most important parts of the input and a rationale classifier, a model trained using as input only the extractor's rationales (Bastings et al., 2019;Jain et al., 2020;Guerreiro and Martins, 2021). 3 Figure 1 illustrates the two approaches with an example.
+
+Currently, these explanation methods have been mostly evaluated on in-domain settings (i.e. the train and test data come from the same distribution). However, when deploying models in real-world applications, inference might be performed on data from a different distribution, i.e. out-of-domain (Desai and Durrett, 2020;Ovadia et al., 2019). This can create implications when extracted explanations (either using post-hoc methods or through select-then-predict models) are used for assisting human decision making. Whilst we are aware of the limitations of current state-of-the-art models in out-of-domain predictive performance (Hendrycks et al., 2020), to the best of our knowledge, how faithful out-of-domain post-hoc explanations are has yet to be explored. Similarly, we are not aware how inherently faithful select-then-predict models generalize in out-of-domain settings.
+
+Inspired by this, we conduct an extensive empirical study to examine the faithfulness of five feature attribution approaches and the generaliz- ability of two select-then-predict models in out-ofdomain settings across six dataset pairs. We hypothesize that similar to model predictive performance, post-hoc explanation faithfulness reduces in out-ofdomain settings and that select-then-predict performance degrades. Our contributions are as follows:
+
+• To the best of our knowledge, we are the first to assess the faithfulness of post-hoc explanations and performance of select-then-predict models in out-of-domain settings.
+
+• We show that post-hoc explanation sufficiency and comprehensiveness show misleading increases in out-of-domain settings. We argue that they should be evaluated alongside a random baseline as yardstick out-of-domain.
+
+• We demonstrate that select-then-predict classifiers can be used in out-of-domain settings. They lead to comparable predictive performance to models trained on full-text, whilst offering inherent faithfulness.
+
+2 Related Work
+
+Rationale Extraction
+
+Given a model M, we are interested in explaining why M predicted ŷ for a particular instance x ∈ X. An extracted rationale R, should therefore represent as accurately as possible the most important subset of the input (R ∈ x) which contributed mostly towards the model's prediction ŷ.
+
+Currently, there are two popular approaches for extracting rationales. The first consists of using feature attribution methods that attribute to the input tokens an importance score (i.e. how important an input token is to a model's M prediction ŷ).
+
+We can then form a rationale R, by selecting the K most important tokens (independent or contiguous) as indicated by the feature attribution method. The second select-then-predict approach focuses on training inherently faithful classifiers by jointly training two modules, a rationale extractor and a rationale classifier, trained only on rationales produced by the extractor (Lei et al., 2016;Bastings et al., 2019;Treviso and Martins, 2020;Jain et al., 2020;Guerreiro and Martins, 2021). Recent studies have used feature attribution approaches as part of the rationale extractor (Jain et al., 2020;Treviso and Martins, 2020), showing improved classifier predictive performance.
+
+Evaluating Rationale Faithfulness
+
+Having extracted R, we need to evaluate the quality of the explanation (i.e. how faithful that explanation is for a model's prediction). Typically, post-hoc explanations from feature attribution approaches are evaluated using input erasure (Serrano and Smith, 2019;Atanasova et al., 2020;Madsen et al., 2021). This approach masks segments of the input to observe if the model's prediction changed. DeYoung et al. (2020) proposed measuring the comprehensiveness and sufficiency of rationales as faithfulness metrics. A comprehensive rationale is one which is influential to a model's prediction, while a sufficient rationale that which is adequate for a model's prediction (DeYoung et al., 2020). The term fidelity is also used for jointly referring to comprehensiveness and sufficiency (Carton et al., 2020). Carton et al. (2020) suggested normalizing these metrics using the predictions of the model with a baseline input (i.e. an all zero embedding vector), to account for baseline model behavior.
+
+Select-then-predict models are inherently faithful, as their classification component is trained only on extracted rationales (Jain et al., 2020). A good measure for measuring rationale quality is by evaluating the predictive performance of the classifier trained only on the rationales (Jain et al., 2020;Treviso and Martins, 2020). A higher score entails that the extracted rationales are better when compared to those of a classifier with lower predictive performance.
+
+Explainability in Out-of-Domain Settings
+
+Given model M trained on an end-task, we typically evaluate its out-of-domain predictive performance on a test-set that does not belong to the same distribution as the data it was trained on (Hendrycks et al., 2020). Similarly, the model can also extract explanations R for its out-of-domain predictions.
+
+Camburu et al. ( 2018) studied whether generating explanations for language inference match human annotations (i.e. plausible explanations). They showed that this is challenging in-domain and becomes more challenging in out-of-domain settings. In a similar direction, Rajani et al. ( 2019) and Kumar and Talukdar (2020) examined model generated explanations in out-of-domain settings and find that explanation plausibility degrades compared to in-domain. Kennedy et al. (2020) proposed a method for detecting model bias towards group identity terms using a post-hoc feature attribution approach. Then, they use them for regularizing models to improve out-of-domain predictive performance. Adebayo et al. (2020) have studied feature attribution approaches for identifying outof-distribution images. They find that importance allocation in out-of-domain settings is similar to that of an in-domain model and thus cannot be used to detect such images. Feder et al. ( 2021) finally argued that explanations can lead to errors in out-of-distribution settings, as they may latch onto spurious features from the training distribution.
+
+These studies indicate that there is an increasing need for evaluating post-hoc explanation faithfulness and select-then-predict performance in out-ofdomain settings. To the best of our knowledge, we are the first to examine these.
+
+ References: 
+Adebayo, J., Muelly, M., Liccardi, I., and Kim, B. 2020. Debugging tests for model explanations. In Advances in Neural Information Processing Systems. pp. 700--712
+In IMDB Avg. Seq. Length. pp. 247
+In No. of documents. pp. 500
+Docs in label-0 9. In Docs in label-0 9. pp. 273
+Docs in label-1 10. In Docs in label-1 10.
+In Yelp Avg. Seq. Length. pp. 153
+In No. of documents. pp. 0
+Docs in label-0 238,000 42. In Docs in label-0 238,000 42. pp. 0
+2019. Docs in label-1 238. In Docs in label-1 238. pp. 0
+In AmazDigiMu Avg. Seq. Length. pp. 38
+In No. of documents. pp. 444
+Docs in label-2 114. In Docs in label-2 114. pp. 824
+In AmazPantry Avg. Seq. Length. pp. 24
+In No. of documents. pp. 642
+Docs in label-0 4. In Docs in label-0 4. pp. 37
+In Docs in label-1. pp. 366
+In AmazInstr Avg. Seq. Length. pp. 65
+In No. of documents. pp. 702
+Docs in label-0 10. In Docs in label-0 10. pp. 211
+Docs in label-1 11. In Docs in label-1 11. pp. 404
+Docs in label-2 144. In Docs in label-2 144. pp. 87

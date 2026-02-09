@@ -1,0 +1,47 @@
+Related Work
+
+For NLP tasks, adapters are introduced for the transformer architecture. A set of adapter parameters was added at each transformer layer, which is mostly bottleneck architectures Houlsby et al. (2019). By keeping the output dimension identical, they cause no change to the structure or parameters of the original model.
+
+Adapters quickly gained popularity in NLP with various applications. For multi-task learning (Caruana, 1997;Zhang and Yang, 2017;Liu et al., 2019b), a projected self-attention layer is proposed by Stickland and Murray (2019), while Bapna et al. (2019) proposed an additional layer norm suitable for machine translation.
+
+Besides the applications of adapters, researchers are also dedicated to improving their performance. Based on the architecture introduced by Houlsby et al. (2019), AdapterFusion (Pfeiffer et al., 2020a) leveraged knowledge from multiple tasks with a new two-stage learning algorithm. Despite the recent popularity of these methods, they still train a relatively large number of training parameters.
+
+Recently, studies start to focus on improving the parameter-efficiency of adapters. Diff-pruning (Guo et al., 2020) achieves parameter efficiency by adding a sparse, task-specific difference-vector to the fixed original parameters. The vector is adaptively pruned during training with a differentiable approximation to the L 0 -norm penalty to encourage sparsity. Rücklé et al. (2020) introduced Adap-terDrop, which has been recently integrated into AdapterHub (Pfeiffer et al., 2020b) by removing adapters from lower transformer layers during training and inference, which can dynamically reduce the computational cost. Mahabadi et al. (2021) proposed Compacter, which improved the trade-off between performance and trainable parameters per task with low-rank optimization.
+
+On the other hand, without modifying the architecture of the PLM, BitFit (Ben Zaken et al., 2021) shows that fine-tuning only the bias terms of a large PLM is also competitive with fine-tuning the entire model. Fine-tuning only the bias terms can be considered as adding a task-specific shift to the token representation. BitFit is most similar to our work. While in BitFit, the shifts added to all the representations are exactly the same for all input tokens, in our work, the shifts are token-dependent.
+
+ References: 
+Bapna, A., Arivazhagan, N., and Firat, O. 2019. Simple, scalable adaptation for neural machine translation. In Simple, scalable adaptation for neural machine translation. arXiv:1909.08478
+Ben Zaken, E., Ravfogel, S., and Goldberg, Y. 2021. Bitfit: Simple parameter-efficient fine-tuning for transformer-based masked languagemodels. In Bitfit: Simple parameter-efficient fine-tuning for transformer-based masked languagemodels. pp. 2106
+Bentivogli, L., Clark, P., Dagan, I., and Giampiccolo, D. 2009. The fifth pascal recognizing textual entailment challenge. In The fifth pascal recognizing textual entailment challenge.
+Caruana, R. 1997. Multitask learning. In Machine learning. pp. 41--75
+Cer, D., Diab, M., Agirre, E., Lopez-Gazpio, I., and Specia, L. 2017. Semeval-2017 task 1: Semantic textual similarity-multilingual and cross-lingual focused evaluation. In Semeval-2017 task 1: Semantic textual similarity-multilingual and cross-lingual focused evaluation. arXiv:1708.00055
+Conneau, A., Kruszewski, G., Lample, G., Barrault, L., and Baroni, M. 2018. What you can cram into a single vector: Probing sentence embeddings for linguistic properties. In What you can cram into a single vector: Probing sentence embeddings for linguistic properties. arXiv:1805.01070
+Devlin, J., Chang, M., Lee, K., and Toutanova, K. 2018. Bert: Pre-training of deep bidirectional transformers for language understanding. In Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv:1810.04805
+Giampiccolo, D., Magnini, B., Dagan, I., and Dolan, W.B. 2007. The third pascal recognizing textual entailment challenge. In Proceedings of the ACL-PASCAL workshop on textual entailment and paraphrasing. pp. 1--9
+Guo, D., Alexander, M., Rush, Y., and Kim 2020. Parameter-efficient transfer learning with diff pruning. In Parameter-efficient transfer learning with diff pruning. arXiv:2012.07463
+Houlsby, N., Giurgiu, A., Jastrzebski, S., Morrone, B., De Laroussilhe, Q., Gesmundo, A., Attariyan, M., and Gelly, S. 2019. Parameter-efficient transfer learning for nlp. In International Conference on Machine Learning. pp. 2790--2799
+Jang, E., Gu, S., and Poole, B. 2016. Categorical reparameterization with gumbel-softmax. In Categorical reparameterization with gumbel-softmax. arXiv:1611.01144
+Jawahar, G., Sagot, B., and Seddah, D. 2019. What does bert learn about the structure of language. In ACL 2019-57th Annual Meeting of the Association for Computational Linguistics.
+Ian, T. and Jolliffe 2002. Springer series in statistics. Principal component analysis. In Springer series in statistics. Principal component analysis. pp. 29
+Kovaleva, O., Romanov, A., Rogers, A., and Rumshisky, A. 2019. Revealing the dark secrets of bert. In Revealing the dark secrets of bert. arXiv:1908.08593
+Nelson, F., Liu, M., Gardner, Y., Belinkov, Matthew, E., Peters, N.A., and Smith 2019. Linguistic knowledge and transferability of contextual representations. In Linguistic knowledge and transferability of contextual representations. arXiv:1903.08855
+Liu, X., He, P., Chen, W., and Gao, J. 2019. Multi-task deep neural networks for natural language understanding. In Multi-task deep neural networks for natural language understanding. arXiv:1901.11504
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., and Stoyanov, V. 2019. Roberta: A robustly optimized bert pretraining approach. In Roberta: A robustly optimized bert pretraining approach. arXiv:1907.11692
+Loshchilov, I. and Hutter, F. 2017. arXiv:1711.05101
+Louizos, C., Welling, M., and Kingma, D.P. 2017. Learning sparse neural networks through l_0 regularization. In Learning sparse neural networks through l_0 regularization. arXiv:1712.01312
+Chris J Maddison, A., Mnih, Y.W., and Teh 2016. The concrete distribution: A continuous relaxation of discrete random variables. In The concrete distribution: A continuous relaxation of discrete random variables. arXiv:1611.00712
+Rabeeh Karimi Mahabadi, J., Henderson, S., and Ruder 2021. Compacter: Efficient lowrank hypercomplex adapter layers. In Compacter: Efficient lowrank hypercomplex adapter layers. arXiv:2106.04647
+Pfeiffer, J., Kamath, A., Rücklé, A., Cho, K., and Gurevych, I. 2020. Adapterfusion: Non-destructive task composition for transfer learning. In Adapterfusion: Non-destructive task composition for transfer learning. arXiv:2005.00247
+Pfeiffer, J., Rücklé, A., Poth, C., Kamath, A., Vulić, I., Ruder, S., Cho, K., and Gurevych, I. 2020. Adapterhub: A framework for adapting transformers. In Adapterhub: A framework for adapting transformers. arXiv:2007.07779
+Rajpurkar, P., Zhang, J., Lopyrev, K., and Liang, P. 2016. Squad: 100,000+ questions for machine comprehension of text. In Squad: 100,000+ questions for machine comprehension of text. arXiv:1606.05250
+Rücklé, A., Geigle, G., Glockner, M., Beck, T., and Pfeiffer, J. Nils Reimers, and Iryna Gurevych. 2020. Adapterdrop: On the efficiency of adapters in transformers. In Nils Reimers, and Iryna Gurevych. 2020. Adapterdrop: On the efficiency of adapters in transformers. arXiv:2010.11918
+Socher, R., Perelygin, A., Wu, J., Chuang, J., Christopher, D., Manning, Andrew, Y., Ng, C., and Potts 2013. Recursive deep models for semantic compositionality over a sentiment treebank. In Proceedings of the 2013 conference on empirical methods in natural language processing. pp. 1631--1642
+Stickland, A. C. and Murray, I. 2019. Bert and pals: Projected attention layers for efficient adaptation in multi-task learning. In International Conference on Machine Learning. pp. 5986--5995
+Tenney, I., Das, D., and Pavlick, E. 2019. Bert rediscovers the classical nlp pipeline. In Bert rediscovers the classical nlp pipeline. arXiv:1905.05950
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I. 2017. Attention is all you need. In Attention is all you need. arXiv:1706.03762
+Wang, A., Singh, A., Michael, J., Hill, F., Levy, O., and Bowman, S.R. 2018. Glue: A multi-task benchmark and analysis platform for natural language understanding. In Glue: A multi-task benchmark and analysis platform for natural language understanding. arXiv:1804.07461
+Warstadt, A., Singh, A., and Bowman, S.R. 2019. Neural network acceptability judgments. In Transactions of the Association for Computational Linguistics. pp. 625--641
+Williams, A., Nangia, N., and Bowman, S.R. 2017. A broad-coverage challenge corpus for understanding inference. In A broad-coverage challenge corpus for understanding inference. arXiv:1704.05426
+Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P., Rault, T., Louf, R., and Funtowicz, M. 2019. Huggingface's transformers: State-of-the-art natural language processing. In Huggingface's transformers: State-of-the-art natural language processing. arXiv:1910.03771
+Zhang, Y. and Yang, Q. 2017. A survey on multitask learning. In A survey on multitask learning. arXiv:1707.08114

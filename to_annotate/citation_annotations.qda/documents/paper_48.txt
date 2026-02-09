@@ -1,0 +1,48 @@
+Background and Preliminaries
+
+Given a sentence s = w 1 w 2 ...w n where w i is the ith token in the sentence, an OpenIE system generates triples of the form (subject; predicate; object), where subject, predicate and object are the constituents of a triple.
+
+Extracting Compact Triples
+
+A common problem in modern OpenIE systems is that they extract triples which contain complete clauses (e.g., 'Belgian detective created by Agatha Christie') as part of a constituent or contain additional information (e.g., words 'a', 'which', 'is' in phrase 'a company which is based in New York') that do not affect the semantics of the triple. A recent study shows that such triples are difficult to align to knowledge bases such as DBpedia (Gashteovski et al., 2020). Less than 77% of triples from neural OpenIE systems had the same arguments as DBpedia facts. In contrast, the corresponding alignment ratio for some of the non-neural OpenIE systems was as high as 98%. This behavior is attributed to specificity of triples that capture more information than facts in DBpedia.
+
+System Architecture
+
+To mitigate the problem of over-specific triples, we focus on fine-grained extraction from individual clauses within a sentence, where each clause typically includes a subject, a verb, a direct object and a complement. Furthermore, since compact extractions share constituents, we split the OpenIE task into two sub-tasks: constituent extraction and constituent linking.
+
+The task of constituent extraction is to find a set of constituents given a sentence. Formally, a constituent c is a contiguous span c.span = {(w i , w j )} in the sentence and has a pre-defined type c.type ∈ Y c such that Y c = {Argument, P redicate}. The subject and object of a triple have c.type = Argument, while the predicate has c.type = P redicate. We follow this schema to simplify the constituent extraction task and provide more information to the downstream constituent linking model.
+
+Given the constituents, the task of constituent linking is to connect them to obtain triples. For obtaining a triple, we consider that the link between a P redicate constituent and an Argument constituent is in {Subject, Object}. We model this as a classification task. For each constituent of type P redicate, the model identifies an argument constituent as its Subject and, if existing, another argument constituent as its Object. At this point, the model can construct a triple based on the relation of the predicate with its argument(s).
+
+Benchmark
+
+Since standard benchmarks for IE do not consider compactness, these benchmarks are not useful: neither for training nor for evaluation. As such, we have to develop a new benchmark, starting from standard datasets, as described in Sec. 4.
+
+ References: 
+Angeli, G., Premkumar, M.J.J., and Manning, C.D. 2015. Leveraging linguistic structure for open domain information extraction. In Proc. ACL-IJCNLP '15. pp. 344--354
+Banko, M., Cafarella, M. J., Soderland, S., Broadhead, M., and Etzioni, O. 2007. Open information extraction from the web. In Proc. IJCAI '07. pp. 2670--2676
+Bhutani, N., Jagadish, H. V., and Radev, D. 2016. Nested propositions in open information extraction. In Proc. EMNLP '16. pp. 55--64 10.18653/v1/D16-1006
+Bhutani, N., Suhara, Y., Tan, W., and Halevy, A. 2019. Open information extraction from question-answer pairs. In Proc. NAACL-HLT '19. pp. 2294--2305
+Corro, L. and Gemulla, R. 2013. Clausie: Clause-based open information extraction. In Proc. WWW '13. pp. 355--366 10.1145/2488388.2488420
+Cui, L., Wei, F., and Zhou, M. 2018. Neural open information extraction. In Neural open information extraction. abs/1805.04270
+Devlin, J., Chang, M., Lee, K., and Toutanova, K. 2018. BERT: pre-training of deep bidirectional transformers for language understanding. In BERT: pre-training of deep bidirectional transformers for language understanding. abs/1810.04805
+Dozat, T. and Manning, C. D. 2016. Deep biaffine attention for neural dependency parsing. In Deep biaffine attention for neural dependency parsing. abs/1611.01734
+Fader, A., Soderland, S., and Etzioni, O. 2011. Identifying relations for open information extraction. In Proc. EMNLP '11. pp. 1535--1545
+Fan, A., Gardent, C., Braud, C., and Bordes, A. 2019. Using local knowledge graph construction to scale seq2seq models to multi-document inputs. In Using local knowledge graph construction to scale seq2seq models to multi-document inputs. abs/1910.08435
+Gashteovski, K., Gemulla, R., Del, L., and Corro 2017. MinIE: Minimizing facts in open information extraction. In Proc. EMNLP '17. pp. 2630--2640 10.18653/v1/D17-1278
+Gashteovski, K., Gemulla, R., Kotnis, B., Hertling, S., and Meilicke, C. 2020. On aligning openie extractions with knowledge bases: A case study. In Proc. EMNLP '20 Workshop on Evaluation and Comparison of NLP Systems. pp. 143--154
+Gupta, P., Schütze, H., and Andrassy, B. 2016. Table filling multi-task recurrent neural network for joint entity and relation extraction. In Proc. COLING '16. pp. 2537--2547
+Hao, Z., Xu, B., Zheng, S., and Gao, Y. 2018. Structured text summarization via open domain information extraction. In Proc. CSCWD '18. pp. 701--706
+Ji, H., Benoit Favre, W., Lin, D., Gillick, D., Hakkani-Tur, R., and Grishman 2013. Opendomain multi-document summarization via information extraction: Challenges and prospects. In Multisource, multilingual information extraction and summarization. In Opendomain multi-document summarization via information extraction: Challenges and prospects. In Multisource, multilingual information extraction and summarization. pp. 177--201
+Khot, T., Sabharwal, A., and Clark, P. 2017. Answering complex questions using open information extraction. In Answering complex questions using open information extraction. abs/1704.05572
+Kolluru, K., Adlakha, V., Aggarwal, S., Mausam, and Chakrabarti, S. 2020. Openie6: Iterative grid labeling and coordination analysis for open information extraction. In Openie6: Iterative grid labeling and coordination analysis for open information extraction.
+Kolluru, K., Aggarwal, S., Rathore, V., Mausam, and Chakrabarti, S. 2020. Imojie: Iterative memory-based joint open information extraction. In Imojie: Iterative memory-based joint open information extraction.
+Léchelle, W., Gotti, F., and Langlais, P. 2018. Wire57: A fine-grained benchmark for open information extraction. In Wire57: A fine-grained benchmark for open information extraction. arXiv:1809.08962
+Ro, Y., Lee, Y., and Kang, P. 2020. Multi2oie: Multilingual open information extraction based on multi-head attention with bert. In Multi2oie: Multilingual open information extraction based on multi-head attention with bert. arXiv:2009.08128
+Roy, A., Park, Y., Lee, T., and Pan, S. 2019. Supervising unsupervised open information extraction models. In Proc. EMNLP-IJCNLP '19. pp. 728--737 10.18653/v1/D19-1067
+Saha, S. and Pal, H. 2017. Bootstrapping for numerical open ie. In Proc. ACL '17. pp. 317--323
+Schmitz, M., Soderland, S., Bart, R., and Etzioni, O. 2012. Open language learning for information extraction. In Proc. EMNLP '12. pp. 523--534
+Stanovsky, G. and Dagan, I. 2016. Creating a large benchmark for open information extraction. In Proc. EMNLP '16. pp. 2300--2305 10.18653/v1/D16-1252
+Stanovsky, G. and Ido Dagan 2015. Open ie as an intermediate structure for semantic tasks. In Proc. ACL-IJCNLP '15. pp. 303--308
+Stanovsky, G., Michael, J., Zettlemoyer, L., and Dagan, I. 2018. Supervised open information extraction. In Proc. NAACL '18. pp. 885--895
+Wang, Y., Sun, C., Wu, Y., Zhou, H., Li, L., and Yan, J. 2021. Unire: A unified label space for entity relation extraction. In Unire: A unified label space for entity relation extraction.

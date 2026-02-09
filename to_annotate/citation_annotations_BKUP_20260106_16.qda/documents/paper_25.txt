@@ -1,0 +1,50 @@
+Background
+
+Context freeness of natural languages
+
+There has been a long debate, since the introduction of the Chomsky hierarchy (Chomsky, 1956), on whether all string patterns in natural language can be encompassed by the class of context-free grammars. The dispute often makes a distinction between weak and strong context-freeness, whereby the question shifts between generating all strings or all constituent expressions of a language. In Dutch specifically, patterns involving cross-serial dependencies have been commonly brought up by linguists in arguing that at least fragments of Dutch are context-sensitive, in turn designating the language not strongly context-free (Huybregts, 1984;Pullum and Gazdar, 1982;Bresnan et al., 1982;Shieber, 1985).
+
+To capture such patterns without employing unnecessary computational expressiveness (and corresponding complexity), one can resort to the more pragmatic alternative of mildly context-sensitive grammars (Joshi, 1985): systems that can capture certain types of crossing dependencies, while remaining computationally tractable.
+
+Multiple Context-Free Grammars
+
+One of the more general classes of mildly context-sensitive systems are multiple context-free grammars (MCFGs), which essentially generalizes the notion of a context-free grammars to operations on tuples of strings. We defer the reader to Seki et al. (1991) for a full definition and discussion of the properties of MCFGs. Instead we provide a simplified, computationally-oriented description that is more in line with our purposes and implementation. An m-multiple MCFG can be thought of as a tuple ⟨A, N , d, C, R, S 0 ⟩, where:
+
+• A is the terminal alphabet • N is a set of non-terminals and d : N → N a function from non-terminals to natural numbers; each non-terminal N is encoding a tuple of strings of fixed arity d(N) and the maximal arity of N decides the grammar's multiplicity • C is a mapping that associates each nonterminal N to a (possibly empty) set of elements from the d(N)-ary cartesian product N) ; put simply, the set of constants C N prescribes all the possible ways of initializing the non-terminal N • R a set of rewriting rules; rules are functions N × • • • × N → N that provide recipes on how to combine a number of non-terminals into a single non-terminal by rearranging and concetenating their contents; we will write:
+
+to denote a rule that combines non-terminals A and B of arities m and n into a non-terminal C of arity k, where each of the left-hand side coordinates x 1 , . . . y n is used exactly once in the right-hand side coordinates z 1 , . . . z k • S 0 the start symbol, a distinguished element of N satisfying d(S 0 ) = 1
+
+The choice of MCFGs as our formal backbone comes due to their many advantages. Being a subtle but powerful generalization of CFGs, MCFGs have a familiar presentation that makes them easy to reason about, while remaining computationally tractable (Ljunglöf, 2012;Kallmeyer, 2010). At the same time, they offer an appealing dissociation between abstract and surface syntax and lexical choice. A derivation inspected purely on the level of rule type signatures takes the form of an abstract syntax tree that is reminiscent of a traditional CFG parse. Normalizing an MCFG so as to disallow rules from freely inserting constant strings (i.e. wrapping all constants under a non-terminal) allows us to (i) trace back all substrings of the final yield to a single non-terminal and (ii) provide a clear computational interpretation that casts an MCFG as a linear type system, and its derivation as a functional program (De Groote and Pogodalla, 2003).
+
+ References: 
+Augustinus, L. 2015. Complement raising and cluster formation in Dutch. In Complement raising and cluster formation in Dutch.
+Bresnan, J., Kaplan, R. M., Peters, S., and Zaenen, A. 1982. Cross-serial dependencies in Dutch. In Linguistic Inquiry. pp. 613--635
+Chen, B., Fu, Y., Xu, G., Xie, P., Tan, C., Chen, M., and Jing, L. 2021. Probing {bert} in hyperbolic spaces. In International Conference on Learning Representations.
+Chomsky, N. 1956. Three models for the description of language. In IRE Transactions on information theory. pp. 113--124
+De Groote, P. and Pogodalla, S. 2003. mlinear context-free rewriting systems as abstract categorial grammars. In Proceedings of Eighth Meeting on Mathematics of Language (MOL 8). pp. 71--80
+Wietse De Vries, A., Van Cranenburgh, A., Bisazza, T., Caselli, Gertjan Van Noord, M., and Nissim 2019. BERTje: A Dutch BERT model. In BERTje: A Dutch BERT model. arXiv:1912.09582
+Delobelle, P., Winters, T., and Berendt, B. 2020. RobBERT: a Dutch roBERTa-based language model. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: Findings. pp. 3255--3265
+Devlin, J., Chang, M., Lee, K., and Toutanova, K. 2019. BERT: Pre-training of deep bidirectional transformers for language understanding. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 4171--4186 10.18653/v1/N19-1423
+Evers, A. 1976. The transformational cycle in Dutch and German. In Nieuwe (De) Taalgids. pp. 156--160
+Fey, M. and Lenssen, J. E. 2019. Fast graph representation learning with PyTorch Geometric. In ICLR Workshop on Representation Learning on Graphs and Manifolds.
+Hewitt, J. and Manning, C. D. 2019. A structural probe for finding syntax in word representations. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 4129--4138 10.18653/v1/N19-1419
+Huybregts, R. 1984. The weak inadequacy of contextfree phrase structure grammars. Van periferie naar kern. In The weak inadequacy of contextfree phrase structure grammars. Van periferie naar kern. pp. 81--99
+Joshi, A.K. 1985. Tree adjoining grammars: How much context-sensitivity is required to provide reasonable structural descriptions?. In Tree adjoining grammars: How much context-sensitivity is required to provide reasonable structural descriptions?.
+Kallmeyer, L. 2010. Parsing beyond context-free grammars. In Parsing beyond context-free grammars.
+Klein, D., Christopher, D., and Manning 2001. Parsing with treebank grammars: Empirical bounds, theoretical models, and the structure of the Penn treebank. In Proceedings of the 39th Annual Meeting of the Association for Computational Linguistics. pp. 338--345
+Hilda, J., Koopman, A., and Szabolcsi 2000. Verbal complexes. In Verbal complexes.
+Li, Y., Tarlow, D., Brockschmidt, M., and Zemel, R. 2015. Gated graph sequence neural networks. In Gated graph sequence neural networks. arXiv:1511.05493
+Yongjie Lin Lin, Y., Chern Tan, R., and Frank 2019. Open sesame: Getting inside BERT's linguistic knowledge. In Proceedings of the Second BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP.
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., and Stoyanov, V. 2019. RoBERTa: A robustly optimized BERT pretraining approach. In RoBERTa: A robustly optimized BERT pretraining approach. arXiv:1907.11692
+Ljunglöf, P. 2012. Practical parsing of parallel multiple context-free grammars. In Proceedings of the 11th International Workshop on Tree Adjoining Grammars and Related Formalisms (TAG+11). pp. 144--152
+Loshchilov, I. and Hutter, F. 2018. Decoupled weight decay regularization. In International Conference on Learning Representations.
+Moortgat, M. 1999. Meaningful patterns. Linguistics. In Meaningful patterns. Linguistics. pp. 4
+Morrill, G., Valentín, O., and Fadda, M. 2007. Dutch grammar and processing: A case study in TLG. In International Tbilisi Symposium on Logic, Language, and Computation. pp. 272--286 10.1007/978-3-642-00665-4_22
+Muskens, R. 2007. Separating syntax and combinatorics in categorial grammar. In Separating syntax and combinatorics in categorial grammar. pp. 267--285 10.1007/s11168-007-9035-1.pdf
+Geoffrey, K., Pullum, G., and Gazdar 1982. Natural languages and context-free languages. In Linguistics and Philosophy. pp. 471--504 10.1007/BF00360802.pdf
+Rogers, A., Kovaleva, O., and Rumshisky, A. 2020. A primer in BERTology: What we know about how BERT works. In Transactions of the Association for Computational Linguistics. pp. 842--866 10.1162/tacl_a_00349
+Seki, H., Matsumura, T., Fujii, M., and Kasami, T. 1991. On multiple context-free grammars. In Theoretical Computer Science. pp. 191--229
+Stuart, M. and Shieber 1985. Evidence against the contextfreeness of natural language. In Philosophy, language, and artificial intelligence. pp. 79--89
+Steedman, M. 1985. Dependency and coördination in the grammar of dutch and english. In Dependency and coördination in the grammar of dutch and english. pp. 523--568
+Van Noord, G., Bouma, G., Van Eynde, F., and Kok, D. D. 2013. Jelmer Van der Linde, Ineke Schuurman, Erik Tjong Kim Sang, and Vincent Vandeghinste. In Essential speech and language technology for Dutch. pp. 147--164 10.1007/978-3-642-30910-6_9
+Vilares, D., Strzyz, M., Søgaard, A., and Gómez-Rodríguez, C. 2020. Parsing as pretraining. In Proceedings of the AAAI Conference on Artificial Intelligence. pp. 9114--9121

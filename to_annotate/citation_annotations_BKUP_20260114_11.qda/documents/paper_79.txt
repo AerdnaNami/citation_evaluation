@@ -1,0 +1,55 @@
+Related Work
+
+Entity Linking Entity linking has been widely studied (Milne and Witten, 2008;Cucerzan, 2007;Lazic et al., 2015b;Gupta et al., 2017;Raiman and Raiman, 2018;Kolitsas et al., 2018;Cao et al., 2021, inter alia). Dutta and Weikum (2015) combine clustering-based cross-document coreference decisions and linking around sparse bag-of-word representations not well suited for the embedding-   (Bagga and Baldwin, 1998;Gooi and Allan, 2004;Singh et al., 2011;Barhom et al., 2019;Cattan et al., 2020;Caciularu et al., 2021;Ravenscroft et al., 2021;Logan IV et al., inter alia).
+
+Alternatives to Cross-Encoders Our work demonstrates how clustering-based training and prediction improves dual-encoder based models for linking and discovery. If prediction efficiency, and not training efficiency, was the only concern, one could use model distillation (Hinton et al., 2015;Izacard and Grave, 2021, inter alia). We could also consider models such as poly-encoders as an alternative to dual-encoders (Humeau et al., 2020).
+
+ References: 
+Angell, R., Monath, N., Mohan, S., Yadav, N., and Mccallum, A. 2021. Clusteringbased inference for biomedical entity linking. In Conference of the North American Chapter of the Association for Computational Linguistics (NAACL).
+Bagga, A. and Baldwin, B. 1998. Entity-based cross-document coreferencing using the vector space model. In 36th Annual Meeting of the Association for Computational Linguistics and 17th International Conference on Computational Linguistics. pp. 79--85 10.3115/980845.980859
+Barhom, S., Shwartz, V., Eirew, A., and Bugert, M. 2019. Revisiting joint modeling of cross-document entity and event coreference resolution. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics. pp. 4179--4189 10.18653/v1/P19-1409
+Caciularu, A., Cohan, A., Beltagy, I., Matthew, E., Peters, A., Cattan, I., and Dagan 2021. arXiv:2101.00406
+De Cao, N., Izacard, G., Riedel, S., and Petroni, F. 2021. Autoregressive entity retrieval. In Autoregressive entity retrieval.
+International Conference on Learning Representations. In International Conference on Learning Representations.
+Cattan, A., Eirew, A., Stanovsky, G., Joshi, M., and Dagan, I. 2020. Streamlining crossdocument coreference resolution: Evaluation and modeling. In Streamlining crossdocument coreference resolution: Evaluation and modeling. arXiv:2009.11032
+Cheng, X. and Roth, D. 2013. Relational inference for wikification. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing. pp. 1787--1796
+Silviu Cucerzan 2007. Large-scale named entity disambiguation based on Wikipedia data. In Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning (EMNLP-CoNLL). pp. 708--716
+Das, R., Godbole, A., Kavarthapu, D., Gong, Z., Singhal, A., Yu, M., Guo, X., Gao, T., Zamani, H., and Zaheer, M. 2019. Multi-step entity-centric information retrieval for multi-hop question answering. In Proceedings of the 2nd Workshop on Machine Reading for Question Answering. pp. 113--118
+Dutta, S. and Weikum, G. 2015. C3EL: A joint model for cross-document co-reference resolution and entity linking. In Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing. pp. 846--856 10.18653/v1/D15-1101
+Fitzgerald, N., Botha, J. A., Gillick, D., Daniel, M., Bikel, T., Kwiatkowski, A., and Mc-Callum 2021. Moleman: Mention-only linking of entities with a mention annotation network. In Moleman: Mention-only linking of entities with a mention annotation network. arXiv:2106.07352
+Gabrilovich, E., Ringgaard, M., and Subramanya, A. 2013. Facc1: Freebase annotation of clueweb corpora, version 1 (release date 2013-06-26. In Facc1: Freebase annotation of clueweb corpora, version 1 (release date 2013-06-26.
+Octavian, E., Ganea, T., and Hofmann 2017. Deep joint entity disambiguation with local neural attention. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing. pp. 2619--2629 10.18653/v1/D17-1277
+Gillick, D., Kulkarni, S., Lansing, L., Presta, A., Baldridge, J., Ie, E., and Garcia-Olano, D. 2019. Learning dense representations for entity retrieval. In Proceedings of the 23rd Conference on Computational Natural Language Learning (CoNLL).
+Heong, C., Gooi, and Allan, J. 2004. Crossdocument coreference on a large scale corpus. In Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics: HLT-NAACL 2004. pp. 9--16
+Gupta, N., Singh, S., and Roth, D. 2017. Entity linking via joint encoding of types, descriptions, and context. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing. pp. 2681--2690 10.18653/v1/D17-1284
+Hinton, G., Vinyals, O., and Dean, J. 2015. Distilling the knowledge in a neural network. In Distilling the knowledge in a neural network. arXiv:1503.02531
+Hoffart, J., Yosef, M. A., Bordino, I., Fürstenau, H., Pinkal, M., Spaniol, M., Taneva, B., Thater, S., and Weikum, G. 2011. Robust disambiguation of named entities in text. In Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing. pp. 782--792
+Humeau, S., Shuster, K., Lachaux, M., and Weston, J. 2019. Poly-encoders: Architectures and pre-training strategies for fast and accurate multi-sentence scoring. In International Conference on Learning Representations.
+Humeau, S., Shuster, K., Lachaux, M., and Weston, J. 2020. Poly-encoders: Architectures and pre-training strategies for fast and accurate multi-sentence scoring. In International Conference on Learning Representations.
+Izacard, G. and Grave, E. 2021. Distilling knowledge from reader to retriever for question answering. In International Conference on Learning Representations.
+Johnson, J., Douze, M., and Jégou, H. 2017. Billion-scale similarity search with gpus. In Billion-scale similarity search with gpus. arXiv:1702.08734
+Kolitsas, N., Octavian-Eugen, Ganea, T., and Hofmann 2018. End-to-end neural entity linking. In Proceedings of the 22nd Conference on Computational Natural Language Learning. pp. 519--529 10.18653/v1/K18-1050
+Lazic, N., Subramanya, A., Ringgaard, M., and Pereira, F. 2015. Plato: A selective context model for entity resolution. In Transactions of the Association for Computational Linguistics. pp. 503--515 10.1162/tacl_a_00154
+Lazic, N., Subramanya, A., Ringgaard, M., and Pereira, F. 2015. Plato: A selective context model for entity resolution. In Transactions of the Association for Computational Linguistics. pp. 503--515
+Le, P. and Titov, I. 2018. Improving entity linking by modeling latent relations between mentions. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics. pp. 1595--1604 10.18653/v1/P18-1148
+Leaman, R. and Lu, Z. 2016. Taggerone: joint named entity recognition and normalization with semi-markov models. In Bioinformatics. pp. 2839--2846
+Lin, Y., Lin, C., and Ji, H. 2017. List-only entity linking. In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics. pp. 536--541 10.18653/v1/P17-2085
+Ling, X., Singh, S., and Weld, D. S. 2015. Design challenges for entity linking. In Transactions of the Association for Computational Linguistics. pp. 315--328 10.1162/tacl_a_00141
+Liu, F., Shareghi, E., Meng, Z., Basaldella, M., and Collier, N. 2020. Self-alignment pretraining for biomedical entity representations. In Self-alignment pretraining for biomedical entity representations. arXiv:2010.11784
+Robert, L., Logan, I. V., Gardner, M., and Singh, S. 2020. On importance sampling-based evaluation of latent language models. In Proceedings of the 58th. 10.18653/v1/2020.acl-main.196
+Annual Meeting of the Association for Computational Linguistics. In Annual Meeting of the Association for Computational Linguistics. pp. 2171--2176
+Robert L Logan, I. V., Mccallum, A., Singh, S., and Bikel, D. Benchmarking scalable methods for streaming cross document entity coreference. In Benchmarking scalable methods for streaming cross document entity coreference.
+Logeswaran, L., Chang, M., Lee, K., Toutanova, K., Devlin, J., and Lee, H. 2019. Zero-shot entity linking by reading entity descriptions. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics. pp. 3449--3460 10.18653/v1/P19-1335
+Milne, D., Ian, H., and Witten 2008. Learning to link with wikipedia. In Proceedings of the 17th ACM conference on Information and knowledge management. pp. 509--518
+Mohan, S. and Li, D. 2019. Medmentions: A large biomedical corpus annotated with umls concepts. In Medmentions: A large biomedical corpus annotated with umls concepts. arXiv:1902.09476
+Nickel, M. and Kiela, D. 2018. Learning continuous hierarchies in the lorentz model of hyperbolic geometry. In International Conference on Machine Learning. pp. 3779--3788
+Di Noia, T., Ostuni, V. C., Tomeo, P., and Sciascio, E. D. 2016. Sprank: Semantic path-based ranking for top-n recommendations using linked open data. In ACM Transactions on Intelligent Systems and Technology (TIST). pp. 1--34
+Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Killeen, T., Lin, Z., Gimelshein, N., Antiga, L., Desmaison, A., Kopf, A., Yang, E., and Devito, Z. 2019. Pytorch: An imperative style, high-performance deep learning library. In Advances in Neural Information Processing Systems.
+Raiman, J. and Raiman, O. 2018. Deeptype: multilingual entity linking by neural type system evolution. In Proceedings of the AAAI Conference on Artificial Intelligence.
+Ravenscroft, J., Cattan, A., Clare, A., Dagan, I., and Liakata, M. 2021. Cd2cr: Co-reference resolution across documents and domains. In Cd2cr: Co-reference resolution across documents and domains. arXiv:2101.12637
+Singh, S., Subramanya, A., Pereira, F., and Mccallum, A. 2011. Large-scale crossdocument coreference using distributed inference and hierarchical models. In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies. pp. 793--803
+Sung, M., Jeon, H., Lee, J., and Kang, J. 2020. Biomedical entity representations with synonym marginalization. In Biomedical entity representations with synonym marginalization. arXiv:2005.00239
+Wu, L., Petroni, F., Josifoski, M., Riedel, S., and Zettlemoyer, L. 2020. Zero-shot entity linking with dense entity retrieval. In EMNLP.
+Yadav, N., Kobren, A., Monath, N., and Mccallum, A. 2019. Supervised hierarchical clustering with exponential linkage. In Proceedings of the 36th International Conference on Machine Learning. pp. 6973--6983
+Zhang, S., Cheng, H., Vashishth, S., Wong, C., Xiao, J., Liu, X., Naumann, T., Gao, J., and Poon, H. 2021. Knowledge-rich self-supervised entity linking. In Knowledge-rich self-supervised entity linking. arXiv:2112.07887
+Zhang, W. and Stratos, K. 2021. Understanding hard negatives in noise contrastive estimation. In Understanding hard negatives in noise contrastive estimation. arXiv:2104.06245

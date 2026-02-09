@@ -1,0 +1,34 @@
+Related Works
+
+Existing task weighting strategies can be divided into two categories: weight adaptation methods and Pareto Optimization (PO)-based methods. The weight adaptation methods adaptively adjust the tasks' weights during training based on pre-defined heuristic, such as uncertainty (Kendall et al., 2018), task difficulty prioritization (Guo et al., 2018), gradient normalization (Chen et al., 2018), weight average (Liu et al., 2019) and task variance regularization (Mao et al., 2021). These methods only use training losses or their gradients to compute task weights while ignores the gap between the training loss and generalization loss.
+
+Besides, the PO-based methods formulate MTL as a multi-objective optimization problem and aim to find an arbitrary Pareto stationary solution (Sener and Koltun, 2018;Mahapatra and Rajan, 2020;Lin et al., 2020;Mao et al., 2020). However, in these methods, the learning objectives only involve training losses; thus, they can only achieve Pareto stationary points w.r.t training losses. They also ignore the gap between the training loss and generalization loss. Moreover,  proposes that the PO-based methods can be also regarded as weight adaptation methods for they optimize the weighted sum of training losses as well.
+
+Overlooking the gap between the training loss and generalization loss would degenerate the performance of MTL. This paper proposes a novel task weighting method to solve this issue.
+
+ References: 
+1996. Weak convergence and empirical processes. In Weak convergence and empirical processes.
+Allen-Zhu, Z., Li, Y., and Liang, Y. 2019. Learning and generalization in overparameterized neural networks, going beyond two layers. In Learning and generalization in overparameterized neural networks, going beyond two layers.
+Luís, B., Almeida, T., Langlois, José, D., Amaral, A., and Plakhov 1998. Parameter adaptation in stochastic optimization. In On-Line Learning in Neural Networks. pp. 111--134
+Baxter, J. 2000. A model of inductive bias learning. In Journal of artificial intelligence research. pp. 149--198
+Atilim Gunes Baydin, R., Cornish, D., Martínez-Rubio, M., Schmidt, F., and Wood 2018. Online learning rate adaptation with hypergradient descent. In ICLR.
+Blitzer, J., Dredze, M., and Pereira, F. 2007. Biographies, bollywood, boom-boxes and blenders: Domain adaptation for sentiment classification. In ACL.
+Caruana, R. 1993. Multitask learning: A knowledgebased source of inductive bias. In ICML.
+Chen, Z., Badrinarayanan, V., Lee, C., and Rabinovich, A. 2018. Gradnorm: Gradient normalization for adaptive loss balancing in deep multitask networks. In ICML.
+Désidéri, J. 2012. Multiple-gradient descent algorithm (mgda) for multiobjective optimization. In Comptes Rendus Mathematique. pp. 313--318
+Guo, M., Haque, A., Huang, D., Yeung, S., and Fei-Fei, L. 2018. Dynamic task prioritization for multitask learning. In ECCV.
+Jaggi, M. 2013. Revisiting frank-wolfe: Projectionfree sparse convex optimization. In ICML.
+Kendall, A., Gal, Y., and Cipolla, R. 2018. Multi-task learning using uncertainty to weigh losses for scene geometry and semantics. In CVPR.
+Diederik, P., Kingma, J., and Ba 2015. Adam: A method for stochastic optimization. In Adam: A method for stochastic optimization.
+Lin, X., Yang, Z., Zhang, Q., and Kwong, S. 2020. Controllable pareto multi-task learning. In Controllable pareto multi-task learning.
+Lin, X., Zhen, H., Li, Z., Zhang, Q., and Kwong, S. 2019. Pareto multi-task learning. In NIPS.
+Liu, P., Qiu, X., and Huang, X. 2017. Adversarial multi-task learning for text classification. In ACL.
+Liu, S., Johns, E., and Davison, A. J. 2019. End-to-end multi-task learning with attention. In CVPR.
+Ma, P., Du, T., and Matusik, W. 2020. Efficient continuous pareto exploration in multi-task learning. In ICML.
+Mahapatra, D. and Rajan, V. 2020. Multitask learning with user preferences: Gradient descent with controlled ascent in pareto optimization. In ICML.
+Mao, Y., Wang, Z., Liu, W., Lin, X., and Hu, W. 2021. Banditmtl: Bandit-based multitask learning for text classification. In ACL.
+Mao, Y., Yun, S., Liu, W., and Du, B. 2020. Tchebycheff procedure for multi-task text classification. In ACL.
+Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Killeen, T., Lin, Z., Gimelshein, N., Antiga, L., Desmaison, A., Kopf, A., Yang, E., and Devito, Z. 2019. Pytorch: An imperative style, high-performance deep learning library. In NeurIPS.
+Pennington, J., Socher, R., and Manning, C. D. 2014. Glove: Global vectors for word representation. In EMNLP.
+Sener, O. and Koltun, V. 2018. Multitask learning as multi-objective optimization. In Multitask learning as multi-objective optimization.
+Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P., Rault, T., Louf, R., Funtowicz, M., Davison, J., Shleifer, S., Patrick Von Platen, C., Ma, Y., Jernite, J., Plu, C., Xu, T. L., Scao, S., Gugger, M., Drame, Q., Lhoest, A. M., and Rush 2020. Transformers: State-of-the-art natural language processing. In EMNLP.

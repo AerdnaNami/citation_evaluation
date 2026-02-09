@@ -1,0 +1,49 @@
+Background
+
+In this section, we first briefly introduce a mainstream NMT framework, Transformer (Vaswani et al., 2017), with a focus on how to generate prediction probabilities. Then we present an analysis of the confidence miscalibration observed in NMT, which motivates our ideas discussed afterward.
+
+Transformer-based NMT
+
+The Transformer has a stacked encoder-decoder structure. When given a pair of parallel sentences x = {x 1 , x 2 , ...x S } and y = {y 1 , y 2 , ...y T }, the encoder first transforms input to a sequence of continuous representations h = h 0 1 , h 0 2 , ...h 0 T , which are then passed to the decoder.
+
+The decoder is composed of a stack of N identical blocks, each of which includes self-attention, cross-lingual attention, and a fully connected feedforward network. The outputs of l-th block h l t are fed to the successive block. At the t-th position, the model produces the translation probabilities p t , a vocabulary-sized vector, based on outputs of the N -th layer:
+
+During training, the model is optimized by minimizing the cross entropy loss:
+
+where {W , b} are trainable parameters and y t is denoted as a one-hot vector. During inference, we implement beam search by selecting high-probability tokens from generated probability for each step.
+
+Confidence Miscalibration in NMT
+
+Modern neural networks have been found to yield a miscalibrated confidence estimate (Guo et al., 2017;Hendrycks and Gimpel, 2017). It means that the prediction probability, as used at each inference step, is not reflective of its accuracy. The problem is more complex for structured outputs in NMT. We cannot judge a translation as an error, even if it differs from the ground truth, as several semantically equivalent translations exist for the same source sentence. Thus we manually annotate each target word as OK or BAD on 200 Zh⇒En translations. Only definite mistakes are labeled as BAD, while other uncertain translations are overlooked.
+
+Figure 2 reports the density function of prediction probabilities on OK and BAD translations. We observe severe miscalibration in NMT: overconfident problems account for 35.8% when the model outputs BAD translations, and 24.9% OK translations are produced with low probabilities. These issues make it challenging to identify model failure. It further drives us to establish an estimate to describe model confidence better.
+
+ References: 
+Amodei, D., Olah, C., Steinhardt, J., Christiano, P. F., Schulman, J., and Mané, D. 2016. Concrete problems in AI safety. In Concrete problems in AI safety. abs/1606.06565
+Corbière, C., Thome, N., Bar-Hen, A., Cord, M., and Pérez, P. 2019. Addressing failure prediction by learning model confidence. In Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems. pp. 2898--2909
+Devries, T. and Taylor, G. W. 2018. Learning confidence for out-of-distribution detection in neural networks. In Learning confidence for out-of-distribution detection in neural networks. abs/1802.04865
+Fomicheva, M., Sun, S., Yankovskaya, L., Blain, F., Guzmán, F., and Fishel, M. Nikolaos Aletras, Vishrav Chaudhary, and Lucia Specia. 2020. Unsupervised quality estimation for neural machine translation. In Transactions of the Association for Computational Linguistics. pp. 539--555
+Gal, Y. and Ghahramani, Z. 2016. Dropout as a bayesian approximation: Representing model uncertainty in deep learning. In Proceedings of the 33nd International Conference on Machine Learning, ICML 2016. pp. 1050--1059
+Guo, C., Pleiss, G., Sun, Y., and Weinberger, K. Q. 2017. On calibration of modern neural networks. In Proceedings of the 34th International Conference on Machine Learning, ICML 2017. pp. 1321--1330
+Hendrycks, D. and Gimpel, K. 2017. A baseline for detecting misclassified and out-of-distribution examples in neural networks. In 5th International Conference on Learning Representations.
+Kepler, F., Trénous, J., Treviso, M., Vera, M., Góis, A., Amin Farajian, M., and António, V.
+Lopes, André, F. T., and Martins 2019. Unbabel's participation in the WMT19 translation quality estimation shared task. In Proceedings of the Fourth Conference on Machine Translation. pp. 78--84
+Kepler, F., Trénous, J., Treviso, M. V., Vera, M., Góis, A., Amin Farajian, M., Lopes, A. V., and Martins, A. F.T. 2019. Unbabel's participation in the WMT19 translation quality estimation shared task. In Proceedings of the Fourth Conference on Machine Translation, WMT 2019. pp. 78--84 10.18653/v1/w19-5406
+Kim, H., Lee, J., and Na, S. 2017. Predictor-estimator using multilevel task learning with stack propagation for neural quality estimation. In Proceedings of the Second Conference on Machine Translation. pp. 562--568 10.18653/v1/w17-4763
+Koehn, P., Hoang, H., Birch, A., Callison-Burch, C., Federico, M., Bertoldi, N., Cowan, B., Shen, W., Moran, C., Zens, R., Dyer, C., Bojar, O., Constantin, A., and Herbst, E. 2007. Moses: Open source toolkit for statistical machine translation. In Proceedings of the 45th Annual Meeting of the Association for Computational Linguistics Companion Volume Proceedings of the Demo and Poster Sessions. pp. 177--180
+Kumar, A. and Sarawagi, S. 2019. Calibration of encoder decoder models for neural machine translation. In Calibration of encoder decoder models for neural machine translation. abs/1903.00802
+Lee, K., Lee, K., Lee, H., and Shin, J. 2018. A simple unified framework for detecting outof-distribution samples and adversarial attacks. In Advances in Neural Information Processing Systems. pp. 7167--7177
+Müller, R., Kornblith, S., and GeoffreyE 2019. When does label smoothing help?. In Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems. pp. 4696--4705
+Mai Nguyen, A., Yosinski, J., and Clune, J. 2015. Deep neural networks are easily fooled: High confidence predictions for unrecognizable images. In IEEE Conference on Computer Vision and Pattern Recognition. pp. 427--436 10.1109/CVPR.2015.7298640
+Nguyen, K., Brendan, O., and Connor 2015. Posterior calibration and exploratory analysis for natural language processing models. In Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing. pp. 1587--1598
+Papineni, K., Roukos, S., Ward, T., and Zhu, W. 2002. Bleu: a method for automatic evaluation of machine translation. In Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics. pp. 311--318 10.3115/1073083.1073135
+Platt, J. C. 1999. Probabilistic outputs for support vector machines and comparisons to regularized likelihood methods. In Advances in Large Margin Classifiers.
+Sennrich, R., Haddow, B., and Birch, A. 2016. Neural machine translation of rare words with subword units. In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics. pp. 1715--1725 10.18653/v1/P16-1162
+Snoek, J., Ovadia, Y., Fertig, E., Lakshminarayanan, B., Sebastian Nowozin, D., Sculley, J. V., Dillon, J., Ren, Z., and Nado 2019. Can you trust your model's uncertainty? evaluating predictive uncertainty under dataset shift. In Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems. pp. 13969--13980
+Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., and Wojna, Z. 2016. Rethinking the inception architecture for computer vision. In 2016 IEEE Conference on Computer Vision and Pattern Recognition. pp. 2818--2826 10.1109/CVPR.2016.308
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, and Polosukhin, I. 2017. Attention is all you need. In Proceedings of the 31st International Conference on Neural Information Processing Systems. pp. 6000--6010 10.5555/3295222.3295349
+Wang, J., Fan, K., Li, B., Zhou, F., Chen, B., Shi, Y., and Si, L. 2018. Alibaba submission for WMT18 quality estimation task. In Proceedings of the Third Conference on Machine Translation: Shared Task Papers. pp. 809--815
+Wang, K., Shi, Y., Wang, J., Zhang, Y., Zhao, Y., and Zheng, X. 2021. Beyond glassbox features: Uncertainty quantification enhanced quality estimation for neural machine translation. In Findings of the Association for Computational Linguistics: EMNLP 2021. pp. 4687--4698
+Wang, S., Liu, Y., Wang, C., Luan, H., and Sun, M. 2019. Improving back-translation with uncertainty-based confidence estimation. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing. pp. 791--802 10.18653/v1/D19-1073
+Wang, S., Tu, Z., Shi, S., and Liu, Y. 2020. On the inference calibration of neural machine translation. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, ACL 2020. pp. 3070--3079 10.18653/v1/2020.acl-main.278
+Xiao, T. Z., Gomez, A. N., and Gal, Y. 2006. Wat zei je? detecting out-of-distribution translations with variational transformers. In Wat zei je? detecting out-of-distribution translations with variational transformers.

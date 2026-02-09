@@ -1,0 +1,86 @@
+Introduction
+
+Automatic Readability Assessment is the task of assigning a reading level for a given text. It is useful in many applications such as selecting age appropriate texts in classrooms (Sheehan et al., 2014), assessment of patient education materials (Sare et al., 2020) and clinical informed consent forms (Perni et al., 2019), measuring the readability of financial disclosures (Loughran and McDonald, 2014), and so on. Contemporary NLP approaches treat it primarily as a classification problem. This approach makes it non-transferable to situations where the reading level scale in the test data doesn't match the one in the training set. Applying learning to rank methods has been seen as a potential solution to this problem in the past. Ranking texts by readability is also useful in a range of application scenarios, from ranking search results based on readability (Kim et al., 2012;Fourney et al., 2018) to controlling the reading level of machine translation output (Agrawal and Carpuat, 2019;Marchisio et al., 2019). However, exploration of ranking methods has not been a prominent direction for ARA research. Further, recent developments in neural ranking approaches haven't been explored for this task yet, to our knowledge.
+
+ARA typically relies on the presence of large amounts of data labeled by reading level. Such datasets are not readily available for many languages. Further, although linguistic features are common in ARA research, it is challenging to calculate them for several languages, due to lack of available software support. Though there is a lot of recent interest in neural network based crosslingual transfer learning approaches for various NLP tasks, there hasn't been much research in this direction for ARA yet. In this background, we propose a new neural pairwise ranking model for ARA in this paper, and evaluate its transferability to other datasets and languages.
+
+In short, we address two research questions:
+
+1. Is neural, pairwise ranking a better approach than classification or regression for ARA, to achieve cross-corpus compatibility?
+
+2. Is zero-shot, cross-lingual transfer possible for ARA models through such a ranking approach?
+
+The main contributions of this paper are as follows:
+
+1. This paper proposes new neural pairwise ranking model and shows its application to automatic readability assessment.
+
+2. The feasibility of pairwise ranking as a means of achieving cross-corpus compatibility for monolingual (English) ARA is evaluated.
+
+3. Zero shot, neural cross-lingual transfer is assessed for two languages -Spanish and
+
+French, based on a model trained on English data. To our knowledge, this is the first such experiment on ARA.
+
+4. We created a new dataset, with parallel, topic controlled texts between English and French.
+
+The rest of this paper is organized as follows: Section 2 gives an overview of related research. Section 3 describes the proposed neural pairwise ranking model. Section 4 describes our experimental setup and Section 5 discusses the results of our experiments. Section 6 concludes the paper by summarizing our findings and discussing the limitations.
+
+ References: 
+Agrawal, S. and Carpuat, M. 2019. Controlling text complexity in neural machine translation. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). pp. 1549--1564
+Ai, Q., Wang, X., Bruch, S., Golbandi, N., Bendersky, M., and Najork, M. 2019. Learning groupwise multivariate scoring functions using deep neural networks. In Proceedings of the 2019 ACM SIGIR International Conference on Theory of Information Retrieval. pp. 85--92
+Ambati, B. R., Reddy, S., and Steedman, M. 2016. Assessing relative sentence complexity using an incremental ccg parser. In Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 1051--1057
+Ion, M., Azpiazu, M. S., and Pera 2019. Multiattentive recurrent neural network architecture for multilingual readability assessment. In Transactions of the Association for Computational Linguistics. pp. 421--436
+Bojanowski, P., Grave, E., Joulin, A., and Mikolov, T. 2017. Enriching word vectors with subword information. In Transactions of the Association for Computational Linguistics. pp. 135--146
+Bernhard, E., Boser, I. M., Guyon, V. N., and Vapnik 1992. A training algorithm for optimal margin classifiers. In Proceedings of the fifth annual workshop on Computational learning theory. pp. 144--152
+Cha, M., Gwon, Y., and Kung, H. T. 2017. Language modeling by clustering with word embeddings for text readability assessment. In Proceedings of the 2017 ACM on Conference on Information and Knowledge Management. pp. 2003--2006
+Dell'orletta, F., Montemagni, S., and Venturi, G. 2011. Read-it: Assessing readability of italian texts with a view to text simplification. In Proceedings of the second workshop on speech and language processing for assistive technologies. pp. 73--83
+Deutsch, T., Jasbi, M., and Shieber, S. 2020. Linguistic features for readability assessment. In Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational Applications. pp. 1--17 10.18653/v1/2020.bea-1.1
+Devlin, J., Chang, M., Lee, K., and Toutanova, K. 2018. Bert: Pre-training of deep bidirectional transformers for language understanding. In Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv:1810.04805
+William, H. and Dubay 2007. Unlocking language: The classic readability studies. In Unlocking language: The classic readability studies.
+Feng, L., Elhadad, N., and Huenerfauth, M. 2009. Cognitively motivated features for readability assessment. In Proceedings of the 12th Conference of the European Chapter. pp. 229--237
+Flesch, R. 1948. A new readability yardstick. In Journal of applied psychology. pp. 221
+Fourney, A., Morris, M. R., Ali, A., and Vonessen, L. 2018. Assessing the readability of web search results for searchers with dyslexia. In The 41st International ACM SIGIR Conference on Research & Development in Information Retrieval. pp. 1069--1072
+François, T. and Fairon, C. 2012. An "ai readability" formula for french as a foreign language. In Proceedings of the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning. pp. 466--477
+Han, S., Wang, X., Bendersky, M., and Najork, M. 2020. Learning-to-rank with bert in tf-ranking. In Learning-to-rank with bert in tf-ranking.
+Hancke, J., Vajjala, S., and Meurers, D. 2012. Readability classification for german using lexical, syntactic, and morphological features. In Proceedings of COLING 2012. pp. 1063--1080
+Heilman, M., Collins-Thompson, K., Callan, J., and Eskenazi, M. 2007. Combining lexical and grammatical features to improve readability measures for first and second language texts. In Human Language Technologies 2007: The Conference of the North American Chapter of the Association for Computational Linguistics; Proceedings of the Main Conference. pp. 460--467
+Heilman, M., Collins-Thompson, K., and Eskenazi, M. 2008. An analysis of statistical models and features for reading difficulty prediction. In Proceedings of the third workshop on innovative use of NLP for building educational applications. pp. 71--79
+David, M., Howcroft, V., and Demberg 2017. Psycholinguistic models of sentence processing improve sentence readability ranking. In Proceedings of the 15th Conference of the European Chapter. pp. 958--968
+Marvin Imperial, J. 2021. Knowledge-rich bert embeddings for readability assessment. In Knowledge-rich bert embeddings for readability assessment. arXiv:2106.07935
+Jiang, Z., Gu, Q., Yin, Y., and Chen, D. 2018. Enriching word embeddings with domain knowledge for readability assessment. In Proceedings of the 27th International Conference on Computational Linguistics. pp. 366--378
+Kim, J. Y., Collins-Thompson, K., Bennett, P. N., and Dumais, S. T. 2012. Characterizing web content, user interests, and search behavior by reading level and topic. In Proceedings of the fifth ACM international conference on Web search and data mining. pp. 213--222
+Bruce, W., Lee, Y. S., Jang, J.H., and Lee 2021. Pushing on text readability assessment: A transformer meets handcrafted linguistic features. In Pushing on text readability assessment: A transformer meets handcrafted linguistic features. arXiv:2109.12258
+Lewis, M., Liu, Y., Goyal ; Abdelrahman Mohamed, N., Levy, O., Stoyanov, V., and Zettlemoyer, L. 2020. BART: Denoising sequence-to-sequence pretraining for natural language generation, translation, and comprehension. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. pp. 7871--7880 10.18653/v1/2020.acl-main.703
+Bertha, A., Lively, S. L., and Pressey 1923. A method for measuring the vocabulary burden of textbooks. Educational administration and supervision. In A method for measuring the vocabulary burden of textbooks. Educational administration and supervision. pp. 389--398
+Loughran, T. and Mcdonald, B. 2014. Measuring readability in financial disclosures. In The Journal of Finance. pp. 1643--1671
+Ma, Y., Fosler-Lussier, E., and Lofthus, R. 2012. Ranking-based readability assessment for early primary children's literature. In Proceedings of the 2012 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 548--552
+Ion, M., Azpiazu, M. S., and Pera 2020. An analysis of transfer learning methods for multilingual readability assessment. In Adjunct Publication of the 28th ACM Conference on User Modeling, Adaptation and Personalization. pp. 95--100
+Ion, M., Azpiazu, M. S., and Pera 2020. Is cross-lingual readability assessment possible. In Journal of the Association for Information Science and Technology. pp. 644--656
+Marchisio, K., Guo, J., Cheng, -., Lai, P., and Koehn 2019. Controlling the reading level of machine translation output. In Proceedings of Machine Translation Summit XVII. pp. 193--203
+Martinc, M., Pollak, S., and Robnik-Šikonja, M. 2021. Supervised and unsupervised neural approaches to text readability. In Computational Linguistics. pp. 141--179
+Meng, C., Chen, M., Mao, J., and Neville, J. 2020. Readnet: A hierarchical transformer framework for web article readability analysis. Advances in Information Retrieval. In Readnet: A hierarchical transformer framework for web article readability analysis. Advances in Information Retrieval. pp. 33
+Mesgar, M. and Strube, M. 2015. Graphbased coherence modeling for assessing readability. In Proceedings of the Fourth Joint Conference on Lexical and Computational Semantics. pp. 309--318 10.18653/v1/S15-1036
+Mikolov, T., Chen, K., Corrado, G., and Dean, J. 2013. Efficient estimation of word representations in vector space. In Efficient estimation of word representations in vector space. arXiv:1301.3781
+Mikolov, T., Chen, K., Corrado, G., and Dean, J. 2013. Efficient estimation of word representations in vector space. In Efficient estimation of word representations in vector space. arXiv:1301.3781
+Mohammadi, H. and Seyed Hossein Khasteh 2019. Text as environment: A deep reinforcement learning text readability assessment model. In Text as environment: A deep reinforcement learning text readability assessment model. arXiv:1912.05957
+Rama Kumar Pasumarthi, S., Bruch, X., Wang, C., Li, M., Bendersky, M., Najork, J., Pfeifer, N., Golbandi, R., Anil, S., and Wolf 2019. Tf-ranking: Scalable tensorflow library for learning-to-rank. In Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. pp. 2970--2978
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., and Dubourg, V. 2011. Scikit-learn: Machine learning in python. In Journal of machine Learning research. pp. 2825--2830
+Pennington, J., Socher, R., and Manning, C.D. 2014. Glove: Global vectors for word representation. In Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP). pp. 1532--1543
+Perni, S., Michael, K., Rooney, D. P., Horowitz, Daniel, W., Golden, A. R., Mccall, A. J., Einstein, R., and Jagsi 2019. Assessment of use, specificity, and readability of written clinical informed consent forms for patients with cancer undergoing radiotherapy. In JAMA oncology. pp. e190260--e190260
+Sarah, E., Petersen, M., and Ostendorf 2009. A machine learning approach to reading level assessment. Computer speech & language. In A machine learning approach to reading level assessment. Computer speech & language. pp. 89--106
+Pitler, E. and Nenkova, A. 2008. Revisiting readability: A unified framework for predicting text quality. In Proceedings of the 2008 Conference on Empirical Methods in Natural Language Processing. pp. 186--195
+Porter, A., Mcmaken, J., Hwang, J., and Yang, R. 2011. Common core standards: The new us intended curriculum. Educational researcher. In Common core standards: The new us intended curriculum. Educational researcher. pp. 103--116
+Sare, A., Patel, A., Kothari, P., Kumar, A., Patel, N., and Shukla, P.A. 2020. Readability assessment of internet-based patient education materials related to treatment options for benign prostatic hyperplasia. In Academic Radiology.
+Kathleen, M., Sheehan, I., Kostin, D., Napolitano, M., and Flor 2014. The textevaluator tool: Helping teachers and test developers select texts for use in instruction and assessment. In The Elementary School Journal. pp. 184--209
+Shen, W., Williams, J., Marius, T., and Salesky, E. 2013. A language-independent approach to automatic text difficulty assessment for second-language learners. In Proceedings of the Second Workshop on Predicting and Improving Text Readability for Target Reader Populations. pp. 30--38
+Si, L. and Callan, J. 2001. A statistical model for scientific readability. In Proceedings of the tenth international conference on Information and knowledge management. pp. 574--576
+Sinha, M., Sharma, S., Dasgupta, T., and Basu, A. 2012. New readability measures for bangla and hindi texts. In Proceedings of COL-ING 2012: Posters. pp. 1141--1150
+Stenner, J. 1996. Measuring reading comprehension with the lexile framework. In Measuring reading comprehension with the lexile framework.
+Tanaka-Ishii, K., Tezuka, S., and Terada, H. 2010. Sorting texts by readability. In Computational linguistics. pp. 203--227
+Todirascu, A., François, T., Gala, N., Fairon, C., Ligozat, A., and Bernhard, D. 2013. Coherence and cohesion for the assessment of text readability. In Natural Language Processing and Cognitive Science. pp. 11--19
+Vajjala, S. and Lučić, I. 2018. Onestopenglish corpus: A new corpus for automatic readability assessment and text simplification. In Proceedings of the thirteenth workshop on innovative use of NLP for building educational applications. pp. 297--304
+Wang, X., Li, C., and Golbandi, N. 2018. The lambdaloss framework for ranking metric optimization. In Proceedings of The 27th ACM International Conference on Information and Knowledge Management (CIKM '18). pp. 1313--1322
+Weiss, Z., Chen, X., and Meurers, D. 2021. Using broad linguistic complexity modeling for cross-lingual readability assessment. In Proceedings of the 10th Workshop on NLP for Computer Assisted Language Learning. pp. 38--54
+Wolf, T., Chaumond, J., Debut, L., Sanh, V., Delangue, C., Moi, A., Cistac, P., Funtowicz, M., Davison, J., and Shleifer, S. 2020. Transformers: State-of-theart natural language processing. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations. pp. 38--45
+Xia, M., Kochmar, E., and Briscoe, T. 2016. Text readability assessment for second language learners. In Proceedings of the 11th Workshop on Innovative Use of NLP for Building Educational Applications. pp. 12--22
+Xu, W., Callison-Burch, C., and Napoles, C. 2015. Problems in current text simplification research: New data can help. In Transactions of the Association for Computational Linguistics. pp. 283--297 10.1162/tacl_a_00139
+Yang, Z., Yang, D., Dyer, C., He, X., Smola, A., and Hovy, E. 2016. Hierarchical attention networks for document classification. In Proceedings of the 2016 conference of the North American chapter of the association for computational linguistics: human language technologies. pp. 1480--1489

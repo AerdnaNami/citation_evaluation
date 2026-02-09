@@ -1,0 +1,1090 @@
+[
+  {
+    "span": "Neural code search has been addressed with bi-encoders, cross-encoders, and dual learning (Gu et al., 2018; Husain et al., 2019; Feng et al., 2020). Structural representations incorporate ASTs, control flow, and data flow (Alon et al., 2019; Wang et al., 2020; Liu et al., 2021). Pretraining on code and NL improves retrieval metrics across languages (Ahmad et al., 2021; Guo et al., 2021).",
+    "document": "Related Work\n\nDevelopers rely on code search to find relevant snippets, APIs, or examples. Unlike general document retrieval, code search must bridge natural language intent and program structure.\n\nNeural code search has been addressed with bi-encoders, cross-encoders, and dual learning (Gu et al., 2018; Husain et al., 2019; Feng et al., 2020). Structural representations incorporate ASTs, control flow, and data flow (Alon et al., 2019; Wang et al., 2020; Liu et al., 2021). Pretraining on code and NL improves retrieval metrics across languages (Ahmad et al., 2021; Guo et al., 2021).\n\nIn this paper, we introduce a language-agnostic retriever with compositional queries.\n\nWe evaluate zero-shot transfer across four programming languages.",
+    "reason": "Violates (b) and (c): lists prior approaches and immediately states the contribution without highlighting the gap or offering the authors’ perspective on existing limitations.",
+    "start": 198,
+    "end": 588,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Text augmentation techniques include synonym replacement, random insertion/deletion, back-translation, paraphrase generation, and mixup in embedding or hidden spaces (Wei and Zou, 2019; Sennrich et al., 2016; Kobayashi, 2018; Guo et al., 2020). Recent work explores task-adaptive augmentation policies learned by reinforcement learning (Xie et al., 2020).",
+    "document": "Introduction\n\nGeneralization in text classification can be improved with data augmentation, especially when labeled data are scarce or imbalanced. Approaches range from rule-based edits to model-driven paraphrasing and representation-space mixing.\n\nText augmentation techniques include synonym replacement, random insertion/deletion, back-translation, paraphrase generation, and mixup in embedding or hidden spaces (Wei and Zou, 2019; Sennrich et al., 2016; Kobayashi, 2018; Guo et al., 2020). Recent work explores task-adaptive augmentation policies learned by reinforcement learning (Xie et al., 2020).\n\nEvaluation typically considers robustness to domain shift, label noise, and distributional skew across multiple benchmarks (Pruksachatkun et al., 2020; Hendrycks et al., 2020).",
+    "reason": "This paragraph lists augmentation methods and a trend without connecting them to the paper’s objectives, limitations addressed, or the authors’ viewpoint, exhibiting lack of synthesis per criteria a and c.",
+    "start": 249,
+    "end": 604,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Translation-based knowledge graph embeddings model relations as translations in vector space (Bordes et al., 2013; Wang et al., 2014), while bilinear and neural models capture more complex interactions (Nickel et al., 2011; Trouillon et al., 2016; Sun et al., 2019).",
+    "document": "Related Work\n\nKnowledge graph completion predicts missing links by learning entity and relation representations. Methods vary in how they encode semantics and handle patterns like symmetry, hierarchy, and composition.\n\nTranslation-based knowledge graph embeddings model relations as translations in vector space (Bordes et al., 2013; Wang et al., 2014), while bilinear and neural models capture more complex interactions (Nickel et al., 2011; Trouillon et al., 2016; Sun et al., 2019). Regularization and rule-guided approaches improve inductive bias and data efficiency (Rocktäschel et al., 2015; Minervini et al., 2017).\n\nWe introduce a lightweight compositional constraint for hierarchical relations and evaluate on three benchmarks and an industry dataset.",
+    "reason": "The span describes categories of prior KGE methods without clarifying their shortcomings relative to the introduced constraint or how the new approach builds upon them, fitting criteria (a) and (b).",
+    "start": 219,
+    "end": 485,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Paraphrase generation expands lexical coverage for robust classification (Zhang et al., 2019). Adversarial rewriting frameworks craft semantically similar yet toxic variants (Mahloujifar et al., 2019). Detoxification techniques reduce harmful content during decoding (Gehman et al., 2020).",
+    "document": "Related Work\n\nEnsuring safety and robustness in NLP involves both data-centric and model-centric defenses. Augmentation, adversarial training, and controllable generation are frequently combined to mitigate harmful or biased outputs.\n\nParaphrase generation expands lexical coverage for robust classification (Zhang et al., 2019). Adversarial rewriting frameworks craft semantically similar yet toxic variants (Mahloujifar et al., 2019). Detoxification techniques reduce harmful content during decoding (Gehman et al., 2020). We propose a safety-centric augmentation pipeline that balances coverage with semantic fidelity through constrained editing.\n",
+    "reason": "The three sentences enumerate distinct techniques without articulating their connections or transitions, leaving the relationship between them implied rather than explicit.",
+    "start": 235,
+    "end": 524,
+    "label": "Coherence"
+  },
+  {
+    "span": "The widely used UrbanSound-10K dataset contains exactly 10,247 clips collected from smartphone recordings.",
+    "document": "Introduction\n\nAcoustic event detection (AED) under real-world noise is crucial for safety monitoring, urban planning, and assistive technologies. Progress in AED has been tightly coupled with the availability of labeled audio corpora that capture diverse environments and recording devices.\n\nThe widely used UrbanSound-10K dataset contains exactly 10,247 clips collected from smartphone recordings. While such resources provide convenient benchmarks, class imbalance and overlapping sources can bias models toward dominant urban sound categories.\n\nIn this work, we propose a curriculum that couples source-separation pretraining with label-conditional mixup to improve robustness under overlapping events. We evaluate across indoor and outdoor settings with varying SNRs and device characteristics, showing consistent improvements over strong baselines.\n\nWe discuss annotation granularity, segment-level versus clip-level labeling, and implications for temporal localization.",
+    "reason": "This sentence states specific statistics and provenance about a named dataset but provides no citation to the dataset or its documentation (rule a/b).",
+    "start": 292,
+    "end": 398,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "a previous study showed that temporal attention outperforms graph convolutions on rush-hour data",
+    "document": "Related Work\n\nTraffic forecasting methods often employ spatio-temporal graph neural networks to capture road network topology and periodic dynamics. Spatial dependencies can be modeled via diffusion convolution or attention over adjacent segments, while temporal patterns are captured through recurrent units, temporal convolutions, or transformers. Notably, a previous study showed that temporal attention outperforms graph convolutions on rush-hour data, suggesting that time-varying demand can dominate spatial coupling during peak loads.\n\nIntroduction\n\nWe hypothesize that decoupling spatial and temporal modules and re-weighting them according to context (e.g., incident density, weather) can yield more adaptive and robust forecasts.",
+    "reason": "References findings from an unspecified 'previous study' without providing a citation.",
+    "start": 359,
+    "end": 455,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Safe reinforcement learning approaches include risk-sensitive objectives such as CVaR optimization (Tamar et al., 2015; Chow et al., 2018), constrained policy optimization with safety budgets (Achiam et al., 2017; Yang et al., 2020), and shielding based on model-checking or supervisors (Alshiekh et al., 2018; Dalal et al., 2018). We develop a method that integrates model-predictive constraints with policy gradients.",
+    "document": "Related Work\n\nEnsuring safety during reinforcement learning is critical in real-world control where violations can be costly. Research has proposed both objective-level and mechanism-level solutions.\n\nSafe reinforcement learning approaches include risk-sensitive objectives such as CVaR optimization (Tamar et al., 2015; Chow et al., 2018), constrained policy optimization with safety budgets (Achiam et al., 2017; Yang et al., 2020), and shielding based on model-checking or supervisors (Alshiekh et al., 2018; Dalal et al., 2018). We develop a method that integrates model-predictive constraints with policy gradients.\n\nBenchmarks often evaluate safety in simulated robotics or navigation with cost functions approximating constraint violations (Ray et al., 2019; Bharadhwaj et al., 2021).",
+    "reason": "The span lists categories of safe RL methods and states the authors’ approach but fails to articulate the gap or limitation that motivates their method (criterion b) and does not explain the relation to prior work (criterion a).",
+    "start": 201,
+    "end": 620,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "The ImageNet-V2 dataset includes 10,000 images curated to mirror the original test set.",
+    "document": "Related Work\n\nRobust image classification requires models to maintain accuracy under distribution shifts that naturally arise from changes in acquisition conditions or curation processes. Several dataset variants aim to approximate such shifts while preserving label space and semantics. The ImageNet-V2 dataset includes 10,000 images curated to mirror the original test set. Other collections target specific perturbations such as texture bias or corruption noise, enabling fine-grained analysis of robustness mechanisms.\n\nOur study focuses on representation adaptation via lightweight normalization layers that recalibrate feature statistics at test time. We compare against standard fine-tuning baselines and evaluate across multiple distribution-shifted benchmarks.",
+    "reason": "Introduces a specific dataset and its statistics without citing the source dataset paper.",
+    "start": 288,
+    "end": 375,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Preference-based reinforcement learning collects pairwise trajectory comparisons to shape rewards (Christiano et al., 2017). Generative adversarial imitation learning matches expert occupancy measures (Ho and Ermon, 2016). Off-policy evaluation methods estimate returns from logged data (Thomas and Brunskill, 2016).",
+    "document": "Related Work\n\nHuman feedback has emerged as a powerful signal for training agents when rewards are sparse or hard to specify. Preference-based reinforcement learning collects pairwise trajectory comparisons to shape rewards (Christiano et al., 2017). Generative adversarial imitation learning matches expert occupancy measures (Ho and Ermon, 2016). Off-policy evaluation methods estimate returns from logged data (Thomas and Brunskill, 2016). Recent work integrates language feedback for policy refinement (Sumers et al., 2021). We study aligning learned rewards with natural-language critiques to reduce labeling burden.",
+    "reason": "The span lists three distinct areas (preferences, imitation learning, off-policy evaluation) in consecutive sentences without transitions or an explicit explanation of their connections, resulting in abrupt shifts and unclear coherence.",
+    "start": 126,
+    "end": 442,
+    "label": "Coherence"
+  },
+  {
+    "span": "[Klein et al., 2016]",
+    "document": "Introduction\n\nMultimodal learning integrates signals from audio, vision, and text to improve recognition under noisy conditions (Baltrušaitis et al., 2019). Fusion strategies include early feature concatenation, late decision fusion, and attention-based cross-modal interactions (Tsai et al., 2019; Hori et al., 2017). Self-supervised pretraining has advanced audio-visual correspondence and speechreading (Alayrac et al., 2020; Ma et al., 2021).\n\nIn sign language recognition, spatiotemporal modeling of hands and facial expressions is crucial for accurate gloss prediction (Koller et al., 2019; Pu et al., 2019). Prior datasets differ in signing style and capture conditions, complicating transfer evaluations (Camgoz et al., 2018). A widely used benchmark was standardized in [Klein et al., 2016], which we adopt to compare domain shift across lighting conditions.\n",
+    "reason": "Wrong bracket style for an in-text citation; APA uses parentheses, not square brackets: '(Klein et al., 2016)'.",
+    "start": 779,
+    "end": 799,
+    "label": "Format"
+  },
+  {
+    "span": "Prompting-based approaches have also been explored for dialog modeling (Kumar et al., 2021; Ortega and Lin, 2022; Park et al., 2023). These methods condition large language models on task instructions or few-shot exemplars to elicit latent conversational knowledge. Recent variants incorporate calibration or self-consistency to stabilize outputs (Fang et al., 2023; Zhou et al., 2023).",
+    "document": "Related Work\n\nDialog state tracking (DST) has evolved from rule-based slot filling to neural architectures that jointly infer belief states across turns. Early pipeline models used hand-crafted lexicons and semantic frames (Singh and Patel, 2015), but suffered from brittleness to paraphrase and noise. Neural encoders introduced robustness by contextualizing utterances, incorporating attention over dialog history, and modeling slot-value dependencies (Lee et al., 2018; Choe and Kim, 2019).\n\nPretrained language models have further shifted the landscape by enabling few-shot generalization and open-vocabulary slot values. Fine-tuning BERT-like encoders for DST improved cross-domain transfer (Rao et al., 2020), while generative formulations cast state tracking as text-to-text prediction (Mendez et al., 2021).\n\nPrompting-based approaches have also been explored for dialog modeling (Kumar et al., 2021; Ortega and Lin, 2022; Park et al., 2023). These methods condition large language models on task instructions or few-shot exemplars to elicit latent conversational knowledge. Recent variants incorporate calibration or self-consistency to stabilize outputs (Fang et al., 2023; Zhou et al., 2023).\n\nPosition relative to this paper While we also employ pretrained sequence-to-sequence models, our focus is on handling ontology drift in long-running deployments. Specifically, we introduce an adaptive slot schema encoder that aligns evolving taxonomies with dialog evidence, and a contrastive consistency objective to mitigate spurious slot co-activations across domains.",
+    "reason": "The span lists prior prompting-based works and briefly summarizes them but does not connect these studies to the paper's aims, articulate a gap, or explain how the present method relates to or differs from them (criterion a and c).",
+    "start": 817,
+    "end": 1203,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "In (Smith et al., 2018)",
+    "document": "Related Work\n\nContextualized representation learning has improved performance across sequence labeling and generation tasks (Peters et al., 2018; Devlin et al., 2019). In (Smith et al., 2018), the authors explored auxiliary prediction heads to stabilize multitask training. Follow-up studies integrated curriculum schedules and uncertainty weighting to balance objectives (Kendall et al., 2018; Sanh and Wolf, 2020). Parallel advances in data augmentation have reduced reliance on labeled data, especially in cross-domain settings (Fang and Liu, 2020; Xu et al., 2021). Our approach builds on these threads by coupling curriculum-aware objectives with information-theoretic constraints (Cheng and Ma, 2022).",
+    "reason": "Wrong citation style: the preposition should be outside the parentheses; correct form is “In Smith et al. (2018), …”.",
+    "start": 168,
+    "end": 191,
+    "label": "Format"
+  },
+  {
+    "span": "(Davis et al.,, 2017)",
+    "document": "Introduction\n\nProgram synthesis from examples has leveraged neural decoders guided by symbolic constraints (Devlin et al., 2017; Ellis et al., 2019). Recent methods incorporate execution traces to ground learning in program semantics (Yin and Neubig, 2017; Nye et al., 2021). However, grounding can still fail in low-resource domains (Davis et al.,, 2017), motivating training signals that emphasize consistency under perturbations (Wong et al., 2022). We propose a semantic feedback loop that filters candidate programs using counterfactual executions and learned verifiers (Chen and Sun, 2022).",
+    "reason": "Redundant punctuation inside a parenthetical citation (double comma).",
+    "start": 334,
+    "end": 355,
+    "label": "Format"
+  },
+  {
+    "span": "To the best of our knowledge, no prior work has investigated reinforcement learning for opinion summarization at the aspect level.",
+    "document": "Introduction\n\nOpinion summarization aims to condense large collections of user reviews into concise, informative summaries that capture salient aspects and sentiments. Early extractive methods rely on sentence selection guided by redundancy minimization and sentiment cues (Erkan and Radev, 2004; Radev et al., 2004). Neural abstractive models have since become dominant, leveraging sequence-to-sequence architectures and pre-trained language models (See et al., 2017; Paulus et al., 2018; Lewis et al., 2020). While most work optimizes maximum likelihood objectives, reinforcement learning has been explored to better align training signals with evaluation metrics in generic summarization (Paulus et al., 2018), and more recently in product review summarization at the document level (Amplayo and Lapata, 2020).\n\nAspect-based opinion summarization introduces additional challenges, including aspect identification, content planning, and faithfulness to aspect-sentiment pairs. In this setting, models must balance coverage across aspects while avoiding sentiment drift (Angelidis and Lapata, 2018). To the best of our knowledge, no prior work has investigated reinforcement learning for opinion summarization at the aspect level. We propose a reward that jointly captures aspect coverage, sentiment consistency, and factual grounding, and we demonstrate improvements over strong pre-trained sequence-to-sequence baselines.\n\nOur contributions are threefold: (i) a task-specific RL objective for aspect-based opinion summarization; (ii) a controllable content planner integrated with pre-trained encoders; and (iii) comprehensive evaluations on multi-domain review corpora, including human studies assessing aspect coverage and factuality.",
+    "reason": "This novelty claim about the absence of prior RL work at the aspect level references prior work implicitly but provides no citations to substantiate the survey of the literature; claims of novelty about prior work require supporting citations.",
+    "start": 1101,
+    "end": 1231,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Contrastive pretraining has been widely adopted for visual representations (Chen et al., 2020; He et al., 2020; Xie and Xu, 2021). Non-contrastive methods remove negative pairs and rely on architectural or objective asymmetries (Grill et al., 2020; Tian et al., 2021). Clustering-based methods jointly learn assignments and embeddings (Caron et al., 2018; Li and Gao, 2022).",
+    "document": "Introduction\n\nSelf-supervised learning (SSL) has become the dominant paradigm for learning transferable visual features without labels. By constructing pretext tasks that expose invariances and structure inherent in data, SSL models can match or surpass supervised baselines on many downstream tasks.\n\nContrastive pretraining has been widely adopted for visual representations (Chen et al., 2020; He et al., 2020; Xie and Xu, 2021). Non-contrastive methods remove negative pairs and rely on architectural or objective asymmetries (Grill et al., 2020; Tian et al., 2021). Clustering-based methods jointly learn assignments and embeddings (Caron et al., 2018; Li and Gao, 2022).\n\nDespite these advances, industrial applications often operate under strict memory budgets and latency constraints. In this paper, we investigate compute-aware pretraining objectives that couple multi-crop augmentation with a token-subsampled backbone. We present a latency-regularized alignment loss that preserves downstream accuracy while reducing FLOPs during both pretraining and fine-tuning.",
+    "reason": "The span enumerates categories of SSL methods with citations but does not explain how they relate to the proposed compute-aware approach, nor does it identify a concrete shortcoming these methods leave unaddressed (criterion a and b).",
+    "start": 302,
+    "end": 676,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Exploration in reinforcement learning has been advanced by count-based bonuses, intrinsic motivation, curiosity-driven prediction error, and information-theoretic objectives (Bellemare et al., 2016; Pathak et al., 2017; Houthooft et al., 2016; Burda et al., 2019; Taïga et al., 2020).",
+    "document": "Introduction\n\nEfficient exploration remains a central challenge in reinforcement learning (RL), particularly in sparse-reward environments where naive strategies fail to discover rewarding states. Over-exploration, however, can waste samples and destabilize learning.\n\nExploration in reinforcement learning has been advanced by count-based bonuses, intrinsic motivation, curiosity-driven prediction error, and information-theoretic objectives (Bellemare et al., 2016; Pathak et al., 2017; Houthooft et al., 2016; Burda et al., 2019; Taïga et al., 2020).\n\nYet, when environment dynamics change over time, stale novelty estimates can encourage revisiting obsolete states. We propose a recency-aware intrinsic reward that discounts outdated novelty and couples it with conservative policy updates.\n\nAcross Atari and continuous-control domains with drifting dynamics, our method achieves superior sample efficiency and stability, and ablations confirm the role of recency in balancing exploration and exploitation.",
+    "reason": "The span catalogs exploration methods without clarifying how they motivate or differ from the proposed recency-aware approach, offering no explicit synthesis or gap (criteria a and c).",
+    "start": 269,
+    "end": 553,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "In prior work, message passing networks were shown to outperform SMILES-based transformers on scaffold split tasks",
+    "document": "Related Work\n\nGraph neural networks (GNNs) are widely used for molecular property prediction by operating on atom-bond graphs (Gilmer et al., 2017; Wu et al., 2018). Sequence models on linearized SMILES have also achieved competitive results with pretraining (Schwaller et al., 2019; Honda et al., 2019). In prior work, message passing networks were shown to outperform SMILES-based transformers on scaffold split tasks. Hybrid architectures combine graph and sequence views to exploit complementary inductive biases (Fang et al., 2022; Wang et al., 2021). Our method introduces reaction-aware edges to improve transfer.",
+    "reason": "Comparative claim about prior methods lacks a supporting citation.",
+    "start": 305,
+    "end": 419,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "SQuAD v3.0 includes unanswerable multi-hop questions.",
+    "document": "Introduction\n\nReading comprehension datasets have driven progress in extractive and abstractive QA (Rajpurkar et al., 2016; Kwiatkowski et al., 2019). A key challenge is modeling uncertainty when questions are ambiguous or unanswerable (Jia and Liang, 2017; Kaushik and Lipton, 2018). SQuAD v3.0 includes unanswerable multi-hop questions. At the same time, adversarially constructed passages expose models that rely on annotation artifacts rather than genuine reasoning (Nie et al., 2019; Sugawara et al., 2020). Our approach uses a calibration module to better detect insufficiency of evidence across hops.",
+    "reason": "This claim introduces a specific dataset version and property without any citation; per the definition, datasets and specific dataset details at first mention must be cited.",
+    "start": 285,
+    "end": 338,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "To the best of our knowledge, this is the first work to align brain signals and code representations end-to-end.",
+    "document": "Introduction\n\nUnderstanding how programmers reason about source code has implications for education, accessibility, and human–AI collaboration. Prior studies often rely on eye tracking and think-aloud protocols to infer cognitive load and comprehension difficulty, but these proxies provide limited temporal resolution.\n\nTo the best of our knowledge, this is the first work to align brain signals and code representations end-to-end. We record EEG while participants read short code snippets and answer comprehension questions, and we train a multimodal model to predict code embeddings from neural activity. Our hypothesis is that temporally localized neural patterns reflect token-level semantics and control flow cues.\n\nWe make three contributions: (1) a synchronized EEG–code dataset spanning Python and Java snippets; (2) a contrastive alignment objective that couples neural and code encoders; and (3) analyses of attention maps that reveal consistent neural correlates of identifier resolution and branching. We discuss implications for adaptive code tutoring and neuroadaptive development tools.",
+    "reason": "Claims novelty relative to prior work without supporting citations or a survey to justify 'first work' status.",
+    "start": 321,
+    "end": 433,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "The ImageNet-21k pretraining has become the de facto standard for strong ViT baselines.",
+    "document": "Related Work\n\nVision Transformers (ViTs) have reshaped image recognition by scaling model capacity and data. Early results highlighted the sensitivity of ViTs to data quantity and training regularization compared to convolutional counterparts.\n\nThe ImageNet-21k pretraining has become the de facto standard for strong ViT baselines. Practitioners further refine these models with task-specific augmentations, longer schedules, and supervised contrastive objectives to enhance transferability.\n\nAlternative strategies include distillation from convnet teachers, masked image modeling, and multi-task pretraining on curated web-scale datasets. Our work examines how patch size, windowed attention, and layer-wise learning rate decay interact under constrained pretraining budgets.",
+    "reason": "Asserts a field-wide standard practice tied to a specific dataset without citing supporting studies or benchmarks; dataset mentions also require citation at first mention.",
+    "start": 245,
+    "end": 332,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "using reinforcement learning for dialogue policy consistently outperforms supervised approaches in multi-domain settings",
+    "document": "Related Work\n\nTask-oriented dialogue systems require effective policy learning to decide the next system action given conversational context and goals. Supervised approaches learn from annotated dialogues, but they can struggle to generalize beyond the distribution of collected data. Reinforcement learning (RL) offers a framework to optimize long-term task success by interacting with users or simulators.\n\nRecent advances in simulators, reward shaping, and off-policy methods have improved sample efficiency and stability of RL for dialogue. Moreover, latent variable models and uncertainty estimation have been incorporated to handle sparse and noisy user feedback.\n\nWithin this landscape, using reinforcement learning for dialogue policy consistently outperforms supervised approaches in multi-domain settings, motivating a shift toward hybrid and offline RL strategies that leverage logged interactions at scale. Nevertheless, reproducibility issues persist due to differences in simulators, ontology coverage, and evaluation protocols.\n\nWe propose a benchmarked offline RL pipeline with standardized simulators and reporting, along with a dataset aggregator that harmonizes logged dialogues across domains.",
+    "reason": "The claim asserts consistent superiority of RL over supervised methods in multi-domain settings without any citations to prior studies, which is an unsupported claim about prior work.",
+    "start": 694,
+    "end": 814,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Instruction induction has also been explored for more controllable generation behaviors (Sanh et al., 2021). Calibration methods aim to correct confidence estimates without changing predictions (Guo et al., 2017). Retrieval-augmented prompting pairs prompts with external evidence (Lewis et al., 2020). Parameter-efficient tuning freezes most weights while adding small adapters (Houlsby et al., 2019; Lester et al., 2021).",
+    "document": "Related Work\n\nPrompting and in-context learning\nLarge language models can be steered via natural language prompts to perform downstream tasks without task-specific fine-tuning, a phenomenon often called in-context learning (Brown et al., 2020). Subsequent work studies automatic prompt construction and selection to stabilize performance across tasks (Gao et al., 2021; Zhou et al., 2022). Instruction induction has also been explored for more controllable generation behaviors (Sanh et al., 2021). Calibration methods aim to correct confidence estimates without changing predictions (Guo et al., 2017). Retrieval-augmented prompting pairs prompts with external evidence (Lewis et al., 2020). Parameter-efficient tuning freezes most weights while adding small adapters (Houlsby et al., 2019; Lester et al., 2021).\n\nMultilingual adaptation\nCross-lingual transfer uses shared subword vocabularies and aligned pretraining objectives to generalize prompts across languages (Conneau et al., 2020). However, prompt templates designed in English may not transfer directly due to morphological and word-order differences (Winata et al., 2021). Data augmentation through machine translation can reduce variance but introduces translationese artifacts (Artetxe et al., 2020).\n\nOur work studies prompt selection under distribution shift, focusing on stable choices that maintain accuracy across domains and languages while minimizing reliance on labeled validation sets.",
+    "reason": "The span lists four disparate strands (instruction induction, calibration, retrieval augmentation, parameter-efficient tuning) in consecutive sentences without transitions or an explicit explanation of how each relates to the others or to the preceding discussion, resulting in abrupt, unconnected citations.",
+    "start": 390,
+    "end": 813,
+    "label": "Coherence"
+  },
+  {
+    "span": "Demographic parity enforces independence between predictions and sensitive attributes (Dwork et al., 2012). Disparate impact quantifies relative selection rates (Feldman et al., 2015). Counterfactual fairness uses structural causal models (Kusner et al., 2017). Toolkits implement auditing at scale (Saleiro et al., 2018).",
+    "document": "Related Work\n\nAlgorithmic fairness literature spans definitions, measurement, and mitigation techniques across supervised learning settings (Barocas et al., 2019; Mitchell et al., 2019). Metrics frequently trade off with one another under distribution shift and label bias.\n\nDemographic parity enforces independence between predictions and sensitive attributes (Dwork et al., 2012). Disparate impact quantifies relative selection rates (Feldman et al., 2015). Counterfactual fairness uses structural causal models (Kusner et al., 2017). Toolkits implement auditing at scale (Saleiro et al., 2018).\n\nOur work investigates metric compatibility when sensitive attributes are partially observed.",
+    "reason": "The sentences switch between fairness criteria and tooling without transitions or explicit explanation of their relationships, making the connection between the cited works unclear.",
+    "start": 275,
+    "end": 597,
+    "label": "Coherence"
+  },
+  {
+    "span": "The MIMIC-CXR dataset contains 377,110 reports with detailed device metadata",
+    "document": "Introduction\n\nAutomated report generation from chest radiographs seeks to support radiologists by drafting preliminary findings while preserving clinical fidelity (Liu et al., 2019). Benchmark corpora such as MIMIC-CXR have enabled rapid progress in vision-language modeling and evaluation against structured labels (Johnson et al., 2019). The MIMIC-CXR dataset contains 377,110 reports with detailed device metadata. However, prior work often overlooks the pragmatic aspects of report style, hedging, and uncertainty calibration, which are crucial for safe deployment (Banerjee et al., 2021).\n\nRelated Work\n\nTemplate-based methods improved factuality but struggled with coverage and variability (Jing et al., 2018). Neural approaches combining CNN/Transformer encoders with hierarchical decoders achieved better fluency yet introduced hallucinations (Chen et al., 2020; Miura et al., 2021). Recent factuality metrics align generated sentences with labelers derived from CheXpert or RadGraph (Irvin et al., 2019; Jain et al., 2021). We complement these efforts by modeling uncertainty expressions and negations explicitly during decoding.",
+    "reason": "This sentence states a precise statistic about a specific dataset without citation, requiring evidence per rule (b).",
+    "start": 340,
+    "end": 416,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Classical anomaly detection leverages ARIMA residual tests, STL decomposition, and control charts, while deep methods introduce autoencoders, VAEs, GANs, LSTMs, and Transformers for reconstruction or prediction errors (Tsay, 2010; Malhotra et al., 2015; An and Cho, 2015; Li et al., 2019; Xu et al., 2021).",
+    "document": "Related Work\n\nDetecting anomalies in multivariate time series is vital for monitoring industrial systems and cloud services. The challenge lies in handling seasonality, rare events, and inter-variable dependencies.\n\nClassical anomaly detection leverages ARIMA residual tests, STL decomposition, and control charts, while deep methods introduce autoencoders, VAEs, GANs, LSTMs, and Transformers for reconstruction or prediction errors (Tsay, 2010; Malhotra et al., 2015; An and Cho, 2015; Li et al., 2019; Xu et al., 2021).\n\nWe present Contrastive Forecasting with Graph Priors (CFGP), which learns structure-aware representations via self-supervised objectives and uses calibrated predictive intervals to flag anomalies.",
+    "reason": "The span provides a survey-like list of approaches but does not explain their limitations or how the proposed CFGP differs, leaving the connection to the paper's argument unstated (criterion a/c).",
+    "start": 216,
+    "end": 522,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Klein et al.",
+    "document": "Introduction\n\nGraph neural networks extend deep learning to relational data by propagating and transforming messages over edges (Gilmer et al., 2017; Hamilton et al., 2017). Early spectral methods leveraged the graph Laplacian (Bruna et al., 2014; Defferrard et al., 2016), while spatial methods emphasized neighborhood sampling (Kipf and Welling, 2017; Hamilton et al., 2017). Building on the message passing framework proposed by Klein et al., we investigate stability under distribution shifts and limited labels. We also draw connections to positional encodings and graph transformers (Dwivedi et al., 2021; Ying et al., 2021).",
+    "reason": "Narrative citation missing year; should be 'Klein et al. (YEAR)'.",
+    "start": 432,
+    "end": 444,
+    "label": "Format"
+  },
+  {
+    "span": "(Nguyen et al. 2016)",
+    "document": "Introduction\n\nLatent Variable Models for Text\n\nVariational autoencoders enable controllable text generation but face posterior collapse with strong decoders (Bowman et al., 2016). To address this, annealing schedules and word dropout were proposed (Li et al., 2019). Semi-supervised objectives combine labeled and unlabeled data to enhance representation learning (Kingma et al., 2014). In dialogue modeling, hierarchical VAEs improve long-range coherence (Serban et al., 2017), while topic-informed priors aid controllability (Wang et al., 2019). Variational inference for text classification (Nguyen et al. 2016) demonstrated competitive performance with amortized encoders.",
+    "reason": "Missing comma before the year in a parenthetical citation; it should be (Nguyen et al., 2016).",
+    "start": 594,
+    "end": 614,
+    "label": "Format"
+  },
+  {
+    "span": "Recent work studies imitation learning, offline RL, and model-based control for dexterous manipulation (Rajeswaran et al., 2018; Lynch et al., 2020; Nagabandi et al., 2019; Ahn et al., 2022).",
+    "document": "Introduction\n\nGeneralizing manipulation skills across objects, tasks, and environments remains a central challenge in robotics. Sparse rewards, safety constraints, and hardware variability complicate learning on physical systems. Recent work studies imitation learning, offline RL, and model-based control for dexterous manipulation (Rajeswaran et al., 2018; Lynch et al., 2020; Nagabandi et al., 2019; Ahn et al., 2022). Despite these advances, scaling data collection and ensuring sim-to-real transfer continue to be bottlenecks.\n\nWe explore a curriculum that interleaves skill discovery from teleoperation logs with conservative online updates, targeting stable improvements under limited interaction budgets.",
+    "reason": "The span cites broad categories and examples without connecting them to the stated challenges or motivating why the proposed curriculum is needed, indicating a lack of synthesis (criteria a and c).",
+    "start": 230,
+    "end": 421,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "[see (Li, 2018]",
+    "document": "Introduction\n\nBayesian optimization (BO) accelerates black-box function optimization with surrogate models and acquisition functions (Santos and Miller, 2017). Gaussian processes remain a popular choice due to calibrated uncertainty, though neural surrogates scale better in high dimensions (Wang and Flores, 2019). Constraints and multi-fidelity evaluations extend BO to practical engineering settings (Nguyen and Hart, 2020).\n\nWe follow the exploration–exploitation taxonomy and survey acquisition strategies [see (Li, 2018] for a historical overview. Recent advances incorporate risk-sensitive criteria and batch selection to parallelize evaluations (Arora and Kim, 2021). Our method adapts expected improvement with cost-aware terms to handle variable evaluation budgets.\n\nWe evaluate under noisy observations and show robustness to misspecified kernels (Diaz and Cho, 2022).",
+    "reason": "Mismatched brackets/parentheses around the citation; should use matching delimiters, e.g., '[see Li (2018)]' or 'see Li (2018)'.",
+    "start": 511,
+    "end": 526,
+    "label": "Format"
+  },
+  {
+    "span": "Dialog policy learning for conversational recommendation has explored supervised learning, reinforcement learning, and bandit methods (Christakopoulou et al., 2016; Lei et al., 2020; Chen et al., 2019).",
+    "document": "Related Work\n\nConversational recommenders. Systems that interactively elicit user preferences can reduce cold-start and improve satisfaction (Sun and Zhang, 2018). Dialog policy learning for conversational recommendation has explored supervised learning, reinforcement learning, and bandit methods (Christakopoulou et al., 2016; Lei et al., 2020; Chen et al., 2019). User simulators and counterfactual logging have been proposed to address data scarcity and evaluation challenges (Li et al., 2017; Chi et al., 2020).\n\nOur study investigates preference drift over long-horizon sessions and proposes a state representation that explicitly tracks uncertainty and recency effects.",
+    "reason": "The span enumerates approaches with citations but does not relate them to the problem of preference drift or to the proposed state representation, hence lacking synthesis (criteria a and c).",
+    "start": 164,
+    "end": 366,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Self-training consistently improves out-of-domain machine translation by 2–3 BLEU.",
+    "document": "Introduction\n\nDomain mismatch remains a central obstacle for robust machine translation (MT). Semi-supervised learning methods aim to leverage monolingual data to mitigate distribution shift. Self-training consistently improves out-of-domain machine translation by 2–3 BLEU. However, naïvely adding pseudo-labeled data can amplify biases and degrade calibration.\n\nWe present a calibration-aware self-training scheme that dynamically filters pseudo-labels using uncertainty estimates, yielding stronger gains on low-resource and mismatched domains.",
+    "reason": "Unsupported claim because it provides a quantitative performance claim attributed to prior work without any supporting citation (definition b).",
+    "start": 192,
+    "end": 274,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Open-domain question answering retrieves evidential passages from large corpora (Karpukhin et al., 2020). Knowledge graph completion methods predict missing triples using embedding models (Bordes et al., 2013). Memory networks store and access supporting facts for reasoning (Weston et al., 2015). Dense passage retrieval leverages bi-encoders to scale retrieval (Karpukhin et al., 2020).",
+    "document": "Related Work: Knowledge Resources for Question Answering\n\nQuestion answering (QA) systems rely on external resources to supply facts and context. Two dominant paradigms are text-based retrieval over unstructured corpora and symbolic reasoning over structured knowledge graphs (KGs), with hybrids combining both.\n\nOpen-domain question answering retrieves evidential passages from large corpora (Karpukhin et al., 2020). Knowledge graph completion methods predict missing triples using embedding models (Bordes et al., 2013). Memory networks store and access supporting facts for reasoning (Weston et al., 2015). Dense passage retrieval leverages bi-encoders to scale retrieval (Karpukhin et al., 2020).\n\nHybrid QA integrates KG constraints with neural retrievers to reduce ambiguity and improve compositional reasoning (Sun et al., 2019). Recent work aligns textual spans with KG entities using joint encoders to facilitate multi-hop answering (Xiong et al., 2020). Our approach builds a bridge module that converts retrieved text into structured edges, enabling controlled reasoning paths.",
+    "reason": "The span juxtaposes text retrieval, KG completion, memory networks, and then restates dense retrieval without clarifying how these relate or transition; the relationships are implied only by proximity, leading to coherence issues (issues a and b).",
+    "start": 313,
+    "end": 701,
+    "label": "Coherence"
+  },
+  {
+    "span": "Post-hoc attribution methods like Grad-CAM and Integrated Gradients highlight salient regions (Selvaraju et al., 2017; Sundararajan et al., 2017). Prototype- and concept-based explanations enhance interpretability (Chen et al., 2019; Kim et al., 2018). Counterfactual generation has been explored for medical images (Chang et al., 2018; Singla et al., 2021).",
+    "document": "Introduction\n\nExplainable AI (XAI) is increasingly required for medical imaging systems used in screening and triage. Beyond predictive accuracy, clinicians demand transparency about what image features drive automated decisions and whether explanations are stable under shifts.\n\nPost-hoc attribution methods like Grad-CAM and Integrated Gradients highlight salient regions (Selvaraju et al., 2017; Sundararajan et al., 2017). Prototype- and concept-based explanations enhance interpretability (Chen et al., 2019; Kim et al., 2018). Counterfactual generation has been explored for medical images (Chang et al., 2018; Singla et al., 2021).\n\nWe focus on faithfulness under distribution shift and propose an evaluation protocol that aligns explanation stability with clinical acceptance thresholds for screening workflows.",
+    "reason": "The span lists XAI methods without connecting them to the paper's aims or specifying the limitation the authors address; it lacks synthesis and author motivation (criteria a and c).",
+    "start": 280,
+    "end": 638,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "there are numerous recent benchmarks for long-context language models",
+    "document": "Introduction\n\nLong-Context Language Modeling\n\nApplications such as retrieval-augmented generation, legal analysis, and code understanding benefit from models that can reason over long contexts. To measure progress, there are numerous recent benchmarks for long-context language models. Typical evaluations probe needle-in-a-haystack retrieval, multi-hop reasoning across distant evidence, and memory of earlier dialogue turns. We focus on scalable attention mechanisms and position encoding schemes that preserve performance as sequence length grows.",
+    "reason": "References unspecified 'recent benchmarks' without providing citations (rule d).",
+    "start": 215,
+    "end": 284,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Automated feedback for programming assignments has been tackled with static analysis, dynamic test generation, and pattern mining (Ke et al., 2016; Gulwani et al., 2018; Singh et al., 2013). Recent NLP-based systems leverage code embeddings, sequence models, and pretrained language models (Allamanis et al., 2018; Feng et al., 2020; Ahmad et al., 2021). Peer learning platforms collect hints and exemplars to guide novice programmers (Piech et al., 2015; Wang et al., 2018).",
+    "document": "Related Work\n\nProviding timely, actionable feedback at scale is central to computing education. Traditional approaches combine instructor-designed rubrics with automated tests, but coverage and specificity can be limited for diverse student solutions.\n\nAutomated feedback for programming assignments has been tackled with static analysis, dynamic test generation, and pattern mining (Ke et al., 2016; Gulwani et al., 2018; Singh et al., 2013). Recent NLP-based systems leverage code embeddings, sequence models, and pretrained language models (Allamanis et al., 2018; Feng et al., 2020; Ahmad et al., 2021). Peer learning platforms collect hints and exemplars to guide novice programmers (Piech et al., 2015; Wang et al., 2018).\n\nWhile data-driven approaches show promise, they often struggle with generalizing across tasks and providing pedagogically aligned guidance. Our work investigates structure-aware hint generation that aligns feedback to conceptual steps in problem-solving.",
+    "reason": "Violates (a) and (c): lists prior work without connecting it to the paper’s perspective; lacks articulation of how these approaches inform or motivate the proposed method.",
+    "start": 253,
+    "end": 728,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "SQuAD and HotpotQA datasets",
+    "document": "Introduction\n\nOpen-domain question answering (QA) systems typically rely on a retriever–reader pipeline, where a dense or sparse index surfaces candidate passages that a reader then extracts answers from. To ensure broad coverage and multi-hop reasoning, we evaluate on the widely used SQuAD and HotpotQA datasets to ensure comparability with prior work. Beyond extractive settings, we also consider generative QA to test whether our retriever can provide sufficient context for abstractive models.\n",
+    "reason": "Datasets are mentioned at first occurrence without citing their original benchmark papers, which is required.",
+    "start": 286,
+    "end": 313,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "in a previous study, the authors showed that SpecAugment reduces WER by 20%",
+    "document": "Introduction\n\nRobust automatic speech recognition (ASR) requires models that can withstand variability in speakers, environments, and recording conditions. Data augmentation has emerged as a practical tool for improving ASR robustness. In a previous study, the authors showed that SpecAugment reduces WER by 20% on conversational English, inspiring a proliferation of augmentation strategies tailored to different acoustic conditions. Motivated by these observations, we propose a curriculum-based augmentation scheduler that adapts perturbation strength to model confidence during training.",
+    "reason": "Claims results from a prior study without providing a citation to that study, violating (b) and (a).",
+    "start": -1,
+    "end": -1,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "(Kumar 2020)",
+    "document": "Introduction\n\nOptimization strategies for large-scale training rely on adaptive learning rates and gradient clipping. Prior research (Kumar 2020) argues that warmup schedules mitigate catastrophic curvature at initialization, while later work ties schedule length to effective batch size and optimizer momentum. Despite progress, instability persists under extreme scaling due to optimizer-state drift and stale gradients in distributed settings.\n\nOur approach introduces curvature-aware warmup with adaptive clipping to stabilize training across cluster sizes.",
+    "reason": "Missing comma between author and year in a parenthetical citation; should be (Kumar, 2020).",
+    "start": 133,
+    "end": 145,
+    "label": "Format"
+  },
+  {
+    "span": "RoBERTa Liu et al., 2019)",
+    "document": "Related Work\n\nPretrained Language Models\n\nLarge-scale pretrained language models have reshaped NLP by enabling effective transfer to downstream tasks (Devlin et al., 2019; Lan et al., 2020). Early architectures like ELMo (Peters et al., 2018) focused on contextual word embeddings, while BERT (Devlin et al., 2019) introduced bidirectional masked language modeling. Subsequent advances explored architecture depth and data scale, as in RoBERTa Liu et al., 2019) and DeBERTa (He et al., 2021). Concurrently, sequence-to-sequence models such as T5 (Raffel et al., 2020) unified numerous NLP benchmarks under a text-to-text paradigm. Despite these improvements, domain adaptation remains challenging, motivating methods that refine pretraining corpora (Gururangan et al., 2020) or adapt objectives (Lewis et al., 2020).",
+    "reason": "Missing opening parenthesis for a parenthetical citation; it should be RoBERTa (Liu et al., 2019) or (Liu et al., 2019) depending on style.",
+    "start": 436,
+    "end": 461,
+    "label": "Format"
+  },
+  {
+    "span": "Yao and Huang (2017) defined fairness-aware learning objectives for recommender systems. Burke et al. (2018) discussed multi-stakeholder fairness in recommendation settings. Ekstrand et al. (2022) examined user-perceived fairness and exposure disparities.",
+    "document": "Related Work\n\nFairness in recommender systems spans algorithmic, stakeholder, and experiential dimensions. Prior studies investigate selection bias, exposure allocation, and feedback loops.\n\nYao and Huang (2017) defined fairness-aware learning objectives for recommender systems. Burke et al. (2018) discussed multi-stakeholder fairness in recommendation settings. Ekstrand et al. (2022) examined user-perceived fairness and exposure disparities.\n\nOur method optimizes exposure parity under constrained relevance.",
+    "reason": "The span presents three papers in sequence without clarifying the relationships among objective design, stakeholder perspectives, and user perceptions. The lack of transitions and explicit linkage across sentences creates an abrupt, disjointed narrative.",
+    "start": 191,
+    "end": 446,
+    "label": "Coherence"
+  },
+  {
+    "span": "In prior competitions, agents routinely exploited reward shaping to overfit the leaderboard",
+    "document": "Introduction\n\nOffline-to-online reinforcement learning benchmarks aim to evaluate agents fairly while permitting iterative improvement (Agarwal et al., 2020; Fu et al., 2021). However, designing public evaluations that discourage overfitting remains challenging when feedback loops exist between participants and organizers.\n\nIn prior competitions, agents routinely exploited reward shaping to overfit the leaderboard, obscuring true generalization and incentivizing brittle heuristics. These dynamics motivate protocols that conceal evaluation rewards and enforce policy freezing.\n\nWe introduce a blind evaluation framework with randomized surrogate rewards and delayed test episodes, demonstrating reduced leaderboard churn and improved correlation between validation and holdout returns.",
+    "reason": "This sentence references 'prior competitions' and asserts a specific behavior without citing any competitions or reports, violating rule a (first mentions of shared tasks/competitions require citation).",
+    "start": 326,
+    "end": 417,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Recent competitions have shown that message-passing networks consistently outperform transformer encoders on small-molecule property prediction.",
+    "document": "Introduction\n\nGraph neural networks (GNNs) have become standard for molecular representation learning, enabling end-to-end prediction of quantum and bioactivity properties (Gilmer et al., 2017; Kearnes et al., 2016). Architectures such as message-passing networks and attention-based variants capture local chemical context and long-range interactions (Xiong et al., 2019; Ying et al., 2021). Recent competitions have shown that message-passing networks consistently outperform transformer encoders on small-molecule property prediction.\n\nWhile transformers on SMILES and graph form have narrowed the gap via improved positional encodings and pretraining, their data efficiency remains contested. We re-examine this comparison by controlling for molecular size distributions and scaffold splits across three public benchmarks, analyzing inductive biases and generalization under scaffold shift.",
+    "reason": "References unspecified 'competitions' and a comparative performance claim without any citations (rules a and d).",
+    "start": 393,
+    "end": 537,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Model-free methods such as DDPG (Lillicrap et al., 2016), SAC (Haarnoja et al., 2018), and PPO (Schulman et al., 2017) have been widely adopted for continuous control, while model-based approaches leverage learned dynamics for sample efficiency (Deisenroth and Rasmussen, 2011; Chua et al., 2018).",
+    "document": "Related Work\n\nReinforcement learning (RL) has enabled robots to acquire complex behaviors directly from interaction. However, data hunger, safety, and sim-to-real transfer remain persistent obstacles for deployment in real-world settings.\n\nModel-free methods such as DDPG (Lillicrap et al., 2016), SAC (Haarnoja et al., 2018), and PPO (Schulman et al., 2017) have been widely adopted for continuous control, while model-based approaches leverage learned dynamics for sample efficiency (Deisenroth and Rasmussen, 2011; Chua et al., 2018). Recent lines of work explore offline RL (Levine et al., 2020; Kumar et al., 2020) and representation learning for policy generalization (Laskin et al., 2020; Yarats et al., 2021). Domain randomization and adaptation seek to bridge the sim-to-real gap (Tobin et al., 2017; Peng et al., 2018).\n\nWe propose a training strategy that combines curriculum learning with uncertainty-aware policy updates to improve safety and sample efficiency in robotic manipulation.",
+    "reason": "The span enumerates categories and methods with citations but does not connect them to the authors' objectives or articulate what is missing, meeting (a) and (c).",
+    "start": 240,
+    "end": 537,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "The CityHelp-Dialogue corpus is widely regarded as the de facto benchmark for municipal task-oriented dialogue",
+    "document": "Introduction\n\nTask-oriented dialogue (ToD) systems have progressed through large-scale datasets and increasingly capable neural architectures (Wen et al., 2017; Budzianowski et al., 2018; Rastogi et al., 2020). However, most popular corpora emphasize travel and entertainment, leaving civic-service and municipal assistance under-explored despite their societal impact.\n\nThe CityHelp-Dialogue corpus is widely regarded as the de facto benchmark for municipal task-oriented dialogue, yet it concentrates on slot-filling for a handful of services and provides limited coverage of asynchronous handoffs between citizens and agents. Our work complements this line by introducing a multi-turn dataset spanning permit applications, sanitation requests, and public transportation disruptions, annotated with action schemas and real-time status updates.\n\nWe evaluate strong baseline models for dialogue state tracking and policy learning, and we release tools for reproducible evaluation across evolving back-end APIs.",
+    "reason": "This sentence names a specific dataset and asserts its benchmark status without citing a source; per rule a, first mentions of datasets must include citations.",
+    "start": 371,
+    "end": 481,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Previous studies report that self-supervised pretraining halves the labeling cost in chest X-ray classification.",
+    "document": "Introduction\n\nLabel scarcity limits the development of robust medical imaging models. Self-supervised learning (SSL) leverages large pools of unlabeled scans to pretrain representations that transfer to downstream tasks (Goyal et al., 2019; Chen et al., 2020). In radiology, contrastive and masked-image objectives have shown promise on tasks such as pneumonia detection and multi-label thoracic disease classification (Azizi et al., 2021; Sowrirajan et al., 2021).\n\nDespite progress, questions remain regarding data efficiency, domain shift, and calibration under distributional drift (Oakden-Rayner, 2020). Previous studies report that self-supervised pretraining halves the labeling cost in chest X-ray classification. We revisit this claim under rigorous control of patient overlap, label noise, and evaluation protocol, and propose a lightweight multi-instance pooling head tailored to dependency structures in CXR grids.\n\nWe evaluate on CheXpert and MIMIC-CXR, measuring sample efficiency, robustness to class imbalance, and uncertainty calibration.",
+    "reason": "The sentence cites numeric impact ('halves the labeling cost') from unspecified prior studies without providing any references; statistical claims about prior work must be supported by citations.",
+    "start": 609,
+    "end": 721,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Most prior works pre-train on ImageNet-21k before fine-tuning for skin lesion classification.",
+    "document": "Related Work\n\nDermoscopic image analysis has benefited from transfer learning and strong regularization to mitigate small dataset sizes and inter-device variability. Most prior works pre-train on ImageNet-21k before fine-tuning for skin lesion classification. Other efforts emphasize multi-scale features and lesion segmentation to isolate diagnostically relevant regions. Our method complements these trends by incorporating color constancy normalization and lesion-aware mixup tailored to dermoscopic textures.\n",
+    "reason": "This is a broad claim about the common practice in prior literature but lacks citations to representative studies.",
+    "start": 166,
+    "end": 259,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Huang et al.",
+    "document": "Introduction\n\nUnsupervised domain adaptation aims to transfer knowledge from a labeled source to an unlabeled target distribution. Prior work explores discrepancy minimization (Tian and Bhattacharya, 2019), adversarial alignment (Qin et al., 2020), and self-training with pseudo-labels (Vega and Ortiz, 2021). Following Huang et al., we align intermediate feature distributions with a class-conditional discriminator while preserving source task performance. Unlike Ghosh and Malik (2022), who regularize with maximum mean discrepancy, we adaptively reweight target samples based on confidence. Recent advances in curriculum schedules (Lee and Park, 2021) and test-time entropy minimization (Jain and Mehta, 2022) further motivate our design. We evaluate on cross-domain sentiment, showing improvements over alignment-only baselines and competitive results when combined with consistency training (Silva and Noor, 2023).",
+    "reason": "Narrative citation missing year; should be 'Huang et al. (YEAR)'.",
+    "start": 320,
+    "end": 332,
+    "label": "Format"
+  },
+  {
+    "span": "As reported in several studies, distillation improves top-1 accuracy by 2–3% across architectures.",
+    "document": "Introduction\n\nKnowledge distillation transfers information from a high-capacity teacher to a compact student via softened targets or intermediate feature matching (Hinton et al., 2015; Romero et al., 2015; Tian et al., 2020). Extensions consider contrastive objectives, online mutual learning, and data-free settings to accommodate privacy and compute constraints (Zhang et al., 2018; Chen et al., 2021).\n\nAs reported in several studies, distillation improves top-1 accuracy by 2–3% across architectures. Nevertheless, the magnitude of gains depends on teacher-student capacity gap, data augmentation, and calibration.\n\nWe present a systematic evaluation disentangling these factors across vision backbones and training budgets, and we propose a calibration-aware loss that preserves confidence under distribution shift.",
+    "reason": "Quantitative claim about effects observed in prior work without citing the supporting studies (rule b).",
+    "start": 406,
+    "end": 504,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Knowledge distillation for speech recognition has considered frame-level supervision, sequence-level criteria, and wordpiece distributions, transferring knowledge from stronger teachers to smaller students (Hinton et al., 2015; Kim and Rush, 2016; Kurata and Audhkhasi, 2018; Higuchi et al., 2021).",
+    "document": "Related Work\n\nAutomatic speech recognition (ASR) systems increasingly rely on large encoder–decoder architectures that are costly to deploy on edge devices. Knowledge distillation (KD) is a common strategy to reduce model size while preserving accuracy.\n\nKnowledge distillation for speech recognition has considered frame-level supervision, sequence-level criteria, and wordpiece distributions, transferring knowledge from stronger teachers to smaller students (Hinton et al., 2015; Kim and Rush, 2016; Kurata and Audhkhasi, 2018; Higuchi et al., 2021).\n\nOther compression techniques include quantization and pruning, which can be combined with KD but may degrade robustness to noise and speaker variability. Recent work explores multi-teacher ensembles and intermediate-layer matching to stabilize training.\n\nIn this paper, we study streaming-constrained KD with latency-aware targets, aligning teacher and student under causal masking. Our experiments on LibriSpeech and far-field corpora show improved WER–latency trade-offs compared to strong baselines.",
+    "reason": "The span summarizes KD variants for ASR without linking to the streaming and latency constraints that the paper addresses, missing an explicit connection or gap statement (criterion a).",
+    "start": 255,
+    "end": 553,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Industry deployments have consistently achieved a 15% reduction in disparity after post-processing.",
+    "document": "Related Work: Fairness in Recommender Systems\n\nFairness-aware recommendation methods address exposure and relevance disparities across user groups and item providers. Approaches include constrained optimization, re-ranking, and multi-objective learning to balance utility and fairness metrics (Burke, 2017; Singh and Joachims, 2018).\n\nIndustry deployments have consistently achieved a 15% reduction in disparity after post-processing. However, post-processing can interact negatively with long-term user satisfaction and creator incentives. Our framework integrates exposure constraints during training to reduce reliance on downstream corrections while maintaining accuracy.",
+    "reason": "Reports a concrete statistic about 'industry deployments' without citing the studies or reports that measured this effect.",
+    "start": 335,
+    "end": 434,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Wav2vec 2.0 has recently been applied to low-resource ASR with impressive gains.",
+    "document": "Related Work\n\nSelf-supervised learning has transformed speech recognition by leveraging large amounts of unlabeled audio to learn robust representations (Schneider et al., 2019; Baevski et al., 2020). Fine-tuning these representations on limited labeled data yields competitive results, especially when combined with language model rescoring (Likhomanenko et al., 2021). Wav2vec 2.0 has recently been applied to low-resource ASR with impressive gains. Concurrently, multilingual pretraining and adapter modules have been explored to better transfer across languages with limited supervision (Conneau et al., 2021). Our work focuses on parameter-efficient tuning with phoneme-aware adapters to improve cross-lingual transfer without increasing inference latency.",
+    "reason": "This is a 'recently' prior-work claim about applications and results without citing any supporting studies.",
+    "start": 371,
+    "end": 451,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Over 90% of the world's languages lack transcribed speech corpora",
+    "document": "Introduction\n\nAutomatic speech recognition (ASR) has seen rapid gains from self-supervised pretraining and multilingual modeling. Yet, progress remains uneven across languages due to limited labeled resources, phonotactic diversity, and orthographic complexity. Scaling models alone does not resolve the scarcity of supervised data in low-resource settings.\n\nOver 90% of the world's languages lack transcribed speech corpora, creating a long tail where conventional supervised training is infeasible. This motivates leveraging unlabeled audio and projection from related high-resource languages through self-training and cross-lingual transfer. However, naive transfer can amplify accent and domain mismatch, degrading downstream utility.\n\nWe propose a lexicon-free alignment objective that aligns acoustic units across languages without requiring transcriptions, improving adaptation for extremely low-resource scenarios.",
+    "reason": "The span presents a specific statistic about global language resources without any citation or evidence, which is an unsupported statistical claim.",
+    "start": 359,
+    "end": 424,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "The Freebase public dump was deprecated in 2016 and replaced by the Google Knowledge Graph.",
+    "document": "Knowledge Graph Construction and Integration\n\nKnowledge graphs (KGs) underpin a wide range of applications including search, question answering, and recommendation. Open community resources and proprietary KGs differ in coverage, schema design, and update cadence, complicating integration and evaluation. The Freebase public dump was deprecated in 2016 and replaced by the Google Knowledge Graph. This transition highlighted challenges in entity alignment, provenance tracking, and license compatibility across heterogeneous sources.\n\nIn this paper, we present a scalable pipeline for unifying multi-source KGs while preserving source-level attributions. Our approach combines schema mapping, record linkage, and constraint-driven cleaning to maintain consistency under continuous ingestion.\n\nWe evaluate on entity resolution accuracy, relation completeness, and incremental update latency, and we provide an ablation on the contribution of graph constraints to downstream question answering performance.",
+    "reason": "This historical and dataset-related claim lacks a supporting citation to an official announcement or archival source, violating rule (a) and (b).",
+    "start": 306,
+    "end": 397,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Prompting for code generation has explored zero-shot, few-shot, and chain-of-thought styles using large language models (Chen et al., 2021; Austin et al., 2021; Nijkamp et al., 2022; Li et al., 2023). Work on compiler-aware prompting adds execution feedback to steer generation (Liu et al., 2022; Le et al., 2022; Wang et al., 2023). Program repair and test-driven synthesis have similarly adapted prompting strategies to satisfy unit tests (Jain et al., 2022; Zhang et al., 2023).",
+    "document": "Related Work\n\nLarge Language Models and Prompting\nLarge language models (LLMs) exhibit emergent program synthesis capabilities when conditioned on natural language instructions and a handful of examples. While these behaviors reduce reliance on supervised datasets, the mechanisms by which prompts control generation remain only partially understood. Prior studies analyze calibration, decoding strategies, and context length effects.\n\nPrompting for Code Generation\nPrompting for code generation has explored zero-shot, few-shot, and chain-of-thought styles using large language models (Chen et al., 2021; Austin et al., 2021; Nijkamp et al., 2022; Li et al., 2023). Work on compiler-aware prompting adds execution feedback to steer generation (Liu et al., 2022; Le et al., 2022; Wang et al., 2023). Program repair and test-driven synthesis have similarly adapted prompting strategies to satisfy unit tests (Jain et al., 2022; Zhang et al., 2023).\n\nExecution-Conditioned Decoding\nBeyond static prompts, execution-conditioned decoding iteratively runs partial programs to reduce search space. Studies report gains on algorithmic problems by interleaving generation and verification under timeouts and sandboxing constraints.\n\nStructured Constraints and Type Guidance\nApproaches that inject grammar constraints or type information restrict invalid outputs and improve pass rates. These methods range from constrained beam search to type-state automata.\n\nPositioning\nWe examine the interaction between prompt structure and execution feedback and study how typed constraints alter search dynamics under limited budgets.",
+    "reason": "The span lists prior works without relating them to the paper's aims or explaining how they connect to the authors' approach, lacking synthesis per (a) and (c).",
+    "start": 466,
+    "end": 947,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "HotpotQA",
+    "document": "Introduction\n\nMulti-hop question answering evaluates the ability to integrate evidence across multiple documents or sentences to reach a conclusion. Datasets such as HotpotQA, QAngaroo WikiHop (Welbl et al., 2018), and MultiRC (Khashabi et al., 2018) have driven progress in modeling compositional reasoning, supporting fact retrieval, and explainability through chain-of-thought rationales. However, robust generalization across domains and retrieval settings remains elusive. In this work, we propose a retriever-reader architecture that explicitly disentangles evidence discovery from logical aggregation.",
+    "reason": "First mention of a well-known dataset lacks a citation (definition a); the dataset name alone should be accompanied by a reference.",
+    "start": 166,
+    "end": 174,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Dawson et al. 2",
+    "document": "Introduction\n\nData augmentation is a cornerstone of modern computer vision, improving generalization by exposing models to diverse transformations (Zhang et al., 2018; DeVries and Taylor, 2017; Cubuk et al., 2020). Learning augmentation policies automatically has yielded further gains on small- to medium-scale datasets (Cubuk et al., 2019; Lim et al., 2019). Beyond images, augmentation strategies for text and audio have expanded the applicability of these ideas (Wei and Zou, 2019; Park et al., 2019).\n\nHowever, linking augmentation strength to model uncertainty remains underexplored. Dawson et al. 2 propose a curriculum that scales distortions based on validation error, but their approach requires expensive hyperparameter sweeps. We introduce an uncertainty-aware scheduler that adapts transform magnitudes on-the-fly, eliminating manual tuning while preserving accuracy.",
+    "reason": "Misuse of footnote notation in an author–year context. The citation “Dawson et al. 2” should include a year (e.g., “Dawson et al. (2021)”) or be a properly formatted footnote; mixing a bare superscript-style number with author–year is a formatting error.",
+    "start": 590,
+    "end": 605,
+    "label": "Format"
+  },
+  {
+    "span": "[Miller et al., 2020]",
+    "document": "Introduction\n\nLarge-scale pretraining has reshaped multimodal learning by providing transferable visual-language representations (Lu et al., 2019; Li et al., 2020). Recent surveys [Miller et al., 2020] indicate that unified architectures reduce engineering overhead while maintaining competitive performance across tasks.\n\nDespite these benefits, current models can overfit to annotation artifacts and exhibit brittle grounding (Goyal et al., 2017; Rosenberg et al., 2021). We introduce a benchmark that isolates compositional reasoning about spatial relations, complementing earlier tests focused on object attributes (Parcalabescu et al., 2021).\n\nOur contributions include a curated evaluation suite, analysis of failure modes across architectures, and recommendations for data curation to mitigate shortcut learning.",
+    "reason": "Wrong citation delimiter style (square brackets) in a context that uses parentheses; should be '(Miller et al., 2020)'.",
+    "start": 180,
+    "end": 201,
+    "label": "Format"
+  },
+  {
+    "span": "The 2021 SQuAD-like shared task established a 78% F1 baseline for multilingual QA.",
+    "document": "Related Work\nMachine reading comprehension (MRC) has advanced rapidly with large pretrained encoders and better span prediction heads (Seo et al., 2017; Yang et al., 2019). Multilingual MRC extends these ideas across languages via shared subword vocabularies and cross-lingual transfer (Lewis et al., 2020; Ortega et al., 2021).\nThe 2021 SQuAD-like shared task established a 78% F1 baseline for multilingual QA. Subsequent approaches built on this benchmark using contrastive alignment and translation-based data augmentation to close the transfer gap (Rossi and Gupta, 2022; Lin and Zhao, 2022). We instead study label-efficient adaptation by querying uncertainty-guided examples for annotation in the target language.",
+    "reason": "This sentence reports a specific statistic and references a shared task but does not provide a citation. Under rule (a) and (b), shared tasks and reported numbers require explicit references.",
+    "start": 329,
+    "end": 411,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Privacy in federated learning has been studied via differential privacy at the client level, secure aggregation, and shuffling (McMahan et al., 2017; Kairouz et al., 2021; Bonawitz et al., 2017; Erlingsson et al., 2019). Gradient perturbation, clipping, and client subsampling are common techniques to control privacy loss (Abadi et al., 2016; Thakkar et al., 2019; Andrew et al., 2021). Auditing methods estimate empirical privacy leakage post hoc (Nasr et al., 2019; Jagielski et al., 2020).",
+    "document": "Related Work\n\nFederated learning (FL) enables on-device training with privacy and communication constraints. Ensuring rigorous privacy guarantees while preserving model utility remains a core challenge.\n\nPrivacy in federated learning has been studied via differential privacy at the client level, secure aggregation, and shuffling (McMahan et al., 2017; Kairouz et al., 2021; Bonawitz et al., 2017; Erlingsson et al., 2019). Gradient perturbation, clipping, and client subsampling are common techniques to control privacy loss (Abadi et al., 2016; Thakkar et al., 2019; Andrew et al., 2021). Auditing methods estimate empirical privacy leakage post hoc (Nasr et al., 2019; Jagielski et al., 2020).\n\nOur approach introduces client-adaptive noise schedules conditioned on participation frequency.\n\nWe empirically evaluate privacy-utility trade-offs across heterogeneous client populations.",
+    "reason": "Violates (a) and (c): enumerates methods without relating them to the paper’s approach or stating why a new method is needed; the authors’ motivation is not articulated in the span.",
+    "start": 204,
+    "end": 697,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "SHAP assigns feature attributions under a game-theoretic framework (Lundberg and Lee, 2017). Counterfactual explanations specify minimal changes to alter predictions (Wachter et al., 2018). Missing value imputation in EHRs can bias downstream models (Beaulieu-Jones and Moore, 2017).",
+    "document": "Introduction\n\nExplainable AI (XAI) in healthcare seeks to provide transparent model rationales that clinicians can trust (Doshi-Velez and Kim, 2017). Beyond accuracy, accountability and robustness require explanations that reflect clinical mechanisms and data quality.\n\nSHAP assigns feature attributions under a game-theoretic framework (Lundberg and Lee, 2017). Counterfactual explanations specify minimal changes to alter predictions (Wachter et al., 2018). Missing value imputation in EHRs can bias downstream models (Beaulieu-Jones and Moore, 2017). We focus on aligning attribution methods with data missingness patterns by accounting for informative absence in EHR features.\n",
+    "reason": "There is no explicit link between attribution methods, counterfactuals, and imputation; the sentences are juxtaposed without transitions, leaving their relation unclear.",
+    "start": 270,
+    "end": 553,
+    "label": "Coherence"
+  },
+  {
+    "span": "BERT was used in an AES task trained on essays from Grade 7 to 10.",
+    "document": "Related Work\n\nAutomated Essay Scoring (AES) has evolved from handcrafted features and regression models (Page, 2003; Attali and Burstein, 2006) to neural architectures that learn holistic representations of student writing (Taghipour and Ng, 2016; Dong et al., 2017). Recent research has explored multi-task learning (Liu et al., 2019) and domain adaptation for cross-prompt generalization (Jin et al., 2018).\n\nPretrained Transformers have increasingly been adopted for AES due to their strong language understanding (Devlin et al., 2019; Liu et al., 2019). BERT was used in an AES task trained on essays from Grade 7 to 10. However, prompt-specific overfitting and score range calibration remain open issues, motivating methods that incorporate rubric signals and content relevance (Uto et al., 2020).",
+    "reason": "The sentence reports a specific prior setup and result in AES without citing the study that used BERT on Grade 7–10 essays.",
+    "start": 558,
+    "end": 624,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Neural semantic search methods combine dual-encoders for efficient retrieval (Yao et al., 2019; Xie and Zhao, 2020) with cross-encoders for reranking (Nogueira and Cho, 2019; Li et al., 2021), and leverage hard-negative mining to improve discriminative power (Gao et al., 2021; Huang et al., 2022).",
+    "document": "Introduction\n\nInformation retrieval has shifted from lexical term matching to semantic representations that capture contextual meaning. This shift enables better recall of paraphrased content but introduces new challenges in index efficiency and training stability.\n\nNeural semantic search methods combine dual-encoders for efficient retrieval (Yao et al., 2019; Xie and Zhao, 2020) with cross-encoders for reranking (Nogueira and Cho, 2019; Li et al., 2021), and leverage hard-negative mining to improve discriminative power (Gao et al., 2021; Huang et al., 2022). Recent work also explores domain adaptation for specialized corpora such as legal and biomedical texts (Park et al., 2022; Sun et al., 2023).\n\nWe study lightweight domain adaptation under tight indexing budgets.",
+    "reason": "The span enumerates methods and citations but does not explain how they connect to the authors’ study or identify a concrete shortcoming motivating the work (definition a and c).",
+    "start": 267,
+    "end": 565,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "In a prior study, the authors claim that graph attention outperforms CNNs on citation networks",
+    "document": "Related Work\n\nGraph representation learning has diversified from spectral methods to message-passing neural networks capable of leveraging edge attributes and higher-order structures. Attention mechanisms enable nodes to weight neighbors adaptively and have shown benefits in heterogeneous graphs and inductive regimes. In a prior study, the authors claim that graph attention outperforms CNNs on citation networks, highlighting the importance of relation-sensitive aggregation.\n\nOur Focus\n\nWe revisit these findings under strict transductive and inductive splits and introduce topology-aware regularization for stability.",
+    "reason": "Mentions a specific prior study and its claim but provides no citation to identify the work (violates guideline b/ii).",
+    "start": 320,
+    "end": 414,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "BERT-base has been successfully applied to automated essay scoring with multi-aspect rubrics.",
+    "document": "Related Work\n\nAutomated essay scoring (AES) methods have evolved from handcrafted features and regression to neural encoders that learn holistic semantics and discourse cues. BERT-base has been successfully applied to automated essay scoring with multi-aspect rubrics. Complementary work investigates prompt-specific adapters and content–style disentanglement to reduce prompt leakage and demographic bias. We extend this line by introducing rubric-aware supervision that aligns latent dimensions with criterion-level annotations.\n",
+    "reason": "The sentence claims prior successful applications of a specific model to a specific task but does not cite the supporting studies.",
+    "start": 175,
+    "end": 268,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "A prior study demonstrated a 30% reduction in gender bias using causal prompts.",
+    "document": "Introduction\n\nMitigating social bias in NLP requires both robust measurement and interventions that generalize beyond specific datasets. Prior work has proposed intrinsic and extrinsic bias metrics, counterfactual evaluation, and dataset balancing (Bolukbasi et al., 2016; Zhao et al., 2018; Gonen and Goldberg, 2019). More recently, causal reasoning frameworks inform debiasing by targeting causal pathways between sensitive attributes and predictions (Kusner et al., 2017; Vig et al., 2020).\n\nA prior study demonstrated a 30% reduction in gender bias using causal prompts. Building on this intuition, we formalize prompt interventions as do-operations over latent causal variables and introduce a regularizer that penalizes path-specific effects from gender to model outputs. Our approach is model-agnostic and integrates with pretrained encoder–decoder architectures.\n\nWe evaluate on coreference resolution and occupation classification benchmarks with counterfactual protocols and report both performance and fairness metrics.",
+    "reason": "The sentence cites a quantitative effect from a 'prior study' without providing a citation, making the claim unsupported (violates rule b).",
+    "start": 495,
+    "end": 574,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "[Kumar et al., 2017)",
+    "document": "Related Work\n\nMeta-learning aims to learn how to learn, enabling rapid adaptation from limited data (Finn et al., 2017; Nichol et al., 2018). Optimization-based methods focus on fast inner-loop updates, while metric-based methods leverage embedding spaces for nearest-neighbor decisions (Snell et al., 2017). Early advances in few-shot classification [Kumar et al., 2017) highlighted the importance of episodic training to match evaluation conditions.",
+    "reason": "Mismatched brackets in the citation: it opens with '[' and closes with ')'; both should match, e.g., '(Kumar et al., 2017)'.",
+    "start": 351,
+    "end": 371,
+    "label": "Format"
+  },
+  {
+    "span": "(Nguyen, 2021)",
+    "document": "Introduction\n\nSelf-supervised objectives have narrowed the gap between supervised and unsupervised pretraining for speech recognition (Baevski et al., 2020; Hsu et al., 2021). As shown by (Nguyen, 2021), augmentations play a critical role in representation robustness, yet their interaction with model depth remains unclear (Chen et al., 2020).\n\nWe analyze augmentation schedules across depths and report consistent gains when pairing time-masking with frequency perturbations (Park et al., 2019).",
+    "reason": "Wrong narrative style; following \"as shown by\" the citation should be narrative, e.g., \"as shown by Nguyen (2021)\" instead of a parenthetical.",
+    "start": 188,
+    "end": 202,
+    "label": "Format"
+  },
+  {
+    "span": "BERT was used in an AES task trained on essays from the ASAP dataset with domain adaptation.",
+    "document": "Related Work\nAutomated essay scoring (AES) methods have evolved from handcrafted features with linear models to neural encoders that capture discourse and coherence (Attali and Burstein, 2006; Dong et al., 2017). Pretrained language models have further improved robustness by leveraging large-scale textual knowledge.\nBERT was used in an AES task trained on essays from the ASAP dataset with domain adaptation. Subsequent studies explored prompt-specific adapters, hierarchical encoders for multi-paragraph essays, and calibration techniques for score fairness across demographics (Kumar and Lee, 2020; Cho and Park, 2021). Our approach differs by coupling a content-structure disentanglement objective with score-consistency constraints across prompts.",
+    "reason": "This sentence asserts a specific prior setup (BERT on ASAP with domain adaptation) without citing the corresponding paper. As per rule (a) and example (iii), specific task configurations referencing prior work require a citation.",
+    "start": 318,
+    "end": 410,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": " (Al-Rawi and Chen 2020;",
+    "document": "Related Work\n\nTransformer-based object detection dispenses with anchors and NMS by formulating set prediction (Carion et al., 2020; Zhu et al., 2020). Hybrid approaches integrate deformable attention and multi-scale features to improve convergence (Zhu et al., 2021; Dai et al., 2021). We also compare with attention-guided alignment (Al-Rawi and Chen 2020; which uses dynamic feature gating for small objects, and with query decoupling methods (Gao et al., 2022).",
+    "reason": "Citation punctuation/style error: missing comma before the year and incorrect closing with a semicolon; should be '(Al-Rawi and Chen, 2020)'.",
+    "start": 333,
+    "end": 357,
+    "label": "Format"
+  },
+  {
+    "span": "Iyyer et al., 2015",
+    "document": "Related Work\n\nDocument classification benchmarks fostered rapid development of neural architectures that capture long-range dependencies (Yang et al., 2016; Howard and Ruder, 2018). Iyyer et al., 2015 show that deep averaging networks can be surprisingly strong baselines, while hierarchical models exploit document structure more effectively (Tang et al., 2015; Yang et al., 2016). More recent work explores pretraining with document-level objectives to improve coherence modeling (Bao et al., 2021).",
+    "reason": "Narrative citation with year not in parentheses: \"Iyyer et al., 2015\" should be formatted as narrative with the year in parentheses, e.g., \"Iyyer et al. (2015) show ...\".",
+    "start": 182,
+    "end": 200,
+    "label": "Format"
+  },
+  {
+    "span": "Time-series anomaly detection spans classical statistical tests, isolation-based methods, and deep learning models such as autoencoders, temporal convolutional networks, and Transformers (Gupta et al., 2014; Liu et al., 2008; Malhotra et al., 2016; Xu et al., 2020). Synthetic anomaly injection and semi-supervised training are also common practices (Zhang et al., 2019; Shen et al., 2021).",
+    "document": "Related Work\n\nDetecting anomalies in time-series is a long-standing problem with applications in monitoring, finance, and industrial IoT. Methods vary widely in assumptions, supervision requirements, and scalability.\n\nTime-series anomaly detection spans classical statistical tests, isolation-based methods, and deep learning models such as autoencoders, temporal convolutional networks, and Transformers (Gupta et al., 2014; Liu et al., 2008; Malhotra et al., 2016; Xu et al., 2020). Synthetic anomaly injection and semi-supervised training are also common practices (Zhang et al., 2019; Shen et al., 2021).\n\nBenchmarking efforts have sought consistent evaluation protocols across datasets with different anomaly types and frequencies (Hundman et al., 2018; Wu and Keogh, 2021).",
+    "reason": "The span inventories prior categories of methods and practices without tying them to the authors’ argument, motivation, or a clearly articulated gap, hence lacking synthesis (criteria a and c).",
+    "start": 218,
+    "end": 608,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Graph representation learning methods such as spectral GCNs, spatial message passing networks, and attention-based GNNs have been widely applied to molecular property prediction (Kipf and Welling, 2017; Gilmer et al., 2017; Veličković et al., 2018). Extensions include edge-conditioned convolutions, higher-order structures, and equivariant networks for 3D geometries (Simonovsky and Komodakis, 2017; Batzner et al., 2022).",
+    "document": "Related Work\n\nPredicting molecular properties from structure has catalyzed a broad literature at the intersection of cheminformatics and geometric deep learning. Approaches differ in how they encode graph topology, chemical attributes, and geometric constraints.\n\nGraph representation learning methods such as spectral GCNs, spatial message passing networks, and attention-based GNNs have been widely applied to molecular property prediction (Kipf and Welling, 2017; Gilmer et al., 2017; Veličković et al., 2018). Extensions include edge-conditioned convolutions, higher-order structures, and equivariant networks for 3D geometries (Simonovsky and Komodakis, 2017; Batzner et al., 2022).\n\nPretraining strategies on large unlabeled molecule corpora with contrastive or masked node prediction objectives have further improved generalization, especially in low-data regimes (Hu et al., 2020; Rong et al., 2020).",
+    "reason": "The span lists families of GNN approaches and extensions without explaining how they relate to or motivate the authors’ approach, offering no explicit gap or perspective (criteria a and c).",
+    "start": 264,
+    "end": 687,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "It is widely accepted that toxicity classifiers underperform on African-American English.",
+    "document": "Introduction\n\nSafety and fairness in open-domain dialogue have become central concerns as conversational agents are deployed more broadly. Toxicity detection systems are often used to filter or rerank generated responses, but these systems can introduce biases that disproportionately affect certain dialects or identity terms. Recent advances leverage debiasing lexicons, adversarial training, and calibrated thresholding to mitigate disparate error rates across groups.\n\nIt is widely accepted that toxicity classifiers underperform on African-American English. At the same time, evaluation suites now include dialectal variants and counterfactual data augmentation to probe robustness. Our work contributes a controlled generation benchmark to assess safety interventions while preserving utility.",
+    "reason": "This sentence makes a field-level claim about prior findings (performance on AAE) without providing citations; such claims require evidence or references (rules a and e).",
+    "start": 473,
+    "end": 562,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Vision Transformers have been applied to medical image classification, segmentation, and detection with pure transformer backbones or hybrid CNN–Transformer designs (Dosovitskiy et al., 2020; Chen et al., 2021; Hatamizadeh et al., 2022; Wang et al., 2021; Xie et al., 2021).",
+    "document": "Introduction\n\nAutomated analysis of pathology whole-slide images (WSIs) faces extreme resolution, sparse lesion patterns, and distribution shifts across scanners and staining protocols. Convolutional networks have advanced the field but can be limited in modeling long-range dependencies over gigapixel slides.\n\nVision Transformers have been applied to medical image classification, segmentation, and detection with pure transformer backbones or hybrid CNN–Transformer designs (Dosovitskiy et al., 2020; Chen et al., 2021; Hatamizadeh et al., 2022; Wang et al., 2021; Xie et al., 2021).\n\nWeakly supervised multiple-instance learning (MIL) further alleviates slide-level labeling costs by aggregating patch evidence, yet attention pooling can overfit to spurious correlations. We investigate whether token-level sparsification combined with instance reweighting can improve robustness in cross-site evaluation.\n\nOur method introduces a curriculum-sparse token selection and slide-consistent calibration loss to stabilize attention under domain shift. On three WSI benchmarks spanning different scanners, we observe gains in AUC and improved calibration, with minimal added compute.\n\nWe conduct ablations on sparsity schedules and release pretrained weights for community use.",
+    "reason": "The span lists prior Vision Transformer applications in medical imaging without indicating how those works inform or differ from the proposed approach for WSIs, failing to articulate the paper’s perspective or gap (criteria a and c).",
+    "start": 312,
+    "end": 586,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "BERT was used in an AES task trained on essays from grades 6–8 with character-level augmentation.",
+    "document": "Introduction\n\nAutomated essay scoring (AES) aims to assign holistic or trait-specific scores to student-written essays. Modern neural approaches promise improved reliability and rapid feedback, but concerns remain about robustness, fairness, and domain transfer. BERT was used in an AES task trained on essays from grades 6–8 with character-level augmentation. Reports of performance gains often conflate prompt memorization with true generalization, complicating interpretation of results.\n\nRelated Work\n\nTraditional AES relied on handcrafted features such as lexical diversity, syntactic complexity, and discourse indicators. Neural methods have shifted toward pre-trained encoders and prompt-specific fine-tuning, with recent variants incorporating error detection, calibration, and counterfactual evaluation. Cross-prompt transfer remains a notable challenge, particularly in the presence of stylistic artifacts.\n\nOur Contributions\n\nWe introduce prompt-agnostic calibration layers that disentangle content relevance from surface fluency. Additionally, we curate a cross-grade evaluation set to measure robustness to lexical and syntactic drift.",
+    "reason": "Makes a specific claim about a BERT setup in an AES task (grades, augmentation) without citing the source study, matching example (iii) and rule (a).",
+    "start": 263,
+    "end": 360,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "In a previous study, the authors claimed that pretraining on code-switched data reduces perplexity by 15%.",
+    "document": "Introduction\n\nLanguage modeling for code-switching faces data sparsity, orthographic variation, and context-switching challenges (Soto and Hirschberg, 2019; Winata et al., 2021). Recent methods leverage multilingual pretrained models and adapter-based fine-tuning to capture cross-lingual transfer while controlling model capacity (Pfeiffer et al., 2020; Ansell et al., 2021). Data augmentation through back-translation and synthetic switching patterns has also been explored to mitigate limited in-domain resources (Hossain and Lee, 2022).\n\nIn a previous study, the authors claimed that pretraining on code-switched data reduces perplexity by 15%. Building on these directions, we introduce a curriculum that transitions from monolingual to synthetic to natural code-switched corpora, and we evaluate on conversational ASR transcripts and social media posts across three language pairs.",
+    "reason": "The span references a 'previous study' and a specific result (15% reduction) without citing the study, violating rule (b) and example (ii).",
+    "start": 542,
+    "end": 648,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Most prior studies conclude that message passing saturates at 3–5 layers for QM9.",
+    "document": "Related Work: Graph Neural Networks for Molecular Property Prediction\n\nGraph neural networks (GNNs) have become the de facto standard for molecular property prediction by learning over atom-bond graphs with message passing layers (Gilmer et al., 2017; Wu et al., 2018). Architectural enhancements such as attention, edge updates, and equivariant layers have further improved accuracy on quantum chemistry benchmarks (Klicpera et al., 2020).\n\nMost prior studies conclude that message passing saturates at 3–5 layers for QM9. While oversmoothing is a known limitation, the exact depth-performance trade-off can depend on normalization, positional encodings, and training regimen. Our analysis revisits depth scaling under unified training and augmentation settings.",
+    "reason": "Asserts a consensus of 'most prior studies' and a specific numerical range without providing citations to those studies.",
+    "start": 442,
+    "end": 523,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "The DSTC8 track introduced multi-domain state tracking with schema-based labels.",
+    "document": "Related Work\n\nTask-oriented dialogue systems must track user goals and constraints across turns, a problem formalized as dialogue state tracking. Earlier benchmarks concentrated on single-domain settings with fixed slot ontologies, limiting generalization.\n\nThe DSTC8 track introduced multi-domain state tracking with schema-based labels. This evolution encouraged models to reason about unseen services and slots through natural language descriptions rather than fixed categorical inventories.\n\nSubsequent work explored transfer learning, schema linking, and retrieval-augmented state tracking. Despite progress, robustness to paraphrase, slot sparsity, and cascading ASR errors remains an open challenge that motivates schema-aware architectures with uncertainty calibration.",
+    "reason": "Mentions a specific shared task and its contribution without providing a citation at first mention, which is required for shared tasks/competitions.",
+    "start": 258,
+    "end": 338,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "the CoNLL-2003 shared task on NER established the standard splits used today",
+    "document": "Related Work\n\nNamed entity recognition (NER) has progressed from feature-engineered CRFs to pretrained encoders with task-specific heads. Community benchmarks have been instrumental in enabling consistent comparisons across modeling choices. In particular, the CoNLL-2003 shared task on NER established the standard splits used today and catalyzed substantial progress in sequence labeling architectures. Subsequent corpora introduced more entity types and cross-lingual scenarios, but the original English newswire benchmark remains a default point of reference for many studies.\n\nOur Approach\n\nWe reevaluate span classification under label imbalance and propose a curriculum that targets rare entity contexts.",
+    "reason": "Claims about a specific shared task and its role without citing the original CoNLL-2003 resource (violates guideline a).",
+    "start": 257,
+    "end": 333,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "BERT was used in an AES setup trained on short argumentative essays with pairwise ranking losses.",
+    "document": "Related Work\n\nAutomatic essay scoring (AES) seeks to predict holistic or trait-specific scores from student writing. Early systems relied on surface features such as length and lexical diversity, while later work incorporated syntax and discourse indicators. Neural encoders have recently gained traction as they can model deeper semantic and rhetorical signals.\n\nPairwise and listwise objectives have been explored to better align model outputs with grader preferences. BERT was used in an AES setup trained on short argumentative essays with pairwise ranking losses. Despite promising results, fairness and domain transfer across prompts remain pressing concerns for deployment.",
+    "reason": "Mentions a specific model configuration and training setup for AES without citing the corresponding paper or dataset (rule a, b, e).",
+    "start": 471,
+    "end": 568,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Classical two-stream CNNs, Siamese architectures, and attention-based models have been widely adopted for change detection (Daudt et al., 2018; Fang et al., 2020; Chen et al., 2021). Large-scale datasets such as LEVIR-CD, CDD, and WHU-CD have enabled benchmarking across urban scenes (Levir et al., 2020; Wang et al., 2020; Ji et al., 2019). Transformer-based encoders further improve long-range modeling (Ban et al., 2021; Liu et al., 2021).",
+    "document": "Related Work\n\nRemote sensing change detection relies on robust representations that separate illumination and seasonal effects from structural changes. Recent advances in high-resolution satellites have shifted attention to fine-grained, building-level change cues.\n\nClassical two-stream CNNs, Siamese architectures, and attention-based models have been widely adopted for change detection (Daudt et al., 2018; Fang et al., 2020; Chen et al., 2021). Large-scale datasets such as LEVIR-CD, CDD, and WHU-CD have enabled benchmarking across urban scenes (Levir et al., 2020; Wang et al., 2020; Ji et al., 2019). Transformer-based encoders further improve long-range modeling (Ban et al., 2021; Liu et al., 2021).\n\nWhile these efforts improve accuracy, they largely assume perfectly registered image pairs and abundant labels. Our work targets label-scarce scenarios with misalignment by learning registration-aware tokens that disentangle geometry from appearance.",
+    "reason": "The span lists architectures and datasets without connecting them to the authors’ misalignment and label-scarcity focus, failing to articulate a perspective or gap, hence lacks synthesis per (a) and (c).",
+    "start": 267,
+    "end": 709,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "In (Huang et al., 2019)",
+    "document": "Related Work\n\nFederated learning has been explored across mobile and edge environments to preserve data privacy while training global models (McMahan et al., 2017; Kairouz et al., 2021). In (Huang et al., 2019) introduced adaptive aggregation techniques to cope with client drift, while Karimireddy et al. (2020) proposed correction mechanisms to reduce bias from partial participation. Personalization in federated settings exploits clustering and meta-learning (Mansour et al., 2020; Fallah et al., 2020), and robust aggregation mitigates outliers and attacks (Blanchard et al., 2017; Pillutla et al., 2022). Our work studies cross-silo scenarios with non-IID labels and temporal participation patterns.",
+    "reason": "Wrong citation style: narrative use with parentheses; should be 'In Huang et al. (2019)'.",
+    "start": 187,
+    "end": 210,
+    "label": "Format"
+  },
+  {
+    "span": "Shared autonomy techniques span predictive user intent modeling, POMDP-based assistance, arbitration policies that blend human and robot commands, and learning from demonstration for collaborative tasks (Dragan and Srinivasa, 2013; Javdani et al., 2015; Reddy et al., 2018; Losey et al., 2020).",
+    "document": "Introduction\n\nEffective human-robot collaboration requires balancing adaptability to user intent with guarantees on safety and task efficiency. Real-world deployments must operate under partial observability and distribution shifts in user behavior.\n\nShared autonomy techniques span predictive user intent modeling, POMDP-based assistance, arbitration policies that blend human and robot commands, and learning from demonstration for collaborative tasks (Dragan and Srinivasa, 2013; Javdani et al., 2015; Reddy et al., 2018; Losey et al., 2020).\n\nWe propose CertAssist, a certifiably safe shared autonomy framework combining control barrier functions with belief-dependent arbitration, evaluated on manipulation and navigation tasks with human participants.",
+    "reason": "The span summarizes prior lines of work without articulating how they relate to or motivate the need for the certifiably safe framework presented (criterion a/c).",
+    "start": 251,
+    "end": 545,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Classical time series forecasting relies on ARIMA and exponential smoothing to model linear dependencies (Box and Jenkins, 1970; Hyndman et al., 2008). Neural models introduce nonlinearity via RNNs, LSTMs, and temporal convolutions (Hochreiter and Schmidhuber, 1997; Bai et al., 2018). Transformer-based forecasters use attention to capture long-range dependencies (Li et al., 2019; Zhou et al., 2021). Decomposition and frequency-domain methods further reduce complexity and highlight seasonal structure (Oreshkin et al., 2020; Wu et al., 2021).",
+    "document": "Introduction\nAccurate forecasting underpins decision-making in supply chains, energy, and finance. Models must balance bias-variance trade-offs, handle sparse covariates, and remain robust to nonstationary shifts and irregular sampling.\n\nClassical time series forecasting relies on ARIMA and exponential smoothing to model linear dependencies (Box and Jenkins, 1970; Hyndman et al., 2008). Neural models introduce nonlinearity via RNNs, LSTMs, and temporal convolutions (Hochreiter and Schmidhuber, 1997; Bai et al., 2018). Transformer-based forecasters use attention to capture long-range dependencies (Li et al., 2019; Zhou et al., 2021). Decomposition and frequency-domain methods further reduce complexity and highlight seasonal structure (Oreshkin et al., 2020; Wu et al., 2021).\n\nWe present an uncertainty-aware spectral transformer that couples learnable seasonal kernels with interval calibration, yielding improved accuracy and coverage under regime shifts in retail and traffic datasets.",
+    "reason": "The span summarizes prior work categories without relating them to the paper’s aims or highlighting a concrete gap; the author’s perspective is absent.",
+    "start": 238,
+    "end": 784,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "there are many recent works that explore this topic",
+    "document": "Introduction\n\nSarcasm detection in multimodal social media posts requires integrating cues from text and images to resolve contrasts between literal and intended meaning. Prior research on unimodal sarcasm detection has highlighted the role of lexical incongruity and pragmatic context, but multimodal settings add visual irony and cross-modal entailment as additional challenges. Despite rapidly growing interest, there are many recent works that explore this topic, yet consistent evaluation protocols remain underdeveloped.\n\nIn this paper, we introduce a contrastive alignment framework that learns cross-modal incongruity by pulling matched ironic cues together while pushing apart semantically plausible but non-ironic alignments. We also curate a diagnostic set to test failure modes related to visual-literal mismatch and sarcastic hyperbole. Our experiments demonstrate gains over strong multimodal fusion baselines and indicate better robustness to spurious visual correlations.\n\nWe release code and annotations to foster reproducibility and future extensions.",
+    "reason": "The sentence asserts the existence of many recent works without providing any citations to those works (rule d: mentions of recent works must be cited).",
+    "start": 415,
+    "end": 466,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Prompt-based methods for steering pre-trained language models have been explored in a variety of settings. Discrete prompt mining identifies trigger tokens that elicit desired behavior (Kim and Park, 2020; Zhou et al., 2021). Continuous prompt tuning replaces hard prompts with trainable embeddings (Li and Sung, 2021; Qin et al., 2022). Instruction following with few-shot exemplars has also been shown to improve task transfer (Rao and Lin, 2021; Xu et al., 2022).",
+    "document": "Related Work\n\nControllable text generation seeks to guide large language models (LLMs) toward specified attributes with minimal task-specific supervision. Recent approaches either modify inputs via prompts or adjust model parameters through lightweight adapters.\n\nPrompt-based methods for steering pre-trained language models have been explored in a variety of settings. Discrete prompt mining identifies trigger tokens that elicit desired behavior (Kim and Park, 2020; Zhou et al., 2021). Continuous prompt tuning replaces hard prompts with trainable embeddings (Li and Sung, 2021; Qin et al., 2022). Instruction following with few-shot exemplars has also been shown to improve task transfer (Rao and Lin, 2021; Xu et al., 2022).\n\nAdapter-based control introduces small task-specific modules into frozen backbones, enabling multi-task training while limiting memory costs (Chen et al., 2021; Gupta and Lee, 2022). Other lines include decoding constraints (He and Zhao, 2020) and classifier-guided re-ranking (Sharma et al., 2021).\n\nIn parallel, evaluation protocols for controllability measure attribute accuracy, content preservation, and fluency (Liu et al., 2020; Feng and Ma, 2021).",
+    "reason": "The span lists categories and citations of prompt methods without relating them to the paper’s approach, identifying a gap, or articulating the authors’ perspective (criteria a and c).",
+    "start": 264,
+    "end": 730,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "The widely used WikiSum dataset contains over 1 million article-summary pairs spanning 20 domains.",
+    "document": "Introduction\n\nLong-form abstractive summarization seeks to condense multiple sources into coherent, faithful narratives. Multi-document settings exacerbate issues of redundancy and factual drift, requiring models that can aggregate, filter, and plan content. The widely used WikiSum dataset contains over 1 million article-summary pairs spanning 20 domains. While its scale enables training large models, inconsistent source quality and topical imbalance introduce evaluation challenges that are not always reflected in standard metrics.\n\nRelated Work\n\nEarlier approaches relied on extractive pipelines, whereas more recent models employ hierarchical attention and retrieval-augmented generation to improve coverage and controllability. Despite progress, summaries often omit minority viewpoints and struggle with temporal attribution. Work on faithfulness emphasizes contrastive training and constrained decoding, but trade-offs persist between factuality and fluency.\n\nOur Approach\n\nWe investigate retrieval-conditioned planners that produce citation-aware content plans before generation. The planner encourages coverage of salient entities and events while enabling error detection during decoding. We evaluate on both in-domain and out-of-domain collections to stress-test generalization.",
+    "reason": "Claims specific statistics about a dataset (size and domain count) without providing a citation, triggering rule (a) and (b).",
+    "start": 259,
+    "end": 357,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "(Alvarez et al. 2016)",
+    "document": "Introduction\n\nDeep reinforcement learning (RL) has achieved strong results in control and games by combining function approximation with policy optimization and value learning (Mnih et al., 2015; Schulman et al., 2017; Haarnoja et al., 2018). Exploration remains a central challenge, with intrinsic motivation and optimism-based methods proposed to address sparse rewards (Bellemare et al., 2016; Pathak et al., 2017).\n\nModel-based RL promises improved sample efficiency by leveraging learned dynamics, but stability and compounding errors can hinder performance (Janner et al., 2019). Prior work has examined uncertainty-aware planning and ensembles to mitigate model bias (Chua et al., 2018). In continuous control, natural policy gradients and trust-region methods have improved stability (Kakade, 2002; Schulman et al., 2015). We build on off-policy actor–critic techniques (Lillicrap et al., 2016) and extend distributional critics to better capture return uncertainty (Bellemare et al., 2017; Dabney et al., 2018), improving the robustness of value targets first explored in (Alvarez et al. 2016).",
+    "reason": "Missing comma between author and year in a parenthetical author–year citation. It should be “(Alvarez et al., 2016)”.",
+    "start": 1081,
+    "end": 1102,
+    "label": "Format"
+  },
+  {
+    "span": "There has been a surge of recent work on counterfactual fairness in ranking.",
+    "document": "Related Work\n\nFairness in machine learning has been investigated along statistical, causal, and individual notions, with applications spanning classification, regression, and ranking (Dwork et al., 2012; Hardt et al., 2016; Kilbertus et al., 2017). In recommendation and search, exposure-based definitions account for position bias and feedback loops, leading to algorithms that re-balance rankings under utility constraints (Singh and Joachims, 2018; Biega et al., 2018). Causal frameworks have been proposed to reason about interventions on sensitive attributes and their pathways (Kusner et al., 2017; Pearl, 2009).\n\nThere has been a surge of recent work on counterfactual fairness in ranking. However, existing evaluations often rely on semi-synthetic setups, and it remains unclear how assumptions about click models affect fairness guarantees.\n\nWe introduce a benchmark with logged interaction data and interventions to assess counterfactual fairness risks under realistic user behavior models.",
+    "reason": "Mentions 'recent work' broadly without citing any of the works.",
+    "start": 620,
+    "end": 696,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Scaling laws reveal predictable accuracy gains with model and data size (Kaplan et al., 2020). Rotary position embeddings improve extrapolation of attention (Su et al., 2021). Distillation from CNN teachers stabilizes training of ViTs on small datasets (Touvron et al., 2021).",
+    "document": "Related Work\n\nVision Transformers (ViTs) extend self-attention to images and challenge convolutional inductive biases with global context modeling (Dosovitskiy et al., 2021). Follow-up studies examine data efficiency, positional encodings, and training regularization to close gaps with CNNs in limited-data regimes.\n\nScaling laws reveal predictable accuracy gains with model and data size (Kaplan et al., 2020). Rotary position embeddings improve extrapolation of attention (Su et al., 2021). Distillation from CNN teachers stabilizes training of ViTs on small datasets (Touvron et al., 2021). We study a unified recipe that couples positional design with token mixing priors under small-scale training budgets.\n",
+    "reason": "The sentences list separate strands—scaling, positional encoding, and distillation—without transitions or explanation of how each informs the others, reducing coherence.",
+    "start": 318,
+    "end": 594,
+    "label": "Coherence"
+  },
+  {
+    "span": "Chen et al.",
+    "document": "Introduction\n\nNeural sequence modeling has rapidly evolved, driven by advances in attention mechanisms and large-scale pretraining. According to Chen et al., attention enables models to dynamically focus on salient parts of the input while suppressing noise from irrelevant tokens. This intuition has been validated across machine translation, summarization, and dialogue (Alvarez and Kim, 2018; Singh et al., 2020). Yet, despite these successes, there remains a gap in understanding how structural biases influence generalization when data is scarce (Rao and Patel, 2019; Gomez et al., 2021).\n\nIn this paper, we study the interplay between architectural inductive biases and data augmentation strategies for low-resource settings. Prior work (Huang and Lee, 2017; Park et al., 2022) suggests that curated augmentations can substitute for explicit structural priors. We revisit this claim using controlled synthetic corpora alongside real-world benchmarks, and we reveal when augmentations help, when they hurt, and why.\n\nOur contributions are: (i) a taxonomy of inductive biases relevant to seq2seq learning; (ii) a suite of controlled experiments across tasks; and (iii) an analysis framework that links augmentation choice to linguistic properties of the data (Alvarez and Kim, 2018; Singh et al., 2020).",
+    "reason": "Narrative citation missing year; should be formatted as 'Chen et al. (YEAR)'.",
+    "start": 145,
+    "end": 156,
+    "label": "Format"
+  },
+  {
+    "span": "CLIP-style models have become the default backbone for multimodal evaluation.",
+    "document": "Introduction\n\nVision–language pretraining aligns images and text through contrastive, generative, or matching objectives, enabling zero-shot and few-shot transfer to diverse downstream tasks (Radford et al., 2021; Jia et al., 2021; Li et al., 2022). Advances include scaling datasets, improving negative sampling, and incorporating region-level alignment (Wang et al., 2022; Kim and Park, 2023).\n\nBenchmarks for retrieval, classification, and VQA assess compositional grounding and cross-modal robustness. CLIP-style models have become the default backbone for multimodal evaluation. Yet, consistent evaluation requires standardized prompts, label spaces, and open-vocabulary mapping procedures. We introduce a protocol that reduces prompt and template variance, enabling fairer comparison across pretraining strategies.",
+    "reason": "The statement makes a broad claim about model adoption ('default backbone') at first mention without providing citations to support it.",
+    "start": 506,
+    "end": 583,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "several works have explored self-supervised graph augmentation for recommendation",
+    "document": "Related Work\n\nGraph-based recommender systems leverage user–item interaction graphs to learn embeddings that capture collaborative signals and higher-order connectivity. Recently, several works have explored self-supervised graph augmentation for recommendation, proposing contrastive objectives that improve robustness to sparsity. Parallel efforts investigate disentangling user intents to better separate long-term preferences from short-term noise. Our approach differs by introducing a topology-aware perturbation scheme that calibrates augmentations according to local connectivity, and we combine it with a debiased contrastive loss to mitigate popularity bias.\n",
+    "reason": "The claim about 'several works' is a reference to prior literature but provides no citations to support it.",
+    "start": 180,
+    "end": 261,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Privacy in federated learning has been studied through differential privacy mechanisms for client updates (Abadi et al., 2016; McMahan et al., 2018), secure aggregation protocols to hide individual contributions (Bonawitz et al., 2017), split learning to keep raw data on-device (Gupta and Raskar, 2018), and cryptographic techniques like homomorphic encryption and MPC (Gentry, 2009; Mohassel and Zhang, 2017). Communication reduction has been addressed via sparsification and quantization (Stich et al., 2018; Konečný et al., 2016).",
+    "document": "Related Work\n\nFederated learning enables collaborative training across a population of devices while keeping raw data local. The distributed setting raises new challenges in privacy, robustness, and communication efficiency.\n\nPrivacy in federated learning has been studied through differential privacy mechanisms for client updates (Abadi et al., 2016; McMahan et al., 2018), secure aggregation protocols to hide individual contributions (Bonawitz et al., 2017), split learning to keep raw data on-device (Gupta and Raskar, 2018), and cryptographic techniques like homomorphic encryption and MPC (Gentry, 2009; Mohassel and Zhang, 2017). Communication reduction has been addressed via sparsification and quantization (Stich et al., 2018; Konečný et al., 2016).\n\nOur method jointly optimizes privacy noise allocation and gradient compression schedules under a fixed bandwidth budget.",
+    "reason": "The span lists approaches without connecting them to the method's joint optimization objective or clarifying the gap the paper fills (definition a and c).",
+    "start": 226,
+    "end": 760,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Earlier work established that anchor-free detectors are more robust to scale variance.",
+    "document": "Introduction\n\nObject detection has undergone rapid evolution from anchor-based methods to anchor-free formulations. While anchor-based detectors rely on predefined priors that can limit adaptability, anchor-free designs predict keypoints or center points directly, potentially simplifying training and inference.\n\nEarlier work established that anchor-free detectors are more robust to scale variance. Despite these claims, comparative studies often differ in augmentation policies, training schedules, and backbones, making it difficult to attribute improvements to architectural choices alone.\n\nIn this paper, we offer a controlled comparison of anchor-based and anchor-free detectors under matched training regimes, focusing on scale-aware evaluation and cross-dataset generalization.",
+    "reason": "Claims a conclusion of earlier research about robustness without citing specific papers that established the result.",
+    "start": 314,
+    "end": 400,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Brown & Lee, 2020",
+    "document": "Related Work\n\nLearning-to-rank methods combine handcrafted features with deep encoders for end-to-end optimization. Pairwise losses have been extended with listwise surrogates to better approximate ranking metrics (Cao et al., 2007; Bruch et al., 2020). Similarly, Brown & Lee, 2020 demonstrate that learned query reformulations can improve passage retrieval, complementing dense retrievers that leverage dual encoders (Karpukhin et al., 2020; Xiong et al., 2021).",
+    "reason": "Ampersand with a comma–year is used in narrative text. It should be Brown and Lee (2020) for narrative form or (Brown & Lee, 2020) for parenthetical form.",
+    "start": 265,
+    "end": 282,
+    "label": "Format"
+  },
+  {
+    "span": "Recent studies consistently report that end-to-end speech models outperform hybrid systems on long-form dictation.",
+    "document": "Related Work\n\nAutomatic speech recognition (ASR) has transitioned from hybrid HMM-DNN systems to end-to-end architectures such as encoder-decoder models and transducers. Advances in self-supervised pretraining and large-scale data curation have further narrowed the gap in low-resource conditions.\n\nRecent studies consistently report that end-to-end speech models outperform hybrid systems on long-form dictation. Nevertheless, long-utterance decoding remains challenging due to memory constraints and error accumulation over extended contexts.\n\nWe propose a chunked transducer with cross-chunk alignment regularization that maintains global consistency while preserving streaming latency constraints.",
+    "reason": "The claim references 'recent studies' and a consistent empirical outcome without providing any citations, violating rule (d).",
+    "start": 299,
+    "end": 413,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Fowler et al (2022)",
+    "document": "Related Work\n\nMultimodal representation learning has advanced rapidly with contrastive pretraining at scale. Large vision–language models align image and text embeddings using noise-contrastive losses (Radford et al., 2021; Jia et al., 2021). Extensions incorporate region-level grounding and fine-grained alignment signals (Li et al., 2020; Chen et al., 2020). Zero-shot transfer emerges naturally from these frameworks, enabling strong performance without task-specific fine-tuning (Tsimpoukelli et al., 2021).\n\nDespite impressive results, models often rely on superficial correlations, underperforming on compositional and counterfactual evaluations (Hudson and Manning, 2019; Parcalabescu et al., 2021). Fowler et al (2022) introduce a suite of structured probes to assess whether models capture multi-step relational reasoning, revealing persistent gaps in compositionality. Our work complements these diagnostics with causal interventions that isolate modality-specific shortcuts.",
+    "reason": "Missing period in “et al.” within a narrative author–year citation. It should be “Fowler et al. (2022)”.",
+    "start": 708,
+    "end": 727,
+    "label": "Format"
+  },
+  {
+    "span": "Early work on graph out-of-distribution detection introduced the leave-subgraph-out protocol",
+    "document": "Related Work\n\nOut-of-distribution (OOD) detection in graph learning focuses on identifying nodes, edges, or entire graphs that deviate from the training distribution. Conventional methods adapt density estimation and uncertainty quantification to relational settings, but message passing and graph heterogeneity introduce additional challenges.\n\nTraining–test mismatch arises from shifts in topology, feature distributions, and label spaces. To study these shifts, evaluation protocols aim to simulate realistic deployment scenarios while preserving controllability.\n\nEarly work on graph out-of-distribution detection introduced the leave-subgraph-out protocol, in which connected components or communities are held out during training and used for evaluation as OOD regions. Subsequent research explored attribute perturbations, synthetic anomalies, and domain-conditioned splits to stress-test methods.\n\nIn this paper, we develop a topology-aware energy model and provide a standardized benchmark suite covering node-, edge-, and graph-level OOD scenarios.",
+    "reason": "The sentence attributes the introduction of a specific protocol to 'early work' without citing any source, which is a claim about prior work requiring citation.",
+    "start": 568,
+    "end": 660,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Classical traffic signal control uses handcrafted rules and model-based optimization (Webster, 1958; Gartner, 1983). RL-based approaches apply tabular Q-learning, deep Q-networks, and policy gradients to learn adaptive strategies (Abdoos et al., 2013; Van der Pol and Oliehoek, 2016; Wei et al., 2018). Multi-agent methods coordinate intersections via shared critics or communication (Chu et al., 2019; Zang et al., 2020; Chen et al., 2020). In this work, we propose a hierarchical actor-critic that decomposes phase selection and duration control.",
+    "document": "Introduction\n\nUrban congestion degrades mobility, increases emissions, and undermines economic productivity. Adaptive traffic signal control promises to improve throughput by tailoring signal plans to real-time conditions. Reinforcement learning offers a data-driven framework to learn such policies directly from interaction.\n\nClassical traffic signal control uses handcrafted rules and model-based optimization (Webster, 1958; Gartner, 1983). RL-based approaches apply tabular Q-learning, deep Q-networks, and policy gradients to learn adaptive strategies (Abdoos et al., 2013; Van der Pol and Oliehoek, 2016; Wei et al., 2018). Multi-agent methods coordinate intersections via shared critics or communication (Chu et al., 2019; Zang et al., 2020; Chen et al., 2020). In this work, we propose a hierarchical actor-critic that decomposes phase selection and duration control.\n\nWe validate our approach on synthetic and real-world networks, showing gains in average travel time and queue length.",
+    "reason": "Violates (b): summarizes prior work and then immediately states the contribution without explicitly identifying the gap or limitation that motivates the new method.",
+    "start": 328,
+    "end": 876,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Most recent benchmarks for instruction-tuned language models evaluate only helpfulness while ignoring harmlessness and honesty.",
+    "document": "Related Work\n\nEvaluating large language models requires balancing multiple objectives, including helpfulness, harmlessness, and honesty. Benchmark design often trades off breadth of coverage for annotation quality and cost.\n\nMost recent benchmarks for instruction-tuned language models evaluate only helpfulness while ignoring harmlessness and honesty. This narrow focus risks overstating progress and masking safety regressions.\n\nWe introduce a tri-criteria evaluation suite with consistent rubrics and calibrated raters, enabling more comprehensive assessment of instruction-tuned models.",
+    "reason": "The sentence generalizes about 'recent benchmarks' without providing citations to specific benchmarks, violating the requirement to cite recent works when referenced.",
+    "start": 225,
+    "end": 352,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Recently, a growing number of works have explored multimodal sarcasm detection in social media.",
+    "document": "Introduction\n\nSarcasm poses a unique challenge for computational models because it relies on pragmatic cues that are often absent from literal text. As social media users increasingly combine text with images, videos, and emojis, detecting sarcasm effectively requires integrating heterogeneous signals across modalities. Recently, a growing number of works have explored multimodal sarcasm detection in social media. However, consensus is lacking on how to balance textual semantics with visual context, and most benchmark datasets remain relatively small and domain-specific.\n\nIn this paper, we introduce a multimodal sarcasm corpus that pairs short posts with aligned images and reaction metadata. We also present a late-fusion transformer that conditions textual attention on learned visual embeddings. Our experiments demonstrate that cross-modal alignment and calibration are critical to reducing false positives in cases where textual cues alone are ambiguous.\n\nWe further analyze calibration errors across categories such as hyperbole, irony, and understatement, and show that visual context helps resolve irony in posts with incongruent imagery. Finally, we release our dataset and evaluation scripts to facilitate comparability and reproducibility in multimodal sarcasm research.",
+    "reason": "The sentence refers to 'a growing number of works' (recent works) without citing any of them, violating rule (d) and rule (a) on first mention of prior work.",
+    "start": 322,
+    "end": 417,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "It is well known that word-level attacks transfer across models and datasets.",
+    "document": "Related Work\n\nAdversarial robustness in text classification has been studied through gradient-based perturbations, synonym substitutions, and paraphrase generation (Ebrahimi et al., 2018; Alzantot et al., 2018; Jin et al., 2020). Defenses include adversarial training, certified robustness via randomized smoothing, and input transformations (Jia et al., 2019; Ye et al., 2020). It is well known that word-level attacks transfer across models and datasets. We investigate transferability under realistic constraints by controlling for lexical overlap and label bias.",
+    "reason": "The statement asserts a general prior finding without any supporting citations; per the definition, claims about prior work must be cited.",
+    "start": 379,
+    "end": 456,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Early multimodal summarization methods fuse visual features with textual encoders (Li et al., 2017; Chen and Bansal, 2018). Video summarization leverages temporal attention and key-shot selection (Zhang et al., 2016; Rochan and Wang, 2019). Recent transformer-based models introduce cross-modal alignment modules (Liu et al., 2021; Zeng et al., 2022).",
+    "document": "Related Work\n\nMultimodal summarization seeks to distill essential content by integrating complementary cues across text, images, and video. Approaches differ in the depth of fusion, supervision requirements, and the granularity of output (sentential vs. extractive vs. abstractive).\n\nEarly multimodal summarization methods fuse visual features with textual encoders (Li et al., 2017; Chen and Bansal, 2018). Video summarization leverages temporal attention and key-shot selection (Zhang et al., 2016; Rochan and Wang, 2019). Recent transformer-based models introduce cross-modal alignment modules (Liu et al., 2021; Zeng et al., 2022).\n\nDespite the progress, practical systems must handle noisy modalities and domain shifts. Our study focuses on robust alignment under weak supervision and evaluates consistency constraints that mitigate cross-modal mismatch.",
+    "reason": "The span only lists prior works and trends without clarifying how they relate to the authors' problem, gap, or method; there is no synthesis or explicit motivation (criteria a and c).",
+    "start": 284,
+    "end": 635,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "HIPAA-compliant de-identification systems typically report recall above 99.9% to minimize risk.",
+    "document": "Related Work\n\nClinical text de-identification removes protected health information (PHI) to enable secondary use of electronic health records for research. Sequence labeling models using conditional random fields and neural encoders have improved PHI detection across heterogeneous note types.\n\nRegulatory frameworks such as HIPAA set strict requirements for permissible data sharing, and evaluation often emphasizes recall to reduce the risk of leaking identifiers. Domain adaptation and active learning have been used to address site-specific variation.\n\nHIPAA-compliant de-identification systems typically report recall above 99.9% to minimize risk. Despite high recall targets, precision remains important to preserve utility, motivating methods that balance over-redaction with downstream task performance.",
+    "reason": "Presents a precise statistic ('above 99.9% recall') as typical practice without citing any studies or benchmark results, requiring evidence for such a quantitative claim (rule b).",
+    "start": 557,
+    "end": 652,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Garcia et al. 3",
+    "document": "Introduction\n\nSafe reinforcement learning studies how to optimize long-term reward while satisfying safety constraints (García and Fernández, 2015; Achiam et al., 2017). Garcia et al. 3 introduced a shielded policy optimization framework that enforces constraints via learned barrier functions, complementing primal-dual methods (Chow et al., 2018). Subsequent work explores offline datasets for safe exploration (Buckman et al., 2020) and risk-sensitive objectives (Tamar et al., 2015). We propose an uncertainty-aware shield that adapts to nonstationary risks.",
+    "reason": "Improper footnote-style number appended to an author name without a year; should include the year or use a properly formatted footnote.",
+    "start": 170,
+    "end": 185,
+    "label": "Format"
+  },
+  {
+    "span": "The HumanEval dataset contains 164 Python problems",
+    "document": "Introduction\n\nNeural code generation from natural language has progressed with large-scale pretraining on source code (Chen et al., 2021; Nijkamp et al., 2022). Evaluation commonly uses unit-test based benchmarks to measure functional correctness (Austin et al., 2021). The HumanEval dataset contains 164 Python problems. Beyond Python, multi-language suites such as MBPP and MultiPL-E broaden test diversity (Austin et al., 2021; Cassano et al., 2022). We introduce a new benchmark focusing on interactive code repair.",
+    "reason": "States a specific dataset statistic without citing the dataset or source.",
+    "start": 270,
+    "end": 320,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "BERT was used in an AES task trained on essays from multiple prompts and achieved strong results.",
+    "document": "Related Work\n\nAutomated Essay Scoring (AES). Early neural AES models leveraged CNN/LSTM encoders over token or character sequences to predict holistic scores (Taghipour and Ng, 2016; Dong and Zhang, 2016). Subsequent work explored prompt-aware encoders and auxiliary linguistic features for robustness across prompts (Yang et al., 2020; Mathias and Bhattacharyya, 2018). BERT was used in an AES task trained on essays from multiple prompts and achieved strong results. Cross-domain transfer and fairness concerns remain active topics, with studies probing bias across demographics and writing backgrounds (Uto et al., 2020; Ramamurthy et al., 2021).\n",
+    "reason": "Describes a specific prior setup and outcome ('BERT' used for AES across prompts with strong results) without any citation; per (iii) task setup claims must cite the relevant work.",
+    "start": 371,
+    "end": 468,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Vision-language models have recently been applied to medical report generation",
+    "document": "Introduction\n\nMedical report generation seeks to produce clinically accurate narratives from imaging data such as chest X-rays and CT scans. Early approaches used template-based systems and RNN decoders conditioned on visual features (Shin et al., 2016; Jing et al., 2018). With advances in multimodal learning, cross-attention and contrastive pretraining improved alignment between images and text in general domains (Radford et al., 2021; Li et al., 2021). Vision-language models have recently been applied to medical report generation, motivating exploration of domain adaptation and safety constraints for clinical settings. We investigate instruction-tuned multimodal encoders with radiology-specific terminology constraints.\n",
+    "reason": "Introduces a claim about recent applications of vision-language models to a specific medical task but provides no citations to those works (rule d/a).",
+    "start": 459,
+    "end": 537,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "For sim-to-real transfer in robotics, domain randomization perturbs textures and dynamics (Tobin et al., 2017; Peng et al., 2018), while domain adaptation aligns feature distributions (Tzeng et al., 2017; Ganin et al., 2016). Recent work leverages privileged information (Rajeswaran et al., 2017), online adaptation (Chebotar et al., 2019), and residual policy learning (Johannink et al., 2019).",
+    "document": "Introduction\n\nLearning control policies in simulation and transferring them to real robots reduces data collection cost but introduces the reality gap problem. A wide range of techniques aim to close this gap by randomizing simulators or adapting policies.\n\nFor sim-to-real transfer in robotics, domain randomization perturbs textures and dynamics (Tobin et al., 2017; Peng et al., 2018), while domain adaptation aligns feature distributions (Tzeng et al., 2017; Ganin et al., 2016). Recent work leverages privileged information (Rajeswaran et al., 2017), online adaptation (Chebotar et al., 2019), and residual policy learning (Johannink et al., 2019).\n\nHardware-aware policy learning and safety constraints have been explored to ensure feasible trajectories under actuation limits (Dalal et al., 2018; Berkenkamp et al., 2017).\n\nWe evaluate a modular adaptation pipeline on manipulation and locomotion tasks.",
+    "reason": "The span summarizes prior sim-to-real techniques without connecting them to the authors’ pipeline or specifying shortcomings they aim to resolve, fulfilling criterion (a)/(c).",
+    "start": 258,
+    "end": 653,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "(O'Neil et al.)",
+    "document": "Related Work\n\nPrivacy-preserving analytics balance utility with protections against membership inference and attribute disclosure (Shokri et al., 2017; Dwork et al., 2016). Several surveys exist (O'Neil et al.), but most focus on static datasets rather than streaming telemetry (Gao and Li, 2021). Recent work adapts differential privacy to continual observation via event-level budgets (Fan et al., 2022; Xu and Wang, 2023). We extend these ideas with a scheduler that dynamically allocates privacy loss to high-variance segments to maximize downstream accuracy.\n\nIntroduction\n\nWe evaluate across three telemetry corpora, reporting both utility metrics and calibrated privacy guarantees.",
+    "reason": "Parenthetical citation missing year; should include the publication year (e.g., '(O'Neil et al., 2019)'.",
+    "start": 195,
+    "end": 210,
+    "label": "Format"
+  },
+  {
+    "span": "BERT was used in an AES task trained on essays from the ASAP dataset with prompt-specific heads.",
+    "document": "Related Work\n\nAutomatic essay scoring (AES) has evolved from handcrafted features and regression models (Shermis and Burstein, 2013) to deep neural architectures that learn holistic text representations (Taghipour and Ng, 2016; Dong and Zhang, 2016). Transformer-based encoders have shown promise for text quality assessment due to their strong contextual understanding (Devlin et al., 2019; Ke et al., 2019) and have been adapted to various educational NLP tasks.\n\nBERT was used in an AES task trained on essays from the ASAP dataset with prompt-specific heads. Subsequent research explored domain adaptation and cross-prompt transfer to reduce overfitting to prompt idiosyncrasies (Uto et al., 2020), but the literature remains fragmented on calibration and fairness in high-stakes settings.",
+    "reason": "This sentence asserts a specific prior setup (use of BERT on the ASAP dataset with prompt-specific heads) without providing a citation to the study that used this configuration.",
+    "start": 466,
+    "end": 562,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "(Garcia)",
+    "document": "Introduction\n\nTime-series anomaly detection methods span reconstruction-based autoencoders, probabilistic forecasting, and representation learning (Zong et al., 2018; Salinas et al., 2020; Tuli et al., 2022). Domain adaptation is crucial when training on limited labeled anomalies (Xu et al., 2020). Prior work emphasizes shapelets and subsequence embeddings for interpretability (Ye and Keogh, 2009; Ji et al., 2021). A line of research (Garcia) argues for causal invariance across environments to avoid spurious correlations. We contribute an invariant risk minimization objective calibrated for seasonal, nonstationary signals.\n",
+    "reason": "Parenthetical citation missing year; should include the year, e.g., '(Garcia, YEAR)'.",
+    "start": 438,
+    "end": 446,
+    "label": "Format"
+  },
+  {
+    "span": "Transformer-based segmentation has been explored through pure-ViT decoders, hybrid CNN–ViT backbones, and pyramid tokens (Chen et al., 2021; Strudel et al., 2021; Xie et al., 2021). Medical adaptations include axial attention, windowed self-attention, and lightweight transformers (Wang et al., 2021; Hatamizadeh et al., 2022; Chen et al., 2022). Further studies consider multi-scale fusion and boundary-aware losses (Oktay et al., 2018; Kirillov et al., 2020; Zhao et al., 2017).",
+    "document": "Related Work\n\nMedical image segmentation has long relied on convolutional architectures such as U-Net and its variants due to their inductive biases and efficiency (Ronneberger et al., 2015; Milletari et al., 2016). Recent progress in self-attention and transformers has motivated their application to dense prediction.\n\nTransformer-based segmentation has been explored through pure-ViT decoders, hybrid CNN–ViT backbones, and pyramid tokens (Chen et al., 2021; Strudel et al., 2021; Xie et al., 2021). Medical adaptations include axial attention, windowed self-attention, and lightweight transformers (Wang et al., 2021; Hatamizadeh et al., 2022; Chen et al., 2022). Further studies consider multi-scale fusion and boundary-aware losses (Oktay et al., 2018; Kirillov et al., 2020; Zhao et al., 2017).\n\nRecent benchmarks reveal the sensitivity of ViT-based models to training data size and augmentation strategies (Dosovitskiy et al., 2021; Touvron et al., 2021). However, clinical datasets remain small and heterogeneous, posing challenges for generalization.\n\nWe present a compact hybrid that targets data efficiency by constraining attention spans and sharing parameters across scales, evaluating on multi-institutional MRI and CT cohorts.",
+    "reason": "Violates (a): compiles citations and categories of work without articulating how they relate to, motivate, or contrast with the proposed approach.",
+    "start": 321,
+    "end": 801,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "On Atari, our baseline DQN reproduces state-of-the-art scores.",
+    "document": "Introduction\n\nDeep reinforcement learning has achieved notable results on discrete-control benchmarks like the Arcade Learning Environment (ALE) and on continuous-control tasks via actor-critic frameworks. However, reproducing published results remains challenging due to sensitivity to exploration schedules, network initialization, and environment stochasticity.\n\nOn Atari, our baseline DQN reproduces state-of-the-art scores. We investigate the contribution of prioritized replay, multi-step returns, and distributional value functions to sample efficiency and final performance.\n\nWe further present a lightweight augmentation strategy that stabilizes training under sticky actions, and we provide a comprehensive ablation across 26 games with stratified random seeds.",
+    "reason": "Claims to match state-of-the-art results without citing which SOTA works or providing comparative evidence; this is an unsupported comparison to prior work.",
+    "start": 366,
+    "end": 428,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Learned index structures replace trees or hash tables with models that map keys to positions, using linear models, neural networks, or mixture-of-experts (Kraska et al., 2018; Ding et al., 2020; Marcus et al., 2021). Alternatives use recursive models or spline approximations to bound errors (Kipf et al., 2019; Ferragina and Vinciguerra, 2020).",
+    "document": "Related Work\n\nClassic Indexing\nB-trees and hash tables offer predictable performance envelopes and decades of engineering maturity. Their behavior under skew and dynamic workloads has inspired numerous variants.\n\nLearned Indexes\nLearned index structures replace trees or hash tables with models that map keys to positions, using linear models, neural networks, or mixture-of-experts (Kraska et al., 2018; Ding et al., 2020; Marcus et al., 2021). Alternatives use recursive models or spline approximations to bound errors (Kipf et al., 2019; Ferragina and Vinciguerra, 2020).\n\nSystems Concerns\nUpdate handling, concurrency control, and memory locality remain central challenges for adopting learned indexes in production.\n\nOur Scope\nWe study latency tails under shifting key distributions and propose a controller that adapts model partitions online.",
+    "reason": "The span enumerates prior learned index approaches without articulating their limitations or how the present work interfaces with them, lacking synthesis per (a) and (c).",
+    "start": 229,
+    "end": 574,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Most hospitals now deploy federated learning for chest X-ray analysis",
+    "document": "Introduction\n\nMedical image analysis increasingly requires learning from distributed data while preserving patient privacy. Federated learning offers a pathway to train models across institutions without centralizing raw data, thereby reducing compliance barriers and potential privacy risks. Most hospitals now deploy federated learning for chest X-ray analysis, reflecting a broad shift toward collaborative training under strict governance constraints.\n\nDespite its promise, real-world deployments face challenges, including non-iid client distributions, heterogeneous hardware, intermittent connectivity, and shifting label taxonomies. Furthermore, auditing and interpretability are essential for clinical adoption, yet practical methods for per-site performance guarantees remain limited.\n\nWe present a federated evaluation suite for chest X-ray classification that captures device heterogeneity, variable site participation, and realistic prevalence shifts. Our study quantifies trade-offs among personalization, fairness across sites, and privacy budget allocations.\n",
+    "reason": "Makes a broad statistical claim about hospital deployment without evidence or citation, violating rule b and rule a.",
+    "start": 293,
+    "end": 362,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Deep learning for statistical downscaling includes convolutional super-resolution architectures such as SRCNN and EDSR adapted to climate grids (Dong et al., 2014; Lim et al., 2017), U-Net variants tailored for precipitation fields (Ronneberger et al., 2015; Pan et al., 2019), and GAN-based methods like SRGAN and ESRGAN for sharper extremes (Ledig et al., 2017; Wang et al., 2018). Diffusion-based super-resolution has also been explored for geospatial data (Saharia et al., 2022; Rombach et al., 2022). Bias correction has been combined with deep downscalers via adversarial or quantile mapping losses (Zhang et al., 2020; Vaittinada Ayar et al., 2021).",
+    "document": "Introduction\n\nHigh-resolution climate information is crucial for local risk assessment, yet global climate models operate at coarse spatial scales. Statistical downscaling offers a data-driven pathway to bridge this scale gap using historical observations.\n\nDeep learning for statistical downscaling includes convolutional super-resolution architectures such as SRCNN and EDSR adapted to climate grids (Dong et al., 2014; Lim et al., 2017), U-Net variants tailored for precipitation fields (Ronneberger et al., 2015; Pan et al., 2019), and GAN-based methods like SRGAN and ESRGAN for sharper extremes (Ledig et al., 2017; Wang et al., 2018). Diffusion-based super-resolution has also been explored for geospatial data (Saharia et al., 2022; Rombach et al., 2022). Bias correction has been combined with deep downscalers via adversarial or quantile mapping losses (Zhang et al., 2020; Vaittinada Ayar et al., 2021).\n\nWe propose a physically guided diffusion downscaler that conditions on coarse-scale dynamics and enforces conservation via soft constraints.",
+    "reason": "The span lists prior downscaling approaches without connecting them to the proposed method or identifying a specific limitation or research gap (definition a and c).",
+    "start": 258,
+    "end": 914,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "Cross-modal contrastive learning aligns image and text embeddings (Radford et al., 2021). Self-supervised pretraining on radiographs improves downstream detection (Azizi et al., 2021). Transformers aggregate long-range features (Dosovitskiy et al., 2021). Report generation systems summarize clinical findings (Liu et al., 2019).",
+    "document": "Introduction\n\nMultimodal representation learning for medical imaging seeks to link visual content with clinical text, enabling retrieval, decision support, and automated reporting. However, label scarcity and domain shift across institutions remain practical obstacles.\n\nCross-modal contrastive learning aligns image and text embeddings (Radford et al., 2021). Self-supervised pretraining on radiographs improves downstream detection (Azizi et al., 2021). Transformers aggregate long-range features (Dosovitskiy et al., 2021). Report generation systems summarize clinical findings (Liu et al., 2019).\n\nWe propose a domain-adaptive contrastive pretraining scheme that incorporates structured report cues, bridging representation alignment with clinically grounded supervision.",
+    "reason": "The cited works are presented as an unconnected list without transitions or explicit relationships, making it unclear how each work relates to the preceding one or to a shared theme, thus reducing coherence.",
+    "start": 271,
+    "end": 600,
+    "label": "Coherence"
+  },
+  {
+    "span": "We are the first to propose curriculum-aware residual RL for bimanual manipulation.",
+    "document": "Introduction\n\nLearning dexterous manipulation policies has advanced through model-free RL with demonstration guidance and structured state abstractions (Rajeswaran et al., 2018; Kalashnikov et al., 2018). Residual reinforcement learning combines analytical controllers with learned residuals to improve sample efficiency (Johannink et al., 2019). Curriculum learning has been used to stage task difficulty and improve exploration (Narvekar et al., 2020). We are the first to propose curriculum-aware residual RL for bimanual manipulation. Our method decomposes skill acquisition across coordinated arms while adapting residual capacity to curriculum stages.\n\nRelated Work\n\nPrior works tackle bimanual tasks with centralized policies (Levine et al., 2016) or hierarchical controllers (Zhang et al., 2020), but do not jointly optimize residuals and curricula. We evaluate on assembly and cloth manipulation benchmarks under partial observability.",
+    "reason": "Claims novelty ('first to propose') without substantiating via citations or a systematic comparison to prior art; per rule (b), such domain-specific novelty claims require evidence.",
+    "start": 455,
+    "end": 538,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Recent benchmarks reveal systematic gender bias in widely used natural language inference datasets.",
+    "document": "Fairness in Natural Language Understanding\n\nConcerns about bias in language technologies have prompted audits of datasets and models across tasks such as sentiment analysis, coreference, and natural language inference (NLI). Bias can arise from imbalanced label distributions, lexical artifacts, and annotation guidelines that inadvertently encode stereotypes. Recent benchmarks reveal systematic gender bias in widely used natural language inference datasets. These findings underscore the need for evaluation protocols that disentangle true reasoning ability from spurious correlations.\n\nWe propose a counterfactual data augmentation strategy for NLI that swaps gendered entities while preserving semantic roles and plausibility. Our approach is model-agnostic and integrates seamlessly with standard training pipelines.\n\nExperiments demonstrate improved robustness to artifact-triggered shortcuts and reduced disparities across gendered slices without sacrificing overall accuracy. We also provide an error taxonomy to guide dataset curation and model debugging.",
+    "reason": "The sentence references 'recent benchmarks' and a specific claim about systematic gender bias without any citations to those benchmarks, violating rule (d) and (a).",
+    "start": 361,
+    "end": 460,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "In a previous study, the authors claim that context-aware tokenization yields a 5% absolute gain on noisy SMS data.",
+    "document": "Introduction\n\nTokenization is a foundational step in text processing pipelines, especially for models that operate on subword units. While static tokenizers are efficient, they struggle with domain-specific idiosyncrasies such as noise, abbreviations, and code-switching.\n\nIn a previous study, the authors claim that context-aware tokenization yields a 5% absolute gain on noisy SMS data. Motivated by this observation, we propose a dynamic tokenization framework that adapts to local context signals using a lightweight controller. Our approach integrates seamlessly with standard encoders and introduces minimal computational overhead.\n\nWe evaluate our method under varying noise regimes and demonstrate improved robustness over static baselines. We further analyze segment boundary stability and its downstream impact on classification performance.",
+    "reason": "This sentence references a 'previous study' and reports a specific performance gain but does not cite the work, violating rule (e-ii) and (a) regarding mentions of prior studies requiring citation.",
+    "start": 273,
+    "end": 388,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "The SQuAD dataset contains over 150,000 question–answer pairs curated from Wikipedia.",
+    "document": "Introduction\n\nQuestion answering (QA) benchmarks have catalyzed rapid progress in reading comprehension and open-domain retrieval. Span-extractive datasets emphasize precise localization of evidence within a passage (Rajpurkar et al., 2016; Kwiatkowski et al., 2019), while multi-hop tasks require reasoning across multiple documents (Yang et al., 2018). Transfer to low-resource domains often demands distant supervision or weak labeling strategies (Clark and Gardner, 2018). The SQuAD dataset contains over 150,000 question–answer pairs curated from Wikipedia. In this paper, we revisit domain adaptation for QA and study robustness under controlled distribution shifts.",
+    "reason": "This sentence states a specific statistic and details about a well-known dataset but provides no citation at first mention, which should be supported by a reference (rules a and b).",
+    "start": 477,
+    "end": 562,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Recent works show that graph neural networks consistently outperform matrix factorization on top-N recommendation.",
+    "document": "Related Work\n\nRecommender systems have evolved from memory-based collaborative filtering to latent factor models and, more recently, graph-based neural architectures (Koren et al., 2009; He et al., 2017). Modeling higher-order connectivity and heterogeneous relations promises to capture richer user–item interactions. Recent works show that graph neural networks consistently outperform matrix factorization on top-N recommendation. At the same time, issues such as oversmoothing, popularity bias, and cold-start remain active areas of research (Chen et al., 2020; Wu et al., 2022).",
+    "reason": "The sentence claims a general, comparative result by 'recent works' without citing any of those works, which is required (rule d).",
+    "start": 319,
+    "end": 433,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "(Nguyen, 2021",
+    "document": "Related Work\n\nAbstractive summarization with pretrained transformers has achieved strong ROUGE scores on news corpora (See et al., 2017; Lewis et al., 2020). Nonetheless, factual consistency remains a central challenge (Kryscinski et al., 2020; Goyal and Durrett, 2021). We extend the error taxonomy proposed by (Nguyen, 2021 to cover cross-document contradictions and temporal drift. Concurrent work introduces entity-aware training (Nan et al., 2021) and constrained decoding (Miao et al., 2019) to reduce hallucinations.",
+    "reason": "Missing closing parenthesis in the parenthetical citation, leaving it unbalanced.",
+    "start": 312,
+    "end": 325,
+    "label": "Format"
+  },
+  {
+    "span": "Speech emotion recognition has adopted CNNs for spectrogram features (Satt et al., 2017), recurrent models for temporal dynamics (Zhang et al., 2018), attention mechanisms (Mirsamadi et al., 2017), and multimodal fusion with text and video (Poria et al., 2017). Self-supervised pretraining with wav2vec-style encoders has also improved performance (Baevski et al., 2020; Pepino et al., 2021).",
+    "document": "Introduction\n\nUnderstanding human affect from speech enables richer human-computer interaction and mental health monitoring. However, variability in speakers, environments, and label granularity complicates modeling.\n\nSpeech emotion recognition has adopted CNNs for spectrogram features (Satt et al., 2017), recurrent models for temporal dynamics (Zhang et al., 2018), attention mechanisms (Mirsamadi et al., 2017), and multimodal fusion with text and video (Poria et al., 2017). Self-supervised pretraining with wav2vec-style encoders has also improved performance (Baevski et al., 2020; Pepino et al., 2021).\n\nDataset imbalance and domain shift across corpora are ongoing challenges, with cross-corpus evaluation highlighting generalization issues.\n\nWe present EmoAdapter, a lightweight adapter-based architecture for efficient fine-tuning on small emotion datasets.",
+    "reason": "The span lists prior SER approaches without connecting them to the authors’ aims or stating the gap their method addresses, thus lacking synthesis under (a)/(c).",
+    "start": 218,
+    "end": 610,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "The standard dataset for general-purpose program synthesis is PSB2.",
+    "document": "Related Work\n\nNeural program synthesis benchmarks range from domain-specific languages to general-purpose settings (Devlin et al., 2017; Ellis et al., 2018). Popular datasets include Robotic Puzzles, AlgoTasks, and diversified code corpora constructed from online judges (Sun et al., 2019; Chen et al., 2021b). The standard dataset for general-purpose program synthesis is PSB2. Evaluation protocols often consider test-time generalization to unseen tasks and execution-based correctness (Koul et al., 2020). We complement these efforts with a compositional benchmark emphasizing type-directed search.",
+    "reason": "Asserts a field-standard dataset without providing a citation to the dataset or supporting evidence (rule a).",
+    "start": 311,
+    "end": 378,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Automated writing evaluation systems leverage rule-based NLP, neural classifiers, and large language models to provide feedback (Attali and Burstein, 2006; Mathias et al., 2020; Rei et al., 2021; Zhuang et al., 2023; OpenAI, 2023).",
+    "document": "Introduction\n\nProviding timely, high-quality formative feedback at scale is a central challenge in writing pedagogy. Automated writing evaluation (AWE) tools offer partially automated support for feedback generation and revision guidance.\n\nAutomated writing evaluation systems leverage rule-based NLP, neural classifiers, and large language models to provide feedback (Attali and Burstein, 2006; Mathias et al., 2020; Rei et al., 2021; Zhuang et al., 2023; OpenAI, 2023). Complementary research examines rubric alignment, fairness, and reliability of automated scoring (Williamson et al., 2012; Beigman Klebanov and Madnani, 2020).\n\nThis paper reports a classroom deployment study of a feedback assistant but does not contrast its mechanisms with those of prior AWE systems.",
+    "reason": "The span inventories approach families and citations but does not connect them to the authors’ deployment or identify what remains unresolved, showing a lack of synthesis (definition a, c).",
+    "start": 240,
+    "end": 471,
+    "label": "Lacks synthesis"
+  },
+  {
+    "span": "The BC5CDR dataset has been widely used for chemical and disease recognition and contains 1,500 annotated abstracts.",
+    "document": "Related Work\n\nBiomedical named entity recognition (BioNER) underpins downstream tasks such as relation extraction and knowledge base construction. Early approaches adapted conditional random fields with domain-specific features, while neural models now dominate with contextualized embeddings and span classification strategies. Cross-corpus generalization remains challenging due to annotation differences and domain shifts across journals and time periods.\n\nThe BC5CDR dataset has been widely used for chemical and disease recognition and contains 1,500 annotated abstracts. Complementary corpora such as NCBI-Disease and JNLPBA target different entity types and labeling conventions, motivating multi-corpus training and normalization. Our approach leverages dictionary-augmented pretraining and constrained decoding to improve precision without sacrificing recall.",
+    "reason": "This sentence states specific dataset usage and statistics without providing a citation; first mentions of datasets and their properties require references (rule a).",
+    "start": 460,
+    "end": 576,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "The SNLI dataset is widely used for evaluating commonsense reasoning",
+    "document": "Related Work\n\nNatural language inference (NLI) evaluates whether a premise entails, contradicts, or is neutral to a hypothesis and is a cornerstone of language understanding (Bowman et al., 2015). Large-scale resources such as SNLI and MultiNLI facilitated learning transferable sentence representations (Williams et al., 2018). The SNLI dataset is widely used for evaluating commonsense reasoning. However, subsequent analyses revealed annotation artifacts and shallow heuristics that models can exploit, motivating adversarial and stress-test evaluations (Gururangan et al., 2018; Naik et al., 2018).\n\nOur focus is on compositional generalization, where we test whether models reason consistently under controlled perturbations of lexical and syntactic cues. We provide a suite of counterfactual pairs designed to isolate world knowledge from linguistic form.",
+    "reason": "This sentence makes a broad, field-level claim about dataset usage for a niche purpose without any supporting citation, violating rule (b).",
+    "start": 329,
+    "end": 397,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "The CMIP6 archive contains over 20 PB of data accessible via OPeNDAP.",
+    "document": "Related Work\n\nEarth system modeling has progressed through community intercomparison projects that unify experimental protocols and facilitate multi-model synthesis (Eyring et al., 2016). Downstream applications in impacts and adaptation increasingly rely on standardized access patterns and data cubes for scalable analytics (Pangeo Consortium, 2019).\n\nThe CMIP6 archive contains over 20 PB of data accessible via OPeNDAP. Despite this scale, practitioners lack lightweight baselines for spatiotemporal subsampling that preserve climate signals of interest. We address this by proposing a streaming framework with provable error controls for common diagnostics.",
+    "reason": "Presents a specific statistic about a well-known archive without any citation; such numeric claims about datasets or infrastructure require evidence.",
+    "start": 354,
+    "end": 423,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "We follow the setup of the SemEval-2017 Task 4 on Twitter sentiment",
+    "document": "Introduction\n\nSentiment Analysis on Social Media\n\nWe investigate sentence-level sentiment classification on Twitter. We follow the setup of the SemEval-2017 Task 4 on Twitter sentiment to ensure comparability across systems, including the standard train-dev-test splits and three-way polarity labels. Prior benchmarks underscore the challenges posed by informal language, sarcasm, and domain drift. Our contribution focuses on robust pretraining and test-time augmentation for handling noisy, rapidly evolving slang in microtexts.",
+    "reason": "First mention of a shared task/competition lacks a citation (rule a).",
+    "start": 117,
+    "end": 184,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "The task was first formalized in the 2019 SemEval shared task",
+    "document": "Introduction\n\nOffensive language identification aims to detect abusive, profane, or threatening content across social media platforms. Early research framed the problem as binary classification over tweets and forum posts with handcrafted features (Waseem and Hovy, 2016; Davidson et al., 2017). More recent advances rely on pretrained encoders fine-tuned with class reweighting or focal losses to mitigate skew (Zampieri et al., 2020). The task was first formalized in the 2019 SemEval shared task, which catalyzed standardized evaluation and spurred the release of multilingual resources. Building on this, our work examines cross-lingual transfer under limited annotation.\n",
+    "reason": "References a specific shared task and year but does not provide a citation to the shared task description or proceedings (rule a).",
+    "start": 437,
+    "end": 498,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "the widely used UrbanScenes-v2 dataset contains over 12 million annotated vehicles",
+    "document": "Related Work\n\nObject detection for urban traffic analytics has evolved alongside increasingly large-scale datasets and benchmarks. Early efforts focused on modestly sized collections of street-level imagery, while more recent corpora reflect the density and diversity typical of metropolitan centers. In this context, the widely used UrbanScenes-v2 dataset contains over 12 million annotated vehicles and supports fine-grained labeling of occlusions, weather conditions, and time-of-day variations.\n\nBenchmarks derived from these datasets have driven rapid progress in both model design and training strategies, including multi-scale feature aggregation, soft-label assignment, and training-time mosaic augmentation. Meanwhile, domain adaptation techniques have sought to bridge gaps between cities and sensor suites, aiming to transfer models trained on one locale to another without exhaustive relabeling.\n\nDespite the success of these methods, questions remain regarding long-tail categories (e.g., service vehicles, micromobility), robustness to adverse weather, and equitable performance across neighborhoods. Our work addresses these gaps by introducing a cross-city evaluation protocol that examines generalization under realistic shifts in camera placement and traffic density.\n",
+    "reason": "Names a specific dataset and provides a precise statistic without any citation to the source, violating rule a and rule b.",
+    "start": 318,
+    "end": 400,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Earlier neural IR systems relied primarily on word2vec embeddings.",
+    "document": "Related Work\n\nNeural information retrieval (IR) has progressed from shallow interaction models to deep pretrained language models that capture contextual semantics. Early approaches emphasized learning distributed representations that improve recall for lexical mismatch while maintaining efficient retrieval.\n\nEarlier neural IR systems relied primarily on word2vec embeddings. Subsequent methods introduced character-level and subword models to address out-of-vocabulary issues, followed by interaction-focused architectures that model query–document term dependencies explicitly.\n\nMore recently, dual-encoder dense retrieval with in-batch negatives and hard-negative mining has become a dominant paradigm, with hybrid sparse–dense systems offering improved robustness. Our work revisits representation learning for long documents by combining hierarchical encoders with locality-aware negative sampling.",
+    "reason": "Makes a claim about historical methods in a research area without citing representative early systems or surveys.",
+    "start": 311,
+    "end": 377,
+    "label": "Unsupported claim"
+  },
+  {
+    "span": "Knowledge distillation techniques transfer supervision from larger teachers to compact students using soft labels, feature mimicking, or intermediate hints (Hinton et al., 2015; Romero et al., 2015; Zagoruyko and Komodakis, 2016; Tian et al., 2020). Temperature scaling and label smoothing are widely used to improve student calibration (Müller et al., 2019; Guo et al., 2017).",
+    "document": "Related Work\n\nKnowledge Distillation and Calibration\nKnowledge distillation techniques transfer supervision from larger teachers to compact students using soft labels, feature mimicking, or intermediate hints (Hinton et al., 2015; Romero et al., 2015; Zagoruyko and Komodakis, 2016; Tian et al., 2020). Temperature scaling and label smoothing are widely used to improve student calibration (Müller et al., 2019; Guo et al., 2017).\n\nSelf-Distillation and Data-Free KD\nSelf-distillation and data-free distillation extend KD to settings without external teachers or original data, relying on self-training or synthetic samples (Furlanello et al., 2018; Micaelli and Storkey, 2019).",
+    "reason": "Summarizes prior techniques but does not explain their limitations or how they inform the paper's methodology, leaving the authors’ perspective unstated (definition a/c).",
+    "start": 53,
+    "end": 430,
+    "label": "Lacks synthesis"
+  }
+]

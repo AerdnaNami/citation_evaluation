@@ -1,0 +1,57 @@
+Introduction
+
+While many information seeking questions can be answered by a short text span, requiring a short span answer significantly limits the types of questions that can be addressed as well as the extent of information that can be conveyed. Recent work (Fan et al., 2019;Krishna et al., 2021) explored long form answers, where answers can be free-form texts consisting of multiple sentences. Their multi-sentence nature leads to interesting and nuanced discourse within the answers, where the answerer can provide information, hedge, explain, provide examples, point to other sources, and more. Answerers can flexibly structure and organize these elements to provide a coherent, concise answer.
+
+The complexity and flexibility of long form answers pose fresh challenges to the evaluation of long form question answering systems, in stark contrast to short span-based answers where matching spans (Rajpurkar et al., 2016;Joshi et al., 2017) provides a reliable proxy. A recent study (Krishna et al., 2021) demonstrated that automatic metrics like ROUGE (Lin, 2004) are not meaningful for this task and can be easily gamed. Our experiments find that even reliable human preference testing is challenging given the complexity of long form answers, which motivates us to look into the discourse structure of long form answers.
+
+We take a linguistically informed approach with the dual purpose of (a) to better understand the structure of long form answers, and (b) to assist the evaluation of long-form QA systems. By characterizing the communicative functions of sentences in long form answers (which we call roles), e.g., signaling the organization of the answer, directly answering the question, giving an example, providing background information, etc., we analyze human-written, and machine-generated long form answers. Furthermore, our framework combines functional structures with the notion of information salience by designating a role for sentences that convey the main message of an answer.
+
+We collect annotations on two datasets, ELI5 (Fan et al., 2019) and Natural Questions (NQ) (Kwiatkowski et al., 2019), which contains long form answers written by search users and from Wikipedia page respectively. In total, we provide fine-grained roles for 3.3K sentences (0.5K examples) and coarse annotation for 6K sentences (1.3K examples). We also annotate a small number (94) of machine-generated answers from a state-of-theart long form question answering system (Krishna et al., 2021) and provide rich analysis about their respective discourse structures. Our analysis demonstrates that studying answer structure can reveal a significant gap between machine-generated answers and human-written answers. We also present a competitive baseline model for automatic role classification, which performs on par with human agreement when trained with our annotated data. Lastly, our dataset yields a novel extractive summarization dataset, providing a benchmark for studying domain transfer in summarization and enabling QA models to provide concise answers to complex queries. We will release all our data and code at http://anonymous.co.
+
+ References: 
+Becker, M., Palmer, A., and Frank, A. 2016. Argumentative texts and clause types. In Proceedings of the Third Workshop on Argument Mining (ArgMining2016). pp. 21--30
+Cao, S. and Wang, L. 2021. Controllable openended question generation with a new question type ontology. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing. pp. 6424--6439 10.18653/v1/2021.acl-long.502
+Choi, E., Palomaki, J., Lamm, M., Kwiatkowski, T., Das, D., and Collins, M. 2021. Decontextualization: Making sentences stand-alone. In Transactions of the Association for Computational Linguistics. pp. 447--461
+Kumar Choubey, P., Lee, A., Huang, R., and Wang, L. 2020. Discourse as a function of event: Profiling discourse structure in news articles around the event. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. pp. 5374--5386
+Cohan, A., Dernoncourt, F., Doo, S., Kim, T., Bui, S., Kim, W., Chang, N., and Goharian 2018. A discourse-aware attention model for abstractive summarization of long documents. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 615--621
+Fan, A., Jernite, Y., Perez, E., Grangier, D., Weston, J., and Auli, M. 2019. ELI5: Long form question answering. In ACL.
+Joseph, L., Fleiss, J., and Cohen 1973. The equivalence of weighted kappa and the intraclass correlation coefficient as measures of reliability. In Educational and Psychological Measurement. pp. 613--619 10.1177/001316447303300309
+Guu, K., Lee, K., Tung, Z., Pasupat, P., and Chang, M. 2020. Realm: Retrievalaugmented language model pre-training. In Realm: Retrievalaugmented language model pre-training.
+Moritz Hermann, K., Kociský, T., Grefenstette, E., Espeholt, L., Kay, W., Suleyman, M., and Blunsom, P. 2015. Teaching machines to read and comprehend. In NIPS.
+Jerry, R. and Hobbs 1985. On the coherence and structure of discourse. In On the coherence and structure of discourse.
+Jernite, Y. 2020. Explain anything like i'm five:a model for open domain long form question answering. In Explain anything like i'm five:a model for open domain long form question answering.
+Joshi, M., Choi, E., Daniel, S., Weld, L., and Zettlemoyer 2017. Triviaqa: A large scale distantly supervised challenge dataset for reading comprehension. In Triviaqa: A large scale distantly supervised challenge dataset for reading comprehension. 1705.03551
+Joost, G. and Kircz 1991. Rhetorical structure of scientific articles: the case for argumentational analysis in information retrieval. In Journal of documentation.
+Krishna, K., Roy, A., and Iyyer, M. 2021. Hurdles to progress in long-form question answering. In NAACL.
+Kwiatkowski, T., Palomaki, J., Redfield, O., Collins, M., Parikh, A., Alberti, C., Epstein, D., Polosukhin, I., Kelcey, M., and Devlin, J. 2019. Natural Questions: a benchmark for question answering research. TACL. In Natural Questions: a benchmark for question answering research. TACL.
+Lascarides, A. and Asher, N. 2008. Segmented discourse representation theory: Dynamic semantics with discourse structure. In Computing meaning. pp. 87--124
+Lee, K., Chang, M., and Toutanova, K. 2019. Latent retrieval for weakly supervised open domain question answering. In ACL.
+Junyi, J., Li, A., and Nenkova 2015. Fast and accurate prediction of sentence specificity. In Twenty-Ninth AAAI Conference on Artificial Intelligence.
+Liakata, M., Saha, S., Dobnik, S., Batchelor, C., and Rebholz-Schuhmann, D. 2012. Automatic recognition of conceptualization zones in scientific articles and two life science applications. In Bioinformatics. pp. 991--1000
+Duross, E. and Liddy 1991. The discourse-level structure of empirical abstracts: An exploratory study. In Information Processing & Management. pp. 55--81
+Lin, C. 2004. ROUGE: A package for automatic evaluation of summaries. In Text Summarization Branches Out. pp. 74--81
+Liu, Y. and Lapata, M. 2019. Text summarization with pretrained encoders. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). pp. 3730--3740 10.18653/v1/D19-1387
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., and Stoyanov, V. 1907. Roberta: A robustly optimized bert pretraining approach. ArXiv, abs. In Roberta: A robustly optimized bert pretraining approach. ArXiv, abs.
+Louis, A. and Nenkova, A. 2011. Automatic identification of general and specific sentences by leveraging discourse annotations. In Proceedings of 5th international joint conference on natural language processing. pp. 605--613
+Mackinlay, A. and Markert, K. 2011. Modelling entity instantiations. In Proceedings of the International Conference Recent Advances in Natural Language Processing. pp. 268--274
+William, C., Mann, S. A., and Thompson 1988. Rhetorical structure theory: Toward a functional theory of text organization. Text-interdisciplinary Journal for the Study of Discourse. In Rhetorical structure theory: Toward a functional theory of text organization. Text-interdisciplinary Journal for the Study of Discourse. pp. 243--281
+Mizuta, Y., Korhonen, A., Mullen, T., and Collier, N. 2006. Zone analysis in biology articles as a basis for information extraction. International journal of medical informatics. In Zone analysis in biology articles as a basis for information extraction. International journal of medical informatics. pp. 468--487
+Nenkova, A. and Passonneau, R. J. 2004. Evaluating content selection in summarization: The pyramid method. In Proceedings of the human language technology conference of the north american chapter of the association for computational linguistics: Hlt-naacl 2004. pp. 145--152
+Peldszus, A. and Stede, M. 2013. From argument diagrams to argumentation mining in texts: A survey. In International Journal of Cognitive Informatics and Natural Intelligence (IJCINI). pp. 1--31
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou, Y., Li, W., and Liu, P.J. 2019. Exploring the limits of transfer learning with a unified text-to-text transformer. In Exploring the limits of transfer learning with a unified text-to-text transformer.
+Rajpurkar, P., Zhang, J., Lopyrev, K., and Liang, P. 2016. Squad: 100, 000+ questions for machine comprehension of text. In EMNLP.
+Roy, A., Saffar, M. T., Vaswani, A., and Grangier, D. 2021. Efficient content-based sparse attention with routing transformers. In Transactions of the Association for Computational Linguistics. pp. 53--68
+Stab, C. and Gurevych, I. 2017. Parsing argumentation structures in persuasive essays. In Computational Linguistics. pp. 619--659
+Teufel, S. and Moens, M. 2002. Summarizing scientific articles: experiments with relevance and rhetorical status. In Computational linguistics. pp. 409--445
+Teun A Van Dijk 2013. News as discourse. In News as discourse.
+Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P., Rault, T., and Louf, R. 2019. Huggingface's transformers: State-of-the-art natural language processing. In ArXiv. abs/1910.03771
+Xu, W., Napoles, C., Pavlick, E., Chen, Q., and Callison-Burch, C. 2016. Optimizing statistical machine translation for text simplification. In Transactions of the Association for Computational Linguistics. pp. 401--415
+Xu, Y. and Lapata, M. 2004. Query focused multi-document summarization with distant supervision. ArXiv, abs. In Query focused multi-document summarization with distant supervision. ArXiv, abs.
+Example role annotation (Top: NQ, Bottom: ELI5). In Example role annotation (Top: NQ, Bottom: ELI5).
+P/R/F1
+P/R/F1
+P/R/F1
+P/R/F1
+P/R/F1
+Human (pair). In Human (pair).
+Human (pair). In Human (pair).

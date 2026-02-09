@@ -1,0 +1,102 @@
+﻿Search parameters
+==========
+Coding by: All coders
+Codes: 
+change. Coherence. Format. Lacks synthesis. Mischaracterized citation. Overclaiming. Unsupported claim. Codes: 7 / 7
+Files:
+paper_1.txt, paper_10.txt, paper_2.txt, paper_3.txt, paper_4.txt, paper_5.txt, paper_6.txt, paper_7.txt, paper_8.txt, paper_9.txt,  Files:  10 / 96
+
+==========
+
+Code count totals: 18
+============
+Coherence : 1
+Format : 1
+Lacks synthesis : 2
+Unsupported claim : 14
+============
+Text code statistics:
+Coherence | paper_7.txt | Count: 1 | Percent of file: 3.57%
+Format | paper_1.txt | Count: 1 | Percent of file: 0.32%
+Lacks synthesis | paper_7.txt | Count: 1 | Percent of file: 8.92%
+Lacks synthesis | paper_2.txt | Count: 1 | Percent of file: 13.84%
+Unsupported claim | paper_1.txt | Count: 2 | Percent of file: 2.16%
+Unsupported claim | paper_8.txt | Count: 1 | Percent of file: 0.58%
+Unsupported claim | paper_3.txt | Count: 1 | Percent of file: 2.46%
+Unsupported claim | paper_9.txt | Count: 4 | Percent of file: 5.01%
+Unsupported claim | paper_7.txt | Count: 1 | Percent of file: 1.37%
+Unsupported claim | paper_4.txt | Count: 5 | Percent of file: 10.5%
+========
+
+[393-735] Coherence, File: paper_7.txt,  Coder: default
+The retriever aims at retrieving supportive passages to the given question from a large document corpus. The reader intends to find answer of the question from the first stage retrieved passages. Early work of Chen et al. (2017) adapts a BiLSTM architecture with various lexical and semantic features from the question and passages as inputs.
+
+
+[755-788] Format, File: paper_1.txt,  Coder: default
+Mao et al. (2019) generates story
+
+
+[867-2648] Lacks synthesis, File: paper_2.txt,  Coder: default
+Several of the value schemes proposed in the literature pertain to specific purposes. England (1967) suggested 66 values related to management decisions, such as high productivity and prestige, and categorized them by relevant entity, for example business organizations and individuals. Brown and Crace (2002) looked at 14 values for counseling and therapy, such as responsibility and spirituality, and Kahle et al. (1988) at nine for consumer research, such as warm relationships and excitement.
+
+Other proposed value schemes are more generic. Combining research from anthropology, sociology, philosophy, and psychology, Rokeach (1973) estimates the total number of human values to be fewer than hundreds, and develops a practical survey of 36 values that distinguishes between values pertaining to desirable end states and desirable behavior. Specifically for cross-cultural analyses, Schwartz et al. ( 2012) derived 48 value questions from the universal needs of individuals and societies, including obeying all the laws and to be humble. Moreover, Schwartz (1994) proposes a relatedness of values by their tendency to be compatible in their pursuit (see Figure 1). This relatedness reflects two "higher order" conflicts: (1) openness to change/own thoughts vs. conservation/submission, and (2) self-transcension (directed towards others/the environment) vs. self-enhancing (directed towards one's self), allowing to analyse values at several levels. Cheng and Fleischmann (2010) consolidates 12 schemes into a "meta-inventory" with 16 values, such as honesty and justice, revealing a large overlap in schemes across fields of research. However, as the meta-inventory is strictly more coarse-grained than Schwartz et al.'s theory we do not investigate it further for this paper.
+
+
+[1003-1857] Lacks synthesis, File: paper_7.txt,  Coder: default
+Compared to extractive models which extract existing words from the retrieved passages, generative models are able to produce new words out of the retrieved passages, and thus provide a more flexible modeling framework.  and Lewis et al. (2020a) concatenate the given question with top retrieved passages and feed the concatenation to the BART model (Lewis et al., 2019). Izacard and Grave (2020b) separately encodes the question with each top retrieved passage, then takes the concatenation of the encoder outputs as input to the decoder. Their method provide a way to better aggregate evidence from multiple passages and improve the performance significantly. FiD-KD (Izacard and Grave, 2020a) is an extension of FiD model that increases the accuracy of passage retrieval by training the dense retriever with the guidance of the FiD reader iteratively.
+
+
+[467-557] Unsupported claim, File: paper_1.txt,  Coder: default
+Thus, recent works have also explored enhancing pretrained models with external knowledge.
+
+
+[1372-1505] Unsupported claim, File: paper_1.txt,  Coder: default
+For example, large-scale commonsense knowledge graphs (CSKG) store structured commonsense knowledge in the form of knowledge triplets
+
+
+[715-1194] Unsupported claim, File: paper_3.txt,  Coder: default
+However, previous speech pre-training work suffers from two problems: (1) most of them learn the speech representation with only unlabeled speech data but ignore the importance of textual data to spoken language tasks (e.g., automatic speech recognition) which require the modality transformation; (2) most of these models solely rely on a pre-trained speech encoder for various downstream tasks, leaving the decoder not pre-trained for the sequence-to-sequence generation tasks.
+
+
+[181-386] Unsupported claim, File: paper_4.txt,  Coder: default
+Since metric scores are known to be a poor substitute for human assessment, this only results in the pos-sibility that the best system according to human judges is inadvertently filtered out at this stage.
+
+
+[579-726] Unsupported claim, File: paper_4.txt,  Coder: default
+while similarly in the sixth Dialog System Technology Challenge (DSTC6) systems were filtered according to metric scores prior to human evaluation.
+
+
+[728-1010] Unsupported claim, File: paper_4.txt,  Coder: default
+In terms of the live evaluation, competitions such as Convai2 report such evaluations as highly challenging, with many of the resulting dialogues reported to be senseless, offensive, or simply not in line with instructions and ultimately live evaluation results have been discarded.
+
+
+[1202-1396] Unsupported claim, File: paper_4.txt,  Coder: default
+On the other hand, competitions that (for one reason or another) do not release data and evaluation techniques into the public domain have reported relative success in terms of human evaluation.
+
+
+[1541-1907] Unsupported claim, File: paper_4.txt,  Coder: default
+The first Amazon Alexa Socialbot Grand Challenge required human assessors to score how coherent and engaging conversations were on a 1-5 rating scale by two distinct groups: volunteer Amazon employees (experts), and general Alexa users (crowds) (Ram et al., 2018), are reported to achieve a correlation of overall scores for the two types of human assessors at 0.93.
+
+
+[261-392] Unsupported claim, File: paper_7.txt,  Coder: default
+ Following the work of DrQA (Chen et al., 2017), most recent works build a two-stage retriever-reader system to tackle the problem.
+
+
+[1585-1688] Unsupported claim, File: paper_8.txt,  Coder: default
+Despite their success, it is still unknown whether or how well the instance difficulty can be learned. 
+
+
+[14-260] Unsupported claim, File: paper_9.txt,  Coder: default
+Several approaches to zero-shot cross-lingual transfer exist and can broadly be divided into: a) Databased Transfer, which focuses on training data transformation and b) Model-based Transfer that centres around modifying models' training routine.
+
+
+[498-632] Unsupported claim, File: paper_9.txt,  Coder: default
+This technique is followed by standard supervised training with those pseudo-labels and is commonly known as a translate-train method.
+
+
+[1855-2007] Unsupported claim, File: paper_9.txt,  Coder: default
+Newer approaches usually involve a pretrained XLM and the addition of some new training component with the inference routine remaining mostly unchanged.
+
+
+[3170-3287] Unsupported claim, File: paper_9.txt,  Coder: default
+We focus on the latter work, called XeroAlign, which reported the most recent SOTA scores on our evaluation datasets.

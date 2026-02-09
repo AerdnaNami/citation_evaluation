@@ -1,0 +1,62 @@
+Introduction
+
+The dominant approach in the design of current NLP solutions consists in (pre-)training a large neural language model, usually applying a Transformer architecture, such as GPT-2, RoBERTa or T5, and fine-tuning the model for specific tasks (Devlin et al., 2018;Raffel et al., 2019). The solutions are evaluated on benchmarks such as GLUE ((Wang et al., 2018)) or SuperGLUE ((Wang et al., 2019)), which allow comparing the performance of various methods designed for the same purpose. A main feature of a good NLP benchmark is the clear separation between train and test sets. This requirement prevents data contamination, when the model (pre-)trained on huge data might have "seen" the test set.
+
+The expansion of digital information is proceeding in two directions on the temporal axis. In the forward direction, new data are made publicly available on the Internet every second. What is less obvious is that, in the backward direction, older and older historical documents are digitized and disseminated publicly.
+
+To the best of our knowledge, our paper introduces the first benchmark which serves to use and evaluate the "pre-train and fine-tune scenario" applied to a massive collection of historical texts.
+
+The very idea of building language models on historical data is not new. The Google Ngram Viewer (Michel et al., 2011) is based on large amounts of texts from digitized books. The corpus as a whole is not open for the NLP community -only raw n-gram statistics are available. The temporal information is crude (at best, the year of publication is given) and the corpus is heterogeneous (in fact, it is a dump of digitized books of any origin).
+
+In our research, we use one of the richest sources of homogeneous historical documents, Chronicling America, a collection of digitized newspapers that cover the publication period of over 300 years (with significant coverage of 150 years), and design an NLP benchmark that may open new opportunities for the modeling of the historical language.
+
+Recently, time-aware language models such as Temporal T5 (Dhingra et al., 2021) and Tem-poBERT (Rosin et al., 2021) have been proposed. They focus on modern texts dated yearly, whereas we extend language modeling towards both longer time scales and more fine-grained (daily) resolution, using massive amounts of historical texts.
+
+The contribution of this paper is as follows:
+
+• We extracted a large corpus of English historical texts that may serve to pre-train historical language models (Section 5).
+
+These are the main features of the corpus:
+
+the corpus size is 201 GB, which is comparable with contemporary text data for training massive language models, such as GPT-2, RoBERTa or T5; the corpus is free of spam and noisy data (although the quality of OCR processing varies); texts are dated with a daily resolution, hence a new dimension of time (on a fine-grained level) can be introduced into language modeling; the whole corpus is made publicly available;
+
+• Based on selected excerpts from Chronicling America, we define a suite of challenges (named Challanging America, or ChallAm in short) with three ML tasks combining layout recognition, information extraction and semantic inference (Section 7). We hope that ChallAm will give rise to a historical equivalent of the GLUE (Wang et al., 2018) or Su-perGLUE (Wang et al., 2019) benchmarks.
+
+-In particular, we provide a tool for the intrinsic evaluation of language models based on a word-gap task, which calculates the model perplexity in a comparative scenario (the tool may be used in competitive shared-tasks) (Section 7.3).
+
+• We propose a "future-proof" methodology for the creation of NLP challenges: a challenge is automatically updated whenever the underlying corpus is enriched (Section 6.3).
+
+• We introduce a method for data preparation that prevents data contamination (Section 6.3).
+
+• We train base Transformer (RoBERTa) models for historical texts (Section 5). The models are trained on texts spanning 100 years, dated with a daily resolution.
+
+• We provide strong baselines for three ChronAm challenges (Section 8).
+
+• We take under consideration the issue of discrimination and hate speech in the historical American texts. To this end we have applied up-to date methods to filter out the abusive content from the data (Section 9).
+
+ References: 
+Sai Saket Aluru, B., Mathew, P., Saha, A., and Mukherjee 2020. Deep learning models for multilingual hate speech detection. In Deep learning models for multilingual hate speech detection. arXiv:2004.06465
+Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., and Litwin, M. In Ilya Sutskever.
+Caselli, T., Basile, V., Mitrović, J., and Granitzer, M. 2021. HateBERT: Retraining BERT for abusive language detection in english. In HateBERT: Retraining BERT for abusive language detection in english.
+Cibaroglu, M. 2019. Post-truth in social media. In Post-truth in social media. pp. 87--99
+Clark, M. 2014. A survey of online digital newspaper and genealogy archives: Resources, cost, and access. In Journal of the Society for American Music. pp. 277--283 10.1017/S1752196314000170
+Devlin, J., Chang, M., Lee, K., and Toutanova, K. 2018. BERT: Pre-training of deep bidirectional transformers for language understanding. In BERT: Pre-training of deep bidirectional transformers for language understanding. arXiv:1810.04805
+Dhingra, B., Cole, J. R., Eisenschlos, J. M., Gillick, D., Eisenstein, J., and Cohen, W. W. 2021. Time-aware language models as temporal knowledge bases. In Time-aware language models as temporal knowledge bases.
+Dong, R. and Smith, D. 2018. Multi-input attention for unsupervised OCR correction. In Multi-input attention for unsupervised OCR correction. pp. 2363--2372 10.18653/v1/P18-1220
+Field, A. and Tsvetkov, Y. 2004. Unsupervised discovery of implicit gender bias. CoRR, abs. In Unsupervised discovery of implicit gender bias. CoRR, abs.
+Graliński, F. and Wierzchoń, P. 2015. RetroC-A Corpus for Evaluating Temporal Classifiers. In Human Language Technology. Challenges for Computer Science and Linguistics. 7th Language and Technology Conference. pp. 101--111
+Graliński, F., Wróblewska, A., Stanisławek, T., Grabowski, K., and Górecki, T. 2019. GEval: Tool for debugging NLP datasets and models. In Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP. pp. 254--262
+Graliński, F. 2013. Polish digital libraries as a text corpus. In Proceedings of 6th Language & Technology Conference. pp. 509--513
+Graliński, F. 2017. Temporal) language models as a competitive challenge. In Proceedings of the 8th Language & Technology Conference. pp. 141--146
+Graliński, F. 2019. Against the Arrow of Time. Theory and Practice of Mining Massive Corpora of Polish Historical Texts for Linguistic and Historical Research. In Wydawnictwo Naukowe UAM.
+Huang, Z., Chen, K., He, J., Bai, X., Karatzas, D., Lu, S., and Jawahar, C. V. 2019. ICDAR2019 competition on scanned receipt OCR and information extraction. In International Conference on Document Analysis and Recognition (ICDAR). 10.1109/icdar.2019.00244
+Lee, B., Mears, J., Jakeway, E., Ferriter, M., Adams, C., Yarasavage, N., Thomas, D., Zwaard, K., and Weld, D. 2020. The newspaper navigator dataset: Extracting and analyzing visual content from 16 million historic newspaper pages in Chronicling America. In The newspaper navigator dataset: Extracting and analyzing visual content from 16 million historic newspaper pages in Chronicling America.
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., and Stoyanov, V. 2019. RoBERTa: A robustly optimized BERT pretraining approach. In RoBERTa: A robustly optimized BERT pretraining approach. arXiv:1907.11692
+Michel, J., Shen, Y.K., Presser Aiden, A., Veres, A., Matthew, K., Gray, Joseph, P., Pickett, D., Hoiberg, D., Clancy, P., Norvig, J., and Orwant 2011. Quantitative analysis of culture using millions of digitized books. In science. pp. 176--182
+Mikolov, T., Chen, K., Corrado, G., and Dean, J. 2013. Efficient estimation of word representations in vector space. In Efficient estimation of word representations in vector space. arXiv:1301.3781
+Nguyen, T., Jatowt, A., Coustaty, M., Nhu-Van Nguyen, A., and Doucet 2019. Deep statistical analysis of OCR errors for effective post-OCR processing. In Proceedings of the 18th Joint Conference on Digital Libraries, JCDL '19. pp. 29--38 10.1109/JCDL.2019.00015
+Matthew, E., Peters, W., Ammar, C., Bhagavatula, R., and Power 2017. Semi-supervised sequence tagging with bidirectional language models. In Semi-supervised sequence tagging with bidirectional language models. arXiv:1705.00108
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou, Y., Li, W., and Liu, P.J. 2019. Exploring the limits of transfer learning with a unified text-to-text transformer. In Exploring the limits of transfer learning with a unified text-to-text transformer. arXiv:1910.10683
+Rosin, G. D., Guy, I., and Radinsky, K. 2021. Time masking for temporal language models. In Time masking for temporal language models.
+Shen, Z., Zhang, K., and Dell, M. 2004. A large dataset of historical Japanese documents with complex layouts. CoRR, abs. In A large dataset of historical Japanese documents with complex layouts. CoRR, abs.
+1945. 487287 in<LeftContext>:i in<Text>:ol exp:31.760037 out:! in<Text>:cold exp:-81.772437 exp:; in<Text>:contemplate exp:24.562557 in<LeftContext>: * in<Text>:nI exp:-71.880373 in<RightContext>:l in<Text>:thee exp:44.814771 out. In in<LeftContext>:e Table 5: Features highly correlating with good results RetroTemp RetroGeo RetroGap in<Text>:Democratic exp:44.007274 out:Of in<Text>:defeat exp:-80.85675 out:The in<Text>:Secretary exp:40.900892 out:ana in<Text>:notice exp:-77. exp:-77.036646 out:te in<Text>:to exp:-77.047023 out:th in<Text>:for exp:-77.090248 out:tha in<Text>:hereby exp:-77

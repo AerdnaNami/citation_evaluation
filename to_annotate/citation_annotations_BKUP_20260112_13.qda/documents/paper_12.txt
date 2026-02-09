@@ -1,0 +1,32 @@
+Related Work and Background
+
+In this section, we will briefly introduce the background of adaptive kNN-MT (Zheng et al., 2021a). Adaptive kNN-MT is derived from kNN-MT (Khandelwal et al., 2021) by inserting a lightweight Meta-k Network that fuses kNN retrievals with various k to alleviate the possible noise induced by a single k. Formally, it is formulated as two steps: target-side datastore creation and Metak Network predictions. Target-side Datastore Creation. The datastore constists of a set of key-value pairs. Given a bilingual sentence pair (s, t) in a corpus (S, T ), a pretrained general domain NMT model autoregressively extracts the context representation h i of the i-th target token conditioned on both source and target context (s, t <i ), denoted as
+
+The datastore is finally constructed by taking h i as keys and t i as values:
+
+Meta-k Network Prediction. Meta-k Network (f β ) is a two-layer feed-forward network followed by a non-linear activation function. Based on the constructed datastore, it considers a set of various ks that are smaller than an upper bound K, the standard setting is k ∈ Q where Q = {0} ∪ {2 j |j ∈ N, 2 j ≤ K}. K nearest neighbors of the current context query ĥi from the datastore are first retrieved at the i-th decoding step. Then the l 2 distance from ĥi to each neighbor (h j , v j ) is denoted as d i = h j , ĥi 2 . And the count of distinct values in top j neighbors are denoted as c j . The normalized weights of each available k are obtained:
+
+, where f β denotes the Meta-k Network. The ultimate prediction probability is ensembled:
+
+Note that a validation set is usually required to study the Meta-k Network before predicting on test
+
+ References: 
+Ester, M., Kriegel, H., Sander, J., and Xu, X. 1996. A density-based algorithm for discovering clusters in large spatial databases with noise. In kdd. pp. 226--231
+Brendan, J., Frey, D., and Dueck 2007. Clustering by passing messages between data points. science. In Clustering by passing messages between data points. science. pp. 972--976
+Gutmann, M. and Hyvärinen, A. 2010. Noisecontrastive estimation: A new estimation principle for unnormalized statistical models. In Journal of Machine Learning Research. pp. 297--304
+John, A., Hartigan, Manchek, A., and Wong 1979. Journal of the royal statistical society. series c (applied statistics). In Journal of the royal statistical society. series c (applied statistics). pp. 100--108
+He, J., Neubig, G., and Berg-Kirkpatrick, T. 2021. Efficient nearest neighbor language models. In Efficient nearest neighbor language models.
+Jiang, Q., Wang, M., Cao, J., Cheng, S., Huang, S., and Li, L. 2021. Learning kernel-smoothed machine translation with retrieved examples. In Learning kernel-smoothed machine translation with retrieved examples.
+Khandelwal, U., Fan, A., Jurafsky, D., Zettlemoyer, L., and Lewis, M. 2021. Nearest neighbor machine translation. In International Conference on Learning Representations.
+Koehn, P. and Rebecca 2017. Six challenges for neural machine translation. In Six challenges for neural machine translation. arXiv:1706.03872
+Ling, W., Graça, J., Trancoso, I., and Black, A. 2012. Entropy-based pruning for phrasebased machine translation. In Proceedings of the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning. pp. 962--971
+Ng, N., Yee, K., Baevski, A., Ott, M., Auli, M., and Edunov, S. 2019. Facebook FAIR's WMT19 news translation task submission. In Proceedings of the Fourth Conference on Machine Translation. pp. 314--319 10.18653/v1/W19-5333
+Post, M. 2018. A call for clarity in reporting bleu scores. In A call for clarity in reporting bleu scores. arXiv:1804.08771
+Schwenk, H., Chaudhary, V., Sun, S., Gong, H., and Guzmán, F. 2019. Wikimatrix: Mining 135m parallel sentences in 1620 language pairs from wikipedia. In Wikimatrix: Mining 135m parallel sentences in 1620 language pairs from wikipedia.
+Sennrich, R., Haddow, B., and Birch, A. 2016. Neural machine translation of rare words with subword units. In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics. pp. 1715--1725 10.18653/v1/P16-1162
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., and Polosukhin, I. 2017. Attention is all you need. In Proceedings of the 31st International Conference on Neural Information Processing Systems, NIPS'17. pp. 6000--6010
+Zens, R., Stanton, D., and Xu, P. 2012. A systematic comparison of phrase table pruning techniques. In Proceedings of the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning. pp. 972--983
+Zhang, H., Hu, W., Tang, B., and Wang, X. 2021. Compression network with transformer for approximate nearest neighbor search. In Compression network with transformer for approximate nearest neighbor search.
+Zhang, T., Ramakrishnan, R., and Livny, M. 1996. Birch: An efficient data clustering method for very large databases. In Proceedings of the 1996 ACM SIGMOD International Conference on Management of Data, SIGMOD '96. pp. 103--114 10.1145/233269.233324
+Zheng, X., Zhang, Z., Guo, J., Huang, S., Chen, B., Luo, W., and Chen, J. 2021. Adaptive nearest neighbor machine translation. In Adaptive nearest neighbor machine translation. arXiv:2105.13022
+Zheng, X., Zhang, Z., Huang, S., Chen, B., Xie, J., Luo, W., and Chen, J. 2021. Non-parametric unsupervised domain adaptation for neural machine translation. In Non-parametric unsupervised domain adaptation for neural machine translation.

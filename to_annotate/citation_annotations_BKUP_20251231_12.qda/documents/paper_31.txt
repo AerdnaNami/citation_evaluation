@@ -1,0 +1,53 @@
+Introduction
+
+Entities are integral to applications that require understanding natural language text such as semantic search (Inan et al., 2021;Lashkari et al., 2019), question answering (Chandrasekaran et al., 2020;Cheng and Erk, 2020) and knowledge base construction (Goel et al., 2021;Al-Moslmi et al., 2020). To this end, entity set expansion (ESE) is a crucial task that uses a textual corpus to enhance a set of seed entities (e.g., 'mini bar', 'tv unit') with new entities (e.g., 'coffee', 'clock') that belong to the same semantic concept (e.g., room features).
+
+Since training data in new domains is scarce, many existing ESE methods expand a small seed  set by learning to rank new entity candidates with limited supervision. Broadly speaking, there are two types of such low-resource ESE methods: (a) corpus-based methods (Shen et al., 2018;Huang et al., 2020a;Yu et al., 2019a) that bootstrap the seed set using contextual features and patterns, and (b) language model-based methods  that probe a pre-trained language model with prompts to rank the entity candidates.
+
+Despite the recent progress, reported success of ESE methods is largely limited to benchmarks focusing on named entities (e.g., countries, diseases) and well-written text such as Wikipedia. Furthermore, the evaluation is limited to top 10-50 predictions regardless of the actual size of the entity set. As a result, it is unclear whether the reported effectiveness of ESE methods is conditional to datasets, domains, and/or evaluation methods.
+
+In this paper, we conduct a comprehensive study to investigate the generalizability of ESE methods in low-resource settings. Specifically, we focus on user-generated text such as customer reviews, which is widely used in many NLP applications (Li et al., 2019;Bhutani et al., 2020;Dai and Song, 2019). Due to lack of benchmarks on user-generated text, we create new benchmarks from three domains -hotels, restaurants and jobs.
+
+We found that these benchmarks exhibit characteristics (illustrated in Figure 1) distinctive from existing benchmarks: (a) multifaceted entities (entities that belong to multiple concepts -e.g., 'venice beach' can belong to concepts location and nearby attractions); (b) non-named entities (entities that are typically noun phrases but not proper names (Paris and Suchanek, 2021) -e.g., 'coffee'); and (c) vague entities (human annotators have subjective disagreement on their concept labels -e.g., 'casino' for nearby attraction).
+
+We found that user-generated text can have up to 10X more multifaceted entities and 2X more nonnamed entities compared to well-curated benchmarks. Furthermore, concepts that do not have well-defined semantics result in vague entities. We hypothesize that these characteristics may affect the performance of ESE methods and thus use these to profile ESE methods. 1 kg denotes the number of all correct entities of a concept.
+
+ References: 
+Al-Moslmi, T., Ocaña, M. G., Opdahl, A. L., and Veres, C. 2020. Named entity extraction for knowledge graphs: A literature overview. In IEEE Access. pp. 32862--32881
+Bamman, D., Popat, S., and Shen, S. 2019. An annotated dataset of literary entities. In Proc. NAACL-HLT' 2019. pp. 2138--2144
+Bhutani, N., Traylor, A., Chen, C., Wang, X., Golshan, B., and Tan, W. 2020. Sampo: Unsupervised knowledge base construction for opinions and implications. In Proc. AKBC' 2020.
+Bražinskas, A., Lapata, M., and Titov, I. 2020. Few-shot learning for opinion summarization. In Proc. EMNLP' 2020.
+Chandrasekaran, R., Harsh, N., Pathak, T., and Yano 2020. Deep neural query understanding system at expedia group. In Proc. IEEE Big Data' 2020. pp. 1476--1484
+Cheng, P. and Erk, K. 2020. Attending to entities for better text understanding. In Proc. AAAI' 2020, 05. pp. 7554--7561
+Dai, H. and Song, Y. 2019. Neural aspect and opinion term extraction with mined rules as weak supervision. In Neural aspect and opinion term extraction with mined rules as weak supervision. arXiv:1907.03750
+Devlin, J., Chang, M., Lee, K., and Toutanova, K. 2018. Bert: Pre-training of deep bidirectional transformers for language understanding. In Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv:1810.04805
+Dey, K., Shrivastava, R., and Kaushik, S. 2016. A paraphrase and semantic similarity detection system for user generated short-text content on microblogs. In The COLING 2016 Organizing Committee. pp. 2880--2890
+Falotico, R. and Quatto, P. 2015. Fleiss' kappa statistic without paradoxes. In Quality & Quantity. pp. 463--470
+Goel, K., Orr, L., Fatema Rajani, N., Vig, J., and Ré, C. 2021. Goodwill hunting: Analyzing and repurposing off-the-shelf named entity linking systems. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies: Industry Papers. pp. 205--213 10.18653/v1/2021.naacl-industry.26
+Hearst, M. A. 1992. Automatic acquisition of hyponyms from large text corpora. In Proc. COLING'.
+Huang, J., Xie, Y., Meng, Y., Shen, J., Zhang, Y., and Han, J. 2020. Guiding corpus-based set expansion by auxiliary sets generation and co-expansion. In Proc. WWW' 2020. pp. 2188--2198
+Huang, J., Xie, Y., Meng, Y., Shen, J., Zhang, Y., and Han, J. 2020. Guiding corpus-based set expansion by auxiliary sets generation and co-expansion. In Proc. WWW' 2020.
+Huang, J., Xie, Y., Meng, Y., Zhang, Y., and Han, J. 2020. Corel: Seed-guided topical taxonomy construction by concept learning and relation transferring. In Proc. SIGKDD '2020.
+Huang, R., Zou, B., Hong, Y., Zhang, W., Aw, A., and Zhou, G. 2020. Nut-rc: Noisy user-generated text-oriented reading comprehension. In Proc. COLING' 2020. pp. 2687--2698
+Inan, E., Thompson, P., Yates, T., and Ananiadou, S. 2021. Hsearch: Semantic search system for workplace accident reports. In Proc. ECIR 2021. pp. 514--519
+Lashkari, F., Bagheri, E., and Ghorbani, A. A. 2019. Neural embedding-based indices for semantic search. In Information Processing & Management. pp. 733--755
+Li, Y., Feng, A. X., Li, J., Mumick, S., Halevy, A., Li, V., and Tan, W. arXiv:1902.09661
+Liu, P., Yuan, W., Fu, J., Jiang, Z., Hayashi, H., and Neubig, G. 2021. Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing. In Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing. arXiv:2107.13586
+Mamou, J., Pereg, O., Wasserblat, M., Eirew, A., Green, Y., Guskin, S., Izsak, P., and Korat, D. 2018. Term set expansion based nlp architect by intel ai lab. In Term set expansion based nlp architect by intel ai lab. arXiv:1808.08953
+Mao, Y., Zhao, T., Kan, A., Zhang, C., Dong, X. L., Faloutsos, C., and Han, J. 2020. Octet: Online catalog taxonomy enrichment with self-supervision. In Proc. SIGKDD' 2020. pp. 2247--2257
+Michael Franklin Mbouopda And Paulin Melatagia, Y. 2020. Named entity recognition in low-resource languages using cross-lingual distributional word representation. In Revue Africaine de la Recherche en Informatique et Mathematiques Appliquees. pp. 33
+Miao, Z., Li, Y., Wang, X., and Tan, W. 2020. Snippext: Semi-supervised opinion mining with augmented data. In Proc. WWW' 2020. pp. 617--628
+Paris, P. and Suchanek, F. M. 2021. Non-named entities-the silent majority. In Proc. ESWC' 2021 Poster and Demo Track.
+Petroni, F., Rocktäschel, T., Lewis, P., Bakhtin, A., Wu, Y., Miller, A. H., and Riedel, S. 2019. Language models as knowledge bases? arXiv preprint. In Language models as knowledge bases? arXiv preprint. arXiv:1909.01066
+Rong, X., Chen, Z., Mei, Q., and Adar, E. 2016. Egoset: Exploiting word ego-networks and user-generated ontology for multifaceted set expansion. In Proc. WSDM'.
+Shang, J., Liu, J., Jiang, M., Ren, X., Voss, C. R., and Han, J. 2018. Automated phrase mining from massive text corpora. In Proc. TKDE. pp. 1825--1837
+Shen, J., Wu, Z., Lei, D., Shang, J., Ren, X., and Han, J. 2017. Setexpan: Corpus-based set expansion via context feature selection and rank ensemble. In Proc. ECML PKDD' 2017. pp. 288--304
+Shen, J., Wu, Z., Lei, D., Zhang, C., Ren, X., Vanni, M. T., Sadler, B. M., and Han, J. 2018. Hiexpan: Task-guided taxonomy construction by hierarchical tree expansion. In Proc. SIGKDD. pp. 2180--2189
+Takeoka, K., Akimoto, K., and Oyamada, M. 2021. Low-resource taxonomy enrichment with pretrained language models. In Proc. EMNLP' 2021. pp. 2747--2758
+Van Der Wees, M., Bisazza, A., and Monz, C. 2015. Five shades of noise: Analyzing machine translation errors in user-generated text. In Proc. Workshop on Noisy User-generated Text. pp. 28--37
+Yan, L., Han, X., and Sun, L. 2021. Progressive adversarial learning for bootstrapping: A case study on entity set expansion. In Proc. 10.18653/v1/2021.emnlp-main.762
+Online and Punta Cana, Dominican Republic. Association for Computational Linguistics. In EMNLP' 2021. pp. 9673--9682
+Yu, P., Huang, Z., Rahimi, R., and Allan, J. 2019. Corpus-based set expansion with lexical features and distributed representations. In Proc. SIGIR' 2019. pp. 1153--1156
+Yu, P., Huang, Z., Rahimi, R., and Allan, J. 2019. Corpus-based set expansion with lexical features and distributed representations. In Proc. SIGIR'.
+Zhang, Y., Shen, J., Shang, J., and Han, J. 2020. Empower entity set expansion via language model probing. In Empower entity set expansion via language model probing. arXiv:2004.13897
+Zhang, Y., Shen, J., Shang, J., and Han, J. 2004. Empower entity set expansion via language model probing. ArXiv, abs. In Empower entity set expansion via language model probing. ArXiv, abs.

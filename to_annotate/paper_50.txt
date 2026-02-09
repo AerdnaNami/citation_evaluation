@@ -1,0 +1,25 @@
+Introduction
+
+Grapheme-to-phoneme conversion (G2P) is the task of converting grapheme sequences into corresponding phoneme sequences. Many languages have the difficulty that some grapheme sequences correspond to more than one different phoneme sequence depending on the context.
+
+G2P plays a key role in speech and text processing systems, especially in text-to-speech (TTS) systems. These systems have to produce speech sounds for every word or phrase, even those not contained in a dictionary. In low-resource languages, it is fundamentally difficult to obtain large vocabulary dictionaries with pronunciations. Therefore, pronunciations need to be predicted from character sequences.
+
+In many languages, each word is composed of syllables and each syllable is composed of characters following the orthography rules of that language. This means that G2P can be formulated as the task of selecting the best path in a lattice generated for a given input word or phrase if we prepare enough orthography rules to make sure that any lattice generated almost certainly includes the path for the correct pronunciation.
+
+As the result of some effort, we prepared Thai orthography rules. Almost all possible paths in a lattice can be generated from these, and each path needs to be evaluated using a phonological language model to select the best path. With this in mind, we propose a novel G2P method based on a neural regression model that is trained using neural networks to predict how similar a pronunciation candidate is to the correct pronunciation. After generating a set of candidates for an input word or phrase using the orthography rules, this model selects the best-similarity pronunciation from the candidates.
+
+In the following sections, we describe the proposed method and explain experiments on a dataset of Thai vocabulary entries with pronunciations collected from Wiktionary. After that, we show that the proposed method outperforms encoder-decoder sequence models in terms of the difference between correct and predicted pronunciations, and demonstrate that incorrect, strange output sometimes occurs when using encoder-decoder sequence models while error is within the expected range when using the proposed method. The code is available at https://github.com/T0106661.
+
+ References: 
+Sittichai Jiampojamarn, G., Kondrak, T., and Sherif 2007. Applying many-to-many alignments and hidden Markov models to letter-to-phoneme conversion. In Human Language Technologies 2007: The Conference of the North American Chapter of the Association for Computational Linguistics; Proceedings of the Main Conference. pp. 372--379
+Lample, G., Ballesteros, M., Subramanian, S., Kawakami, K., and Dyer, C. 2016. Neural architectures for named entity recognition. In Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 260--270 10.18653/v1/N16-1030
+Luong, T., Pham, H., and Manning, C. D. 2015. Effective approaches to attention-based neural machine translation. In Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing. pp. 1412--1421 10.18653/v1/D15-1166
+Novak, J. R., Minematsu, N., and Hirose, K. 2012. WFST-based grapheme-to-phoneme conversion: Open source tools for alignment, modelbuilding and decoding. In Proceedings of the 10th International Workshop on Finite State Methods and Natural Language Processing. pp. 45--49
+Novak, J. R., Minematsu, N., Hirose, K., Hori, C., Kashioka, H., and Dixon, P. R. 2012. Improving wfst-based G2P conversion with alignment constraints and RNNLM n-best rescoring. In INTERSPEECH 2012, 13th Annual Conference of the International Speech Communication Association. pp. 2526--2529
+Sutskever, I., Vinyals, O., and Le, Q.V. 2014. Sequence to sequence learning with neural networks. In Advances in Neural Information Processing Systems.
+Tesprasit, V., Charoenpornsawat, P., and Sornlertlamvanich, V. 2003. A context-sensitive homograph disambiguation in Thai text-to-speech synthesis. In Companion Volume of the Proceedings of HLT-NAACL 2003 -Short Papers. pp. 103--105
+Toshniwal, S. and Livescu, K. 2016. Jointly learning to align and convert graphemes to phonemes with neural attention models. In Jointly learning to align and convert graphemes to phonemes with neural attention models. abs/1610.06540
+Van Den, A., Bosch, W., and Daelemans 1993. Data-oriented methods for grapheme-to-phoneme conversion. In Sixth Conference of the European Chapter of the Association for Computational Linguistics.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, I., and Polosukhin 2017. Attention is all you need. In Advances in Neural Information Processing Systems.
+Wiktionary and Wiktionary
+Yolchuyeva, S., Németh, G., and Gyires-Tóth, B. 2004. Transformer based grapheme-tophoneme conversion. CoRR, abs. In Transformer based grapheme-tophoneme conversion. CoRR, abs.

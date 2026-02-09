@@ -1,0 +1,55 @@
+Introduction
+
+A common research avenue pursued these days is to train monolithic language models with billions of parameters to solve every language understanding and reasoning challenge. In contrast, humans often tackle complex tasks by breaking them down into simpler sub-tasks, and solving these by interacting with other people or automated agents whose skillsets we are familiar with. This approach allows us to learn to solve new complex tasks quickly and effectively, by building upon what's already known. Can AI systems learn to do the same?
+
+To facilitate research in this direction, we propose a new reasoning challenge and a benchmark called COMMAQA where, in addition to the usual end-task supervision, one has access to a set of predefined AI agents with examples of their natural language inputs. Importantly, the target end-task is designed to be too difficult for current models to learn based only on end-task supervision. The goal is instead to build models that learn to solve the target task by decomposing it into sub-tasks solvable by these agents, and interacting with these agents in natural language to do so.
+
+As a motivating example, consider the interaction depicted in Figure 1 where a system is asked to buy a book series with a certain property. The system breaks this goal down, using agent-1 (here Google Assistant) to identify the referenced book series as well as the list of books in that series, and then using agent-2 (here Amazon Alexa) to make the purchase. While both of these agents interact with the system in natural language, they have notably different skill sets, rely on privately held knowledge sources, and have been built at an enormous cost. At the same time, neither agent by itself can accomplish the original goal.
+
+An alternative to building such a system that interacts with existing agents is to teach all requisite sub-tasks and skills to a large black-box system, say via multi-task learning Gupta et al., 2021). This, however, is not only wasteful in terms of time and resources, but often also infeasible. For example, agents such as Google Assistant and OpenAI GPT-3 use private knowledge resources and are computationally expensive to train even once. It would thus be nearly impossible to build a single system with the capabilities of both of these agents.
+
+We note that agents need not be sophisticated AI assistants. An agent may simply be a previously developed question-answering (QA) model, a math module, a function of textual input, an image captioning system-anything the community already knows how to build. The goal is to learn to leverage existing agents for more complex tasks.
+
+To enable the development of general systems for this task, we identify the minimal inputs that must be assumed for the task to be learnable-training data for the complex task, existing agents that together can solve the complex task, and examples of valid questions that can be asked of these agents (capturing the agents' capabilities). We build a new synthetic benchmark dataset called COMMAQA (Communicating with agents for QA), containing three complex multihop QA tasks (involving Explicit, Implicit, and Numeric reasoning) and four input QA agents that can solve these tasks.
+
+We demonstrate that black-box models struggle on COMMAQA even when provided with auxiliary data, such as domain-relevant agent knowledge. On the other hand, a model that leverages the agents (Khot et al., 2021) can achieve very high accuracy but relies on auxiliary supervision (decomposition annotations). While it is possible to identify valid decompositions using just the endtask labels, the search space is extremely large and naïve approaches, as we show, help only with one of the datasets. COMMAQA thus serves as a new challenge for the NLP community.
+
+Contributions: We (1) propose a new challenge of learning to solve complex tasks by communicating with agents; (2) develop a synthetic multi-hop QA dataset COMMAQA with three reasoning types;
+
+(3) provide auxiliary training data and a compositional generalization test set; (4) demonstrate the challenging nature of COMMAQA for black-box models; and (5) show the promise of compositional models that learn to communicate with agents.
+
+ References: 
+Amini, A., Gabriel, S., Lin, S., Koncel-Kedziorski, R., Choi, Y., and Hajishirzi, H. 2019. MathQA: Towards interpretable math word problem solving with operation-based formalisms. In NAACL.
+Beltagy, I., Peters, M. E., and Cohan, A. 2020. Longformer: The long-document transformer. In Longformer: The long-document transformer. arXiv:2004.05150
+Berant, J., Chou, A., Frostig, R., and Liang, P. 2013. Semantic Parsing on Freebase from Question-Answer Pairs. In EMNLP.
+Chen, X., Liang, C., Yu, A. W., Zhou, D., Song, D., Quoc, V., and Le 2020. Neural symbolic reader: Scalable integration of distributed and symbolic representations for reading comprehension. In ICLR.
+Clark, P., Tafjord, O., and Richardson, K. 2020. Transformers as soft reasoners over language. In IJCAI.
+Clarke, J., Goldwasser, D., Chang, M., and Roth, D. 2010. Driving semantic parsing from the world's response. In CoNLL. pp. 18--27
+Dasigi, P., Gardner, M., Murty, S., Zettlemoyer, L., and Hovy, E. 2019. Iterative search for weakly supervised semantic parsing. In NAACL-HLT.
+Desai, A., Gulwani, S., Hingorani, V., Jain, N., Karkare, A., Marron, M., and Roy, S. 2016. Program synthesis using natural language. In Proceedings of the 38th International Conference on Software Engineering. pp. 345--356
+Dua, D., Wang, Y., Dasigi, P., Stanovsky, G., Singh, S., and Gardner, M. 2019. DROP: A reading comprehension benchmark requiring discrete reasoning over paragraphs. In NAACL.
+Fried, D., Jansen, P. A., Hahn-Powell, G., Surdeanu, M., and Clark, P. E. 2015. Higherorder lexical semantic models for non-factoid answer reranking. In TACL. pp. 197--210
+Gardner, M., Artzi, Y., Berant, J., Bogin, B., Chen, S., Dua, D., Elazar, Y., Gottumukkala, A., Gupta, N., Hajishirzi, H., Ilharco, G., Khashabi, D., Lin, K., Liu, J., Liu, N. F., Mulcaire, P., Ning, Q., and Singh, S. 2020. Evaluating models' local decision boundaries via contrast sets. In Findings of EMNLP.
+Gardner, M., Berant, J., Hajishirzi, H., Talmor, A., and Min, S. 2019. Question answering is a format; when is it useful? ArXiv, abs/1909.11291. In and Jonathan Berant. 2021. Did Aristotle Use a Laptop? A Question Answering Benchmark with Implicit Reasoning Strategies. TACL.
+Gulwani, S. 2011. Automating string processing in spreadsheets using input-output examples. In ACM Sigplan Notices. pp. 317--330
+Gupta, T. and Kamath, A. Aniruddha Kembhavi, and Derek Hoiem. 2021. Towards general purpose vision systems. In ArXiv. abs/2104.00743
+Ho, X., Nguyen, A., Sugawara, S., and Aizawa, A. 2020. Constructing a multi-hop qa dataset for comprehensive evaluation of reasoning steps. In COLING.
+Khashabi, D., Erfan Sadeqi Azer, T., Khot, A., Sabharwal, D., and Roth 2019. On the possibilities and limitations of multi-hop reasoning under linguistic imperfections. arXiv: Computation and Language. In On the possibilities and limitations of multi-hop reasoning under linguistic imperfections. arXiv: Computation and Language.
+Khashabi, D., Chaturvedi, S., Roth, M., Upadhyay, S., and Roth, D. 2018. Looking beyond the surface:a challenge set for reading comprehension over multiple sentences. In NAACL.
+Khashabi, D., Min, S., Khot, T., Sabhwaral, A., Tafjord, O., Clark, P., and Hajishirzi, H. 2020. UnifiedQA: Crossing format boundaries with a single QA system. In Findings of EMNLP.
+Khot, T. and Clark, P. QASC: A dataset for question answering via sentence composition. In AAAI.
+Khot, T., Khashabi, D., Richardson, K., Clark, P., and Sabharwal, A. 2021. Text modular networks: Learning to decompose tasks in the language of existing models. In NAACL.
+Krishnamurthy, J., Dasigi, P., and Gardner, M. 2017. Neural semantic parsing with type constraints for semi-structured tables. In EMNLP.
+Lake, B. and Baroni, M. 2018. Generalization without systematicity: On the compositional skills of sequence-to-sequence recurrent networks. In ICML. pp. 2873--2882
+Lewis, P., Stenetorp, P., and Riedel, S. 2021. Question and answer test-train overlap in open-domain question answering datasets. In EACL.
+Nelson, F., Liu, T., Lee, R., Jia, P., and Liang 2021. Valid Inputs for Agents QC: What objects has Loisy likely used? [select] <text> What is Loisy's field of study? A. In Can small and synthetic benchmarks drive modeling innovation? a retrospective study of question answering modeling approaches. arXiv:2102.01065
+QC: What objects has Stoptite helped to make?. In QC: What objects has Stoptite helped to make?.
+QC: What objects has Kapod helped to make? [select] <text> Which companies has Kapod. In QC: What objects has Kapod helped to make? [select] <text> Which companies has Kapod.
+QC: What objects has Minimiseries likely used? [select] <text> What does Minimiseries work as? A: [. In QC: What objects has Minimiseries likely used? [select] <text> What does Minimiseries work as? A: [.
+Valid Inputs for Agents QC: Who threw javelins longer than 89.6? [select] <text> Who performed javelin throws? A: ["Jungdowda. In Valid Inputs for Agents QC: Who threw javelins longer than 89.6? [select] <text> Who performed javelin throws? A: ["Jungdowda.
+Prostigma. In Prostigma. 87.0
+Dewbar. In Dewbar. 72.0
+Colorectomy. In Colorectomy. 52.8
+QC: What was the gap between the longest and shortest discus throws by Honeywax? [select] <text> What lengths were Honeywax's discus throws? A. In QC: What was the gap between the longest and shortest discus throws by Honeywax? [select] <text> What lengths were Honeywax's discus throws? A.
+QC: What was the gap between the longest and shortest javelin throws by athletes from Misapportionment. In QC: What was the gap between the longest and shortest javelin throws by athletes from Misapportionment.
+QC: What was the gap between the best javelin throws from Haystone and Pistarmen? [select] <table> Which javelin throwers are from the country Haystone? A: ["Modiparity. In QC: What was the gap between the best javelin throws from Haystone and Pistarmen? [select] <table> Which javelin throwers are from the country Haystone? A: ["Modiparity.
