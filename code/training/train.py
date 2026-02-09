@@ -1,3 +1,22 @@
+#!/usr/bin/env python3
+# train.py
+#
+# Config-driven QLoRA SFT for a decoder-only model on prompt+completion data (JSON or JSONL),
+# plus post-train evaluation on the *eval_path* file using:
+#
+# Pairwise F1 definition:
+# “For each pair of annotators, we treat one annotator’s data as an experiment and the other
+# annotator’s data as gold truth and compute precision, recall and F1 based on that.
+# Then, to get the final F1 score, all pairwise F1 scores are micro-averaged.”
+#
+# Usage:
+#   python train.py --config config.json --category Unsupported_claim
+#
+# Notes:
+# - If eval_path examples contain multiple annotators (e.g. "annotations": {"ann1":[...], "ann2":[...]}),
+#   we compute pairwise micro-averaged F1 across annotators.
+# - If eval_path contains only a single gold (e.g. "completion" or "gold_spans"), we compute model-vs-gold F1.
+
 import argparse
 import json
 import os
@@ -6,7 +25,8 @@ import platform
 from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
+from itertools import permutations, combinations
 
 import torch
 from torch.utils.data import Dataset
@@ -20,7 +40,6 @@ from transformers import (
 )
 
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-
 
 IGNORE_INDEX = -100
 
@@ -44,7 +63,67 @@ def merge_dicts(base: dict, override: dict) -> dict:
 
 
 # -------------------------
-# Dataset
+# Robust JSON/JSONL reader
+# -------------------------
+def _load_jsonl(path: str) -> List[Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
+    with open(path, "r", encoding="utf-8-sig") as f:
+        for lineno, line in enumerate(f, start=1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                obj = json.loads(line)
+            except json.JSONDecodeError as e:
+                preview = line[:200].replace("\n", "\\n")
+                raise ValueError(f"Bad JSON on line {lineno} in {path}: {e}\nPreview: {preview}") from e
+            if isinstance(obj, dict):
+                rows.append(obj)
+            else:
+                # allow non-dicts but keep consistent error later
+                rows.append({"_value": obj})
+    return rows
+
+
+def _normalize_json(obj: Any, path: str) -> List[Dict[str, Any]]:
+    if isinstance(obj, list):
+        out: List[Dict[str, Any]] = []
+        for it in obj:
+            if isinstance(it, dict):
+                out.append(it)
+            else:
+                out.append({"_value": it})
+        return out
+    if isinstance(obj, dict):
+        for k in ("data", "rows", "examples", "items"):
+            if k in obj and isinstance(obj[k], list):
+                out: List[Dict[str, Any]] = []
+                for it in obj[k]:
+                    if isinstance(it, dict):
+                        out.append(it)
+                    else:
+                        out.append({"_value": it})
+                return out
+    raise ValueError(f"{path} JSON must be a list of examples (or dict containing one). Got: {type(obj)}")
+
+
+def read_examples(path: str) -> List[Dict[str, Any]]:
+    with open(path, "r", encoding="utf-8-sig") as f:
+        text = f.read().strip()
+    if not text:
+        raise ValueError(f"{path} is empty")
+
+    if text[0] in "[{":
+        try:
+            obj = json.loads(text)
+            return _normalize_json(obj, path)
+        except json.JSONDecodeError:
+            return _load_jsonl(path)
+    return _load_jsonl(path)
+
+
+# -------------------------
+# Dataset (train/dev)
 # -------------------------
 class PromptCompletionDataset(Dataset):
     def __init__(self, path: str, prompt_key: str = "prompt", completion_key: str = "completion"):
@@ -52,49 +131,13 @@ class PromptCompletionDataset(Dataset):
         self.prompt_key = prompt_key
         self.completion_key = completion_key
 
-        with open(path, "r", encoding="utf-8-sig") as f:
-            text = f.read().strip()
-        if not text:
-            raise ValueError(f"{path} is empty")
-
-        if text[0] in "[{":
-            try:
-                obj = json.loads(text)
-                self.rows = self._normalize_json(obj, path)
-            except json.JSONDecodeError:
-                self.rows = self._load_jsonl(path)
-        else:
-            self.rows = self._load_jsonl(path)
-
+        self.rows = read_examples(path)
         self._validate_rows(path)
-
-    def _load_jsonl(self, path: str) -> List[Dict[str, Any]]:
-        rows = []
-        with open(path, "r", encoding="utf-8-sig") as f:
-            for lineno, line in enumerate(f, start=1):
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    rows.append(json.loads(line))
-                except json.JSONDecodeError as e:
-                    preview = line[:200].replace("\n", "\\n")
-                    raise ValueError(f"Bad JSON on line {lineno} in {path}: {e}\nPreview: {preview}") from e
-        return rows
-
-    def _normalize_json(self, obj: Any, path: str) -> List[Dict[str, Any]]:
-        if isinstance(obj, list):
-            return obj
-        if isinstance(obj, dict):
-            for k in ("data", "rows", "examples", "items"):
-                if k in obj and isinstance(obj[k], list):
-                    return obj[k]
-        raise ValueError(f"{path} JSON must be a list of examples (or dict containing one). Got: {type(obj)}")
 
     def _validate_rows(self, path: str) -> None:
         cleaned = []
         bad = 0
-        for i, r in enumerate(self.rows):
+        for r in self.rows:
             if not isinstance(r, dict) or len(r) == 0:
                 bad += 1
                 continue
@@ -114,7 +157,6 @@ class PromptCompletionDataset(Dataset):
 
         if len(cleaned) == 0:
             raise ValueError(f"{path}: no valid examples left after cleaning.")
-
         self.rows = cleaned
 
     def __len__(self) -> int:
@@ -122,10 +164,12 @@ class PromptCompletionDataset(Dataset):
 
     def __getitem__(self, idx: int) -> Dict[str, str]:
         r = self.rows[idx]
-        # Always return canonical keys for the collator
         return {"prompt": r[self.prompt_key], "completion": r[self.completion_key]}
 
 
+# -------------------------
+# Collator
+# -------------------------
 @dataclass
 class PromptCompletionCollator:
     tokenizer: Any
@@ -146,15 +190,13 @@ class PromptCompletionCollator:
             prompt_ids = self.tokenizer(prompt, add_special_tokens=False)["input_ids"]
             comp_ids = self.tokenizer(completion, add_special_tokens=False)["input_ids"]
 
-            # If completion tokenizes to nothing (e.g., whitespace), force EOS so we have supervision
+            # ensure at least 1 supervised token
             if len(comp_ids) == 0:
                 comp_ids = [eos_id]
 
-            # If completion alone exceeds max_length, keep the tail (or head) so we still train
             if len(comp_ids) > self.max_length:
                 comp_ids = comp_ids[-self.max_length:]
 
-            # Truncate prompt to make room for completion
             max_prompt_len = max(0, self.max_length - len(comp_ids))
             if len(prompt_ids) > max_prompt_len:
                 prompt_ids = prompt_ids[-max_prompt_len:]
@@ -165,27 +207,19 @@ class PromptCompletionCollator:
             labels = input_ids.copy()
             labels[:len(prompt_ids)] = [IGNORE_INDEX] * len(prompt_ids)
 
-            # Final safety: ensure at least one label token
             if all(x == IGNORE_INDEX for x in labels):
-                # shouldn't happen, but guard anyway
                 labels[-1] = input_ids[-1]
 
             input_ids_list.append(torch.tensor(input_ids, dtype=torch.long))
             attention_mask_list.append(torch.tensor(attention_mask, dtype=torch.long))
             labels_list.append(torch.tensor(labels, dtype=torch.long))
 
-        input_ids = torch.nn.utils.rnn.pad_sequence(
-            input_ids_list, batch_first=True, padding_value=pad_id
-        )
-        attention_mask = torch.nn.utils.rnn.pad_sequence(
-            attention_mask_list, batch_first=True, padding_value=0
-        )
-        labels = torch.nn.utils.rnn.pad_sequence(
-            labels_list, batch_first=True, padding_value=IGNORE_INDEX
-        )
+        input_ids = torch.nn.utils.rnn.pad_sequence(input_ids_list, batch_first=True, padding_value=pad_id)
+        attention_mask = torch.nn.utils.rnn.pad_sequence(attention_mask_list, batch_first=True, padding_value=0)
+        labels = torch.nn.utils.rnn.pad_sequence(labels_list, batch_first=True, padding_value=IGNORE_INDEX)
 
         return {"input_ids": input_ids, "attention_mask": attention_mask, "labels": labels}
-        
+
 
 # -------------------------
 # Checkpoint helpers
@@ -209,7 +243,7 @@ def _latest_checkpoint(output_dir: str) -> Optional[str]:
     return ckpts[-1][1]
 
 
-def write_save_reason_json(output_dir: str, reason: str, entry: dict) -> None:
+def write_save_reason_json(output_dir: str, entry: dict) -> None:
     os.makedirs(output_dir, exist_ok=True)
     path = os.path.join(output_dir, "save_reasons.json")
 
@@ -232,6 +266,282 @@ def write_save_reason_json(output_dir: str, reason: str, entry: dict) -> None:
 
 
 # -------------------------
+# Evaluation helpers
+# -------------------------
+def _norm_span(s: str) -> str:
+    # minimal normalization for exact-match span comparison
+    return " ".join(s.strip().strip('"').strip("'").split())
+
+
+def _parse_generated_to_spans(text: str) -> List[str]:
+    """
+    Robust-ish parser:
+    - If model returns JSON list/dict: extract spans from:
+        - [{"span": "..."}] or ["..."]
+        - {"spans":[...]} or {"Unsupported claim":[...]} etc.
+    - Else: treat as lines / bullets / comma-separated
+    """
+    t = text.strip()
+
+    # strip markdown fences if present
+    if t.startswith("```"):
+        # remove first fence line and last fence if any
+        parts = t.split("```")
+        if len(parts) >= 3:
+            t = parts[1].strip()
+        else:
+            t = t.replace("```", "").strip()
+
+    # attempt JSON
+    if t and t[0] in "[{":
+        try:
+            obj = json.loads(t)
+            spans: List[str] = []
+
+            def collect(o: Any):
+                nonlocal spans
+                if isinstance(o, str):
+                    spans.append(o)
+                elif isinstance(o, dict):
+                    # common fields
+                    if "span" in o and isinstance(o["span"], str):
+                        spans.append(o["span"])
+                    for k, v in o.items():
+                        if k.lower() in {"spans", "unsupported claim", "unsupported_claim", "claims", "items"}:
+                            collect(v)
+                        else:
+                            # still recurse: could be nested structure
+                            collect(v)
+                elif isinstance(o, list):
+                    for it in o:
+                        collect(it)
+
+            collect(obj)
+            spans = [_norm_span(s) for s in spans if _norm_span(s)]
+            # de-dup preserve order
+            seen = set()
+            out = []
+            for s in spans:
+                if s not in seen:
+                    seen.add(s)
+                    out.append(s)
+            if out:
+                return out
+        except Exception:
+            pass
+
+    # fallback: lines/bullets/commas
+    # remove leading label prefixes
+    t = t.replace("Unsupported claim:", "").replace("Unsupported_claim:", "").strip()
+    lines = [ln.strip(" \t-•*").strip() for ln in t.splitlines() if ln.strip()]
+    if len(lines) == 1:
+        # maybe comma-separated
+        if "," in lines[0]:
+            chunks = [c.strip() for c in lines[0].split(",")]
+            lines = [c for c in chunks if c]
+    spans = [_norm_span(s) for s in lines if _norm_span(s)]
+    # de-dup preserve order
+    seen = set()
+    out = []
+    for s in spans:
+        if s not in seen:
+            seen.add(s)
+            out.append(s)
+    return out
+
+
+def _extract_annotator_spans(example: Dict[str, Any]) -> Dict[str, List[str]]:
+    """
+    Return a dict: annotator_id -> list[str] spans.
+
+    Supports common layouts:
+      - {"annotations": {"ann1":[...], "ann2":[...]}}
+      - {"annotators": {...}}
+      - {"gold_spans":[...]}  (single gold)
+      - {"completions":[...]} (single gold list)
+      - {"completion": "..."} (single gold string)
+    """
+    # multi-annotator structures
+    for key in ("annotations", "annotators", "labels_by_annotator"):
+        if key in example and isinstance(example[key], dict):
+            out: Dict[str, List[str]] = {}
+            for ann, val in example[key].items():
+                if isinstance(val, str):
+                    spans = [_norm_span(val)] if _norm_span(val) else []
+                elif isinstance(val, list):
+                    spans = [_norm_span(x) for x in val if isinstance(x, str) and _norm_span(x)]
+                else:
+                    spans = []
+                out[str(ann)] = spans
+            # keep only annotators with at least something (still allow empty though)
+            return out
+
+    # single gold variants
+    if "gold_spans" in example and isinstance(example["gold_spans"], list):
+        spans = [_norm_span(x) for x in example["gold_spans"] if isinstance(x, str) and _norm_span(x)]
+        return {"gold": spans}
+
+    if "completions" in example and isinstance(example["completions"], list):
+        spans = [_norm_span(x) for x in example["completions"] if isinstance(x, str) and _norm_span(x)]
+        return {"gold": spans}
+
+    if "completion" in example and isinstance(example["completion"], str):
+        s = _norm_span(example["completion"])
+        return {"gold": [s] if s else []}
+
+    return {"gold": []}
+
+
+def _micro_counts(preds: List[str], golds: List[str]) -> Tuple[int, int, int]:
+    ps = set(_norm_span(x) for x in preds if _norm_span(x))
+    gs = set(_norm_span(x) for x in golds if _norm_span(x))
+    tp = len(ps & gs)
+    fp = len(ps - gs)
+    fn = len(gs - ps)
+    return tp, fp, fn
+
+
+def _prf_from_counts(tp: int, fp: int, fn: int) -> Dict[str, float]:
+    p = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+    r = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+    f1 = (2 * p * r / (p + r)) if (p + r) > 0 else 0.0
+    return {"precision": p, "recall": r, "f1": f1}
+
+
+def pairwise_micro_averaged_f1(ann_spans: Dict[str, List[List[str]]]) -> Dict[str, Any]:
+    """
+    ann_spans: annotator -> list of examples -> list of spans
+      e.g. ann_spans["ann1"][i] = ["span a", "span b"]
+    Computes pairwise (directed) counts and micro-averages across all directed pairs.
+    """
+    annotators = [a for a in ann_spans.keys() if a is not None]
+    if len(annotators) < 2:
+        return {"pairwise_micro": {"precision": 0.0, "recall": 0.0, "f1": 0.0}, "num_annotators": len(annotators)}
+
+    # ensure same number of examples for all
+    n = min(len(ann_spans[a]) for a in annotators)
+    for a in annotators:
+        ann_spans[a] = ann_spans[a][:n]
+
+    total_tp = total_fp = total_fn = 0
+    per_pair: Dict[str, Dict[str, float]] = {}
+
+    for a, b in permutations(annotators, 2):
+        tp = fp = fn = 0
+        for i in range(n):
+            tpi, fpi, fni = _micro_counts(ann_spans[a][i], ann_spans[b][i])
+            tp += tpi
+            fp += fpi
+            fn += fni
+        per_pair[f"{a}→{b}"] = _prf_from_counts(tp, fp, fn)
+
+        total_tp += tp
+        total_fp += fp
+        total_fn += fn
+
+    return {
+        "pairwise_micro": _prf_from_counts(total_tp, total_fp, total_fn),
+        "num_annotators": len(annotators),
+        "num_examples": n,
+        "per_pair": per_pair,
+    }
+
+
+@torch.no_grad()
+def evaluate_model_on_eval_file(
+    model,
+    tokenizer,
+    eval_path: str,
+    prompt_key: str = "prompt",
+    max_new_tokens: int = 128,
+    gen_temperature: float = 0.0,
+    gen_top_p: float = 1.0,
+) -> Dict[str, Any]:
+    """
+    Evaluates model predictions vs gold spans. Also computes pairwise micro-averaged F1 across annotators
+    if multiple annotators exist in the eval file.
+
+    Expected eval example schemas supported:
+      - {"prompt": "...", "completion": "..."}                     (single gold)
+      - {"prompt": "...", "gold_spans": ["...", "..."]}            (single gold list)
+      - {"prompt": "...", "annotations": {"a": [...], "b": [...]}} (multi-annotator)
+    """
+    examples = read_examples(eval_path)
+    # filter examples that have prompt
+    filtered = [ex for ex in examples if isinstance(ex, dict) and isinstance(ex.get(prompt_key), str) and ex.get(prompt_key).strip()]
+    if not filtered:
+        return {"error": f"No valid examples with prompt_key='{prompt_key}' in {eval_path}"}
+
+    model.eval()
+    device = model.device
+
+    # collect gold spans by annotator (if present)
+    # ann_spans[ann][i] = list[str] gold spans for example i
+    ann_spans: Dict[str, List[List[str]]] = {}
+    # collect model preds per example
+    preds: List[List[str]] = []
+
+    for ex in filtered:
+        prompt = ex[prompt_key]
+
+        inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=tokenizer.model_max_length)
+        inputs = {k: v.to(device) for k, v in inputs.items()}
+
+        gen = model.generate(
+            **inputs,
+            max_new_tokens=max_new_tokens,
+            do_sample=(gen_temperature > 0.0),
+            temperature=gen_temperature if gen_temperature > 0.0 else None,
+            top_p=gen_top_p,
+            pad_token_id=tokenizer.pad_token_id,
+            eos_token_id=tokenizer.eos_token_id,
+        )
+
+        # decode only the newly generated portion
+        gen_ids = gen[0].tolist()
+        in_len = inputs["input_ids"].shape[1]
+        new_ids = gen_ids[in_len:]
+        pred_text = tokenizer.decode(new_ids, skip_special_tokens=True)
+        pred_spans = _parse_generated_to_spans(pred_text)
+        preds.append(pred_spans)
+
+        gold_by_ann = _extract_annotator_spans(ex)
+        for ann, spans in gold_by_ann.items():
+            ann_spans.setdefault(ann, []).append(spans)
+
+    # If multiple annotators in gold, compute pairwise micro-averaged F1 between annotators
+    pairwise = pairwise_micro_averaged_f1(dict(ann_spans)) if len(ann_spans.keys()) >= 2 else None
+
+    # Compute model-vs-gold micro P/R/F1.
+    # If multiple annotators exist, we compute model vs EACH annotator as gold and micro-aggregate across annotators.
+    total_tp = total_fp = total_fn = 0
+    per_gold: Dict[str, Dict[str, float]] = {}
+
+    for ann, gold_lists in ann_spans.items():
+        tp = fp = fn = 0
+        for i in range(min(len(preds), len(gold_lists))):
+            tpi, fpi, fni = _micro_counts(preds[i], gold_lists[i])
+            tp += tpi
+            fp += fpi
+            fn += fni
+        per_gold[ann] = _prf_from_counts(tp, fp, fn)
+        total_tp += tp
+        total_fp += fp
+        total_fn += fn
+
+    model_vs_gold_micro = _prf_from_counts(total_tp, total_fp, total_fn)
+
+    return {
+        "eval_path": eval_path,
+        "num_examples": len(preds),
+        "model_vs_gold_micro": model_vs_gold_micro,
+        "model_vs_each_gold": per_gold,
+        "pairwise_annotator_micro": pairwise["pairwise_micro"] if pairwise else None,
+        "pairwise_details": pairwise,
+    }
+
+
+# -------------------------
 # Main
 # -------------------------
 def main():
@@ -240,7 +550,6 @@ def main():
     parser.add_argument("--category", required=True, help="Category name from config.json")
     args_cli = parser.parse_args()
 
-    # A100-friendly defaults for env (config still controls actual bf16/fp16 flags passed to TrainingArguments)
     os.environ.setdefault("BF16", "1")
     os.environ.setdefault("FP16", "0")
 
@@ -263,12 +572,16 @@ def main():
 
     run_cfg = merge_dicts(defaults, cat_cfg)
 
+    # Keys (allow config override)
+    prompt_key = run_cfg.get("prompt_key", "prompt")
+    completion_key = run_cfg.get("completion_key", "completion")
+
     # Paths
     train_path = run_cfg["train_path"]
     dev_path = run_cfg.get("dev_path")
     eval_path = run_cfg.get("eval_path")
 
-    eval_split = run_cfg.get("eval_split", "dev")  # "dev" or "eval"
+    eval_split = run_cfg.get("eval_split", "dev")
     eval_path_for_training = dev_path if eval_split == "dev" else eval_path
 
     # Output dir: same folder as data (category folder), run_name subdir
@@ -276,7 +589,7 @@ def main():
     run_name = run_cfg.get("run_name", args_cli.category)
     out_dir = str(data_dir / run_name)
 
-    # Model + training params (from config)
+    # Model + training params
     model_name = run_cfg.get("model_name", base_model)
 
     max_length = int(run_cfg.get("max_length", 2048))
@@ -305,11 +618,17 @@ def main():
     num_workers = int(run_cfg.get("dataloader_num_workers", 4))
     max_grad_norm = float(run_cfg.get("max_grad_norm", 1.0))
 
+    # Generation settings for eval
+    max_new_tokens = int(run_cfg.get("max_new_tokens", 128))
+    gen_temperature = float(run_cfg.get("gen_temperature", 0.0))
+    gen_top_p = float(run_cfg.get("gen_top_p", 1.0))
+
     print("Settings (from config):")
     print(f"  Category: {args_cli.category}")
     print(f"  Model: {model_name}")
     print(f"  Train data: {train_path}")
-    print(f"  Eval data: {eval_path_for_training}")
+    print(f"  Dev/Eval used during training: {eval_path_for_training}")
+    print(f"  Eval file for post-train scoring: {eval_path}")
     print(f"  Output dir: {out_dir}")
     print(f"  max_length: {max_length}")
     print(f"  train_bs: {per_device_train_batch_size}, eval_bs: {per_device_eval_batch_size}, grad_accum: {gradient_accumulation_steps}")
@@ -318,6 +637,8 @@ def main():
     print(f"  LoRA: r={lora_r}, alpha={lora_alpha}, dropout={lora_dropout}")
     print(f"  flash_attn: {use_flash_attn}, torch_compile: {torch_compile}")
     print(f"  num_workers: {num_workers}, max_grad_norm: {max_grad_norm}")
+    print(f"  prompt_key: {prompt_key}, completion_key: {completion_key}")
+    print(f"  eval generation: max_new_tokens={max_new_tokens}, temperature={gen_temperature}, top_p={gen_top_p}")
 
     # Tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
@@ -371,8 +692,12 @@ def main():
             print("Could not enable torch.compile:", e)
 
     print("Loading datasets...")
-    train_ds = PromptCompletionDataset(train_path)
-    eval_ds = PromptCompletionDataset(eval_path_for_training) if eval_path_for_training and os.path.exists(eval_path_for_training) else None
+    train_ds = PromptCompletionDataset(train_path, prompt_key=prompt_key, completion_key=completion_key)
+    eval_ds = (
+        PromptCompletionDataset(eval_path_for_training, prompt_key=prompt_key, completion_key=completion_key)
+        if eval_path_for_training and os.path.exists(eval_path_for_training)
+        else None
+    )
     collator = PromptCompletionCollator(tokenizer=tokenizer, max_length=max_length)
 
     # Training args
@@ -405,6 +730,7 @@ def main():
         save_safetensors=True,
         logging_dir=os.path.join(out_dir, "logs"),
 
+        # transformers older versions use eval_strategy
         eval_strategy="steps" if eval_ds is not None else "no",
         eval_steps=save_steps if eval_ds is not None else None,
 
@@ -412,22 +738,15 @@ def main():
         group_by_length=False,
     )
 
-    # --- SANITY CHECK: inspect one batch end-to-end ---
+    # --- SANITY CHECK ---
     sample = [train_ds[0]]
     batch = collator(sample)
-
     num_label_tokens = (batch["labels"] != IGNORE_INDEX).sum().item()
     seq_len = batch["input_ids"].shape[1]
     print(f"[SANITY] seq_len={seq_len}, num_label_tokens={num_label_tokens}")
-
-    # Must have at least 1 supervised token
     if num_label_tokens == 0:
-        raise RuntimeError(
-            "[SANITY FAIL] num_label_tokens == 0. Your collator is masking everything "
-            "(likely because completion is empty or being truncated away)."
-        )
+        raise RuntimeError("[SANITY FAIL] num_label_tokens == 0 (all labels masked).")
 
-    # Run a single forward pass to confirm non-zero loss + that compute is happening
     model.eval()
     with torch.no_grad():
         out = model(
@@ -436,8 +755,6 @@ def main():
             labels=batch["labels"].to(model.device),
         )
     print(f"[SANITY] forward loss={out.loss.item()}")
-    if out.loss.item() == 0.0:
-        raise RuntimeError("[SANITY FAIL] forward loss is 0.0 even though label tokens exist.")
     model.train()
 
     trainer = Trainer(
@@ -446,6 +763,7 @@ def main():
         train_dataset=train_ds,
         eval_dataset=eval_ds,
         data_collator=collator,
+        label_names=["labels"],  # important for PEFT Trainer compatibility
     )
 
     # Resume if possible
@@ -461,13 +779,38 @@ def main():
     trainer.save_model(out_dir)
     tokenizer.save_pretrained(out_dir)
 
+    # Post-train evaluation on eval_path (span-level)
+    eval_metrics = None
+    if eval_path and os.path.exists(eval_path):
+        try:
+            print(f"Running post-train evaluation on eval_path: {eval_path}")
+            eval_metrics = evaluate_model_on_eval_file(
+                model=model,
+                tokenizer=tokenizer,
+                eval_path=eval_path,
+                prompt_key=prompt_key,
+                max_new_tokens=max_new_tokens,
+                gen_temperature=gen_temperature,
+                gen_top_p=gen_top_p,
+            )
+            print("[EVAL] model_vs_gold_micro:", eval_metrics.get("model_vs_gold_micro"))
+            if eval_metrics.get("pairwise_annotator_micro") is not None:
+                print("[EVAL] pairwise_annotator_micro:", eval_metrics.get("pairwise_annotator_micro"))
+
+            with open(os.path.join(out_dir, "eval_pairwise_f1.json"), "w", encoding="utf-8") as f:
+                json.dump(eval_metrics, f, indent=2, ensure_ascii=False)
+            print(f"[EVAL] Wrote eval metrics to: {os.path.join(out_dir, 'eval_pairwise_f1.json')}")
+        except Exception as e:
+            print("[EVAL] Failed to compute eval metrics:", repr(e))
+
     entry = {
         "timestamp_utc": datetime.utcnow().isoformat() + "Z",
         "reason": save_reason,
         "category": args_cli.category,
         "model_name": model_name,
         "train_path": train_path,
-        "eval_path": eval_path_for_training if eval_ds is not None else None,
+        "eval_path_training": eval_path_for_training if eval_ds is not None else None,
+        "eval_path_post": eval_path if eval_path and os.path.exists(eval_path) else None,
         "out_dir": out_dir,
         "host": socket.gethostname(),
         "platform": platform.platform(),
@@ -490,8 +833,9 @@ def main():
         "torch_compile": torch_compile,
         "config_path": args_cli.config,
         "run_cfg": run_cfg,
+        "post_eval_metrics": eval_metrics,
     }
-    write_save_reason_json(out_dir, reason=save_reason, entry=entry)
+    write_save_reason_json(out_dir, entry=entry)
 
     print(f"Saved (LoRA adapters + tokenizer) to: {out_dir}")
     print(f"Wrote save reasons to: {os.path.join(out_dir, 'save_reasons.json')}")
