@@ -1,32 +1,14 @@
-#!/usr/bin/env python3
-# train.py
-#
-# Config-driven QLoRA SFT for a decoder-only model on prompt+completion data (JSON or JSONL),
-# plus post-train evaluation on the *eval_path* file using:
-#
-# Pairwise F1 definition:
-# “For each pair of annotators, we treat one annotator’s data as an experiment and the other
-# annotator’s data as gold truth and compute precision, recall and F1 based on that.
-# Then, to get the final F1 score, all pairwise F1 scores are micro-averaged.”
-#
-# Usage:
-#   python train.py --config config.json --category Unsupported_claim
-#
-# Notes:
-# - If eval_path examples contain multiple annotators (e.g. "annotations": {"ann1":[...], "ann2":[...]}),
-#   we compute pairwise micro-averaged F1 across annotators.
-# - If eval_path contains only a single gold (e.g. "completion" or "gold_spans"), we compute model-vs-gold F1.
-
 import argparse
 import json
 import os
 import socket
 import platform
+import re
 from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass
 from typing import Dict, List, Any, Optional, Tuple
-from itertools import permutations, combinations
+from itertools import permutations
 
 import torch
 from torch.utils.data import Dataset
@@ -80,7 +62,6 @@ def _load_jsonl(path: str) -> List[Dict[str, Any]]:
             if isinstance(obj, dict):
                 rows.append(obj)
             else:
-                # allow non-dicts but keep consistent error later
                 rows.append({"_value": obj})
     return rows
 
@@ -190,7 +171,6 @@ class PromptCompletionCollator:
             prompt_ids = self.tokenizer(prompt, add_special_tokens=False)["input_ids"]
             comp_ids = self.tokenizer(completion, add_special_tokens=False)["input_ids"]
 
-            # ensure at least 1 supervised token
             if len(comp_ids) == 0:
                 comp_ids = [eos_id]
 
@@ -269,8 +249,72 @@ def write_save_reason_json(output_dir: str, entry: dict) -> None:
 # Evaluation helpers
 # -------------------------
 def _norm_span(s: str) -> str:
-    # minimal normalization for exact-match span comparison
-    return " ".join(s.strip().strip('"').strip("'").split())
+    return " ".join(str(s).strip().strip('"').strip("'").split())
+
+
+_TOKEN_RE = re.compile(r"[A-Za-z0-9]+", re.UNICODE)
+
+
+def _tokenize_span(s: str) -> List[str]:
+    s = _norm_span(s).lower()
+    return _TOKEN_RE.findall(s)
+
+
+def _span_iou_tokens(a: str, b: str) -> float:
+    ta = set(_tokenize_span(a))
+    tb = set(_tokenize_span(b))
+    if not ta and not tb:
+        return 1.0
+    if not ta or not tb:
+        return 0.0
+    inter = len(ta & tb)
+    union = len(ta | tb)
+    return inter / union if union else 0.0
+
+
+def match_spans_overlap_tokens(
+    gold_spans: List[str],
+    pred_spans: List[str],
+    *,
+    iou_threshold: float = 0.5,
+) -> Tuple[int, int, int]:
+    """
+    Greedy 1-1 matching between gold and pred spans using token IoU (Jaccard).
+    Returns: (tp, fp, fn)
+    """
+    gold = [_norm_span(x) for x in (gold_spans or []) if _norm_span(x)]
+    pred = [_norm_span(x) for x in (pred_spans or []) if _norm_span(x)]
+
+    if not gold and not pred:
+        return 0, 0, 0
+    if not gold:
+        return 0, len(pred), 0
+    if not pred:
+        return 0, 0, len(gold)
+
+    candidates: List[Tuple[float, int, int]] = []
+    for gi, g in enumerate(gold):
+        for pi, p in enumerate(pred):
+            iou = _span_iou_tokens(g, p)
+            if iou >= iou_threshold:
+                candidates.append((iou, gi, pi))
+
+    candidates.sort(reverse=True, key=lambda x: x[0])
+
+    matched_gold = set()
+    matched_pred = set()
+    tp = 0
+
+    for iou, gi, pi in candidates:
+        if gi in matched_gold or pi in matched_pred:
+            continue
+        matched_gold.add(gi)
+        matched_pred.add(pi)
+        tp += 1
+
+    fp = len(pred) - tp
+    fn = len(gold) - tp
+    return tp, fp, fn
 
 
 def _parse_generated_to_spans(text: str) -> List[str]:
@@ -285,7 +329,6 @@ def _parse_generated_to_spans(text: str) -> List[str]:
 
     # strip markdown fences if present
     if t.startswith("```"):
-        # remove first fence line and last fence if any
         parts = t.split("```")
         if len(parts) >= 3:
             t = parts[1].strip()
@@ -303,14 +346,12 @@ def _parse_generated_to_spans(text: str) -> List[str]:
                 if isinstance(o, str):
                     spans.append(o)
                 elif isinstance(o, dict):
-                    # common fields
                     if "span" in o and isinstance(o["span"], str):
                         spans.append(o["span"])
                     for k, v in o.items():
                         if k.lower() in {"spans", "unsupported claim", "unsupported_claim", "claims", "items"}:
                             collect(v)
                         else:
-                            # still recurse: could be nested structure
                             collect(v)
                 elif isinstance(o, list):
                     for it in o:
@@ -318,7 +359,6 @@ def _parse_generated_to_spans(text: str) -> List[str]:
 
             collect(obj)
             spans = [_norm_span(s) for s in spans if _norm_span(s)]
-            # de-dup preserve order
             seen = set()
             out = []
             for s in spans:
@@ -331,16 +371,12 @@ def _parse_generated_to_spans(text: str) -> List[str]:
             pass
 
     # fallback: lines/bullets/commas
-    # remove leading label prefixes
     t = t.replace("Unsupported claim:", "").replace("Unsupported_claim:", "").strip()
     lines = [ln.strip(" \t-•*").strip() for ln in t.splitlines() if ln.strip()]
-    if len(lines) == 1:
-        # maybe comma-separated
-        if "," in lines[0]:
-            chunks = [c.strip() for c in lines[0].split(",")]
-            lines = [c for c in chunks if c]
+    if len(lines) == 1 and "," in lines[0]:
+        chunks = [c.strip() for c in lines[0].split(",")]
+        lines = [c for c in chunks if c]
     spans = [_norm_span(s) for s in lines if _norm_span(s)]
-    # de-dup preserve order
     seen = set()
     out = []
     for s in spans:
@@ -350,57 +386,6 @@ def _parse_generated_to_spans(text: str) -> List[str]:
     return out
 
 
-def _extract_annotator_spans(example: Dict[str, Any]) -> Dict[str, List[str]]:
-    """
-    Return a dict: annotator_id -> list[str] spans.
-
-    Supports common layouts:
-      - {"annotations": {"ann1":[...], "ann2":[...]}}
-      - {"annotators": {...}}
-      - {"gold_spans":[...]}  (single gold)
-      - {"completions":[...]} (single gold list)
-      - {"completion": "..."} (single gold string)
-    """
-    # multi-annotator structures
-    for key in ("annotations", "annotators", "labels_by_annotator"):
-        if key in example and isinstance(example[key], dict):
-            out: Dict[str, List[str]] = {}
-            for ann, val in example[key].items():
-                if isinstance(val, str):
-                    spans = [_norm_span(val)] if _norm_span(val) else []
-                elif isinstance(val, list):
-                    spans = [_norm_span(x) for x in val if isinstance(x, str) and _norm_span(x)]
-                else:
-                    spans = []
-                out[str(ann)] = spans
-            # keep only annotators with at least something (still allow empty though)
-            return out
-
-    # single gold variants
-    if "gold_spans" in example and isinstance(example["gold_spans"], list):
-        spans = [_norm_span(x) for x in example["gold_spans"] if isinstance(x, str) and _norm_span(x)]
-        return {"gold": spans}
-
-    if "completions" in example and isinstance(example["completions"], list):
-        spans = [_norm_span(x) for x in example["completions"] if isinstance(x, str) and _norm_span(x)]
-        return {"gold": spans}
-
-    if "completion" in example and isinstance(example["completion"], str):
-        s = _norm_span(example["completion"])
-        return {"gold": [s] if s else []}
-
-    return {"gold": []}
-
-
-def _micro_counts(preds: List[str], golds: List[str]) -> Tuple[int, int, int]:
-    ps = set(_norm_span(x) for x in preds if _norm_span(x))
-    gs = set(_norm_span(x) for x in golds if _norm_span(x))
-    tp = len(ps & gs)
-    fp = len(ps - gs)
-    fn = len(gs - ps)
-    return tp, fp, fn
-
-
 def _prf_from_counts(tp: int, fp: int, fn: int) -> Dict[str, float]:
     p = tp / (tp + fp) if (tp + fp) > 0 else 0.0
     r = tp / (tp + fn) if (tp + fn) > 0 else 0.0
@@ -408,42 +393,107 @@ def _prf_from_counts(tp: int, fp: int, fn: int) -> Dict[str, float]:
     return {"precision": p, "recall": r, "f1": f1}
 
 
-def pairwise_micro_averaged_f1(ann_spans: Dict[str, List[List[str]]]) -> Dict[str, Any]:
+def pairwise_micro_averaged_f1_gold_vs_pred(
+    examples: List[Dict[str, Any]],
+    preds: List[List[str]],
+    *,
+    category_label: str,
+    prompt_key: str = "prompt",
+    gold_key: str = "completion",
+    use_label: bool = True,
+    gold_annotator_name: str = "gold",
+    pred_annotator_name: str = "pred",
+    iou_threshold: float = 0.5,
+) -> Dict[str, Any]:
     """
-    ann_spans: annotator -> list of examples -> list of spans
-      e.g. ann_spans["ann1"][i] = ["span a", "span b"]
-    Computes pairwise (directed) counts and micro-averages across all directed pairs.
+    Two annotators:
+      - gold: spans from eval file (gold_key)
+      - pred: spans predicted by the model (preds)
+    Compute directed pairwise micro P/R/F1 (gold→pred and pred→gold) with token-IoU overlap
+    and micro-average across the two directed pairs.
     """
-    annotators = [a for a in ann_spans.keys() if a is not None]
-    if len(annotators) < 2:
-        return {"pairwise_micro": {"precision": 0.0, "recall": 0.0, "f1": 0.0}, "num_annotators": len(annotators)}
+    def pack(span: str) -> str:
+        span = _norm_span(span)
+        if not span:
+            return ""
+        return f"{category_label}|||{span}" if use_label else span
 
-    # ensure same number of examples for all
-    n = min(len(ann_spans[a]) for a in annotators)
-    for a in annotators:
-        ann_spans[a] = ann_spans[a][:n]
+    filtered: List[Dict[str, Any]] = []
+    for ex in examples:
+        if not isinstance(ex, dict):
+            continue
+        p = ex.get(prompt_key)
+        if not isinstance(p, str) or not p.strip():
+            continue
+        if gold_key not in ex:
+            continue
+        filtered.append(ex)
 
+    if not filtered:
+        return {
+            "pairwise_micro": {"precision": 0.0, "recall": 0.0, "f1": 0.0},
+            "num_annotators": 2,
+            "num_examples": 0,
+            "per_pair": {},
+            "note": f"No valid examples found with keys prompt_key='{prompt_key}', gold_key='{gold_key}'.",
+            "iou_threshold": iou_threshold,
+        }
+
+    n = min(len(filtered), len(preds))
+    filtered = filtered[:n]
+    preds = preds[:n]
+
+    ann_spans: Dict[str, List[List[str]]] = {gold_annotator_name: [], pred_annotator_name: []}
+
+    for ex, pred_spans in zip(filtered, preds):
+        gold_val = ex.get(gold_key)
+
+        if isinstance(gold_val, str):
+            gold_spans = [gold_val]
+        elif isinstance(gold_val, list):
+            gold_spans = [x for x in gold_val if isinstance(x, str)]
+        else:
+            gold_spans = []
+
+        gold_items = [pack(s) for s in gold_spans]
+        gold_items = [x for x in gold_items if x]
+
+        pred_items = [pack(s) for s in (pred_spans or [])]
+        pred_items = [x for x in pred_items if x]
+
+        ann_spans[gold_annotator_name].append(gold_items)
+        ann_spans[pred_annotator_name].append(pred_items)
+
+    annotators = [gold_annotator_name, pred_annotator_name]
     total_tp = total_fp = total_fn = 0
     per_pair: Dict[str, Dict[str, float]] = {}
 
     for a, b in permutations(annotators, 2):
         tp = fp = fn = 0
         for i in range(n):
-            tpi, fpi, fni = _micro_counts(ann_spans[a][i], ann_spans[b][i])
+            tpi, fpi, fni = match_spans_overlap_tokens(
+                ann_spans[a][i],
+                ann_spans[b][i],
+                iou_threshold=iou_threshold,
+            )
             tp += tpi
             fp += fpi
             fn += fni
         per_pair[f"{a}→{b}"] = _prf_from_counts(tp, fp, fn)
-
         total_tp += tp
         total_fp += fp
         total_fn += fn
 
     return {
         "pairwise_micro": _prf_from_counts(total_tp, total_fp, total_fn),
-        "num_annotators": len(annotators),
+        "num_annotators": 2,
         "num_examples": n,
         "per_pair": per_pair,
+        "use_label": use_label,
+        "category_label": category_label,
+        "gold_key": gold_key,
+        "prompt_key": prompt_key,
+        "iou_threshold": iou_threshold,
     }
 
 
@@ -456,35 +506,58 @@ def evaluate_model_on_eval_file(
     max_new_tokens: int = 128,
     gen_temperature: float = 0.0,
     gen_top_p: float = 1.0,
+    *,
+    category_label: str,
+    gold_key: str = "completion",
+    use_label: bool = True,
+    debug_k: int = 25,
+    debug_chars: int = 600,
+    iou_threshold: float = 0.5,
 ) -> Dict[str, Any]:
     """
-    Evaluates model predictions vs gold spans. Also computes pairwise micro-averaged F1 across annotators
-    if multiple annotators exist in the eval file.
+    Evaluates model predictions vs gold spans using token-overlap IoU matching,
+    treating:
+      - gold spans (+label) as annotator #1
+      - predicted spans (+label) as annotator #2
+    and computes pairwise micro-averaged F1 across these two annotators.
 
-    Expected eval example schemas supported:
-      - {"prompt": "...", "completion": "..."}                     (single gold)
-      - {"prompt": "...", "gold_spans": ["...", "..."]}            (single gold list)
-      - {"prompt": "...", "annotations": {"a": [...], "b": [...]}} (multi-annotator)
+    ALSO returns debug examples with:
+      - gold span(s)
+      - raw generation
+      - parsed predicted spans
+      - per-example tp/fp/fn under token-IoU matching
     """
     examples = read_examples(eval_path)
-    # filter examples that have prompt
-    filtered = [ex for ex in examples if isinstance(ex, dict) and isinstance(ex.get(prompt_key), str) and ex.get(prompt_key).strip()]
+
+    filtered = []
+    for ex in examples:
+        if not isinstance(ex, dict):
+            continue
+        p = ex.get(prompt_key)
+        if not isinstance(p, str) or not p.strip():
+            continue
+        if gold_key not in ex:
+            continue
+        filtered.append(ex)
+
     if not filtered:
-        return {"error": f"No valid examples with prompt_key='{prompt_key}' in {eval_path}"}
+        return {"error": f"No valid examples with prompt_key='{prompt_key}' and gold_key='{gold_key}' in {eval_path}"}
 
     model.eval()
     device = model.device
 
-    # collect gold spans by annotator (if present)
-    # ann_spans[ann][i] = list[str] gold spans for example i
-    ann_spans: Dict[str, List[List[str]]] = {}
-    # collect model preds per example
     preds: List[List[str]] = []
+    debug_rows: List[Dict[str, Any]] = []
 
-    for ex in filtered:
+    for ex_i, ex in enumerate(filtered):
         prompt = ex[prompt_key]
 
-        inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=tokenizer.model_max_length)
+        inputs = tokenizer(
+            prompt,
+            return_tensors="pt",
+            truncation=True,
+            max_length=tokenizer.model_max_length,
+        )
         inputs = {k: v.to(device) for k, v in inputs.items()}
 
         gen = model.generate(
@@ -497,47 +570,88 @@ def evaluate_model_on_eval_file(
             eos_token_id=tokenizer.eos_token_id,
         )
 
-        # decode only the newly generated portion
         gen_ids = gen[0].tolist()
         in_len = inputs["input_ids"].shape[1]
         new_ids = gen_ids[in_len:]
         pred_text = tokenizer.decode(new_ids, skip_special_tokens=True)
+
         pred_spans = _parse_generated_to_spans(pred_text)
         preds.append(pred_spans)
 
-        gold_by_ann = _extract_annotator_spans(ex)
-        for ann, spans in gold_by_ann.items():
-            ann_spans.setdefault(ann, []).append(spans)
+        if len(debug_rows) < debug_k:
+            gold_val = ex.get(gold_key)
+            if isinstance(gold_val, str):
+                gold_spans = [gold_val]
+            elif isinstance(gold_val, list):
+                gold_spans = [x for x in gold_val if isinstance(x, str)]
+            else:
+                gold_spans = []
 
-    # If multiple annotators in gold, compute pairwise micro-averaged F1 between annotators
-    pairwise = pairwise_micro_averaged_f1(dict(ann_spans)) if len(ann_spans.keys()) >= 2 else None
+            # token-IoU counts for this example (on raw spans; packing happens elsewhere)
+            tp_i, fp_i, fn_i = match_spans_overlap_tokens(
+                gold_spans=gold_spans,
+                pred_spans=pred_spans,
+                iou_threshold=iou_threshold,
+            )
 
-    # Compute model-vs-gold micro P/R/F1.
-    # If multiple annotators exist, we compute model vs EACH annotator as gold and micro-aggregate across annotators.
-    total_tp = total_fp = total_fn = 0
-    per_gold: Dict[str, Dict[str, float]] = {}
+            # also record best IoU pairs (small + helpful)
+            best_matches = []
+            for g in gold_spans[:10]:
+                best = 0.0
+                best_p = None
+                for pspan in pred_spans[:20]:
+                    v = _span_iou_tokens(g, pspan)
+                    if v > best:
+                        best = v
+                        best_p = pspan
+                best_matches.append({"gold": g, "best_pred": best_p, "best_iou": best})
 
-    for ann, gold_lists in ann_spans.items():
-        tp = fp = fn = 0
-        for i in range(min(len(preds), len(gold_lists))):
-            tpi, fpi, fni = _micro_counts(preds[i], gold_lists[i])
-            tp += tpi
-            fp += fpi
-            fn += fni
-        per_gold[ann] = _prf_from_counts(tp, fp, fn)
-        total_tp += tp
-        total_fp += fp
-        total_fn += fn
+            debug_rows.append({
+                "index": ex_i,
+                "gold_spans": gold_spans,
+                "pred_spans": pred_spans,
+                "tp_fp_fn": {"tp": tp_i, "fp": fp_i, "fn": fn_i},
+                "best_matches": best_matches,
+                "raw_generation": pred_text[:debug_chars],
+                "prompt_preview": prompt[:debug_chars],
+            })
 
-    model_vs_gold_micro = _prf_from_counts(total_tp, total_fp, total_fn)
+    pairwise_gold_vs_pred = pairwise_micro_averaged_f1_gold_vs_pred(
+        examples=filtered,
+        preds=preds,
+        category_label=category_label,
+        prompt_key=prompt_key,
+        gold_key=gold_key,
+        use_label=use_label,
+        gold_annotator_name="gold",
+        pred_annotator_name="pred",
+        iou_threshold=iou_threshold,
+    )
+
+    num_empty_pred = sum(1 for p in preds if len(p) == 0)
+    avg_pred_spans = sum(len(p) for p in preds) / max(1, len(preds))
 
     return {
         "eval_path": eval_path,
-        "num_examples": len(preds),
-        "model_vs_gold_micro": model_vs_gold_micro,
-        "model_vs_each_gold": per_gold,
-        "pairwise_annotator_micro": pairwise["pairwise_micro"] if pairwise else None,
-        "pairwise_details": pairwise,
+        "num_examples": pairwise_gold_vs_pred.get("num_examples", len(preds)),
+        "pairwise_gold_vs_pred": pairwise_gold_vs_pred,
+        "model_vs_gold_micro": pairwise_gold_vs_pred.get("per_pair", {}).get(
+            "pred→gold", {"precision": 0.0, "recall": 0.0, "f1": 0.0}
+        ),
+        "gold_vs_model_micro": pairwise_gold_vs_pred.get("per_pair", {}).get(
+            "gold→pred", {"precision": 0.0, "recall": 0.0, "f1": 0.0}
+        ),
+        "pairwise_micro": pairwise_gold_vs_pred.get(
+            "pairwise_micro", {"precision": 0.0, "recall": 0.0, "f1": 0.0}
+        ),
+        "debug_summary": {
+            "num_empty_pred_examples": num_empty_pred,
+            "avg_pred_spans_per_example": avg_pred_spans,
+            "debug_k": debug_k,
+            "debug_chars": debug_chars,
+            "iou_threshold": iou_threshold,
+        },
+        "debug_examples": debug_rows,
     }
 
 
@@ -623,6 +737,13 @@ def main():
     gen_temperature = float(run_cfg.get("gen_temperature", 0.0))
     gen_top_p = float(run_cfg.get("gen_top_p", 1.0))
 
+    # Debug settings for eval
+    debug_k = int(run_cfg.get("eval_debug_k", 25))
+    debug_chars = int(run_cfg.get("eval_debug_chars", 600))
+
+    # IoU threshold for token overlap matching
+    iou_threshold = float(run_cfg.get("iou_threshold", 0.5))
+
     print("Settings (from config):")
     print(f"  Category: {args_cli.category}")
     print(f"  Model: {model_name}")
@@ -639,6 +760,8 @@ def main():
     print(f"  num_workers: {num_workers}, max_grad_norm: {max_grad_norm}")
     print(f"  prompt_key: {prompt_key}, completion_key: {completion_key}")
     print(f"  eval generation: max_new_tokens={max_new_tokens}, temperature={gen_temperature}, top_p={gen_top_p}")
+    print(f"  eval debug: eval_debug_k={debug_k}, eval_debug_chars={debug_chars}")
+    print(f"  eval token-IoU threshold: iou_threshold={iou_threshold}")
 
     # Tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
@@ -763,7 +886,6 @@ def main():
         train_dataset=train_ds,
         eval_dataset=eval_ds,
         data_collator=collator,
-        label_names=["labels"],  # important for PEFT Trainer compatibility
     )
 
     # Resume if possible
@@ -792,14 +914,39 @@ def main():
                 max_new_tokens=max_new_tokens,
                 gen_temperature=gen_temperature,
                 gen_top_p=gen_top_p,
+                category_label=args_cli.category,
+                gold_key=completion_key,   # IMPORTANT: use the configured completion key
+                use_label=True,
+                debug_k=debug_k,
+                debug_chars=debug_chars,
+                iou_threshold=iou_threshold,
             )
-            print("[EVAL] model_vs_gold_micro:", eval_metrics.get("model_vs_gold_micro"))
-            if eval_metrics.get("pairwise_annotator_micro") is not None:
-                print("[EVAL] pairwise_annotator_micro:", eval_metrics.get("pairwise_annotator_micro"))
 
-            with open(os.path.join(out_dir, "eval_pairwise_f1.json"), "w", encoding="utf-8") as f:
+            print("[EVAL] pairwise_micro:", eval_metrics.get("pairwise_micro"))
+            print("[EVAL] model_vs_gold_micro:", eval_metrics.get("model_vs_gold_micro"))
+            print("[EVAL] debug_summary:", eval_metrics.get("debug_summary"))
+
+            eval_out_path = os.path.join(out_dir, "eval_pairwise_f1.json")
+            with open(eval_out_path, "w", encoding="utf-8") as f:
                 json.dump(eval_metrics, f, indent=2, ensure_ascii=False)
-            print(f"[EVAL] Wrote eval metrics to: {os.path.join(out_dir, 'eval_pairwise_f1.json')}")
+            print(f"[EVAL] Wrote eval metrics to: {eval_out_path}")
+
+            # Also write a lightweight debug-only file for easy inspection
+            debug_out_path = os.path.join(out_dir, "eval_predictions_debug.json")
+            with open(debug_out_path, "w", encoding="utf-8") as f:
+                json.dump(
+                    {
+                        "eval_path": eval_path,
+                        "category": args_cli.category,
+                        "debug_summary": eval_metrics.get("debug_summary", {}),
+                        "debug_examples": eval_metrics.get("debug_examples", []),
+                    },
+                    f,
+                    indent=2,
+                    ensure_ascii=False,
+                )
+            print(f"[EVAL] Wrote predictions debug to: {debug_out_path}")
+
         except Exception as e:
             print("[EVAL] Failed to compute eval metrics:", repr(e))
 

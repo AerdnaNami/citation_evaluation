@@ -4,8 +4,8 @@
 
   "defaults": {
     "max_length": 2048,
-    "per_device_train_batch_size": 4,
-    "per_device_eval_batch_size": 4,
+    "per_device_train_batch_size": 1,
+    "per_device_eval_batch_size": 1,
     "gradient_accumulation_steps": 16,
     "learning_rate": 0.0002,
     "num_train_epochs": 3,
@@ -38,9 +38,9 @@
     },
     {
       "name": "Unsupported_claim",
-      "train_path": "unsupported_claim/Unsupported claim_training_data.json",
-      "dev_path": "unsupported_claim/Unsupported claim_dev.json",
-      "eval_path": "unsupported_claim/Unsupported claim_eval_data.json",
+      "train_path": "unsupported_claim/Unsupported_claim_training_data.json",
+      "dev_path": "unsupported_claim/Unsupported_claim_dev.json",
+      "eval_path": "unsupported_claim/Unsupported_claim_eval_data.json",
       "run_name": "llama3.1_8b_sft"
     },
     {
@@ -52,9 +52,9 @@
     },
     {
       "name": "Lacks_synthesis",
-      "train_path": "lacks_synthesis/Lacks synthesis_training_data.json",
-      "dev_path": "lacks_synthesis/Lacks synthesis_dev_data.json",
-      "eval_path": "lacks_synthesis/Lacks synthesis_eval_data.json",
+      "train_path": "lacks_synthesis/Lacks_synthesis_training_data.json",
+      "dev_path": "lacks_synthesis/Lacks_synthesis_dev_data.json",
+      "eval_path": "lacks_synthesis/Lacks_synthesis_eval_data.json",
       "run_name": "llama3.1_8b_sft"
     }
   ]
