@@ -695,7 +695,7 @@ def main():
     dev_path = run_cfg.get("dev_path")
     eval_path = run_cfg.get("eval_path")
 
-    eval_split = run_cfg.get("eval_split", "dev")
+    eval_split = run_cfg.get("eval_split", "eval")
     eval_path_for_training = dev_path if eval_split == "dev" else eval_path
 
     # Output dir: same folder as data (category folder), run_name subdir
