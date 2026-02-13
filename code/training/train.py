@@ -4,12 +4,12 @@ import os
 import socket
 import platform
 import re
+import html  # NEW
 from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass
 from typing import Dict, List, Any, Optional, Tuple
 from itertools import permutations
-
 import torch
 from torch.utils.data import Dataset
 
@@ -24,11 +24,9 @@ from transformers import (
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 
 IGNORE_INDEX = -100
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
-# -------------------------
-# Config helpers
-# -------------------------
 def load_config(config_path: str) -> dict:
     with open(config_path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -42,6 +40,76 @@ def merge_dicts(base: dict, override: dict) -> dict:
         raise TypeError(f"Expected category config to be a dict, got {type(override)}: {override}")
     out.update(override)
     return out
+
+
+# -------------------------
+# Text normalization + HTML helpers (NEW)
+# -------------------------
+def _norm_span(s: str) -> str:
+    return " ".join(str(s).strip().strip('"').strip("'").split())
+
+
+_SPAN_RE = re.compile(r"<span\b[^>]*>(.*?)</span>", re.IGNORECASE | re.DOTALL)
+_TAG_RE = re.compile(r"</?[^>]+>", re.DOTALL)
+
+
+def _strip_html_tags(s: str) -> str:
+    """Remove HTML tags and unescape entities."""
+    if s is None:
+        return ""
+    s = html.unescape(str(s))
+    s = _TAG_RE.sub("", s)
+    return s
+
+
+def _completion_to_gold_spans(completion: Any) -> List[str]:
+    """
+    If completion is HTML with <span>...</span>, return each span's inner text as a separate span.
+    Otherwise return a single cleaned span (or empty list).
+    Also supports already-list completions.
+    """
+    if completion is None:
+        return []
+
+    # If it's already a list, clean each item
+    if isinstance(completion, list):
+        out: List[str] = []
+        for x in completion:
+            if isinstance(x, str):
+                y = _norm_span(_strip_html_tags(x))
+                if y:
+                    out.append(y)
+        return out
+
+    # Otherwise treat as string
+    if not isinstance(completion, str):
+        completion = str(completion)
+
+    raw = completion.strip()
+    if not raw:
+        return []
+
+    # Extract <span> blocks (if present)
+    span_matches = _SPAN_RE.findall(raw)
+    if span_matches:
+        spans: List[str] = []
+        for inner in span_matches:
+            inner_clean = _norm_span(_strip_html_tags(inner))
+            if inner_clean:
+                spans.append(inner_clean)
+
+        # de-dup while preserving order
+        seen = set()
+        out: List[str] = []
+        for s in spans:
+            if s not in seen:
+                seen.add(s)
+                out.append(s)
+        return out
+
+    # Fallback: strip tags and return as a single span
+    cleaned = _norm_span(_strip_html_tags(raw))
+    return [cleaned] if cleaned else []
 
 
 # -------------------------
@@ -128,9 +196,19 @@ class PromptCompletionDataset(Dataset):
             if not isinstance(r[self.prompt_key], str) or not isinstance(r[self.completion_key], str):
                 bad += 1
                 continue
-            if r[self.prompt_key].strip() == "" or r[self.completion_key].strip() == "":
+
+            prompt = r[self.prompt_key]
+            completion = r[self.completion_key]
+
+            if prompt.strip() == "":
                 bad += 1
                 continue
+
+            # NEW: treat stripped HTML as the “real” content for emptiness checks
+            if _strip_html_tags(completion).strip() == "":
+                bad += 1
+                continue
+
             cleaned.append(r)
 
         if bad > 0:
@@ -145,7 +223,13 @@ class PromptCompletionDataset(Dataset):
 
     def __getitem__(self, idx: int) -> Dict[str, str]:
         r = self.rows[idx]
-        return {"prompt": r[self.prompt_key], "completion": r[self.completion_key]}
+        prompt = r[self.prompt_key]
+        completion = r[self.completion_key]
+
+        # NEW: strip HTML tags so training sees plain text
+        completion_clean = _strip_html_tags(completion)
+
+        return {"prompt": prompt, "completion": completion_clean}
 
 
 # -------------------------
@@ -248,10 +332,6 @@ def write_save_reason_json(output_dir: str, entry: dict) -> None:
 # -------------------------
 # Evaluation helpers
 # -------------------------
-def _norm_span(s: str) -> str:
-    return " ".join(str(s).strip().strip('"').strip("'").split())
-
-
 _TOKEN_RE = re.compile(r"[A-Za-z0-9]+", re.UNICODE)
 
 
@@ -448,12 +528,8 @@ def pairwise_micro_averaged_f1_gold_vs_pred(
     for ex, pred_spans in zip(filtered, preds):
         gold_val = ex.get(gold_key)
 
-        if isinstance(gold_val, str):
-            gold_spans = [gold_val]
-        elif isinstance(gold_val, list):
-            gold_spans = [x for x in gold_val if isinstance(x, str)]
-        else:
-            gold_spans = []
+        # NEW: parse gold spans from <span>...</span> if present
+        gold_spans = _completion_to_gold_spans(gold_val)
 
         gold_items = [pack(s) for s in gold_spans]
         gold_items = [x for x in gold_items if x]
@@ -513,6 +589,7 @@ def evaluate_model_on_eval_file(
     debug_k: int = 25,
     debug_chars: int = 600,
     iou_threshold: float = 0.5,
+    max_length: int = 2048,
 ) -> Dict[str, Any]:
     """
     Evaluates model predictions vs gold spans using token-overlap IoU matching,
@@ -556,7 +633,7 @@ def evaluate_model_on_eval_file(
             prompt,
             return_tensors="pt",
             truncation=True,
-            max_length=tokenizer.model_max_length,
+            max_length=max_length,
         )
         inputs = {k: v.to(device) for k, v in inputs.items()}
 
@@ -580,12 +657,9 @@ def evaluate_model_on_eval_file(
 
         if len(debug_rows) < debug_k:
             gold_val = ex.get(gold_key)
-            if isinstance(gold_val, str):
-                gold_spans = [gold_val]
-            elif isinstance(gold_val, list):
-                gold_spans = [x for x in gold_val if isinstance(x, str)]
-            else:
-                gold_spans = []
+
+            # NEW: parse gold spans from <span>...</span> if present
+            gold_spans = _completion_to_gold_spans(gold_val)
 
             # token-IoU counts for this example (on raw spans; packing happens elsewhere)
             tp_i, fp_i, fn_i = match_spans_overlap_tokens(
@@ -699,9 +773,9 @@ def main():
     eval_path_for_training = dev_path if eval_split == "dev" else eval_path
 
     # Output dir: same folder as data (category folder), run_name subdir
-    data_dir = Path(train_path).resolve().parent
-    run_name = run_cfg.get("run_name", args_cli.category)
-    out_dir = str(data_dir / run_name)
+    base_out_root = Path("decoder_training") / "llama_3.1_8b_instruct"
+    out_dir = str(base_out_root / args_cli.category.lower())
+    os.makedirs(out_dir, exist_ok=True)
 
     # Model + training params
     model_name = run_cfg.get("model_name", base_model)
@@ -729,7 +803,7 @@ def main():
     torch_compile = bool(run_cfg.get("torch_compile", False))
     use_flash_attn = bool(run_cfg.get("flash_attn", False))
 
-    num_workers = int(run_cfg.get("dataloader_num_workers", 4))
+    num_workers = int(run_cfg.get("dataloader_num_workers", 2))
     max_grad_norm = float(run_cfg.get("max_grad_norm", 1.0))
 
     # Generation settings for eval
@@ -920,6 +994,7 @@ def main():
                 debug_k=debug_k,
                 debug_chars=debug_chars,
                 iou_threshold=iou_threshold,
+                max_length=max_length,
             )
 
             print("[EVAL] pairwise_micro:", eval_metrics.get("pairwise_micro"))

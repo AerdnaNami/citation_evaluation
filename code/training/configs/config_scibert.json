@@ -1,0 +1,47 @@
+{
+  "base_model": "allenai/scibert_scivocab_uncased",
+  "output_root": "encoder_training/scibert",
+
+  "defaults": {
+    "learning_rate": 3e-5,
+    "num_train_epochs": 3,
+    "per_device_train_batch_size": 16,
+    "per_device_eval_batch_size": 16,
+    "weight_decay": 0.01,
+    "warmup_steps": 0.1,
+    "logging_steps": 50,
+    "save_strategy": "epoch",
+    "evaluation_strategy": "epoch"
+  },
+
+  "categories": [
+    {
+      "name": "unsupported_claim",
+      "train_path": "data/unsupported_claim/unsupported_claim_ner_train.json",
+      "dev_path": "data/unsupported_claim/unsupported_claim_ner_dev.json",
+      "eval_path": "data/unsupported_claim/unsupported_claim_ner_eval.json",
+      "run_name": "1_unsupported_scibert"
+    },
+    {
+      "name": "format",
+      "train_path": "data/format/format_ner_train.json",
+      "dev_path": "data/format/format_ner_dev.json",
+      "eval_path": "data/format/format_ner_eval.json",
+      "run_name": "1_format_scibert"
+    },
+    {
+      "name": "coherence",
+      "train_path": "data/coherence/coherence_ner_train.json",
+      "dev_path": "data/coherence/coherence_ner_dev.json",
+      "eval_path": "data/coherence/coherence_ner_eval.json",
+      "run_name": "1_coherence_scibert"
+    },
+    {
+      "name": "lacks_synthesis",
+      "train_path": "data/lacks_synthesis/lacks_synthesis_ner_train.json",
+      "dev_path": "data/lacks_synthesis/lacks_synthesis_ner_dev.json",
+      "eval_path": "data/lacks_synthesis/lacks_synthesis_ner_eval.json",
+      "run_name": "1_lacksynth_scibert"
+    }
+  ]
+}
