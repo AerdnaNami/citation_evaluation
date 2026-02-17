@@ -28,37 +28,39 @@
     "dataloader_num_workers": 4,
     "max_grad_norm": 1.0,
 
-    "eval_split": "eval"
+    "eval_split": "dev",
+    "early_stopping_patience": 3,
+    "early_stopping_threshold": 0.0
   },
 
   "categories": [
     {
       "name": "Format",
-      "train_path": "format/format_training_data.json",
-      "dev_path": "format/format_dev_data.json",
-      "eval_path": "format/format_eval_data.json",
-      "run_name": "3_format_scilit_sft"
+      "train_path": "data/format/format_training_data.json",
+      "dev_path": "data/format/format_dev_data.json",
+      "eval_path": "data/format/format_eval_data.json",
+      "run_name": "4_format_scilit_sft"
     },
     {
       "name": "Unsupported_claim",
-      "train_path": "unsupported_claim/unsupported_claim_training_data.json",
-      "dev_path": "unsupported_claim/unsupported_claim_dev.json",
-      "eval_path": "unsupported_claim/unsupported_claim_eval_data.json",
-      "run_name": "3_unsupported_scilit_claim_sft"
+      "train_path": "data/unsupported_claim/unsupported_claim_training_data.json",
+      "dev_path": "data/unsupported_claim/unsupported_claim_dev.json",
+      "eval_path": "data/unsupported_claim/unsupported_claim_eval_data.json",
+      "run_name": "4_unsupported_scilit_claim_sft"
     },
     {
       "name": "Coherence",
-      "train_path": "coherence/coherence_training_data.json",
-      "dev_path": "coherence/coherence_dev_data.json",
-      "eval_path": "coherence/coherence_eval_data.json",
-      "run_name": "3_coherence_scilit_sft"
+      "train_path": "data/coherence/coherence_training_data.json",
+      "dev_path": "data/coherence/coherence_dev_data.json",
+      "eval_path": "data/coherence/coherence_eval_data.json",
+      "run_name": "4_coherence_scilit_sft"
     },
     {
       "name": "Lacks_synthesis",
-      "train_path": "lacks_synthesis/lacks_synthesis_training_data.json",
-      "dev_path": "lacks_synthesis/lacks_synthesis_dev_data.json",
-      "eval_path": "lacks_synthesis/lacks_synthesis_eval_data.json",
-      "run_name": "3_lacksynth_scilit_sft"
+      "train_path": "data/lacks_synthesis/lacks_synthesis_training_data.json",
+      "dev_path": "data/lacks_synthesis/lacks_synthesis_dev_data.json",
+      "eval_path": "data/lacks_synthesis/lacks_synthesis_eval_data.json",
+      "run_name": "4_lacksynth_scilit_sft"
     }
   ]
 }

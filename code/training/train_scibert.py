@@ -16,7 +16,7 @@ from transformers import (
 )
 
 from seqeval.metrics import f1_score
-from sklearn.metrics import cohen_kappa_score, confusion_matrix, precision_recall_fscore_support
+from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
 
 
 # ----------------------------
@@ -43,13 +43,19 @@ def load_ner_json(path: str) -> Dataset:
 # Uses BIO-style assumption: label for first wordpiece, -100 for rest
 # ----------------------------
 def tokenize_and_align_labels(example, tokenizer, label2id):
+    max_len = getattr(tokenizer, "model_max_length", 512)
+    # Some tokenizers set model_max_length to a huge int; clamp to BERT's real limit if needed.
+    if max_len is None or max_len > 512:
+        max_len = 512
+
     tokenized = tokenizer(
         example["tokens"],
         is_split_into_words=True,
         truncation=True,
+        max_length=max_len,
         padding=False,
     )
-
+    
     word_ids = tokenized.word_ids()
     labels = []
     previous_word_idx = None
@@ -100,10 +106,55 @@ def flatten_valid_tokens(predictions, labels):
     return np.array(flat_preds), np.array(flat_labels)
 
 
+def krippendorff_alpha_nominal(rater1: np.ndarray, rater2: np.ndarray, num_labels: int) -> float:
+    """
+    Krippendorff's alpha for nominal data for 2 raters with complete data.
+    rater1/rater2: arrays of label ids in [0, num_labels-1]
+    """
+    if rater1.shape[0] == 0:
+        return 0.0
+
+    o = np.zeros((num_labels, num_labels), dtype=np.float64)
+
+    for a, b in zip(rater1, rater2):
+        if a == b:
+            o[a, a] += 2.0
+        else:
+            o[a, b] += 1.0
+            o[b, a] += 1.0
+
+    N = o.sum()
+    if N <= 1:
+        return 0.0
+
+    Do = (o.sum() - np.trace(o)) / N
+
+    n = o.sum(axis=0)
+    De = (N * N - np.sum(n * n)) / (N * (N - 1))
+
+    if De <= 0:
+        return 1.0 if Do == 0 else 0.0
+
+    return float(1.0 - (Do / De))
+
+
 # ----------------------------
 # Main
 # ----------------------------
 def main():
+    def get_tokenized_lengths(dataset, tokenizer):
+        lengths = []
+        for example in dataset:
+            encoded = tokenizer(
+                example["tokens"],
+                is_split_into_words=True,
+                truncation=False,  # IMPORTANT: don't truncate so we see true length
+                padding=False,
+            )
+            lengths.append(len(encoded["input_ids"]))
+        return lengths
+
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True)
     parser.add_argument("--category", required=True)
@@ -112,12 +163,8 @@ def main():
     cfg = load_config(args.config)
     defaults = cfg.get("defaults", {})
 
-    # ✅ SciBERT base model (token classification)
-    # Canonical SciBERT: allenai/scibert_scivocab_uncased
-    # Add this to your config if you want: {"base_model": "allenai/scibert_scivocab_uncased"}
     base_model = cfg.get("base_model", "allenai/scibert_scivocab_uncased")
 
-    # Optional reproducibility
     seed = int(defaults.get("seed", 42))
     set_seed(seed)
 
@@ -135,8 +182,14 @@ def main():
     train_dataset = load_ner_json(train_path)
     dev_dataset = load_ner_json(dev_path)
     eval_dataset = load_ner_json(eval_path)
+    lengths = [len(example["tokens"]) for example in train_dataset]
 
-    # Build label set from train (and optionally dev/eval if you want)
+    print("Raw token stats:")
+    print("  max:", max(lengths))
+    print("  mean:", sum(lengths)/len(lengths))
+    print("  95th percentile:", np.percentile(lengths, 95))
+
+    
     label_set = set()
     for ex in train_dataset:
         for lab in ex["labels"]:
@@ -151,8 +204,13 @@ def main():
     train_dataset = train_dataset.map(lambda x: tokenize_and_align_labels(x, tokenizer, label2id), batched=False)
     dev_dataset = dev_dataset.map(lambda x: tokenize_and_align_labels(x, tokenizer, label2id), batched=False)
     eval_dataset = eval_dataset.map(lambda x: tokenize_and_align_labels(x, tokenizer, label2id), batched=False)
+    train_lengths = get_tokenized_lengths(train_dataset, tokenizer)
 
-    # ✅ SciBERT backbone for token classification
+    print("Tokenized length stats (no truncation):")
+    print("  max:", max(train_lengths))
+    print("  mean:", sum(train_lengths)/len(train_lengths))
+    print("  95th percentile:", np.percentile(train_lengths, 95))
+    
     model = AutoModelForTokenClassification.from_pretrained(
         base_model,
         num_labels=len(label_list),
@@ -160,20 +218,14 @@ def main():
         label2id=label2id,
     )
 
-    # Device sanity (Trainer manages device, but helpful to see)
     print(f"Using base_model={base_model}")
     print(f"num_labels={len(label_list)} | labels={label_list}")
     print(f"output_dir={output_dir}")
 
-    # NOTE: warmup_steps in HF expects an int; your original code used 0.1 (fraction).
-    # Here we support either:
-    #  - warmup_ratio (float 0..1), or
-    #  - warmup_steps (int)
     warmup_ratio = defaults.get("warmup_ratio", None)
     warmup_steps = defaults.get("warmup_steps", 0)
     if warmup_ratio is not None:
-        # prefer ratio if provided
-        warmup_steps = 0  # Trainer will use warmup_ratio
+        warmup_steps = 0
     else:
         warmup_steps = int(warmup_steps)
 
@@ -204,15 +256,12 @@ def main():
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=dev_dataset,
-        processing_class=tokenizer,  # HF still supports tokenizer=...; "processing_class" is not a Trainer arg
+        tokenizer=tokenizer,
         data_collator=data_collator,
     )
 
     trainer.train()
 
-    # ----------------------------
-    # FINAL EVALUATION ON EVAL SET
-    # ----------------------------
     predictions, labels, _ = trainer.predict(eval_dataset)
     predictions = np.argmax(predictions, axis=2)
 
@@ -223,9 +272,8 @@ def main():
     cm = confusion_matrix(flat_labels, flat_preds)
     cm_dict = {"labels": label_list, "matrix": cm.tolist()}
 
-    kappa = cohen_kappa_score(flat_labels, flat_preds)
+    alpha = krippendorff_alpha_nominal(flat_labels, flat_preds, num_labels=len(label_list))
 
-    # Pairwise F1 (micro)
     p1, r1, f1_1, _ = precision_recall_fscore_support(flat_labels, flat_preds, average="micro", zero_division=0)
     p2, r2, f1_2, _ = precision_recall_fscore_support(flat_preds, flat_labels, average="micro", zero_division=0)
 
@@ -248,7 +296,7 @@ def main():
     results = {
         "base_model": base_model,
         "seqeval_span_f1": float(seqeval_f1),
-        "cohen_kappa": float(kappa),
+        "krippendorff_alpha_nominal": float(alpha),
         "pairwise_f1": {
             "gold_to_pred": {"precision": float(p1), "recall": float(r1), "f1": float(f1_1)},
             "pred_to_gold": {"precision": float(p2), "recall": float(r2), "f1": float(f1_2)},
@@ -258,7 +306,7 @@ def main():
         "seed": seed,
     }
 
-    print("\nFINAL EVAL RESULTS")
+    print("\n-----FINAL EVAL RESULTS-----")
     print(json.dumps(results, indent=2))
 
     with open(output_dir / "final_eval_metrics.json", "w", encoding="utf-8") as f:

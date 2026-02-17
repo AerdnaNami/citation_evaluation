@@ -2,6 +2,11 @@ import json
 import argparse
 import numpy as np
 from pathlib import Path
+from collections import Counter
+
+import torch
+import torch.nn as nn
+
 from datasets import Dataset
 from transformers import (
     AutoTokenizer,
@@ -12,7 +17,6 @@ from transformers import (
 )
 
 from seqeval.metrics import f1_score
-from sklearn.metrics import cohen_kappa_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support
 
@@ -38,10 +42,16 @@ def load_ner_json(path: str) -> Dataset:
 # Tokenize and align labels
 # ----------------------------
 def tokenize_and_align_labels(example, tokenizer, label2id):
+    # Enforce a safe max_length (important for BERT-like models; also ok for XLM-R)
+    max_len = getattr(tokenizer, "model_max_length", 512)
+    if max_len is None or max_len > 512:  # clamp to 512 to be safe in most NER setups
+        max_len = 512
+
     tokenized = tokenizer(
         example["tokens"],
         is_split_into_words=True,
         truncation=True,
+        max_length=max_len,
         padding=False,
     )
 
@@ -95,6 +105,86 @@ def flatten_valid_tokens(predictions, labels):
     return np.array(flat_preds), np.array(flat_labels)
 
 
+def krippendorff_alpha_nominal(rater1: np.ndarray, rater2: np.ndarray, num_labels: int) -> float:
+    """
+    Krippendorff's alpha for nominal data for 2 raters with complete data.
+    rater1/rater2: arrays of label ids in [0, num_labels-1]
+    """
+    if rater1.shape[0] == 0:
+        return 0.0
+
+    o = np.zeros((num_labels, num_labels), dtype=np.float64)
+
+    for a, b in zip(rater1, rater2):
+        if a == b:
+            o[a, a] += 2.0
+        else:
+            o[a, b] += 1.0
+            o[b, a] += 1.0
+
+    N = o.sum()
+    if N <= 1:
+        return 0.0
+
+    Do = (o.sum() - np.trace(o)) / N
+
+    n = o.sum(axis=0)
+    De = (N * N - np.sum(n * n)) / (N * (N - 1))
+
+    if De <= 0:
+        return 1.0 if Do == 0 else 0.0
+
+    return float(1.0 - (Do / De))
+
+
+def compute_class_weights_from_raw_train(train_dataset_raw: Dataset, label2id: dict) -> torch.Tensor:
+    """
+    Compute inverse-frequency class weights from the *raw* (pre-tokenization) labels.
+    This is usually good enough and avoids having to count wordpieces.
+    """
+    counter = Counter()
+    for ex in train_dataset_raw:
+        for lab in ex["labels"]:
+            counter[lab] += 1
+
+    total = sum(counter.values())
+    num_classes = len(label2id)
+
+    weights = []
+    for lab in label2id.keys():
+        # inverse frequency with simple normalization
+        w = total / (num_classes * max(counter[lab], 1))
+        weights.append(w)
+
+    return torch.tensor(weights, dtype=torch.float)
+
+
+class WeightedTrainer(Trainer):
+    """
+    Trainer with class-weighted CrossEntropy loss to mitigate heavy class imbalance (e.g., O vs entities).
+    """
+    def __init__(self, class_weights: torch.Tensor, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._raw_class_weights = class_weights
+
+    def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+        labels = inputs.get("labels")
+        outputs = model(**inputs)
+        logits = outputs.get("logits")
+
+        # Ensure weights are on the right device/dtype
+        class_weights = self._raw_class_weights.to(device=logits.device, dtype=logits.dtype)
+
+        loss_fct = nn.CrossEntropyLoss(weight=class_weights, ignore_index=-100)
+
+        loss = loss_fct(
+            logits.view(-1, model.config.num_labels),
+            labels.view(-1),
+        )
+
+        return (loss, outputs) if return_outputs else loss
+
+
 # ----------------------------
 # Main
 # ----------------------------
@@ -120,30 +210,35 @@ def main():
     output_dir = output_root / run_name
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    train_dataset = load_ner_json(train_path)
-    dev_dataset = load_ner_json(dev_path)
-    eval_dataset = load_ner_json(eval_path)
+    # Load RAW datasets (keep a copy for computing weights)
+    train_dataset_raw = load_ner_json(train_path)
+    dev_dataset_raw = load_ner_json(dev_path)
+    eval_dataset_raw = load_ner_json(eval_path)
 
     # Build label set
     label_list = sorted(
-        list({label for example in train_dataset for label in example["labels"]})
+        list({label for example in train_dataset_raw for label in example["labels"]})
     )
 
     global label2id, id2label
     label2id = {l: i for i, l in enumerate(label_list)}
     id2label = {i: l for l, i in label2id.items()}
 
+    # Compute class weights from raw train labels (handles O imbalance)
+    class_weights = compute_class_weights_from_raw_train(train_dataset_raw, label2id)
+
     tokenizer = AutoTokenizer.from_pretrained(base_model)
 
-    train_dataset = train_dataset.map(
+    # Tokenize datasets
+    train_dataset = train_dataset_raw.map(
         lambda x: tokenize_and_align_labels(x, tokenizer, label2id),
         batched=False,
     )
-    dev_dataset = dev_dataset.map(
+    dev_dataset = dev_dataset_raw.map(
         lambda x: tokenize_and_align_labels(x, tokenizer, label2id),
         batched=False,
     )
-    eval_dataset = eval_dataset.map(
+    eval_dataset = eval_dataset_raw.map(
         lambda x: tokenize_and_align_labels(x, tokenizer, label2id),
         batched=False,
     )
@@ -165,7 +260,7 @@ def main():
         per_device_eval_batch_size=defaults.get("per_device_eval_batch_size", 16),
         num_train_epochs=defaults.get("num_train_epochs", 3),
         weight_decay=defaults.get("weight_decay", 0.01),
-        warmup_steps=defaults.get("warmup_steps", 0.1),
+        warmup_ratio=defaults.get("warmup_ratio", 0.1),
         load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
         report_to="none",
@@ -173,14 +268,20 @@ def main():
 
     data_collator = DataCollatorForTokenClassification(tokenizer)
 
-    trainer = Trainer(
+    # Use WeightedTrainer instead of vanilla Trainer
+    trainer = WeightedTrainer(
+        class_weights=class_weights,
         model=model,
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=dev_dataset,
-        processing_class=tokenizer,
+        tokenizer=tokenizer,
         data_collator=data_collator,
     )
+
+    # Helpful visibility
+    print("Label list:", label_list)
+    print("Class weights (aligned to label_list):", class_weights.tolist())
 
     trainer.train()
 
@@ -200,16 +301,17 @@ def main():
         "matrix": cm.tolist()
     }
 
-    kappa = cohen_kappa_score(flat_labels, flat_preds)
+    alpha = krippendorff_alpha_nominal(flat_labels, flat_preds, num_labels=len(label_list))
 
-    # Pairwise F1
-    p1, r1, f1_1, _ = precision_recall_fscore_support(
-        flat_labels, flat_preds, average="micro"
+    # Token-level PRF (micro + macro so imbalance is visible)
+    p_micro, r_micro, f1_micro, _ = precision_recall_fscore_support(
+        flat_labels, flat_preds, average="micro", zero_division=0
     )
-    p2, r2, f1_2, _ = precision_recall_fscore_support(
-        flat_preds, flat_labels, average="micro"
+    p_macro, r_macro, f1_macro, _ = precision_recall_fscore_support(
+        flat_labels, flat_preds, average="macro", zero_division=0
     )
 
+    # Your existing "pairwise_micro_f1" logic (kept)
     tp = np.sum(flat_preds == flat_labels)
     fp = np.sum(flat_preds != flat_labels)
     fn = fp
@@ -218,26 +320,27 @@ def main():
     total_fp = fp * 2
     total_fn = fn * 2
 
-    micro_precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) else 0.0
-    micro_recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) else 0.0
-    micro_f1 = (
-        2 * micro_precision * micro_recall / (micro_precision + micro_recall)
-        if (micro_precision + micro_recall)
+    micro_precision_pairwise = total_tp / (total_tp + total_fp) if (total_tp + total_fp) else 0.0
+    micro_recall_pairwise = total_tp / (total_tp + total_fn) if (total_tp + total_fn) else 0.0
+    micro_f1_pairwise = (
+        2 * micro_precision_pairwise * micro_recall_pairwise / (micro_precision_pairwise + micro_recall_pairwise)
+        if (micro_precision_pairwise + micro_recall_pairwise)
         else 0.0
     )
 
     results = {
         "seqeval_span_f1": float(seqeval_f1),
-        "cohen_kappa": float(kappa),
-        "pairwise_f1": {
-            "gold_to_pred": {"precision": float(p1), "recall": float(r1), "f1": float(f1_1)},
-            "pred_to_gold": {"precision": float(p2), "recall": float(r2), "f1": float(f1_2)},
-            "pairwise_micro_f1": float(micro_f1),
+        "krippendorff_alpha_nominal": float(alpha),
+        "token_prf": {
+            "micro": {"precision": float(p_micro), "recall": float(r_micro), "f1": float(f1_micro)},
+            "macro": {"precision": float(p_macro), "recall": float(r_macro), "f1": float(f1_macro)},
         },
+        "pairwise_micro_f1": float(micro_f1_pairwise),
         "confusion_matrix": cm_dict,
+        "class_weights": {label_list[i]: float(class_weights[i]) for i in range(len(label_list))},
     }
 
-    print("\nFINAL EVAL RESULTS")
+    print("\n-----FINAL EVAL RESULTS-----")
     print(json.dumps(results, indent=2))
 
     with open(output_dir / "final_eval_metrics.json", "w") as f:
