@@ -1,6 +1,6 @@
 {
   "base_model": "xlm-roberta-base",
-  "output_root": "encoder_training/xlm_roberta",
+  "output_root": "encoder_training/xlm_roberta/runs",
 
   "defaults": {
     "learning_rate": 3e-5,
@@ -9,39 +9,40 @@
     "per_device_eval_batch_size": 16,
     "weight_decay": 0.01,
     "warmup_ratio": 0.1,
-    "logging_steps": 50,
+    "logging_steps": 500,
     "save_strategy": "epoch",
-    "evaluation_strategy": "epoch"
+    "evaluation_strategy": "epoch",
+    "sentence_positive_threshold": 0.5
   },
 
   "categories": [
     {
-      "name": "unsupported_claim",
-      "train_path": "data/unsupported_claim/unsupported_claim_ner_train.json",
-      "dev_path": "data/unsupported_claim/unsupported_claim_ner_dev.json",
-      "eval_path": "data/unsupported_claim/unsupported_claim_ner_eval.json",
-      "run_name": "2_unsupported_xlm-roberta-base"
-    },
-    {
-      "name": "lacks_synthesis",
-      "train_path": "data/lacks_synthesis/lacks_synthesis_ner_train.json",
-      "dev_path": "data/lacks_synthesis/lacks_synthesis_ner_dev.json",
-      "eval_path": "data/lacks_synthesis/lacks_synthesis_ner_eval.json",
-      "run_name": "2_lacksynth_xlm-roberta-base"
-    },
-    {
       "name": "format",
+      "train_script": "encoder_training/xlm_roberta/train_code/train_xlmr_ner_format.py",
       "train_path": "data/format/format_ner_train.json",
-      "dev_path": "data/format/format_ner_dev.json",
       "eval_path": "data/format/format_ner_eval.json",
-      "run_name": "2_format_xlm-roberta-base"
+      "run_name": "4_format_xlm-roberta-base"
     },
     {
       "name": "coherence",
+      "train_script": "encoder_training/xlm_roberta/train_code/train_xlmr_ner_paragraph.py",
       "train_path": "data/coherence/coherence_ner_train.json",
-      "dev_path": "data/coherence/coherence_ner_dev.json",
       "eval_path": "data/coherence/coherence_ner_eval.json",
-      "run_name": "2_coherence_xlm-roberta-base"
+      "run_name": "4_coherence_xlm-roberta-base"
+    },
+    {
+      "name": "lacks_synthesis",
+      "train_script": "encoder_training/xlm_roberta/train_code/train_xlmr_ner_paragraph.py",
+      "train_path": "data/lacks_synthesis/lacks_synthesis_ner_train.json",
+      "eval_path": "data/lacks_synthesis/lacks_synthesis_ner_eval.json",
+      "run_name": "4_lacksynth_xlm-roberta-base"
+    },
+    {
+      "name": "unsupported_claim",
+      "train_script": "../encoder_training/xlm_roberta/train_code/train_xlmr_ner.py",
+      "train_path": "data/unsupported_claim/unsupported_claim_ner_train.json",
+      "eval_path": "data/unsupported_claim/unsupported_claim_ner_eval.json",
+      "run_name": "4_unsupported_xlm-roberta-base"
     }
   ]
 }

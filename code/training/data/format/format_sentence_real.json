@@ -1,0 +1,888 @@
+[
+  {
+    "category": "Format",
+    "doc_index": 0,
+    "sent_index": 1,
+    "label": 0,
+    "sentence": "It plays an important role in many downstream tasks such as relation extraction (Ji et al., 2017), entity linking (Sevgili et al., 2020), co-reference resolution (Clark and Manning, 2016), and knowledge graph (Ji et al., 2020).",
+    "sentence_char_start_in_doc": 113,
+    "sentence_char_end_in_doc": 340,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 0,
+    "sent_index": 6,
+    "label": 1,
+    "sentence": "The second one is span-based method (Li et al., 2020a;, which classifies candidate spans based on their span-level representations.",
+    "sentence_char_start_in_doc": 916,
+    "sentence_char_end_in_doc": 1047,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 952,
+        "doc_end": 971,
+        "sent_start": 36,
+        "sent_end": 55,
+        "text": "(Li et al., 2020a;,",
+        "span_text_from_source": "(Li et al., 2020a;,"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 1,
+    "sent_index": 7,
+    "label": 0,
+    "sentence": "As artificial agents live and operate among humans (Akata et al., 2020), they must be able to comprehend and recognize the moral values that drive the differences in human behavior (Gabriel, 2020).",
+    "sentence_char_start_in_doc": 881,
+    "sentence_char_end_in_doc": 1078,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 1,
+    "sent_index": 24,
+    "label": 0,
+    "sentence": "To reduce the need for new annotated examples, we can pretrain classifiers with similar available annotated data and transfer the acquired knowledge to a novel task-a practice known as transfer learning (Ruder, 2019).",
+    "sentence_char_start_in_doc": 3357,
+    "sentence_char_end_in_doc": 3574,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 1,
+    "sent_index": 31,
+    "label": 1,
+    "sentence": "Treating each dataset as a domain, we train a deep learning model (BERT Devlin et al. (2019)) in four training settings to evaluate the value classifier's generalizability, transferability, and catastrophic forgetting.\n\n",
+    "sentence_char_start_in_doc": 4331,
+    "sentence_char_end_in_doc": 4551,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 4396,
+        "doc_end": 4424,
+        "sent_start": 65,
+        "sent_end": 93,
+        "text": " (BERT Devlin et al. (2019))",
+        "span_text_from_source": " (BERT Devlin et al. (2019))"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 2,
+    "sent_index": 5,
+    "label": 0,
+    "sentence": "Although the use of cooccurrence relation works well, it is too coarse for deep understanding of events, which requires finegrained knowledge (Lee and Goldwasser, 2019).",
+    "sentence_char_start_in_doc": 750,
+    "sentence_char_end_in_doc": 919,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 2,
+    "sent_index": 12,
+    "label": 1,
+    "sentence": "Based on existing works on event relation extraction (Xue et al., 2016;Lee and Goldwasser, 2019;, we find that the co-occurrence relation, which refers to two events appearing in the same document, can be seen as a superset of current defined explicit discourse relations, as most existing automatic methods extract event relations from documents or sentences.",
+    "sentence_char_start_in_doc": 1896,
+    "sentence_char_end_in_doc": 2256,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1948,
+        "doc_end": 1994,
+        "sent_start": 52,
+        "sent_end": 98,
+        "text": " (Xue et al., 2016;Lee and Goldwasser, 2019;, ",
+        "span_text_from_source": " (Xue et al., 2016;Lee and Goldwasser, 2019;, "
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 3,
+    "sent_index": 2,
+    "label": 1,
+    "sentence": "Various structured prediction tasks have be studied, including named entity recognition (Pan et al., 2017;Hu et al., 2020), dependency parsing (Ahmad et al., 2019, relation extraction (Zou et al., 2018;Ni and Florian, 2019), and event argument extraction (Subburathinam et al., 2019;Ahmad et al., 2021;Nguyen and Nguyen, 2021).",
+    "sentence_char_start_in_doc": 225,
+    "sentence_char_end_in_doc": 552,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 369,
+        "doc_end": 388,
+        "sent_start": 144,
+        "sent_end": 163,
+        "text": "Ahmad et al., 2019,",
+        "span_text_from_source": "(Ahmad et al., 2019,"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 3,
+    "sent_index": 12,
+    "label": 1,
+    "sentence": "Following the taxonomy in (Liu et al., 2021), these methods can be classified depending on whether the language models' parameters are tuned and on whether trainable prompts are introduced.",
+    "sentence_char_start_in_doc": 2027,
+    "sentence_char_end_in_doc": 2216,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 2051,
+        "doc_end": 2071,
+        "sent_start": 24,
+        "sent_end": 44,
+        "text": "n (Liu et al., 2021)",
+        "span_text_from_source": "in (Liu et al., 2021)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 4,
+    "sent_index": 5,
+    "label": 1,
+    "sentence": "Later, with the emergence of large-scale pre-trained language models, readers based on pre-trained models such as BERT and T5 Raffel et al., 2019) have become a common approach (Yang et al., 2019;Karpukhin et al., 2020;Izacard and Grave, 2020b).\n\n",
+    "sentence_char_start_in_doc": 736,
+    "sentence_char_end_in_doc": 983,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 863,
+        "doc_end": 882,
+        "sent_start": 127,
+        "sent_end": 146,
+        "text": "affel et al., 2019)",
+        "span_text_from_source": "Raffel et al., 2019)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 4,
+    "sent_index": 11,
+    "label": 1,
+    "sentence": "Pointer-Generator Network\n\nPointer-Generator Network (See et al., 2017) is an extension of the sequence-to-sequence model by integrating a copy mechanism (Vinyals et al., 2017) into the generator.",
+    "sentence_char_start_in_doc": 1859,
+    "sentence_char_end_in_doc": 2055,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1914,
+        "doc_end": 1924,
+        "sent_start": 55,
+        "sent_end": 65,
+        "text": "ee et al.,",
+        "span_text_from_source": "See et al.,"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 5,
+    "sent_index": 0,
+    "label": 0,
+    "sentence": "Introduction\n\nReading comprehension is a complex, multidimensional cognitive process (Kim, 2017).",
+    "sentence_char_start_in_doc": 0,
+    "sentence_char_end_in_doc": 97,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 5,
+    "sent_index": 3,
+    "label": 0,
+    "sentence": "(Roberts and Priest, 2006).",
+    "sentence_char_start_in_doc": 524,
+    "sentence_char_end_in_doc": 551,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 5,
+    "sent_index": 14,
+    "label": 0,
+    "sentence": "First, narrative comprehension is a high-level comprehension skill strongly predictive of reading achievement (Lynch et al., 2008) and plays a central role in daily life as people frequently encounter narratives in different forms (Goldie, 2003).",
+    "sentence_char_start_in_doc": 2221,
+    "sentence_char_end_in_doc": 2467,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 5,
+    "sent_index": 18,
+    "label": 0,
+    "sentence": "Thereby, FairytaleQA contains questions that focus on seven narrative elements and relations, namely character, setting, feeling, action, causal relationship, outcome resolution, and prediction (Paris and Paris, 2003), thus increasing the validity and reliability of the assessment.",
+    "sentence_char_start_in_doc": 2987,
+    "sentence_char_end_in_doc": 3269,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 5,
+    "sent_index": 23,
+    "label": 1,
+    "sentence": "First, we used our data to train and evaluate state-of-the-art QA models and demonstrated that (1) FairytaleQA contains challenging phenonmena for existing models, and (2) it can support finer-grained analysis on the aforementioned seven types of comprehension sub-skills,\neven for models trained on standard QA datasets (NarrativeQA (Koˇcisk `y et al., 2018)).",
+    "sentence_char_start_in_doc": 3982,
+    "sentence_char_end_in_doc": 4343,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 4305,
+        "doc_end": 4341,
+        "sent_start": 323,
+        "sent_end": 359,
+        "text": "arrativeQA (Koˇcisk `y et al., 2018)",
+        "span_text_from_source": "NarrativeQA (Koˇcisk `y et al., 2018)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 6,
+    "sent_index": 12,
+    "label": 1,
+    "sentence": "There are also medical related knowledge base such UMLS (Bodenreider, 2004) and OHAMA 1 .",
+    "sentence_char_start_in_doc": 1624,
+    "sentence_char_end_in_doc": 1713,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1705,
+        "doc_end": 1713,
+        "sent_start": 81,
+        "sent_end": 89,
+        "text": "HAMA 1 .",
+        "span_text_from_source": "OHAMA 1 ."
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 7,
+    "sent_index": 3,
+    "label": 0,
+    "sentence": "Specifically, we lack detailed understanding of the extent to which such models are able to ground linguistic phenomena-from morphosyntax to semantics-in the visual modality (Bernardi and Pezzelle, 2021).",
+    "sentence_char_start_in_doc": 604,
+    "sentence_char_end_in_doc": 808,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 7,
+    "sent_index": 4,
+    "label": 0,
+    "sentence": "For example, recent evidence suggests that models are insensitive to linguistic distinctions of verb-argument structure (Hendricks and Nematzadeh, 2021) and word order (Cirik et al., 2018;Akula et al., 2020).\n\n",
+    "sentence_char_start_in_doc": 809,
+    "sentence_char_end_in_doc": 1019,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 7,
+    "sent_index": 27,
+    "label": 1,
+    "sentence": "Techniques to address these questions in unimodal and multimodal V&L contexts include: adversarial examples (Jia and Liang, 2017;Jia et al., 2019); investigation of the impact of bias, be it linguistic (Gururangan et al., 2018), visual semantic (Agarwal et al., 2020), or socio-economic (Garg et al., 2019); and the use of linguistically-informed counterfactual and minimally-edited examples (Levesque et al., 1",
+    "sentence_char_start_in_doc": 4637,
+    "sentence_char_end_in_doc": 5048,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 5029,
+        "doc_end": 5048,
+        "sent_start": 392,
+        "sent_end": 411,
+        "text": "(Levesque et al., 1",
+        "span_text_from_source": "(Levesque et al., 1"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 7,
+    "sent_index": 28,
+    "label": 1,
+    "sentence": "We release our dataset containing all annotators' votes (Prabhakaran et al., 2021) and code upon acceptance. 2012; Gardner et al., 2020).",
+    "sentence_char_start_in_doc": 5049,
+    "sentence_char_end_in_doc": 5186,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 5158,
+        "doc_end": 5185,
+        "sent_start": 109,
+        "sent_end": 136,
+        "text": "2012; Gardner et al., 2020)",
+        "span_text_from_source": "2012; Gardner et al., 2020)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 8,
+    "sent_index": 44,
+    "label": 1,
+    "sentence": "The pipeline approach to RE divides the problem into NER and relation classification, and conducts the two sub-tasks in a sequential manner (Zhong and Chen, 2020), while the end-to-end approach jointly carries out the two sub-tasks (Zheng et al., 2017;Zeng et al., 2018;.",
+    "sentence_char_start_in_doc": 5218,
+    "sentence_char_end_in_doc": 5489,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 5450,
+        "doc_end": 5490,
+        "sent_start": 232,
+        "sent_end": 271,
+        "text": "(Zheng et al., 2017;Zeng et al., 2018;.",
+        "span_text_from_source": "(Zheng et al., 2017;Zeng et al., 2018;. "
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 9,
+    "sent_index": 6,
+    "label": 0,
+    "sentence": "Irrelevant images have little impact on the translation quality, and no significant BLEU drop is observed even the image is absent (Elliott, 2018).",
+    "sentence_char_start_in_doc": 716,
+    "sentence_char_end_in_doc": 863,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 9,
+    "sent_index": 7,
+    "label": 1,
+    "sentence": "Encouraging results appeared in  2021) proposed a cross-lingual visual pretraining approach.",
+    "sentence_char_start_in_doc": 864,
+    "sentence_char_end_in_doc": 956,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 896,
+        "doc_end": 902,
+        "sent_start": 32,
+        "sent_end": 38,
+        "text": " 2021)",
+        "span_text_from_source": " 2021)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 10,
+    "sent_index": 8,
+    "label": 0,
+    "sentence": "Several recent publications investigate deep pretrained models based on the Transformer architecture (Vaswani et al., 2017), ELMo (Peters et al., 2018), and ULMFiT (Howard and Ruder, 2018) in AL on NLP tasks (Prabhu et al., 2019;Ein-Dor et al., 2020;Yuan et al., 2020;Shelmanov et al., 2021).",
+    "sentence_char_start_in_doc": 1171,
+    "sentence_char_end_in_doc": 1463,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 10,
+    "sent_index": 11,
+    "label": 1,
+    "sentence": "Shen et al. (2017), Sid-dhant and Lipton (2018), Ein-Dor et al. (2020), and Shelmanov et al. (2021 leverage Monte Carlo dropout (Gal and Ghahramani, 2016) for quantifying uncertainty of models.",
+    "sentence_char_start_in_doc": 1726,
+    "sentence_char_end_in_doc": 1919,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1802,
+        "doc_end": 1824,
+        "sent_start": 76,
+        "sent_end": 98,
+        "text": "Shelmanov et al. (2021",
+        "span_text_from_source": "Shelmanov et al. (2021"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 10,
+    "sent_index": 22,
+    "label": 1,
+    "sentence": "This finding is also revealed for classical machine learning models by Baldridge and Osborne (2004), Tomanek andMorik (2011), Hu et al. (2016) and supported by experiments with Transformers in (Shelmanov et al., 2021).",
+    "sentence_char_start_in_doc": 3499,
+    "sentence_char_end_in_doc": 3717,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 3691,
+        "doc_end": 3717,
+        "sent_start": 192,
+        "sent_end": 218,
+        "text": " (Shelmanov et al., 2021).",
+        "span_text_from_source": " (Shelmanov et al., 2021)."
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 11,
+    "sent_index": 0,
+    "label": 0,
+    "sentence": "Related Work\n\nBandit learning has been applied to a variety of NLP problems including neural machine translation (NMT; Sokolov et al., 2017;Kreutzer et al., 2018a,b;Mendoncca et al., 2021), structured prediction (Sokolov et al., 2016), semantic parsing (Lawrence and Riezler, 2018), intent recognition (Falke and Lehnen, 2021), and summarization (Gunasekara et al., 2021).",
+    "sentence_char_start_in_doc": 0,
+    "sentence_char_end_in_doc": 372,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 11,
+    "sent_index": 1,
+    "label": 0,
+    "sentence": "Human feedback has been studied as a direct learning signal for NMT (Kreutzer et al., 2018b;Mendoncca et al., 2021), semantic parsing (Lawrence and Riezler, 2018), summarization (Stiennon et al., 2020), and dialogue (Jaques et al., 2020).",
+    "sentence_char_start_in_doc": 373,
+    "sentence_char_end_in_doc": 611,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 11,
+    "sent_index": 7,
+    "label": 1,
+    "sentence": "Domain adaptation for QA has been studied in prior work (Fisch et al., 2019;Khashabi et al., 2020b), including using data augmentation (Yue et al., 2021), adversarial training , contrastive method (Yue et al., 2021), back-training (Kulshreshtha et al., 2021, and exploiting small lottery subnetworks (Zhu et al., 2021).\n\n ",
+    "sentence_char_start_in_doc": 1495,
+    "sentence_char_end_in_doc": 1817,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1726,
+        "doc_end": 1753,
+        "sent_start": 231,
+        "sent_end": 258,
+        "text": "(Kulshreshtha et al., 2021,",
+        "span_text_from_source": "(Kulshreshtha et al., 2021,"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 12,
+    "sent_index": 3,
+    "label": 1,
+    "sentence": "In this work, we focus on four tasks, such as Slot Filling [Levy et al., 2017, Elsahar et al., 2018, Question Answering",
+    "sentence_char_start_in_doc": 338,
+    "sentence_char_end_in_doc": 457,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 396,
+        "doc_end": 437,
+        "sent_start": 58,
+        "sent_end": 99,
+        "text": " [Levy et al., 2017, Elsahar et al., 2018",
+        "span_text_from_source": " [Levy et al., 2017, Elsahar et al., 2018"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 13,
+    "sent_index": 0,
+    "label": 0,
+    "sentence": "Related Work\n\nTo facilitate the study of text summarization, earlier datasets are mostly in the news domain with relatively short input passages, such as NYT (Sandhaus, 2008), Gigaword (Napoles et al., 2012), CNN/Daily Mail (Hermann et al., 2015), NEWSROOM (Grusky et al., 2018) and XSUM (Narayan et al., 2018).",
+    "sentence_char_start_in_doc": 0,
+    "sentence_char_end_in_doc": 311,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 13,
+    "sent_index": 9,
+    "label": 1,
+    "sentence": "Our task also differs from content planning (Reiter and Dale, 1997;Shao et al., 2019;, which involves explicitly selecting and arranging the input content.",
+    "sentence_char_start_in_doc": 1839,
+    "sentence_char_end_in_doc": 1994,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1882,
+        "doc_end": 1925,
+        "sent_start": 43,
+        "sent_end": 86,
+        "text": " (Reiter and Dale, 1997;Shao et al., 2019;,",
+        "span_text_from_source": " (Reiter and Dale, 1997;Shao et al., 2019;,"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 0,
+    "label": 0,
+    "sentence": "Background\n\nHuman values are of concern to most if not to all social sciences (Rokeach, 1973) and have also been integrated into computational frameworks of argumentation (Bench-Capon, 2003).",
+    "sentence_char_start_in_doc": 0,
+    "sentence_char_end_in_doc": 191,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 3,
+    "label": 0,
+    "sentence": "These definitions attribute values to persons rather than to objects, facilitating a systematic analysis (Rokeach, 1973).",
+    "sentence_char_start_in_doc": 591,
+    "sentence_char_end_in_doc": 712,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 10,
+    "label": 1,
+    "sentence": "Specifically for cross-cultural analyses, Schwartz et al. ( 2012) derived 48 value questions from the universal needs of individuals and societies, including obeying all the laws and to be humble.",
+    "sentence_char_start_in_doc": 1712,
+    "sentence_char_end_in_doc": 1908,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1755,
+        "doc_end": 1777,
+        "sent_start": 43,
+        "sent_end": 65,
+        "text": "chwartz et al. ( 2012)",
+        "span_text_from_source": "Schwartz et al. ( 2012)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 14,
+    "label": 1,
+    "sentence": "However, as the meta-inventory is strictly more coarse-grained than Schwartz et al.'s theory we do not investigate it further for this paper.\n\n",
+    "sentence_char_start_in_doc": 2507,
+    "sentence_char_end_in_doc": 2650,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 2576,
+        "doc_end": 2592,
+        "sent_start": 69,
+        "sent_end": 85,
+        "text": "chwartz et al.'s",
+        "span_text_from_source": "Schwartz et al.'s"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 19,
+    "label": 0,
+    "sentence": "Feldman (2021) recently showed the strong connection between values and the moral foundation theory (Haidt, 2012).",
+    "sentence_char_start_in_doc": 3461,
+    "sentence_char_end_in_doc": 3575,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 24,
+    "label": 0,
+    "sentence": "Partly, values overlap with ideas of framing in communication, that is, the selection and emphasis of specific aspects of (perceived) reality to promote a particular problem definition, causal interpretation, ethical evaluation, and/or recommendation (Entman, 1993).",
+    "sentence_char_start_in_doc": 4091,
+    "sentence_char_end_in_doc": 4357,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 25,
+    "label": 0,
+    "sentence": "In frames, values can define the costs and benefits of options (Entman, 1993)",
+    "sentence_char_start_in_doc": 4358,
+    "sentence_char_end_in_doc": 4435,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 27,
+    "label": 0,
+    "sentence": "Frames have been studied computationally for news (Naderi and Hirst, 2015), political speech (De Vreese, 2005), and argumentation (Ajjour et al., 2019).",
+    "sentence_char_start_in_doc": 4490,
+    "sentence_char_end_in_doc": 4642,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 29,
+    "label": 1,
+    "sentence": "For example, 14 of the 54 values we use in this work are also frames in the dataset of Ajjour et al. 1 Values may be considered as aspects under which to group arguments.",
+    "sentence_char_start_in_doc": 4794,
+    "sentence_char_end_in_doc": 4964,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 4882,
+        "doc_end": 4896,
+        "sent_start": 88,
+        "sent_end": 102,
+        "text": "jjour et al. 1",
+        "span_text_from_source": "Ajjour et al. 1"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 14,
+    "sent_index": 30,
+    "label": 0,
+    "sentence": "Some researchers have mined aspects from text (Trautmann, 2020) or used them to control argument generation (Schiller et al., 2021).",
+    "sentence_char_start_in_doc": 4965,
+    "sentence_char_end_in_doc": 5097,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 15,
+    "sent_index": 0,
+    "label": 0,
+    "sentence": "Related Work\n\nTemplate-based data generation has been previously used for data augmentation, for example to inject numerical skills (Geva et al., 2020), and to improve consistency (Asai and Hajishirzi, 2020), and zero-shot accuracy (Zhao et al., 2019).",
+    "sentence_char_start_in_doc": 0,
+    "sentence_char_end_in_doc": 252,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 15,
+    "sent_index": 15,
+    "label": 1,
+    "sentence": "Error-driven sampling has been considered in the past in the context of active learning (Sharma et al., 2018), reinforcement learning (Graves et al., 2017;Glover and Hokamp, 2019;Xu et al., 2019), transfer learning Pilault et al., 2021), and distributionally robust optimization (Oren et al., 2019;Sagawa et al., 2020), where the goal is to perform well over a family of distributions.",
+    "sentence_char_start_in_doc": 1847,
+    "sentence_char_end_in_doc": 2232,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 2061,
+        "doc_end": 2083,
+        "sent_start": 214,
+        "sent_end": 236,
+        "text": " Pilault et al., 2021)",
+        "span_text_from_source": " Pilault et al., 2021)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 16,
+    "sent_index": 6,
+    "label": 1,
+    "sentence": "A line of work has attempted to improve the performance on o.o.d datasets by proposing different objective functions (e.g., Utama et al., 2020a;Karimi",
+    "sentence_char_start_in_doc": 969,
+    "sentence_char_end_in_doc": 1119,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1086,
+        "doc_end": 1142,
+        "sent_start": 117,
+        "sent_end": 150,
+        "text": "(e.g., Utama et al., 2020a;Karimi",
+        "span_text_from_source": "(e.g., Utama et al., 2020a;Karimi Mahabadi et al., 2020)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 16,
+    "sent_index": 7,
+    "label": 1,
+    "sentence": "Mahabadi et al., 2020).",
+    "sentence_char_start_in_doc": 1120,
+    "sentence_char_end_in_doc": 1143,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1086,
+        "doc_end": 1142,
+        "sent_start": 0,
+        "sent_end": 22,
+        "text": "Mahabadi et al., 2020)",
+        "span_text_from_source": "(e.g., Utama et al., 2020a;Karimi Mahabadi et al., 2020)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 16,
+    "sent_index": 22,
+    "label": 0,
+    "sentence": "Finally, to mitigate the difficulty of the generative modeling task, we fine-tune GEN with a discriminative objective (Lewis and Fan, 2019).",
+    "sentence_char_start_in_doc": 3137,
+    "sentence_char_end_in_doc": 3277,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 17,
+    "sent_index": 2,
+    "label": 0,
+    "sentence": "Traditional approaches like TF-IDF (Ramos et al., 2003), BM25 (Robertson and Zaragoza, 2009) retrieve the evidence passages based on the lexical match between questions and passages.",
+    "sentence_char_start_in_doc": 352,
+    "sentence_char_end_in_doc": 534,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 17,
+    "sent_index": 16,
+    "label": 1,
+    "sentence": "According to (Manmatha et al., 2017), the quality of positive samples and negative samples are of vital importance in the contrastive learning framework.",
+    "sentence_char_start_in_doc": 2671,
+    "sentence_char_end_in_doc": 2824,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 2684,
+        "doc_end": 2707,
+        "sent_start": 13,
+        "sent_end": 36,
+        "text": "(Manmatha et al., 2017)",
+        "span_text_from_source": "(Manmatha et al., 2017)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 18,
+    "sent_index": 1,
+    "label": 1,
+    "sentence": "In recent years, substantial improvements have been made (Serban et al., 2017;Li et al., 2016;Wolf et al., 2019), and embeddings are used to control response generation on extra information such as persona (Li et al., 2016), profiles (Yang et al., 2017), coherence (Xu et al., 2018, emotions (Huang et al., 2018), and dialogue attributes like response-relatedness (See et al., 2019).",
+    "sentence_char_start_in_doc": 356,
+    "sentence_char_end_in_doc": 739,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 633,
+        "doc_end": 637,
+        "sent_start": 277,
+        "sent_end": 281,
+        "text": "2018",
+        "span_text_from_source": "2018"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 19,
+    "sent_index": 26,
+    "label": 1,
+    "sentence": "Most related to out work, Hossain et al. ( 2020) analyze the role of negation in three natural language inference corpora: RTE Bar-Haim et al., 2006;Giampiccolo et al., 2007;Bentivogli et al., 2009), SNLI and MNLI.",
+    "sentence_char_start_in_doc": 3074,
+    "sentence_char_end_in_doc": 3288,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 3201,
+        "doc_end": 3272,
+        "sent_start": 127,
+        "sent_end": 198,
+        "text": "Bar-Haim et al., 2006;Giampiccolo et al., 2007;Bentivogli et al., 2009)",
+        "span_text_from_source": "Bar-Haim et al., 2006;Giampiccolo et al., 2007;Bentivogli et al., 2009)"
+      },
+      {
+        "doc_start": 3201,
+        "doc_end": 3272,
+        "sent_start": 127,
+        "sent_end": 198,
+        "text": "Bar-Haim et al., 2006;Giampiccolo et al., 2007;Bentivogli et al., 2009)",
+        "span_text_from_source": "Bar-Haim et al., 2006;Giampiccolo et al., 2007;Bentivogli et al., 2009)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 20,
+    "sent_index": 4,
+    "label": 1,
+    "sentence": "Templates in Data-Driven D2T Generation Using simple handcrafted templates for individual keys or predicates is an efficient way of introducing domain knowledge while preventing text-to-text models from overfitting to a specific data format (Heidari et al., 2021;Kale and Rastogi, 2020a;.",
+    "sentence_char_start_in_doc": 762,
+    "sentence_char_end_in_doc": 1050,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 1003,
+        "doc_end": 1049,
+        "sent_start": 241,
+        "sent_end": 287,
+        "text": "(Heidari et al., 2021;Kale and Rastogi, 2020a;",
+        "span_text_from_source": "(Heidari et al., 2021;Kale and Rastogi, 2020a;"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 20,
+    "sent_index": 13,
+    "label": 1,
+    "sentence": "Several neural methods for this task were proposed, using either interactions between pairs of sentences Li and Jurafsky, 2017), global interactions (Gong et al., 2016;Wang and Wan, 2019), or combination of both (Cui et al., 2020).",
+    "sentence_char_start_in_doc": 2261,
+    "sentence_char_end_in_doc": 2492,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 2366,
+        "doc_end": 2388,
+        "sent_start": 105,
+        "sent_end": 127,
+        "text": "Li and Jurafsky, 2017)",
+        "span_text_from_source": "Li and Jurafsky, 2017)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 20,
+    "sent_index": 21,
+    "label": 1,
+    "sentence": "Unlike text summarization or simplification Jiang et al., 2020), we aim to convey the complete semantics of the text without omitting any facts.",
+    "sentence_char_start_in_doc": 3470,
+    "sentence_char_end_in_doc": 3614,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 3514,
+        "doc_end": 3533,
+        "sent_start": 44,
+        "sent_end": 63,
+        "text": "Jiang et al., 2020)",
+        "span_text_from_source": "Jiang et al., 2020)"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 20,
+    "sent_index": 22,
+    "label": 0,
+    "sentence": "In contrast to sentence fusion (Geva et al., 2019;Barzilay and McKeown, 2005) or sentence compression (Filippova and Altun, 2013), we operate in the context of multiple sentences in a paragraph.",
+    "sentence_char_start_in_doc": 3615,
+    "sentence_char_end_in_doc": 3809,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 20,
+    "sent_index": 23,
+    "label": 1,
+    "sentence": "The task is the central focus of our WIKIFLUENT corpus ( §4), which we synthesize using a model for the reverse task, split-andrephrase, i.e. splitting a complex sentence into simpler ones while preserving semantics (Botha et al., 2018;.\n\n ",
+    "sentence_char_start_in_doc": 3810,
+    "sentence_char_end_in_doc": 4050,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 4026,
+        "doc_end": 4046,
+        "sent_start": 216,
+        "sent_end": 236,
+        "text": "(Botha et al., 2018;",
+        "span_text_from_source": "(Botha et al., 2018;"
+      }
+    ]
+  },
+  {
+    "category": "Format",
+    "doc_index": 21,
+    "sent_index": 27,
+    "label": 0,
+    "sentence": "Since neural networks are usually smooth functions (Ziegel, 2003), this consistency can be easily satisfied by neural learn-to-exit modules.",
+    "sentence_char_start_in_doc": 3176,
+    "sentence_char_end_in_doc": 3316,
+    "issue_spans_in_sentence": []
+  },
+  {
+    "category": "Format",
+    "doc_index": 21,
+    "sent_index": 34,
+    "label": 1,
+    "sentence": "(d) HASHEE can significantly accelerate model inference on a per-batch basis instead of per-instance basis as in previous work Liu et al., 2020a;.\n\n",
+    "sentence_char_start_in_doc": 4028,
+    "sentence_char_end_in_doc": 4176,
+    "issue_spans_in_sentence": [
+      {
+        "doc_start": 4156,
+        "doc_end": 4174,
+        "sent_start": 128,
+        "sent_end": 146,
+        "text": "iu et al., 2020a;.",
+        "span_text_from_source": "Liu et al., 2020a;."
+      }
+    ]
+  }
+]

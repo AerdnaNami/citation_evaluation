@@ -1,742 +1,2172 @@
 [
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
     "document": 1,
-    "reason": "All highlighted spans are citation texts exhibiting realistic formatting issues (e.g., missing year in narrative, extra parenthesis, wrong bracket type, missing comma, truncated year, missing closing parenthesis, and incorrect punctuation/style). The document is an academic-style introduction with plausible citation formatting mistakes consistent with the specified category and constraints, and the spans contain only the citation text."
+    "reason": "The document is academic in style with standard in-text citations. The provided span is only the citation text and contains a realistic formatting error (missing closing parenthesis): '(Smith and Jones, 2019'. This aligns with the 'Format' category and is plausible under common citation styles."
   },
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
     "document": 1,
-    "reason": "All highlighted items are solely citation text (or parts of citations) and each exhibits a clear formatting issue consistent with the 'Format' category: missing commas or parentheses, mismatched brackets, truncated year, narrative citation missing year, extra punctuation, or wrong parenthetical/narrative form. The document itself follows an academic style with parenthetical author\u2013year citations and introduces realistic, plausible formatting mistakes aligned with the paper\u2019s citation style."
+    "reason": "The span is only the citation text and contains a realistic formatting error for a narrative citation (extra comma: 'Smith et al., (2018)' should be 'Smith et al. (2018)'). The document is academic-style prose with a plausible citation context, and the formatting issue is appropriately highlighted in the citation itself."
   },
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
     "document": 1,
-    "reason": "All spans are citation-only and exhibit clear formatting issues (e.g., missing brackets, wrong parenthetical vs. narrative style, truncated year, mismatched punctuation), matching the 'Format' category. The document is an academic Related Work section with plausible in-text citations and realistic formatting mistakes, consistent with the example\u2019s style and structure."
+    "reason": "The span is only the in-text citation and includes a realistic formatting error (truncated year '20') consistent with the paper\u2019s citation style. The document reads like academic prose and embeds the citation parenthetically, matching the example structure. Thus both meet the 'Format' issue criteria."
   },
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
     "document": 1,
-    "reason": "The document is a realistic academic Related Work section and includes plausible citation formatting mistakes consistent with the category. Each span highlights a citation (or minimal surrounding token like 'In' that demonstrates wrong narrative vs. parenthetical style) with a clear format issue: wrong style (e.g., 'In (Min et al., 2021a)'), misuse of footnote ('Chen et al. 1'), mismatched or missing brackets ('(Karpukhin et al., 2020]'; 'Raffel et al. (2019'; '(Izacard and Grave, 2020b'), truncated year ('(Lewis et al., 20)'), missing year in narrative ('Sutskever et al.'), stray closing parenthesis ('Gu et al., 2016)'), and narrative without proper parentheses ('Luong et al., 2014'). All spans are limited to the citation text or the essential token indicating the formatting issue, aligning with the examples and constraints."
+    "reason": "The span is only the citation text and exhibits a realistic formatting error (extra opening/missing closing parenthesis), which fits the 'Format' category. The document uses an academic author\u2013year style, and the mistake is plausible within that style."
   },
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
     "document": 1,
-    "reason": "All spans are citation-only strings exhibiting realistic formatting errors (e.g., missing closing bracket, missing comma before year, wrong narrative vs. parenthetical style, truncated year). The document resembles the example\u2019s style with inline author\u2013year citations and contains multiple plausible formatting issues throughout, matching the 'Format' category and constraints."
+    "reason": "The span is only the citation text and contains a realistic formatting error ('Taylor et al. 1') consistent with wrong footnote usage, matching the provided examples. The document is academic in style and includes the misformatted citation in a plausible context, satisfying the category-specific constraints for 'Format'."
   },
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
     "document": 1,
-    "reason": "All spans are only citation texts and each exhibits a clear, plausible formatting issue (e.g., missing comma/year/parenthesis, extra parenthesis, wrong bracket type, narrative citation missing year), consistent with an author\u2013year style. The document is an academic introduction with in-text citations and realistic formatting mistakes, matching the example style and constraints."
+    "reason": "The span is only the citation text and exhibits realistic formatting mistakes: it is missing the closing parenthesis and is used in the wrong style (parenthetical citation immediately after 'in' rather than narrative). The document is an academic-style introduction similar to the examples and incorporates the malformed citation in-context, keeping it plausible under common citation styles."
   },
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
       1
     ],
     "document": 1,
-    "reason": "Most spans correctly isolate the citation text and exhibit plausible formatting issues (missing brackets/parentheses, truncated years, wrong narrative vs. parenthetical style, spacing after semicolons). Two spans are unsuitable: 'Vaswani et al.' is only a partial fragment of a larger parenthetical citation and, by itself, does not clearly manifest the formatting issue; '(Peters et al., 2018)' is correctly formatted and shows no issue. The document overall fits the academic style and includes realistic formatting mistakes consistent with the 'Format' category."
+    "reason": "The span is only the citation text and exhibits a realistic formatting error: a narrative use without proper parentheses (written as 'Chen et al., 2018' instead of 'Chen et al. (2018)' or '(Chen et al., 2018)'). This matches the 'Format' category (wrong citation style). The document reads like academic related work, and the style/structure are plausible and similar to the examples while containing a believable formatting mistake."
   },
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
     "document": 1,
-    "reason": "All highlighted spans are only the citation text and each contains a clear formatting error consistent with the 'Format' category (e.g., missing bracket, mismatched brackets, wrong citation style via 'in (Author, Year)', truncated years, missing comma before year, narrative citation missing year, extra parenthesis). The document as a whole plausibly follows an author\u2013year style while introducing realistic citation formatting mistakes, matching the examples."
+    "reason": "The span is only the citation text and contains realistic formatting mistakes (truncated year and missing closing parenthesis) consistent with the 'Format' category. The document uses academic style with parenthetical citations, making the flawed citation plausible under the paper\u2019s style. Thus both the span and document meet the constraints."
   },
   {
     "spans": [
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and shows a clear formatting error (author-name with a footnote-style number instead of a year), matching the 'Format' category. The document reads like an academic related work section and plausibly includes this flawed citation, maintaining a style and structure similar to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text and clearly shows a formatting error (missing closing parenthesis/trailing comma), fitting the 'Format' category. The document is academic in style with author\u2013year citations and plausibly introduces a realistic formatting mistake, similar to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error: in the multi-citation '(Liu et al., 2021; Zhang)', 'Zhang' lacks a year, which violates the citation style. The document is academic, uses parenthetical citations similar to the examples, and the mistake is plausible under typical styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error by including 'T5' without author/year alongside a standard parenthetical citation, which fits the 'Format' issue. The document is academic in style and plausibly uses parenthetical citations, introducing the intended formatting mistake consistent with the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (truncated year '202' after a semicolon), fitting the 'Format' category. The document is academic in style and uses parenthetical citations consistent with the example; the included malformed citation is plausible under the paper\u2019s citation style. Therefore, both the span and document are suitable."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a clear formatting error (a dangling 'and' within a parenthetical citation, suggesting a truncated second reference), which is plausible under the document\u2019s citation style. The document is academic in style, uses similar citation conventions to the examples, and the malformed citation appears appropriately within the narrative."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (a dangling/missing bracket and incomplete second citation) consistent with the 'Format' category. The document is an academic-style paragraph using parenthetical citations, making the error plausible and aligned with the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error for a narrative citation (missing parentheses around the year: should be 'Garcia et al. (2018)'). The document is academic in style and integrates the malformed citation plausibly, matching the examples and category constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and highlights a clear formatting error ('Vastwani et al. 1' uses a footnote-like number without a year), matching the 'Format' category examples. The document is academic in style and plausibly uses author-year conventions, with the introduced mistake fitting the required realistic formatting issues."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), fitting the 'Format' category. The document is academic in style and includes this plausibly styled but malformed citation, consistent with the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains clear formatting issues (truncated year and missing closing parenthesis) consistent with the 'Format' category. The document is academic, uses parenthetical author-year style similar to the examples, and includes a plausible formatting mistake within that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error for a narrative citation (missing parentheses around the year: should be 'Singh et al. (2018)'). This matches the 'Format' category. The document is academic-style prose with a plausible author\u2013year citation style and includes the misformatted citation as required."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error (missing closing parenthesis/trailing comma), fitting the 'Format' category. The document is an academic-style paragraph with author\u2013year in-text citations and plausibly includes the same malformed citation, aligning with the example\u2019s style and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis/incorrect narrative vs parenthetical style: 'Smith et al., 2018)'). The document is an academic-style survey paragraph using author\u2013year citations, making the mistake plausible under the style and consistent with the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Garcia et al. 1' is only the citation text and exhibits a clear formatting error (wrong use of footnote number with a narrative citation and missing year), matching the 'Format' category. The document is academic in style and includes this realistic citation formatting mistake, keeping it plausible under typical styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly exhibits formatting issues (truncated year and missing closing parenthesis), matching the 'Format' category. The document is academic in style and uses in-text citations, with the malformed citation plausibly fitting the citation style while introducing realistic mistakes."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and shows a realistic formatting error: a narrative citation uses a comma-year without parentheses ('Vatswani et al., 2019') instead of 'Vatswani et al. (2019)'. The document is an academic-style paragraph where this mistake is plausible and consistent with the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), fitting the 'Format' issue definition. The document is an academic-style paragraph using parenthetical citations consistent with the examples and plausibly follows the same citation style, while incorporating the intentional formatting mistake."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error for the 'Format' category: a narrative citation missing parentheses around the year ('Gonzalez et al. 2017' should be 'Gonzalez et al. (2017)'). This aligns with plausible academic citation style. The document context supports this format issue and matches the example style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and represents a realistic formatting issue (wrong narrative vs parenthetical style used after 'In'). The document is academic in style and includes this plausible formatting mistake under an author-date citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (truncated year: '20' instead of a full year), fitting the 'Format' category. The document uses a plausible academic style with parenthetical citations, and the introduced mistake is consistent with the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting issue for an author\u2013year style (missing comma before the year: '(Smith and Lee 2021)' vs. '(Smith and Lee, 2021)'), making it a valid 'Format' error. The document is academic in tone and structure, uses in-text citations similar to the examples, and the included citation error is plausible within the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits clear formatting issues (missing closing parenthesis, inconsistent style for 'Peters 2018' lacking comma/parenthetical form). The document is a standard academic related-work section with in-text citations, matching the example style, and the introduced citation formatting error is plausible within that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis and incomplete 'see also' within the parenthetical), fitting the author\u2013year style used in the document. The document itself is a plausible academic introduction and includes the malformed citation consistent with the specified format issue."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is solely the citation text and contains realistic formatting errors (truncated year '14' for 2014 and a missing closing parenthesis), consistent with an author\u2013year style. The document is an academic-style paragraph with citations, mirroring the example structure and appropriately embedding a format error in the citation."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the in-text citation text and shows clear formatting issues typical for the 'Format' category: narrative citations missing years and a truncated 'et al.' ('Ein-Dor et'). The document is academic in tone and structure, and includes a realistic citation formatting mistake that is plausible under common citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting issues: missing closing parenthesis and inconsistent author\u2013year formatting for 'Radford 2018'. The document is an academic-style introduction with parenthetical citations, matching the examples and plausibly following a typical citation style while exhibiting the targeted formatting error."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), fitting the 'Format' category. The document uses an author\u2013year parenthetical style and includes the same plausible formatting mistake in context, aligning with the examples and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text and clearly shows a formatting error (footnote-like '1' instead of year/parenthetical), matching the 'Format' category. The document is academic in style and includes this plausible citation formatting mistake, consistent with the provided constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is academic in style and includes a realistic formatting mistake: using a parenthetical citation after the preposition 'in' (\u201cAs discussed in (Kumar et al., 2018)\u201d) instead of a narrative form. The span provided is only the citation text '(Kumar et al., 2018)', which is the element where the format issue occurs (wrong narrative vs parenthetical usage), satisfying the requirement that spans be only the citation text. The mistake is plausible under common citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated year and missing closing parenthesis) in a narrative citation, which fits the 'Format' category. The document is academic-style and integrates the faulty citation plausibly within its style, satisfying the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error (unmatched closing parenthesis/missing opening bracket and wrong narrative vs. parenthetical style). The document is academic in style and includes the improperly formatted citation in a plausible context, matching the format-issue category."
+  },
+  {
+    "spans": [
+      0
+    ],
+    "document": 1,
+    "reason": "The document is a plausible academic text and includes a wrong narrative/parenthetical usage ('In (cf. \u2026)'), which fits the Format category. However, the provided span contains only the parenthetical citation, which by itself is well-formed and does not exhibit a clear formatting error (e.g., missing bracket, truncated year, or wrong style within the citation). The formatting issue stems from the preceding 'In ', which is not included in the span, so the span does not correctly capture the error."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span isolates only the citation text and contains realistic formatting errors (missing closing parenthesis, inclusion of \u2018cf therein also\u2019 inside the parenthetical), which fits the Format category. The document is academic-style with inline citations consistent with the examples, and the malformed citation remains plausible under a typical author\u2013year style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text from the sentence and exhibits clear formatting issues consistent with the 'Format' category: narrative citations missing years, inconsistent punctuation ('Chen, Kim'), and semicolon-separated author list used as narrative text. These are plausible mistakes under an author\u2013year style. The document has an academic tone and structure similar to the examples, and the citation appears within it appropriately."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits realistic formatting mistakes (truncated years: '201', '20', '202'; misplaced 'cf.'), while keeping the overall parenthetical author\u2013year style plausible. It highlights the entire problematic citation. The document is academic in style, uses similar citation conventions as the examples, and includes the malformed citation within a typical related-work context."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits clear formatting issues (author names followed by footnote-style numbers and 'supra' without years or brackets), matching the 'Format' category. The document is academic in style and plausibly includes this malformed citation, satisfying the constraints."
+  },
+  {
+    "spans": [
       1,
       0
     ],
     "document": 1,
-    "reason": "Most spans correctly isolate citation text and exhibit clear formatting issues (missing brackets, mismatched brackets, truncated year, missing comma, extra parenthesis, incomplete multi-citation). Two spans '(Graham et al., 2009)' are contextually wrong due to narrative-vs-parenthetical style triggered by the preceding 'In', but the span itself is a valid parenthetical citation; thus those spans are unsuitable. The document overall mirrors the example style and contains multiple realistic citation formatting mistakes consistent with the target category."
+    "reason": "Span 1 correctly isolates a citation with a clear formatting error (missing closing parenthesis), which fits the 'Format' category. Span 2 only highlights a correctly formed parenthetical citation; the actual formatting issue is the wrong citation style caused by the preceding 'in', so the span should have included 'in (Lopez et al., 2017)'. The document itself is plausible academic prose using author\u2013year style and includes realistic citation-format mistakes (missing bracket and wrong narrative/parenthetical usage), matching the category\u2019s intent."
   },
   {
     "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1,
       1
     ],
     "document": 1,
-    "reason": "All highlighted spans are only citation texts and each contains a clear formatting issue (missing year in narrative, wrong parenthetical use after a preposition, missing bracket, truncated year, missing comma/period in et al., trailing semicolon, nested narrative citation inside parentheses, footnote-like number). The document is an academic-style text with citations and includes realistic, plausible formatting mistakes consistent with the category definition."
+    "reason": "Both spans isolate only the citation text and introduce realistic formatting mistakes consistent with an author\u2013year style. '(Khan A. and Zhou, 2016' has a missing closing parenthesis (formatting/bracket error), and 'Wang et al. 1' incorrectly uses a footnote-style number in a narrative citation instead of a year. The document is academic in style and integrates these citations similarly to the provided examples."
   },
   {
     "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit realistic formatting errors consistent with the 'Format' category: '(Miller J. and Rao, 2015)' shows wrong citation style in context (narrative cue 'According to' followed by a parenthetical), and '(Cho et al., 2018' is missing the closing parenthesis. The document overall follows academic style and plausibly introduces these formatting mistakes, matching the constraints."
+  },
+  {
+    "spans": [
+      1,
+      0
+    ],
+    "document": 1,
+    "reason": "Span 1 is only the citation text and contains a realistic formatting error (missing closing parenthesis and unconventional author initial), fitting the 'Format' issue. Span 2 does not match the document text (the document lacks the closing parenthesis and shows wrong style), so it fails to capture the formatting issue. The document itself is academic in style and includes plausible citation formatting mistakes consistent with the category."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting errors under an author\u2013year style: a narrative citation missing the year (\u201cde la Cruz et al.\u201d) and a parenthetical citation with a truncated year (\u201c(Almeida et al., 20)\u201d). The document is academic in style and uses author\u2013year citations, making these issues plausible and consistent with the provided category definition."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text and exhibits a realistic formatting error: a parenthetical citation used after a narrative cue ('According to'), which should be narrative style (e.g., 'Li, Zhang, and Kumar (2020)'). This matches the 'wrong citation style' example. The document reads like an academic text and integrates the citation plausibly, aligning with the example documents."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting issue (missing closing parenthesis), which is a realistic citation formatting mistake under a parenthetical style. The document is academic in tone and structure with in-text citations, matching the example style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis and narrative vs parenthetical mismatch), matching the 'Format' category. The document is academic in style and plausibly includes this citation mistake within context, aligning with the example documents and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (truncated year \u201c20\u201d), and, in context, also reflects wrong citation style (used parenthetical after 'in' instead of narrative). The document resembles academic prose and uses an author\u2013year style, making the error plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and highlights a formatting issue: it is used in the wrong style following the preposition 'In', which should be narrative (e.g., 'In Garcia, Patel, and Singh (2021)'). This matches the 'Format' category. The document reads like an academic paper and plausibly includes this realistic formatting mistake while remaining consistent with a typical author\u2013year citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document resembles an academic related work section with in-text citations. The span is only the citation text and contains a realistic formatting error (missing opening parenthesis, resulting in incorrect parenthetical style: 'Raffel et al., 2019)'). This matches the 'Format' issue definition and is plausible under common citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is academic in tone and structure and includes a realistic citation formatting mistake. The span is only the citation text, and the formatting issue is wrong citation style: it appears parenthetically after 'According to', which should be narrative (i.e., 'According to Vatswani et al. (2019)'). This matches the 'Format' category and remains plausible under the paper's citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) in a narrative citation, which fits the 'Format' category. The document is academic in style and uses citations plausibly, introducing the formatting mistake consistently with the paper's style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a clear formatting error (improper footnote-style '1' after a narrative author list), which fits the 'Format' category. The document is academic-style prose and the mistake is plausible within its citation style, satisfying the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting issues: a truncated year ('13' instead of '2013') and the wrong citation style (parenthetical used after 'by' where narrative is expected). The document resembles an academic paper using author\u2013year citations, making the mistake plausible under the style."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "The document is academic and uses a consistent citation style with plausible formatting mistakes. Span 1 '(Vaswani et al., 201)' clearly exhibits a truncated year, a formatting error. Span 2 '(Brown et al., 2020)' appears in the text as 'as shown in (Brown et al., 2020)', which is a wrong narrative vs. parenthetical style; highlighting the citation itself satisfies the constraint that spans be only the citation text while still indicating the formatting issue. Overall, both spans and the document meet the 'Format' category and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans exhibit citation formatting issues consistent with the paper\u2019s author\u2013year style. 'Nguyen et al. 1' is a narrative citation with an improper footnote-like number and missing year. '(Klein and Nabi, 2018' is missing the closing parenthesis. The document is academic and uses author\u2013year citations elsewhere, making these realistic, plausible formatting mistakes, and the spans contain only the citation text."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only citation texts and contain realistic formatting mistakes: '(Oono and Suzuki, 2020)' uses parenthetical style where narrative is required after 'according to', and 'Smith et al., 2020)' is missing the opening parenthesis. The document overall follows typical academic style with APA-like citations and plausibly introduces these formatting errors, satisfying the constraints."
+  },
+  {
+    "spans": [
       0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
     "document": 1,
-    "reason": "Most spans isolate citation text and contain realistic formatting errors (missing/mismatched brackets, truncated year, wrong narrative vs. parenthetical style, missing comma, footnote-like numeral). One span '(Ahmad et al., 2019)' is correctly formatted and thus not a format issue. The document resembles an academic Related Work section and plausibly uses a parenthetical author\u2013year style while introducing deliberate, realistic citation-format mistakes."
+    "reason": "The document follows academic style with realistic citation formatting mistakes (e.g., truncated years, missing bracket, wrong narrative/parenthetical usage), so it is suitable. Span 1 '(Levesque et al., 1)' is not suitable because it does not exactly match the document text (it adds a closing parenthesis that is missing in the document and omits the preceding 'in' that signals the wrong style). Span 2 'Johnson et al. (202' is suitable: it is only the citation text and highlights a clear formatting error (truncated year/missing bracket) present in the document."
   },
   {
     "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are isolated citation texts exhibiting realistic formatting errors under an author\u2013year style: a missing closing parenthesis '(LeCun et al., 1998' and an improper narrative/footnote-like form 'Chung et al. 2' lacking a year. The document is an academic-style paragraph consistent with the example format, predominantly using parenthetical author\u2013year citations, making the introduced errors plausible."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), fitting the 'Format' category. The document is academic in style with parenthetical author\u2013year citations, and the introduced error is plausible under that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis/comma; ambiguous style), matching the 'Format' category. The document is academic in style and plausibly uses author\u2013year citations, with the malformed citation integrated into the text."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis/mismatched parenthetical style). The document is academic and uses an author\u2013year style, making the flawed citation plausible and fitting the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), which fits the 'Format' category. The document is academic in style and includes this plausible citation formatting mistake, aligning with the constraints and examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and shows a realistic formatting error (missing closing parenthesis) in a narrative citation, fitting the 'Format' category. The document is an academic-style paragraph with in-text citation usage, and the mistake is plausible under that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) within a parenthetical citation, fitting the 'Format' category. The document is an academic-style text with in-text citations, matching the example structure and style, and the error is plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span isolates only the citation text and contains a realistic formatting error (missing closing parenthesis and stray comma) in a narrative author\u2013year style, fitting the 'Format' category. The document is an academic survey-style text with in-text citations, similar to the examples, and plausibly uses author\u2013year style while introducing the intended formatting mistake."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and shows a realistic formatting error (missing closing parenthesis) in a parenthetical citation. The document is academic in style and plausibly uses an APA-like citation format, with the introduced mistake fitting the 'Format' issue definition."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains clear formatting issues (mixed narrative/parenthetical style and a missing closing parenthesis: 'Ein-Dor et al. (2020; Shelmanov, 2021'). This matches the 'Format' category. The document is an academic-style review with a plausible citation style and includes the malformed citation in context, similar in style/structure to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is academic in style and includes a citation with a realistic formatting error. The span contains only the citation text, and it exhibits a clear format issue (missing parentheses/comma and incorrect use of a colon: 'Howard and Ruder 2018: p. 3'), aligning with the 'Format' category. This matches the structure and intent of the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) consistent with the document\u2019s citation style. The document is academic in style and plausibly includes this citation formatting issue, fitting the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Klein et al. 1' is only the citation text and clearly exhibits a formatting issue (wrong use of footnote number and missing year) consistent with the 'Format' category examples. The document is academic in style and includes a plausible citation mistake under an otherwise narrative citation context, matching the constraints and similarity to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error (missing opening parenthesis), fitting the 'Format' issue definition. The document is written in an academic style similar to the examples and plausibly uses parenthetical citations, with the introduced formatting mistake remaining consistent with that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (truncated year and missing closing parenthesis) consistent with the 'Format' category. The document is an academic-style text and plausibly uses narrative citations; it includes the malformed citation, satisfying the constraint to introduce realistic formatting mistakes while remaining plausible under the paper's style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits clear formatting issues (truncated year and missing closing parenthesis), which fits the 'Format' category. The document is styled like an academic survey and uses an APA-like parenthetical citation, making the introduced mistake plausible within the paper's citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting mistake (missing closing parenthesis) consistent with the paper\u2019s parenthetical author\u2013year style. The document is academic in style and includes the flawed citation plausibly within the text, matching the 'Format' issue definition."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly shows a formatting issue (wrong footnote-like numbers instead of years; inconsistent with author\u2013year style), matching the 'Format' category. The document is academic in tone and structure, and the introduced citation error is realistic and plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated years and missing closing parenthesis) in a parenthetical multi-citation, matching the 'Format' issue definition. The document is academic in style, uses author\u2013year parenthetical citations, and the erroneous citation is plausible within that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting issue (missing years in an author\u2013year parenthetical citation). The document is academic in style and includes citations consistent with the examples, with a plausible formatting mistake introduced."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated year and missing closing parenthesis) consistent with the paper\u2019s citation style. The document is academic in tone and structure with parenthetical citations similar to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span '(Chen et al., 2020' is only the citation text and includes a realistic formatting error (missing closing parenthesis), fitting the 'Format' category. It remains plausible under the document's citation style. The document is an academic-style introduction and contains the cited formatting issue in context, aligning with the provided constraints and examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Garcia et al. 1' is only the citation text and clearly shows a formatting error (missing year and a footnote-like number), matching the 'Format' category. The document is written in an academic style consistent with the examples, and the introduced mistake is a plausible deviation under an author\u2013year citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated year '20' and missing closing parenthesis), fitting the 'Format' category. The document is academic in style and uses a plausible citation style, with the flawed parenthetical citation appearing naturally in context. Overall, both span and document satisfy the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis and wrong narrative style: 'Nguyen et al., 2017)'). The document is academic in style, uses author\u2013year citations similar to the examples, and includes a plausible formatting mistake consistent with the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error for a narrative citation: 'Lee et al., 2019' should be 'Lee et al. (2019)'. This matches the 'Format' issue definition (wrong style/missing brackets). The document is an academic-style paragraph with an in-text citation context similar to the examples, making it suitable."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting error (missing closing parenthesis), fitting the 'Format' category. The document is academic in style, uses parenthetical citations consistent with the examples, and the introduced mistake is plausible under that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Nguyen et al. 1' is only the citation text and exhibits a clear formatting error (mixing author-year with a numeric footnote/reference), matching the 'Format' category. The document is academic in style and plausibly includes this realistic citation formatting mistake, consistent with the provided examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis and mixed narrative/parenthetical style: 'Raffel et al., 2019)'). The document is academic in style and the error is plausible under common author\u2013year citation styles, matching the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting issues (truncated year and missing closing parenthesis), fitting the 'Format' category. The document is academic in style and uses an author-year citation style, with the introduced error plausible within that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error: it is used narratively without parentheses while keeping the parenthetical comma-year form ('in Garcia et al., 2020'), which should be either 'Garcia et al. (2020)' or '(Garcia et al., 2020)'. This aligns with the 'Format' category (wrong citation style/missing brackets). The document is academic in tone and structure and includes this malformed citation similarly to the provided examples, satisfying the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is an academic-style introduction and includes a single citation with a realistic formatting error. The span 'Garcia et al., 2020' is only the citation text and exhibits a format issue: in a narrative context it should be 'Garcia et al. (2020)' rather than using a comma-year without parentheses. This aligns with the 'Format' category requirements and is plausible under common citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis and mixed narrative/parenthetical style: 'Raffel et al., 2019)'). The document is an academic Related Work section similar to the examples and plausibly uses an author\u2013year style, making the formatting issue appropriate."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) that fits the paper\u2019s parenthetical citation style. The document context uses standard academic prose with an in-text parenthetical citation, making the introduced error plausible and aligned with the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting mistakes (truncated year and missing narrative parentheses), fitting the 'Format' category. The document is academic in style and plausibly uses author\u2013year citations, matching the examples and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting issue (footnote-like '1' after 'Lee et al.' instead of a year or proper citation), matching the 'Format' category. The document is an academic-style introduction with a plausible malformed citation, consistent with the examples and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a clear formatting error (missing closing parenthesis) within an author\u2013year parenthetical citation, which is plausible under the paper\u2019s style. The document is an academic text similar to the examples and includes citations in a consistent style, with the highlighted span reflecting a realistic formatting issue."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only citation text and shows realistic formatting errors (missing opening parentheses and lacking proper separation), matching the paper\u2019s author-year parenthetical style. The document overall follows an academic style consistent with the examples, using similar citation conventions with one intentionally malformed citation segment."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly exhibits formatting issues (footnote-style numbers and missing years) inconsistent with the document\u2019s predominant author\u2013year parenthetical style, matching the 'Format' category (e.g., wrong use of footnotes). The document itself is academic with consistent in-text citations elsewhere, making the introduced mistake plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits clear formatting errors (truncated years and missing closing parenthesis) consistent with the 'Format' category. The document follows an academic style with author\u2013year parenthetical citations, making the erroneous citation plausible within the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (mismatched bracket and wrong bracket style versus the document\u2019s parenthetical style). The document is an academic-style text consistently using parenthetical citations elsewhere, making the introduced format error plausible and clearly identifiable."
+  },
+  {
+    "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are solely citation texts and clearly exhibit formatting issues consistent with the 'Format' category: 'Smith et al., 2019)' is missing an opening bracket, and 'Lee et al 2021' uses incorrect narrative style (missing period after 'al.' and missing parentheses around the year). The document is academic in tone and uses an author\u2013year citation style similar to the examples, with realistic, plausible formatting mistakes introduced."
+  },
+  {
+    "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and exhibit realistic formatting errors consistent with author\u2013year styles: 'Zhang et al., 2020)' lacks the opening parenthesis, and 'Wang et al 2019' uses narrative style without the required parentheses/period (should be 'Wang et al. (2019)'). The document is an academic-style paragraph with in-text citations and plausible mistakes, matching the category definition and constraints."
+  },
+  {
+    "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are citation texts only and exhibit realistic formatting mistakes: 'Pearl et al., 2009)' is missing the opening parenthesis, and 'Robins et al 2000' lacks parentheses and punctuation for narrative style (should be Robins et al. (2000)). The document is academic in style and uses author\u2013year citations with plausible formatting errors, matching the category and example structure."
+  },
+  {
+    "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting errors fitting the 'Format' category: 'Howard et al., 2017)' is missing the opening parenthesis; 'Rossi et al 2022' lacks the period after 'al.' and proper parentheses/comma for the year. The document is an academic-style paragraph with in-text citations and plausible formatting mistakes consistent with the paper\u2019s citation style, similar to the examples."
+  },
+  {
+    "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain realistic formatting errors: missing opening parenthesis in 'Sennrich et al., 2016)' and narrative citation missing year parentheses/punctuation in 'Nguyen et al 2020'. The document\u2019s style is consistent with an APA-like parenthetical/narrative mix, making these errors plausible and aligned with the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Zhang et al.' is only the citation text and exhibits a clear formatting issue for the Format category: a narrative citation missing the year (it should be 'Zhang et al. (YYYY)'). The document otherwise follows a consistent author\u2013year citation style with predominantly parenthetical citations, making the mistake plausible and aligned with the paper\u2019s style, similar to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document uses a consistent author\u2013year parenthetical style, and the provided span 'Klein et al.' is a narrative citation missing the year, matching a realistic formatting mistake for this style. The span is only the citation text and highlights the full problematic citation, aligning with the 'Format' category definition and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Nguyen et al.1' is only the citation text and exhibits a clear formatting issue (wrong footnote-style numeral and missing year in a narrative citation), matching the 'Format' category. The document overall uses consistent author-year parenthetical citations, with a single plausible formatting mistake, aligning with the constraints and resembling the example documents."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Lopez and Tan' is only the citation text and presents a realistic formatting issue (narrative citation missing the year) consistent with the document\u2019s citation style, which otherwise uses parenthetical citations with author(s) and year. The document resembles the example structure and includes a plausible formatting mistake for the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span '(Patel et al.)' is only the citation text and contains a clear formatting error (missing year) under an author\u2013year style, which matches the 'Format' category. The surrounding document consistently uses parenthetical author\u2013year citations, making the missing year a realistic, plausible mistake within the paper\u2019s citation style. Thus both the span and document satisfy the constraints."
+  },
+  {
+    "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting issues: '(Garcia, Patel, and Wong, 2018' is missing the closing parenthesis, and 'Lopez et al., 2020)' appears without an opening parenthesis in a narrative context (wrong style/missing bracket). The document is academic in tone and structure, integrating citations similarly to the examples, and the introduced mistakes are plausible under a standard parenthetical citation style."
+  },
+  {
+    "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only citation text and contain clear formatting mistakes consistent with the 'Format' category: a missing closing parenthesis and incorrect style in '(Nguyen, Alvarez, and Chen, 2016', and a narrative-style citation missing parentheses with a truncated year in 'Zhao et al., 20'. The document is academic in style and plausibly uses an author\u2013year citation style, with realistic formatting errors introduced, matching the examples."
+  },
+  {
+    "spans": [
       1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting errors: '(Huang, Singh, and Li, 2017' is a parenthetical citation missing the closing bracket, and 'Park et al. 1' is an improper footnote-style/narrative citation missing the year. The document is academic in style, uses in-text citations, and the introduced mistakes are plausible under the citation style, matching the 'Format' category requirements."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain clear formatting errors: the first is missing a closing parenthesis, and the second is truncated and uses the wrong citation style (missing parentheses/narrative structure). The document is academic in style and plausibly introduces these formatting mistakes, consistent with the examples and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain realistic formatting errors: one missing a closing parenthesis '(Miller, Brown, and Davis, 2015' and one missing an opening parenthesis 'Chen et al., 2022)'. The document is an academic-style paragraph with inline citations, matching the example structure and plausibly following a typical author\u2013year style while exhibiting citation formatting issues appropriate for the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation and contains a realistic formatting error (misused separator '2020a;,' between multiple citations), fitting the 'Format' issue definition. The document is academic in tone and structure, uses in-text citations similar to the examples, and plausibly reflects the chosen citation style with the introduced mistake."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and includes a realistic formatting error (missing closing parenthesis). The document is academic in style and uses parenthetical citations consistent with an APA-like style, with the introduced mistake being plausible. The span highlights the entire faulty citation, matching the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains clear formatting issues consistent with the 'Format' category: wrong citation style by including 'In' inside a parenthetical citation and a missing comma in 'see Johnson 2018' (should be 'Johnson, 2018'). The document is an academic-style paragraph with in-text citations, matching the structure of the examples. The mistakes are realistic and plausible under an author-year style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and includes realistic formatting mistakes (mixed narrative/parenthetical style, missing commas/parentheses: 'BERT Devlin et al. (2019); RoBERTa Liu 2019'). The document is an academic-style paragraph where such citations are plausible, matching the example structure and satisfying the 'Format' category requirements."
+  },
+  {
+    "spans": [
+      0
+    ],
+    "document": 1,
+    "reason": "The document is a plausible academic text and includes a realistic citation formatting error ('Vastwani et al. 1'), matching the category. However, the provided span is not only the citation text; it also includes surrounding words ('see also prior work'), violating the constraint that spans must be only the citation."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are citation-only fragments that exhibit realistic formatting errors consistent with the paper\u2019s style: missing closing parenthesis and, in the second span, a missing comma before the year and use of parenthetical style after a preposition. The document is academic in tone and structure, and the introduced mistakes (missing bracket, mixed citation style) are plausible under an APA-like citation format."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain clear formatting issues: 'Garcia et al. 1' misuses a footnote number and omits the year, and '(O'Connor et al., 2014; Patel et al., 15' has a truncated year and missing closing parenthesis. These are realistic, style-consistent mistakes. The document is academic in tone, uses parenthetical citations, and plausibly incorporates such formatting errors."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting errors under an APA-like style. 'Zhang et al., 2020' is a narrative citation using parenthetical style (should be 'Zhang et al. (2020)'). 'Smith et al. (2015; Jones et al., 2016)' improperly mixes narrative and parenthetical formats (should be either 'Smith et al. (2015) and Jones et al. (2016)' or '(Smith et al., 2015; Jones et al., 2016)'). The document is an academic-style text with in-text citations and plausibly introduces these formatting mistakes, satisfying the constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting issues. Span 1 has a missing closing parenthesis '(Lee and Kim, 2019', which fits the Format category. Span 2 '(Anderson 2012; Brown et al., 2013; Clark 2014)' is citation-only and exhibits formatting inconsistencies (missing commas after single-author names) and appears in a wrong style context ('in ( ... )'), making it a valid formatting issue. The document overall uses plausible author\u2013year style, and the introduced mistakes are realistic and consistent with the task constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans consist only of the citation text and exhibit realistic formatting issues aligned with the 'Format' category: 'Miller et al., 202' shows a truncated year and incorrect narrative/parenthetical mix, while '(Souza et al., 2011; Wang and Li 2012' has a missing closing parenthesis and a missing comma before the year. The document is an academic-style survey with author\u2013year citations, making the mistakes plausible under the paper\u2019s citation style and similar to the provided examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text and exhibits a realistic formatting error (missing closing parenthesis). The citation style matches an author\u2013year parenthetical format, making the error plausible. The document is academic in tone and structure with in-text citations, similar to the examples, and includes the malformed citation appropriately highlighted as the span."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly shows a formatting error ('Rao et al. 1') consistent with wrong footnote/numeric use and missing year, matching the 'Format' category. It highlights the entire problematic citation. The document is academic in style and includes this plausible citation formatting mistake within an author\u2013year context, aligning with the examples and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly shows a formatting issue (truncated year and missing closing parenthesis) consistent with the 'Format' category. The document is academic in style and plausibly uses author\u2013year citations, introducing a realistic formatting mistake in line with the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error: a missing opening parenthesis for a parenthetical citation ('Lee et al., 2020)'). This matches the 'Format' issue definition (missing bracket/wrong citation style). The document reads like an academic paper and places the faulty citation in a plausible context, consistent with the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error for a narrative citation (missing parentheses and comma around the year: 'Gomez et al. 2020' should be 'Gomez et al. (2020)' or similar per style). The document is academic-like and includes this improperly formatted citation in context, making it plausible and consistent with the category 'Format'."
+  },
+  {
+    "spans": [
+      0
+    ],
+    "document": 1,
+    "reason": "The document is academic and includes a realistic formatting error consistent with the 'Format' category: 'In (Hamilton, Ying, and Leskovec, 2017)' uses the wrong citation style (parenthetical after a preposition), similar to the provided examples. However, the provided span '(Hamilton, Ying, and Leskovec, 2017)' on its own is a valid parenthetical citation and does not include the contextual 'In' that makes it a formatting issue, so the span does not clearly capture the formatting error."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text and presents a realistic formatting error (missing closing parenthesis), fitting the 'Format' category. The document is academic in style with author\u2013year citations, making the mistake plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is a narrative citation consisting only of the author names and is missing the publication year, which is a valid citation formatting issue for the 'Format' category. It is presented as only the citation text (no surrounding sentence) and is plausible under an author\u2013year style where the year is required. The document reads like an academic survey-style paragraph similar to the examples and appropriately contains a citation-like mention with a formatting error."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and includes a realistic formatting error (truncated year '19', and potentially awkward parenthetical style after a preposition). The document is academic in style and the malformed in-text citation is plausible within its citation style, matching the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is in an academic style and includes a citation with a formatting error. The span is only the citation text and highlights a realistic formatting issue (missing opening parenthesis/wrong style), which is plausible under an author\u2013year citation style. This matches the 'Format' category requirements."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors: it is used after 'in' with parenthetical style and includes 'Kim' without a year. The document is academic in style with inline citations, and the included citation error is plausible under the paper's style, matching the provided examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (missing closing parenthesis, missing space in 'p.12'), fitting the paper\u2019s author\u2013year style. The document is academic and uses citations similarly to the examples, with the introduced format issue appearing as a citation fragment, thus satisfying the category 'Format' constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly shows a formatting issue (truncated year: '22' instead of a full year), which fits the 'Format' category. The citation style (narrative with page number) is plausible for the paper\u2019s style. The document is academic, uses inline citations similar to the examples, and includes the malformed citation within context. Both span and document meet the specified constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a clear formatting issue (wrong style with the word 'In' inside a parenthetical citation). This aligns with the 'Format' category. The document is academic in style and structure, similar to the examples, and the introduced mistake is plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (same-author multi-year citation separated by a semicolon and missing the repeated author; also used parenthetical style after 'in'), which fits the 'Format' category. The document is an academic-style paragraph with citations and mirrors the example structure, including the wrong narrative vs parenthetical usage."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis) consistent with the paper\u2019s citation style. It highlights the problematic citation itself, matching the 'Format' category. The document is academic in tone and structure, and the introduced mistake is plausible and similar to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Lopez et al. 1' is only the citation text and exhibits a clear formatting issue (footnote-style number without year/parentheses), matching the 'Format' category examples. The document is academic in tone and structure, and the mistake is plausible under an author\u2013year citation style, similar to the provided examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly shows formatting issues (truncated year and missing parentheses/wrong citation style). The document is academic in tone and structure, and the mistake is a plausible citation-format error under an author\u2013year style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is academic in tone and structure, and includes an in-text citation. The span is only the citation text and exhibits a clear formatting error (missing opening parenthesis/wrong style: 'Garcia et al., 2021)' instead of 'Garcia et al. (2021)' or '(Garcia et al., 2021)'). This aligns with the 'Format' category and is plausible under common citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (using a numeral as a footnote/reference marker instead of a year/parenthetical form: 'Deng et al. 2'), matching the 'Format' category. The document is academic in style and plausibly includes a misformatted citation consistent with the examples and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) in a narrative citation style, which is plausible for the paper\u2019s style. The document is academic in tone and structure, and includes the cited text with the formatting issue, matching the 'Format' category requirements."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is an academic-style paragraph with in-text citation usage. The span is only the citation text and exhibits a realistic formatting error: it is parenthetical after the narrative lead-in 'According to', which should be narrative style (e.g., 'Zhang et al. (2016)'). This matches the 'Format' issue definition and is plausible under common citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis and incorrect narrative formatting: 'Garcia et al., 2020)' should be 'Garcia et al. (2020)'). The document is academic in style and structure, consistent with the examples, and the formatting issue appears as part of a citation, fitting the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Khan et al. 1' is only the citation text and exhibits a clear formatting issue (wrong use of footnote/number and missing year), matching the 'Format' category examples. The document is academic in style and the flawed citation is plausibly embedded within it, aligning with the constraints and example structure."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting issue (parenthetical used in a narrative context: 'introduced by (Hamilton et al., 2017)' should be 'introduced by Hamilton et al. (2017)'). This fits the 'Format' category. The document is an academic-style paragraph with plausible citation style and includes the intentional formatting mistake consistent with the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated after 'pp.' and missing closing parenthesis), which fits the 'Format' category. The document is academic in style, uses similar citation conventions to the examples, and plausibly incorporates the malformed citation."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is academic and uses in-text citations. The span is only the citation text and shows a realistic formatting error (truncated after 'sec.' and missing closing parenthesis), fitting the 'Format' category and plausible citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span consists solely of the citation text and contains a clear formatting error (missing closing parenthesis and truncated 'ch.'), which is a realistic mistake under an author\u2013year parenthetical style. The document is academic in tone and structure, and the malformed citation is plausibly integrated, matching the example style and the specified constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting mistakes (incomplete parenthetical with 'p.' and missing closing bracket), which fits the 'Format' issue definition. The document is an academic-style paragraph with in-text citations, similar to the examples, and plausibly uses a citation style like APA while introducing the intentional formatting error."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (missing closing parenthesis/bracket and an extraneous, truncated fragment 'def.'). It is plausible under a narrative citation style. The document itself is academic in tone and structure, and the highlighted issue is a citation formatting problem consistent with the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting error (missing closing parenthesis), which fits the 'Format' category. The document is an academic-style text with parenthetical citations; the introduced mistake is realistic and plausible under the citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits realistic formatting errors (includes 'BERT' improperly in a parenthetical citation, missing year for 'Liu et al.', and a missing closing parenthesis) while remaining plausible under a semicolon-separated parenthetical style. The document is an academic-style paragraph similar to the examples and contains the malformed citation, satisfying the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (missing parentheses/years, inconsistent style, and an author pair formatted as 'Li, Chen'). The document is academic in style and the citation string plausibly fits a parenthetical style but with formatting mistakes, matching the 'Format' issue definition."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text and exhibits clear formatting errors (footnote-like numbers without years, missing parentheses), matching the 'Format' category. The document is written in academic style and the citation error is plausible within such a context."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text and exhibits realistic formatting errors (missing opening parenthesis and mismatched closing parentheses), consistent with the document\u2019s author-year citation style. The document is academic in tone and structure with in-text citations, matching the example style. Therefore, both the span and document meet the 'Format' issue criteria."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain plausible formatting mistakes under an author\u2013year style: one is missing a closing parenthesis in a parenthetical multi-citation, and the other misuses footnote-style numbers in narrative citations. The document is an academic-style paragraph with citations consistent with the examples, and the highlighted spans represent formatting issues as defined."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting errors consistent with 'Format' issues: Span 1 wrongly mixes narrative and parenthetical styles in a single citation; Span 2 has mismatched/missing parentheses. The document is academic in style, uses a consistent citation convention similar to the examples, and plausibly introduces these formatting mistakes."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit clear formatting issues: Span 1 has an extra comma/semicolon and a missing closing parenthesis; Span 2 uses square brackets inconsistently with the paper\u2019s parenthetical style and is missing a closing bracket. The document is an academic-style paragraph with citations and plausibly introduced formatting mistakes, matching the category 'Format' and the example structure."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are citation-only excerpts that exhibit realistic formatting errors (missing bracket, embedded editorial text, mixed styles/inconsistent parentheses). The document is academic in style and integrates these flawed citations plausibly within its citation style, matching the category 'Format' and the provided examples."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are standalone citation texts containing realistic formatting errors (truncated year, mixed narrative/parenthetical style, missing closing parenthesis, missing comma), matching the 'Format' issue definition. The document is an academic-style paragraph with author\u2013year citations, and the included errors are plausible under that style. Therefore, both spans and the document satisfy the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error (missing closing parenthesis), consistent with the document\u2019s APA-like parenthetical style. The document is an academic text with citations and includes this plausible formatting mistake, matching the 'Format' issue definition and examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and shows a realistic formatting error (missing opening parenthesis), fitting the 'Format' category. The document follows an academic style with parenthetical citations, and the introduced mistake is plausible within that style, similar to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits realistic formatting errors (truncated year and missing closing parenthesis) in a narrative citation, fitting the 'Format' category. The document uses standard academic citation style elsewhere, making the error plausible under the paper\u2019s style and similar to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting error (missing opening parenthesis), which fits the 'Format' category. The document is academic in style with author\u2013year citations and includes a realistic formatting mistake consistent with the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document mirrors academic writing with consistent parenthetical citations like (Lester et al., 2021). The provided span is only the citation text and introduces a realistic formatting error by omitting the comma before the year: (Brown et al. 2020) vs the document\u2019s style (Brown et al., 2020). This fits the 'Format' issue definition and remains plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and corresponds to a realistic formatting error (parenthetical citation used after a preposition, which should be narrative). The document context explicitly shows the wrong citation style 'In (Smith and Lee, 2019)', matching the provided examples. The style is plausible and consistent with common academic formats. Thus both the span and document satisfy the 'Format' category constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span isolates only the citation text and exhibits a clear formatting error (missing opening parenthesis and incorrect narrative/parenthetical mix: 'Raffel et al., 2019)'). The document is academic in style and contextually aligns with standard in-text citation practices, making the introduced mistake plausible and matching the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated year and missing closing bracket), fitting the 'Format' category. The document is a Related Work section with academic tone similar to the examples and plausibly uses author\u2013year style while showcasing the malformed citation."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Garcia and Zhou 2' is only the citation text and exhibits a clear formatting issue (improper footnote-style number instead of a year/standard in-text citation), matching the 'Format' category. The document is academic in style and integrates the malformed citation plausibly within the text, similar to the provided examples and consistent with the specified constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) consistent with the paper\u2019s author\u2013year style. The document context explicitly presents such a malformed parenthetical citation, keeping it plausible and aligned with the 'Format' issue definition."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains clear formatting issues: a truncated year ('201') and the wrong citation style used in the sentence ('in (Nguyen et al., 201)'). These align with the 'Format' category examples. The document is written in an academic style with consistent parenthetical citations elsewhere, making the mistake plausible within the paper\u2019s citation style. Therefore, both the span and document satisfy the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Dwork et al. 1' is only the citation text and exhibits a clear formatting error (footnote-style numeral instead of an author\u2013year format), matching the 'Format' category examples. The document overall follows an academic style similar to the examples, with consistent author\u2013year citations elsewhere (e.g., (Mitchell et al., 2021), (Kilbertus et al., 2020)), making the introduced mistake plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document contains a clear formatting issue: the citation is used parenthetically after 'In', which is the wrong narrative vs parenthetical style. The span '(Zhao et al., 2017)' is only the citation text, aligning with the constraint, and highlights the element where the formatting issue occurs. The overall document otherwise follows a plausible citation style while introducing this realistic formatting mistake."
+  },
+  {
+    "spans": [
+      0
+    ],
+    "document": 1,
+    "reason": "The document is suitable: it uses a consistent citation style and includes a realistic formatting mistake for the category (truncated year and missing closing parenthesis, and wrong style after a preposition) in 'refer to (Leclercq et al., 202.'. However, the span provided '(Leclercq et al., 202)' does not exactly match the citation as it appears in the document (it incorrectly adds a closing parenthesis), so it does not correctly highlight the exact problematic citation."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly shows a formatting error (truncated year '2' and incorrect narrative style lacking proper parentheses). The document is academic in tone and structure, and the mistake is plausible under typical citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), fitting the 'Format' category. The document is an academic-style paragraph with in-text citations, similar to the examples, and plausibly follows the same citation style while including the formatting mistake."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Lee et al., 2018' is only the citation text and exhibits a realistic formatting error for narrative style (missing parentheses around the year: should be 'Lee et al. (2018)'). The document is academic in style and includes this plausible citation-format issue consistent with the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis), fitting the 'Format' category. The document is academic in style and uses parenthetical citations, making the malformed citation plausible within its style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting mistakes (truncated year and missing closing parenthesis), matching the paper\u2019s citation style. The document is academic in tone and structure, using parenthetical author\u2013year citations similar to the examples. The highlighted span corresponds to the full problematic citation text, not just the specific characters in error."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is academic in style and the span is only the citation text. 'Tran et al. 1' exhibits a clear formatting error (improper footnote-style number without year or proper parenthetical/narrative formatting), which matches the 'Format' category and the given constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (missing closing parenthesis, inconsistent delimiter/style for 'Lee 2021'). These are plausible under an APA-like style. The document is academic in tone and structure, integrates citations similarly to the examples, and the formatting issue appears as part of a citation."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and shows a realistic formatting error by mixing narrative and parenthetical styles: 'Johnson et al. (2018; Kumar and Li, 2020)' should be either 'Johnson et al. (2018) and Kumar and Li (2020)' or '(Johnson et al., 2018; Kumar and Li, 2020)'. The document is a coherent academic related work section, making the issue plausible and consistent with the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is an academic-style introduction with parenthetical citations, matching the example structure. The provided span is only the citation text, and it contains realistic formatting mistakes: a missing closing parenthesis, a truncated year ('201'), and inconsistent punctuation/style ('Kim 2020' missing comma). These are plausible within the paper\u2019s citation style and fit the 'Format' issue definition. The span highlights the full problematic citation rather than just part of it."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is an academic-style related work section and includes an in-text citation segment with clear formatting issues. The provided span is only the citation text and exhibits realistic mistakes: missing opening parenthesis, an improper footnote-like '1' instead of a year for 'Brown et al.', and mismatched parenthetical structure ending with ')'. These errors align with the 'Format' category (citation formatting issues) and are plausible under common citation styles. Thus, both the span and document are suitable."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing comma in 'Miller 2018' within an otherwise APA-like parenthetical list), fitting the 'Format' category. The document is an academic-style introduction with parenthetical citations similar to the examples, making both the span and document suitable."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and show clear formatting issues: a missing closing parenthesis in a parenthetical multi-citation and an improper footnote-style/narrative citation without year. The document follows a standard academic style (author\u2013year parenthetical citations) and plausibly includes realistic formatting mistakes consistent with the category 'Format'."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only citation text and contain realistic formatting errors: Span 1 has a mismatched bracket and missing comma before the year ('Clark 2017]'); Span 2 is a narrative citation missing the closing parenthesis ('Wang et al. (2020'). The document uses standard academic citation style elsewhere, making these mistakes plausible under the paper\u2019s style and consistent with the 'Format' issue definition."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans consist only of citation text and exhibit realistic formatting errors consistent with the paper\u2019s author\u2013year style. Span 1 has a missing closing parenthesis and missing comma before the year (\u201cZhang et al. 2015\u201d). Span 2 is a narrative citation with a truncated year and missing parentheses around the year (\u201cLi and Zhao 201\u201d). The document is academic in style and mirrors the example structure, making the spans and document suitable for the 'Format' category."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit realistic formatting errors consistent with the document\u2019s author\u2013year style. Span 1 is a parenthetical multi-citation missing the closing parenthesis and has incorrect formatting for the last item (missing comma before the year). Span 2 is a narrative citation missing the parentheses/comma around the year. The document overall follows a typical academic citation style similar to the examples, with plausible formatting mistakes introduced, and the spans correctly highlight the citations where the issues occur."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain clear formatting issues fitting the 'Format' category: a missing closing parenthesis in a parenthetical multi-citation '(Krizhevsky et al., 2012; He et al., 2016' and a truncated year/missing parenthesis in a narrative citation 'Vaswani et al. (201'. The document is academic in style with author\u2013year citations and introduces realistic, plausible formatting mistakes consistent with the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans contain only the citation text and show realistic formatting errors consistent with academic styles. 'Kim et al. 2017' is a narrative citation missing the parentheses around the year (should be 'Kim et al. (2017)'). '(Smith et al., 2018; Jones and Lee, 2020' is a parenthetical citation missing the closing parenthesis. The document is academic in tone and structure, and the mistakes are plausible under common citation styles."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans consist solely of citation text and contain realistic formatting errors (truncated years and missing closing parentheses). The document uses an author\u2013year parenthetical citation style consistent with the examples, and the introduced mistakes are plausible under that style. The spans properly highlight the full problematic citations rather than only parts within them."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain realistic formatting issues. 'Zhao et al. 2018' is a narrative citation missing the parentheses around the year (should be 'Zhao et al. (2018)'). '(Xu et al., 2020; Li and Tang, 202' is a parenthetical citation with a truncated year and a missing closing parenthesis. The document is a plausible academic introduction using an APA-like in-text citation style, matching the examples and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting mistakes: the first has a truncated year and a missing closing parenthesis; the second has a truncated year in one of the cited works. The document mirrors academic style and integrates citations similarly to the examples, with plausible author\u2013year formatting and intentional errors consistent with the 'Format' category."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and exhibit realistic formatting errors under an author\u2013year style: 'Miller et al. 2015' is a narrative citation missing parentheses/comma (should be 'Miller et al. (2015)'), and '(Hansen et al., 2016; Patel and Wong, 2019' is missing the closing parenthesis. The document is academic in style, integrates citations similarly to the examples, and the mistakes are plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error (missing closing parenthesis), consistent with the document\u2019s APA-like parenthetical style. The document is academic in tone and structure with in-text citations, and the formatting issue is plausible and localized to the citation."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and intentionally uses the wrong citation style (parenthetical immediately after a preposition), matching the 'Format' issue. The document is academic in tone and mirrors the example context by discussing citation style and providing a mismatched parenthetical example, making it plausible and aligned with the category constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits realistic formatting errors (truncated year and missing closing parenthesis). The document is academic in tone and presents this plausible citation formatting issue consistent with a parenthetical citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation text 'Zhao et al. 1' and exhibits a clear formatting error (footnote-like number without year), matching the category definition and example iii. The document is academic in style and plausibly uses an author\u2013year system, making the mistake realistic and consistent with the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis in a parenthetical citation), fitting the 'Format' category. The document is academic in style and contextually references citation formatting, similar to the examples, and keeps the error plausible under common citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), fitting the 'Format' issue definition. The document is an academic-style related work section and includes the malformed parenthetical citation, keeping the mistake plausible within the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span consists solely of the citation text and contains realistic formatting errors: it is a narrative context but uses a trailing parenthesis without an opening one and lacks the proper narrative style (should be 'Sennrich et al. (2016)' or '(Sennrich et al., 2016)'). The document is an academic-style introduction with a plausible citation style and includes the intentional formatting mistake, matching the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error (mismatched brackets: [ ... )). This aligns with the 'Format' category. The document is academic-style, and the erroneous citation is plausibly embedded in the text, matching the example documents\u2019 structure and constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits realistic formatting mistakes (truncated year and missing closing parenthesis) consistent with the paper\u2019s citation style. The document is academic in tone and structure, uses parenthetical citations similar to the examples, and plausibly contains the noted formatting error, fitting the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis in a narrative citation: 'Li et al. (2010'). The document uses standard academic style and includes this plausible citation formatting mistake, aligning with the 'Format' category requirements."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting error (missing closing parenthesis), which is a plausible citation-format issue. The document is academic in style and includes this malformed parenthetical citation in context, aligning with the examples and the 'Format' category constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) consistent with the paper\u2019s citation style. The document is academic in tone and structure, and the citation formatting issue fits the 'Format' category requirements."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting issue (missing closing parenthesis), matching the 'Format' category. The document uses a plausible author\u2013year parenthetical citation style and includes a realistic formatting mistake in that citation, consistent with the constraints and examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a clear formatting error (missing closing parenthesis, and arguably wrong narrative vs. parenthetical use with 'refer to'). This matches the 'Format' issue definition. The document is academic in style and structure, and the citation error is plausible under the paper's citation style, similar to the provided examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a clear formatting error (missing closing parenthesis), which fits the 'Format' category. The document is an academic-style paragraph where the malformed parenthetical citation appears plausibly within the text, aligning with the examples and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are citation-only text with clear formatting issues: 'Lopez et al. 1' improperly uses a footnote-like numeral instead of a year or proper citation format; 'Henderson et al. (2019 and 2020)' uses nonstandard conjunction 'and' for multiple years (should be 2019, 2020 or similar). The document is an academic-style introduction and plausibly includes these mistakes, matching the category constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans contain only the citation text and present realistic formatting issues: '(Miller et al., 201' has a truncated year and missing closing parenthesis; 'Chen and Gupta (2020, pp. 5-6' is a narrative citation missing a closing parenthesis. The document is written in an academic related-work style using author\u2013year citations, and the introduced mistakes are plausible under this style."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting errors under a plausible academic style. 'Park et al. (20' shows a truncated year and missing closing parenthesis in a narrative citation. 'Klein et al. (2017 and 2018)' misformats multiple years (uses 'and' instead of the standard comma/semicolon). The document is an academic-style introduction with consistent citation usage and plausibly inserted formatting mistakes, similar to the examples."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and each contains realistic formatting mistakes: (O'Neill et al., 2 has a truncated year and missing closing parenthesis; Garcia et al. 2020, p. 5 is a narrative citation missing parentheses around the year/page, i.e., wrong style). The document is an academic related-work style passage similar to the examples and plausibly uses parenthetical/narrative citations with intentional formatting errors."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain realistic formatting errors consistent with the 'Format' category: 'Baker et al. 2020' is a narrative citation missing parentheses (should be 'Baker et al. (2020)'), and '(Davis et al., 2019, pp. 10' is missing a closing parenthesis. The document is an academic-style introduction with inline citations, matching the example\u2019s style and plausibly using an author\u2013year format while exhibiting deliberate formatting mistakes."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis) consistent with the paper\u2019s parenthetical style. The document overall follows academic style with mostly well-formatted citations, making the introduced mistake plausible and aligned with the 'Format' category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting mistake (missing opening parenthesis) consistent with the paper\u2019s citation style. The document is academic in style and uses similar parenthetical citations; the highlighted citation shows a format issue as required."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis), which matches the 'Format' issue. The document follows an academic style with consistent parenthetical citations, and includes a plausible single formatting mistake, aligning with the constraints and examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document follows an academic author\u2013year style and includes a realistic formatting error. The span is only the citation text and highlights a formatting issue: a missing opening parenthesis in 'Maraun et al., 2015)'. This aligns with the 'Format' category (missing bracket), is plausible under the paper\u2019s style, and mirrors the style and structure of the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Baker et al. 1' is only the citation text and clearly exhibits a formatting error (improper footnote-like usage, missing year/parentheses), matching the 'Format' category. The document otherwise follows a consistent academic citation style with mostly correct parenthetical references, making the introduced error plausible and similar in style/structure to the examples."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain realistic formatting errors: 'Lowell et al. 2019' is a narrative citation missing the parenthetical year formatting (should be 'Lowell et al. (2019)'), and '(Vatswani et al., 2019; Chen and Li, 2020' is a parenthetical citation missing the closing parenthesis and appears after 'in', indicating a style mismatch. The document is academic in style and plausibly incorporates these citation-format mistakes, matching the provided examples and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and exhibit realistic formatting errors consistent with the paper\u2019s citation style: (1) a narrative citation missing the closing parenthesis (\u201cShelmanov et al. (2021\u201d), and (2) a parenthetical multi-citation missing the closing parenthesis (\u201c(Rogers et al., 2010; Wu et al., 2018\u201d). The document is academic in tone and structure, and integrates these plausible formatting mistakes in context, matching the category 'Format' definition."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting issues: '(Nguyen et al., 20' has a truncated year and a missing closing parenthesis; '(Kumar et al., 2017; Davis et al., 2019)' is used incorrectly in a parenthetical style after 'In', which should be narrative. The document is academic, uses a consistent citation style overall, and plausibly includes these format errors, matching the category definition."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit realistic formatting issues consistent with the category. 'Glaeser et al. (2011' is a narrative citation missing the closing parenthesis. '(Duranton and Turner, 2011; Bento et al., 2018' is used incorrectly after the preposition 'in' (wrong style: parenthetical where narrative is needed) and is missing a closing parenthesis. The document is an academic-style paragraph where these plausible citation-format errors fit the paper\u2019s style and mirror the example patterns."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit realistic formatting issues: 'Sennrich et al. 2016' is a narrative citation missing the parentheses around the year, and '(Ott et al., 2019; Fan et al., 2021' lacks a closing parenthesis. The document follows typical academic style with citations and plausibly includes these formatting mistakes, matching the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains clear formatting issues (truncated citation missing year for Ein-Dor et al., and missing closing parenthesis). The document uses standard academic style with parenthetical citations and plausibly introduces a realistic formatting error consistent with the specified category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (missing opening parenthesis with a trailing ')', mixed parenthetical style, malformed author formatting 'Howard Ruder' instead of 'Howard and Ruder'), which are plausible under a typical citation style. The document is an academic-style survey paragraph using inline citations, matching the example structure."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting mistakes (truncated year, missing year, missing closing parenthesis), fitting the 'Format' category. The document is academic in style and uses a plausible parenthetical multi-citation, matching the example\u2019s structure while introducing intentional format errors."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (mismatched bracket [ ... ), malformed citation 'Riezler and 2018'). These are citation-format issues per the 'Format' category. The document is academic in style with parenthetical citations, making the error plausible within the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a clear formatting issue: one citation in the cluster is missing the year ('Lowell et al.;'), which is a realistic formatting error under common parenthetical styles. The document maintains an academic style consistent with the examples, and the introduced mistake is plausible within the paper's citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (improper use of 'et al.' with multiple named authors: 'Smith, Jones et al., 2019') while remaining plausible for the document\u2019s parenthetical author\u2013year style. The document is an academic-style paragraph with a citation context consistent with the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error ('Vaswani and et al., 2017' should be 'Vaswani et al., 2017'), fitting the 'Format' category. The document is a research-style paragraph with parenthetical citations similar to the examples, maintaining plausible citation style while exhibiting the intended formatting issue."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits clear formatting errors (mixing a model name with the citation inside parentheses, nested parentheses, and wrong parenthetical vs. narrative style). This matches the 'Format' issue definition. The document is academic in tone/structure and plausibly uses an author-year citation style, making the introduced mistake realistic and consistent with the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and includes a plausible formatting error ('2019 J.' after the year), which fits the 'Format' category. The document resembles an academic style with inline citations, and the erroneous citation remains plausible under the paper's citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is academic-style and includes an in-text citation. The span is only the citation text and contains a realistic formatting error (including volume/issue '34:2' in an author-year in-text citation), which fits the 'Format' category. The structure and style resemble the examples."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain clear formatting issues consistent with author\u2013year styles: 'Smith et al. 2019' uses an incorrect narrative format (missing parentheses/comma), and '(Xue et al., 2016; Lee and Wang, 2019;' has a missing closing parenthesis and trailing semicolon. The document adopts a typical academic style with in-text citations and introduces realistic, plausible formatting mistakes aligned with the specified constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are citation-only snippets containing realistic formatting issues: 'Garcia et al. (20' has a truncated year and missing closing parenthesis in a narrative citation; '(Ahmad et al., 2019, Zou and Ni, 2020' is a parenthetical citation missing the closing parenthesis and uses a comma instead of a semicolon between citations. The document is an academic related work section with plausible citation style and intentionally introduced formatting mistakes consistent with the category definition."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit realistic formatting issues under an author\u2013year style: 'Chen et al. 2021' is a narrative citation missing the parenthesized year, and '(Brown and Lee, 2018; Kim and Park, 2020;' is a parenthetical citation missing a closing parenthesis. The document\u2019s style and structure match typical academic prose with author\u2013year citations, aligning with the examples."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are solely the citation text and contain realistic formatting errors consistent with an author\u2013year style: 'Nguyen et al. 2018' lacks the narrative parentheses around the year, and '(Li et al., 2017; Zhao et al., 2021;' is a parenthetical multi-citation missing the closing parenthesis with a trailing semicolon. The document is an academic-style text with integrated citations and plausibly exhibits these formatting mistakes, matching the examples and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting mistakes under an author\u2013year style: a truncated year/missing parenthesis in a narrative citation (\u201cDavis et al. (19\u201d) and a parenthetical citation missing the closing parenthesis with an extra trailing semicolon (\u201c(Miller et al., 2015; Chen and Rao, 2018;\u201d). The document consistently uses an author\u2013year citation style, making these errors plausible and aligned with the \u2018Format\u2019 category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and shows a formatting issue: 'in Vatswani et al.' is a wrong citation style and missing the year/parentheses (should be narrative with year or parenthetical). This matches the Format category. The document is academic in style and plausibly uses this citation; it introduces a realistic formatting mistake consistent with the paper\u2019s likely citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), fitting the 'Format' category. The document is academic in style with author\u2013year citations, and the included mistake is plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis) consistent with the paper\u2019s citation style. The document context presents an in-text citation where this formatting issue occurs, matching the 'Format' category definition."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly shows a formatting error: 'Jones et al. 1' uses an improper footnote-style number instead of a year or proper citation format, matching the 'Format' issue definition and the example (e.g., 'Vastwani et al. 1'). The document is academic in tone and structure, and the mistake is plausible within an in-text citation context. The span highlights the full problematic citation, not just part of it."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document follows an author\u2013year style and includes a deliberately malformed narrative citation. The span 'Doe et al. (20' is only the citation text and contains realistic formatting issues (truncated year and missing closing parenthesis), matching the 'Format' category. The document context is plausible and aligns with the constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit realistic formatting issues: 'Garcia 2020' is a narrative citation missing parentheses around the year (should be 'Garcia (2020)'), and 'Patel et al., 2018)' is missing the opening parenthesis (should be '(Patel et al., 2018)'). The document is academic in style and uses citations in a way consistent with the examples, making these errors plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit realistic formatting errors under an author\u2013year style: 'Khan 2021' lacks parentheses/comma for narrative or parenthetical form, and '(Zhao et al., 2020)' is used incorrectly after 'In', indicating wrong citation style. The document overall uses consistent academic prose with mixed correct and intentionally flawed citations, matching the format-issue category and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are solely the citation text and exhibit realistic formatting errors: 'Liu 2019' is a narrative citation missing the parenthetical/narrative formatting (should be Liu (2019) or (Liu, 2019)), and 'Wang et al. 1' misuses a footnote-like number instead of a year or proper citation formatting. These align with the 'Format' issue definition. The document context supports these as plausible citation styles with intentional mistakes, matching the examples\u2019 style and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are solely the citation text and exhibit realistic formatting errors under an author\u2013year style: 'Pearl 2009' lacks the expected parentheses/comma (should be Pearl (2009) or (Pearl, 2009)), and 'Nguyen et al., 2016)' is missing the opening parenthesis for a parenthetical citation. The document is academic in tone and structure, uses inline author\u2013year citations, and the introduced mistakes are plausible and consistent with the specified 'Format' category."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans contain clear citation formatting issues. 'Brown 2015' should be a narrative citation like 'Brown (2015)' (missing parentheses/comma), and 'In (Martinez et al., 2021)' uses the wrong style for a narrative lead-in (should be 'In Martinez et al. (2021), ...'). Each span is only the citation text, and the document context is plausible and consistent with academic style, mirroring the provided examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) appropriate to the document\u2019s author\u2013year citation style. The document is an academic-style introduction with consistent parenthetical citations, matching the examples. The formatting issue is clearly within the citation itself, satisfying the category definition."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting error (wrong use of footnote/number: 'Garcia et al. 1' instead of a proper year/bracketed citation). The document is an academic-style Related Work section and plausibly includes this malformed citation, matching the category 'Format' and the provided examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis): 'Wang et al., 2018)'. This matches the 'Format' issue definition. The document is written in an academic style similar to the examples and plausibly uses parenthetical citations; the included mistake is consistent with the specified constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated year and missing closing parenthesis), fitting the 'Format' category. The document uses academic style with parenthetical citations, and the introduced error is plausible within that style. The span highlights the full problematic citation string rather than only part of it."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span '[Smith et al., 2020)' is only the citation text and contains a realistic formatting error (mismatched brackets), fitting the 'Format' category. The document is an academic-style introduction where this formatting issue appears plausibly under a citation style that uses brackets."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation substring and exhibits a realistic formatting error (missing closing parenthesis and punctuation placement), fitting the 'Format' issue category. The document resembles an academic text and includes the malformed parenthetical citation in a plausible style, consistent with the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and clearly exhibits formatting issues (truncated year and missing closing parenthesis), fitting the 'Format' category. The document is an academic-style paragraph with in-text citations similar to the examples, and the introduced mistake is plausible under typical citation styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is the in-text citation itself and contains a realistic formatting error (mismatched closing bracket: '(' ... ']'). This matches the 'Format' issue definition. The document is a plausible academic text and the citation style is consistent with parenthetical author\u2013year, with an introduced formatting mistake as required."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a clear formatting issue (extraneous semicolon inside the parenthetical and double punctuation: '(cf. Garcia et al., 2019;).'). This matches the 'Format' category. The document uses a plausible author\u2013year citation style and includes this realistic formatting mistake, satisfying the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span contains only the citation phrase and highlights a clear formatting error (mistyped/truncated year '201A'). This is a plausible issue under an author\u2013year style. The document is academic in tone and structure, and the citation usage matches the style while introducing a realistic formatting mistake."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis): '(Vatswani et al., 2019'. This matches the 'Format' issue definition by highlighting the full problematic citation. The document uses a plausible academic style with parenthetical citations similar to the examples and includes the formatting mistake in context, thus satisfying the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error for a narrative citation (missing parentheses around the year: 'Garcia et al. 2018' should be 'Garcia et al. (2018)'). The document is an academic-style Related Work section, and the citation error is plausible within that style. The span highlights the entire problematic citation string, satisfying the category 'Format'."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a plausible formatting error for the category (footnote-style '1' instead of a year), matching examples. The document is an academic-style introduction and the citation issue appears as part of a citation, satisfying the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis/wrong style), matching the 'Format' category. The document is an academic related work section and plausibly uses parenthetical citations, with this one intentionally misformatted, satisfying the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The document is an academic-style introduction similar to the examples, using author\u2013year citations. The span 'Nguyen et al. (20' is only the citation text (not full sentence) and exhibits realistic formatting errors (truncated year and missing closing parenthesis) consistent with the paper\u2019s citation style. The span highlights the full problematic citation segment, not just the specific characters in error."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and contain realistic formatting errors consistent with the category. '(Nguyen et al., 2018' is missing a closing parenthesis. '(Smith et al., 2020)' is used in the wrong style after 'According to', which should be narrative (e.g., Smith et al. (2020)). The document is an academic-style paragraph and plausibly introduces these formatting mistakes, matching the examples and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and exhibit realistic formatting issues under an author\u2013year style: '(Alvarez et al., 20)' has a truncated year, and 'Lee et al. 2' misuses a numeric footnote-like marker instead of a proper author\u2013year citation. The document is academic in tone, uses author\u2013year citations, and plausibly includes these formatting mistakes, matching the 'Format' issue definition and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting errors under an author\u2013year style: 'Chen et al., 2016)' is missing the opening parenthesis/uses incorrect punctuation for a narrative citation (should be 'Chen et al. (2016)'), and '(Zhang et al., 2021)' is used parenthetically after 'in', which is the wrong style (should be 'in Zhang et al. (2021)'). The document is academic in style and mirrors the example structure, presenting plausible citation formatting issues consistent with the 'Format' category."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans are only the citation text and contain realistic formatting issues: '(Gonz\u00e1lez et al., 2019' is missing a closing parenthesis, and 'Miller et al. 5' uses an improper footnote-like number. These are plausible within the document\u2019s citation style. The document is written in an academic style with citations, matching the examples and constraints."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate only the citation text and present realistic formatting mistakes. Span 1 has a missing closing parenthesis, a clear formatting error. Span 2 is a parenthetical citation used after a narrative cue ('See'), reflecting a wrong citation style (should be narrative: 'See Rahman et al. (2022)'). The document mirrors academic style and introduces plausible format issues consistent with the category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis), matching the 'Format' category. The document is academic in style with parenthetical author\u2013year citations and plausibly introduces the formatting mistake, aligning with the provided examples and constraints."
+  },
+  {
+    "spans": [
+      0
+    ],
+    "document": 1,
+    "reason": "The document contains a realistic formatting mistake consistent with the 'Format' category: wrong citation style in the phrase 'In (Miller et al., 2020) ...', similar to the provided examples. However, the span '(Miller et al., 2020)' by itself is a correctly formatted parenthetical citation and does not capture the formatting error (the error is due to the preceding 'In '). Therefore, the span is unsuitable, but the document is suitable."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error ('Zhao et al. 1'), matching the example of improper footnote-style citation (missing year/proper bracket). The document is academic in style, similar to the examples, and includes a plausible formatting mistake within its citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated year '19' and used in parenthetical form after a preposition, which suggests wrong narrative vs parenthetical style). The document is an academic Related Work section with author\u2013year citations, matching the example structure and style, and the introduced mistake is plausible within that style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing opening parenthesis/wrong parenthetical vs narrative style): 'Li et al., 2020)'. The document is academic in tone and structure, and the citation error is plausible under a standard APA-like style, matching the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and exhibits a realistic formatting error (missing closing parenthesis), consistent with the paper\u2019s parenthetical author\u2013year style. The document is academic in tone and integrates the malformed citation plausibly within the text, matching the format issue category."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis) consistent with the 'Format' category. The document is an academic-style related work paragraph with plausible citation style, and the introduced error is realistic and similar to the examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting errors (truncated year and missing closing parenthesis) consistent with the 'Format' category. The document is an academic-style text with in-text citations and overall structure similar to the examples, making the formatting issue plausible under the paper\u2019s citation style."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Garcia et al. 1' is only the citation text and shows a clear formatting mistake (footnote-like number instead of a proper year/parenthetical format), matching the 'Format' category example. The document is academic in style and plausibly uses author-year citations, making the footnote-style '1' inconsistent yet realistic. Thus both span and document satisfy the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains realistic formatting mistakes (missing comma after 'et al.' and used as a parenthetical after 'such as' instead of narrative), matching the 'Format' category. The document is academic in style and integrates the citation in a manner similar to the examples, with a plausible formatting error."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and highlights the full problematic citation. It contains a realistic formatting error (missing opening parenthesis and wrong narrative style: should be 'Zhou et al. (2018)'). The document is academic in tone and uses the citation in a plausible context, consistent with typical paper styles."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing parenthesis and wrong narrative/parenthetical usage: 'in (Kumar et al., 2020'). This matches the 'Format' issue definition. The document is academic in style and structure, and the citation error is plausibly integrated, similar to the provided examples."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span 'Lopez et al. 1' is only the citation text and contains a clear formatting error (improper footnote/number instead of a year or proper citation format), matching the 'Format' category (example iii). The document presents an academic-style overview with a plausible narrative citation context and includes a realistic citation formatting mistake consistent with the specified constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains clear formatting errors (truncated year and missing parentheses/wrong narrative-parenthetical style), matching the 'Format' category. The document is an academic-style paragraph similar to the examples and plausibly uses author\u2013year citations, with the introduced realistic formatting mistake consistent with the constraints."
+  },
+  {
+    "spans": [
+      1
+    ],
+    "document": 1,
+    "reason": "The span is only the citation text and contains a realistic formatting error (missing closing bracket), fitting the 'Format' category. The document is academic-style prose with an in-text citation exhibiting the formatting mistake, plausibly consistent with citation styles and similar to the examples."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate the citation text and contain realistic formatting issues. Span 1 uses the wrong style ('In (Garcia, Kim, and Lee, 2018)')\u2014a preposition followed by a parenthetical citation instead of a narrative form (should be 'in Garcia, Kim, and Lee (2018)'). Span 2 is a narrative citation missing the proper parentheses around the year ('Lee et al., 2020' should be 'Lee et al. (2020)'). The document is academic in style, the errors are plausible under common citation styles, and the spans are limited to the citation text, matching the category 'Format'."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans isolate the problematic citation text and present realistic formatting errors consistent with the examples. 'In (Nguyen, Patel, and Ortiz, 2017)' demonstrates the wrong citation style (parenthetical after a preposition), and 'Zhao et al. 2' shows an improper footnote/reference-number style lacking a year. The document is academic in tone and structure, and the inserted citation errors are plausible under a typical parenthetical/narrative citation style."
+  },
+  {
+    "spans": [
+      1,
+      1
+    ],
+    "document": 1,
+    "reason": "Both spans exhibit clear formatting issues under an author\u2013year style: (1) 'In (Sarkar, Liu, and Chen, 2019)' uses the wrong style ('In (Author, Year)' instead of 'in Author (Year)'), matching the provided example pattern; (2) 'Miller et al., 2018' is a narrative citation missing parentheses around the year. Each span isolates the problematic citation text. The document is academic and plausibly formatted overall while containing these realistic citation-format errors, satisfying the constraints."
+  },
+  {
+    "spans": [
       0,
       1
     ],
     "document": 0,
-    "reason": "Most spans correctly isolate the citation text and exhibit realistic formatting errors (missing year in narrative, missing/extra brackets, truncated years, wrong parenthetical use). However, one span includes surrounding prose and multiple citations rather than just the citation text, violating the constraint that spans be only the citation text. Therefore, while individual spans are largely suitable, the document as a whole does not fully meet the specified constraints."
+    "reason": "The document is academic and includes realistic citation-format mistakes fitting the 'Format' category. However, the first span includes surrounding text ('In ') and is not only the citation text, violating the span constraint. The second span is solely the citation text and correctly flags a narrative-style formatting error. Because one span violates the constraints, the document is marked unsuitable."
   },
   {
     "spans": [
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      0,
-      1,
       1,
       1
     ],
     "document": 1,
-    "reason": "Most spans correctly isolate citation text and exhibit clear formatting issues (missing bracket, truncated year, mismatched bracket, missing comma, or footnote number). Invalid spans: (Lu et al., 2020) is only a standard parenthetical citation\u2014the wrong-style error arises from the preceding 'In', not the citation itself; Gardner et al., 2020 shows no clear formatting error by itself; Following Gardner et al., 2020 includes surrounding text and is not only the citation. The document overall matches academic style and plausibly introduces realistic citation formatting mistakes similar to the examples."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "Most spans are only citation text and exhibit realistic formatting errors (e.g., missing or mismatched brackets, truncated year, narrative citation missing year, wrong citation style, stray semicolons, footnote-like number). Two spans are correctly formatted and thus marked 0. The document overall uses a standard academic citation style similar to the examples and plausibly introduces formatting mistakes."
-  },
-  {
-    "spans": [
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0
-    ],
-    "document": 1,
-    "reason": "Most spans isolate only the citation text and exhibit clear formatting issues consistent with the category (e.g., missing year, missing/extra parenthesis, truncated year, missing comma, footnote misuse, wrong narrative vs. parenthetical style). The two spans '(Shelmanov et al., 2021)' are correctly formatted on their own; the style issue arises from the preceding 'in', which is not included in the span, so they are not suitable. The document overall is academic and plausibly follows an author\u2013year style with realistic citation-formatting mistakes, satisfying the document-level constraints."
-  },
-  {
-    "spans": [
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      0,
-      0
-    ],
-    "document": 1,
-    "reason": "The document is an academic related-work section with realistic citation-formatting mistakes (e.g., mismatched brackets, truncated year, missing parentheses/year, wrong narrative vs. parenthetical style), matching the category and examples. Span evaluations: (1) Only shows a correct parenthetical; the style error stems from preceding 'In', so 0. (2) Narrative citation missing year, 1. (3) Missing comma before year, 1. (4) Mismatched [ ... ), 1. (5) Truncated year, 1. (6) Missing closing parenthesis, 1. (7) Double opening parenthesis, 1. (8) Trailing ']' in a parenthetical, 1. (9) Narrative citation missing parentheses around year, 1. (10) Highlights only the author part from an otherwise correct parenthetical citation, so no standalone formatting error, 0. (11) Multi-citation largely correct; missing spaces after semicolons are minor and not clearly within the targeted error types, 0. (12) Includes surrounding text ('ELMo ') rather than only the citation, violating the span constraint, 0. Overall, the document fits the style/structure and contains plausible formatting issues."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "Most spans are only citation text and clearly exhibit formatting issues (missing brackets, mismatched brackets, truncated year, missing comma, narrative citation missing year). The two '(Russell, 2019)' spans are not suitable because the formatting problem (wrong narrative vs. parenthetical style) arises from the preceding word 'In', which is not included in the span. The document overall follows academic style and plausibly introduces realistic citation-format mistakes consistent with the category."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "The document resembles an academic introduction and contains realistic citation formatting mistakes (missing brackets, truncated year, wrong bracket type, missing comma, narrative vs parenthetical misuse), which are plausible under common citation styles. Most spans isolate only the citation text and clearly exhibit formatting issues. One span '(Ding et al., 2019)' is correct on its own; the wrong style arises from the surrounding 'in', which is not included in the span, so it does not show a formatting error by itself."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All highlighted spans are citation fragments exhibiting realistic formatting issues (e.g., missing closing parenthesis, wrong narrative vs. parenthetical style like 'in (Author, Year)', truncated year, mismatched bracket). Each span corresponds to the citation text itself (or the minimal phrase constituting the formatting error, as in 'in (Author, Year)'), consistent with the provided examples. The document is an academic related work section with plausible citation style and deliberate formatting mistakes, matching the category 'Format' requirements."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All provided spans are citation texts only and each exhibits a clear formatting issue (e.g., missing bracket, mismatched brackets, missing year in narrative citation, missing comma before year, truncated year, inconsistent numeric style, duplicated/incorrect separators). The document consistently uses an author\u2013year style, and the introduced mistakes are realistic and plausible within that style. Hence, both the spans and the document satisfy the 'Format' category requirements."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0
-    ],
-    "document": 1,
-    "reason": "Most spans are citation-only snippets with realistic formatting errors (e.g., missing parenthesis, wrong narrative/parenthetical style, missing comma, truncated year, mismatched bracket, inconsistent use of '&'). Two spans are unsuitable: 'Mao et al.' is part of a correct narrative citation with the year immediately following, so no formatting error is present; 'Concept-Net (Speer et al., 2017)' includes surrounding text (not citation-only) and is correctly formatted. The document itself reads like an academic Related Work section and plausibly introduces various citation formatting mistakes consistent with the examples."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All provided spans are citation-only and exhibit plausible formatting problems: missing or mismatched brackets/parentheses, truncated year, and wrong citation style in context (e.g., parenthetical after prepositions or reporting phrases). Examples include missing opening bracket (\u2018Devlin et al., 2019)\u2019; \u2018Zhong and Chen, 2020)\u2019), missing closing bracket (\u2018(Paolini et al., 2021.\u2019; \u2018(Lewis et al., 2019;Raffel et al., 2020\u2019), truncated year (\u2018(Raffel et al., 20)\u2019), wrong bracket type (\u2018Ma and Hovy, 2016]\u2019; \u2018(Mausam et al., 2012; Stanovsky et al., 2018])\u2019), and narrative missing year (\u2018Banko et al.\u2019). The document is academic and mirrors the example\u2019s style, with realistic, plausible citation-format errors under a standard author\u2013year style."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All highlighted spans consist solely of citation text and exhibit realistic formatting errors (e.g., missing brackets, truncated years, wrong parenthetical/narrative style), matching the 'Format' category. The document is an academic related-work section using an author\u2013year style and plausibly includes such errors, aligning with the example and constraints."
-  },
-  {
-    "spans": [
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      0
-    ],
-    "document": 1,
-    "reason": "The document is a Related Work section with author\u2013year citations and multiple realistic formatting mistakes (truncated year, missing/mismatched brackets, wrong narrative vs. parenthetical usage), matching the example style. Most spans isolate the citation text and correctly capture format issues: (Peters et al., 201) truncated year; (Howard and Ruder, 2018 missing bracket; [Yuan et al., 2020) mismatched bracket; Prabhu et al. missing year in narrative; (Gal and Ghahramani 2016) missing comma; Shelmanov et al., 2021, wrong narrative style/comma; ((Ein-Dor et al., 2020) extra parenthesis; Hu et al. (2016 missing bracket; and the duplicate (Peters et al., 201). However, (Vaswani et al., 2017) and (Siddhant and Lipton, 2018) are fine as standalone parentheticals\u2014the wrong style arises from the preceding word 'in', which is not included in the span, so those spans are not suitable."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "Most spans correctly highlight citation-format issues (e.g., missing bracket, truncated year, extra parenthesis, narrative without year, improper semicolons, footnote-like '1'). Span 10 omits the preceding 'in', so it doesn't capture the wrong citation style ('in (Ji et al., 2020a)'); the parenthetical alone is fine, hence unsuitable. The document overall matches the example style with realistic, plausible citation-format mistakes."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All spans are citation strings (or the minimal citation phrase where the formatting error occurs) and each contains a clear format issue (e.g., wrong style like 'In (Mikolov...)', narrative without year, missing/extra parentheses, truncated year, misplaced semicolon, missing comma, footnote-like numeral). The document is an academic-style introduction with numerous in-text citations and exhibits realistic formatting mistakes consistent with the specified category, keeping overall citation style plausible."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All spans are isolated citation texts and each contains a realistic formatting error (e.g., missing or mismatched brackets, missing comma before year, truncated year, narrative vs. parenthetical mismatch, or inconsistent use of '&' vs. 'and' given the paper\u2019s prevailing style). The document mirrors the example\u2019s style and introduces plausible citation-format mistakes throughout."
-  },
-  {
-    "spans": [
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 0,
-    "reason": "Most spans are only the citation text and exhibit valid formatting issues (missing bracket, truncated year, mismatched brackets, wrong narrative vs. parenthetical style). However, the span 'in (Chen et al., 2017)' includes extra text ('in '), violating the requirement that spans be only the citation text. While the document overall contains realistic, plausible citation-format mistakes consistent with the style, the inclusion of a non-citation token in a span breaks the document-level constraint."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All highlighted spans are citation strings exhibiting formatting issues (missing/extra brackets, truncated years, wrong narrative vs parenthetical style, dangling semicolons, missing commas, and misspelled 'et al.'). Each span isolates the problematic citation text, consistent with the category definition. The document overall follows an author\u2013year citation style and introduces realistic, plausible formatting mistakes similar to the examples."
-  },
-  {
-    "spans": [
-      1,
-      0,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      0,
-      0,
-      1
-    ],
-    "document": 0,
-    "reason": "Most spans correctly highlight citation-format issues (e.g., missing brackets, truncated years, mismatched punctuation, narrative vs. parenthetical errors). However, some spans are unsuitable: the Zhong and Chen citations omit the leading preposition 'In', so the wrong-style issue is not captured within the span; one Paolini span includes extra non-citation text ('for a joint modeling view'); another Paolini span truncates the citation mid-parenthesis rather than reflecting the actual issue. Due to these span-level violations (not only citation text, or not capturing the issue within the span), the document as a whole does not meet the stated constraints."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      0,
-      0
-    ],
-    "document": 0,
-    "reason": "Most spans correctly highlight citation-format issues (missing year in narrative, missing/extra brackets, truncated year, wrong parenthetical vs. narrative style, missing comma). However, three spans include non-citation surrounding text, violating the constraint that spans must be only the citation text. Because not all spans adhere to this, the document-level evaluation is 0 despite the document containing plausible formatting mistakes overall."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      1
-    ],
-    "document": 1,
-    "reason": "Most spans isolate citation text and exhibit clear formatting issues (missing brackets, wrong bracket type, missing comma, truncated year, narrative citation missing year, footnote-style number). The two spans '(Peters et al., 2018)' at 1352 are correctly formatted in context and thus not suitable for the 'Format' error category. The document overall is an academic Related Work section using author\u2013year style and contains realistic, plausible citation formatting mistakes consistent with the category."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "The document follows an APA-like citation style and includes realistic formatting mistakes (missing bracket, truncated year, wrong bracket type, wrong narrative vs. parenthetical usage, misplaced commas). Each span highlights only the problematic citation text (the 'In (Ruder, 2019)' case matches the provided example for wrong style). All spans therefore fit the 'Format' category, and the document overall adheres to the constraints."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "The document follows an author\u2013year style and introduces plausible formatting mistakes (missing brackets, missing commas, truncated year, wrong narrative/parenthetical form). All spans are only the citation text. Most spans exhibit clear format issues (e.g., missing year, missing closing parenthesis, truncated year, mismatched parentheses). The two instances of \u201c(Weber et al., 2018)\u201d are correctly formatted and thus not issues; all others match the 'Format' category."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All spans highlight citation text with clear formatting issues (missing or extra parentheses, truncated years, wrong narrative vs parenthetical style, missing opening bracket, narrative citation missing year). Each span isolates the problematic citation text itself, consistent with the category definition. The document overall uses a plausible author\u2013year style and intentionally introduces realistic formatting mistakes throughout, matching the required constraints."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All spans are only citation text and each demonstrates a realistic formatting error (e.g., missing bracket, truncated year, wrong parenthetical/narrative style, mismatched brackets, missing separators). The document is an academic related-work style section with author\u2013year citations and contains plausible formatting mistakes consistent with the 'Format' category and the provided examples."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All spans are citation-only strings and each exhibits a realistic formatting error (e.g., missing comma/parentheses, truncated year, wrong bracket type, or wrong narrative vs. parenthetical style). The document matches the academic style of the examples and plausibly mixes correct and faulty inline citations. Duplicate spans are still valid as they independently highlight formatting issues."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "Most spans are citation-only strings with realistic formatting issues (wrong parenthetical style: 'In (...)', mismatched/incorrect brackets, truncated year, missing comma before year, stray semicolons, missing closing parenthesis). One span ('Zhong and Chen, 2020)') appears correct in context as part of a multi-citation and thus is not a formatting error. The document overall is an academic-style text similar to the examples and contains plausible citation formatting mistakes."
-  },
-  {
-    "spans": [
-      1
-    ],
-    "document": 1,
-    "reason": "The span 'cf. (Nan et al., 2020a' highlights a citation formatting issue: wrong citation style after 'cf.' and a missing closing parenthesis. It focuses on the problematic citation text. The document overall resembles an academic paper and contains plausible citation formatting mistakes (e.g., mismatched brackets, truncated years), consistent with the category and examples."
-  },
-  {
-    "spans": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "document": 1,
-    "reason": "All spans are citation-only and exhibit clear formatting errors consistent with the 'Format' category (e.g., wrong style 'In (...)', missing or extra parentheses, missing comma before year, truncated year, narrative citation missing year, misuse of footnote number, and missing spaces in multi-citation). The document is a Related Work section with realistic in-text citations and plausible formatting mistakes, matching the example\u2019s style and the category-specific constraints."
+    "reason": "Both spans reflect citation formatting errors consistent with the 'Format' category. Span 1 ('In (Alvarez, Gupta, and Zhou, 2020') shows the wrong citation style (preposition + parenthetical) and a missing closing parenthesis, mirroring the provided example 'in (Liu et al., 2021)'. Span 2 ('Park et al., 2021') is a narrative citation missing the parenthetical year format (should be 'Park et al. (2021)'). The document itself reads like an academic paper and introduces realistic, plausible formatting mistakes in citations while keeping within a plausible citation style."
   }
 ]

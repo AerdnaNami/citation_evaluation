@@ -2,7 +2,7 @@ import json
 import argparse
 import numpy as np
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 import torch
 from datasets import Dataset
@@ -16,7 +16,7 @@ from transformers import (
 )
 
 from seqeval.metrics import f1_score
-from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
+from sklearn.metrics import confusion_matrix, precision_recall_fscore_support, cohen_kappa_score
 
 
 # ----------------------------
@@ -55,7 +55,7 @@ def tokenize_and_align_labels(example, tokenizer, label2id):
         max_length=max_len,
         padding=False,
     )
-    
+
     word_ids = tokenized.word_ids()
     labels = []
     previous_word_idx = None
@@ -85,8 +85,8 @@ def compute_seqeval_f1(predictions, labels, id2label):
         labs = []
         for p, l in zip(pred_seq, label_seq):
             if l != -100:
-                preds.append(id2label[p])
-                labs.append(id2label[l])
+                preds.append(id2label[int(p)])
+                labs.append(id2label[int(l)])
         true_preds.append(preds)
         true_labels.append(labs)
 
@@ -100,8 +100,8 @@ def flatten_valid_tokens(predictions, labels):
     for pred_seq, label_seq in zip(predictions, labels):
         for p, l in zip(pred_seq, label_seq):
             if l != -100:
-                flat_preds.append(p)
-                flat_labels.append(l)
+                flat_preds.append(int(p))
+                flat_labels.append(int(l))
 
     return np.array(flat_preds), np.array(flat_labels)
 
@@ -139,6 +139,80 @@ def krippendorff_alpha_nominal(rater1: np.ndarray, rater2: np.ndarray, num_label
 
 
 # ----------------------------
+# Span helpers (word-level)
+# ----------------------------
+def _word_level_pred_ids_from_aligned(pred_ids_seq: np.ndarray, aligned_label_ids_seq: np.ndarray) -> List[int]:
+    """
+    Convert wordpiece-level predictions into word-level predictions by taking the prediction
+    at positions where aligned labels != -100 (these correspond to first wordpiece of each word).
+    Returns list[int] length == number of words in the original example.
+    """
+    out = []
+    for p, l in zip(pred_ids_seq.tolist(), aligned_label_ids_seq.tolist()):
+        if l != -100:
+            out.append(int(p))
+    return out
+
+
+def _bio_spans_from_word_labels(tokens: List[str], word_labels: List[str]) -> List[Dict[str, Any]]:
+    """
+    Extract spans from BIO word-level label strings.
+    Returns spans with token indices [start_token, end_token) and text joined by spaces.
+    """
+    spans = []
+    i = 0
+    n = min(len(tokens), len(word_labels))
+
+    def normalize(lbl: str) -> str:
+        return lbl.strip() if isinstance(lbl, str) else "O"
+
+    while i < n:
+        lab = normalize(word_labels[i])
+        if lab == "O":
+            i += 1
+            continue
+
+        if lab.startswith("B-"):
+            ent = lab[2:]
+            start = i
+            i += 1
+            while i < n and normalize(word_labels[i]) == f"I-{ent}":
+                i += 1
+            end = i
+            spans.append(
+                {
+                    "label": ent,
+                    "start_token": start,
+                    "end_token": end,
+                    "text": " ".join(tokens[start:end]),
+                }
+            )
+            continue
+
+        if lab.startswith("I-"):
+            ent = lab[2:]
+            start = i
+            i += 1
+            while i < n and normalize(word_labels[i]) == f"I-{ent}":
+                i += 1
+            end = i
+            spans.append(
+                {
+                    "label": ent,
+                    "start_token": start,
+                    "end_token": end,
+                    "text": " ".join(tokens[start:end]),
+                    "note": "started_with_I",
+                }
+            )
+            continue
+
+        i += 1
+
+    return spans
+
+
+# ----------------------------
 # Main
 # ----------------------------
 def main():
@@ -153,7 +227,6 @@ def main():
             )
             lengths.append(len(encoded["input_ids"]))
         return lengths
-
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True)
@@ -171,7 +244,7 @@ def main():
     cat_cfg = next(c for c in cfg["categories"] if c["name"] == args.category)
 
     train_path = cat_cfg["train_path"]
-    dev_path = cat_cfg["dev_path"]
+    dev_path = cat_cfg["eval_path"]
     eval_path = cat_cfg["eval_path"]
 
     output_root = Path(cfg.get("output_root", "./runs"))
@@ -186,10 +259,9 @@ def main():
 
     print("Raw token stats:")
     print("  max:", max(lengths))
-    print("  mean:", sum(lengths)/len(lengths))
+    print("  mean:", sum(lengths) / len(lengths))
     print("  95th percentile:", np.percentile(lengths, 95))
 
-    
     label_set = set()
     for ex in train_dataset:
         for lab in ex["labels"]:
@@ -208,9 +280,9 @@ def main():
 
     print("Tokenized length stats (no truncation):")
     print("  max:", max(train_lengths))
-    print("  mean:", sum(train_lengths)/len(train_lengths))
+    print("  mean:", sum(train_lengths) / len(train_lengths))
     print("  95th percentile:", np.percentile(train_lengths, 95))
-    
+
     model = AutoModelForTokenClassification.from_pretrained(
         base_model,
         num_labels=len(label_list),
@@ -241,15 +313,15 @@ def main():
         weight_decay=float(defaults.get("weight_decay", 0.01)),
         warmup_steps=warmup_steps if warmup_ratio is None else 0,
         warmup_ratio=float(warmup_ratio) if warmup_ratio is not None else 0.0,
-        load_best_model_at_end=True,
-        metric_for_best_model="eval_loss",
+        load_best_model_at_end=False,  # removed best-model selection per your preference
         report_to="none",
         fp16=bool(defaults.get("fp16", False)),
         bf16=bool(defaults.get("bf16", False)),
         seed=seed,
     )
 
-    data_collator = DataCollatorForTokenClassification(tokenizer)
+    # Use padding in collator to avoid batching length mismatch errors
+    data_collator = DataCollatorForTokenClassification(tokenizer, padding=True)
 
     trainer = Trainer(
         model=model,
@@ -269,6 +341,7 @@ def main():
 
     flat_preds, flat_labels = flatten_valid_tokens(predictions, labels)
 
+    # -------- All-token metrics (includes 'O') --------
     cm = confusion_matrix(flat_labels, flat_preds)
     cm_dict = {"labels": label_list, "matrix": cm.tolist()}
 
@@ -277,6 +350,12 @@ def main():
     p1, r1, f1_1, _ = precision_recall_fscore_support(flat_labels, flat_preds, average="micro", zero_division=0)
     p2, r2, f1_2, _ = precision_recall_fscore_support(flat_preds, flat_labels, average="micro", zero_division=0)
 
+    if flat_labels.size == 0:
+        kappa_all = 0.0
+    else:
+        kappa_all = float(cohen_kappa_score(flat_labels, flat_preds, labels=list(range(len(label_list)))))
+
+    # Pairwise micro-F1 (kept)
     tp = int(np.sum(flat_preds == flat_labels))
     fp = int(np.sum(flat_preds != flat_labels))
     fn = fp
@@ -293,16 +372,113 @@ def main():
         else 0.0
     )
 
+    # -------- Entity-only token metrics (ignore gold 'O') --------
+    def filter_out_gold_O(flat_preds_arr: np.ndarray, flat_labels_arr: np.ndarray, id2label_map: Dict[int, str]):
+        if flat_labels_arr.size == 0:
+            return flat_preds_arr, flat_labels_arr
+        keep_mask = np.array([id2label_map[int(l)] != "O" for l in flat_labels_arr], dtype=bool)
+        return flat_preds_arr[keep_mask], flat_labels_arr[keep_mask]
+
+    flat_preds_ent, flat_labels_ent = filter_out_gold_O(flat_preds, flat_labels, id2label)
+
+    if flat_labels_ent.size == 0:
+        # no entity tokens present in gold -> zeros
+        cm_ent = np.zeros((len(label_list), len(label_list)), dtype=int)
+        cm_ent_dict = {"labels": label_list, "matrix": cm_ent.tolist()}
+        alpha_ent = 0.0
+        kappa_ent = 0.0
+        p1_ent = r1_ent = f1_1_ent = 0.0
+        p2_ent = r2_ent = f1_2_ent = 0.0
+        micro_f1_ent = 0.0
+    else:
+        cm_ent = confusion_matrix(flat_labels_ent, flat_preds_ent, labels=list(range(len(label_list))))
+        cm_ent_dict = {"labels": label_list, "matrix": cm_ent.tolist()}
+
+        alpha_ent = krippendorff_alpha_nominal(flat_labels_ent, flat_preds_ent, num_labels=len(label_list))
+
+        p1_ent, r1_ent, f1_1_ent, _ = precision_recall_fscore_support(flat_labels_ent, flat_preds_ent, average="micro", zero_division=0)
+        p2_ent, r2_ent, f1_2_ent, _ = precision_recall_fscore_support(flat_preds_ent, flat_labels_ent, average="micro", zero_division=0)
+
+        if flat_labels_ent.size == 0:
+            kappa_ent = 0.0
+        else:
+            kappa_ent = float(cohen_kappa_score(flat_labels_ent, flat_preds_ent, labels=list(range(len(label_list)))))
+
+        tp_ent = int(np.sum(flat_preds_ent == flat_labels_ent))
+        fp_ent = int(np.sum(flat_preds_ent != flat_labels_ent))
+        fn_ent = fp_ent
+        total_tp_ent = tp_ent * 2
+        total_fp_ent = fp_ent * 2
+        total_fn_ent = fn_ent * 2
+        micro_precision_ent = total_tp_ent / (total_tp_ent + total_fp_ent) if (total_tp_ent + total_fp_ent) else 0.0
+        micro_recall_ent = total_tp_ent / (total_tp_ent + total_fn_ent) if (total_tp_ent + total_fn_ent) else 0.0
+        micro_f1_ent = (
+            2 * micro_precision_ent * micro_recall_ent / (micro_precision_ent + micro_recall_ent)
+            if (micro_precision_ent + micro_recall_ent)
+            else 0.0
+        )
+
+    # ---- Build per-example predicted spans for eval set ----
+    pred_spans_by_example: List[Dict[str, Any]] = []
+    for raw_ex, pred_seq, lab_seq in zip(eval_dataset, predictions, labels):
+        # raw_ex here is tokenized example (contains wordpiece fields). We need original tokens/labels.
+        # Use eval_dataset's underlying original if available; fall back to tokenized's word-level mapping.
+        # We have eval_dataset (tokenized) and eval_dataset was created from raw eval JSON earlier (same order).
+        # So use eval_dataset.dataset if available: but simplest: load eval raw earlier and reuse original examples.
+        pass  # placeholder
+
+    # To reliably pair tokenized outputs with original raw examples we will reload the raw eval file
+    # (the original ordering was preserved).
+    eval_raw_path = eval_path
+    eval_dataset_raw = load_ner_json(eval_raw_path)
+
+    pred_spans_by_example = []
+    for raw_ex, pred_seq, lab_seq in zip(eval_dataset_raw, predictions, labels):
+        tokens_words = raw_ex["tokens"]
+        gold_word_labels = raw_ex["labels"]
+
+        pred_word_ids = _word_level_pred_ids_from_aligned(pred_seq, lab_seq)
+        pred_word_labels = [id2label[i] for i in pred_word_ids]
+
+        pred_spans = _bio_spans_from_word_labels(tokens_words, pred_word_labels)
+        gold_spans = _bio_spans_from_word_labels(tokens_words, gold_word_labels)
+
+        pred_spans_by_example.append(
+            {
+                "tokens": tokens_words,
+                "gold_spans": gold_spans,
+                "pred_spans": pred_spans,
+            }
+        )
+
+    pred_spans_path = output_dir / "eval_predicted_spans.json"
+    with open(pred_spans_path, "w", encoding="utf-8") as f:
+        json.dump(pred_spans_by_example, f, indent=2, ensure_ascii=False)
+
     results = {
         "base_model": base_model,
         "seqeval_span_f1": float(seqeval_f1),
         "krippendorff_alpha_nominal": float(alpha),
+        "cohen_kappa_token_level_all_tokens": float(kappa_all),
         "pairwise_f1": {
             "gold_to_pred": {"precision": float(p1), "recall": float(r1), "f1": float(f1_1)},
             "pred_to_gold": {"precision": float(p2), "recall": float(r2), "f1": float(f1_2)},
             "pairwise_micro_f1": float(micro_f1),
         },
         "confusion_matrix": cm_dict,
+        "entity_only_metrics": {
+            "krippendorff_alpha_nominal": float(alpha_ent),
+            "cohen_kappa_token_level": float(kappa_ent),
+            "pairwise_f1": {
+                "gold_to_pred": {"precision": float(p1_ent), "recall": float(r1_ent), "f1": float(f1_1_ent)},
+                "pred_to_gold": {"precision": float(p2_ent), "recall": float(r2_ent), "f1": float(f1_2_ent)},
+                "pairwise_micro_f1": float(micro_f1_ent),
+            },
+            "confusion_matrix": cm_ent_dict,
+        },
+        "artifacts": {
+            "eval_predicted_spans_path": str(pred_spans_path),
+        },
         "seed": seed,
     }
 
