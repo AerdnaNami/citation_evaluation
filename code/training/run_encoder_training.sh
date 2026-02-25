@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CONFIG="configs/config_xlmr.json"
+CONFIG="configs/config_scibert.json"
 
 if [ ! -f "$CONFIG" ]; then
   echo "Config file not found: $CONFIG"
@@ -19,6 +19,14 @@ fi
 for CAT_OBJ in "${CAT_OBJS[@]}"; do
   CAT_NAME=$(jq -r '.name' <<<"$CAT_OBJ")
   TRAIN_SCRIPT=$(jq -r '.train_script' <<<"$CAT_OBJ")
+  RUN_NAME=$(jq -r '.run_name' <<<"$CAT_OBJ")
+
+  # I_WEIGHT=$(jq -r '.i_weight' <<<"$CAT_OBJ")
+  # B_WEIGHT=$(jq -r '.b_weight' <<<"$CAT_OBJ")
+  # O_WEIGHT=$(jq -r '.o_weight' <<<"$CAT_OBJ")
+  # MIN_SPAN_LEN=$(jq -r '.min_pred_span_len' <<<"$CAT_OBJ")
+
+  # COVERAGE=$(jq -r '.coverage_threshold' <<<"$CAT_OBJ")
 
   if [ -z "$CAT_NAME" ] || [ "$CAT_NAME" = "null" ]; then
     echo "ERROR: category missing .name"
@@ -43,7 +51,13 @@ for CAT_OBJ in "${CAT_OBJS[@]}"; do
 
   python "$TRAIN_SCRIPT" \
     --config "$CONFIG" \
-    --category "$CAT_NAME"
+    --category "$CAT_NAME" \
+    --run_name "$RUN_NAME" \
+    # --o_weight "$O_WEIGHT" \
+    # --i_weight "$I_WEIGHT" \
+    # --b_weight "$B_WEIGHT" \
+    # --min_pred_span_len "$MIN_SPAN_LEN" \
+
 done
 
 echo
