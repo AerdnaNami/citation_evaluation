@@ -1,0 +1,21 @@
+T1	Method 48 75	machine learning techniques
+T2	Method 89 102	comma checker
+T3	Method 127 142	grammar checker
+T4	Material 149 155	Basque
+T5	Generic 246 252	system
+T6	Metric 300 309	precision
+T7	Metric 325 331	recall
+T8	Generic 341 343	It
+T9	Metric 357 366	precision
+T10	Metric 382 388	recall
+T11	Task 412 427	placing  commas
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T4
+R3	PART-OF Arg1:T2 Arg2:T3
+R4	COREF Arg1:T2 Arg2:T5
+R5	EVALUATE-FOR Arg1:T6 Arg2:T5
+R6	EVALUATE-FOR Arg1:T7 Arg2:T5
+R7	COREF Arg1:T8 Arg2:T5
+R8	EVALUATE-FOR Arg1:T9 Arg2:T8
+R9	EVALUATE-FOR Arg1:T10 Arg2:T8
+R10	USED-FOR Arg1:T8 Arg2:T11

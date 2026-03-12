@@ -1,0 +1,18 @@
+T1	Generic 27 53	robust  interactive method
+T2	Task 58 78	speech understanding
+T3	Method 87 109	generalized LR parsing
+T4	Generic 131 139	approach
+T5	Method 142 149	Parsing
+T6	Method 250 256	parser
+T7	OtherScientificTerm 293 312	non-terminal symbol
+T8	Generic 546 552	method
+T9	OtherScientificTerm 582 595	unknown words
+T10	Generic 816 824	approach
+R1	USED-FOR Arg1:T7 Arg2:T6
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	COREF Arg1:T4 Arg2:T1
+R4	USED-FOR Arg1:T4 Arg2:T3
+R5	COREF Arg1:T6 Arg2:T5
+R6	COREF Arg1:T8 Arg2:T4
+R7	USED-FOR Arg1:T8 Arg2:T9
+R8	COREF Arg1:T10 Arg2:T8

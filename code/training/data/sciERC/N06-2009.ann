@@ -1,0 +1,8 @@
+T1	Method 21 52	Question Answering (QA) systems
+T2	Method 249 280	MT-based paraphrasing technique
+T3	Method 298 307	QA system
+T4	Material 325 346	paraphrased questions
+T5	Metric 391 394	MRR
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	COREF Arg1:T3 Arg2:T1
+R3	EVALUATE-FOR Arg1:T4 Arg2:T3

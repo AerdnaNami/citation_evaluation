@@ -1,0 +1,23 @@
+T1	Method 49 53	EBMT
+T2	Material 66 95	small-sized  bilingual corpus
+T3	Material 109 140	out-of-domain  bilingual corpus
+T4	Method 165 179	language model
+T5	Material 187 216	in-domain  monolingual corpus
+T6	Method 254 265	EBMT system
+T7	Metric 278 297	evaluation measures
+T8	Metric 307 317	BLEU score
+T9	Metric 328 338	NIST score
+T10	Material 376 407	out-of-domain  bilingual corpus
+T11	Method 443 457	language model
+R1	USED-FOR Arg1:T4 Arg2:T1
+R2	COREF Arg1:T6 Arg2:T1
+R3	HYPONYM-OF Arg1:T8 Arg2:T7
+R4	HYPONYM-OF Arg1:T9 Arg2:T7
+R5	CONJUNCTION Arg1:T8 Arg2:T9
+R6	EVALUATE-FOR Arg1:T7 Arg2:T11
+R7	COREF Arg1:T11 Arg2:T4
+R8	USED-FOR Arg1:T2 Arg2:T1
+R9	USED-FOR Arg1:T5 Arg2:T4
+R10	USED-FOR Arg1:T3 Arg2:T1
+R11	USED-FOR Arg1:T7 Arg2:T10
+R12	COREF Arg1:T10 Arg2:T3

@@ -1,0 +1,33 @@
+T1	Task 0 15	Machine reading
+T2	Generic 36 41	field
+T3	Method 56 73	computer programs
+T4	Material 91 103	flowing text
+T5	OtherScientificTerm 116 131	fact assertions
+T6	Material 149 166	narrative content
+T7	Generic 173 177	task
+T8	Method 210 243	natural language processing (NLP)
+T9	Task 248 275	information extraction (IE)
+T10	Task 305 327	machine reading system
+T11	Method 360 382	cognitive architecture
+T12	OtherScientificTerm 499 518	cognitive semantics
+T13	Method 523 543	construction grammar
+T14	Task 561 570	prior NLP
+T15	Task 575 586	IE research
+T16	Generic 604 610	system
+T17	Material 674 693	idiosyncratic texts
+T18	Material 701 722	family history domain
+T19	Generic 776 782	system
+R1	COREF Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T4
+R3	USED-FOR Arg1:T3 Arg2:T5
+R4	FEATURE-OF Arg1:T5 Arg2:T6
+R5	COREF Arg1:T7 Arg2:T1
+R6	PART-OF Arg1:T8 Arg2:T7
+R7	PART-OF Arg1:T9 Arg2:T7
+R8	FEATURE-OF Arg1:T11 Arg2:T10
+R9	CONJUNCTION Arg1:T12 Arg2:T13
+R10	CONJUNCTION Arg1:T14 Arg2:T15
+R11	FEATURE-OF Arg1:T18 Arg2:T17
+R12	COREF Arg1:T16 Arg2:T10
+R13	USED-FOR Arg1:T16 Arg2:T17
+R14	COREF Arg1:T19 Arg2:T16

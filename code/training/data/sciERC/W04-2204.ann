@@ -1,0 +1,37 @@
+T1	Material 44 63	transfer dictionary
+T2	Task 81 104	Dictionary construction
+T3	Task 156 182	machine translation system
+T4	Generic 253 263	dictionary
+T5	Material 281 301	linguistic resources
+T6	Material 404 433	Korean-to-Japanese dictionary
+T7	Material 442 449	English
+T8	Task 491 513	automatic construction
+T9	OtherScientificTerm 549 581	directionality  of  dictionaries
+T10	Generic 569 581	dictionaries
+T11	Method 605 630	"one-time look up" method
+T12	Material 641 695	Korean-to-English and a Japanese-to-English dictionary
+T13	Generic 716 722	method
+T14	OtherScientificTerm 730 754	"overlapping constraint"
+T15	Material 764 792	Korean-to-English dictionary
+T16	Material 802 832	English-to-Japanese dictionary
+T17	Generic 874 880	method
+T18	Generic 909 919	dictionary
+T19	Material 926 954	English-to-Korean dictionary
+T20	Material 961 991	English-to-Japanese dictionary
+T21	Generic 1018 1024	method
+R1	PART-OF Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T7 Arg2:T6
+R4	USED-FOR Arg1:T12 Arg2:T11
+R5	CONJUNCTION Arg1:T15 Arg2:T16
+R6	CONJUNCTION Arg1:T19 Arg2:T20
+R7	COREF Arg1:T4 Arg2:T1
+R8	USED-FOR Arg1:T14 Arg2:T13
+R9	USED-FOR Arg1:T15 Arg2:T13
+R10	USED-FOR Arg1:T16 Arg2:T13
+R11	COREF Arg1:T21 Arg2:T11
+R12	USED-FOR Arg1:T17 Arg2:T18
+R13	HYPONYM-OF Arg1:T19 Arg2:T18
+R14	HYPONYM-OF Arg1:T20 Arg2:T18
+R15	COREF Arg1:T10 Arg2:T4
+R16	EVALUATE-FOR Arg1:T8 Arg2:T9

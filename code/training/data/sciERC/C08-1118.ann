@@ -1,0 +1,9 @@
+T1	Material 86 108	medium-length speeches
+T2	Material 117 132	EUROPARL corpus
+T3	Method 151 185	frequency counts  of  word n-grams
+T4	OtherScientificTerm 173 185	word n-grams
+T5	Metric 201 209	accuracy
+T6	Method 225 246	classification method
+T7	OtherScientificTerm 291 307	positive markers
+R1	PART-OF Arg1:T1 Arg2:T2
+R2	EVALUATE-FOR Arg1:T5 Arg2:T6

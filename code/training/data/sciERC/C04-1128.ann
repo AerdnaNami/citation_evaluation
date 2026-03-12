@@ -1,0 +1,20 @@
+T1	Method 8 27	sentence extraction
+T2	Task 48 61	summarization
+T3	Material 163 182	email communication
+T4	Method 249 268	sentence extraction
+T5	Task 405 440	detection of  question-answer pairs
+T6	Material 449 467	email conversation
+T7	Task 486 505	email summarization
+T8	OtherScientificTerm 530 538	features
+T9	OtherScientificTerm 553 579	structure of email-threads
+T10	OtherScientificTerm 609 627	lexical similarity
+T11	OtherScientificTerm 633 651	discourse segments
+T12	Task 658 681	question-answer pairing
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T8 Arg2:T10
+R3	COREF Arg1:T4 Arg2:T1
+R4	FEATURE-OF Arg1:T10 Arg2:T11
+R5	USED-FOR Arg1:T8 Arg2:T12
+R6	USED-FOR Arg1:T6 Arg2:T5
+R7	USED-FOR Arg1:T5 Arg2:T7
+R8	USED-FOR Arg1:T9 Arg2:T8

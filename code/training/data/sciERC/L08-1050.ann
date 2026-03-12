@@ -1,0 +1,26 @@
+T1	Material 69 104	language corpus annotation scenario
+T2	OtherScientificTerm 121 140	discourse relations
+T3	Material 146 151	Czech
+T4	OtherScientificTerm 200 248	syntactically motivated relations  in  discourse
+T5	Material 309 339	Prague Dependency Treebank 2.0
+T6	Material 350 375	Penn Discourse Treebank 2
+T7	OtherScientificTerm 417 466	syntactico-semantic (tectogrammatical) annotation
+T8	Material 476 502	Prague Dependency Treebank
+T9	Generic 512 514	it
+T10	Task 538 579	sentence-boundary-crossing representation
+T11	Task 614 645	discourse level  of  annotation
+T12	Method 746 780	Praguian dependency-based approach
+T13	Method 799 824	Penn discourse annotation
+T14	Method 849 902	analysis and classification of  discourse connectives
+R1	CONJUNCTION Arg1:T5 Arg2:T6
+R2	COREF Arg1:T7 Arg2:T9
+R3	USED-FOR Arg1:T9 Arg2:T10
+R4	USED-FOR Arg1:T5 Arg2:T4
+R5	USED-FOR Arg1:T6 Arg2:T4
+R6	PART-OF Arg1:T7 Arg2:T8
+R7	USED-FOR Arg1:T9 Arg2:T11
+R8	EVALUATE-FOR Arg1:T14 Arg2:T13
+R9	COMPARE Arg1:T13 Arg2:T12
+R10	FEATURE-OF Arg1:T3 Arg2:T2
+R11	USED-FOR Arg1:T1 Arg2:T2
+R12	EVALUATE-FOR Arg1:T14 Arg2:T12

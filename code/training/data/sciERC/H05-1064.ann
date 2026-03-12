@@ -1,0 +1,43 @@
+T1	Generic 19 25	method
+T2	OtherScientificTerm 53 67	NLP structures
+T3	Method 77 97	reranking approaches
+T4	Method 118 146	conditional log-linear model
+T5	OtherScientificTerm 155 171	hidden variables
+T6	OtherScientificTerm 226 239	word clusters
+T7	OtherScientificTerm 245 256	word senses
+T8	Generic 263 268	model
+T9	Metric 330 363	discriminative training criterion
+T10	Generic 401 406	model
+T11	OtherScientificTerm 455 482	hidden-variable assignments
+T12	Generic 498 508	summations
+T13	Method 556 575	dynamic programming
+T14	Generic 608 613	model
+T15	Task 618 633	parse reranking
+T16	Generic 640 645	model
+T17	Metric 656 665	F-measure
+T18	Method 701 712	base parser
+T19	Method 749 772	Collins (2000) reranker
+T20	Task 816 823	parsing
+T21	Generic 830 840	techniques
+T22	OtherScientificTerm 876 890	NLP structures
+T23	OtherScientificTerm 904 915	parse trees
+R1	USED-FOR Arg1:T5 Arg2:T4
+R2	COMPARE Arg1:T18 Arg2:T19
+R3	CONJUNCTION Arg1:T6 Arg2:T7
+R4	COREF Arg1:T4 Arg2:T1
+R5	COREF Arg1:T8 Arg2:T4
+R6	USED-FOR Arg1:T9 Arg2:T8
+R7	COREF Arg1:T10 Arg2:T8
+R8	USED-FOR Arg1:T13 Arg2:T12
+R9	COREF Arg1:T14 Arg2:T10
+R10	USED-FOR Arg1:T14 Arg2:T15
+R11	EVALUATE-FOR Arg1:T17 Arg2:T16
+R12	COREF Arg1:T16 Arg2:T14
+R13	COMPARE Arg1:T16 Arg2:T18
+R14	COREF Arg1:T21 Arg2:T16
+R15	USED-FOR Arg1:T21 Arg2:T22
+R16	USED-FOR Arg1:T21 Arg2:T20
+R17	CONJUNCTION Arg1:T23 Arg2:T22
+R18	USED-FOR Arg1:T1 Arg2:T2
+R19	FEATURE-OF Arg1:T3 Arg2:T2
+R20	USED-FOR Arg1:T21 Arg2:T23

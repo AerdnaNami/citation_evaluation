@@ -1,0 +1,34 @@
+T1	Method 0 31	Representing images with layers
+T2	Generic 51 63	applications
+T3	Task 74 91	video compression
+T4	Task 93 108	motion analysis
+T5	Task 114 131	3D scene analysis
+T6	Generic 156 164	approach
+T7	OtherScientificTerm 188 194	layers
+T8	Material 200 206	images
+T9	OtherScientificTerm 245 257	homographies
+T10	OtherScientificTerm 269 283	planar patches
+T11	OtherScientificTerm 291 296	scene
+T12	OtherScientificTerm 304 335	low dimensional linear subspace
+T13	OtherScientificTerm 337 343	Layers
+T14	Material 357 363	images
+T15	OtherScientificTerm 386 394	subspace
+T16	OtherScientificTerm 443 451	clusters
+T17	Method 495 532	mean-shift based clustering algorithm
+T18	Task 534 551	Global optimality
+T19	OtherScientificTerm 580 587	regions
+T20	OtherScientificTerm 631 636	noise
+T21	OtherScientificTerm 681 700	subspace constraint
+R1	PART-OF Arg1:T7 Arg2:T8
+R2	PART-OF Arg1:T13 Arg2:T14
+R3	USED-FOR Arg1:T17 Arg2:T16
+R4	USED-FOR Arg1:T14 Arg2:T16
+R5	USED-FOR Arg1:T21 Arg2:T20
+R6	HYPONYM-OF Arg1:T3 Arg2:T2
+R7	HYPONYM-OF Arg1:T4 Arg2:T2
+R8	HYPONYM-OF Arg1:T5 Arg2:T2
+R9	CONJUNCTION Arg1:T3 Arg2:T4
+R10	CONJUNCTION Arg1:T4 Arg2:T5
+R11	USED-FOR Arg1:T1 Arg2:T2
+R12	USED-FOR Arg1:T6 Arg2:T7
+R13	PART-OF Arg1:T10 Arg2:T11

@@ -1,0 +1,14 @@
+T1	Generic 47 53	system
+T2	OtherScientificTerm 74 102	subcategorization dictionary
+T3	Material 110 125	textual corpora
+T4	OtherScientificTerm 165 197	relative frequency of occurrence
+T5	OtherScientificTerm 564 592	subcategorization dictionary
+T6	Generic 609 615	system
+T7	Metric 630 638	accuracy
+T8	Method 646 652	parser
+R1	EVALUATE-FOR Arg1:T8 Arg2:T5
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	COREF Arg1:T6 Arg2:T1
+R4	USED-FOR Arg1:T3 Arg2:T1
+R5	EVALUATE-FOR Arg1:T7 Arg2:T8
+R6	USED-FOR Arg1:T6 Arg2:T5

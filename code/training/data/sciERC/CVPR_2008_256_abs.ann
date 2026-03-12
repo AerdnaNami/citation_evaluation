@@ -1,0 +1,54 @@
+T1	Method 9 21	object model
+T2	Metric 28 59	black-box measure of similarity
+T3	Generic 72 77	model
+T4	Task 113 135	visual object tracking
+T5	Task 141 171	numerical optimization problem
+T6	Method 255 273	local optimization
+T7	OtherScientificTerm 295 331	local mode of the similarity measure
+T8	OtherScientificTerm 337 387	parameter space of translation, rotation and scale
+T9	Method 458 472	local tracking
+T10	Method 517 538	prediction techniques
+T11	Method 548 561	Kalman filter
+T12	Task 696 712	object detection
+T13	Task 718 745	global optimization problem
+T14	Generic 756 758	it
+T15	Method 763 797	Adaptive Simulated Annealing (ASA)
+T16	Generic 801 807	method
+T17	Method 876 893	exhaustive search
+T18	Method 900 920	Monte Carlo approach
+T19	Method 922 925	ASA
+T20	OtherScientificTerm 953 968	parameter space
+T21	Method 985 1011	local deterministic search
+T22	Method 1022 1038	cluster analysis
+T23	OtherScientificTerm 1046 1069	sampled parameter space
+T24	Method 1107 1120	local tracker
+T25	Method 1126 1180	numerical hybrid local and global mode-seeking tracker
+T26	Material 1209 1224	airborne videos
+T27	OtherScientificTerm 1230 1245	heavy occlusion
+T28	OtherScientificTerm 1256 1270	camera motions
+T29	Generic 1276 1284	approach
+T30	Generic 1297 1322	state-of-the-art trackers
+T31	Material 1330 1354	VIVID benchmark datasets
+R1	COREF Arg1:T3 Arg2:T1
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T6 Arg2:T7
+R4	USED-FOR Arg1:T8 Arg2:T7
+R5	USED-FOR Arg1:T13 Arg2:T12
+R6	COREF Arg1:T13 Arg2:T14
+R7	USED-FOR Arg1:T15 Arg2:T14
+R8	COREF Arg1:T16 Arg2:T15
+R9	COMPARE Arg1:T16 Arg2:T17
+R10	COREF Arg1:T15 Arg2:T19
+R11	HYPONYM-OF Arg1:T19 Arg2:T18
+R12	COMPARE Arg1:T19 Arg2:T21
+R13	COREF Arg1:T25 Arg2:T29
+R14	COMPARE Arg1:T30 Arg2:T29
+R15	EVALUATE-FOR Arg1:T31 Arg2:T29
+R16	EVALUATE-FOR Arg1:T31 Arg2:T30
+R17	EVALUATE-FOR Arg1:T26 Arg2:T25
+R18	FEATURE-OF Arg1:T27 Arg2:T26
+R19	FEATURE-OF Arg1:T28 Arg2:T26
+R20	CONJUNCTION Arg1:T27 Arg2:T28
+R21	USED-FOR Arg1:T22 Arg2:T23
+R22	USED-FOR Arg1:T22 Arg2:T24
+R23	PART-OF Arg1:T11 Arg2:T10

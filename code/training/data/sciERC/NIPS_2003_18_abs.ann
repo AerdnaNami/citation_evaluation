@@ -1,0 +1,28 @@
+T1	Generic 23 32	algorithm
+T2	Task 37 93	learning the time-varying shape of a non-rigid 3D object
+T3	Material 99 128	uncalibrated 2D tracking data
+T4	OtherScientificTerm 139 151	shape motion
+T5	Method 157 172	rigid component
+T6	OtherScientificTerm 174 182	rotation
+T7	OtherScientificTerm 187 198	translation
+T8	OtherScientificTerm 216 237	non-rigid deformation
+T9	OtherScientificTerm 239 253	Reconstruction
+T10	OtherScientificTerm 270 292	arbitrary deformations
+T11	OtherScientificTerm 352 364	object shape
+T12	Method 402 423	Gaussian distribution
+T13	Generic 455 464	algorithm
+T14	OtherScientificTerm 490 509	3D shape and motion
+T15	Method 560 568	Gaussian
+T16	Generic 632 641	algorithm
+T17	OtherScientificTerm 651 686	temporal smoothness in object shape
+T18	Generic 702 704	it
+T19	Material 731 743	missing data
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T12 Arg2:T11
+R3	COREF Arg1:T13 Arg2:T1
+R4	COREF Arg1:T15 Arg2:T12
+R5	USED-FOR Arg1:T13 Arg2:T14
+R6	COREF Arg1:T16 Arg2:T13
+R7	USED-FOR Arg1:T16 Arg2:T17
+R8	COREF Arg1:T16 Arg2:T18
+R9	USED-FOR Arg1:T18 Arg2:T19

@@ -1,0 +1,21 @@
+T1	Task 12 39	convex optimization problem
+T2	Task 56 82	segmenting sequential data
+T3	OtherScientificTerm 120 128	outliers
+T4	Generic 146 156	algorithms
+T5	Generic 174 181	problem
+T6	Metric 311 321	Robustness
+T7	OtherScientificTerm 325 333	outliers
+T8	Task 354 370	real-world tasks
+T9	Task 382 401	speech segmentation
+T10	Generic 407 417	algorithms
+T11	Method 429 462	baseline seg-mentation algorithms
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T5 Arg2:T1
+R3	USED-FOR Arg1:T4 Arg2:T5
+R4	COMPARE Arg1:T10 Arg2:T11
+R5	COREF Arg1:T4 Arg2:T10
+R6	USED-FOR Arg1:T2 Arg2:T3
+R7	FEATURE-OF Arg1:T7 Arg2:T6
+R8	EVALUATE-FOR Arg1:T8 Arg2:T6
+R9	EVALUATE-FOR Arg1:T9 Arg2:T6
+R10	FEATURE-OF Arg1:T9 Arg2:T8

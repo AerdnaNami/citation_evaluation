@@ -1,0 +1,48 @@
+T1	Task 4 29	mobile speech application
+T2	Metric 31 62	speaker DOA estimation accuracy
+T3	Metric 64 87	interference robustness
+T4	Metric 92 113	compact physical size
+T5	Method 171 199	acoustic vector sensor (AVS)
+T6	Method 215 239	DOA estimation algorithm
+T7	OtherScientificTerm 328 358	non-speech interferences (NSI)
+T8	Method 382 421	robust speaker DOA estimation algorithm
+T9	Generic 423 425	It
+T10	Method 454 483	inter-sensor data ratio model
+T11	Method 490 493	AVS
+T12	Method 497 522	bispectrum domain (BISDR)
+T13	Generic 541 561	favorable properties
+T14	Method 565 575	bispectrum
+T15	OtherScientificTerm 585 615	zero value of Gaussian process
+T16	OtherScientificTerm 630 660	distribution of speech and NSI
+T17	OtherScientificTerm 657 660	NSI
+T18	Method 687 702	bispectrum mask
+T19	OtherScientificTerm 738 754	speaker DOA cues
+T20	Method 769 774	BISDR
+T21	OtherScientificTerm 790 793	NSI
+T22	OtherScientificTerm 806 821	speech sparsity
+T23	OtherScientificTerm 832 852	bispectrum amplitude
+T24	Generic 952 961	algorithm
+T25	OtherScientificTerm 976 990	NSI conditions
+T26	Metric 1001 1004	SIR
+R1	FEATURE-OF Arg1:T2 Arg2:T1
+R2	FEATURE-OF Arg1:T3 Arg2:T1
+R3	FEATURE-OF Arg1:T4 Arg2:T1
+R4	CONJUNCTION Arg1:T2 Arg2:T3
+R5	CONJUNCTION Arg1:T3 Arg2:T4
+R6	COREF Arg1:T9 Arg2:T8
+R7	COREF Arg1:T5 Arg2:T11
+R8	USED-FOR Arg1:T12 Arg2:T11
+R9	COREF Arg1:T17 Arg2:T7
+R10	COREF Arg1:T20 Arg2:T12
+R11	USED-FOR Arg1:T20 Arg2:T19
+R12	USED-FOR Arg1:T18 Arg2:T19
+R13	COREF Arg1:T21 Arg2:T7
+R14	COREF Arg1:T21 Arg2:T25
+R15	USED-FOR Arg1:T24 Arg2:T25
+R16	COREF Arg1:T9 Arg2:T24
+R17	COREF Arg1:T6 Arg2:T8
+R18	HYPONYM-OF Arg1:T15 Arg2:T13
+R19	HYPONYM-OF Arg1:T16 Arg2:T13
+R20	CONJUNCTION Arg1:T15 Arg2:T16
+R21	USED-FOR Arg1:T9 Arg2:T13
+R22	USED-FOR Arg1:T10 Arg2:T11

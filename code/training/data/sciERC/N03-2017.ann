@@ -1,0 +1,18 @@
+T1	OtherScientificTerm 15 38	syntax-based constraint
+T2	Task 45 59	word alignment
+T3	OtherScientificTerm 77 96	cohesion constraint
+T4	Generic 100 102	It
+T5	Material 122 137	English phrases
+T6	Material 189 204	French sentence
+T7	Generic 241 251	constraint
+T8	Generic 270 280	algorithms
+T9	Generic 304 306	it
+T10	Metric 349 366	alignment quality
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	HYPONYM-OF Arg1:T3 Arg2:T1
+R3	COREF Arg1:T4 Arg2:T3
+R4	USED-FOR Arg1:T5 Arg2:T4
+R5	COREF Arg1:T7 Arg2:T4
+R6	COREF Arg1:T9 Arg2:T7
+R7	EVALUATE-FOR Arg1:T8 Arg2:T7
+R8	EVALUATE-FOR Arg1:T10 Arg2:T9

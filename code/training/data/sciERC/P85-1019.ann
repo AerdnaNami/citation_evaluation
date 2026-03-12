@@ -1,0 +1,42 @@
+T1	Method 24 48	restricted domain parser
+T2	Method 58 63	Plume
+T3	Method 139 155	Plume's approach
+T4	Task 159 166	parsing
+T5	OtherScientificTerm 181 213	semantic caseframe instantiation
+T6	OtherScientificTerm 260 277	grammatical input
+T7	Metric 285 295	robustness
+T8	OtherScientificTerm 313 332	ungrammatical input
+T9	Method 342 347	Plume
+T10	Material 376 413	declarative and imperative utterances
+T11	Generic 416 418	it
+T12	OtherScientificTerm 428 436	passives
+T13	OtherScientificTerm 440 456	relative clauses
+T14	OtherScientificTerm 463 477	interrogatives
+T15	OtherScientificTerm 510 536	patchy  syntactic coverage
+T16	Method 560 565	Plume
+T17	Generic 570 572	it
+T18	Method 639 644	Plume
+T19	OtherScientificTerm 657 665	passives
+T20	OtherScientificTerm 669 685	relative clauses
+T21	OtherScientificTerm 693 707	interrogatives
+R1	HYPONYM-OF Arg1:T2 Arg2:T1
+R2	COREF Arg1:T2 Arg2:T3
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	USED-FOR Arg1:T5 Arg2:T3
+R5	COREF Arg1:T3 Arg2:T9
+R6	USED-FOR Arg1:T9 Arg2:T10
+R7	COREF Arg1:T9 Arg2:T11
+R8	USED-FOR Arg1:T11 Arg2:T12
+R9	USED-FOR Arg1:T11 Arg2:T13
+R10	USED-FOR Arg1:T11 Arg2:T14
+R11	CONJUNCTION Arg1:T12 Arg2:T13
+R12	CONJUNCTION Arg1:T13 Arg2:T14
+R13	COREF Arg1:T9 Arg2:T16
+R14	COREF Arg1:T16 Arg2:T17
+R15	COREF Arg1:T17 Arg2:T18
+R16	USED-FOR Arg1:T18 Arg2:T19
+R17	USED-FOR Arg1:T18 Arg2:T20
+R18	USED-FOR Arg1:T18 Arg2:T21
+R19	CONJUNCTION Arg1:T19 Arg2:T20
+R20	CONJUNCTION Arg1:T20 Arg2:T21
+R21	FEATURE-OF Arg1:T8 Arg2:T7

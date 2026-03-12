@@ -1,0 +1,25 @@
+T1	Task 84 121	Statistical Machine Translation (SMT)
+T2	Method 242 256	SMT algorithms
+T3	Metric 332 356	computational complexity
+T4	Generic 385 393	problems
+T5	Task 398 401	SMT
+T6	Metric 462 486	computational complexity
+T7	Generic 497 505	problems
+T8	Method 528 542	IBM Models 1-2
+T9	Generic 589 601	computations
+T10	Generic 642 648	models
+T11	Method 705 729	polynomial time solution
+T12	Generic 749 762	hard problems
+T13	Method 857 887	polynomial time approximations
+T14	Generic 899 911	computations
+T15	Metric 966 976	complexity
+R1	USED-FOR Arg1:T11 Arg2:T12
+R2	COREF Arg1:T7 Arg2:T4
+R3	EVALUATE-FOR Arg1:T6 Arg2:T7
+R4	COMPARE Arg1:T8 Arg2:T10
+R5	COREF Arg1:T12 Arg2:T7
+R6	COREF Arg1:T5 Arg2:T1
+R7	COREF Arg1:T14 Arg2:T9
+R8	USED-FOR Arg1:T13 Arg2:T14
+R9	EVALUATE-FOR Arg1:T3 Arg2:T4
+R10	PART-OF Arg1:T4 Arg2:T5

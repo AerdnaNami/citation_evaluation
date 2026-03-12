@@ -1,0 +1,15 @@
+T1	Method 15 48	bit-vector-based CKY-style parser
+T2	Task 55 75	context-free parsing
+T3	Method 96 102	parser
+T4	Method 124 151	parse forest representation
+T5	Method 199 222	large treebank grammars
+T6	Method 257 263	parser
+T7	Method 271 292	bit-vector operations
+T8	Method 346 352	parser
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T7 Arg2:T6
+R3	COREF Arg1:T3 Arg2:T1
+R4	COREF Arg1:T6 Arg2:T3
+R5	COREF Arg1:T8 Arg2:T6
+R6	USED-FOR Arg1:T4 Arg2:T5
+R7	USED-FOR Arg1:T3 Arg2:T4

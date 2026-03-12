@@ -1,0 +1,31 @@
+T1	OtherScientificTerm 59 77	lack of structures
+T2	Task 59 106	lack of structures in traditional n-gram models
+T3	Method 93 106	n-gram models
+T4	Task 125 160	weakly supervised dependency parser
+T5	OtherScientificTerm 176 189	speech syntax
+T6	Material 213 238	annotated training corpus
+T7	OtherScientificTerm 240 252	Labeled data
+T8	OtherScientificTerm 274 292	hand-crafted rules
+T9	OtherScientificTerm 311 330	syntactic knowledge
+T10	Method 332 350	Bayesian inference
+T11	OtherScientificTerm 368 373	rules
+T12	Generic 404 408	them
+T13	OtherScientificTerm 419 442	complex tree structures
+T14	OtherScientificTerm 459 491	discriminative model's posterior
+T15	Material 504 520	unlabeled corpus
+T16	Generic 527 536	posterior
+T17	OtherScientificTerm 545 576	sparse se-lectional preferences
+T18	Generic 621 626	model
+T19	Material 643 676	English and Czech newspaper texts
+T20	Material 703 739	French broadcast news transcriptions
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T8 Arg2:T9
+R3	COREF Arg1:T11 Arg2:T12
+R4	USED-FOR Arg1:T12 Arg2:T13
+R5	USED-FOR Arg1:T10 Arg2:T11
+R6	USED-FOR Arg1:T13 Arg2:T14
+R7	USED-FOR Arg1:T15 Arg2:T14
+R8	COREF Arg1:T14 Arg2:T16
+R9	USED-FOR Arg1:T16 Arg2:T17
+R10	EVALUATE-FOR Arg1:T19 Arg2:T18
+R11	EVALUATE-FOR Arg1:T20 Arg2:T18

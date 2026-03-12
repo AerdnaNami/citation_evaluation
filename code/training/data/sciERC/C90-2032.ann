@@ -1,0 +1,13 @@
+T1	Method 24 63	document oriented preference sets(DoPS)
+T2	Task 73 116	disambiguation of the  dependency structure
+T3	Method 140 151	DoPS system
+T4	OtherScientificTerm 245 265	Sentence ambiguities
+T5	OtherScientificTerm 292 328	domain targeted preference knowledge
+T6	Material 362 376	knowledgebases
+T7	OtherScientificTerm 460 481	dependency structures
+T8	Material 487 518	Japanese patent claim sentences
+R1	FEATURE-OF Arg1:T7 Arg2:T8
+R2	COREF Arg1:T3 Arg2:T1
+R3	USED-FOR Arg1:T5 Arg2:T4
+R4	COMPARE Arg1:T5 Arg2:T6
+R5	USED-FOR Arg1:T1 Arg2:T2

@@ -1,0 +1,96 @@
+T1	Generic 24 34	approaches
+T2	Method 75 95	probabilistic parser
+T3	Method 109 115	parser
+T4	OtherScientificTerm 136 152	candidate parses
+T5	OtherScientificTerm 238 245	ranking
+T6	Generic 257 263	parses
+T7	Generic 277 282	model
+T8	OtherScientificTerm 328 335	ranking
+T9	OtherScientificTerm 357 365	features
+T10	OtherScientificTerm 375 379	tree
+T11	Generic 414 422	approach
+T12	Generic 431 433	it
+T13	OtherScientificTerm 444 448	tree
+T14	OtherScientificTerm 492 500	features
+T15	OtherScientificTerm 538 546	features
+T16	OtherScientificTerm 602 612	derivation
+T17	Method 620 636	generative model
+T18	OtherScientificTerm 657 665	features
+T19	Generic 701 707	method
+T20	Task 717 731	reranking task
+T21	Method 749 766	boosting approach
+T22	Task 772 788	ranking problems
+T23	Method 839 854	boosting method
+T24	Task 860 867	parsing
+T25	Material 874 902	Wall Street Journal treebank
+T26	Generic 910 916	method
+T27	OtherScientificTerm 931 945	log-likelihood
+T28	Method 956 970	baseline model
+T29	OtherScientificTerm 1039 1047	features
+T30	OtherScientificTerm 1055 1066	parse trees
+T31	Generic 1108 1113	model
+T32	Generic 1126 1131	model
+T33	Metric 1150 1159	F-measure
+T34	Metric 1191 1200	F-measure
+T35	Generic 1218 1232	baseline model
+T36	Generic 1286 1295	algorithm
+T37	Method 1305 1322	boosting approach
+T38	OtherScientificTerm 1354 1383	sparsity of the feature space
+T39	Material 1393 1405	parsing data
+T40	Generic 1467 1476	algorithm
+T41	Method 1519 1536	boosting approach
+T42	Generic 1558 1564	method
+T43	Method 1652 1677	feature selection methods
+T44	Method 1687 1722	log-linear (maximum-entropy) models
+T45	Task 1775 1805	natural language parsing (NLP)
+T46	Task 1858 1870	NLP problems
+T47	Task 1903 1916	ranking tasks
+T48	Task 1934 1952	speech recognition
+T49	Task 1957 1976	machine translation
+T50	Task 1984 2011	natural language generation
+R1	USED-FOR Arg1:T18 Arg2:T17
+R2	USED-FOR Arg1:T21 Arg2:T22
+R3	EVALUATE-FOR Arg1:T33 Arg2:T32
+R4	FEATURE-OF Arg1:T38 Arg2:T39
+R5	PART-OF Arg1:T43 Arg2:T44
+R6	COREF Arg1:T3 Arg2:T2
+R7	COREF Arg1:T6 Arg2:T4
+R8	USED-FOR Arg1:T9 Arg2:T7
+R9	USED-FOR Arg1:T7 Arg2:T8
+R10	COREF Arg1:T12 Arg2:T11
+R11	COREF Arg1:T11 Arg2:T1
+R12	COREF Arg1:T15 Arg2:T14
+R13	USED-FOR Arg1:T19 Arg2:T20
+R14	USED-FOR Arg1:T21 Arg2:T19
+R15	USED-FOR Arg1:T23 Arg2:T24
+R16	COREF Arg1:T26 Arg2:T23
+R17	CONJUNCTION Arg1:T27 Arg2:T28
+R18	PART-OF Arg1:T27 Arg2:T26
+R19	COREF Arg1:T31 Arg2:T28
+R20	COREF Arg1:T32 Arg2:T26
+R21	USED-FOR Arg1:T36 Arg2:T37
+R22	USED-FOR Arg1:T38 Arg2:T36
+R23	COREF Arg1:T40 Arg2:T36
+R24	COMPARE Arg1:T40 Arg2:T41
+R25	COREF Arg1:T42 Arg2:T40
+R26	HYPONYM-OF Arg1:T48 Arg2:T46
+R27	HYPONYM-OF Arg1:T49 Arg2:T46
+R28	HYPONYM-OF Arg1:T50 Arg2:T46
+R29	CONJUNCTION Arg1:T48 Arg2:T49
+R30	CONJUNCTION Arg1:T49 Arg2:T50
+R31	COREF Arg1:T23 Arg2:T21
+R32	COREF Arg1:T41 Arg2:T37
+R33	COREF Arg1:T5 Arg2:T8
+R34	COREF Arg1:T20 Arg2:T22
+R35	COREF Arg1:T22 Arg2:T47
+R36	USED-FOR Arg1:T25 Arg2:T23
+R37	COREF Arg1:T37 Arg2:T32
+R38	COMPARE Arg1:T35 Arg2:T32
+R39	COREF Arg1:T35 Arg2:T28
+R40	USED-FOR Arg1:T47 Arg2:T46
+R41	HYPONYM-OF Arg1:T48 Arg2:T47
+R42	HYPONYM-OF Arg1:T49 Arg2:T47
+R43	HYPONYM-OF Arg1:T50 Arg2:T47
+R44	COREF Arg1:T33 Arg2:T34
+R45	EVALUATE-FOR Arg1:T34 Arg2:T35
+R46	FEATURE-OF Arg1:T5 Arg2:T6

@@ -1,0 +1,39 @@
+T1	Generic 35 43	approach
+T2	Task 48 55	parsing
+T3	Task 91 116	unification-based parsing
+T4	Task 126 171	classification-based knowledge representation
+T5	Method 178 218	unification-based grammatical frameworks
+T6	OtherScientificTerm 267 289	linguistic information
+T7	Generic 292 296	they
+T8	Method 364 408	KL-ONE-like knowledge representation systems
+T9	Method 455 501	classification-based representation techniques
+T10	OtherScientificTerm 522 563	unification-based linguistic descriptions
+T11	OtherScientificTerm 608 642	semantic and syntactic information
+T12	Generic 658 664	system
+T13	Method 790 797	parsing
+T14	Method 861 888	KL-ONE style representation
+T15	Task 895 902	parsing
+T16	Task 909 932	semantic interpretation
+T17	Method 961 977	PSI-KLONE system
+T18	Task 994 1001	parsing
+T19	Method 1026 1043	inference process
+T20	Method 1052 1086	incremental description refinement
+R1	USED-FOR Arg1:T9 Arg2:T10
+R2	USED-FOR Arg1:T14 Arg2:T15
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	USED-FOR Arg1:T3 Arg2:T1
+R5	CONJUNCTION Arg1:T4 Arg2:T3
+R6	USED-FOR Arg1:T4 Arg2:T1
+R7	USED-FOR Arg1:T5 Arg2:T6
+R8	COREF Arg1:T7 Arg2:T5
+R9	USED-FOR Arg1:T8 Arg2:T7
+R10	USED-FOR Arg1:T11 Arg2:T12
+R11	USED-FOR Arg1:T14 Arg2:T16
+R12	CONJUNCTION Arg1:T15 Arg2:T16
+R13	USED-FOR Arg1:T17 Arg2:T14
+R14	COREF Arg1:T18 Arg2:T15
+R15	HYPONYM-OF Arg1:T20 Arg2:T19
+R16	COREF Arg1:T14 Arg2:T8
+R17	COREF Arg1:T15 Arg2:T13
+R18	COREF Arg1:T12 Arg2:T1
+R19	USED-FOR Arg1:T20 Arg2:T18

@@ -1,0 +1,36 @@
+T1	Generic 5 11	themes
+T2	Task 29 61	speech and text image processing
+T3	Method 122 144	recognition technology
+T4	Task 150 180	document-oriented applications
+T5	Generic 183 186	One
+T6	Generic 209 216	systems
+T7	Method 264 279	text processors
+T8	Material 306 334	audio and scanned image data
+T9	Generic 355 360	theme
+T10	Method 376 409	speech and text-image recognition
+T11	OtherScientificTerm 467 496	documents with signal content
+T12	Generic 526 534	research
+T13	Generic 578 584	themes
+T14	Method 589 606	text-image editor
+T15	Method 615 626	wordspotter
+T16	Task 633 659	voice editing and indexing
+T17	Method 673 691	decoding framework
+T18	Task 698 732	scanned-document content retrieval
+T19	Task 821 867	signal-based document processing functionality
+R1	USED-FOR Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T11 Arg2:T10
+R3	HYPONYM-OF Arg1:T5 Arg2:T1
+R4	COREF Arg1:T6 Arg2:T5
+R5	USED-FOR Arg1:T10 Arg2:T9
+R6	HYPONYM-OF Arg1:T9 Arg2:T1
+R7	USED-FOR Arg1:T17 Arg2:T18
+R8	CONJUNCTION Arg1:T14 Arg2:T15
+R9	CONJUNCTION Arg1:T15 Arg2:T16
+R10	CONJUNCTION Arg1:T16 Arg2:T17
+R11	USED-FOR Arg1:T8 Arg2:T6
+R12	PART-OF Arg1:T1 Arg2:T2
+R13	COREF Arg1:T13 Arg2:T1
+R14	CONJUNCTION Arg1:T6 Arg2:T7
+R15	HYPONYM-OF Arg1:T14 Arg2:T12
+R16	HYPONYM-OF Arg1:T15 Arg2:T12
+R17	HYPONYM-OF Arg1:T17 Arg2:T12

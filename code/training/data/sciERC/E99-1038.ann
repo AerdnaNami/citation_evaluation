@@ -1,0 +1,22 @@
+T1	Generic 15 34	operable definition
+T2	OtherScientificTerm 73 97	cognito-pragmatic nature
+T3	Generic 114 116	it
+T4	OtherScientificTerm 135 144	discourse
+T5	Method 188 247	a file card model of  discourse model  and  knowledge store
+T6	Method 210 225	discourse model
+T7	OtherScientificTerm 232 247	knowledge store
+T8	OtherScientificTerm 328 349	determination process
+T9	Method 356 378	programmable algorithm
+T10	Method 381 384	FDA
+T11	OtherScientificTerm 420 451	social and cognitive psychology
+T12	OtherScientificTerm 513 516	FDA
+T13	OtherScientificTerm 524 549	discourse-level construct
+T14	Method 557 581	speech synthesis systems
+T15	Method 600 625	concept-to-speech systems
+R1	FEATURE-OF Arg1:T2 Arg2:T1
+R2	COREF Arg1:T3 Arg2:T1
+R3	HYPONYM-OF Arg1:T10 Arg2:T9
+R4	COREF Arg1:T12 Arg2:T10
+R5	HYPONYM-OF Arg1:T15 Arg2:T14
+R6	PART-OF Arg1:T13 Arg2:T14
+R7	USED-FOR Arg1:T12 Arg2:T13

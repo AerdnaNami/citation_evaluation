@@ -1,0 +1,17 @@
+T1	Method 35 66	model of grammatical processing
+T2	Method 86 104	uniform processing
+T3	Material 111 128	knowledge sources
+T4	Generic 158 163	model
+T5	Task 176 183	parsing
+T6	Task 190 200	generation
+T7	Generic 230 235	tasks
+T8	Method 259 290	parametrized deduction  process
+T9	Task 357 384	natural language processing
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	CONJUNCTION Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	CONJUNCTION Arg1:T3 Arg2:T2
+R5	COREF Arg1:T4 Arg2:T1
+R6	HYPONYM-OF Arg1:T6 Arg2:T7
+R7	HYPONYM-OF Arg1:T5 Arg2:T7
+R8	USED-FOR Arg1:T8 Arg2:T7

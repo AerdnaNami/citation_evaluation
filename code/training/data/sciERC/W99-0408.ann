@@ -1,0 +1,33 @@
+T1	Method 38 74	user knowledge modeling architecture
+T2	Task 85 98	ICICLE system
+T3	Task 104 133	language tutoring application
+T4	OtherScientificTerm 139 152	deaf learners
+T5	Material 157 172	written English
+T6	Generic 179 184	model
+T7	Task 285 301	writing analysis
+T8	Task 308 327	feedback production
+T9	Generic 347 359	model design
+T10	Task 393 440	second language and cognitive skill acquisition
+T11	Generic 510 516	design
+T12	Generic 551 557	design
+T13	Task 613 657	language assessment / correction application
+T14	OtherScientificTerm 671 687	user proficiency
+T15	Metric 708 719	granularity
+T16	Metric 724 735	specificity
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	HYPONYM-OF Arg1:T2 Arg2:T3
+R3	COREF Arg1:T6 Arg2:T1
+R4	USED-FOR Arg1:T6 Arg2:T7
+R5	USED-FOR Arg1:T6 Arg2:T8
+R6	CONJUNCTION Arg1:T7 Arg2:T8
+R7	COREF Arg1:T9 Arg2:T6
+R8	USED-FOR Arg1:T10 Arg2:T9
+R9	COREF Arg1:T11 Arg2:T9
+R10	COREF Arg1:T12 Arg2:T11
+R11	USED-FOR Arg1:T12 Arg2:T13
+R12	USED-FOR Arg1:T12 Arg2:T14
+R13	USED-FOR Arg1:T5 Arg2:T3
+R14	USED-FOR Arg1:T3 Arg2:T4
+R15	CONJUNCTION Arg1:T15 Arg2:T16
+R16	EVALUATE-FOR Arg1:T15 Arg2:T14
+R17	EVALUATE-FOR Arg1:T16 Arg2:T14

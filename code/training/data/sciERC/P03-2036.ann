@@ -1,0 +1,16 @@
+T1	Method 29 53	CFG filtering techniques
+T2	Method 60 64	LTAG
+T3	Method 71 75	HPSG
+T4	Method 114 136	approximation of  HPSG
+T5	Method 132 136	HPSG
+T6	Method 165 175	CFG filter
+T7	Generic 182 186	that
+T8	Method 191 195	LTAG
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T1 Arg2:T3
+R3	COMPARE Arg1:T2 Arg2:T3
+R4	COMPARE Arg1:T6 Arg2:T7
+R5	COREF Arg1:T5 Arg2:T3
+R6	USED-FOR Arg1:T4 Arg2:T6
+R7	USED-FOR Arg1:T7 Arg2:T8
+R8	COREF Arg1:T2 Arg2:T8

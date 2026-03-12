@@ -1,0 +1,54 @@
+T1	Task 0 20	Identity uncertainty
+T2	Task 47 71	real-world data analysis
+T3	Generic 128 139	identifiers
+T4	Generic 154 165	identifiers
+T5	Generic 307 314	problem
+T6	Task 333 350	citation matching
+T7	OtherScientificTerm 381 390	citations
+T8	OtherScientificTerm 414 425	publication
+T9	Generic 431 439	approach
+T10	Method 465 493	relational probability model
+T11	Method 506 522	generative model
+T12	Generic 531 537	domain
+T13	Method 549 586	models of author and title corruption
+T14	Method 593 623	probabilistic citation grammar
+T15	Task 625 645	Identity uncertainty
+T16	Generic 679 685	models
+T17	OtherScientificTerm 733 741	mappings
+T18	OtherScientificTerm 791 797	domain
+T19	Task 799 808	Inference
+T20	Method 821 845	Markov chain Monte Carlo
+T21	Generic 871 878	methods
+T22	Material 972 990	citation data sets
+T23	Generic 1005 1011	method
+T24	Method 1024 1042	current algorithms
+T25	Task 1047 1064	citation matching
+T26	Generic 1108 1113	model
+T27	Generic 1134 1143	algorithm
+T28	OtherScientificTerm 1158 1180	object characteristics
+T29	OtherScientificTerm 1189 1201	author names
+T30	OtherScientificTerm 1224 1233	citations
+R1	HYPONYM-OF Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T10 Arg2:T11
+R3	USED-FOR Arg1:T16 Arg2:T15
+R4	COMPARE Arg1:T23 Arg2:T24
+R5	USED-FOR Arg1:T23 Arg2:T25
+R6	USED-FOR Arg1:T24 Arg2:T25
+R7	USED-FOR Arg1:T10 Arg2:T9
+R8	PART-OF Arg1:T13 Arg2:T10
+R9	PART-OF Arg1:T14 Arg2:T10
+R10	CONJUNCTION Arg1:T13 Arg2:T14
+R11	USED-FOR Arg1:T11 Arg2:T12
+R12	COREF Arg1:T12 Arg2:T6
+R13	COREF Arg1:T5 Arg2:T1
+R14	COREF Arg1:T4 Arg2:T3
+R15	COREF Arg1:T15 Arg2:T1
+R16	USED-FOR Arg1:T20 Arg2:T19
+R17	EVALUATE-FOR Arg1:T22 Arg2:T23
+R18	COREF Arg1:T25 Arg2:T6
+R19	COREF Arg1:T23 Arg2:T9
+R20	COREF Arg1:T26 Arg2:T23
+R21	COREF Arg1:T27 Arg2:T26
+R22	HYPONYM-OF Arg1:T29 Arg2:T28
+R23	USED-FOR Arg1:T27 Arg2:T28
+R24	USED-FOR Arg1:T21 Arg2:T19

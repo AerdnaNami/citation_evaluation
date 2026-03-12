@@ -1,0 +1,54 @@
+T1	Method 0 8	Diagrams
+T2	OtherScientificTerm 43 59	complex concepts
+T3	OtherScientificTerm 62 75	relationships
+T4	OtherScientificTerm 80 86	events
+T5	Material 158 172	natural images
+T6	Task 174 202	Understanding natural images
+T7	Material 188 202	natural images
+T8	Task 235 250	computer vision
+T9	Task 258 279	diagram understanding
+T10	Task 350 386	diagram interpretation and reasoning
+T11	Generic 404 408	task
+T12	OtherScientificTerm 428 450	structure of a diagram
+T13	Method 527 553	Diagram Parse Graphs (DPG)
+T14	OtherScientificTerm 589 610	structure of diagrams
+T15	Task 622 651	syntactic parsing of diagrams
+T16	Method 673 677	DPGs
+T17	Task 701 750	semantic interpretation and reasoning of diagrams
+T18	Task 769 795	diagram question answering
+T19	Method 810 827	LSTM-based method
+T20	Task 832 861	syntactic parsing of diagrams
+T21	Method 878 903	DPG-based attention model
+T22	Task 908 934	diagram question answering
+T23	Generic 953 960	dataset
+T24	Material 964 972	diagrams
+T25	Generic 1134 1140	models
+T26	Task 1145 1197	syntactic parsing and question answering in diagrams
+T27	Method 1204 1208	DPGs
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T1 Arg2:T3
+R3	USED-FOR Arg1:T1 Arg2:T4
+R4	CONJUNCTION Arg1:T2 Arg2:T3
+R5	CONJUNCTION Arg1:T3 Arg2:T4
+R6	COREF Arg1:T7 Arg2:T5
+R7	COMPARE Arg1:T6 Arg2:T9
+R8	PART-OF Arg1:T6 Arg2:T8
+R9	COREF Arg1:T10 Arg2:T11
+R10	USED-FOR Arg1:T11 Arg2:T12
+R11	USED-FOR Arg1:T13 Arg2:T14
+R12	COREF Arg1:T16 Arg2:T13
+R13	USED-FOR Arg1:T15 Arg2:T16
+R14	USED-FOR Arg1:T17 Arg2:T18
+R15	USED-FOR Arg1:T19 Arg2:T20
+R16	USED-FOR Arg1:T21 Arg2:T22
+R17	COREF Arg1:T22 Arg2:T18
+R18	COREF Arg1:T20 Arg2:T15
+R19	FEATURE-OF Arg1:T24 Arg2:T23
+R20	USED-FOR Arg1:T25 Arg2:T26
+R21	USED-FOR Arg1:T27 Arg2:T25
+R22	HYPONYM-OF Arg1:T20 Arg2:T26
+R23	HYPONYM-OF Arg1:T22 Arg2:T26
+R24	HYPONYM-OF Arg1:T19 Arg2:T25
+R25	HYPONYM-OF Arg1:T21 Arg2:T25
+R26	COREF Arg1:T27 Arg2:T16
+R27	HYPONYM-OF Arg1:T9 Arg2:T10

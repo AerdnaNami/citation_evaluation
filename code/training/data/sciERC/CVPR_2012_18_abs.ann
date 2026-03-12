@@ -1,0 +1,39 @@
+T1	Generic 19 28	technique
+T2	Method 36 66	bispectral photo-metric stereo
+T3	OtherScientificTerm 95 107	fluorescence
+T4	Task 112 132	shape reconstruction
+T5	OtherScientificTerm 134 146	Fluorescence
+T6	OtherScientificTerm 201 213	natural gems
+T7	OtherScientificTerm 229 245	fluorescent dyes
+T8	OtherScientificTerm 304 316	fluorescence
+T9	OtherScientificTerm 354 375	fluorescent materials
+T10	Metric 466 476	complexity
+T11	Method 484 500	emission process
+T12	OtherScientificTerm 502 515	fluo-rescence
+T13	Generic 547 557	algorithms
+T14	Task 561 576	computer vision
+T15	Task 581 597	image processing
+T16	OtherScientificTerm 645 655	similarity
+T17	OtherScientificTerm 664 676	fluorescence
+T18	OtherScientificTerm 687 705	diffuse reflection
+T19	OtherScientificTerm 715 727	fluorescence
+T20	OtherScientificTerm 804 847	fluorescence's wavelength-shifting property
+T21	OtherScientificTerm 875 880	shape
+T22	Method 906 925	photomet-ric stereo
+T23	Material 929 949	emission-only images
+T24	OtherScientificTerm 973 992	specular reflection
+T25	Method 1035 1060	fluorescence-based method
+T26	Generic 1075 1082	methods
+T27	OtherScientificTerm 1092 1102	reflection
+R1	COREF Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	USED-FOR Arg1:T2 Arg2:T4
+R4	EVALUATE-FOR Arg1:T10 Arg2:T11
+R5	CONJUNCTION Arg1:T14 Arg2:T15
+R6	USED-FOR Arg1:T13 Arg2:T14
+R7	USED-FOR Arg1:T13 Arg2:T15
+R8	COREF Arg1:T22 Arg2:T2
+R9	USED-FOR Arg1:T23 Arg2:T22
+R10	COMPARE Arg1:T26 Arg2:T25
+R11	USED-FOR Arg1:T20 Arg2:T21
+R12	USED-FOR Arg1:T22 Arg2:T21

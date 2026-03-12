@@ -1,0 +1,33 @@
+T1	Generic 34 43	algorithm
+T2	Task 65 93	on-line interference effects
+T3	Task 111 152	Global Navigation Satellite System (GNSS)
+T4	Task 157 189	Inertial Navigation System (INS)
+T5	Task 195 212	GNSS/INS coupling
+T6	Method 240 268	Extended Kalman Filter (EKF)
+T7	Task 285 317	accurate and robust localization
+T8	OtherScientificTerm 329 341	interference
+T9	OtherScientificTerm 352 374	GNSS measurement noise
+T10	Metric 419 439	positioning accuracy
+T11	OtherScientificTerm 549 559	covariance
+T12	OtherScientificTerm 567 578	EKF outputs
+T13	Method 598 619	least square estimate
+T14	OtherScientificTerm 637 651	variance jumps
+T15	Generic 664 674	estimation
+T16	Method 688 701	Bayesian test
+T17	OtherScientificTerm 756 767	GNSS signal
+T18	Task 918 937	navigation solution
+T19	Generic 1007 1015	approach
+T20	Material 1019 1033	simulated data
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	CONJUNCTION Arg1:T3 Arg2:T4
+R3	USED-FOR Arg1:T6 Arg2:T5
+R4	USED-FOR Arg1:T6 Arg2:T7
+R5	FEATURE-OF Arg1:T12 Arg2:T11
+R6	USED-FOR Arg1:T13 Arg2:T14
+R7	COREF Arg1:T15 Arg2:T13
+R8	USED-FOR Arg1:T15 Arg2:T16
+R9	EVALUATE-FOR Arg1:T20 Arg2:T19
+R10	HYPONYM-OF Arg1:T3 Arg2:T5
+R11	HYPONYM-OF Arg1:T4 Arg2:T5
+R12	COREF Arg1:T19 Arg2:T16
+R13	COREF Arg1:T16 Arg2:T1

@@ -1,0 +1,30 @@
+T1	OtherScientificTerm 23 56	dictionary word sense definitions
+T2	Method 88 118	hierarchy of  phrasal patterns
+T3	Generic 137 143	system
+T4	Generic 159 168	mechanism
+T5	Material 229 271	Longman Dictionary of Contemporary English
+T6	Generic 294 304	dictionary
+T7	Generic 324 330	system
+T8	Generic 340 342	it
+T9	OtherScientificTerm 351 372	restricted vocabulary
+T10	OtherScientificTerm 382 404	word sense definitions
+T11	Task 492 527	classification  of new  word senses
+T12	OtherScientificTerm 573 594	restricted vocabulary
+T13	OtherScientificTerm 803 825	phrasal analysis rules
+T14	Task 1155 1174	robustness problems
+T15	Method 1207 1242	natural language processing systems
+T16	Material 1260 1279	incomplete  lexicon
+T17	OtherScientificTerm 1290 1338	incomplete  knowledge  of  phrasal constructions
+R1	USED-FOR Arg1:T9 Arg2:T10
+R2	FEATURE-OF Arg1:T14 Arg2:T15
+R3	COREF Arg1:T6 Arg2:T5
+R4	COREF Arg1:T7 Arg2:T3
+R5	COREF Arg1:T6 Arg2:T8
+R6	USED-FOR Arg1:T9 Arg2:T8
+R7	COREF Arg1:T12 Arg2:T9
+R8	USED-FOR Arg1:T2 Arg2:T1
+R9	COREF Arg1:T4 Arg2:T2
+R10	PART-OF Arg1:T4 Arg2:T3
+R11	USED-FOR Arg1:T12 Arg2:T11
+R12	HYPONYM-OF Arg1:T16 Arg2:T14
+R13	HYPONYM-OF Arg1:T17 Arg2:T14

@@ -1,0 +1,45 @@
+T1	OtherScientificTerm 20 35	prior knowledge
+T2	Method 73 117	low-level driven image processing algorithms
+T3	Task 160 188	non-rigid image registration
+T4	Metric 211 232	registration criteria
+T5	Metric 307 333	maximum mutual information
+T6	Generic 349 358	criterion
+T7	Generic 420 422	it
+T8	Metric 440 459	low-level criterion
+T9	Task 479 491	registration
+T10	OtherScientificTerm 527 548	low-level information
+T11	OtherScientificTerm 570 575	noise
+T12	OtherScientificTerm 577 595	partial occlusions
+T13	OtherScientificTerm 599 622	missing image structure
+T14	Method 658 676	Bayesian framework
+T15	OtherScientificTerm 699 736	statistically learned prior knowledge
+T16	OtherScientificTerm 747 775	joint intensity distribution
+T17	Method 781 807	image registration methods
+T18	Generic 813 818	prior
+T19	Method 833 856	kernel density estimate
+T20	OtherScientificTerm 873 902	joint intensity distributions
+T21	Material 941 967	pre-registered image pairs
+T22	OtherScientificTerm 1031 1050	intensity relations
+T23	OtherScientificTerm 1067 1083	image modalities
+T24	OtherScientificTerm 1088 1103	slice locations
+T25	Method 1157 1177	registration process
+T26	OtherScientificTerm 1196 1225	missing low-level information
+T27	OtherScientificTerm 1229 1231	it
+T28	OtherScientificTerm 1239 1264	intensity correspondences
+T29	OtherScientificTerm 1307 1330	intensity distributions
+R1	HYPONYM-OF Arg1:T5 Arg2:T4
+R2	COREF Arg1:T6 Arg2:T5
+R3	COREF Arg1:T6 Arg2:T7
+R4	FEATURE-OF Arg1:T8 Arg2:T7
+R5	COREF Arg1:T3 Arg2:T9
+R6	FEATURE-OF Arg1:T16 Arg2:T15
+R7	USED-FOR Arg1:T14 Arg2:T17
+R8	USED-FOR Arg1:T15 Arg2:T17
+R9	COREF Arg1:T18 Arg2:T15
+R10	USED-FOR Arg1:T19 Arg2:T18
+R11	USED-FOR Arg1:T19 Arg2:T20
+R12	USED-FOR Arg1:T21 Arg2:T20
+R13	COREF Arg1:T17 Arg2:T25
+R14	USED-FOR Arg1:T25 Arg2:T26
+R15	COREF Arg1:T25 Arg2:T27
+R16	USED-FOR Arg1:T27 Arg2:T28

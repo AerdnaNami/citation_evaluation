@@ -1,0 +1,30 @@
+T1	OtherScientificTerm 4 12	features
+T2	Method 22 54	Markov random field (MRF) models
+T3	OtherScientificTerm 84 110	rotation of image textures
+T4	Method 135 183	anisotropic circular Gaussian MRF (ACGMRF) model
+T5	Task 188 220	modelling rotated image textures
+T6	Task 225 271	retrieving rotation-invariant texture features
+T7	OtherScientificTerm 289 308	singularity problem
+T8	Method 316 351	least squares estimate (LSE) method
+T9	Method 356 404	approximate least squares estimate (ALSE) method
+T10	OtherScientificTerm 433 463	parameters of the ACGMRF model
+T11	Method 451 463	ACGMRF model
+T12	OtherScientificTerm 469 496	rotation-invariant features
+T13	OtherScientificTerm 522 552	parameters of the ACGMRF model
+T14	Method 540 552	ACGMRF model
+T15	Method 560 614	one-dimensional (1-D) discrete Fourier transform (DFT)
+T16	Metric 639 647	accuracy
+T17	OtherScientificTerm 680 707	rotation-invariant features
+T18	OtherScientificTerm 720 749	SAR (synthetic aperture radar
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T4 Arg2:T6
+R3	CONJUNCTION Arg1:T5 Arg2:T6
+R4	USED-FOR Arg1:T2 Arg2:T1
+R5	FEATURE-OF Arg1:T7 Arg2:T8
+R6	USED-FOR Arg1:T9 Arg2:T10
+R7	USED-FOR Arg1:T13 Arg2:T12
+R8	USED-FOR Arg1:T15 Arg2:T12
+R9	COREF Arg1:T4 Arg2:T11
+R10	COREF Arg1:T11 Arg2:T14
+R11	COREF Arg1:T10 Arg2:T13
+R12	USED-FOR Arg1:T17 Arg2:T18

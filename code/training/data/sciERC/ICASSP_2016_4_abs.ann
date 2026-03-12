@@ -1,0 +1,36 @@
+T1	OtherScientificTerm 0 34	High frequency oscillations (HFOs)
+T2	OtherScientificTerm 64 99	epileptic brain tissue and activity
+T3	OtherScientificTerm 101 105	HFOs
+T4	Task 172 199	analysis of discrete events
+T5	Material 203 250	high-temporal resolution, intracranial EEG data
+T6	Task 282 306	dimensionality reduction
+T7	Task 315 354	assessing feasibility of classification
+T8	Task 340 354	classification
+T9	Task 356 380	Dimensionality reduction
+T10	Material 412 420	manifold
+T11	OtherScientificTerm 458 472	features space
+T12	Task 492 504	HFO analysis
+T13	OtherScientificTerm 520 535	linear manifold
+T14	Method 659 673	linear methods
+T15	OtherScientificTerm 720 728	manifold
+T16	OtherScientificTerm 780 786	bounds
+T17	OtherScientificTerm 794 820	Bayes classification error
+T18	OtherScientificTerm 872 876	HFOs
+T19	Generic 878 883	those
+T20	Generic 914 919	those
+T21	Task 1004 1032	clinical use of HFO features
+T22	OtherScientificTerm 1020 1032	HFO features
+T23	OtherScientificTerm 1067 1082	discrete events
+T24	OtherScientificTerm 1103 1120	action potentials
+T25	OtherScientificTerm 1124 1143	multi-unit activity
+R1	COREF Arg1:T1 Arg2:T3
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	HYPONYM-OF Arg1:T19 Arg2:T18
+R4	HYPONYM-OF Arg1:T20 Arg2:T18
+R5	CONJUNCTION Arg1:T19 Arg2:T20
+R6	USED-FOR Arg1:T13 Arg2:T12
+R7	COREF Arg1:T6 Arg2:T9
+R8	COREF Arg1:T3 Arg2:T18
+R9	HYPONYM-OF Arg1:T24 Arg2:T23
+R10	HYPONYM-OF Arg1:T25 Arg2:T23
+R11	CONJUNCTION Arg1:T24 Arg2:T25

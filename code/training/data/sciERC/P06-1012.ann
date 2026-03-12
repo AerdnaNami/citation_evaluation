@@ -1,0 +1,16 @@
+T1	OtherScientificTerm 74 86	sense priors
+T2	Metric 170 178	accuracy
+T3	Method 183 222	word sense disambiguation (WSD) systems
+T4	Generic 290 296	method
+T5	OtherScientificTerm 314 337	sense priors  of  words
+T6	Material 352 363	new  domain
+T7	OtherScientificTerm 406 435	well calibrated probabilities
+T8	Generic 460 471	estimations
+T9	OtherScientificTerm 484 513	well calibrated probabilities
+T10	OtherScientificTerm 545 557	sense priors
+T11	Metric 611 623	WSD accuracy
+R1	USED-FOR Arg1:T7 Arg2:T8
+R2	USED-FOR Arg1:T9 Arg2:T10
+R3	EVALUATE-FOR Arg1:T2 Arg2:T3
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	FEATURE-OF Arg1:T6 Arg2:T5

@@ -1,0 +1,52 @@
+T1	Task 36 75	optimal alignment of non-rigid surfaces
+T2	OtherScientificTerm 81 110	multi-view video observations
+T3	Method 123 159	temporally consistent representation
+T4	Method 174 200	non-rigid surface tracking
+T5	Method 210 234	frame-to-frame alignment
+T6	Method 324 358	non-sequential tracking approaches
+T7	Metric 420 441	dissimilarity measure
+T8	OtherScientificTerm 552 565	reduced drift
+T9	Metric 580 590	robustness
+T10	OtherScientificTerm 600 622	non-rigid deformations
+T11	OtherScientificTerm 684 692	branches
+T12	OtherScientificTerm 700 704	tree
+T13	OtherScientificTerm 727 745	error accumulation
+T14	Task 758 782	Optimisation of the tree
+T15	Method 787 810	non-sequential tracking
+T16	Metric 842 862	temporal consistency
+T17	Method 921 933	cluster tree
+T18	Task 943 980	sequential tracking in local segments
+T19	OtherScientificTerm 966 980	local segments
+T20	OtherScientificTerm 1012 1043	global non-sequential traversal
+T21	Generic 1056 1064	segments
+T22	OtherScientificTerm 1104 1118	tree structure
+T23	OtherScientificTerm 1288 1306	non-rigid surfaces
+T24	OtherScientificTerm 1317 1321	face
+T25	OtherScientificTerm 1323 1328	cloth
+T26	OtherScientificTerm 1333 1339	people
+T27	Method 1375 1387	cluster tree
+T28	Metric 1404 1424	temporal consistency
+T29	Method 1443 1492	sequential and non-sequential tracking approaches
+T30	Metric 1529 1557	synthetic facial performance
+T31	Method 1591 1603	cluster tree
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T1 Arg2:T3
+R3	USED-FOR Arg1:T5 Arg2:T4
+R4	USED-FOR Arg1:T7 Arg2:T6
+R5	FEATURE-OF Arg1:T9 Arg2:T10
+R6	COREF Arg1:T15 Arg2:T6
+R7	USED-FOR Arg1:T14 Arg2:T15
+R8	EVALUATE-FOR Arg1:T16 Arg2:T14
+R9	USED-FOR Arg1:T17 Arg2:T18
+R10	USED-FOR Arg1:T17 Arg2:T20
+R11	COREF Arg1:T19 Arg2:T21
+R12	COREF Arg1:T17 Arg2:T27
+R13	EVALUATE-FOR Arg1:T28 Arg2:T27
+R14	COMPARE Arg1:T27 Arg2:T29
+R15	COREF Arg1:T27 Arg2:T31
+R16	EVALUATE-FOR Arg1:T30 Arg2:T31
+R17	HYPONYM-OF Arg1:T24 Arg2:T23
+R18	HYPONYM-OF Arg1:T25 Arg2:T23
+R19	HYPONYM-OF Arg1:T26 Arg2:T23
+R20	CONJUNCTION Arg1:T24 Arg2:T25
+R21	CONJUNCTION Arg1:T25 Arg2:T26

@@ -1,0 +1,24 @@
+T1	Method 24 75	phrase-based statistical machine translation method
+T2	Material 89 111	non-contiguous phrases
+T3	Generic 143 149	method
+T4	Generic 170 177	phrases
+T5	Material 187 207	word-aligned corpora
+T6	Method 225 254	statistical translation model
+T7	Generic 291 298	phrases
+T8	Method 316 331	training method
+T9	Metric 346 383	maximization of  translation accuracy
+T10	Metric 409 431	NIST evaluation metric
+T11	OtherScientificTerm 436 448	Translations
+T12	Method 478 497	beam-search decoder
+T13	Generic 571 577	method
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T6 Arg2:T7
+R3	USED-FOR Arg1:T12 Arg2:T11
+R4	COREF Arg1:T4 Arg2:T2
+R5	USED-FOR Arg1:T3 Arg2:T4
+R6	EVALUATE-FOR Arg1:T5 Arg2:T3
+R7	COREF Arg1:T7 Arg2:T4
+R8	EVALUATE-FOR Arg1:T10 Arg2:T6
+R9	COREF Arg1:T13 Arg2:T1
+R10	COREF Arg1:T6 Arg2:T1
+R11	USED-FOR Arg1:T9 Arg2:T8

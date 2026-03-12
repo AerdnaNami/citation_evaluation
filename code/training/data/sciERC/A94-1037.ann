@@ -1,0 +1,25 @@
+T1	Generic 1 8	Methods
+T2	Task 24 43	spelling correction
+T3	OtherScientificTerm 50 59	languages
+T4	OtherScientificTerm 67 74	English
+T5	OtherScientificTerm 149 172	agglutinative languages
+T6	Generic 199 207	approach
+T7	Task 212 231	spelling correction
+T8	OtherScientificTerm 237 260	agglutinative languages
+T9	OtherScientificTerm 280 300	two-level morphology
+T10	Method 309 351	dynamic-programming based search algorithm
+T11	Generic 379 387	approach
+T12	Task 431 450	spelling correction
+T13	OtherScientificTerm 456 463	Turkish
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T8 Arg2:T7
+R3	USED-FOR Arg1:T13 Arg2:T12
+R4	HYPONYM-OF Arg1:T4 Arg2:T3
+R5	COREF Arg1:T7 Arg2:T2
+R6	USED-FOR Arg1:T9 Arg2:T7
+R7	USED-FOR Arg1:T10 Arg2:T7
+R8	USED-FOR Arg1:T1 Arg2:T2
+R9	USED-FOR Arg1:T6 Arg2:T7
+R10	CONJUNCTION Arg1:T9 Arg2:T10
+R11	COREF Arg1:T11 Arg2:T6
+R12	COREF Arg1:T7 Arg2:T12

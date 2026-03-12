@@ -1,0 +1,34 @@
+T1	Task 34 61	natural language processing
+T2	Method 197 204	TACITUS
+T3	Metric 227 243	MUC-3 evaluation
+T4	Generic 273 283	techniques
+T5	Task 289 321	syntactic and pragmatic analysis
+T6	Generic 345 352	methods
+T7	Metric 367 377	robustness
+T8	Generic 391 407	three techniques
+T9	Task 420 438	syntactic analysis
+T10	Method 458 488	agenda-based scheduling parser
+T11	Method 495 513	recovery technique
+T12	OtherScientificTerm 518 531	failed parses
+T13	Generic 545 554	technique
+T14	Method 563 589	terminal substring parsing
+T15	Task 598 619	pragmatics processing
+T16	Method 654 673	abductive inference
+T17	OtherScientificTerm 783 798	world knowledge
+T18	Generic 843 859	these techniques
+R1	USED-FOR Arg1:T16 Arg2:T15
+R2	HYPONYM-OF Arg1:T15 Arg2:T5
+R3	HYPONYM-OF Arg1:T9 Arg2:T5
+R4	HYPONYM-OF Arg1:T10 Arg2:T8
+R5	HYPONYM-OF Arg1:T8 Arg2:T18
+R6	HYPONYM-OF Arg1:T16 Arg2:T18
+R7	USED-FOR Arg1:T4 Arg2:T5
+R8	EVALUATE-FOR Arg1:T7 Arg2:T6
+R9	COREF Arg1:T14 Arg2:T13
+R10	HYPONYM-OF Arg1:T13 Arg2:T8
+R11	USED-FOR Arg1:T11 Arg2:T12
+R12	CONJUNCTION Arg1:T10 Arg2:T11
+R13	CONJUNCTION Arg1:T11 Arg2:T13
+R14	HYPONYM-OF Arg1:T11 Arg2:T8
+R15	USED-FOR Arg1:T11 Arg2:T9
+R16	USED-FOR Arg1:T8 Arg2:T9

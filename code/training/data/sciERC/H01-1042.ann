@@ -1,0 +1,30 @@
+T1	Method 67 98	automated evaluation techniques
+T2	Task 129 167	evaluation of  human language learners
+T3	Method 191 223	machine translation (MT) systems
+T4	Generic 250 271	evaluation techniques
+T5	Task 314 345	human language learning process
+T6	Task 354 373	translation process
+T7	Task 401 428	machine translation systems
+T8	Task 538 555	language learning
+T9	Generic 581 590	assessors
+T10	Material 623 649	non-native language essays
+T11	Generic 731 740	assessors
+T12	OtherScientificTerm 863 889	machine translation output
+T13	Material 945 969	translated newswire text
+T14	OtherScientificTerm 1000 1025	expert human translations
+T15	OtherScientificTerm 1042 1069	machine translation outputs
+T16	OtherScientificTerm 1186 1210	expert human translation
+T17	OtherScientificTerm 1218 1237	machine translation
+R1	COREF Arg1:T4 Arg2:T1
+R2	USED-FOR Arg1:T4 Arg2:T5
+R3	USED-FOR Arg1:T4 Arg2:T6
+R4	CONJUNCTION Arg1:T5 Arg2:T6
+R5	CONJUNCTION Arg1:T15 Arg2:T14
+R6	COREF Arg1:T7 Arg2:T3
+R7	USED-FOR Arg1:T1 Arg2:T2
+R8	USED-FOR Arg1:T4 Arg2:T7
+R9	CONJUNCTION Arg1:T6 Arg2:T7
+R10	COREF Arg1:T9 Arg2:T4
+R11	COREF Arg1:T11 Arg2:T9
+R12	COMPARE Arg1:T16 Arg2:T17
+R13	EVALUATE-FOR Arg1:T8 Arg2:T9

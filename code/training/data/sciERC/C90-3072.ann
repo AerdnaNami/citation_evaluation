@@ -1,0 +1,45 @@
+T1	Task 4 21	Spelling-checkers
+T2	Task 61 85	text processing software
+T3	Generic 157 161	they
+T4	OtherScientificTerm 184 210	dictionaries of word forms
+T5	Generic 238 246	approach
+T6	Material 265 274	languages
+T7	OtherScientificTerm 288 298	inflection
+T8	Material 309 316	English
+T9	Material 335 362	highly inflective languages
+T10	Material 373 378	Czech
+T11	Material 383 390	Russian
+T12	Material 395 401	Slovak
+T13	Material 413 431	Slavonic languages
+T14	Generic 463 469	method
+T15	OtherScientificTerm 486 496	inflection
+T16	Task 527 544	spelling-checkers
+T17	Generic 555 564	languages
+T18	Generic 593 600	program
+T19	Method 656 673	spelling-checkers
+T20	Material 680 687	English
+T21	Material 824 829	Czech
+T22	Generic 853 859	method
+T23	Task 889 908	word classification
+R1	PART-OF Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T20 Arg2:T19
+R3	COREF Arg1:T3 Arg2:T1
+R4	USED-FOR Arg1:T4 Arg2:T3
+R5	COREF Arg1:T5 Arg2:T4
+R6	HYPONYM-OF Arg1:T8 Arg2:T6
+R7	HYPONYM-OF Arg1:T10 Arg2:T9
+R8	HYPONYM-OF Arg1:T11 Arg2:T9
+R9	HYPONYM-OF Arg1:T12 Arg2:T9
+R10	HYPONYM-OF Arg1:T13 Arg2:T9
+R11	COREF Arg1:T16 Arg2:T3
+R12	USED-FOR Arg1:T14 Arg2:T15
+R13	USED-FOR Arg1:T14 Arg2:T16
+R14	COREF Arg1:T17 Arg2:T9
+R15	USED-FOR Arg1:T16 Arg2:T17
+R16	USED-FOR Arg1:T22 Arg2:T23
+R17	COREF Arg1:T18 Arg2:T14
+R18	USED-FOR Arg1:T6 Arg2:T5
+R19	CONJUNCTION Arg1:T10 Arg2:T11
+R20	CONJUNCTION Arg1:T11 Arg2:T12
+R21	CONJUNCTION Arg1:T12 Arg2:T13
+R22	FEATURE-OF Arg1:T7 Arg2:T6

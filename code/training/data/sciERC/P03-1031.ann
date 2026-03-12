@@ -1,0 +1,32 @@
+T1	Task 26 57	discourse understanding process
+T2	Method 63 86	spoken dialogue systems
+T3	Generic 115 121	system
+T4	Material 137 152	user utterances
+T5	Material 277 291	user utterance
+T6	OtherScientificTerm 305 340	ambiguity  of  speech understanding
+T7	OtherScientificTerm 423 437	user utterance
+T8	Generic 521 530	ambiguity
+T9	Metric 567 599	discourse understanding accuracy
+T10	Generic 640 646	method
+T11	Generic 667 676	ambiguity
+T12	OtherScientificTerm 688 711	statistical information
+T13	Material 728 744	dialogue corpora
+T14	Generic 768 775	methods
+T15	OtherScientificTerm 786 804	hand-crafted rules
+T16	Generic 821 827	method
+T17	Task 856 887	discourse understanding process
+T18	Generic 928 934	system
+T19	Generic 962 968	method
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T13 Arg2:T12
+R3	COREF Arg1:T2 Arg2:T3
+R4	USED-FOR Arg1:T3 Arg2:T4
+R5	COREF Arg1:T6 Arg2:T8
+R6	COREF Arg1:T8 Arg2:T11
+R7	USED-FOR Arg1:T10 Arg2:T11
+R8	USED-FOR Arg1:T12 Arg2:T10
+R9	USED-FOR Arg1:T15 Arg2:T14
+R10	COREF Arg1:T10 Arg2:T16
+R11	COREF Arg1:T1 Arg2:T17
+R12	COREF Arg1:T16 Arg2:T19
+R13	USED-FOR Arg1:T18 Arg2:T19

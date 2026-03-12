@@ -1,0 +1,54 @@
+T1	Task 23 43	Mahalanobis distance
+T2	OtherScientificTerm 60 64	loss
+T3	OtherScientificTerm 80 92	weighted sum
+T4	Metric 100 109	precision
+T5	OtherScientificTerm 123 128	ranks
+T6	OtherScientificTerm 171 189	weighted rank loss
+T7	Task 234 249	computer vision
+T8	Task 258 282	person re-identification
+T9	Method 303 330	metric learning formulation
+T10	Method 338 390	Weighted Approximate Rank Component Analysis (WARCA)
+T11	Method 418 455	stochastic gradient descent algorithm
+T12	Generic 474 490	learning problem
+T13	Method 520 549	non-linear extension of WARCA
+T14	Method 544 549	WARCA
+T15	Method 563 575	kernel trick
+T16	OtherScientificTerm 577 599	Kernel space embedding
+T17	OtherScientificTerm 614 643	training and prediction costs
+T18	OtherScientificTerm 653 667	data dimension
+T19	Method 691 720	inarbitrary distance measures
+T20	OtherScientificTerm 752 760	features
+T21	OtherScientificTerm 804 828	matrix rank degeneration
+T22	OtherScientificTerm 831 850	non-isolated minima
+T23	Task 858 886	low-rank matrix optimization
+T24	Method 908 919	regularizer
+T25	OtherScientificTerm 953 968	or-thonormality
+T26	OtherScientificTerm 976 990	learned matrix
+T27	Generic 1030 1036	method
+T28	Material 1054 1087	person re-identification datasets
+T29	Material 1108 1125	scale Market-1501
+T30	Material 1130 1145	CUHK03 datasets
+T31	Generic 1223 1227	them
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	COREF Arg1:T6 Arg2:T2
+R3	HYPONYM-OF Arg1:T8 Arg2:T7
+R4	USED-FOR Arg1:T6 Arg2:T7
+R5	USED-FOR Arg1:T6 Arg2:T8
+R6	HYPONYM-OF Arg1:T10 Arg2:T9
+R7	USED-FOR Arg1:T11 Arg2:T12
+R8	CONJUNCTION Arg1:T21 Arg2:T22
+R9	FEATURE-OF Arg1:T22 Arg2:T23
+R10	FEATURE-OF Arg1:T21 Arg2:T23
+R11	FEATURE-OF Arg1:T25 Arg2:T26
+R12	USED-FOR Arg1:T24 Arg2:T25
+R13	EVALUATE-FOR Arg1:T28 Arg2:T27
+R14	CONJUNCTION Arg1:T30 Arg2:T29
+R15	HYPONYM-OF Arg1:T29 Arg2:T28
+R16	HYPONYM-OF Arg1:T30 Arg2:T28
+R17	COREF Arg1:T31 Arg2:T28
+R18	FEATURE-OF Arg1:T3 Arg2:T4
+R19	USED-FOR Arg1:T15 Arg2:T13
+R20	COREF Arg1:T27 Arg2:T13
+R21	USED-FOR Arg1:T16 Arg2:T19
+R22	USED-FOR Arg1:T24 Arg2:T23
+R23	COREF Arg1:T14 Arg2:T10

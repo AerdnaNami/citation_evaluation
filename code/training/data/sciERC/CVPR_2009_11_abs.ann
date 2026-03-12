@@ -1,0 +1,47 @@
+T1	OtherScientificTerm 23 50	pan-tilt-zoom (PTZ) cameras
+T2	OtherScientificTerm 77 91	panoramic area
+T3	OtherScientificTerm 105 128	high resolution imagery
+T4	Task 144 174	automated surveillance systems
+T5	OtherScientificTerm 189 200	PTZ cameras
+T6	Generic 251 261	algorithms
+T7	OtherScientificTerm 274 331	prior knowledge of intrinsic parameters of the PTZ camera
+T8	OtherScientificTerm 345 365	relative positioning
+T9	OtherScientificTerm 370 381	orientation
+T10	OtherScientificTerm 397 408	PTZ cameras
+T11	Method 458 475	mapping algorithm
+T12	OtherScientificTerm 493 513	relative positioning
+T13	OtherScientificTerm 518 529	orientation
+T14	OtherScientificTerm 542 553	PTZ cameras
+T15	Method 565 589	unified polynomial model
+T16	OtherScientificTerm 663 673	PTZ camera
+T17	OtherScientificTerm 678 696	relative positions
+T18	Generic 749 758	algorithm
+T19	Metric 790 814	computational complexity
+T20	Metric 828 839	flexibility
+T21	Metric 874 888	pixel accuracy
+T22	Metric 958 972	pixel accuracy
+T23	Method 995 1025	consistent labeling approaches
+T24	Task 1068 1098	automated surveillance systems
+T25	OtherScientificTerm 1157 1168	PTZ cameras
+R1	USED-FOR Arg1:T7 Arg2:T6
+R2	USED-FOR Arg1:T6 Arg2:T8
+R3	USED-FOR Arg1:T6 Arg2:T9
+R4	CONJUNCTION Arg1:T8 Arg2:T9
+R5	FEATURE-OF Arg1:T8 Arg2:T10
+R6	FEATURE-OF Arg1:T9 Arg2:T10
+R7	USED-FOR Arg1:T15 Arg2:T11
+R8	USED-FOR Arg1:T11 Arg2:T12
+R9	USED-FOR Arg1:T11 Arg2:T13
+R10	CONJUNCTION Arg1:T12 Arg2:T13
+R11	FEATURE-OF Arg1:T13 Arg2:T14
+R12	FEATURE-OF Arg1:T12 Arg2:T14
+R13	EVALUATE-FOR Arg1:T19 Arg2:T18
+R14	EVALUATE-FOR Arg1:T20 Arg2:T18
+R15	EVALUATE-FOR Arg1:T21 Arg2:T18
+R16	COREF Arg1:T22 Arg2:T21
+R17	USED-FOR Arg1:T23 Arg2:T22
+R18	USED-FOR Arg1:T1 Arg2:T2
+R19	USED-FOR Arg1:T1 Arg2:T3
+R20	COREF Arg1:T4 Arg2:T24
+R21	COREF Arg1:T11 Arg2:T18
+R22	FEATURE-OF Arg1:T5 Arg2:T4

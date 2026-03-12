@@ -1,0 +1,40 @@
+T1	Method 0 27	Learned confidence measures
+T2	Task 59 74	outlier removal
+T3	Task 79 98	quality improvement
+T4	Task 102 115	stereo vision
+T5	Generic 206 210	task
+T6	OtherScientificTerm 225 243	manual interaction
+T7	OtherScientificTerm 245 267	active sensing devices
+T8	OtherScientificTerm 275 291	synthetic scenes
+T9	Generic 310 317	problem
+T10	Material 422 435	stereo images
+T11	Generic 466 474	approach
+T12	OtherScientificTerm 495 506	view points
+T13	OtherScientificTerm 568 587	multiple depth maps
+T14	Method 612 628	stereo algorithm
+T15	Generic 779 787	approach
+T16	Method 825 852	learned confidence measures
+T17	Material 860 877	KITTI2012 dataset
+T18	Generic 897 901	them
+T19	Material 922 959	automatically generated training data
+T20	Material 992 1015	laser ground truth data
+R1	PART-OF Arg1:T3 Arg2:T4
+R2	PART-OF Arg1:T2 Arg2:T4
+R3	CONJUNCTION Arg1:T2 Arg2:T3
+R4	USED-FOR Arg1:T1 Arg2:T2
+R5	USED-FOR Arg1:T1 Arg2:T3
+R6	CONJUNCTION Arg1:T6 Arg2:T7
+R7	CONJUNCTION Arg1:T7 Arg2:T8
+R8	USED-FOR Arg1:T6 Arg2:T5
+R9	USED-FOR Arg1:T7 Arg2:T5
+R10	USED-FOR Arg1:T8 Arg2:T5
+R11	COREF Arg1:T9 Arg2:T5
+R12	USED-FOR Arg1:T12 Arg2:T11
+R13	COREF Arg1:T14 Arg2:T11
+R14	COREF Arg1:T15 Arg2:T11
+R15	USED-FOR Arg1:T15 Arg2:T16
+R16	EVALUATE-FOR Arg1:T17 Arg2:T16
+R17	COMPARE Arg1:T20 Arg2:T19
+R18	COREF Arg1:T18 Arg2:T16
+R19	USED-FOR Arg1:T19 Arg2:T18
+R20	COREF Arg1:T16 Arg2:T1

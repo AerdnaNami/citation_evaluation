@@ -1,0 +1,24 @@
+T1	Generic 29 35	method
+T2	Task 39 71	building  polarity-tagged corpus
+T3	Material 79 93	HTML documents
+T4	Generic 125 131	method
+T5	Generic 140 142	it
+T6	Material 195 209	HTML documents
+T7	Generic 233 239	method
+T8	OtherScientificTerm 263 280	layout structures
+T9	OtherScientificTerm 287 305	linguistic pattern
+T10	Generic 318 322	them
+T11	Generic 415 421	method
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T1
+R3	COREF Arg1:T1 Arg2:T4
+R4	COREF Arg1:T4 Arg2:T5
+R5	USED-FOR Arg1:T5 Arg2:T6
+R6	COREF Arg1:T3 Arg2:T6
+R7	COREF Arg1:T4 Arg2:T7
+R8	USED-FOR Arg1:T8 Arg2:T7
+R9	USED-FOR Arg1:T9 Arg2:T7
+R10	CONJUNCTION Arg1:T8 Arg2:T9
+R11	HYPONYM-OF Arg1:T8 Arg2:T10
+R12	HYPONYM-OF Arg1:T9 Arg2:T10
+R13	COREF Arg1:T7 Arg2:T11

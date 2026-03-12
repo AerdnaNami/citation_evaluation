@@ -1,0 +1,11 @@
+T1	Material 46 68	spoken language corpus
+T2	Task 79 122	ATIS (Air Travel Information System) domain
+T3	Generic 131 146	data collection
+T4	Method 319 354	multi-site data collection paradigm
+T5	Generic 413 423	collection
+T6	Material 469 487	spontaneous speech
+T7	Task 519 595	multi-site common evaluation of speech, natural language and spoken language
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T1
+R3	COREF Arg1:T5 Arg2:T3
+R4	EVALUATE-FOR Arg1:T6 Arg2:T7

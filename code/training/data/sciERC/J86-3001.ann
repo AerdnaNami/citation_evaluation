@@ -1,0 +1,55 @@
+T1	Method 35 64	theory of discourse structure
+T2	OtherScientificTerm 123 132	discourse
+T3	Generic 144 150	theory
+T4	OtherScientificTerm 153 172	discourse structure
+T5	Generic 221 231	components
+T6	OtherScientificTerm 292 312	linguistic structure
+T7	OtherScientificTerm 356 377	intentional structure
+T8	OtherScientificTerm 433 450	attentional state
+T9	OtherScientificTerm 460 480	linguistic structure
+T10	OtherScientificTerm 511 520	discourse
+T11	OtherScientificTerm 576 597	intentional structure
+T12	OtherScientificTerm 613 640	discourse-relevant purposes
+T13	OtherScientificTerm 733 750	attentional state
+T14	OtherScientificTerm 828 837	discourse
+T15	OtherScientificTerm 853 870	attentional state
+T16	OtherScientificTerm 975 984	discourse
+T17	OtherScientificTerm 1084 1103	discourse phenomena
+T18	OtherScientificTerm 1109 1120	cue phrases
+T19	OtherScientificTerm 1125 1146	referring expressions
+T20	OtherScientificTerm 1155 1168	interruptions
+T21	Method 1177 1238	theory of attention, intention, and aggregation of utterances
+T22	OtherScientificTerm 1294 1304	discourses
+T23	OtherScientificTerm 1331 1340	discourse
+T24	OtherScientificTerm 1396 1407	cue phrases
+T25	OtherScientificTerm 1412 1433	referring expressions
+T26	OtherScientificTerm 1442 1455	interruptions
+T27	Generic 1477 1483	theory
+T28	OtherScientificTerm 1558 1567	discourse
+T29	Method 1572 1592	Discourse processing
+T30	OtherScientificTerm 1644 1653	discourse
+T31	OtherScientificTerm 1730 1739	discourse
+T32	OtherScientificTerm 1802 1811	discourse
+T33	OtherScientificTerm 1870 1887	attentional state
+T34	Generic 1896 1906	processing
+T35	Task 1939 1956	recognition tasks
+T36	OtherScientificTerm 1992 2001	discourse
+R1	USED-FOR Arg1:T11 Arg2:T12
+R2	PART-OF Arg1:T5 Arg2:T4
+R3	PART-OF Arg1:T6 Arg2:T5
+R4	PART-OF Arg1:T7 Arg2:T5
+R5	PART-OF Arg1:T8 Arg2:T5
+R6	CONJUNCTION Arg1:T6 Arg2:T7
+R7	CONJUNCTION Arg1:T7 Arg2:T8
+R8	COREF Arg1:T9 Arg2:T6
+R9	COREF Arg1:T11 Arg2:T7
+R10	COREF Arg1:T13 Arg2:T8
+R11	COREF Arg1:T15 Arg2:T13
+R12	HYPONYM-OF Arg1:T18 Arg2:T17
+R13	HYPONYM-OF Arg1:T19 Arg2:T17
+R14	HYPONYM-OF Arg1:T20 Arg2:T17
+R15	CONJUNCTION Arg1:T18 Arg2:T19
+R16	CONJUNCTION Arg1:T19 Arg2:T20
+R17	COREF Arg1:T27 Arg2:T21
+R18	COREF Arg1:T34 Arg2:T29
+R19	COREF Arg1:T3 Arg2:T1

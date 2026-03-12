@@ -1,0 +1,42 @@
+T1	Task 19 33	encoding sound
+T2	Task 38 57	neuronal processing
+T3	OtherScientificTerm 74 94	analog pressure wave
+T4	OtherScientificTerm 109 141	discrete nerve-action potentials
+T5	Method 150 161	pool models
+T6	OtherScientificTerm 169 192	inner hair cell synapse
+T7	Method 269 286	visual inspection
+T8	Method 291 325	automatic speech recognition (ASR)
+T9	Method 344 372	offset adaptation (OA) model
+T10	Method 403 405	OA
+T11	Task 415 455	phase locking in the auditory nerve (AN)
+T12	Metric 467 479	ASR accuracy
+T13	OtherScientificTerm 484 492	features
+T14	OtherScientificTerm 506 522	AN fibers (ANFs)
+T15	Method 543 545	OA
+T16	Task 561 580	auditory processing
+T17	OtherScientificTerm 584 603	onset neurons (ONs)
+T18	OtherScientificTerm 636 654	auditory brainstem
+T19	Method 656 686	Multi-layer perceptrons (MLPs)
+T20	Method 723 753	Gaussian mixture models (GMMs)
+T21	OtherScientificTerm 767 807	ANF-based and ON-based auditory features
+T22	OtherScientificTerm 855 911	MSG (Modulation-filtered Spec-troGram) auditory features
+T23	OtherScientificTerm 963 971	features
+T24	Method 995 999	MLPs
+R1	USED-FOR Arg1:T5 Arg2:T6
+R2	USED-FOR Arg1:T7 Arg2:T9
+R3	USED-FOR Arg1:T8 Arg2:T9
+R4	CONJUNCTION Arg1:T7 Arg2:T8
+R5	COREF Arg1:T10 Arg2:T9
+R6	USED-FOR Arg1:T10 Arg2:T11
+R7	USED-FOR Arg1:T14 Arg2:T13
+R8	COREF Arg1:T15 Arg2:T10
+R9	USED-FOR Arg1:T15 Arg2:T16
+R10	USED-FOR Arg1:T17 Arg2:T15
+R11	COMPARE Arg1:T19 Arg2:T20
+R12	USED-FOR Arg1:T20 Arg2:T21
+R13	USED-FOR Arg1:T19 Arg2:T21
+R14	COREF Arg1:T24 Arg2:T19
+R15	USED-FOR Arg1:T1 Arg2:T2
+R16	USED-FOR Arg1:T4 Arg2:T3
+R17	USED-FOR Arg1:T10 Arg2:T13
+R18	EVALUATE-FOR Arg1:T12 Arg2:T13

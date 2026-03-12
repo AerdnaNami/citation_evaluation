@@ -1,0 +1,18 @@
+T1	Method 27 36	ONTOSCORE
+T2	Generic 42 48	system
+T3	OtherScientificTerm 100 108	ontology
+T4	Generic 125 131	system
+T5	OtherScientificTerm 170 205	speech recognition hypotheses (SRH)
+T6	OtherScientificTerm 226 244	semantic coherence
+T7	OtherScientificTerm 396 425	speech recognition hypotheses
+T8	Generic 450 456	system
+T9	Generic 498 500	it
+T10	Material 537 550	German corpus
+T11	OtherScientificTerm 562 566	SRHs
+R1	COREF Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	COREF Arg1:T4 Arg2:T2
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	COREF Arg1:T8 Arg2:T4
+R6	COREF Arg1:T8 Arg2:T9
+R7	COREF Arg1:T9 Arg2:T10

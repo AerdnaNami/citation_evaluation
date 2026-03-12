@@ -1,0 +1,29 @@
+T1	OtherScientificTerm 105 114	ambiguity
+T2	Task 122 132	generation
+T3	OtherScientificTerm 233 242	ambiguity
+T4	Method 250 276	MORphological PArser MORPA
+T5	Method 298 339	probabilistic context-free grammar (PCFG)
+T6	Generic 347 349	it
+T7	Method 362 411	"conventional" context-free morphological grammar
+T8	OtherScientificTerm 428 455	ungrammatical segmentations
+T9	Method 465 499	probability-based scoring function
+T10	Task 553 558	parse
+T11	Method 682 686	PCFG
+T12	Task 712 733	morphological parsing
+T13	Method 737 742	MORPA
+T14	Method 768 774	parser
+T15	Task 800 832	text-to-speech conversion system
+R1	USED-FOR Arg1:T5 Arg2:T4
+R2	CONJUNCTION Arg1:T9 Arg2:T7
+R3	USED-FOR Arg1:T14 Arg2:T15
+R4	COREF Arg1:T6 Arg2:T4
+R5	USED-FOR Arg1:T4 Arg2:T3
+R6	USED-FOR Arg1:T7 Arg2:T8
+R7	USED-FOR Arg1:T9 Arg2:T10
+R8	COREF Arg1:T11 Arg2:T5
+R9	USED-FOR Arg1:T11 Arg2:T12
+R10	COREF Arg1:T13 Arg2:T4
+R11	HYPONYM-OF Arg1:T13 Arg2:T14
+R12	USED-FOR Arg1:T13 Arg2:T15
+R13	USED-FOR Arg1:T7 Arg2:T6
+R14	USED-FOR Arg1:T9 Arg2:T6

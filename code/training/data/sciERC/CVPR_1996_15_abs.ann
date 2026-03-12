@@ -1,0 +1,31 @@
+T1	Generic 26 35	framework
+T2	Task 40 70	segmentation of complex scenes
+T3	OtherScientificTerm 86 105	physical hypotheses
+T4	OtherScientificTerm 110 130	simple image regions
+T5	Generic 154 163	framework
+T6	Generic 189 197	approach
+T7	Task 205 235	segmentation of complex scenes
+T8	OtherScientificTerm 266 283	coherent surfaces
+T9	OtherScientificTerm 303 327	regions of similar color
+T10	Generic 377 385	approach
+T11	OtherScientificTerm 403 416	segmentations
+T12	Material 421 427	scenes
+T13	Material 439 479	multi-colored piece-wise uniform objects
+T14	Generic 491 499	approach
+T15	Metric 568 578	complexity
+T16	Method 593 630	physics-based segmentation algorithms
+T17	Method 671 686	physical models
+T18	OtherScientificTerm 743 760	coherent surfaces
+R1	USED-FOR Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	COREF Arg1:T5 Arg2:T1
+R5	COREF Arg1:T7 Arg2:T2
+R6	USED-FOR Arg1:T5 Arg2:T6
+R7	USED-FOR Arg1:T6 Arg2:T7
+R8	COMPARE Arg1:T8 Arg2:T9
+R9	COREF Arg1:T10 Arg2:T6
+R10	FEATURE-OF Arg1:T13 Arg2:T12
+R11	USED-FOR Arg1:T11 Arg2:T12
+R12	COREF Arg1:T14 Arg2:T10
+R13	COMPARE Arg1:T14 Arg2:T16

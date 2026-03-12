@@ -1,0 +1,30 @@
+T1	Generic 14 20	method
+T2	OtherScientificTerm 51 61	paraphrase
+T3	Metric 135 174	machine translation evaluation measures
+T4	Metric 182 186	BLEU
+T5	Metric 193 197	NIST
+T6	OtherScientificTerm 233 244	paraphrases
+T7	Metric 290 304	grammaticality
+T8	Metric 355 377	equivalence in meaning
+T9	OtherScientificTerm 403 414	paraphrases
+T10	Method 427 446	meaning equivalence
+T11	Method 452 462	entailment
+T12	Metric 491 534	internal  lexical and syntactical variation
+T13	OtherScientificTerm 549 560	paraphrases
+T14	OtherScientificTerm 594 612	hand-produced sets
+T15	OtherScientificTerm 621 631	paraphrase
+T16	Generic 655 661	method
+T17	Task 717 730	MT evaluation
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	HYPONYM-OF Arg1:T4 Arg2:T3
+R3	HYPONYM-OF Arg1:T5 Arg2:T3
+R4	CONJUNCTION Arg1:T4 Arg2:T5
+R5	USED-FOR Arg1:T2 Arg2:T3
+R6	CONJUNCTION Arg1:T8 Arg2:T7
+R7	USED-FOR Arg1:T10 Arg2:T9
+R8	USED-FOR Arg1:T11 Arg2:T9
+R9	CONJUNCTION Arg1:T10 Arg2:T11
+R10	COMPARE Arg1:T13 Arg2:T14
+R11	COREF Arg1:T16 Arg2:T1
+R12	USED-FOR Arg1:T16 Arg2:T15
+R13	CONJUNCTION Arg1:T12 Arg2:T8

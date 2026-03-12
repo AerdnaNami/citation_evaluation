@@ -1,0 +1,36 @@
+T1	Task 0 22	Background maintenance
+T2	Task 48 74	video surveillance systems
+T3	Method 87 97	Wallflower
+T4	Generic 101 123	three-component system
+T5	Task 128 150	background maintenance
+T6	Method 156 177	pixel-level component
+T7	Method 187 203	Wiener filtering
+T8	Task 212 264	probabilistic predictions of the expected background
+T9	Method 270 292	region-level component
+T10	OtherScientificTerm 302 343	homogeneous regions of foreground objects
+T11	Method 353 374	frame-level component
+T12	Generic 488 494	system
+T13	Method 508 541	background subtraction algorithms
+T14	Method 543 553	Wallflower
+T15	Generic 586 596	algorithms
+T16	Method 724 744	normative principles
+T17	Task 749 771	background maintenance
+R1	PART-OF Arg1:T1 Arg2:T2
+R2	COREF Arg1:T5 Arg2:T1
+R3	COREF Arg1:T3 Arg2:T4
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	PART-OF Arg1:T6 Arg2:T4
+R6	USED-FOR Arg1:T7 Arg2:T6
+R7	USED-FOR Arg1:T7 Arg2:T8
+R8	USED-FOR Arg1:T9 Arg2:T10
+R9	PART-OF Arg1:T9 Arg2:T4
+R10	PART-OF Arg1:T11 Arg2:T4
+R11	CONJUNCTION Arg1:T6 Arg2:T9
+R12	CONJUNCTION Arg1:T9 Arg2:T11
+R13	COREF Arg1:T3 Arg2:T12
+R14	COMPARE Arg1:T12 Arg2:T13
+R15	COREF Arg1:T14 Arg2:T12
+R16	COREF Arg1:T15 Arg2:T13
+R17	COMPARE Arg1:T14 Arg2:T15
+R18	USED-FOR Arg1:T16 Arg2:T17
+R19	COREF Arg1:T5 Arg2:T17

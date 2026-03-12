@@ -1,0 +1,37 @@
+T1	Method 0 23	Graph-cuts optimization
+T2	Task 40 68	vision and graphics problems
+T3	Method 130 153	graph-cuts optimization
+T4	OtherScientificTerm 180 199	multi-core machines
+T5	Method 227 243	serial algorithm
+T6	Method 285 297	BK algorithm
+T7	OtherScientificTerm 391 415	synchronization overhead
+T8	OtherScientificTerm 448 459	parallelism
+T9	Method 495 522	adaptive bottom-up approach
+T10	Method 542 554	BK algorithm
+T11	OtherScientificTerm 589 594	graph
+T12	OtherScientificTerm 612 648	regularly-shaped dis-joint subgraphs
+T13	Generic 661 665	them
+T14	OtherScientificTerm 712 721	subgraphs
+T15	OtherScientificTerm 755 769	global optimum
+T16	Generic 779 788	algorithm
+T17	OtherScientificTerm 853 862	subgraphs
+T18	OtherScientificTerm 876 894	balanced workloads
+T19	OtherScientificTerm 938 946	overhead
+T20	Generic 1030 1042	applications
+T21	Task 1051 1076	2D/3D image segmentations
+T22	Task 1081 1099	3D surface fitting
+T23	Generic 1137 1145	approach
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T1
+R3	HYPONYM-OF Arg1:T6 Arg2:T5
+R4	USED-FOR Arg1:T4 Arg2:T3
+R5	COREF Arg1:T10 Arg2:T6
+R6	USED-FOR Arg1:T9 Arg2:T10
+R7	COREF Arg1:T13 Arg2:T12
+R8	COREF Arg1:T14 Arg2:T13
+R9	COREF Arg1:T16 Arg2:T9
+R10	COREF Arg1:T23 Arg2:T16
+R11	HYPONYM-OF Arg1:T21 Arg2:T20
+R12	HYPONYM-OF Arg1:T22 Arg2:T20
+R13	CONJUNCTION Arg1:T21 Arg2:T22
+R14	EVALUATE-FOR Arg1:T20 Arg2:T23

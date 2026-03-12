@@ -1,0 +1,39 @@
+T1	OtherScientificTerm 4 25	co-occurrence pattern
+T2	OtherScientificTerm 44 68	binary or local features
+T3	Task 150 187	object, scene, and action recognition
+T4	OtherScientificTerm 213 235	co-occurrence patterns
+T5	OtherScientificTerm 278 335	conjunction (AND) and disjunction (OR) of binary features
+T6	Task 364 413	identifying discriminative co-occurrence patterns
+T7	OtherScientificTerm 376 413	discriminative co-occurrence patterns
+T8	Method 459 477	data mining method
+T9	OtherScientificTerm 506 535	optimal co-occurrence pattern
+T10	OtherScientificTerm 541 564	minimum empirical error
+T11	Material 578 600	noisy training dataset
+T12	Generic 607 623	mining procedure
+T13	OtherScientificTerm 627 646	AND and OR patterns
+T14	Method 672 680	boosting
+T15	Metric 701 723	generalization ability
+T16	Method 746 769	boosting decision trees
+T17	Method 774 798	boosting decision stumps
+T18	Task 829 870	object, scene, and action cat-egorization
+T19	OtherScientificTerm 913 951	dis-criminative co-occurrence patterns
+R1	USED-FOR Arg1:T1 Arg2:T3
+R2	COREF Arg1:T4 Arg2:T1
+R3	COREF Arg1:T5 Arg2:T4
+R4	USED-FOR Arg1:T11 Arg2:T8
+R5	COREF Arg1:T13 Arg2:T5
+R6	PART-OF Arg1:T13 Arg2:T14
+R7	EVALUATE-FOR Arg1:T15 Arg2:T14
+R8	COMPARE Arg1:T14 Arg2:T16
+R9	COMPARE Arg1:T14 Arg2:T17
+R10	CONJUNCTION Arg1:T16 Arg2:T17
+R11	COREF Arg1:T3 Arg2:T18
+R12	EVALUATE-FOR Arg1:T18 Arg2:T19
+R13	COREF Arg1:T19 Arg2:T7
+R14	EVALUATE-FOR Arg1:T15 Arg2:T16
+R15	EVALUATE-FOR Arg1:T15 Arg2:T17
+R16	COREF Arg1:T8 Arg2:T12
+R17	USED-FOR Arg1:T12 Arg2:T13
+R18	PART-OF Arg1:T2 Arg2:T1
+R19	USED-FOR Arg1:T8 Arg2:T9
+R20	FEATURE-OF Arg1:T10 Arg2:T9

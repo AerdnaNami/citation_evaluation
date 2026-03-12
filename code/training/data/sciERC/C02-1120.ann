@@ -1,0 +1,22 @@
+T1	Method 26 54	unsupervised learning method
+T2	OtherScientificTerm 61 107	associative relationships between verb phrases
+T3	Task 153 164	Q&A systems
+T4	Task 283 293	Q&A system
+T5	Material 537 557	large-scale database
+T6	OtherScientificTerm 578 602	associative relationship
+T7	Method 665 693	unsupervised learning method
+T8	OtherScientificTerm 720 744	associative relationship
+T9	OtherScientificTerm 762 782	scenario consistency
+T10	Generic 789 795	method
+T11	Method 833 894	expectation-maximization (EM) based word-clustering algorithm
+T12	Generic 945 951	method
+T13	Material 959 980	Japanese verb phrases
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T7 Arg2:T8
+R3	USED-FOR Arg1:T2 Arg2:T3
+R4	COREF Arg1:T10 Arg2:T7
+R5	USED-FOR Arg1:T11 Arg2:T10
+R6	COREF Arg1:T12 Arg2:T10
+R7	USED-FOR Arg1:T13 Arg2:T12
+R8	COREF Arg1:T8 Arg2:T6
+R9	COREF Arg1:T9 Arg2:T8

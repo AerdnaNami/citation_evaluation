@@ -1,0 +1,56 @@
+T1	Method 2 34	" graphics for vision " approach
+T2	Task 73 87	reconstruction
+T3	Material 95 123	large and imperfect data set
+T4	Task 125 139	reconstruction
+T5	Method 153 166	tensor voting
+T6	Method 171 177	ROD-TV
+T7	Method 179 185	ROD-TV
+T8	Metric 215 225	efficiency
+T9	Metric 230 241	robust-ness
+T10	OtherScientificTerm 273 295	primitive connectivity
+T11	OtherScientificTerm 297 312	view dependence
+T12	OtherScientificTerm 318 340	levels of detail (LOD)
+T13	OtherScientificTerm 342 375	Locally inferred surface elements
+T14	OtherScientificTerm 390 395	noise
+T15	OtherScientificTerm 415 427	local shapes
+T16	OtherScientificTerm 442 460	per-vertex normals
+T17	Metric 464 483	sub-voxel precision
+T18	Task 511 532	interpolative shading
+T19	OtherScientificTerm 650 669	scanning resolution
+T20	OtherScientificTerm 687 716	mesh connectivity requirement
+T21	Method 728 734	ROD-TV
+T22	Method 770 809	multiscale feature extraction algorithm
+T23	Method 811 817	ROD-TV
+T24	Method 832 859	hierarchical data structure
+T25	Method 905 935	local reconstruction algorithm
+T26	Method 939 952	tensor voting
+T27	Generic 954 956	It
+T28	Method 1042 1071	traversing the data hierarchy
+T29	Method 1076 1104	collecting tensorial support
+T30	Generic 1139 1147	approach
+R1	USED-FOR Arg1:T5 Arg2:T4
+R2	USED-FOR Arg1:T6 Arg2:T4
+R3	CONJUNCTION Arg1:T9 Arg2:T8
+R4	CONJUNCTION Arg1:T11 Arg2:T10
+R5	USED-FOR Arg1:T13 Arg2:T15
+R6	EVALUATE-FOR Arg1:T9 Arg2:T7
+R7	USED-FOR Arg1:T16 Arg2:T18
+R8	USED-FOR Arg1:T20 Arg2:T22
+R9	USED-FOR Arg1:T21 Arg2:T22
+R10	PART-OF Arg1:T24 Arg2:T23
+R11	HYPONYM-OF Arg1:T26 Arg2:T25
+R12	USED-FOR Arg1:T3 Arg2:T2
+R13	CONJUNCTION Arg1:T5 Arg2:T6
+R14	COREF Arg1:T7 Arg2:T6
+R15	CONJUNCTION Arg1:T12 Arg2:T11
+R16	EVALUATE-FOR Arg1:T8 Arg2:T7
+R17	COREF Arg1:T21 Arg2:T7
+R18	COREF Arg1:T23 Arg2:T21
+R19	USED-FOR Arg1:T28 Arg2:T27
+R20	USED-FOR Arg1:T29 Arg2:T27
+R21	CONJUNCTION Arg1:T28 Arg2:T29
+R22	USED-FOR Arg1:T1 Arg2:T2
+R23	COREF Arg1:T1 Arg2:T30
+R24	COREF Arg1:T2 Arg2:T4
+R25	COREF Arg1:T26 Arg2:T27
+R26	FEATURE-OF Arg1:T17 Arg2:T16

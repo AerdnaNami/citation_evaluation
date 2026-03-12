@@ -1,0 +1,26 @@
+T1	Task 38 63	Czech talking head system
+T2	Generic 89 96	methods
+T3	Task 106 129	visual speech animation
+T4	Method 207 223	synthesis method
+T5	Method 227 245	3D animation model
+T6	Method 260 292	pseudo-muscular animation schema
+T7	Task 308 334	animation of visual speech
+T8	Task 357 367	lipreading
+T9	Method 385 401	animation schema
+T10	Task 499 532	forming articulatory trajectories
+T11	OtherScientificTerm 556 585	labial coarticulation effects
+T12	Generic 587 589	It
+T13	Method 606 622	synthesis method
+T14	OtherScientificTerm 634 667	selection of articulatory targets
+T15	Method 672 695	interpolation technique
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T6 Arg2:T7
+R4	COREF Arg1:T3 Arg2:T7
+R5	USED-FOR Arg1:T7 Arg2:T8
+R6	USED-FOR Arg1:T10 Arg2:T11
+R7	COREF Arg1:T10 Arg2:T12
+R8	USED-FOR Arg1:T12 Arg2:T13
+R9	USED-FOR Arg1:T14 Arg2:T12
+R10	USED-FOR Arg1:T15 Arg2:T12
+R11	CONJUNCTION Arg1:T14 Arg2:T15

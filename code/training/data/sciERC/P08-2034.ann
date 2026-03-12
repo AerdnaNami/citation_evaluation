@@ -1,0 +1,23 @@
+T1	Task 2 43	Lyric-based song sentiment classification
+T2	Method 157 216	vector space model (VSM)-based text classification approach
+T3	Material 255 266	song lyrics
+T4	OtherScientificTerm 299 308	sentiment
+T5	OtherScientificTerm 381 390	Negations
+T6	OtherScientificTerm 397 406	modifiers
+T7	OtherScientificTerm 420 438	sentiment keywords
+T8	OtherScientificTerm 474 483	sentiment
+T9	Material 490 500	Song lyric
+T10	Method 557 593	sentiment vector space model (s-VSM)
+T11	Material 621 640	song lyric document
+T12	Method 687 698	s-VSM model
+T13	Method 717 726	VSM model
+T14	Task 736 782	lyric-based song sentiment classification task
+R1	USED-FOR Arg1:T10 Arg2:T11
+R2	COMPARE Arg1:T12 Arg2:T13
+R3	CONJUNCTION Arg1:T5 Arg2:T6
+R4	USED-FOR Arg1:T6 Arg2:T8
+R5	USED-FOR Arg1:T5 Arg2:T8
+R6	COREF Arg1:T3 Arg2:T9
+R7	COREF Arg1:T10 Arg2:T12
+R8	EVALUATE-FOR Arg1:T14 Arg2:T12
+R9	EVALUATE-FOR Arg1:T14 Arg2:T13

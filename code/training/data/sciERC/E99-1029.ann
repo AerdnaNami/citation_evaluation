@@ -1,0 +1,19 @@
+T1	Method 33 56	Tree Adjoining Grammars
+T2	Generic 66 70	they
+T3	OtherScientificTerm 80 114	extended domain of locality (EDOL)
+T4	Method 178 207	feature structure unification
+T5	Task 217 224	parsing
+T6	Method 257 288	lexicalized grammars of English
+T7	Method 292 298	LEXSYS
+T8	Method 305 309	XTAG
+T9	Method 334 342	grammars
+T10	OtherScientificTerm 353 357	EDOL
+R1	FEATURE-OF Arg1:T1 Arg2:T3
+R2	USED-FOR Arg1:T4 Arg2:T5
+R3	COMPARE Arg1:T7 Arg2:T8
+R4	USED-FOR Arg1:T9 Arg2:T10
+R5	HYPONYM-OF Arg1:T7 Arg2:T6
+R6	HYPONYM-OF Arg1:T8 Arg2:T6
+R7	COREF Arg1:T9 Arg2:T6
+R8	COREF Arg1:T10 Arg2:T3
+R9	COREF Arg1:T2 Arg2:T1

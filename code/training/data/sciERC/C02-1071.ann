@@ -1,0 +1,19 @@
+T1	Task 38 53	deep processing
+T2	Method 73 91	shallow techniques
+T3	Method 112 122	NLP system
+T4	Method 144 177	linguistic PoS tagger and chunker
+T5	Method 211 262	broad coverage unification based grammar of Spanish
+T6	Generic 364 370	system
+T7	Metric 386 396	robustness
+T8	Task 406 427	linguistic processing
+T9	Metric 457 465	accuracy
+T10	Metric 476 485	precision
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	COREF Arg1:T6 Arg2:T3
+R3	EVALUATE-FOR Arg1:T7 Arg2:T6
+R4	USED-FOR Arg1:T6 Arg2:T8
+R5	USED-FOR Arg1:T5 Arg2:T3
+R6	PART-OF Arg1:T4 Arg2:T5
+R7	EVALUATE-FOR Arg1:T9 Arg2:T6
+R8	EVALUATE-FOR Arg1:T10 Arg2:T6
+R9	CONJUNCTION Arg1:T9 Arg2:T10

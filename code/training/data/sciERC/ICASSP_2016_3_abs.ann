@@ -1,0 +1,51 @@
+T1	Task 0 33	Speech-based depression detection
+T2	Metric 198 208	robustness
+T3	OtherScientificTerm 212 223	speech cues
+T4	OtherScientificTerm 271 276	noise
+T5	OtherScientificTerm 281 294	reverberation
+T6	Task 298 319	depression prediction
+T7	Method 338 381	mel-frequency cepstral coefficients (MFCCs)
+T8	Generic 390 398	features
+T9	Metric 412 428	noise robustness
+T10	Method 430 477	damped oscillator cepstral coefficients (DOCCs)
+T11	Material 503 551	AudioVisual Emotion Recognition Challenge (AVEC)
+T12	OtherScientificTerm 567 581	additive noise
+T13	OtherScientificTerm 586 599	reverberation
+T14	Metric 653 671	evaluation metrics
+T15	Method 751 764	MFCC features
+T16	OtherScientificTerm 820 825	noise
+T17	OtherScientificTerm 830 843	reverberation
+T18	Method 845 858	DOCC features
+T19	OtherScientificTerm 898 932	higher-order cepstral coefficients
+T20	Method 965 991	artificial neural networks
+T21	Method 1011 1036	support vector regression
+T22	Material 1046 1064	spontaneous speech
+T23	Material 1105 1116	read speech
+T24	OtherScientificTerm 1129 1173	cross-corpus (and cross-language) experiment
+T25	Metric 1189 1223	noise and reverberation robustness
+T26	Method 1228 1233	DOCCs
+T27	Method 1243 1248	MFCCs
+T28	Task 1289 1327	real-world robust depression detection
+R1	FEATURE-OF Arg1:T3 Arg2:T2
+R2	CONJUNCTION Arg1:T4 Arg2:T5
+R3	FEATURE-OF Arg1:T5 Arg2:T6
+R4	FEATURE-OF Arg1:T4 Arg2:T6
+R5	USED-FOR Arg1:T7 Arg2:T6
+R6	USED-FOR Arg1:T8 Arg2:T9
+R7	COREF Arg1:T10 Arg2:T8
+R8	COREF Arg1:T15 Arg2:T7
+R9	COMPARE Arg1:T18 Arg2:T15
+R10	COREF Arg1:T18 Arg2:T10
+R11	COMPARE Arg1:T20 Arg2:T21
+R12	COMPARE Arg1:T22 Arg2:T23
+R13	COMPARE Arg1:T26 Arg2:T27
+R14	COREF Arg1:T26 Arg2:T18
+R15	COREF Arg1:T27 Arg2:T15
+R16	CONJUNCTION Arg1:T7 Arg2:T8
+R17	EVALUATE-FOR Arg1:T25 Arg2:T26
+R18	EVALUATE-FOR Arg1:T25 Arg2:T27
+R19	EVALUATE-FOR Arg1:T24 Arg2:T26
+R20	EVALUATE-FOR Arg1:T24 Arg2:T27
+R21	CONJUNCTION Arg1:T16 Arg2:T17
+R22	CONJUNCTION Arg1:T12 Arg2:T13
+R23	CONJUNCTION Arg1:T8 Arg2:T10

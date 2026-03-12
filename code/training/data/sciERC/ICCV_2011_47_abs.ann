@@ -1,0 +1,33 @@
+T1	Generic 13 19	method
+T2	Task 24 44	detecting 3D objects
+T3	OtherScientificTerm 51 67	multi-modalities
+T4	Generic 75 77	it
+T5	Generic 105 107	it
+T6	OtherScientificTerm 133 138	image
+T7	OtherScientificTerm 145 160	dense depth map
+T8	OtherScientificTerm 172 204	complementary object information
+T9	Generic 206 208	It
+T10	OtherScientificTerm 269 298	time consuming training stage
+T11	OtherScientificTerm 315 333	untextured objects
+T12	Generic 335 337	It
+T13	OtherScientificTerm 381 390	templates
+T14	OtherScientificTerm 418 428	modalities
+T15	OtherScientificTerm 465 483	commodity hardware
+T16	Generic 493 501	approach
+T17	Generic 528 552	state-of-the-art methods
+T18	OtherScientificTerm 556 573	single modalities
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T1
+R3	COREF Arg1:T4 Arg2:T1
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	USED-FOR Arg1:T6 Arg2:T5
+R6	USED-FOR Arg1:T7 Arg2:T5
+R7	FEATURE-OF Arg1:T8 Arg2:T7
+R8	CONJUNCTION Arg1:T6 Arg2:T7
+R9	COREF Arg1:T9 Arg2:T5
+R10	COREF Arg1:T9 Arg2:T12
+R11	USED-FOR Arg1:T13 Arg2:T14
+R12	COREF Arg1:T16 Arg2:T12
+R13	COMPARE Arg1:T16 Arg2:T17
+R14	USED-FOR Arg1:T16 Arg2:T18
+R15	USED-FOR Arg1:T17 Arg2:T18

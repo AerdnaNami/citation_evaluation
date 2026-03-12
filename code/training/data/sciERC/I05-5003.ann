@@ -1,0 +1,49 @@
+T1	Task 14 49	machine translation (MT) evaluation
+T2	Task 86 136	sentence-level semantic equivalence classification
+T3	Metric 198 219	MT evaluation methods
+T4	Metric 221 225	BLEU
+T5	Metric 227 231	NIST
+T6	Metric 233 236	WER
+T7	Metric 241 244	PER
+T8	Method 260 271	classifiers
+T9	Task 285 305	semantic equivalence
+T10	Task 312 322	entailment
+T11	Method 353 374	classification method
+T12	Metric 386 389	PER
+T13	OtherScientificTerm 408 434	part of speech information
+T14	Task 472 500	word matches and non-matches
+T15	Method 545 569	MT evaluation techniques
+T16	OtherScientificTerm 599 607	features
+T17	Task 614 639	paraphrase classification
+T18	Task 665 675	entailment
+T19	Generic 684 693	technique
+T20	Task 731 756	paraphrase classification
+T21	Metric 731 765	paraphrase classification accuracy
+T22	Generic 790 796	models
+R1	CONJUNCTION Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T12 Arg2:T11
+R3	USED-FOR Arg1:T15 Arg2:T16
+R4	USED-FOR Arg1:T8 Arg2:T9
+R5	USED-FOR Arg1:T8 Arg2:T10
+R6	HYPONYM-OF Arg1:T4 Arg2:T3
+R7	HYPONYM-OF Arg1:T5 Arg2:T3
+R8	HYPONYM-OF Arg1:T7 Arg2:T3
+R9	HYPONYM-OF Arg1:T6 Arg2:T3
+R10	CONJUNCTION Arg1:T4 Arg2:T5
+R11	CONJUNCTION Arg1:T5 Arg2:T6
+R12	CONJUNCTION Arg1:T6 Arg2:T7
+R13	USED-FOR Arg1:T3 Arg2:T8
+R14	CONJUNCTION Arg1:T9 Arg2:T10
+R15	COREF Arg1:T11 Arg2:T8
+R16	COREF Arg1:T12 Arg2:T7
+R17	COREF Arg1:T15 Arg2:T3
+R18	USED-FOR Arg1:T15 Arg2:T17
+R19	CONJUNCTION Arg1:T17 Arg2:T18
+R20	USED-FOR Arg1:T15 Arg2:T18
+R21	COREF Arg1:T19 Arg2:T11
+R22	COMPARE Arg1:T19 Arg2:T22
+R23	COREF Arg1:T20 Arg2:T17
+R24	EVALUATE-FOR Arg1:T21 Arg2:T19
+R25	EVALUATE-FOR Arg1:T21 Arg2:T22
+R26	USED-FOR Arg1:T13 Arg2:T14
+R27	USED-FOR Arg1:T12 Arg2:T13

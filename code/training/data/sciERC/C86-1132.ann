@@ -1,0 +1,19 @@
+T1	Generic 26 32	system
+T2	Method 36 42	RAREAS
+T3	Task 64 88	marine weather forecasts
+T4	Material 104 126	formatted weather data
+T5	Generic 136 145	synthesis
+T6	Material 176 230	natural sublanguages  with  stereotyped text structure
+T7	Method 235 241	RAREAS
+T8	OtherScientificTerm 270 309	linguistic and non-linguistic knowledge
+T9	Generic 441 449	approach
+T10	Material 487 519	bilingual or multi-lingual texts
+R1	USED-FOR Arg1:T8 Arg2:T7
+R2	COREF Arg1:T2 Arg2:T1
+R3	COREF Arg1:T5 Arg2:T1
+R4	COREF Arg1:T7 Arg2:T5
+R5	COREF Arg1:T9 Arg2:T7
+R6	USED-FOR Arg1:T10 Arg2:T9
+R7	USED-FOR Arg1:T1 Arg2:T3
+R8	USED-FOR Arg1:T4 Arg2:T1
+R9	USED-FOR Arg1:T6 Arg2:T5

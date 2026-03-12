@@ -1,0 +1,28 @@
+T1	Generic 26 32	system
+T2	Task 37 63	categorizing unknown words
+T3	Generic 71 77	system
+T4	Method 94 122	multi-component architecture
+T5	Generic 136 145	component
+T6	OtherScientificTerm 192 205	unknown words
+T7	Generic 240 250	components
+T8	OtherScientificTerm 267 272	names
+T9	OtherScientificTerm 279 294	spelling errors
+T10	Generic 303 312	component
+T11	Method 322 348	decision tree architecture
+T12	OtherScientificTerm 401 413	unknown word
+T13	Generic 421 427	system
+T14	Material 459 479	live closed captions
+T15	OtherScientificTerm 523 536	unknown words
+R1	USED-FOR Arg1:T4 Arg2:T3
+R2	USED-FOR Arg1:T7 Arg2:T8
+R3	USED-FOR Arg1:T11 Arg2:T10
+R4	PART-OF Arg1:T5 Arg2:T4
+R5	USED-FOR Arg1:T7 Arg2:T9
+R6	HYPONYM-OF Arg1:T7 Arg2:T5
+R7	COREF Arg1:T13 Arg2:T3
+R8	USED-FOR Arg1:T5 Arg2:T6
+R9	EVALUATE-FOR Arg1:T14 Arg2:T13
+R10	CONJUNCTION Arg1:T8 Arg2:T9
+R11	COREF Arg1:T10 Arg2:T7
+R12	USED-FOR Arg1:T1 Arg2:T2
+R13	COREF Arg1:T1 Arg2:T3

@@ -1,0 +1,22 @@
+T1	Generic 27 35	approach
+T2	Task 40 71	statistical sentence generation
+T3	OtherScientificTerm 139 144	trees
+T4	OtherScientificTerm 151 158	forests
+T5	Generic 220 234	representation
+T6	OtherScientificTerm 301 322	syntactic information
+T7	Generic 325 327	It
+T8	Method 361 380	statistical ranking
+T9	Generic 398 406	approach
+T10	Task 411 433	statistical generation
+T11	Method 450 467	ranking algorithm
+T12	Method 563 574	enumeration
+T13	Method 581 603	lattice-based approach
+R1	COMPARE Arg1:T11 Arg2:T13
+R2	COMPARE Arg1:T11 Arg2:T12
+R3	USED-FOR Arg1:T9 Arg2:T10
+R4	COREF Arg1:T7 Arg2:T5
+R5	USED-FOR Arg1:T1 Arg2:T2
+R6	COREF Arg1:T5 Arg2:T1
+R7	USED-FOR Arg1:T7 Arg2:T8
+R8	COMPARE Arg1:T7 Arg2:T9
+R9	CONJUNCTION Arg1:T12 Arg2:T13

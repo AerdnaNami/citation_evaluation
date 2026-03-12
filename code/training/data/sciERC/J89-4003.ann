@@ -1,0 +1,28 @@
+T1	Generic 4 9	model
+T2	OtherScientificTerm 45 63	class of languages
+T3	OtherScientificTerm 85 98	reduplication
+T4	Material 104 126	context-free languages
+T5	Method 134 139	model
+T6	Method 147 165	pushdown automaton
+T7	OtherScientificTerm 204 217	reduplication
+T8	OtherScientificTerm 233 238	stack
+T9	OtherScientificTerm 259 277	class of languages
+T10	Material 327 349	context-free languages
+T11	Material 360 377	indexed languages
+T12	Generic 385 390	model
+T13	OtherScientificTerm 438 452	reduplications
+T14	Material 491 508	natural languages
+T15	Generic 515 517	it
+T16	Method 577 590	formal models
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T8 Arg2:T6
+R3	COREF Arg1:T5 Arg2:T1
+R4	HYPONYM-OF Arg1:T5 Arg2:T6
+R5	COREF Arg1:T9 Arg2:T2
+R6	CONJUNCTION Arg1:T10 Arg2:T11
+R7	COREF Arg1:T12 Arg2:T5
+R8	COREF Arg1:T15 Arg2:T12
+R9	USED-FOR Arg1:T8 Arg2:T7
+R10	USED-FOR Arg1:T3 Arg2:T4
+R11	COREF Arg1:T4 Arg2:T10
+R12	USED-FOR Arg1:T12 Arg2:T13

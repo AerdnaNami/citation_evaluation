@@ -1,0 +1,21 @@
+T1	Method 23 62	Automatic Speech Recognition technology
+T2	Task 105 119	dialog systems
+T3	Task 158 176	speech recognition
+T4	Task 218 232	dialog systems
+T5	Generic 281 285	they
+T6	OtherScientificTerm 360 375	system response
+T7	Task 425 462	natural language generation community
+T8	Task 499 513	dialog systems
+T9	Task 542 552	generation
+T10	Task 573 587	dialog systems
+T11	Method 616 665	hand-crafting  knowledge-based generation systems
+T12	Method 697 724	machine learning techniques
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	PART-OF Arg1:T6 Arg2:T7
+R3	USED-FOR Arg1:T9 Arg2:T10
+R4	COREF Arg1:T8 Arg2:T4
+R5	COREF Arg1:T4 Arg2:T2
+R6	COREF Arg1:T10 Arg2:T4
+R7	USED-FOR Arg1:T12 Arg2:T11
+R8	COREF Arg1:T5 Arg2:T4
+R9	COMPARE Arg1:T7 Arg2:T8

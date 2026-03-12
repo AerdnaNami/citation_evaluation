@@ -1,0 +1,53 @@
+T1	Task 7 30	Object Recognition task
+T2	Task 70 95	categorization of objects
+T3	Task 100 122	estimating object pose
+T4	Generic 134 140	former
+T5	Method 156 185	view-invariant representation
+T6	Generic 197 203	latter
+T7	Generic 215 229	representation
+T8	OtherScientificTerm 251 267	pose information
+T9	Method 323 342	deep archi-tectures
+T10	Task 372 399	object category recognition
+T11	Method 401 422	Deep learning methods
+T12	Generic 458 462	task
+T13	Task 477 499	object pose estimation
+T14	Generic 512 522	approaches
+T15	Method 590 639	Convolutional Neural Networks (CNN) architectures
+T16	Task 683 701	object recognition
+T17	Task 706 721	pose estimation
+T18	OtherScientificTerm 754 760	layers
+T19	Method 772 782	CNN models
+T20	Generic 815 819	them
+T21	Method 857 894	layers of distributed representations
+T22	Method 902 906	CNNs
+T23	OtherScientificTerm 917 940	object pose information
+T24	Generic 949 953	this
+T25	Method 971 1002	object category representations
+T26	Material 1066 1085	multi-view datasets
+R1	COREF Arg1:T4 Arg2:T2
+R2	COREF Arg1:T6 Arg2:T3
+R3	CONJUNCTION Arg1:T2 Arg2:T3
+R4	USED-FOR Arg1:T7 Arg2:T8
+R5	USED-FOR Arg1:T7 Arg2:T6
+R6	USED-FOR Arg1:T5 Arg2:T4
+R7	PART-OF Arg1:T2 Arg2:T1
+R8	PART-OF Arg1:T3 Arg2:T1
+R9	USED-FOR Arg1:T9 Arg2:T10
+R10	COREF Arg1:T10 Arg2:T2
+R11	COREF Arg1:T12 Arg2:T10
+R12	COREF Arg1:T13 Arg2:T3
+R13	COREF Arg1:T14 Arg2:T11
+R14	COREF Arg1:T17 Arg2:T13
+R15	COREF Arg1:T19 Arg2:T15
+R16	PART-OF Arg1:T21 Arg2:T22
+R17	USED-FOR Arg1:T21 Arg2:T23
+R18	COREF Arg1:T24 Arg2:T21
+R19	COMPARE Arg1:T24 Arg2:T25
+R20	COREF Arg1:T22 Arg2:T19
+R21	PART-OF Arg1:T18 Arg2:T19
+R22	COREF Arg1:T20 Arg2:T18
+R23	USED-FOR Arg1:T14 Arg2:T13
+R24	CONJUNCTION Arg1:T16 Arg2:T17
+R25	USED-FOR Arg1:T15 Arg2:T16
+R26	USED-FOR Arg1:T15 Arg2:T17
+R27	COREF Arg1:T16 Arg2:T12

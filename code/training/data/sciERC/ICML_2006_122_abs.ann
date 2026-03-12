@@ -1,0 +1,35 @@
+T1	Method 7 41	model-based policy search approach
+T2	Task 45 72	reinforcement learning (RL)
+T3	OtherScientificTerm 74 82	policies
+T4	OtherScientificTerm 131 154	Markov decision process
+T5	Task 169 208	high-dimensional continuous-state tasks
+T6	Generic 261 266	model
+T7	Generic 287 296	algorithm
+T8	OtherScientificTerm 307 313	policy
+T9	Task 380 393	model-free RL
+T10	OtherScientificTerm 440 456	real-life trials
+T11	Method 486 502	hybrid algorithm
+T12	Method 525 542	approximate model
+T13	OtherScientificTerm 571 587	real-life trials
+T14	Task 634 652	policy evaluations
+T15	OtherScientificTerm 659 675	real-life trials
+T16	Method 696 713	approximate model
+T17	Generic 779 788	algorithm
+T18	OtherScientificTerm 798 822	near-optimal performance
+T19	Generic 944 955	crude model
+T20	OtherScientificTerm 978 994	real-life trials
+T21	Generic 1001 1010	algorithm
+T22	OtherScientificTerm 1022 1046	near-optimal performance
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T4 Arg2:T3
+R3	USED-FOR Arg1:T13 Arg2:T12
+R4	USED-FOR Arg1:T12 Arg2:T11
+R5	USED-FOR Arg1:T15 Arg2:T14
+R6	COREF Arg1:T17 Arg2:T21
+R7	USED-FOR Arg1:T20 Arg2:T21
+R8	USED-FOR Arg1:T19 Arg2:T21
+R9	USED-FOR Arg1:T10 Arg2:T9
+R10	USED-FOR Arg1:T7 Arg2:T8
+R11	USED-FOR Arg1:T6 Arg2:T5
+R12	COREF Arg1:T6 Arg2:T7
+R13	CONJUNCTION Arg1:T19 Arg2:T20

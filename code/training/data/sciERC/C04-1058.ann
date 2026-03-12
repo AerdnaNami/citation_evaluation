@@ -1,0 +1,25 @@
+T1	Method 87 98	classifiers
+T2	Method 109 136	maximum entropy classifiers
+T3	Method 140 148	boosting
+T4	Method 155 159	SVMs
+T5	Task 177 202	language processing tasks
+T6	Method 373 400	error correction mechanisms
+T7	Generic 664 679	base classifier
+T8	Method 743 797	N-fold Templated Piped Correction, or NTPC ("nitpick")
+T9	Method 815 830	error corrector
+T10	Generic 920 922	it
+T11	Generic 1000 1011	base models
+T12	Method 1082 1086	NTPC
+T13	OtherScientificTerm 1129 1151	Occam's Razor argument
+R1	HYPONYM-OF Arg1:T2 Arg2:T1
+R2	HYPONYM-OF Arg1:T3 Arg2:T1
+R3	HYPONYM-OF Arg1:T4 Arg2:T1
+R4	USED-FOR Arg1:T1 Arg2:T5
+R5	HYPONYM-OF Arg1:T8 Arg2:T9
+R6	COREF Arg1:T9 Arg2:T6
+R7	COREF Arg1:T10 Arg2:T8
+R8	COMPARE Arg1:T10 Arg2:T11
+R9	COREF Arg1:T11 Arg2:T7
+R10	COREF Arg1:T12 Arg2:T8
+R11	CONJUNCTION Arg1:T2 Arg2:T3
+R12	CONJUNCTION Arg1:T3 Arg2:T4

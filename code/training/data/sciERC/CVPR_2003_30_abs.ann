@@ -1,0 +1,26 @@
+T1	Generic 28 42	representation
+T2	OtherScientificTerm 47 72	three-dimensional objects
+T3	OtherScientificTerm 85 115	affine-invariant image patches
+T4	OtherScientificTerm 126 147	spatial relationships
+T5	OtherScientificTerm 149 171	Multi-view constraints
+T6	Method 226 251	normalized representation
+T7	Task 281 289	matching
+T8	Task 294 308	reconstruction
+T9	Task 323 388	acquisition of true three-dimensional affine and Euclidean models
+T10	Material 403 409	images
+T11	Generic 503 511	approach
+T12	Method 540 558	segmentation stage
+T13	OtherScientificTerm 580 596	cluttered scenes
+T14	Task 623 634	recognition
+R1	CONJUNCTION Arg1:T7 Arg2:T8
+R2	USED-FOR Arg1:T6 Arg2:T7
+R3	USED-FOR Arg1:T6 Arg2:T8
+R4	CONJUNCTION Arg1:T5 Arg2:T6
+R5	USED-FOR Arg1:T5 Arg2:T7
+R6	USED-FOR Arg1:T5 Arg2:T8
+R7	USED-FOR Arg1:T1 Arg2:T2
+R8	FEATURE-OF Arg1:T3 Arg2:T2
+R9	FEATURE-OF Arg1:T4 Arg2:T3
+R10	USED-FOR Arg1:T10 Arg2:T9
+R11	COREF Arg1:T1 Arg2:T11
+R12	USED-FOR Arg1:T11 Arg2:T13

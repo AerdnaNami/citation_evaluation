@@ -1,0 +1,33 @@
+T1	Task 2 45	CriterionSM Online Essay Evaluation Service
+T2	OtherScientificTerm 120 150	essay-based discourse elements
+T3	OtherScientificTerm 160 177	thesis statements
+T4	Generic 200 206	system
+T5	OtherScientificTerm 222 246	Criterion  's capability
+T6	Metric 283 304	coherence  in  essays
+T7	Generic 313 319	system
+T8	OtherScientificTerm 332 340	features
+T9	Metric 367 395	semantic similarity measures
+T10	OtherScientificTerm 402 421	discourse structure
+T11	Method 428 450	support vector machine
+T12	OtherScientificTerm 464 472	features
+T13	OtherScientificTerm 486 509	breakdowns in coherence
+T14	OtherScientificTerm 579 597	discourse elements
+T15	Metric 602 626	Intra-sentential quality
+T16	Method 647 668	rule-based heuristics
+T17	Generic 698 704	system
+T18	Generic 739 747	baseline
+R1	USED-FOR Arg1:T12 Arg2:T11
+R2	EVALUATE-FOR Arg1:T16 Arg2:T15
+R3	PART-OF Arg1:T2 Arg2:T1
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	COREF Arg1:T7 Arg2:T4
+R6	USED-FOR Arg1:T7 Arg2:T8
+R7	CONJUNCTION Arg1:T10 Arg2:T9
+R8	COREF Arg1:T17 Arg2:T7
+R9	HYPONYM-OF Arg1:T3 Arg2:T2
+R10	COMPARE Arg1:T17 Arg2:T18
+R11	COREF Arg1:T12 Arg2:T8
+R12	USED-FOR Arg1:T9 Arg2:T8
+R13	USED-FOR Arg1:T10 Arg2:T8
+R14	EVALUATE-FOR Arg1:T6 Arg2:T4
+R15	USED-FOR Arg1:T12 Arg2:T13

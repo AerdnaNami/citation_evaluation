@@ -1,0 +1,32 @@
+T1	Method 30 46	ensemble methods
+T2	Task 52 68	machine learning
+T3	Task 90 117	natural language processing
+T4	Method 137 177	multi-strategy and multi-source approach
+T5	Task 181 199	question answering
+T6	Method 257 273	answering agents
+T7	Method 328 344	answering agents
+T8	Generic 376 386	strategies
+T9	Generic 388 391	one
+T10	Method 413 439	knowledge-based mechanisms
+T11	Generic 449 454	other
+T12	Method 465 487	statistical techniques
+T13	Method 507 546	multi-level answer resolution algorithm
+T14	Method 580 596	answering agents
+T15	OtherScientificTerm 606 645	question, passage, and/or answer levels
+T16	Method 698 725	answer resolution algorithm
+T17	Generic 771 786	baseline system
+T18	Metric 880 904	average precision metric
+R1	COMPARE Arg1:T16 Arg2:T17
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	USED-FOR Arg1:T1 Arg2:T3
+R4	HYPONYM-OF Arg1:T9 Arg2:T8
+R5	HYPONYM-OF Arg1:T11 Arg2:T8
+R6	USED-FOR Arg1:T10 Arg2:T9
+R7	USED-FOR Arg1:T12 Arg2:T11
+R8	USED-FOR Arg1:T8 Arg2:T7
+R9	USED-FOR Arg1:T14 Arg2:T13
+R10	COREF Arg1:T16 Arg2:T13
+R11	EVALUATE-FOR Arg1:T18 Arg2:T16
+R12	EVALUATE-FOR Arg1:T18 Arg2:T17
+R13	USED-FOR Arg1:T4 Arg2:T5
+R14	COREF Arg1:T7 Arg2:T6

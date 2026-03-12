@@ -1,0 +1,17 @@
+T1	Method 2 28	Metagrammatical formalisms
+T2	OtherScientificTerm 44 79	context-free phrase structure rules
+T3	OtherScientificTerm 86 110	metarules (MPS grammars)
+T4	OtherScientificTerm 166 195	syntax  of  natural languages
+T5	Method 199 225	Unconstrained MPS grammars
+T6	Generic 320 324	them
+T7	Metric 352 403	computational tractability and explanatory adequacy
+T8	Generic 427 431	them
+T9	Generic 447 455	criteria
+T10	Method 513 539	metagrammatical formalisms
+R1	PART-OF Arg1:T2 Arg2:T1
+R2	CONJUNCTION Arg1:T2 Arg2:T3
+R3	PART-OF Arg1:T3 Arg2:T1
+R4	COREF Arg1:T5 Arg2:T6
+R5	COREF Arg1:T6 Arg2:T8
+R6	COREF Arg1:T7 Arg2:T9
+R7	EVALUATE-FOR Arg1:T7 Arg2:T6

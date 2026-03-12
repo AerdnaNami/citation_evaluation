@@ -1,0 +1,58 @@
+T1	Task 0 24	Person re-identification
+T2	OtherScientificTerm 71 75	pose
+T3	OtherScientificTerm 77 89	illumination
+T4	OtherScientificTerm 91 100	occlusion
+T5	OtherScientificTerm 105 116	camera view
+T6	Material 149 164	pedestrian data
+T7	Method 183 206	highly-curved manifolds
+T8	OtherScientificTerm 214 227	feature space
+T9	Method 249 284	convolutional neural networks (CNN)
+T10	OtherScientificTerm 301 319	feature extraction
+T11	OtherScientificTerm 389 406	geodesic distance
+T12	Method 460 482	deep embedding methods
+T13	OtherScientificTerm 491 509	Euclidean distance
+T14	Method 560 585	manifold learning methods
+T15	OtherScientificTerm 605 623	Euclidean distance
+T16	OtherScientificTerm 631 642	local range
+T17	OtherScientificTerm 663 685	graphical relationship
+T18	OtherScientificTerm 726 743	geodesic distance
+T19	OtherScientificTerm 843 854	local range
+T20	OtherScientificTerm 884 897	CNN embedding
+T21	Generic 919 923	data
+T22	OtherScientificTerm 934 956	intra-class variations
+T23	Method 992 1030	moderate positive sample mining method
+T24	Method 1040 1050	robust CNN
+T25	Task 1055 1079	person re-identification
+T26	Generic 1154 1162	learning
+T27	OtherScientificTerm 1168 1192	metric weight constraint
+T28	OtherScientificTerm 1206 1220	learned metric
+T29	OtherScientificTerm 1234 1256	generalization ability
+T30	OtherScientificTerm 1327 1346	robust deep metrics
+T31	Task 1351 1375	person re-identification
+T32	Method 1397 1407	deep model
+T33	Generic 1438 1462	state-of-the-art methods
+T34	Task 1488 1512	person re-identification
+T35	Method 1601 1612	deep models
+T36	Task 1617 1641	person re-identification
+R1	USED-FOR Arg1:T9 Arg2:T10
+R2	USED-FOR Arg1:T7 Arg2:T6
+R3	FEATURE-OF Arg1:T8 Arg2:T7
+R4	USED-FOR Arg1:T13 Arg2:T12
+R5	USED-FOR Arg1:T15 Arg2:T14
+R6	FEATURE-OF Arg1:T16 Arg2:T15
+R7	USED-FOR Arg1:T15 Arg2:T18
+R8	USED-FOR Arg1:T17 Arg2:T18
+R9	CONJUNCTION Arg1:T15 Arg2:T17
+R10	USED-FOR Arg1:T23 Arg2:T24
+R11	USED-FOR Arg1:T24 Arg2:T25
+R12	USED-FOR Arg1:T27 Arg2:T26
+R13	FEATURE-OF Arg1:T29 Arg2:T28
+R14	USED-FOR Arg1:T30 Arg2:T31
+R15	COMPARE Arg1:T32 Arg2:T33
+R16	USED-FOR Arg1:T32 Arg2:T34
+R17	USED-FOR Arg1:T33 Arg2:T34
+R18	USED-FOR Arg1:T35 Arg2:T36
+R19	COREF Arg1:T36 Arg2:T34
+R20	COREF Arg1:T34 Arg2:T25
+R21	COREF Arg1:T25 Arg2:T1
+R22	FEATURE-OF Arg1:T22 Arg2:T21

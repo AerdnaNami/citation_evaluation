@@ -1,0 +1,35 @@
+T1	Method 19 62	limited-memory stochastic block BFGS update
+T2	Task 67 147	incorporating enriched curvature information in stochastic approximation methods
+T3	Generic 156 162	method
+T4	OtherScientificTerm 184 206	inverse Hessian matrix
+T5	Generic 229 231	it
+T6	OtherScientificTerm 284 291	Hessian
+T7	OtherScientificTerm 301 350	randomly generated compressed form of the Hessian
+T8	Method 371 391	sketching strategies
+T9	Method 407 426	quasi-Newton method
+T10	Method 437 466	stochastic block BFGS updates
+T11	Method 485 517	variance reduction approach SVRG
+T12	OtherScientificTerm 529 555	batch stochastic gradients
+T13	OtherScientificTerm 567 585	linear convergence
+T14	Generic 603 609	method
+T15	Task 630 670	large-scale logistic regression problems
+T16	Generic 687 693	method
+T17	Generic 747 771	state-of-the-art methods
+R1	COREF Arg1:T1 Arg2:T3
+R2	COREF Arg1:T5 Arg2:T3
+R3	USED-FOR Arg1:T5 Arg2:T4
+R4	HYPONYM-OF Arg1:T7 Arg2:T6
+R5	USED-FOR Arg1:T6 Arg2:T5
+R6	CONJUNCTION Arg1:T10 Arg2:T11
+R7	USED-FOR Arg1:T10 Arg2:T9
+R8	USED-FOR Arg1:T11 Arg2:T9
+R9	USED-FOR Arg1:T9 Arg2:T12
+R10	COREF Arg1:T1 Arg2:T16
+R11	EVALUATE-FOR Arg1:T15 Arg2:T16
+R12	EVALUATE-FOR Arg1:T15 Arg2:T17
+R13	COMPARE Arg1:T16 Arg2:T17
+R14	USED-FOR Arg1:T1 Arg2:T2
+R15	COREF Arg1:T9 Arg2:T14
+R16	FEATURE-OF Arg1:T13 Arg2:T14
+R17	HYPONYM-OF Arg1:T8 Arg2:T16
+R18	HYPONYM-OF Arg1:T9 Arg2:T16

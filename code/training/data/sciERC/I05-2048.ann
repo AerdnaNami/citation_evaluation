@@ -1,0 +1,39 @@
+T1	Method 2 39	Statistical machine translation (SMT)
+T2	Task 79 106	natural language processing
+T3	Method 230 233	SMT
+T4	Method 265 295	rule-based translation systems
+T5	Task 392 411	translation systems
+T6	OtherScientificTerm 417 436	new  language pairs
+T7	OtherScientificTerm 441 453	new  domains
+T8	Method 511 542	statistical machine translation
+T9	Method 670 680	SMT system
+T10	Method 787 790	SMT
+T11	Method 829 833	STTK
+T12	Method 840 880	statistical machine translation tool kit
+T13	Task 932 950	translation system
+T14	Method 955 959	STTK
+T15	Method 1080 1090	SMT system
+T16	Generic 1094 1096	It
+T17	Method 1138 1194	rule-based and example based machine translation modules
+T18	Task 1208 1247	multi engine machine translation system
+T19	Generic 1277 1285	tool kit
+R1	COMPARE Arg1:T3 Arg2:T4
+R2	HYPONYM-OF Arg1:T1 Arg2:T2
+R3	COREF Arg1:T3 Arg2:T1
+R4	COREF Arg1:T8 Arg2:T3
+R5	COREF Arg1:T9 Arg2:T8
+R6	COREF Arg1:T10 Arg2:T8
+R7	HYPONYM-OF Arg1:T11 Arg2:T12
+R8	USED-FOR Arg1:T11 Arg2:T13
+R9	COREF Arg1:T13 Arg2:T5
+R10	COREF Arg1:T14 Arg2:T11
+R11	USED-FOR Arg1:T14 Arg2:T15
+R12	COREF Arg1:T16 Arg2:T14
+R13	CONJUNCTION Arg1:T16 Arg2:T17
+R14	USED-FOR Arg1:T17 Arg2:T18
+R15	USED-FOR Arg1:T16 Arg2:T18
+R16	COREF Arg1:T19 Arg2:T14
+R17	HYPONYM-OF Arg1:T4 Arg2:T17
+R18	USED-FOR Arg1:T5 Arg2:T6
+R19	USED-FOR Arg1:T5 Arg2:T7
+R20	CONJUNCTION Arg1:T6 Arg2:T7

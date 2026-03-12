@@ -1,0 +1,48 @@
+T1	Method 28 59	human action recognition system
+T2	Task 73 110	embedded computer vision applications
+T3	Task 114 130	security systems
+T4	Task 132 158	human-computer interaction
+T5	Task 163 187	intelligent environments
+T6	Generic 193 199	system
+T7	Task 216 252	embedded computer vision application
+T8	Generic 290 296	system
+T9	Method 312 358	linear Support Vector Machine (SVM) classifier
+T10	Method 365 388	classification progress
+T11	OtherScientificTerm 430 447	embedded hardware
+T12	OtherScientificTerm 467 492	compacted motion features
+T13	Material 514 520	videos
+T14	Method 567 593	Motion History Image (MHI)
+T15	Method 612 664	Hierarchical Motion History Histogram (HMHH) feature
+T16	OtherScientificTerm 682 700	motion information
+T17	Method 702 706	HMHH
+T18	OtherScientificTerm 725 748	rich motion information
+T19	Method 816 819	MHI
+T20	Method 824 828	HMHH
+T21	OtherScientificTerm 852 880	low dimension feature vector
+T22	Method 899 914	SVM classifiers
+T23	Generic 951 957	system
+T24	Task 998 1009	recognition
+R1	CONJUNCTION Arg1:T3 Arg2:T4
+R2	CONJUNCTION Arg1:T4 Arg2:T5
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T6 Arg2:T1
+R5	USED-FOR Arg1:T2 Arg2:T3
+R6	USED-FOR Arg1:T2 Arg2:T4
+R7	USED-FOR Arg1:T2 Arg2:T5
+R8	USED-FOR Arg1:T6 Arg2:T7
+R9	COREF Arg1:T7 Arg2:T2
+R10	COREF Arg1:T8 Arg2:T6
+R11	USED-FOR Arg1:T9 Arg2:T8
+R12	USED-FOR Arg1:T13 Arg2:T12
+R13	USED-FOR Arg1:T11 Arg2:T10
+R14	COREF Arg1:T17 Arg2:T15
+R15	USED-FOR Arg1:T17 Arg2:T18
+R16	CONJUNCTION Arg1:T19 Arg2:T20
+R17	USED-FOR Arg1:T21 Arg2:T22
+R18	COREF Arg1:T23 Arg2:T8
+R19	EVALUATE-FOR Arg1:T24 Arg2:T23
+R20	COREF Arg1:T9 Arg2:T10
+R21	COREF Arg1:T22 Arg2:T10
+R22	USED-FOR Arg1:T20 Arg2:T21
+R23	USED-FOR Arg1:T19 Arg2:T21
+R24	USED-FOR Arg1:T15 Arg2:T16

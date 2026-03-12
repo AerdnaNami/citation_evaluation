@@ -1,0 +1,23 @@
+T1	Material 99 112	Thai language
+T2	Method 181 191	classifier
+T3	Task 348 368	classifier selection
+T4	Method 399 418	rule-based approach
+T5	Method 476 486	classifier
+T6	Method 521 531	classifier
+T7	OtherScientificTerm 568 591	type of unit classifier
+T8	Method 674 693	corpus-based method
+T9	Method 750 784	Noun Classifier Associations (NCA)
+T10	Task 815 836	classifier assignment
+T11	Task 843 879	semantic construction of noun phrase
+T12	Method 887 890	NCA
+T13	OtherScientificTerm 961 990	concept hierarchy constraints
+T14	OtherScientificTerm 997 1021	frequency of occurrences
+R1	USED-FOR Arg1:T8 Arg2:T10
+R2	USED-FOR Arg1:T8 Arg2:T11
+R3	COREF Arg1:T12 Arg2:T9
+R4	USED-FOR Arg1:T9 Arg2:T10
+R5	USED-FOR Arg1:T8 Arg2:T9
+R6	USED-FOR Arg1:T9 Arg2:T11
+R7	USED-FOR Arg1:T13 Arg2:T12
+R8	USED-FOR Arg1:T14 Arg2:T12
+R9	CONJUNCTION Arg1:T10 Arg2:T11

@@ -1,0 +1,38 @@
+T1	OtherScientificTerm 52 96	fundamental frequency (F0) contour of speech
+T2	Material 104 114	text input
+T3	Task 119 143	text-to-speech synthesis
+T4	Method 177 194	statistical model
+T5	OtherScientificTerm 232 250	speech F0 contours
+T6	Method 294 308	Fujisaki model
+T7	OtherScientificTerm 314 332	remarkable feature
+T8	Generic 341 346	model
+T9	Generic 355 357	it
+T10	Generic 396 405	algorithm
+T11	Method 424 443	statistical methods
+T12	OtherScientificTerm 463 488	Fujisaki-model parameters
+T13	OtherScientificTerm 494 509	raw F0 contours
+T14	OtherScientificTerm 542 567	Fujisaki-model parameters
+T15	Material 575 585	text input
+T16	Method 595 615	statistical learning
+T17	Generic 652 657	model
+T18	Method 707 735	parameter training algorithm
+T19	Generic 752 757	model
+T20	Method 769 807	decision tree-based context clustering
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T1 Arg2:T3
+R3	COREF Arg1:T1 Arg2:T5
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	COREF Arg1:T4 Arg2:T8
+R6	USED-FOR Arg1:T6 Arg2:T4
+R7	FEATURE-OF Arg1:T7 Arg2:T8
+R8	COREF Arg1:T8 Arg2:T9
+R9	USED-FOR Arg1:T11 Arg2:T10
+R10	COREF Arg1:T9 Arg2:T10
+R11	USED-FOR Arg1:T10 Arg2:T12
+R12	USED-FOR Arg1:T13 Arg2:T12
+R13	USED-FOR Arg1:T15 Arg2:T14
+R14	USED-FOR Arg1:T18 Arg2:T19
+R15	USED-FOR Arg1:T20 Arg2:T18
+R16	COREF Arg1:T9 Arg2:T17
+R17	USED-FOR Arg1:T16 Arg2:T14
+R18	COREF Arg1:T19 Arg2:T17

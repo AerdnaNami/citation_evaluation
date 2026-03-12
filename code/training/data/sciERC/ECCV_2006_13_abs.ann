@@ -1,0 +1,63 @@
+T1	Task 50 62	illumination
+T2	Task 67 82	pose invariance
+T3	Task 127 143	face recognition
+T4	Material 232 247	video sequences
+T5	OtherScientificTerm 334 342	lighting
+T6	OtherScientificTerm 344 348	pose
+T7	OtherScientificTerm 353 372	user motion pattern
+T8	Material 401 412	face images
+T9	Metric 424 434	resolution
+T10	Method 502 519	photometric model
+T11	Task 523 538	image formation
+T12	Method 562 579	statistical model
+T13	Task 583 616	generic face appearance variation
+T14	OtherScientificTerm 667 695	extreme illumination changes
+T15	OtherScientificTerm 713 723	smoothness
+T16	OtherScientificTerm 727 775	geodesically local appearance manifold structure
+T17	Method 782 813	robust same-identity likelihood
+T18	OtherScientificTerm 839 856	unseen head poses
+T19	Method 893 936	video sequence " reillumination " algorithm
+T20	Metric 948 958	robustness
+T21	OtherScientificTerm 962 982	face motion patterns
+T22	Material 986 991	video
+T23	Method 1007 1041	fully automatic recognition system
+T24	Generic 1064 1070	method
+T25	Material 1132 1147	video sequences
+T26	OtherScientificTerm 1161 1173	illumination
+T27	OtherScientificTerm 1175 1179	pose
+T28	OtherScientificTerm 1184 1205	head motion variation
+T29	Generic 1227 1235	data set
+T30	Generic 1240 1246	system
+T31	Metric 1290 1306	recognition rate
+T32	Material 1332 1341	databases
+T33	Method 1390 1409	commercial software
+T34	Generic 1414 1421	methods
+R1	CONJUNCTION Arg1:T1 Arg2:T2
+R2	PART-OF Arg1:T2 Arg2:T3
+R3	PART-OF Arg1:T1 Arg2:T3
+R4	FEATURE-OF Arg1:T9 Arg2:T8
+R5	CONJUNCTION Arg1:T6 Arg2:T7
+R6	CONJUNCTION Arg1:T5 Arg2:T6
+R7	USED-FOR Arg1:T12 Arg2:T13
+R8	USED-FOR Arg1:T10 Arg2:T11
+R9	CONJUNCTION Arg1:T16 Arg2:T17
+R10	FEATURE-OF Arg1:T15 Arg2:T16
+R11	CONJUNCTION Arg1:T26 Arg2:T27
+R12	CONJUNCTION Arg1:T27 Arg2:T28
+R13	USED-FOR Arg1:T24 Arg2:T23
+R14	USED-FOR Arg1:T12 Arg2:T14
+R15	CONJUNCTION Arg1:T10 Arg2:T12
+R16	FEATURE-OF Arg1:T26 Arg2:T25
+R17	FEATURE-OF Arg1:T27 Arg2:T25
+R18	FEATURE-OF Arg1:T28 Arg2:T25
+R19	EVALUATE-FOR Arg1:T25 Arg2:T23
+R20	COREF Arg1:T23 Arg2:T30
+R21	COREF Arg1:T25 Arg2:T29
+R22	EVALUATE-FOR Arg1:T29 Arg2:T30
+R23	EVALUATE-FOR Arg1:T31 Arg2:T30
+R24	COMPARE Arg1:T30 Arg2:T33
+R25	COMPARE Arg1:T30 Arg2:T34
+R26	CONJUNCTION Arg1:T33 Arg2:T34
+R27	PART-OF Arg1:T21 Arg2:T22
+R28	FEATURE-OF Arg1:T21 Arg2:T20
+R29	EVALUATE-FOR Arg1:T20 Arg2:T19

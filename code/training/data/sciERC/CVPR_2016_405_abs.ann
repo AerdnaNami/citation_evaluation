@@ -1,0 +1,55 @@
+T1	Material 30 43	animated GIFs
+T2	Material 47 59	social media
+T3	Material 103 117	rich meta-data
+T4	Task 142 168	animated GIF understanding
+T5	Generic 189 196	dataset
+T6	Material 198 215	Tumblr GIF (TGIF)
+T7	Material 227 240	animated GIFs
+T8	Material 262 291	natural language descriptions
+T9	Method 305 318	crowdsourcing
+T10	Task 377 411	image sequence description systems
+T11	Material 443 472	natural language descriptions
+T12	Material 477 490	animated GIFs
+T13	Material 494 505	video clips
+T14	Method 572 588	quality controls
+T15	Material 601 621	free-form text input
+T16	Material 696 710	visual content
+T17	Material 715 744	natural language descriptions
+T18	Generic 752 759	dataset
+T19	Generic 768 770	it
+T20	Task 798 828	visual content captioning task
+T21	OtherScientificTerm 851 871	statistical analyses
+T22	Generic 887 894	dataset
+T23	Material 907 943	image and video description datasets
+T24	Task 986 1015	animated GIF description task
+T25	Generic 1029 1054	representative techniques
+T26	Method 1056 1072	nearest neighbor
+T27	Method 1074 1105	statistical machine translation
+T28	Method 1112 1137	recurrent neural networks
+T29	Material 1188 1220	animated GIF description dataset
+T30	Task 1240 1267	automatic movie description
+R1	COREF Arg1:T6 Arg2:T5
+R2	USED-FOR Arg1:T11 Arg2:T12
+R3	USED-FOR Arg1:T11 Arg2:T13
+R4	PART-OF Arg1:T17 Arg2:T18
+R5	PART-OF Arg1:T16 Arg2:T18
+R6	COREF Arg1:T18 Arg2:T5
+R7	COREF Arg1:T22 Arg2:T18
+R8	COREF Arg1:T29 Arg2:T22
+R9	FEATURE-OF Arg1:T2 Arg2:T1
+R10	USED-FOR Arg1:T9 Arg2:T8
+R11	CONJUNCTION Arg1:T8 Arg2:T7
+R12	USED-FOR Arg1:T5 Arg2:T4
+R13	CONJUNCTION Arg1:T12 Arg2:T13
+R14	CONJUNCTION Arg1:T16 Arg2:T17
+R15	COREF Arg1:T18 Arg2:T19
+R16	EVALUATE-FOR Arg1:T19 Arg2:T20
+R17	COMPARE Arg1:T22 Arg2:T23
+R18	CONJUNCTION Arg1:T26 Arg2:T27
+R19	CONJUNCTION Arg1:T27 Arg2:T28
+R20	HYPONYM-OF Arg1:T26 Arg2:T25
+R21	HYPONYM-OF Arg1:T27 Arg2:T25
+R22	HYPONYM-OF Arg1:T28 Arg2:T25
+R23	USED-FOR Arg1:T25 Arg2:T24
+R24	USED-FOR Arg1:T29 Arg2:T30
+R25	USED-FOR Arg1:T14 Arg2:T15

@@ -1,0 +1,40 @@
+T1	Method 14 48	image set classification algorithm
+T2	Method 58 81	unsupervised clustering
+T3	Material 85 126	labeled training and unla-beled test data
+T4	OtherScientificTerm 161 179	stopping criterion
+T5	OtherScientificTerm 185 209	probability distribution
+T6	OtherScientificTerm 240 248	clusters
+T7	Metric 274 302	set based similarity measure
+T8	Method 331 377	iterative sparse spectral clustering algorithm
+T9	OtherScientificTerm 400 416	proximity matrix
+T10	OtherScientificTerm 467 491	local subspace structure
+T11	OtherScientificTerm 493 509	Initial clusters
+T12	OtherScientificTerm 522 543	global data structure
+T13	OtherScientificTerm 548 562	finer clusters
+T14	OtherScientificTerm 595 619	subtle class differences
+T15	OtherScientificTerm 639 651	global scale
+T16	Material 653 663	Image sets
+T17	Method 704 727	Grass-mannian manifolds
+T18	OtherScientificTerm 763 778	Euclidean space
+T19	Method 797 826	spectral clustering algorithm
+T20	Method 857 875	eigenvector solver
+T21	Metric 903 921	computational cost
+T22	Method 925 944	spectral clustering
+T23	Metric 981 999	clustering quality
+T24	Metric 1010 1032	classification results
+T25	Material 1063 1071	datasets
+T26	Generic 1143 1152	algorithm
+R1	USED-FOR Arg1:T5 Arg2:T7
+R2	USED-FOR Arg1:T9 Arg2:T10
+R3	USED-FOR Arg1:T11 Arg2:T12
+R4	USED-FOR Arg1:T13 Arg2:T14
+R5	USED-FOR Arg1:T17 Arg2:T16
+R6	USED-FOR Arg1:T19 Arg2:T18
+R7	EVALUATE-FOR Arg1:T21 Arg2:T22
+R8	EVALUATE-FOR Arg1:T23 Arg2:T22
+R9	USED-FOR Arg1:T20 Arg2:T22
+R10	COREF Arg1:T26 Arg2:T1
+R11	COREF Arg1:T19 Arg2:T8
+R12	USED-FOR Arg1:T2 Arg2:T1
+R13	USED-FOR Arg1:T3 Arg2:T2
+R14	EVALUATE-FOR Arg1:T24 Arg2:T22

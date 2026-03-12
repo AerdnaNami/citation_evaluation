@@ -1,0 +1,40 @@
+T1	Task 9 40	natural language interpretation
+T2	Method 59 81	semantic domain models
+T3	Method 85 114	fail-soft recovery heuristics
+T4	OtherScientificTerm 136 154	control structures
+T5	Method 167 190	single-strategy parsers
+T6	Method 231 254	multi-strategy approach
+T7	OtherScientificTerm 347 377	task-specific domain knowledge
+T8	OtherScientificTerm 396 424	general linguistic knowledge
+T9	OtherScientificTerm 444 479	grammatical and ungrammatical input
+T10	Method 485 502	parsing algorithm
+T11	Method 552 570	parsing strategies
+T12	OtherScientificTerm 579 603	case-frame instantiation
+T13	Method 632 650	parsing strategies
+T14	OtherScientificTerm 764 776	conjunctions
+T15	OtherScientificTerm 780 797	fragmentary input
+T16	OtherScientificTerm 805 829	ungrammatical structures
+T17	OtherScientificTerm 848 884	exotic,  grammatically correct input
+T18	Method 896 915	specific heuristics
+T19	OtherScientificTerm 931 950	ungrammatical input
+T20	Method 979 1003	multi-strategy framework
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	CONJUNCTION Arg1:T7 Arg2:T8
+R3	PART-OF Arg1:T11 Arg2:T10
+R4	PART-OF Arg1:T18 Arg2:T20
+R5	COREF Arg1:T11 Arg2:T13
+R6	USED-FOR Arg1:T18 Arg2:T19
+R7	USED-FOR Arg1:T3 Arg2:T1
+R8	USED-FOR Arg1:T4 Arg2:T1
+R9	CONJUNCTION Arg1:T3 Arg2:T4
+R10	CONJUNCTION Arg1:T2 Arg2:T3
+R11	COMPARE Arg1:T5 Arg2:T6
+R12	HYPONYM-OF Arg1:T12 Arg2:T11
+R13	USED-FOR Arg1:T13 Arg2:T14
+R14	USED-FOR Arg1:T13 Arg2:T15
+R15	USED-FOR Arg1:T13 Arg2:T16
+R16	USED-FOR Arg1:T13 Arg2:T17
+R17	CONJUNCTION Arg1:T14 Arg2:T15
+R18	CONJUNCTION Arg1:T15 Arg2:T16
+R19	CONJUNCTION Arg1:T16 Arg2:T17
+R20	COREF Arg1:T6 Arg2:T20

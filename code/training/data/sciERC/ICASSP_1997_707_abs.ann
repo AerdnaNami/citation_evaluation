@@ -1,0 +1,15 @@
+T1	OtherScientificTerm 0 30	Nonstationary chaotic behavior
+T2	OtherScientificTerm 41 49	oxymoron
+T3	Generic 66 73	methods
+T4	OtherScientificTerm 88 107	nonstationary chaos
+T5	Generic 128 136	examples
+T6	Material 147 165	biological signals
+T7	Material 167 178	ocean waves
+T8	Material 183 195	traffic flow
+T9	OtherScientificTerm 275 295	nonstationary events
+R1	USED-FOR Arg1:T3 Arg2:T4
+R2	HYPONYM-OF Arg1:T6 Arg2:T5
+R3	HYPONYM-OF Arg1:T7 Arg2:T5
+R4	HYPONYM-OF Arg1:T8 Arg2:T5
+R5	CONJUNCTION Arg1:T6 Arg2:T7
+R6	CONJUNCTION Arg1:T7 Arg2:T8

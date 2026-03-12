@@ -1,0 +1,30 @@
+T1	Task 2 29	Topical blog post retrieval
+T2	Task 46 65	ranking  blog posts
+T3	Material 55 65	blog posts
+T4	Metric 90 99	relevance
+T5	Task 134 161	topical blog post retrieval
+T6	OtherScientificTerm 179 209	textual credibility indicators
+T7	Method 219 236	retrieval process
+T8	Generic 266 276	indicators
+T9	Material 338 348	blog posts
+T10	Material 422 427	blogs
+T11	Generic 466 476	indicators
+T12	Generic 499 503	them
+T13	Method 512 530	retrieval approach
+T14	Method 542 557	language models
+T15	Material 580 604	TREC Blog track test set
+T16	OtherScientificTerm 632 654	credibility indicators
+T17	Metric 679 702	retrieval effectiveness
+R1	FEATURE-OF Arg1:T4 Arg2:T3
+R2	USED-FOR Arg1:T6 Arg2:T5
+R3	HYPONYM-OF Arg1:T1 Arg2:T2
+R4	COREF Arg1:T1 Arg2:T5
+R5	PART-OF Arg1:T6 Arg2:T7
+R6	COREF Arg1:T6 Arg2:T8
+R7	COREF Arg1:T8 Arg2:T11
+R8	COREF Arg1:T11 Arg2:T12
+R9	PART-OF Arg1:T12 Arg2:T13
+R10	USED-FOR Arg1:T14 Arg2:T12
+R11	COREF Arg1:T11 Arg2:T16
+R12	EVALUATE-FOR Arg1:T17 Arg2:T16
+R13	EVALUATE-FOR Arg1:T15 Arg2:T16

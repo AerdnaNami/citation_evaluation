@@ -1,0 +1,21 @@
+T1	Task 1 35	Reducing  language model (LM) size
+T2	Method 74 76	LM
+T3	OtherScientificTerm 115 134	memory constraints.
+T4	Task 197 207	LM pruning
+T5	OtherScientificTerm 233 237	rank
+T6	OtherScientificTerm 245 252	entropy
+T7	OtherScientificTerm 298 314	pruning criteria
+T8	Material 342 360	Chinese text input
+T9	Metric 375 401	character error rate (CER)
+T10	OtherScientificTerm 460 464	rank
+T11	OtherScientificTerm 542 546	rank
+T12	Metric 585 595	error rate
+T13	Generic 622 628	method
+T14	Task 659 672	model pruning
+T15	Metric 843 846	CER
+R1	CONJUNCTION Arg1:T5 Arg2:T6
+R2	USED-FOR Arg1:T7 Arg2:T8
+R3	EVALUATE-FOR Arg1:T9 Arg2:T7
+R4	EVALUATE-FOR Arg1:T12 Arg2:T11
+R5	COREF Arg1:T15 Arg2:T9
+R6	USED-FOR Arg1:T13 Arg2:T14

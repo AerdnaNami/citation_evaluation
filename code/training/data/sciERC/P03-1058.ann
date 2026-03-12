@@ -1,0 +1,28 @@
+T1	Task 24 55	word sense disambiguation (WSD)
+T2	Material 73 99	manually sense-tagged data
+T3	Method 115 134	supervised learning
+T4	Generic 168 176	approach
+T5	Material 203 229	sense-tagged training data
+T6	Material 237 269	English-Chinese parallel corpora
+T7	OtherScientificTerm 317 322	nouns
+T8	Material 332 370	SENSEVAL-2 English lexical sample task
+T9	Generic 411 417	method
+T10	Task 421 448	acquiring sense-tagged data
+T11	OtherScientificTerm 499 515	SENSEVAL-2 nouns
+T12	Metric 524 532	accuracy
+T13	Material 671 697	manually sense-tagged data
+T14	Metric 714 728	sense coverage
+T15	OtherScientificTerm 793 810	domain dependence
+T16	Task 815 839	evaluating  WSD programs
+T17	Task 827 839	WSD programs
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T6 Arg2:T5
+R3	USED-FOR Arg1:T4 Arg2:T5
+R4	USED-FOR Arg1:T4 Arg2:T7
+R5	PART-OF Arg1:T7 Arg2:T8
+R6	COREF Arg1:T1 Arg2:T17
+R7	FEATURE-OF Arg1:T15 Arg2:T16
+R8	FEATURE-OF Arg1:T14 Arg2:T13
+R9	USED-FOR Arg1:T9 Arg2:T10
+R10	COREF Arg1:T4 Arg2:T9
+R11	COREF Arg1:T2 Arg2:T13

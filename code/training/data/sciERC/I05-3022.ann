@@ -1,0 +1,44 @@
+T1	Method 24 48	word segmentation system
+T2	Generic 102 110	approach
+T3	Task 115 128	word breaking
+T4	Task 135 153	OOV identification
+T5	Generic 297 303	system
+T6	OtherScientificTerm 344 364	segmentation bakeoff
+T7	OtherScientificTerm 370 377	PK-open
+T8	OtherScientificTerm 381 390	PK-closed
+T9	OtherScientificTerm 394 401	AS-open
+T10	OtherScientificTerm 405 414	AS-closed
+T11	OtherScientificTerm 418 425	HK-open
+T12	OtherScientificTerm 429 438	HK-closed
+T13	OtherScientificTerm 442 450	MSR-open
+T14	OtherScientificTerm 457 468	MSR- closed
+T15	OtherScientificTerm 525 533	MSR-open
+T16	OtherScientificTerm 537 546	MSR-close
+T17	OtherScientificTerm 553 560	PK-open
+T18	Generic 627 633	system
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	CONJUNCTION Arg1:T3 Arg2:T4
+R3	COREF Arg1:T5 Arg2:T1
+R4	HYPONYM-OF Arg1:T7 Arg2:T6
+R5	HYPONYM-OF Arg1:T8 Arg2:T6
+R6	HYPONYM-OF Arg1:T9 Arg2:T6
+R7	HYPONYM-OF Arg1:T10 Arg2:T6
+R8	HYPONYM-OF Arg1:T11 Arg2:T6
+R9	COREF Arg1:T16 Arg2:T14
+R10	COREF Arg1:T17 Arg2:T7
+R11	COREF Arg1:T18 Arg2:T5
+R12	CONJUNCTION Arg1:T7 Arg2:T8
+R13	CONJUNCTION Arg1:T8 Arg2:T9
+R14	CONJUNCTION Arg1:T9 Arg2:T10
+R15	CONJUNCTION Arg1:T10 Arg2:T11
+R16	CONJUNCTION Arg1:T11 Arg2:T12
+R17	CONJUNCTION Arg1:T12 Arg2:T13
+R18	CONJUNCTION Arg1:T13 Arg2:T14
+R19	USED-FOR Arg1:T2 Arg2:T3
+R20	USED-FOR Arg1:T2 Arg2:T4
+R21	HYPONYM-OF Arg1:T12 Arg2:T6
+R22	HYPONYM-OF Arg1:T13 Arg2:T6
+R23	HYPONYM-OF Arg1:T14 Arg2:T6
+R24	COREF Arg1:T13 Arg2:T15
+R25	CONJUNCTION Arg1:T15 Arg2:T16
+R26	CONJUNCTION Arg1:T16 Arg2:T17

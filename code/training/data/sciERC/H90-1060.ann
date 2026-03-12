@@ -1,0 +1,23 @@
+T1	Task 47 93	large vocabulary continuous speech recognition
+T2	Task 135 200	speaker-independent (SI) training  of  hidden Markov models (HMM)
+T3	Material 234 240	speech
+T4	OtherScientificTerm 413 472	averaging the  statistics  of  independently trained models
+T5	OtherScientificTerm 496 527	pooling of all the  speech data
+T6	Task 610 624	SI recognition
+T7	Metric 648 663	word error rate
+T8	Material 714 746	DARPA Resource Management corpus
+T9	Task 905 928	speaker adaptation (SA)
+T10	Material 945 954	SI corpus
+T11	Method 1024 1054	probabilistic spectral mapping
+T12	Method 1156 1171	reference model
+T13	Task 1315 1325	adaptation
+T14	Metric 1334 1344	error rate
+T15	Task 1408 1410	SI
+R1	EVALUATE-FOR Arg1:T10 Arg2:T9
+R2	EVALUATE-FOR Arg1:T7 Arg2:T6
+R3	EVALUATE-FOR Arg1:T8 Arg2:T6
+R4	COREF Arg1:T13 Arg2:T9
+R5	COREF Arg1:T15 Arg2:T6
+R6	COMPARE Arg1:T4 Arg2:T5
+R7	EVALUATE-FOR Arg1:T14 Arg2:T13
+R8	USED-FOR Arg1:T3 Arg2:T2

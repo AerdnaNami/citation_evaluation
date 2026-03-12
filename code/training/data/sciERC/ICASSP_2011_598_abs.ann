@@ -1,0 +1,65 @@
+T1	Metric 41 59	measures of speech
+T2	Task 76 102	intelligibility prediction
+T3	Material 106 124	synthesized speech
+T4	OtherScientificTerm 128 152	diverse noisy situations
+T5	Metric 173 198	intel-ligibility measures
+T6	Metric 204 215	Dau measure
+T7	Metric 221 239	glimpse proportion
+T8	Metric 248 282	Speech Intelligibility Index (SII)
+T9	Metric 289 304	quality measure
+T10	Metric 311 357	Perceptual Evaluation of Speech Quality (PESQ)
+T11	Task 367 399	generation of synthesized speech
+T12	Method 427 460	HMM-based speech synthesis system
+T13	OtherScientificTerm 466 482	noisy conditions
+T14	OtherScientificTerm 498 513	additive noises
+T15	Generic 519 527	measures
+T16	Metric 547 580	subjective intelligibility scores
+T17	Metric 631 634	Dau
+T18	Metric 643 659	glimpse measures
+T19	Method 675 704	predictors of intelligibility
+T20	Metric 711 723	correlations
+T21	OtherScientificTerm 742 759	subjective scores
+T22	Generic 765 773	measures
+T23	Task 793 823	predictions of intelligibility
+T24	Material 828 844	synthetic speech
+T25	Material 881 895	natural speech
+T26	Metric 915 926	SII measure
+T27	Material 972 990	synthesized speech
+T28	Method 997 1014	ideal binary mask
+T29	Metric 1040 1055	Glimpse measure
+T30	Task 1079 1106	intelligibility predictions
+R1	HYPONYM-OF Arg1:T10 Arg2:T9
+R2	CONJUNCTION Arg1:T6 Arg2:T7
+R3	CONJUNCTION Arg1:T7 Arg2:T8
+R4	HYPONYM-OF Arg1:T6 Arg2:T5
+R5	HYPONYM-OF Arg1:T7 Arg2:T5
+R6	HYPONYM-OF Arg1:T8 Arg2:T5
+R7	USED-FOR Arg1:T12 Arg2:T11
+R8	PART-OF Arg1:T14 Arg2:T13
+R9	HYPONYM-OF Arg1:T5 Arg2:T1
+R10	HYPONYM-OF Arg1:T9 Arg2:T1
+R11	COREF Arg1:T1 Arg2:T15
+R12	COMPARE Arg1:T15 Arg2:T16
+R13	COREF Arg1:T6 Arg2:T17
+R14	COREF Arg1:T7 Arg2:T18
+R15	CONJUNCTION Arg1:T17 Arg2:T18
+R16	COREF Arg1:T15 Arg2:T22
+R17	USED-FOR Arg1:T24 Arg2:T23
+R18	COREF Arg1:T2 Arg2:T23
+R19	COMPARE Arg1:T24 Arg2:T25
+R20	HYPONYM-OF Arg1:T26 Arg2:T22
+R21	EVALUATE-FOR Arg1:T22 Arg2:T23
+R22	USED-FOR Arg1:T29 Arg2:T30
+R23	COREF Arg1:T23 Arg2:T30
+R24	USED-FOR Arg1:T28 Arg2:T27
+R25	COREF Arg1:T29 Arg2:T18
+R26	USED-FOR Arg1:T3 Arg2:T2
+R27	EVALUATE-FOR Arg1:T1 Arg2:T2
+R28	FEATURE-OF Arg1:T4 Arg2:T3
+R29	EVALUATE-FOR Arg1:T20 Arg2:T18
+R30	EVALUATE-FOR Arg1:T20 Arg2:T17
+R31	HYPONYM-OF Arg1:T18 Arg2:T19
+R32	HYPONYM-OF Arg1:T17 Arg2:T19
+R33	COMPARE Arg1:T18 Arg2:T21
+R34	COMPARE Arg1:T17 Arg2:T21
+R35	CONJUNCTION Arg1:T5 Arg2:T9

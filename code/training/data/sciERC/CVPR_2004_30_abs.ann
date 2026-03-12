@@ -1,0 +1,32 @@
+T1	Task 0 19	Background modeling
+T2	Task 54 68	vision systems
+T3	OtherScientificTerm 140 173	static or quasi-static structures
+T4	Generic 184 189	scene
+T5	OtherScientificTerm 201 228	persistent dynamic behavior
+T6	Task 273 282	detection
+T7	Generic 341 347	method
+T8	Task 356 395	modeling and subtraction of such scenes
+T9	Generic 389 395	scenes
+T10	Task 409 448	modeling of the dynamic characteristics
+T11	OtherScientificTerm 450 462	optical flow
+T12	OtherScientificTerm 493 500	feature
+T13	OtherScientificTerm 506 530	higher dimensional space
+T14	OtherScientificTerm 541 552	ambiguities
+T15	Task 560 583	computation of features
+T16	OtherScientificTerm 609 633	data-dependent bandwidth
+T17	Task 638 656	density estimation
+T18	Method 663 670	kernels
+T19	Generic 750 758	approach
+R1	PART-OF Arg1:T1 Arg2:T2
+R2	COREF Arg1:T4 Arg2:T9
+R3	FEATURE-OF Arg1:T5 Arg2:T4
+R4	USED-FOR Arg1:T7 Arg2:T8
+R5	USED-FOR Arg1:T11 Arg2:T12
+R6	USED-FOR Arg1:T11 Arg2:T10
+R7	USED-FOR Arg1:T12 Arg2:T10
+R8	FEATURE-OF Arg1:T13 Arg2:T12
+R9	USED-FOR Arg1:T16 Arg2:T17
+R10	FEATURE-OF Arg1:T14 Arg2:T15
+R11	COREF Arg1:T7 Arg2:T19
+R12	USED-FOR Arg1:T16 Arg2:T14
+R13	USED-FOR Arg1:T18 Arg2:T17

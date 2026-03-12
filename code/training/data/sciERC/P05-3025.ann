@@ -1,0 +1,19 @@
+T1	Generic 26 32	method
+T2	Task 37 105	interactively visualizing and directing the process  of  translating
+T3	Generic 124 130	method
+T4	Generic 161 166	model
+T5	Task 172 221	syntax-based statistical machine translation (MT)
+T6	Generic 244 249	model
+T7	Generic 295 297	it
+T8	Method 308 318	MT systems
+T9	Method 334 354	visualization method
+T10	Method 423 432	MT system
+T11	Method 506 526	syntax-based decoder
+R1	USED-FOR Arg1:T9 Arg2:T10
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	COREF Arg1:T3 Arg2:T1
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	USED-FOR Arg1:T3 Arg2:T4
+R6	COREF Arg1:T6 Arg2:T7
+R7	COMPARE Arg1:T7 Arg2:T8
+R8	COREF Arg1:T4 Arg2:T6

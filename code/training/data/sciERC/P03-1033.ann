@@ -1,0 +1,28 @@
+T1	Method 25 38	user modeling
+T2	OtherScientificTerm 62 83	cooperative responses
+T3	Task 104 127	spoken dialogue systems
+T4	Generic 147 154	studies
+T5	Method 226 236	user model
+T6	Method 317 328	user models
+T7	Generic 449 455	models
+T8	Method 487 509	decision tree learning
+T9	Material 517 536	real  dialogue data
+T10	Generic 555 561	system
+T11	Metric 587 610	classification accuracy
+T12	Method 633 652	Dialogue strategies
+T13	Method 668 681	user modeling
+T14	Method 703 736	Kyoto city bus information system
+T15	OtherScientificTerm 821 842	cooperative responses
+T16	OtherScientificTerm 941 958	dialogue duration
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T8 Arg2:T7
+R3	USED-FOR Arg1:T13 Arg2:T12
+R4	PART-OF Arg1:T1 Arg2:T3
+R5	COREF Arg1:T5 Arg2:T1
+R6	COREF Arg1:T5 Arg2:T6
+R7	COREF Arg1:T6 Arg2:T7
+R8	USED-FOR Arg1:T12 Arg2:T14
+R9	USED-FOR Arg1:T9 Arg2:T8
+R10	COREF Arg1:T7 Arg2:T13
+R11	COMPARE Arg1:T4 Arg2:T5
+R12	USED-FOR Arg1:T10 Arg2:T9

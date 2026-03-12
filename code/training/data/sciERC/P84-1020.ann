@@ -1,0 +1,16 @@
+T1	Method 30 53	natural language system
+T2	OtherScientificTerm 82 101	ungrammatical input
+T3	Generic 159 161	it
+T4	Task 166 205	computer aided second language learning
+T5	Generic 218 222	this
+T6	Generic 275 281	system
+T7	Generic 321 323	it
+T8	Generic 446 448	it
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T1 Arg2:T3
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	COREF Arg1:T1 Arg2:T6
+R5	COREF Arg1:T4 Arg2:T5
+R6	USED-FOR Arg1:T6 Arg2:T5
+R7	COREF Arg1:T6 Arg2:T7
+R8	COREF Arg1:T7 Arg2:T8

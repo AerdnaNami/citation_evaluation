@@ -1,0 +1,18 @@
+T1	Generic 24 32	approach
+T2	Task 37 49	full parsing
+T3	Task 65 87	Information Extraction
+T4	OtherScientificTerm 129 134	rules
+T5	OtherScientificTerm 184 206	unambiguous structures
+T6	OtherScientificTerm 254 274	argumental relations
+T7	OtherScientificTerm 301 320	modifier attachment
+T8	OtherScientificTerm 344 361	global parse tree
+T9	Generic 377 385	approach
+T10	Generic 452 454	It
+T11	Method 479 488	IE module
+T12	Method 494 558	FACILE, a EU project for multilingual text classification and IE
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	PART-OF Arg1:T11 Arg2:T12
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T10 Arg2:T9
+R5	USED-FOR Arg1:T10 Arg2:T11
+R6	COREF Arg1:T9 Arg2:T1

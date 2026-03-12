@@ -1,0 +1,25 @@
+T1	Material 13 25	Chinese text
+T2	Task 109 141	machine translation (MT) systems
+T3	Task 148 150	MT
+T4	Method 193 215	Chinese word segmenter
+T5	Material 231 254	manually annotated data
+T6	Method 288 305	word segmentation
+T7	Task 339 350	translation
+T8	Method 367 423	Bayesian semi-supervised Chinese word segmentation model
+T9	OtherScientificTerm 442 479	monolingual and bilingual information
+T10	Task 494 506	segmentation
+T11	Task 522 524	MT
+T12	Generic 553 559	method
+T13	Method 589 598	MT system
+R1	USED-FOR Arg1:T4 Arg2:T3
+R2	USED-FOR Arg1:T9 Arg2:T8
+R3	USED-FOR Arg1:T10 Arg2:T11
+R4	COREF Arg1:T3 Arg2:T2
+R5	USED-FOR Arg1:T5 Arg2:T4
+R6	COREF Arg1:T6 Arg2:T4
+R7	USED-FOR Arg1:T6 Arg2:T7
+R8	COREF Arg1:T7 Arg2:T3
+R9	USED-FOR Arg1:T8 Arg2:T10
+R10	COREF Arg1:T12 Arg2:T8
+R11	COMPARE Arg1:T12 Arg2:T13
+R12	COREF Arg1:T11 Arg2:T7

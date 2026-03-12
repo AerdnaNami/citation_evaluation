@@ -1,0 +1,51 @@
+T1	Method 0 15	Factor analysis
+T2	Method 20 49	principal components analysis
+T3	OtherScientificTerm 71 118	linear relationships between observed variables
+T4	Material 136 157	high-dimensional data
+T5	OtherScientificTerm 163 193	lower-dimensional hidden space
+T6	Method 198 213	factor analysis
+T7	Method 249 308	linear combination of normally distributed hidden variables
+T8	Method 324 367	nonlinear generalization of factor analysis
+T9	Method 352 367	factor analysis
+T10	Method 377 396	"product analy-sis"
+T11	OtherScientificTerm 414 432	observed variables
+T12	OtherScientificTerm 438 509	linear combination of products of normally distributed hidden variables
+T13	Method 519 534	factor analysis
+T14	Method 552 582	unsupervised linear regression
+T15	OtherScientificTerm 607 635	distributed hidden variables
+T16	Method 637 653	product analysis
+T17	Method 671 701	unsupervised linear regression
+T18	OtherScientificTerm 738 766	distributed hidden variables
+T19	OtherScientificTerm 805 817	hidden space
+T20	Method 845 878	approximate variational technique
+T21	Task 883 892	inference
+T22	Task 897 905	learning
+T23	Method 913 929	product analysis
+T24	Method 935 968	generalization of factor analysis
+T25	Method 953 968	factor analysis
+T26	Method 970 986	product analysis
+T27	Method 1030 1045	factor analysis
+T28	Task 1066 1085	pattern recognition
+T29	Task 1090 1129	illumination-invariant image clustering
+R1	COREF Arg1:T6 Arg2:T1
+R2	CONJUNCTION Arg1:T1 Arg2:T2
+R3	USED-FOR Arg1:T2 Arg2:T3
+R4	USED-FOR Arg1:T1 Arg2:T3
+R5	COREF Arg1:T9 Arg2:T6
+R6	HYPONYM-OF Arg1:T10 Arg2:T8
+R7	USED-FOR Arg1:T8 Arg2:T11
+R8	USED-FOR Arg1:T12 Arg2:T8
+R9	COREF Arg1:T13 Arg2:T6
+R10	USED-FOR Arg1:T14 Arg2:T13
+R11	USED-FOR Arg1:T17 Arg2:T16
+R12	USED-FOR Arg1:T20 Arg2:T21
+R13	CONJUNCTION Arg1:T21 Arg2:T22
+R14	USED-FOR Arg1:T20 Arg2:T22
+R15	COREF Arg1:T23 Arg2:T16
+R16	COREF Arg1:T16 Arg2:T10
+R17	COREF Arg1:T26 Arg2:T23
+R18	HYPONYM-OF Arg1:T23 Arg2:T24
+R19	COREF Arg1:T25 Arg2:T27
+R20	COMPARE Arg1:T26 Arg2:T27
+R21	COREF Arg1:T25 Arg2:T13
+R22	CONJUNCTION Arg1:T28 Arg2:T29

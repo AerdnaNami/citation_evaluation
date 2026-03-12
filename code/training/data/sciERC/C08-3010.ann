@@ -1,0 +1,20 @@
+T1	Method 36 47	search tool
+T2	OtherScientificTerm 68 74	ngrams
+T3	Generic 81 85	tool
+T4	Generic 146 148	It
+T5	Generic 246 252	system
+T6	OtherScientificTerm 301 307	memory
+T7	OtherScientificTerm 330 340	disk space
+T8	Generic 366 372	system
+T9	Generic 394 398	tool
+T10	Task 404 434	linguistic knowledge discovery
+T11	Task 447 456	NLP tasks
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T1
+R3	COREF Arg1:T8 Arg2:T5
+R4	COREF Arg1:T9 Arg2:T8
+R5	USED-FOR Arg1:T9 Arg2:T10
+R6	USED-FOR Arg1:T9 Arg2:T11
+R7	CONJUNCTION Arg1:T10 Arg2:T11
+R8	COREF Arg1:T4 Arg2:T3
+R9	COREF Arg1:T5 Arg2:T4

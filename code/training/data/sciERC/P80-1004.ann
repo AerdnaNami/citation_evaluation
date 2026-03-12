@@ -1,0 +1,29 @@
+T1	Task 3 26	Interpreting  metaphors
+T2	Task 71 110	human understanding of natural language
+T3	Generic 138 144	method
+T4	Task 148 167	analyzing metaphors
+T5	Method 214 243	generalized metaphor mappings
+T6	OtherScientificTerm 253 273	generalized metaphor
+T7	Method 287 306	recognition network
+T8	Method 313 326	basic mapping
+T9	Method 342 359	transfer mappings
+T10	Method 371 399	implicit intention component
+T11	Generic 425 431	method
+T12	Task 441 464	metaphor interpretation
+T13	Task 474 488	reconstruction
+T14	Task 496 512	recognition task
+T15	Task 568 585	language learning
+R1	PART-OF Arg1:T7 Arg2:T6
+R2	HYPONYM-OF Arg1:T1 Arg2:T2
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	USED-FOR Arg1:T5 Arg2:T4
+R5	CONJUNCTION Arg1:T9 Arg2:T10
+R6	CONJUNCTION Arg1:T9 Arg2:T8
+R7	CONJUNCTION Arg1:T7 Arg2:T8
+R8	PART-OF Arg1:T8 Arg2:T6
+R9	PART-OF Arg1:T9 Arg2:T6
+R10	PART-OF Arg1:T10 Arg2:T6
+R11	COREF Arg1:T3 Arg2:T11
+R12	USED-FOR Arg1:T14 Arg2:T12
+R13	USED-FOR Arg1:T11 Arg2:T12
+R14	COREF Arg1:T12 Arg2:T1

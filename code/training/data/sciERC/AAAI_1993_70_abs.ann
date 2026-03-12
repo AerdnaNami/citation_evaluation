@@ -1,0 +1,32 @@
+T1	Method 4 29	Rete and Treat algorithms
+T2	Method 64 89	implementation techniques
+T3	Task 94 123	Forward Chaining rule systems
+T4	Generic 131 141	algorithms
+T5	Method 152 188	language of limited expressive power
+T6	OtherScientificTerm 190 200	Assertions
+T7	OtherScientificTerm 228 237	variables
+T8	OtherScientificTerm 246 270	universal quantification
+T9	OtherScientificTerm 305 309	rule
+T10	Task 348 364	full unification
+T11	Generic 374 384	algorithms
+T12	Task 416 432	full unification
+T13	Task 444 460	Full unification
+T14	Metric 502 514	compile time
+T15	Metric 519 527	run time
+T16	Task 554 570	full unification
+T17	Task 638 654	full unification
+T18	Generic 703 705	it
+R1	HYPONYM-OF Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T1 Arg2:T3
+R3	COREF Arg1:T4 Arg2:T1
+R4	COREF Arg1:T11 Arg2:T4
+R5	USED-FOR Arg1:T11 Arg2:T10
+R6	COREF Arg1:T17 Arg2:T16
+R7	COREF Arg1:T16 Arg2:T13
+R8	COREF Arg1:T13 Arg2:T12
+R9	COREF Arg1:T18 Arg2:T17
+R10	COREF Arg1:T12 Arg2:T10
+R11	USED-FOR Arg1:T4 Arg2:T5
+R12	CONJUNCTION Arg1:T14 Arg2:T15
+R13	EVALUATE-FOR Arg1:T15 Arg2:T16
+R14	EVALUATE-FOR Arg1:T14 Arg2:T16

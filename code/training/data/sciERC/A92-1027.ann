@@ -1,0 +1,29 @@
+T1	Generic 27 36	algorithm
+T2	Task 42 78	chart-based phrase structure parsing
+T3	Material 84 100	natural language
+T4	Method 288 294	parser
+T5	OtherScientificTerm 355 367	search space
+T6	OtherScientificTerm 384 388	edge
+T7	OtherScientificTerm 407 412	chart
+T8	OtherScientificTerm 462 467	edges
+T9	OtherScientificTerm 507 512	edges
+T10	OtherScientificTerm 560 574	spanning edges
+T11	OtherScientificTerm 656 661	edges
+T12	Method 789 815	phrase boundary heuristics
+T13	OtherScientificTerm 844 858	function words
+T14	Method 870 885	heuristic rules
+T15	OtherScientificTerm 965 978	unknown words
+T16	OtherScientificTerm 993 1022	reduction in the search space
+T17	OtherScientificTerm 1046 1054	semantic
+T18	OtherScientificTerm 1069 1089	syntactic categories
+T19	OtherScientificTerm 1099 1130	terminal and non-terminal edges
+T20	OtherScientificTerm 1201 1206	edges
+T21	OtherScientificTerm 1222 1227	edges
+R1	USED-FOR Arg1:T3 Arg2:T2
+R2	USED-FOR Arg1:T13 Arg2:T12
+R3	COMPARE Arg1:T17 Arg2:T18
+R4	USED-FOR Arg1:T17 Arg2:T16
+R5	USED-FOR Arg1:T1 Arg2:T2
+R6	COREF Arg1:T4 Arg2:T1
+R7	FEATURE-OF Arg1:T18 Arg2:T19
+R8	FEATURE-OF Arg1:T17 Arg2:T19

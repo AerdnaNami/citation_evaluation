@@ -1,0 +1,12 @@
+T1	Method 43 68	Question Answering system
+T2	Material 129 159	FAQ-like questions and answers
+T3	Generic 177 183	system
+T4	Method 194 220	noisy-channel architecture
+T5	Method 245 259	language model
+T6	Method 282 302	transformation model
+T7	Material 411 414	Web
+R1	COREF Arg1:T3 Arg2:T1
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	USED-FOR Arg1:T4 Arg2:T5
+R4	USED-FOR Arg1:T4 Arg2:T6
+R5	USED-FOR Arg1:T4 Arg2:T3

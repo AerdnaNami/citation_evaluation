@@ -1,0 +1,22 @@
+T1	Method 31 48	embedding methods
+T2	Task 53 110	segmenting feature points of piece-wise planar structures
+T3	OtherScientificTerm 187 199	homographies
+T4	OtherScientificTerm 239 279	higher-dimensional real or complex space
+T5	OtherScientificTerm 294 304	homography
+T6	OtherScientificTerm 329 350	complex bilinear form
+T7	OtherScientificTerm 356 375	real quadratic form
+T8	OtherScientificTerm 448 461	homo-graphies
+T9	Method 473 506	closed-form segmentation solution
+T10	Method 560 589	subspace-segmentation methods
+T11	OtherScientificTerm 659 682	piece-wise planar scene
+T12	Material 688 698	2-D images
+T13	Method 733 751	3-D reconstruction
+T14	Method 800 818	3-D reconstruction
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T10 Arg2:T9
+R3	COREF Arg1:T14 Arg2:T13
+R4	FEATURE-OF Arg1:T12 Arg2:T11
+R5	FEATURE-OF Arg1:T6 Arg2:T5
+R6	FEATURE-OF Arg1:T7 Arg2:T5
+R7	CONJUNCTION Arg1:T6 Arg2:T7
+R8	FEATURE-OF Arg1:T4 Arg2:T3

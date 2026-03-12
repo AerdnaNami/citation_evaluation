@@ -1,0 +1,24 @@
+T1	Generic 33 41	approach
+T2	Method 53 66	n-gram models
+T3	Method 73 95	error-correction rules
+T4	Task 102 121	Thai key prediction
+T5	Task 128 164	Thai-English language identification
+T6	Method 193 217	rule-reduction algorithm
+T7	OtherScientificTerm 229 247	mutual information
+T8	OtherScientificTerm 264 286	error-correction rules
+T9	Generic 294 303	algorithm
+T10	Metric 328 336	accuracy
+T11	Task 347 370	language identification
+T12	Task 377 391	key prediction
+R1	USED-FOR Arg1:T7 Arg2:T8
+R2	USED-FOR Arg1:T2 Arg2:T1
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	USED-FOR Arg1:T1 Arg2:T4
+R5	USED-FOR Arg1:T1 Arg2:T5
+R6	CONJUNCTION Arg1:T2 Arg2:T3
+R7	CONJUNCTION Arg1:T4 Arg2:T5
+R8	USED-FOR Arg1:T7 Arg2:T6
+R9	USED-FOR Arg1:T9 Arg2:T11
+R10	USED-FOR Arg1:T9 Arg2:T12
+R11	COREF Arg1:T1 Arg2:T9
+R12	EVALUATE-FOR Arg1:T10 Arg2:T9

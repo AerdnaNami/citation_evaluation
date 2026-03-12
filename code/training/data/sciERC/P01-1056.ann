@@ -1,0 +1,35 @@
+T1	Generic 2 12	Techniques
+T2	Method 17 48	automatically training  modules
+T3	Method 55 81	natural language generator
+T4	Metric 154 177	quality  of  utterances
+T5	OtherScientificTerm 167 177	utterances
+T6	Method 194 214	trainable components
+T7	Method 234 286	hand-crafted template-based or rule-based approaches
+T8	Method 334 360	trainable sentence planner
+T9	Method 369 391	spoken dialogue system
+T10	OtherScientificTerm 407 433	subjective human judgments
+T11	Method 503 551	hand-crafted template-based generation component
+T12	Method 560 588	rule-based sentence planners
+T13	Method 601 627	baseline sentence planners
+T14	Method 649 675	trainable sentence planner
+T15	Method 703 721	rule-based systems
+T16	Generic 732 741	baselines
+T17	Method 765 784	hand-crafted system
+R1	COMPARE Arg1:T6 Arg2:T7
+R2	USED-FOR Arg1:T8 Arg2:T9
+R3	COMPARE Arg1:T14 Arg2:T15
+R4	EVALUATE-FOR Arg1:T5 Arg2:T6
+R5	PART-OF Arg1:T2 Arg2:T3
+R6	USED-FOR Arg1:T1 Arg2:T2
+R7	EVALUATE-FOR Arg1:T10 Arg2:T8
+R8	CONJUNCTION Arg1:T11 Arg2:T12
+R9	CONJUNCTION Arg1:T12 Arg2:T13
+R10	COMPARE Arg1:T14 Arg2:T17
+R11	COMPARE Arg1:T14 Arg2:T16
+R12	CONJUNCTION Arg1:T15 Arg2:T16
+R13	CONJUNCTION Arg1:T16 Arg2:T17
+R14	COREF Arg1:T12 Arg2:T15
+R15	COREF Arg1:T13 Arg2:T16
+R16	COREF Arg1:T11 Arg2:T17
+R17	COREF Arg1:T8 Arg2:T14
+R18	EVALUATE-FOR Arg1:T5 Arg2:T7

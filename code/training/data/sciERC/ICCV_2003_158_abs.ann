@@ -1,0 +1,40 @@
+T1	Generic 23 32	algorithm
+T2	Task 37 96	computing optical flow, shape, motion, lighting, and albedo
+T3	Material 105 119	image sequence
+T4	Material 125 157	rigidly-moving Lambertian object
+T5	OtherScientificTerm 164 184	distant illumination
+T6	Generic 190 197	problem
+T7	Material 253 259	motion
+T8	Material 261 278	multi-view stereo
+T9	Material 284 303	photo-metric stereo
+T10	Generic 326 335	algorithm
+T11	OtherScientificTerm 350 390	spatial and temporal intensity variation
+T12	Generic 394 398	cues
+T13	Generic 404 410	former
+T14	OtherScientificTerm 422 426	flow
+T15	Generic 435 441	latter
+T16	OtherScientificTerm 453 472	surface orientation
+T17	Generic 490 494	cues
+T18	Task 503 566	dense reconstruction of both textured and texture-less surfaces
+T19	Generic 572 581	algorithm
+T20	Method 603 672	estimating affine camera parameters, illumination , shape, and albedo
+T21	Material 728 755	videos of hand-held objects
+R1	FEATURE-OF Arg1:T4 Arg2:T3
+R2	FEATURE-OF Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	USED-FOR Arg1:T3 Arg2:T1
+R5	COREF Arg1:T2 Arg2:T6
+R6	CONJUNCTION Arg1:T7 Arg2:T8
+R7	CONJUNCTION Arg1:T8 Arg2:T9
+R8	USED-FOR Arg1:T15 Arg2:T16
+R9	USED-FOR Arg1:T13 Arg2:T14
+R10	COREF Arg1:T11 Arg2:T12
+R11	HYPONYM-OF Arg1:T13 Arg2:T12
+R12	HYPONYM-OF Arg1:T15 Arg2:T12
+R13	CONJUNCTION Arg1:T13 Arg2:T15
+R14	COREF Arg1:T17 Arg2:T12
+R15	USED-FOR Arg1:T17 Arg2:T18
+R16	USED-FOR Arg1:T11 Arg2:T10
+R17	COREF Arg1:T10 Arg2:T1
+R18	COREF Arg1:T19 Arg2:T10
+R19	USED-FOR Arg1:T20 Arg2:T19

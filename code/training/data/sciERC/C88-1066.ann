@@ -1,0 +1,28 @@
+T1	Task 29 84	formalism of  Category Cooccurrence Restrictions (CCRs)
+T2	OtherScientificTerm 43 84	Category Cooccurrence Restrictions (CCRs)
+T3	Method 105 123	parsing algorithms
+T4	Generic 140 142	it
+T5	OtherScientificTerm 145 149	CCRs
+T6	OtherScientificTerm 156 174	Boolean conditions
+T7	OtherScientificTerm 216 227	local trees
+T8	OtherScientificTerm 246 274	statement of generalizations
+T9	Method 319 336	syntax formalisms
+T10	OtherScientificTerm 352 356	CCRs
+T11	OtherScientificTerm 368 390	syntactic descriptions
+T12	OtherScientificTerm 418 440	restrictive statements
+T13	Generic 477 487	algorithms
+T14	Material 509 531	context free languages
+T15	Task 556 569	CCR formalism
+T16	Method 620 626	parser
+T17	OtherScientificTerm 660 694	logical well-formedness conditions
+T18	OtherScientificTerm 700 705	trees
+R1	FEATURE-OF Arg1:T12 Arg2:T11
+R2	FEATURE-OF Arg1:T17 Arg2:T18
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	COREF Arg1:T10 Arg2:T5
+R5	COREF Arg1:T5 Arg2:T2
+R6	USED-FOR Arg1:T14 Arg2:T13
+R7	USED-FOR Arg1:T13 Arg2:T15
+R8	COREF Arg1:T13 Arg2:T3
+R9	COREF Arg1:T16 Arg2:T13
+R10	COREF Arg1:T15 Arg2:T1

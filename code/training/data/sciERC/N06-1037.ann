@@ -1,0 +1,25 @@
+T1	Method 31 68	convolution kernel  over  parse trees
+T2	OtherScientificTerm 80 111	syntactic structure information
+T3	Task 118 137	relation extraction
+T4	OtherScientificTerm 168 196	syntactic structure features
+T5	OtherScientificTerm 213 223	parse tree
+T6	Task 249 268	relation extraction
+T7	Generic 280 288	features
+T8	Method 318 341	convolution tree kernel
+T9	Material 363 378	ACE 2003 corpus
+T10	Method 396 433	convolution kernel  over  parse trees
+T11	Method 502 523	feature-based methods
+T12	Generic 582 588	method
+T13	Method 633 656	dependency tree kernels
+R1	FEATURE-OF Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T2 Arg2:T3
+R3	USED-FOR Arg1:T4 Arg2:T6
+R4	COREF Arg1:T7 Arg2:T4
+R5	USED-FOR Arg1:T8 Arg2:T7
+R6	COMPARE Arg1:T12 Arg2:T13
+R7	USED-FOR Arg1:T1 Arg2:T2
+R8	COREF Arg1:T1 Arg2:T8
+R9	EVALUATE-FOR Arg1:T9 Arg2:T10
+R10	COREF Arg1:T12 Arg2:T10
+R11	COREF Arg1:T10 Arg2:T8
+R12	COMPARE Arg1:T11 Arg2:T10

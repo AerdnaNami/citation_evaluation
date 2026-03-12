@@ -1,0 +1,23 @@
+T1	Metric 2 27	Language resource quality
+T2	Task 44 47	NLP
+T3	Task 134 137	NLP
+T4	Task 170 172	MT
+T5	Task 179 201	reference translations
+T6	Task 213 234	automatic evaluations
+T7	Material 242 259	high-quality data
+T8	Generic 355 364	resources
+T9	OtherScientificTerm 448 476	different-quality references
+T10	Generic 482 492	evaluation
+T11	Metric 615 632	automatic metrics
+T12	Task 647 649	MT
+R1	EVALUATE-FOR Arg1:T7 Arg2:T6
+R2	EVALUATE-FOR Arg1:T11 Arg2:T12
+R3	COREF Arg1:T10 Arg2:T6
+R4	HYPONYM-OF Arg1:T4 Arg2:T3
+R5	HYPONYM-OF Arg1:T5 Arg2:T3
+R6	COREF Arg1:T12 Arg2:T4
+R7	COREF Arg1:T3 Arg2:T2
+R8	COREF Arg1:T8 Arg2:T7
+R9	CONJUNCTION Arg1:T4 Arg2:T5
+R10	USED-FOR Arg1:T9 Arg2:T10
+R11	FEATURE-OF Arg1:T1 Arg2:T2

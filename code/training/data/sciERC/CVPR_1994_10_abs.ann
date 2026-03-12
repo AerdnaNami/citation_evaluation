@@ -1,0 +1,36 @@
+T1	Method 0 7	MINPRAN
+T2	Method 15 30	robust operator
+T3	Generic 118 128	techniques
+T4	Metric 141 166	large outlier percentages
+T5	Method 168 175	MINPRAN
+T6	OtherScientificTerm 201 212	error bound
+T7	Generic 240 242	it
+T8	OtherScientificTerm 317 344	dynamic range of the sensor
+T9	Method 361 368	MINPRAN
+T10	Method 374 389	random sampling
+T11	Generic 494 496	It
+T12	Method 638 645	MINPRAN
+T13	Method 701 708	MINPRAN
+T14	Metric 785 811	percentage of true inliers
+T15	Method 813 820	MINPRAN
+T16	Material 865 879	synthetic data
+T17	Method 905 928	least median of squares
+T18	Method 951 958	MINPRAN
+T19	OtherScientificTerm 962 975	complex range
+T20	Material 980 994	intensity data
+R1	HYPONYM-OF Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T4
+R3	COREF Arg1:T5 Arg2:T1
+R4	COMPARE Arg1:T3 Arg2:T5
+R5	COREF Arg1:T7 Arg2:T5
+R6	COREF Arg1:T9 Arg2:T7
+R7	USED-FOR Arg1:T10 Arg2:T9
+R8	COREF Arg1:T11 Arg2:T9
+R9	COREF Arg1:T12 Arg2:T11
+R10	COREF Arg1:T13 Arg2:T12
+R11	COREF Arg1:T15 Arg2:T12
+R12	COREF Arg1:T18 Arg2:T15
+R13	EVALUATE-FOR Arg1:T16 Arg2:T15
+R14	COMPARE Arg1:T17 Arg2:T15
+R15	USED-FOR Arg1:T18 Arg2:T20
+R16	USED-FOR Arg1:T18 Arg2:T19

@@ -1,0 +1,51 @@
+T1	Task 0 32	Face images of non-frontal views
+T2	Metric 97 122	face recognition accuracy
+T3	Metric 174 190	recognition rate
+T4	Method 207 231	face recognition systems
+T5	Material 248 270	live CCTV camera input
+T6	Method 300 318	Bayesian framework
+T7	OtherScientificTerm 365 374	viewpoint
+T8	OtherScientificTerm 379 391	illumination
+T9	Task 393 420	face image super-resolution
+T10	Task 425 436	recognition
+T11	OtherScientificTerm 440 452	tensor space
+T12	Material 462 500	single modal low-resolution face image
+T13	OtherScientificTerm 522 569	multiple factor interactions of training tensor
+T14	Task 593 624	high-resolution reconstructions
+T15	OtherScientificTerm 642 652	modalities
+T16	Task 657 673	face recognition
+T17	Task 697 742	pixel-domain super-resolution and recognition
+T18	Task 821 837	super-resolution
+T19	Task 842 853	recognition
+T20	OtherScientificTerm 878 922	maximum likelihood identity parameter vector
+T21	OtherScientificTerm 926 954	high-resolution tensor space
+T22	Task 959 970	recognition
+T23	Task 993 1042	multi-modal super-resolution and face recognition
+T24	OtherScientificTerm 1072 1090	imaging modalities
+T25	Material 1098 1119	low-resolution images
+T26	Metric 1163 1180	recognition rates
+T27	Method 1195 1235	tensorface and eigenface representations
+R1	EVALUATE-FOR Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T6 Arg2:T9
+R4	USED-FOR Arg1:T9 Arg2:T10
+R5	FEATURE-OF Arg1:T15 Arg2:T14
+R6	USED-FOR Arg1:T14 Arg2:T16
+R7	FEATURE-OF Arg1:T21 Arg2:T20
+R8	USED-FOR Arg1:T20 Arg2:T22
+R9	CONJUNCTION Arg1:T18 Arg2:T19
+R10	USED-FOR Arg1:T25 Arg2:T23
+R11	EVALUATE-FOR Arg1:T26 Arg2:T23
+R12	EVALUATE-FOR Arg1:T26 Arg2:T27
+R13	USED-FOR Arg1:T12 Arg2:T14
+R14	USED-FOR Arg1:T13 Arg2:T14
+R15	CONJUNCTION Arg1:T7 Arg2:T8
+R16	FEATURE-OF Arg1:T11 Arg2:T10
+R17	HYPONYM-OF Arg1:T18 Arg2:T17
+R18	HYPONYM-OF Arg1:T19 Arg2:T17
+R19	USED-FOR Arg1:T20 Arg2:T18
+R20	USED-FOR Arg1:T20 Arg2:T19
+R21	COREF Arg1:T22 Arg2:T19
+R22	COREF Arg1:T19 Arg2:T16
+R23	COREF Arg1:T16 Arg2:T10
+R24	COREF Arg1:T18 Arg2:T9

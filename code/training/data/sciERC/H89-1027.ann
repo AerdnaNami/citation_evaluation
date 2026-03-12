@@ -1,0 +1,21 @@
+T1	Method 48 103	phonetically-based spoken language understanding system
+T2	Method 113 119	SUMMIT
+T3	Method 180 195	heuristic rules
+T4	Method 233 254	knowledge engineering
+T5	Generic 261 269	approach
+T6	OtherScientificTerm 295 311	speech knowledge
+T7	Method 358 376	mathematical tools
+T8	Generic 385 391	system
+T9	OtherScientificTerm 394 402	features
+T10	Method 409 428	decision strategies
+T11	Material 495 506	speech data
+T12	Generic 534 540	system
+R1	USED-FOR Arg1:T4 Arg2:T3
+R2	USED-FOR Arg1:T11 Arg2:T10
+R3	HYPONYM-OF Arg1:T2 Arg2:T1
+R4	USED-FOR Arg1:T7 Arg2:T6
+R5	COREF Arg1:T5 Arg2:T2
+R6	COREF Arg1:T8 Arg2:T5
+R7	CONJUNCTION Arg1:T9 Arg2:T10
+R8	COREF Arg1:T12 Arg2:T8
+R9	USED-FOR Arg1:T5 Arg2:T6

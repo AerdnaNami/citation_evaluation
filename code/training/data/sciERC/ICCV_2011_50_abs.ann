@@ -1,0 +1,19 @@
+T1	Task 7 22	security domain
+T2	Task 40 79	identifying rare behaviours of interest
+T3	OtherScientificTerm 52 79	rare behaviours of interest
+T4	Material 81 98	Training examples
+T5	Generic 109 119	behaviours
+T6	Generic 149 153	they
+T7	Method 230 257	weakly supervised algorithm
+T8	OtherScientificTerm 274 284	behaviours
+T9	OtherScientificTerm 362 376	Global context
+T10	Task 403 435	detection of abnormal behaviours
+T11	OtherScientificTerm 469 486	Pragmatic aspects
+T12	Method 516 532	parameter tuning
+R1	COREF Arg1:T5 Arg2:T3
+R2	USED-FOR Arg1:T4 Arg2:T5
+R3	COREF Arg1:T4 Arg2:T6
+R4	USED-FOR Arg1:T9 Arg2:T10
+R5	USED-FOR Arg1:T7 Arg2:T8
+R6	COREF Arg1:T10 Arg2:T2
+R7	PART-OF Arg1:T2 Arg2:T1

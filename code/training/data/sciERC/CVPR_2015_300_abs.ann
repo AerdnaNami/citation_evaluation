@@ -1,0 +1,39 @@
+T1	Task 26 57	estimating location information
+T2	Material 64 69	image
+T3	Method 92 125	automated representation learning
+T4	Method 139 174	hierarchical sparse coding approach
+T5	OtherScientificTerm 187 195	features
+T6	Generic 262 264	it
+T7	OtherScientificTerm 272 287	geometric prior
+T8	OtherScientificTerm 329 351	image appearance space
+T9	OtherScientificTerm 376 399	location grouping space
+T10	OtherScientificTerm 420 451	parallel transport on manifolds
+T11	Generic 473 481	approach
+T12	OtherScientificTerm 517 546	heterogeneous data modalities
+T13	OtherScientificTerm 555 563	geo-tags
+T14	OtherScientificTerm 568 574	videos
+T15	Task 665 687	transferring knowledge
+T16	Task 734 750	grouping of data
+T17	Method 789 797	approach
+T18	Generic 818 826	datasets
+T19	Material 835 841	im2gps
+T20	Material 843 856	San Francisco
+T21	Material 861 874	MediaEval2010
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T3 Arg2:T1
+R3	COREF Arg1:T6 Arg2:T4
+R4	COREF Arg1:T11 Arg2:T4
+R5	USED-FOR Arg1:T10 Arg2:T7
+R6	USED-FOR Arg1:T7 Arg2:T6
+R7	CONJUNCTION Arg1:T13 Arg2:T14
+R8	HYPONYM-OF Arg1:T13 Arg2:T12
+R9	HYPONYM-OF Arg1:T14 Arg2:T12
+R10	USED-FOR Arg1:T11 Arg2:T12
+R11	USED-FOR Arg1:T15 Arg2:T16
+R12	COREF Arg1:T17 Arg2:T11
+R13	CONJUNCTION Arg1:T19 Arg2:T20
+R14	CONJUNCTION Arg1:T20 Arg2:T21
+R15	HYPONYM-OF Arg1:T19 Arg2:T18
+R16	HYPONYM-OF Arg1:T20 Arg2:T18
+R17	HYPONYM-OF Arg1:T21 Arg2:T18
+R18	EVALUATE-FOR Arg1:T18 Arg2:T17

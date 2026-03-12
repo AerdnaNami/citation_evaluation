@@ -1,0 +1,45 @@
+T1	Method 24 67	method to automatically acquire paraphrases
+T2	Material 76 93	bilingual corpora
+T3	OtherScientificTerm 116 146	bilingual dependency relations
+T4	OtherScientificTerm 174 202	monolingual dependency parse
+T5	Method 247 279	statistical alignment techniques
+T6	Method 293 312	paraphrasing method
+T7	OtherScientificTerm 398 440	bilingual context  of  dependency relation
+T8	OtherScientificTerm 491 502	paraphrases
+T9	Generic 558 564	method
+T10	OtherScientificTerm 577 610	generalized translation knowledge
+T11	OtherScientificTerm 633 644	paraphrases
+T12	Generic 662 668	method
+T13	OtherScientificTerm 685 718	generalized translation knowledge
+T14	Task 725 751	Korean-English translation
+T15	Material 780 837	parallel corpora  of a  Korean and English language pairs
+T16	Method 858 877	paraphrasing method
+T17	OtherScientificTerm 901 912	paraphrases
+T18	Metric 925 934	precision
+T19	Material 971 977	Korean
+T20	Material 984 991	English
+T21	OtherScientificTerm 1003 1024	translation knowledge
+T22	Material 1046 1063	bilingual corpora
+T23	OtherScientificTerm 1110 1121	paraphrases
+T24	Metric 1139 1156	compression ratio
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T5 Arg2:T3
+R3	COREF Arg1:T6 Arg2:T1
+R4	USED-FOR Arg1:T3 Arg2:T1
+R5	USED-FOR Arg1:T4 Arg2:T3
+R6	USED-FOR Arg1:T9 Arg2:T10
+R7	COREF Arg1:T12 Arg2:T9
+R8	USED-FOR Arg1:T12 Arg2:T13
+R9	USED-FOR Arg1:T13 Arg2:T14
+R10	COREF Arg1:T16 Arg2:T6
+R11	USED-FOR Arg1:T22 Arg2:T21
+R12	COREF Arg1:T22 Arg2:T2
+R13	COREF Arg1:T23 Arg2:T17
+R14	USED-FOR Arg1:T7 Arg2:T6
+R15	USED-FOR Arg1:T11 Arg2:T9
+R16	COREF Arg1:T15 Arg2:T22
+R17	EVALUATE-FOR Arg1:T18 Arg2:T16
+R18	USED-FOR Arg1:T16 Arg2:T17
+R19	CONJUNCTION Arg1:T19 Arg2:T20
+R20	USED-FOR Arg1:T23 Arg2:T21
+R21	EVALUATE-FOR Arg1:T24 Arg2:T21

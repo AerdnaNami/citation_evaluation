@@ -1,0 +1,27 @@
+T1	Task 4 23	Word Identification
+T2	Task 68 103	Chinese Natural Language Processing
+T3	Generic 128 137	mechanism
+T4	OtherScientificTerm 164 175	sublanguage
+T5	OtherScientificTerm 208 221	unknown words
+T6	OtherScientificTerm 237 251	personal names
+T7	Material 259 277	Chinese newspapers
+T8	Generic 294 303	mechanism
+T9	Task 314 343	title-driven name recognition
+T10	Task 348 379	adaptive dynamic word formation
+T11	Task 384 457	identification of 2-character and 3-character Chinese names without title
+T12	Method 559 588	NTHU's statistic-based system
+T13	Generic 601 607	system
+T14	Method 723 733	WI systems
+T15	Task 748 767	name identification
+R1	HYPONYM-OF Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T5
+R3	USED-FOR Arg1:T4 Arg2:T3
+R4	HYPONYM-OF Arg1:T6 Arg2:T5
+R5	COREF Arg1:T8 Arg2:T3
+R6	PART-OF Arg1:T9 Arg2:T8
+R7	PART-OF Arg1:T10 Arg2:T8
+R8	PART-OF Arg1:T11 Arg2:T8
+R9	COREF Arg1:T13 Arg2:T12
+R10	USED-FOR Arg1:T7 Arg2:T3
+R11	CONJUNCTION Arg1:T9 Arg2:T10
+R12	CONJUNCTION Arg1:T10 Arg2:T11

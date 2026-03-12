@@ -1,0 +1,37 @@
+T1	Method 46 68	statistical techniques
+T2	Task 74 81	ranking
+T3	OtherScientificTerm 126 159	graph  of  translation hypotheses
+T4	OtherScientificTerm 222 238	hypotheses graph
+T5	Method 262 277	shallow mapping
+T6	Method 284 301	permutation rules
+T7	OtherScientificTerm 335 340	nodes
+T8	OtherScientificTerm 357 405	vectors representing morpho-syntactic properties
+T9	Generic 466 473	methods
+T10	OtherScientificTerm 491 520	statistical feature functions
+T11	Method 540 557	vector components
+T12	OtherScientificTerm 565 582	feature functions
+T13	OtherScientificTerm 645 667	log-linear combination
+T14	OtherScientificTerm 706 723	translation paths
+T15	OtherScientificTerm 733 738	graph
+T16	Method 757 784	language modelling toolkits
+T17	Method 792 817	CMU  and the  SRI toolkit
+T18	Method 852 892	word-lemma based feature function models
+T19	Method 923 941	token-based models
+T20	OtherScientificTerm 957 981	PoS-tag feature function
+T21	Method 991 1007	word-lemma model
+T22	Task 1051 1071	lexical translations
+R1	USED-FOR Arg1:T5 Arg2:T4
+R2	COMPARE Arg1:T18 Arg2:T19
+R3	PART-OF Arg1:T20 Arg2:T21
+R4	USED-FOR Arg1:T1 Arg2:T2
+R5	USED-FOR Arg1:T6 Arg2:T4
+R6	CONJUNCTION Arg1:T5 Arg2:T6
+R7	COREF Arg1:T12 Arg2:T10
+R8	USED-FOR Arg1:T9 Arg2:T10
+R9	USED-FOR Arg1:T11 Arg2:T9
+R10	COREF Arg1:T21 Arg2:T18
+R11	COREF Arg1:T4 Arg2:T15
+R12	COREF Arg1:T4 Arg2:T3
+R13	USED-FOR Arg1:T13 Arg2:T14
+R14	PART-OF Arg1:T14 Arg2:T15
+R15	HYPONYM-OF Arg1:T17 Arg2:T16

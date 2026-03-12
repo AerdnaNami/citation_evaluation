@@ -1,0 +1,34 @@
+T1	Method 24 49	machine learning approach
+T2	Task 55 80	bare slice disambiguation
+T3	Material 86 94	dialogue
+T4	Method 118 138	heuristic principles
+T5	Material 148 167	corpus-based sample
+T6	OtherScientificTerm 192 218	probabilistic Horn clauses
+T7	OtherScientificTerm 257 264	clauses
+T8	OtherScientificTerm 286 313	domain independent features
+T9	Method 370 397	machine learning algorithms
+T10	Generic 401 408	SLIPPER
+T11	Method 413 442	rule-based learning algorithm
+T12	Generic 449 454	TiMBL
+T13	Method 459 478	memory-based system
+T14	Metric 527 540	success rates
+T15	OtherScientificTerm 584 592	features
+T16	Method 630 650	heuristic principles
+T17	OtherScientificTerm 697 702	rules
+T18	OtherScientificTerm 731 743	Horn clauses
+T19	OtherScientificTerm 785 793	features
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	FEATURE-OF Arg1:T6 Arg2:T4
+R3	COMPARE Arg1:T11 Arg2:T13
+R4	FEATURE-OF Arg1:T15 Arg2:T16
+R5	USED-FOR Arg1:T3 Arg2:T2
+R6	PART-OF Arg1:T11 Arg2:T9
+R7	PART-OF Arg1:T13 Arg2:T9
+R8	HYPONYM-OF Arg1:T12 Arg2:T13
+R9	HYPONYM-OF Arg1:T10 Arg2:T11
+R10	COREF Arg1:T9 Arg2:T1
+R11	COREF Arg1:T16 Arg2:T4
+R12	COREF Arg1:T18 Arg2:T6
+R13	USED-FOR Arg1:T5 Arg2:T4
+R14	COREF Arg1:T7 Arg2:T6
+R15	COREF Arg1:T19 Arg2:T15

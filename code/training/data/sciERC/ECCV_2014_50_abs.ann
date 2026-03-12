@@ -1,0 +1,40 @@
+T1	Generic 23 31	approach
+T2	Task 48 112	intrinsic texture properties (albedo, shading, normal) of scenes
+T3	Task 118 143	multiple view acquisition
+T4	OtherScientificTerm 150 181	unknown illumination conditions
+T5	OtherScientificTerm 211 229	intrinsic textures
+T6	OtherScientificTerm 241 274	pixel-resolution surface textures
+T7	OtherScientificTerm 292 323	intrinsic appearance parameters
+T8	Method 352 376	video relighting methods
+T9	Generic 382 390	approach
+T10	OtherScientificTerm 418 432	uniform albedo
+T11	Generic 446 448	it
+T12	Material 463 485	richly textured scenes
+T13	Method 500 523	intrinsic image methods
+T14	Task 549 588	initial, low-frequency shading estimate
+T15	OtherScientificTerm 600 630	global lighting reconstruction
+T16	OtherScientificTerm 648 681	texture and coarse scene geometry
+T17	OtherScientificTerm 706 742	inherent global ambiguity in shading
+T18	Generic 748 754	method
+T19	Task 769 808	relight-ing of free-viewpoint rendering
+T20	OtherScientificTerm 814 841	multiple view video capture
+T21	Task 861 871	relighting
+T22	OtherScientificTerm 877 912	reproduction of fine surface detail
+R1	FEATURE-OF Arg1:T4 Arg2:T3
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T6 Arg2:T5
+R5	COMPARE Arg1:T9 Arg2:T8
+R6	COREF Arg1:T9 Arg2:T11
+R7	USED-FOR Arg1:T11 Arg2:T12
+R8	USED-FOR Arg1:T13 Arg2:T14
+R9	USED-FOR Arg1:T15 Arg2:T13
+R10	FEATURE-OF Arg1:T16 Arg2:T15
+R11	USED-FOR Arg1:T14 Arg2:T17
+R12	COREF Arg1:T13 Arg2:T18
+R13	USED-FOR Arg1:T18 Arg2:T19
+R14	FEATURE-OF Arg1:T22 Arg2:T21
+R15	USED-FOR Arg1:T20 Arg2:T19
+R16	COREF Arg1:T21 Arg2:T19
+R17	COREF Arg1:T1 Arg2:T9
+R18	COREF Arg1:T9 Arg2:T18

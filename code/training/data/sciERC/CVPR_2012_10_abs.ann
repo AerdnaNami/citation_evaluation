@@ -1,0 +1,30 @@
+T1	Task 0 39	Automated facial expression recognition
+T2	Generic 100 114	Existing works
+T3	OtherScientificTerm 161 179	temporal evolution
+T4	OtherScientificTerm 187 228	intensity of the observed facial displays
+T5	Generic 230 234	They
+T6	Material 262 325	multidimensional (multi-class) continuous facial behaviour data
+T7	Method 327 345	binary classifiers
+T8	OtherScientificTerm 419 475	intrinsic topology of multidimensional continuous facial
+T9	OtherScientificTerm 511 528	ordinal man-ifold
+T10	Generic 535 543	topology
+T11	Method 574 632	Hidden Conditional Ordinal Random Field (H-CORF) framework
+T12	Task 637 663	dynamic ordinal regression
+T13	OtherScientificTerm 680 697	H-CORF parameters
+T14	OtherScientificTerm 712 728	ordinal manifold
+T15	Generic 744 749	model
+T16	Task 758 790	simultaneous dynamic recognition
+T17	Task 795 837	intensity estimation of facial expressions
+T18	Method 890 909	the proposed method
+T19	Material 973 1003	spontaneous facial affect data
+R1	CONJUNCTION Arg1:T4 Arg2:T3
+R2	COREF Arg1:T5 Arg2:T2
+R3	COREF Arg1:T18 Arg2:T15
+R4	COREF Arg1:T10 Arg2:T8
+R5	USED-FOR Arg1:T9 Arg2:T8
+R6	PART-OF Arg1:T10 Arg2:T11
+R7	USED-FOR Arg1:T11 Arg2:T12
+R8	USED-FOR Arg1:T15 Arg2:T16
+R9	USED-FOR Arg1:T15 Arg2:T17
+R10	CONJUNCTION Arg1:T16 Arg2:T17
+R11	EVALUATE-FOR Arg1:T19 Arg2:T18

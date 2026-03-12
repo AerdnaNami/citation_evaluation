@@ -1,0 +1,25 @@
+T1	Method 29 58	tree-adjoining grammars (TAG)
+T2	Method 104 108	TAGs
+T3	OtherScientificTerm 142 148	syntax
+T4	Task 182 205	semantic interpretation
+T5	Task 211 252	automatic translation of natural language
+T6	Method 269 285	variant of  TAGs
+T7	Method 281 285	TAGs
+T8	Method 297 313	synchronous TAGs
+T9	OtherScientificTerm 419 451	expressions of natural languages
+T10	OtherScientificTerm 474 483	semantics
+T11	OtherScientificTerm 503 524	logical form language
+T12	OtherScientificTerm 565 581	natural language
+T13	Method 620 624	TAGs
+T14	OtherScientificTerm 659 672	syntax proper
+T15	Method 707 723	synchronous TAGs
+R1	USED-FOR Arg1:T11 Arg2:T10
+R2	USED-FOR Arg1:T13 Arg2:T14
+R3	COREF Arg1:T2 Arg2:T1
+R4	COREF Arg1:T7 Arg2:T2
+R5	COREF Arg1:T13 Arg2:T7
+R6	COREF Arg1:T15 Arg2:T8
+R7	COREF Arg1:T8 Arg2:T6
+R8	USED-FOR Arg1:T2 Arg2:T4
+R9	USED-FOR Arg1:T2 Arg2:T5
+R10	CONJUNCTION Arg1:T4 Arg2:T5

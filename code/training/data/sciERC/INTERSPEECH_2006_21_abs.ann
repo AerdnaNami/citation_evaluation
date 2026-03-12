@@ -1,0 +1,25 @@
+T1	Method 26 59	language model adaptation methods
+T2	OtherScientificTerm 68 77	word list
+T3	Material 84 94	raw corpus
+T4	Generic 127 133	method
+T5	Material 152 162	raw corpus
+T6	OtherScientificTerm 185 194	word list
+T7	Generic 246 251	model
+T8	Material 261 277	segmented corpus
+T9	Method 287 331	sentence-by-sentence error correction method
+T10	Generic 602 608	method
+T11	Generic 776 783	methods
+T12	Task 788 816	preparing a segmented corpus
+T13	Method 834 849	language models
+T14	Metric 859 888	speech recognition accuracies
+T15	Generic 931 937	method
+R1	USED-FOR Arg1:T3 Arg2:T1
+R2	USED-FOR Arg1:T2 Arg2:T1
+R3	CONJUNCTION Arg1:T2 Arg2:T3
+R4	USED-FOR Arg1:T6 Arg2:T4
+R5	USED-FOR Arg1:T4 Arg2:T5
+R6	USED-FOR Arg1:T8 Arg2:T7
+R7	USED-FOR Arg1:T11 Arg2:T12
+R8	EVALUATE-FOR Arg1:T14 Arg2:T13
+R9	COREF Arg1:T1 Arg2:T10
+R10	COREF Arg1:T10 Arg2:T15

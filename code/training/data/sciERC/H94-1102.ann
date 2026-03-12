@@ -1,0 +1,36 @@
+T1	Method 93 139	continuous speech recognition (CSR) techniques
+T2	Task 169 198	Spoken Language Systems (SLS)
+T3	Task 241 285	military and civilian computer-based systems
+T4	Task 367 411	speech recognition and understanding systems
+T5	Method 454 480	spoken language technology
+T6	Task 488 517	military and civilian systems
+T7	Method 568 571	CSR
+T8	Task 577 612	mobile military command and control
+T9	Method 668 686	acoustic modelling
+T10	Method 689 701	rapid search
+T11	Method 708 746	recognition-time adaptation techniques
+T12	Method 760 780	large-vocabulary CSR
+T13	Generic 805 815	techniques
+T14	Material 828 861	ARPA large-vocabulary CSR corpora
+T15	Task 870 896	military application tasks
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T7 Arg2:T8
+R4	USED-FOR Arg1:T12 Arg2:T14
+R5	USED-FOR Arg1:T2 Arg2:T3
+R6	COREF Arg1:T6 Arg2:T3
+R7	COREF Arg1:T5 Arg2:T2
+R8	COREF Arg1:T7 Arg2:T1
+R9	USED-FOR Arg1:T11 Arg2:T12
+R10	USED-FOR Arg1:T9 Arg2:T12
+R11	USED-FOR Arg1:T10 Arg2:T12
+R12	CONJUNCTION Arg1:T9 Arg2:T10
+R13	CONJUNCTION Arg1:T10 Arg2:T11
+R14	HYPONYM-OF Arg1:T9 Arg2:T13
+R15	HYPONYM-OF Arg1:T10 Arg2:T13
+R16	HYPONYM-OF Arg1:T11 Arg2:T13
+R17	EVALUATE-FOR Arg1:T14 Arg2:T13
+R18	USED-FOR Arg1:T13 Arg2:T15
+R19	USED-FOR Arg1:T9 Arg2:T15
+R20	USED-FOR Arg1:T10 Arg2:T15
+R21	USED-FOR Arg1:T11 Arg2:T15

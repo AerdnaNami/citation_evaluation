@@ -1,0 +1,1943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Interpreting</word>
+            <lemma>interpret</lemma>
+            <CharacterOffsetBegin>3</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>metaphors</word>
+            <lemma>metaphor</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>is</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="4">
+            <word>an</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>integral</word>
+            <lemma>integral</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>42</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>43</CharacterOffsetBegin>
+            <CharacterOffsetEnd>46</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>inescapable</word>
+            <lemma>inescapable</lemma>
+            <CharacterOffsetBegin>47</CharacterOffsetBegin>
+            <CharacterOffsetEnd>58</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>process</word>
+            <lemma>process</lemma>
+            <CharacterOffsetBegin>59</CharacterOffsetBegin>
+            <CharacterOffsetEnd>66</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>67</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="10">
+            <word>human</word>
+            <lemma>human</lemma>
+            <CharacterOffsetBegin>71</CharacterOffsetBegin>
+            <CharacterOffsetEnd>76</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>understanding</word>
+            <lemma>understanding</lemma>
+            <CharacterOffsetBegin>77</CharacterOffsetBegin>
+            <CharacterOffsetEnd>90</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>91</CharacterOffsetBegin>
+            <CharacterOffsetEnd>93</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>natural</word>
+            <lemma>natural</lemma>
+            <CharacterOffsetBegin>94</CharacterOffsetBegin>
+            <CharacterOffsetEnd>101</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>language</word>
+            <lemma>language</lemma>
+            <CharacterOffsetBegin>102</CharacterOffsetBegin>
+            <CharacterOffsetEnd>110</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>112</CharacterOffsetBegin>
+            <CharacterOffsetEnd>113</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (VBG Interpreting) (NNS metaphors)) (VP (VBZ is) (NP (NP (DT an) (JJ integral) (CC and) (JJ inescapable) (NN process)) (PP (IN in) (NP (NP (JJ human) (NN understanding)) (PP (IN of) (NP (JJ natural) (NN language))))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="8">process</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="2">metaphors</governor>
+            <dependent idx="1">Interpreting</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="8">process</governor>
+            <dependent idx="2">metaphors</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="8">process</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">process</governor>
+            <dependent idx="4">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">process</governor>
+            <dependent idx="5">integral</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">integral</governor>
+            <dependent idx="6">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="5">integral</governor>
+            <dependent idx="7">inescapable</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">process</governor>
+            <dependent idx="9">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">understanding</governor>
+            <dependent idx="10">human</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">in</governor>
+            <dependent idx="11">understanding</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">understanding</governor>
+            <dependent idx="12">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="14">language</governor>
+            <dependent idx="13">natural</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="12">of</governor>
+            <dependent idx="14">language</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="8">process</governor>
+            <dependent idx="15">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="8">process</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="2">metaphors</governor>
+            <dependent idx="1">Interpreting</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="8">process</governor>
+            <dependent idx="2">metaphors</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="8">process</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">process</governor>
+            <dependent idx="4">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">process</governor>
+            <dependent idx="5">integral</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">integral</governor>
+            <dependent idx="6">and</dependent>
+          </dep>
+          <dep type="conj:and">
+            <governor idx="5">integral</governor>
+            <dependent idx="7">inescapable</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">process</governor>
+            <dependent idx="9">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">understanding</governor>
+            <dependent idx="10">human</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">in</governor>
+            <dependent idx="11">understanding</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">understanding</governor>
+            <dependent idx="12">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="14">language</governor>
+            <dependent idx="13">natural</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="12">of</governor>
+            <dependent idx="14">language</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="8">process</governor>
+            <dependent idx="15">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="8">process</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="2">metaphors</governor>
+            <dependent idx="1">Interpreting</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="8">process</governor>
+            <dependent idx="2">metaphors</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="8">process</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">process</governor>
+            <dependent idx="4">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">process</governor>
+            <dependent idx="5">integral</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">integral</governor>
+            <dependent idx="6">and</dependent>
+          </dep>
+          <dep type="conj:and">
+            <governor idx="5">integral</governor>
+            <dependent idx="7">inescapable</dependent>
+          </dep>
+          <dep type="amod" extra="true">
+            <governor idx="8">process</governor>
+            <dependent idx="7">inescapable</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">process</governor>
+            <dependent idx="9">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">understanding</governor>
+            <dependent idx="10">human</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">in</governor>
+            <dependent idx="11">understanding</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">understanding</governor>
+            <dependent idx="12">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="14">language</governor>
+            <dependent idx="13">natural</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="12">of</governor>
+            <dependent idx="14">language</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="8">process</governor>
+            <dependent idx="15">.</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+      <sentence id="2">
+        <tokens>
+          <token id="1">
+            <word>This</word>
+            <lemma>this</lemma>
+            <CharacterOffsetBegin>114</CharacterOffsetBegin>
+            <CharacterOffsetEnd>118</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>paper</word>
+            <lemma>paper</lemma>
+            <CharacterOffsetBegin>119</CharacterOffsetBegin>
+            <CharacterOffsetEnd>124</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>discusses</word>
+            <lemma>discuss</lemma>
+            <CharacterOffsetBegin>125</CharacterOffsetBegin>
+            <CharacterOffsetEnd>134</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="4">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>135</CharacterOffsetBegin>
+            <CharacterOffsetEnd>136</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>method</word>
+            <lemma>method</lemma>
+            <CharacterOffsetBegin>138</CharacterOffsetBegin>
+            <CharacterOffsetEnd>144</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>145</CharacterOffsetBegin>
+            <CharacterOffsetEnd>147</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>analyzing</word>
+            <lemma>analyze</lemma>
+            <CharacterOffsetBegin>148</CharacterOffsetBegin>
+            <CharacterOffsetEnd>157</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>metaphors</word>
+            <lemma>metaphor</lemma>
+            <CharacterOffsetBegin>158</CharacterOffsetBegin>
+            <CharacterOffsetEnd>167</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>based</word>
+            <lemma>base</lemma>
+            <CharacterOffsetBegin>169</CharacterOffsetBegin>
+            <CharacterOffsetEnd>174</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="10">
+            <word>on</word>
+            <lemma>on</lemma>
+            <CharacterOffsetBegin>175</CharacterOffsetBegin>
+            <CharacterOffsetEnd>177</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>178</CharacterOffsetBegin>
+            <CharacterOffsetEnd>181</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>existence</word>
+            <lemma>existence</lemma>
+            <CharacterOffsetBegin>182</CharacterOffsetBegin>
+            <CharacterOffsetEnd>191</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>192</CharacterOffsetBegin>
+            <CharacterOffsetEnd>194</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>195</CharacterOffsetBegin>
+            <CharacterOffsetEnd>196</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>small</word>
+            <lemma>small</lemma>
+            <CharacterOffsetBegin>197</CharacterOffsetBegin>
+            <CharacterOffsetEnd>202</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>number</word>
+            <lemma>number</lemma>
+            <CharacterOffsetBegin>203</CharacterOffsetBegin>
+            <CharacterOffsetEnd>209</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>210</CharacterOffsetBegin>
+            <CharacterOffsetEnd>212</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="18">
+            <word>generalized</word>
+            <lemma>generalize</lemma>
+            <CharacterOffsetBegin>214</CharacterOffsetBegin>
+            <CharacterOffsetEnd>225</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="19">
+            <word>metaphor</word>
+            <lemma>metaphor</lemma>
+            <CharacterOffsetBegin>226</CharacterOffsetBegin>
+            <CharacterOffsetEnd>234</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="20">
+            <word>mappings</word>
+            <lemma>mapping</lemma>
+            <CharacterOffsetBegin>235</CharacterOffsetBegin>
+            <CharacterOffsetEnd>243</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="21">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>245</CharacterOffsetBegin>
+            <CharacterOffsetEnd>246</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (DT This) (NN paper)) (VP (VBZ discusses) (NP (NP (DT a) (NN method)) (PP (IN of) (S (VP (VBG analyzing) (NP (NNS metaphors)) (PP (VBN based) (PP (IN on) (NP (NP (DT the) (NN existence)) (PP (IN of) (NP (NP (DT a) (JJ small) (NN number)) (PP (IN of) (S (VP (VBN generalized) (NP (NN metaphor) (NNS mappings))))))))))))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="3">discusses</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="2">paper</governor>
+            <dependent idx="1">This</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">discusses</governor>
+            <dependent idx="2">paper</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">method</governor>
+            <dependent idx="4">a</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">discusses</governor>
+            <dependent idx="5">method</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">method</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="6">of</governor>
+            <dependent idx="7">analyzing</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">analyzing</governor>
+            <dependent idx="8">metaphors</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="8">metaphors</governor>
+            <dependent idx="9">based</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="9">based</governor>
+            <dependent idx="10">on</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">existence</governor>
+            <dependent idx="11">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">on</governor>
+            <dependent idx="12">existence</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">existence</governor>
+            <dependent idx="13">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">number</governor>
+            <dependent idx="14">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="16">number</governor>
+            <dependent idx="15">small</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">of</governor>
+            <dependent idx="16">number</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="16">number</governor>
+            <dependent idx="17">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="20">mappings</governor>
+            <dependent idx="18">generalized</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">mappings</governor>
+            <dependent idx="19">metaphor</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="17">of</governor>
+            <dependent idx="20">mappings</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="3">discusses</governor>
+            <dependent idx="21">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="3">discusses</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="2">paper</governor>
+            <dependent idx="1">This</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">discusses</governor>
+            <dependent idx="2">paper</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">method</governor>
+            <dependent idx="4">a</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">discusses</governor>
+            <dependent idx="5">method</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">method</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="6">of</governor>
+            <dependent idx="7">analyzing</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">analyzing</governor>
+            <dependent idx="8">metaphors</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="8">metaphors</governor>
+            <dependent idx="9">based</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="9">based</governor>
+            <dependent idx="10">on</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">existence</governor>
+            <dependent idx="11">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">on</governor>
+            <dependent idx="12">existence</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">existence</governor>
+            <dependent idx="13">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">number</governor>
+            <dependent idx="14">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="16">number</governor>
+            <dependent idx="15">small</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">of</governor>
+            <dependent idx="16">number</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="16">number</governor>
+            <dependent idx="17">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="20">mappings</governor>
+            <dependent idx="18">generalized</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">mappings</governor>
+            <dependent idx="19">metaphor</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="17">of</governor>
+            <dependent idx="20">mappings</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="3">discusses</governor>
+            <dependent idx="21">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="3">discusses</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="2">paper</governor>
+            <dependent idx="1">This</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">discusses</governor>
+            <dependent idx="2">paper</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">method</governor>
+            <dependent idx="4">a</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">discusses</governor>
+            <dependent idx="5">method</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">method</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="6">of</governor>
+            <dependent idx="7">analyzing</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">analyzing</governor>
+            <dependent idx="8">metaphors</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="8">metaphors</governor>
+            <dependent idx="9">based</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="9">based</governor>
+            <dependent idx="10">on</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">existence</governor>
+            <dependent idx="11">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">on</governor>
+            <dependent idx="12">existence</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">existence</governor>
+            <dependent idx="13">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">number</governor>
+            <dependent idx="14">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="16">number</governor>
+            <dependent idx="15">small</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">of</governor>
+            <dependent idx="16">number</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="16">number</governor>
+            <dependent idx="17">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="20">mappings</governor>
+            <dependent idx="18">generalized</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">mappings</governor>
+            <dependent idx="19">metaphor</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="17">of</governor>
+            <dependent idx="20">mappings</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="3">discusses</governor>
+            <dependent idx="21">.</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+      <sentence id="3">
+        <tokens>
+          <token id="1">
+            <word>Each</word>
+            <lemma>each</lemma>
+            <CharacterOffsetBegin>247</CharacterOffsetBegin>
+            <CharacterOffsetEnd>251</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>generalized</word>
+            <lemma>generalize</lemma>
+            <CharacterOffsetBegin>253</CharacterOffsetBegin>
+            <CharacterOffsetEnd>264</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>metaphor</word>
+            <lemma>metaphor</lemma>
+            <CharacterOffsetBegin>265</CharacterOffsetBegin>
+            <CharacterOffsetEnd>273</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="4">
+            <word>contains</word>
+            <lemma>contain</lemma>
+            <CharacterOffsetBegin>275</CharacterOffsetBegin>
+            <CharacterOffsetEnd>283</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>284</CharacterOffsetBegin>
+            <CharacterOffsetEnd>285</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>recognition</word>
+            <lemma>recognition</lemma>
+            <CharacterOffsetBegin>287</CharacterOffsetBegin>
+            <CharacterOffsetEnd>298</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>network</word>
+            <lemma>network</lemma>
+            <CharacterOffsetBegin>299</CharacterOffsetBegin>
+            <CharacterOffsetEnd>306</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>308</CharacterOffsetBegin>
+            <CharacterOffsetEnd>309</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>310</CharacterOffsetBegin>
+            <CharacterOffsetEnd>311</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="10">
+            <word>basic</word>
+            <lemma>basic</lemma>
+            <CharacterOffsetBegin>313</CharacterOffsetBegin>
+            <CharacterOffsetEnd>318</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>mapping</word>
+            <lemma>mapping</lemma>
+            <CharacterOffsetBegin>319</CharacterOffsetBegin>
+            <CharacterOffsetEnd>326</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>328</CharacterOffsetBegin>
+            <CharacterOffsetEnd>329</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>additional</word>
+            <lemma>additional</lemma>
+            <CharacterOffsetBegin>330</CharacterOffsetBegin>
+            <CharacterOffsetEnd>340</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>transfer</word>
+            <lemma>transfer</lemma>
+            <CharacterOffsetBegin>342</CharacterOffsetBegin>
+            <CharacterOffsetEnd>350</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>mappings</word>
+            <lemma>mapping</lemma>
+            <CharacterOffsetBegin>351</CharacterOffsetBegin>
+            <CharacterOffsetEnd>359</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>361</CharacterOffsetBegin>
+            <CharacterOffsetEnd>362</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>363</CharacterOffsetBegin>
+            <CharacterOffsetEnd>366</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="18">
+            <word>an</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>367</CharacterOffsetBegin>
+            <CharacterOffsetEnd>369</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="19">
+            <word>implicit</word>
+            <lemma>implicit</lemma>
+            <CharacterOffsetBegin>371</CharacterOffsetBegin>
+            <CharacterOffsetEnd>379</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="20">
+            <word>intention</word>
+            <lemma>intention</lemma>
+            <CharacterOffsetBegin>380</CharacterOffsetBegin>
+            <CharacterOffsetEnd>389</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="21">
+            <word>component</word>
+            <lemma>component</lemma>
+            <CharacterOffsetBegin>390</CharacterOffsetBegin>
+            <CharacterOffsetEnd>399</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="22">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>401</CharacterOffsetBegin>
+            <CharacterOffsetEnd>402</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (DT Each)) (VP (VBN generalized) (NP (NN metaphor)))) (VP (VBZ contains) (NP (NP (DT a) (NN recognition) (NN network)) (, ,) (NP (DT a) (JJ basic) (NN mapping)) (, ,) (NP (JJ additional) (NN transfer) (NNS mappings)) (, ,) (CC and) (NP (DT an) (JJ implicit) (NN intention) (NN component)))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="4">contains</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="3">metaphor</governor>
+            <dependent idx="1">Each</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">metaphor</governor>
+            <dependent idx="2">generalized</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="4">contains</governor>
+            <dependent idx="3">metaphor</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="7">network</governor>
+            <dependent idx="5">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">network</governor>
+            <dependent idx="6">recognition</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="4">contains</governor>
+            <dependent idx="7">network</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="8">,</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="11">mapping</governor>
+            <dependent idx="9">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mapping</governor>
+            <dependent idx="10">basic</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="7">network</governor>
+            <dependent idx="11">mapping</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="12">,</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="15">mappings</governor>
+            <dependent idx="13">additional</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">mappings</governor>
+            <dependent idx="14">transfer</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="7">network</governor>
+            <dependent idx="15">mappings</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="16">,</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="7">network</governor>
+            <dependent idx="17">and</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="21">component</governor>
+            <dependent idx="18">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">component</governor>
+            <dependent idx="19">implicit</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="21">component</governor>
+            <dependent idx="20">intention</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="7">network</governor>
+            <dependent idx="21">component</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="4">contains</governor>
+            <dependent idx="22">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="4">contains</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="3">metaphor</governor>
+            <dependent idx="1">Each</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">metaphor</governor>
+            <dependent idx="2">generalized</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="4">contains</governor>
+            <dependent idx="3">metaphor</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="7">network</governor>
+            <dependent idx="5">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">network</governor>
+            <dependent idx="6">recognition</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="4">contains</governor>
+            <dependent idx="7">network</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="8">,</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="11">mapping</governor>
+            <dependent idx="9">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mapping</governor>
+            <dependent idx="10">basic</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="7">network</governor>
+            <dependent idx="11">mapping</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="12">,</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="15">mappings</governor>
+            <dependent idx="13">additional</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">mappings</governor>
+            <dependent idx="14">transfer</dependent>
+          </dep>
+          <dep type="conj:and">
+            <governor idx="7">network</governor>
+            <dependent idx="15">mappings</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="16">,</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="7">network</governor>
+            <dependent idx="17">and</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="21">component</governor>
+            <dependent idx="18">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">component</governor>
+            <dependent idx="19">implicit</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="21">component</governor>
+            <dependent idx="20">intention</dependent>
+          </dep>
+          <dep type="conj:and">
+            <governor idx="7">network</governor>
+            <dependent idx="21">component</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="4">contains</governor>
+            <dependent idx="22">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="4">contains</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="3">metaphor</governor>
+            <dependent idx="1">Each</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">metaphor</governor>
+            <dependent idx="2">generalized</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="4">contains</governor>
+            <dependent idx="3">metaphor</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="7">network</governor>
+            <dependent idx="5">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">network</governor>
+            <dependent idx="6">recognition</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="4">contains</governor>
+            <dependent idx="7">network</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="8">,</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="11">mapping</governor>
+            <dependent idx="9">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mapping</governor>
+            <dependent idx="10">basic</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="7">network</governor>
+            <dependent idx="11">mapping</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="12">,</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="15">mappings</governor>
+            <dependent idx="13">additional</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">mappings</governor>
+            <dependent idx="14">transfer</dependent>
+          </dep>
+          <dep type="dobj" extra="true">
+            <governor idx="4">contains</governor>
+            <dependent idx="15">mappings</dependent>
+          </dep>
+          <dep type="conj:and">
+            <governor idx="7">network</governor>
+            <dependent idx="15">mappings</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="7">network</governor>
+            <dependent idx="16">,</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="7">network</governor>
+            <dependent idx="17">and</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="21">component</governor>
+            <dependent idx="18">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">component</governor>
+            <dependent idx="19">implicit</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="21">component</governor>
+            <dependent idx="20">intention</dependent>
+          </dep>
+          <dep type="dobj" extra="true">
+            <governor idx="4">contains</governor>
+            <dependent idx="21">component</dependent>
+          </dep>
+          <dep type="conj:and">
+            <governor idx="7">network</governor>
+            <dependent idx="21">component</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="4">contains</governor>
+            <dependent idx="22">.</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+      <sentence id="4">
+        <tokens>
+          <token id="1">
+            <word>It</word>
+            <lemma>it</lemma>
+            <CharacterOffsetBegin>403</CharacterOffsetBegin>
+            <CharacterOffsetEnd>405</CharacterOffsetEnd>
+            <POS>PRP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>is</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>406</CharacterOffsetBegin>
+            <CharacterOffsetEnd>408</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>argued</word>
+            <lemma>argue</lemma>
+            <CharacterOffsetBegin>409</CharacterOffsetBegin>
+            <CharacterOffsetEnd>415</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="4">
+            <word>that</word>
+            <lemma>that</lemma>
+            <CharacterOffsetBegin>416</CharacterOffsetBegin>
+            <CharacterOffsetEnd>420</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>421</CharacterOffsetBegin>
+            <CharacterOffsetEnd>424</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>method</word>
+            <lemma>method</lemma>
+            <CharacterOffsetBegin>425</CharacterOffsetBegin>
+            <CharacterOffsetEnd>431</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>reduces</word>
+            <lemma>reduce</lemma>
+            <CharacterOffsetBegin>432</CharacterOffsetBegin>
+            <CharacterOffsetEnd>439</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>metaphor</word>
+            <lemma>metaphor</lemma>
+            <CharacterOffsetBegin>441</CharacterOffsetBegin>
+            <CharacterOffsetEnd>449</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>interpretation</word>
+            <lemma>interpretation</lemma>
+            <CharacterOffsetBegin>450</CharacterOffsetBegin>
+            <CharacterOffsetEnd>464</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="10">
+            <word>from</word>
+            <lemma>from</lemma>
+            <CharacterOffsetBegin>466</CharacterOffsetBegin>
+            <CharacterOffsetEnd>470</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>471</CharacterOffsetBegin>
+            <CharacterOffsetEnd>472</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>reconstruction</word>
+            <lemma>reconstruction</lemma>
+            <CharacterOffsetBegin>474</CharacterOffsetBegin>
+            <CharacterOffsetEnd>488</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>490</CharacterOffsetBegin>
+            <CharacterOffsetEnd>492</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>493</CharacterOffsetBegin>
+            <CharacterOffsetEnd>494</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>recognition</word>
+            <lemma>recognition</lemma>
+            <CharacterOffsetBegin>496</CharacterOffsetBegin>
+            <CharacterOffsetEnd>507</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>task</word>
+            <lemma>task</lemma>
+            <CharacterOffsetBegin>508</CharacterOffsetBegin>
+            <CharacterOffsetEnd>512</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>514</CharacterOffsetBegin>
+            <CharacterOffsetEnd>515</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (PRP It)) (VP (VBZ is) (VP (VBN argued) (SBAR (IN that) (S (NP (DT the) (NN method)) (VP (VBZ reduces) (NP (NN metaphor) (NN interpretation)) (PP (IN from) (NP (NP (DT a) (NN reconstruction)) (PP (TO to) (NP (DT a) (NN recognition) (NN task)))))))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="3">argued</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="3">argued</governor>
+            <dependent idx="1">It</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="3">argued</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="mark">
+            <governor idx="7">reduces</governor>
+            <dependent idx="4">that</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">method</governor>
+            <dependent idx="5">the</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">reduces</governor>
+            <dependent idx="6">method</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="3">argued</governor>
+            <dependent idx="7">reduces</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">interpretation</governor>
+            <dependent idx="8">metaphor</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">reduces</governor>
+            <dependent idx="9">interpretation</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">reduces</governor>
+            <dependent idx="10">from</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">reconstruction</governor>
+            <dependent idx="11">a</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">from</governor>
+            <dependent idx="12">reconstruction</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">reconstruction</governor>
+            <dependent idx="13">to</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">task</governor>
+            <dependent idx="14">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="16">task</governor>
+            <dependent idx="15">recognition</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">to</governor>
+            <dependent idx="16">task</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="3">argued</governor>
+            <dependent idx="17">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="3">argued</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="3">argued</governor>
+            <dependent idx="1">It</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="3">argued</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="mark">
+            <governor idx="7">reduces</governor>
+            <dependent idx="4">that</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">method</governor>
+            <dependent idx="5">the</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">reduces</governor>
+            <dependent idx="6">method</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="3">argued</governor>
+            <dependent idx="7">reduces</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">interpretation</governor>
+            <dependent idx="8">metaphor</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">reduces</governor>
+            <dependent idx="9">interpretation</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">reduces</governor>
+            <dependent idx="10">from</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">reconstruction</governor>
+            <dependent idx="11">a</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">from</governor>
+            <dependent idx="12">reconstruction</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">reconstruction</governor>
+            <dependent idx="13">to</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">task</governor>
+            <dependent idx="14">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="16">task</governor>
+            <dependent idx="15">recognition</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">to</governor>
+            <dependent idx="16">task</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="3">argued</governor>
+            <dependent idx="17">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="3">argued</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="3">argued</governor>
+            <dependent idx="1">It</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="3">argued</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="mark">
+            <governor idx="7">reduces</governor>
+            <dependent idx="4">that</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">method</governor>
+            <dependent idx="5">the</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">reduces</governor>
+            <dependent idx="6">method</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="3">argued</governor>
+            <dependent idx="7">reduces</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">interpretation</governor>
+            <dependent idx="8">metaphor</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">reduces</governor>
+            <dependent idx="9">interpretation</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">reduces</governor>
+            <dependent idx="10">from</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">reconstruction</governor>
+            <dependent idx="11">a</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">from</governor>
+            <dependent idx="12">reconstruction</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">reconstruction</governor>
+            <dependent idx="13">to</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">task</governor>
+            <dependent idx="14">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="16">task</governor>
+            <dependent idx="15">recognition</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">to</governor>
+            <dependent idx="16">task</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="3">argued</governor>
+            <dependent idx="17">.</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+      <sentence id="5">
+        <tokens>
+          <token id="1">
+            <word>Implications</word>
+            <lemma>implication</lemma>
+            <CharacterOffsetBegin>516</CharacterOffsetBegin>
+            <CharacterOffsetEnd>528</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>towards</word>
+            <lemma>towards</lemma>
+            <CharacterOffsetBegin>529</CharacterOffsetBegin>
+            <CharacterOffsetEnd>536</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>automating</word>
+            <lemma>automate</lemma>
+            <CharacterOffsetBegin>537</CharacterOffsetBegin>
+            <CharacterOffsetEnd>547</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="4">
+            <word>certain</word>
+            <lemma>certain</lemma>
+            <CharacterOffsetBegin>548</CharacterOffsetBegin>
+            <CharacterOffsetEnd>555</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>aspects</word>
+            <lemma>aspect</lemma>
+            <CharacterOffsetBegin>556</CharacterOffsetBegin>
+            <CharacterOffsetEnd>563</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>564</CharacterOffsetBegin>
+            <CharacterOffsetEnd>566</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>language</word>
+            <lemma>language</lemma>
+            <CharacterOffsetBegin>568</CharacterOffsetBegin>
+            <CharacterOffsetEnd>576</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>learning</word>
+            <lemma>learning</lemma>
+            <CharacterOffsetBegin>577</CharacterOffsetBegin>
+            <CharacterOffsetEnd>585</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>are</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>587</CharacterOffsetBegin>
+            <CharacterOffsetEnd>590</CharacterOffsetEnd>
+            <POS>VBP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="10">
+            <word>also</word>
+            <lemma>also</lemma>
+            <CharacterOffsetBegin>591</CharacterOffsetBegin>
+            <CharacterOffsetEnd>595</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>discussed</word>
+            <lemma>discuss</lemma>
+            <CharacterOffsetBegin>596</CharacterOffsetBegin>
+            <CharacterOffsetEnd>605</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>605</CharacterOffsetBegin>
+            <CharacterOffsetEnd>606</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (NNS Implications)) (PP (IN towards) (S (VP (VBG automating) (NP (NP (JJ certain) (NNS aspects)) (PP (IN of) (NP (NN language) (NN learning)))))))) (VP (VBP are) (ADVP (RB also)) (VP (VBN discussed))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="11">discussed</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="11">discussed</governor>
+            <dependent idx="1">Implications</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Implications</governor>
+            <dependent idx="2">towards</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="2">towards</governor>
+            <dependent idx="3">automating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">aspects</governor>
+            <dependent idx="4">certain</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">automating</governor>
+            <dependent idx="5">aspects</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">aspects</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="8">learning</governor>
+            <dependent idx="7">language</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">of</governor>
+            <dependent idx="8">learning</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="11">discussed</governor>
+            <dependent idx="9">are</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="11">discussed</governor>
+            <dependent idx="10">also</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="11">discussed</governor>
+            <dependent idx="12">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="11">discussed</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="11">discussed</governor>
+            <dependent idx="1">Implications</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Implications</governor>
+            <dependent idx="2">towards</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="2">towards</governor>
+            <dependent idx="3">automating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">aspects</governor>
+            <dependent idx="4">certain</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">automating</governor>
+            <dependent idx="5">aspects</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">aspects</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="8">learning</governor>
+            <dependent idx="7">language</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">of</governor>
+            <dependent idx="8">learning</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="11">discussed</governor>
+            <dependent idx="9">are</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="11">discussed</governor>
+            <dependent idx="10">also</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="11">discussed</governor>
+            <dependent idx="12">.</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="11">discussed</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="11">discussed</governor>
+            <dependent idx="1">Implications</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Implications</governor>
+            <dependent idx="2">towards</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="2">towards</governor>
+            <dependent idx="3">automating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">aspects</governor>
+            <dependent idx="4">certain</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">automating</governor>
+            <dependent idx="5">aspects</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">aspects</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="8">learning</governor>
+            <dependent idx="7">language</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">of</governor>
+            <dependent idx="8">learning</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="11">discussed</governor>
+            <dependent idx="9">are</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="11">discussed</governor>
+            <dependent idx="10">also</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="11">discussed</governor>
+            <dependent idx="12">.</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+    </sentences>
+    <coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>1</sentence>
+          <start>1</start>
+          <end>3</end>
+          <head>2</head>
+          <text>Interpreting metaphors</text>
+        </mention>
+        <mention>
+          <sentence>1</sentence>
+          <start>4</start>
+          <end>15</end>
+          <head>8</head>
+          <text>an integral and inescapable process in human understanding of natural language</text>
+        </mention>
+        <mention>
+          <sentence>2</sentence>
+          <start>8</start>
+          <end>9</end>
+          <head>8</head>
+          <text>metaphors</text>
+        </mention>
+      </coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>2</sentence>
+          <start>4</start>
+          <end>21</end>
+          <head>5</head>
+          <text>a method of analyzing metaphors based on the existence of a small number of generalized metaphor mappings</text>
+        </mention>
+        <mention>
+          <sentence>4</sentence>
+          <start>5</start>
+          <end>7</end>
+          <head>6</head>
+          <text>the method</text>
+        </mention>
+      </coreference>
+    </coreference>
+  </document>
+</root>

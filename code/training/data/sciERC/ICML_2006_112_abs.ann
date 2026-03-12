@@ -1,0 +1,25 @@
+T1	Generic 22 31	framework
+T2	Task 36 62	online multiclass learning
+T3	OtherScientificTerm 76 104	notion of hypothesis sharing
+T4	Generic 113 122	framework
+T5	Generic 240 249	framework
+T6	Task 308 333	multiclass categorization
+T7	Method 465 486	multiclass Perceptron
+T8	Generic 494 503	framework
+T9	Method 517 548	unifying mistake bound analysis
+T10	Method 684 707	online learning process
+T11	Generic 742 750	approach
+T12	Generic 764 766	it
+T13	Generic 779 786	methods
+T14	Material 795 825	synthetic and natural datasets
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T1
+R3	COREF Arg1:T1 Arg2:T4
+R4	COREF Arg1:T4 Arg2:T5
+R5	COREF Arg1:T5 Arg2:T8
+R6	USED-FOR Arg1:T7 Arg2:T8
+R7	COREF Arg1:T8 Arg2:T11
+R8	COREF Arg1:T11 Arg2:T12
+R9	COMPARE Arg1:T12 Arg2:T13
+R10	EVALUATE-FOR Arg1:T14 Arg2:T13
+R11	EVALUATE-FOR Arg1:T14 Arg2:T12

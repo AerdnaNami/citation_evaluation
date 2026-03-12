@@ -1,0 +1,45 @@
+T1	Method 17 56	model-based bundle adjustment algorithm
+T2	Method 72 80	3D model
+T3	Material 118 124	images
+T4	OtherScientificTerm 130 145	unknown motions
+T5	OtherScientificTerm 203 223	isolated 3D features
+T6	Generic 246 255	algorithm
+T7	OtherScientificTerm 263 270	surface
+T8	Generic 335 357	model-based approaches
+T9	Generic 363 371	approach
+T10	OtherScientificTerm 430 441	model space
+T11	OtherScientificTerm 447 459	regular-izer
+T12	Generic 477 479	it
+T13	OtherScientificTerm 487 499	search space
+T14	Generic 599 608	algorithm
+T15	OtherScientificTerm 685 693	surfaces
+T16	OtherScientificTerm 730 756	prior 2D-to-3D association
+T17	Task 775 788	face modeling
+T18	Metric 817 829	face metrics
+T19	OtherScientificTerm 877 890	face geometry
+T20	OtherScientificTerm 915 927	search space
+T21	Method 941 953	posed system
+T22	Material 977 1000	synthetic and real data
+T23	Generic 1020 1029	algorithm
+T24	Generic 1085 1089	ones
+R1	PART-OF Arg1:T4 Arg2:T3
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T1 Arg2:T6
+R5	USED-FOR Arg1:T7 Arg2:T6
+R6	COREF Arg1:T9 Arg2:T6
+R7	COMPARE Arg1:T8 Arg2:T9
+R8	COREF Arg1:T10 Arg2:T12
+R9	USED-FOR Arg1:T12 Arg2:T13
+R10	USED-FOR Arg1:T10 Arg2:T11
+R11	COMPARE Arg1:T11 Arg2:T13
+R12	COREF Arg1:T9 Arg2:T14
+R13	COREF Arg1:T14 Arg2:T23
+R14	EVALUATE-FOR Arg1:T22 Arg2:T23
+R15	COREF Arg1:T8 Arg2:T24
+R16	COMPARE Arg1:T23 Arg2:T24
+R17	EVALUATE-FOR Arg1:T22 Arg2:T24
+R18	USED-FOR Arg1:T18 Arg2:T17
+R19	USED-FOR Arg1:T18 Arg2:T19
+R20	USED-FOR Arg1:T18 Arg2:T20
+R21	USED-FOR Arg1:T18 Arg2:T21

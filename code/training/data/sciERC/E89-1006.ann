@@ -1,0 +1,44 @@
+T1	Generic 3 11	proposal
+T2	OtherScientificTerm 26 39	French tenses
+T3	Method 62 93	Discourse Representation Theory
+T4	Generic 112 114	it
+T5	Task 159 162	IMS
+T6	Generic 165 167	It
+T7	OtherScientificTerm 185 201	theory of tenses
+T8	Generic 248 257	operators
+T9	OtherScientificTerm 275 298	meaning  of the  tenses
+T10	OtherScientificTerm 526 541	event structure
+T11	Method 580 604	system of relevant times
+T12	OtherScientificTerm 622 638	preceeding  text
+T13	OtherScientificTerm 652 671	temporal adverbials
+T14	Generic 721 727	system
+T15	OtherScientificTerm 753 768	reference times
+T16	OtherScientificTerm 775 801	temporal perspective times
+T17	OtherScientificTerm 809 820	speech time
+T18	OtherScientificTerm 831 844	location time
+T19	Method 962 986	system of relevant times
+T20	Method 1008 1038	system of temporal coordinates
+T21	OtherScientificTerm 1173 1196	meaning  of the  tenses
+T22	Method 1215 1235	resolution component
+T23	Method 1264 1282	syntactic analysis
+R1	COMPARE Arg1:T22 Arg2:T23
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	CONJUNCTION Arg1:T12 Arg2:T13
+R4	USED-FOR Arg1:T12 Arg2:T11
+R5	COREF Arg1:T14 Arg2:T11
+R6	PART-OF Arg1:T15 Arg2:T14
+R7	PART-OF Arg1:T16 Arg2:T14
+R8	CONJUNCTION Arg1:T15 Arg2:T16
+R9	PART-OF Arg1:T17 Arg2:T14
+R10	PART-OF Arg1:T18 Arg2:T14
+R11	CONJUNCTION Arg1:T16 Arg2:T17
+R12	CONJUNCTION Arg1:T17 Arg2:T18
+R13	COREF Arg1:T19 Arg2:T14
+R14	COREF Arg1:T20 Arg2:T19
+R15	COREF Arg1:T4 Arg2:T1
+R16	USED-FOR Arg1:T4 Arg2:T5
+R17	COREF Arg1:T4 Arg2:T6
+R18	USED-FOR Arg1:T7 Arg2:T6
+R19	USED-FOR Arg1:T8 Arg2:T9
+R20	USED-FOR Arg1:T13 Arg2:T11
+R21	USED-FOR Arg1:T22 Arg2:T21

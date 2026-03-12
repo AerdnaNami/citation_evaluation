@@ -1,0 +1,62 @@
+T1	Method 28 47	geometric framework
+T2	Task 52 121	linear or nonlinear discriminant subspace learning and classification
+T3	Generic 130 139	framework
+T4	OtherScientificTerm 145 166	structures of classes
+T5	OtherScientificTerm 191 215	semi-Riemannian manifold
+T6	OtherScientificTerm 241 252	submanifold
+T7	OtherScientificTerm 268 297	ambient semi-Riemannian space
+T8	OtherScientificTerm 303 319	class structures
+T9	Metric 377 419	local metrics of the semi-Riemannian space
+T10	Metric 421 444	Semi-Riemannian metrics
+T11	Method 476 507	smoothing of discrete functions
+T12	OtherScientificTerm 516 552	nullity of the semi-Riemannian space
+T13	Method 567 601	geometrization of class structures
+T14	OtherScientificTerm 614 630	class structures
+T15	OtherScientificTerm 638 651	feature space
+T16	OtherScientificTerm 684 722	quadratic quantities of metric tensors
+T17	OtherScientificTerm 730 751	semi-Riemannian space
+T18	Method 758 799	supervised discriminant subspace learning
+T19	Method 811 858	unsupervised semi-Riemannian mani-fold learning
+T20	Generic 882 891	framework
+T21	Generic 901 910	algorithm
+T22	Method 922 966	Semi-Riemannian Discriminant Analysis (SRDA)
+T23	Task 985 1014	subspace-based classification
+T24	Method 1035 1039	SRDA
+T25	Task 1053 1084	face recognition (singular case
+T26	Task 1090 1150	handwritten capital letter classification (nonsingular case)
+T27	Generic 1168 1178	algorithms
+T28	Generic 1215 1219	SRDA
+T29	Task 1234 1245	recognition
+T30	Task 1250 1264	classification
+T31	Method 1280 1304	semi-Riemannian geometry
+T32	Task 1333 1352	pattern recognition
+T33	Task 1357 1373	machine learning
+R1	COREF Arg1:T3 Arg2:T1
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	USED-FOR Arg1:T5 Arg2:T4
+R4	PART-OF Arg1:T6 Arg2:T7
+R5	USED-FOR Arg1:T9 Arg2:T8
+R6	COREF Arg1:T10 Arg2:T9
+R7	USED-FOR Arg1:T11 Arg2:T10
+R8	USED-FOR Arg1:T12 Arg2:T10
+R9	FEATURE-OF Arg1:T15 Arg2:T14
+R10	FEATURE-OF Arg1:T17 Arg2:T16
+R11	COREF Arg1:T22 Arg2:T21
+R12	USED-FOR Arg1:T21 Arg2:T23
+R13	COREF Arg1:T1 Arg2:T20
+R14	COREF Arg1:T24 Arg2:T22
+R15	USED-FOR Arg1:T20 Arg2:T21
+R16	EVALUATE-FOR Arg1:T25 Arg2:T24
+R17	EVALUATE-FOR Arg1:T26 Arg2:T24
+R18	CONJUNCTION Arg1:T25 Arg2:T26
+R19	COMPARE Arg1:T24 Arg2:T27
+R20	COREF Arg1:T22 Arg2:T28
+R21	EVALUATE-FOR Arg1:T25 Arg2:T27
+R22	EVALUATE-FOR Arg1:T26 Arg2:T27
+R23	USED-FOR Arg1:T28 Arg2:T29
+R24	USED-FOR Arg1:T28 Arg2:T30
+R25	CONJUNCTION Arg1:T29 Arg2:T30
+R26	CONJUNCTION Arg1:T32 Arg2:T33
+R27	USED-FOR Arg1:T31 Arg2:T32
+R28	USED-FOR Arg1:T31 Arg2:T33
+R29	CONJUNCTION Arg1:T11 Arg2:T12

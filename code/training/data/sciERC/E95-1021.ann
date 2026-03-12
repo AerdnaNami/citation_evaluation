@@ -1,0 +1,25 @@
+T1	Generic 40 50	approaches
+T2	Task 55 77	part-of-speech tagging
+T3	Task 81 128	statistical and constraint-based disambiguation
+T4	Material 138 144	French
+T5	Generic 260 277	constraint system
+T6	Method 359 376	statistical model
+T7	Generic 399 406	systems
+T8	Metric 437 445	accuracy
+T9	Method 455 473	statistical method
+T10	Method 510 517	taggers
+T11	Material 524 531	English
+T12	Method 543 566	constraint-based tagger
+R1	COMPARE Arg1:T5 Arg2:T6
+R2	COMPARE Arg1:T9 Arg2:T10
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T3 Arg2:T1
+R5	USED-FOR Arg1:T4 Arg2:T1
+R6	COREF Arg1:T9 Arg2:T6
+R7	USED-FOR Arg1:T10 Arg2:T11
+R8	COREF Arg1:T12 Arg2:T5
+R9	COREF Arg1:T7 Arg2:T1
+R10	HYPONYM-OF Arg1:T5 Arg2:T1
+R11	HYPONYM-OF Arg1:T6 Arg2:T1
+R12	EVALUATE-FOR Arg1:T8 Arg2:T9
+R13	EVALUATE-FOR Arg1:T8 Arg2:T10

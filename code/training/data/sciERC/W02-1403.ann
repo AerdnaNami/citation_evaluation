@@ -1,0 +1,20 @@
+T1	Task 2 25	Terminology structuring
+T2	Material 193 199	corpus
+T3	OtherScientificTerm 215 257	hierarchical (or other types of) relations
+T4	Task 313 336	terminology structuring
+T5	Method 342 357	lexical methods
+T6	OtherScientificTerm 427 449	morphological variants
+T7	Material 543 580	hierarchically-structured terminology
+T8	Material 610 656	US National Library of Medicine MeSH thesaurus
+T9	OtherScientificTerm 675 702	lexically-induced relations
+T10	OtherScientificTerm 723 737	MeSH relations
+T11	Metric 801 829	recall and precision metrics
+T12	OtherScientificTerm 917 921	MeSH
+T13	Method 981 1007	lexical structuring method
+T14	OtherScientificTerm 1117 1121	MeSH
+T15	Task 1197 1218	automatic structuring
+R1	HYPONYM-OF Arg1:T8 Arg2:T7
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	COREF Arg1:T12 Arg2:T10
+R4	COMPARE Arg1:T9 Arg2:T10
+R5	EVALUATE-FOR Arg1:T11 Arg2:T10

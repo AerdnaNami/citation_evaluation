@@ -1,0 +1,47 @@
+T1	Method 28 41	KAZE features
+T2	Method 51 108	multiscale 2D feature detection and description algorithm
+T3	OtherScientificTerm 112 134	nonlinear scale spaces
+T4	OtherScientificTerm 244 264	Gaussian scale space
+T5	OtherScientificTerm 287 304	Gaussian blurring
+T6	OtherScientificTerm 334 355	boundaries of objects
+T7	Metric 421 462	localization accuracy and distinctiveness
+T8	Method 500 511	2D features
+T9	OtherScientificTerm 517 538	nonlinear scale space
+T10	Method 551 580	nonlinear diffusion filtering
+T11	Material 640 650	image data
+T12	OtherScientificTerm 681 698	object boundaries
+T13	Metric 719 760	localization accuracy and distinctiviness
+T14	OtherScientificTerm 766 787	nonlinear scale space
+T15	Method 813 857	Additive Operator Splitting (AOS) techniques
+T16	Method 862 893	variable con-ductance diffusion
+T17	Material 933 951	benchmark datasets
+T18	Task 968 1011	matching application on deformable surfaces
+T19	Generic 1029 1037	features
+T20	Method 1082 1086	SURF
+T21	OtherScientificTerm 1118 1139	nonlinear scale space
+T22	Method 1159 1163	SIFT
+T23	Generic 1169 1176	results
+T24	Task 1222 1231	detection
+T25	Task 1236 1247	description
+T26	Generic 1265 1289	state-of-the-art methods
+R1	FEATURE-OF Arg1:T3 Arg2:T2
+R2	HYPONYM-OF Arg1:T1 Arg2:T2
+R3	FEATURE-OF Arg1:T9 Arg2:T8
+R4	USED-FOR Arg1:T10 Arg2:T8
+R5	COREF Arg1:T7 Arg2:T13
+R6	COREF Arg1:T8 Arg2:T19
+R7	COREF Arg1:T1 Arg2:T8
+R8	COMPARE Arg1:T19 Arg2:T20
+R9	COMPARE Arg1:T19 Arg2:T22
+R10	COREF Arg1:T19 Arg2:T23
+R11	EVALUATE-FOR Arg1:T24 Arg2:T23
+R12	EVALUATE-FOR Arg1:T25 Arg2:T23
+R13	CONJUNCTION Arg1:T24 Arg2:T25
+R14	COMPARE Arg1:T23 Arg2:T26
+R15	EVALUATE-FOR Arg1:T24 Arg2:T26
+R16	EVALUATE-FOR Arg1:T25 Arg2:T26
+R17	CONJUNCTION Arg1:T15 Arg2:T16
+R18	USED-FOR Arg1:T15 Arg2:T14
+R19	USED-FOR Arg1:T16 Arg2:T14
+R20	COREF Arg1:T14 Arg2:T21
+R21	COREF Arg1:T9 Arg2:T14

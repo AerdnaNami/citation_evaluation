@@ -1,0 +1,33 @@
+T1	Method 0 23	LPC based speech coders
+T2	OtherScientificTerm 37 46	bit rates
+T3	OtherScientificTerm 95 122	buzzy or metallic artefacts
+T4	Material 130 146	synthetic speech
+T5	OtherScientificTerm 224 241	excitation source
+T6	OtherScientificTerm 287 300	low bit rates
+T7	Method 322 333	LPC vocoder
+T8	OtherScientificTerm 364 378	LPC excitation
+T9	OtherScientificTerm 388 403	frequency bands
+T10	OtherScientificTerm 412 437	variable cutoff frequency
+T11	Material 490 512	voiced parts of speech
+T12	Material 547 562	unvoiced speech
+T13	Generic 580 585	coder
+T14	Material 612 632	mixed voicing speech
+T15	Material 637 669	speech containing acoustic noise
+T16	Material 701 729	soft natural sounding speech
+T17	Method 760 783	parameter determination
+T18	Method 788 811	quantisation techniques
+T19	Generic 843 848	coder
+T20	OtherScientificTerm 857 870	low bit rates
+R1	FEATURE-OF Arg1:T2 Arg2:T1
+R2	FEATURE-OF Arg1:T3 Arg2:T4
+R3	USED-FOR Arg1:T10 Arg2:T9
+R4	USED-FOR Arg1:T10 Arg2:T8
+R5	COREF Arg1:T13 Arg2:T7
+R6	USED-FOR Arg1:T14 Arg2:T13
+R7	USED-FOR Arg1:T15 Arg2:T13
+R8	USED-FOR Arg1:T13 Arg2:T16
+R9	COREF Arg1:T13 Arg2:T19
+R10	FEATURE-OF Arg1:T20 Arg2:T19
+R11	USED-FOR Arg1:T18 Arg2:T19
+R12	USED-FOR Arg1:T17 Arg2:T19
+R13	CONJUNCTION Arg1:T17 Arg2:T18

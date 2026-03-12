@@ -1,0 +1,28 @@
+T1	Task 2 23	Multimodal interfaces
+T2	Method 43 50	parsing
+T3	Generic 170 178	approach
+T4	Task 204 226	multimodal integration
+T5	Method 262 287	unification-based grammar
+T6	Method 308 337	multidimensional chart parser
+T7	Generic 363 371	approach
+T8	OtherScientificTerm 424 434	interfaces
+T9	Metric 565 589	computational complexity
+T10	Generic 717 725	approach
+T11	Task 736 772	multimodal parsing and understanding
+T12	Method 796 824	weighted finite-state device
+T13	Material 839 865	speech and gesture streams
+T14	Generic 922 930	approach
+T15	Task 990 1014	multimodal understanding
+T16	Task 1021 1039	speech recognition
+T17	Task 1094 1125	multimodal ambiguity resolution
+R1	USED-FOR Arg1:T5 Arg2:T6
+R2	USED-FOR Arg1:T12 Arg2:T11
+R3	COREF Arg1:T7 Arg2:T3
+R4	COREF Arg1:T14 Arg2:T10
+R5	USED-FOR Arg1:T10 Arg2:T11
+R6	USED-FOR Arg1:T5 Arg2:T4
+R7	USED-FOR Arg1:T3 Arg2:T4
+R8	USED-FOR Arg1:T2 Arg2:T1
+R9	CONJUNCTION Arg1:T16 Arg2:T15
+R10	USED-FOR Arg1:T14 Arg2:T17
+R11	USED-FOR Arg1:T13 Arg2:T12

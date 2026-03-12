@@ -1,0 +1,42 @@
+T1	Method 24 43	dialogue management
+T2	Task 51 80	information navigation system
+T3	Material 92 115	document knowledge base
+T4	OtherScientificTerm 166 190	N-best candidates of ASR
+T5	OtherScientificTerm 195 217	contextual information
+T6	Generic 235 241	system
+T7	Generic 259 265	system
+T8	Task 294 331	generating responses or confirmations
+T9	Task 379 405	minimization of Bayes risk
+T10	Metric 415 421	reward
+T11	OtherScientificTerm 426 458	correct information presentation
+T12	Metric 463 470	penalty
+T13	OtherScientificTerm 475 490	redundant turns
+T14	Generic 515 523	strategy
+T15	Task 533 593	spoken dialogue system " Dialogue Navigator for Kyoto City "
+T16	OtherScientificTerm 611 640	question-answering capability
+T17	Generic 672 681	framework
+T18	Metric 703 728	success rate of retrieval
+T19	Metric 737 760	average number of turns
+T20	OtherScientificTerm 765 783	information access
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	USED-FOR Arg1:T7 Arg2:T8
+R4	USED-FOR Arg1:T10 Arg2:T9
+R5	USED-FOR Arg1:T10 Arg2:T11
+R6	USED-FOR Arg1:T12 Arg2:T13
+R7	USED-FOR Arg1:T12 Arg2:T9
+R8	COREF Arg1:T14 Arg2:T9
+R9	COREF Arg1:T7 Arg2:T6
+R10	COREF Arg1:T6 Arg2:T2
+R11	COREF Arg1:T17 Arg2:T14
+R12	EVALUATE-FOR Arg1:T18 Arg2:T17
+R13	USED-FOR Arg1:T19 Arg2:T20
+R14	EVALUATE-FOR Arg1:T19 Arg2:T17
+R15	CONJUNCTION Arg1:T18 Arg2:T19
+R16	USED-FOR Arg1:T4 Arg2:T6
+R17	USED-FOR Arg1:T5 Arg2:T6
+R18	CONJUNCTION Arg1:T4 Arg2:T5
+R19	EVALUATE-FOR Arg1:T15 Arg2:T14
+R20	FEATURE-OF Arg1:T16 Arg2:T15
+R21	COREF Arg1:T7 Arg2:T15
+R22	CONJUNCTION Arg1:T10 Arg2:T12

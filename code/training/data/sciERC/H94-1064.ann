@@ -1,0 +1,52 @@
+T1	Task 51 119	multilingual, speaker-independent, large vocabulary speech dictation
+T2	Method 141 157	LIMSI recognizer
+T3	Material 187 206	ARPA NOV93 CSR test
+T4	Material 255 275	WSJ and BREF corpora
+T5	Generic 334 341	corpora
+T6	Task 344 360	word recognition
+T7	Generic 445 455	recognizer
+T8	Method 470 492	continuous density HMM
+T9	Method 500 516	Gaussian mixture
+T10	Task 523 540	acoustic modeling
+T11	Method 547 564	n-gram statistics
+T12	Material 584 599	newspaper texts
+T13	Task 606 623	language modeling
+T14	Generic 630 640	recognizer
+T15	Method 649 687	time-synchronous graph-search strategy
+T16	Method 766 797	bigram back-off language models
+T17	OtherScientificTerm 847 857	word graph
+T18	Method 879 885	bigram
+T19	Method 904 926	trigram language model
+T20	Task 930 947	Acoustic modeling
+T21	OtherScientificTerm 955 978	cepstrum-based features
+T22	Method 982 1034	context-dependent phone models (intra and interword)
+T23	Method 1038 1059	phone duration models
+T24	Method 1067 1087	sex-dependent models
+R1	CONJUNCTION Arg1:T8 Arg2:T9
+R2	USED-FOR Arg1:T11 Arg2:T13
+R3	USED-FOR Arg1:T21 Arg2:T20
+R4	EVALUATE-FOR Arg1:T3 Arg2:T2
+R5	EVALUATE-FOR Arg1:T4 Arg2:T2
+R6	COREF Arg1:T7 Arg2:T2
+R7	USED-FOR Arg1:T8 Arg2:T7
+R8	USED-FOR Arg1:T8 Arg2:T10
+R9	EVALUATE-FOR Arg1:T12 Arg2:T11
+R10	USED-FOR Arg1:T11 Arg2:T7
+R11	CONJUNCTION Arg1:T8 Arg2:T11
+R12	COREF Arg1:T14 Arg2:T7
+R13	USED-FOR Arg1:T15 Arg2:T14
+R14	CONJUNCTION Arg1:T16 Arg2:T15
+R15	USED-FOR Arg1:T16 Arg2:T14
+R16	USED-FOR Arg1:T18 Arg2:T17
+R17	COREF Arg1:T20 Arg2:T10
+R18	CONJUNCTION Arg1:T19 Arg2:T17
+R19	USED-FOR Arg1:T22 Arg2:T20
+R20	USED-FOR Arg1:T23 Arg2:T20
+R21	USED-FOR Arg1:T24 Arg2:T20
+R22	CONJUNCTION Arg1:T21 Arg2:T22
+R23	CONJUNCTION Arg1:T22 Arg2:T23
+R24	CONJUNCTION Arg1:T23 Arg2:T24
+R25	HYPONYM-OF Arg1:T3 Arg2:T5
+R26	HYPONYM-OF Arg1:T4 Arg2:T5
+R27	USED-FOR Arg1:T9 Arg2:T10
+R28	EVALUATE-FOR Arg1:T5 Arg2:T6

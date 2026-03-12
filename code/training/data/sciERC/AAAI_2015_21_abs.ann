@@ -1,0 +1,30 @@
+T1	Material 0 22	Semantic Web documents
+T2	Task 125 143	Creating summaries
+T3	Material 147 177	lengthy Semantic Web documents
+T4	Task 188 230	identification of the corresponding entity
+T5	Method 298 333	automatic summa-rization techniques
+T6	OtherScientificTerm 482 513	diversified (faceted) summaries
+T7	OtherScientificTerm 545 554	diversity
+T8	OtherScientificTerm 556 566	uniqueness
+T9	OtherScientificTerm 572 582	popularity
+T10	Method 594 639	diversity-aware entity summarization approach
+T11	Method 647 685	human conceptual clustering techniques
+T12	Generic 868 876	approach
+T13	Generic 889 916	state-of-the-art techniques
+T14	Metric 958 965	quality
+T15	Metric 974 984	efficiency
+T16	Task 988 1008	entity summarization
+R1	USED-FOR Arg1:T3 Arg2:T2
+R2	USED-FOR Arg1:T2 Arg2:T4
+R3	FEATURE-OF Arg1:T7 Arg2:T6
+R4	FEATURE-OF Arg1:T8 Arg2:T6
+R5	FEATURE-OF Arg1:T9 Arg2:T6
+R6	CONJUNCTION Arg1:T7 Arg2:T8
+R7	CONJUNCTION Arg1:T8 Arg2:T9
+R8	COREF Arg1:T10 Arg2:T12
+R9	COMPARE Arg1:T13 Arg2:T12
+R10	EVALUATE-FOR Arg1:T15 Arg2:T16
+R11	EVALUATE-FOR Arg1:T14 Arg2:T16
+R12	USED-FOR Arg1:T12 Arg2:T16
+R13	USED-FOR Arg1:T13 Arg2:T16
+R14	USED-FOR Arg1:T11 Arg2:T10

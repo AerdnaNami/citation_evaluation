@@ -1,0 +1,34 @@
+T1	Method 55 99	Korean-to-English machine translation system
+T2	Method 102 165	CCLINC (Common Coalition Language System at Lincoln Laboratory)
+T3	Method 174 217	CCLINC Korean-to-English translation system
+T4	Generic 236 248	core modules
+T5	Method 253 298	language understanding and generation modules
+T6	Method 315 354	language neutral meaning representation
+T7	OtherScientificTerm 366 380	semantic frame
+T8	Generic 408 414	system
+T9	Task 446 465	parsing  of  Korean
+T10	Material 459 465	Korean
+T11	Material 471 490	verb final language
+T12	OtherScientificTerm 498 516	overt case markers
+T13	Task 611 622	translation
+T14	Method 629 654	word sense disambiguation
+T15	Task 670 691	word order generation
+T16	Method 787 836	knowledge-based automated acquisition of grammars
+T17	Material 864 889	Korean newspaper articles
+T18	Material 894 934	missiles and chemical biological warfare
+T19	Generic 940 946	system
+R1	PART-OF Arg1:T4 Arg2:T3
+R2	FEATURE-OF Arg1:T12 Arg2:T11
+R3	USED-FOR Arg1:T14 Arg2:T13
+R4	HYPONYM-OF Arg1:T2 Arg2:T1
+R5	COREF Arg1:T3 Arg2:T2
+R6	COREF Arg1:T5 Arg2:T4
+R7	USED-FOR Arg1:T6 Arg2:T5
+R8	HYPONYM-OF Arg1:T7 Arg2:T6
+R9	HYPONYM-OF Arg1:T10 Arg2:T11
+R10	USED-FOR Arg1:T15 Arg2:T13
+R11	CONJUNCTION Arg1:T14 Arg2:T15
+R12	COREF Arg1:T19 Arg2:T3
+R13	USED-FOR Arg1:T17 Arg2:T19
+R14	COREF Arg1:T8 Arg2:T3
+R15	FEATURE-OF Arg1:T18 Arg2:T17

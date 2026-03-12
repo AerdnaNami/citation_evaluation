@@ -1,0 +1,34 @@
+T1	OtherScientificTerm 63 98	internal and contextual information
+T2	OtherScientificTerm 117 138	domain specific terms
+T3	OtherScientificTerm 192 200	features
+T4	OtherScientificTerm 271 279	features
+T5	Generic 359 367	approach
+T6	Task 373 388	term extraction
+T7	OtherScientificTerm 400 410	delimiters
+T8	Generic 476 484	approach
+T9	OtherScientificTerm 509 523	term frequency
+T10	Generic 557 565	approach
+T11	OtherScientificTerm 590 600	hard rules
+T12	OtherScientificTerm 679 695	domain knowledge
+T13	Generic 780 788	approach
+T14	Generic 838 840	it
+T15	Material 867 891	resource-limited domains
+T16	Generic 894 905	Evaluations
+T17	Task 948 971	Chinese term extraction
+T18	Task 1105 1124	new term extraction
+T19	Generic 1153 1161	approach
+T20	Generic 1193 1197	tool
+T21	Task 1203 1227	domain lexicon expansion
+R1	FEATURE-OF Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T7 Arg2:T5
+R4	COREF Arg1:T8 Arg2:T5
+R5	COMPARE Arg1:T8 Arg2:T9
+R6	COREF Arg1:T10 Arg2:T8
+R7	COREF Arg1:T13 Arg2:T10
+R8	COREF Arg1:T13 Arg2:T14
+R9	USED-FOR Arg1:T14 Arg2:T15
+R10	EVALUATE-FOR Arg1:T16 Arg2:T17
+R11	COREF Arg1:T19 Arg2:T13
+R12	USED-FOR Arg1:T19 Arg2:T21
+R13	COREF Arg1:T20 Arg2:T19

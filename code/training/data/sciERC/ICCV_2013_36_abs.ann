@@ -1,0 +1,20 @@
+T1	Task 48 71	creation of city models
+T2	Generic 113 119	method
+T3	Task 124 175	synthesizing complex, photo-realistic facade images
+T4	Method 241 260	semantic components
+T5	OtherScientificTerm 264 270	tiling
+T6	OtherScientificTerm 298 305	tilings
+T7	OtherScientificTerm 336 351	facade textures
+T8	OtherScientificTerm 386 410	occluded parts inpainted
+T9	Generic 414 431	genetic algorithm
+T10	OtherScientificTerm 449 456	facades
+T11	OtherScientificTerm 468 483	inpainted parts
+T12	Generic 611 637	multiple standard datasets
+T13	Generic 736 742	method
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	FEATURE-OF Arg1:T8 Arg2:T7
+R4	USED-FOR Arg1:T9 Arg2:T10
+R5	USED-FOR Arg1:T9 Arg2:T11
+R6	COREF Arg1:T9 Arg2:T13
+R7	EVALUATE-FOR Arg1:T12 Arg2:T13

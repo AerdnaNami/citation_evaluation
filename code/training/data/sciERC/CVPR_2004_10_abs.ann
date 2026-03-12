@@ -1,0 +1,24 @@
+T1	Task 0 32	Image composition (or mosaicing)
+T2	Task 114 147	video analysis and representation
+T3	Task 191 207	global alignment
+T4	Task 212 228	super-resolution
+T5	Task 287 293	mosaic
+T6	Metric 311 329	amount of blurring
+T7	Task 331 350	Global registration
+T8	Method 378 399	graph-based technique
+T9	OtherScientificTerm 420 441	topological structure
+T10	OtherScientificTerm 473 488	spatial overlap
+T11	Method 498 515	bundle adjustment
+T12	OtherScientificTerm 536 548	homographies
+T13	Generic 616 626	techniques
+T14	Generic 658 666	approach
+R1	CONJUNCTION Arg1:T3 Arg2:T4
+R2	EVALUATE-FOR Arg1:T6 Arg2:T5
+R3	CONJUNCTION Arg1:T8 Arg2:T11
+R4	USED-FOR Arg1:T8 Arg2:T7
+R5	USED-FOR Arg1:T11 Arg2:T7
+R6	USED-FOR Arg1:T8 Arg2:T9
+R7	USED-FOR Arg1:T12 Arg2:T11
+R8	COREF Arg1:T14 Arg2:T8
+R9	COMPARE Arg1:T14 Arg2:T13
+R10	PART-OF Arg1:T1 Arg2:T2

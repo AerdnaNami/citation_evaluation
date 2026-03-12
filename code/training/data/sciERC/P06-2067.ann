@@ -1,0 +1,55 @@
+T1	Method 66 84	statistical parser
+T2	Task 103 139	parsing  written and spoken language
+T3	Material 112 139	written and spoken language
+T4	Task 148 183	generating  sub-categorization cues
+T5	Material 191 218	written and spoken language
+T6	Method 231 245	Bikel's parser
+T7	Metric 266 274	accuracy
+T8	Task 280 305	parsing  written language
+T9	Material 289 305	written language
+T10	Generic 308 310	it
+T11	Metric 330 338	accuracy
+T12	OtherScientificTerm 357 379	subcategorization cues
+T13	Material 387 402	spoken language
+T14	Generic 444 454	technology
+T15	Task 460 495	extracting subcategorization frames
+T16	Material 521 534	written texts
+T17	Material 560 575	spoken language
+T18	OtherScientificTerm 619 630	punctuation
+T19	Method 644 651	parsing
+T20	Task 658 696	extraction  of  subcategorization cues
+T21	OtherScientificTerm 726 737	punctuation
+T22	Task 760 784	parsing  spoken language
+T23	Material 769 784	spoken language
+T24	Task 790 824	extracting  subcategorization cues
+T25	OtherScientificTerm 802 824	subcategorization cues
+T26	Material 832 847	spoken language
+T27	OtherScientificTerm 895 906	punctuation
+T28	Material 925 939	spoken corpora
+T29	Method 966 973	parsers
+R1	USED-FOR Arg1:T15 Arg2:T16
+R2	USED-FOR Arg1:T18 Arg2:T19
+R3	PART-OF Arg1:T25 Arg2:T26
+R4	USED-FOR Arg1:T1 Arg2:T2
+R5	USED-FOR Arg1:T5 Arg2:T4
+R6	USED-FOR Arg1:T1 Arg2:T4
+R7	COREF Arg1:T1 Arg2:T6
+R8	EVALUATE-FOR Arg1:T7 Arg2:T6
+R9	USED-FOR Arg1:T6 Arg2:T8
+R10	COREF Arg1:T6 Arg2:T10
+R11	EVALUATE-FOR Arg1:T11 Arg2:T10
+R12	PART-OF Arg1:T12 Arg2:T13
+R13	USED-FOR Arg1:T10 Arg2:T12
+R14	USED-FOR Arg1:T14 Arg2:T15
+R15	USED-FOR Arg1:T14 Arg2:T17
+R16	COMPARE Arg1:T16 Arg2:T17
+R17	USED-FOR Arg1:T18 Arg2:T20
+R18	CONJUNCTION Arg1:T2 Arg2:T4
+R19	USED-FOR Arg1:T26 Arg2:T24
+R20	CONJUNCTION Arg1:T22 Arg2:T24
+R21	COREF Arg1:T3 Arg2:T5
+R22	COREF Arg1:T23 Arg2:T13
+R23	HYPONYM-OF Arg1:T9 Arg2:T5
+R24	HYPONYM-OF Arg1:T23 Arg2:T5
+R25	COREF Arg1:T23 Arg2:T26
+R26	COREF Arg1:T17 Arg2:T26

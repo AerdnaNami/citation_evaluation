@@ -1,0 +1,20 @@
+T1	Task 40 70	logical properties of contexts
+T2	OtherScientificTerm 93 99	syntax
+T3	OtherScientificTerm 104 113	semantics
+T4	OtherScientificTerm 127 160	propositional language of context
+T5	Method 173 199	Hilbert style proof system
+T6	Generic 209 217	language
+T7	OtherScientificTerm 221 251	propositional logic of context
+T8	OtherScientificTerm 260 289	classical propositional logic
+T9	OtherScientificTerm 318 326	modality
+T10	Generic 351 353	It
+T11	Method 620 646	Hilbert style proof system
+T12	OtherScientificTerm 705 726	correspondence theory
+R1	COREF Arg1:T4 Arg2:T6
+R2	FEATURE-OF Arg1:T3 Arg2:T4
+R3	FEATURE-OF Arg1:T2 Arg2:T4
+R4	CONJUNCTION Arg1:T2 Arg2:T3
+R5	COREF Arg1:T9 Arg2:T10
+R6	USED-FOR Arg1:T5 Arg2:T6
+R7	COREF Arg1:T5 Arg2:T11
+R8	USED-FOR Arg1:T8 Arg2:T7

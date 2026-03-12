@@ -1,0 +1,43 @@
+T1	Task 3 24	cross-domain learning
+T2	OtherScientificTerm 71 88	domain divergence
+T3	Generic 112 128	dominant factors
+T4	OtherScientificTerm 146 156	viewpoints
+T5	OtherScientificTerm 167 178	resolutions
+T6	OtherScientificTerm 192 205	illuminations
+T7	OtherScientificTerm 223 242	intermediate domain
+T8	Task 312 328	learning problem
+T9	Method 358 412	Coupled Marginalized Denoising Auto-encoders framework
+T10	Task 428 448	cross-domain problem
+T11	Method 478 514	marginalized denoising auto-encoders
+T12	Generic 516 519	one
+T13	Generic 543 548	other
+T14	Method 618 650	denoising auto-encoders learning
+T15	Method 669 684	feature mapping
+T16	OtherScientificTerm 732 751	intermediate domain
+T17	OtherScientificTerm 789 813	maximum margin criterion
+T18	OtherScientificTerm 821 845	intra-class com-pactness
+T19	OtherScientificTerm 850 869	inter-class penalty
+T20	OtherScientificTerm 915 938	discriminative features
+T21	Generic 994 999	tasks
+T22	Generic 1041 1047	method
+T23	Generic 1057 1081	state-of-the-art methods
+R1	HYPONYM-OF Arg1:T4 Arg2:T3
+R2	HYPONYM-OF Arg1:T5 Arg2:T3
+R4	PART-OF Arg1:T3 Arg2:T2
+R5	CONJUNCTION Arg1:T4 Arg2:T5
+R6	CONJUNCTION Arg1:T5 Arg2:T6
+R7	COREF Arg1:T8 Arg2:T1
+R8	USED-FOR Arg1:T7 Arg2:T8
+R9	COREF Arg1:T10 Arg2:T8
+R10	USED-FOR Arg1:T9 Arg2:T10
+R11	HYPONYM-OF Arg1:T12 Arg2:T11
+R12	HYPONYM-OF Arg1:T13 Arg2:T11
+R13	PART-OF Arg1:T15 Arg2:T14
+R14	USED-FOR Arg1:T15 Arg2:T16
+R15	HYPONYM-OF Arg1:T18 Arg2:T17
+R16	HYPONYM-OF Arg1:T19 Arg2:T17
+R17	CONJUNCTION Arg1:T18 Arg2:T19
+R18	COMPARE Arg1:T22 Arg2:T23
+R19	COREF Arg1:T22 Arg2:T9
+R20	EVALUATE-FOR Arg1:T21 Arg2:T22
+R21	CONJUNCTION Arg1:T12 Arg2:T13

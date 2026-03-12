@@ -1,0 +1,45 @@
+T1	OtherScientificTerm 0 12	Light fields
+T2	Method 17 44	image-based representations
+T3	OtherScientificTerm 54 74	densely sampled rays
+T4	OtherScientificTerm 80 97	scene description
+T5	Task 125 157	geometric structures of 3D lines
+T6	OtherScientificTerm 161 170	ray space
+T7	Task 185 210	light field triangulation
+T8	Task 215 230	stereo matching
+T9	Task 236 257	triangulation problem
+T10	OtherScientificTerm 278 287	ray space
+T11	OtherScientificTerm 293 333	continuous and non-overlapping simplices
+T12	OtherScientificTerm 376 389	triangulation
+T13	OtherScientificTerm 401 429	piecewise-linear interpolant
+T14	Task 441 469	light field super-resolution
+T15	OtherScientificTerm 488 505	light field space
+T16	OtherScientificTerm 534 550	3D line segments
+T17	OtherScientificTerm 600 618	bilinear subspaces
+T18	OtherScientificTerm 707 725	bilinear subspaces
+T19	OtherScientificTerm 729 745	line constraints
+T20	Method 761 801	Constrained Delaunay Triangulation (CDT)
+T21	Method 853 893	line-assisted graph-cut (LAGC) algorithm
+T22	OtherScientificTerm 919 938	3D line constraints
+T23	Task 944 971	light field stereo matching
+T24	Material 988 1011	synthetic and real data
+T25	Method 1031 1064	triangulation and LAGC algorithms
+T26	Generic 1076 1102	state-of-the-art solutions
+T27	Metric 1106 1114	accuracy
+T28	Metric 1119 1133	visual quality
+R1	FEATURE-OF Arg1:T6 Arg2:T5
+R2	USED-FOR Arg1:T5 Arg2:T7
+R3	CONJUNCTION Arg1:T7 Arg2:T8
+R4	USED-FOR Arg1:T5 Arg2:T8
+R5	COREF Arg1:T7 Arg2:T9
+R6	USED-FOR Arg1:T13 Arg2:T14
+R7	USED-FOR Arg1:T12 Arg2:T13
+R8	COREF Arg1:T9 Arg2:T12
+R9	COMPARE Arg1:T25 Arg2:T26
+R10	EVALUATE-FOR Arg1:T27 Arg2:T25
+R11	EVALUATE-FOR Arg1:T28 Arg2:T25
+R12	EVALUATE-FOR Arg1:T27 Arg2:T26
+R13	EVALUATE-FOR Arg1:T28 Arg2:T26
+R14	EVALUATE-FOR Arg1:T24 Arg2:T25
+R15	EVALUATE-FOR Arg1:T24 Arg2:T26
+R16	HYPONYM-OF Arg1:T21 Arg2:T25
+R17	HYPONYM-OF Arg1:T20 Arg2:T25

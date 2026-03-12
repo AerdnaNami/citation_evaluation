@@ -1,0 +1,30 @@
+T1	Method 8 39	intelligent interactive systems
+T2	Generic 91 95	they
+T3	Task 176 189	user modeling
+T4	Method 200 207	systems
+T5	Method 256 266	user model
+T6	Generic 279 281	it
+T7	Method 328 338	user model
+T8	Method 415 426	User models
+T9	Generic 561 565	they
+T10	Method 636 646	user model
+T11	Task 677 690	user modeling
+T12	Method 778 801	user modeling component
+T13	Generic 809 815	system
+T14	Generic 917 923	system
+T15	Task 968 981	user modeling
+T16	Method 1087 1108	user modeling systems
+R1	PART-OF Arg1:T3 Arg2:T4
+R2	COREF Arg1:T2 Arg2:T1
+R3	COREF Arg1:T4 Arg2:T1
+R4	COREF Arg1:T7 Arg2:T5
+R5	COREF Arg1:T8 Arg2:T7
+R6	COREF Arg1:T9 Arg2:T8
+R7	COREF Arg1:T10 Arg2:T9
+R8	COREF Arg1:T14 Arg2:T13
+R9	PART-OF Arg1:T12 Arg2:T13
+R10	COREF Arg1:T6 Arg2:T5
+R11	USED-FOR Arg1:T10 Arg2:T11
+R12	COREF Arg1:T11 Arg2:T3
+R13	COREF Arg1:T15 Arg2:T11
+R14	COREF Arg1:T16 Arg2:T10

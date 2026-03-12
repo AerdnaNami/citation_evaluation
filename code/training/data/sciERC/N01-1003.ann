@@ -1,0 +1,34 @@
+T1	Task 2 19	Sentence planning
+T2	Generic 60 65	tasks
+T3	Task 84 100	sentence scoping
+T4	OtherScientificTerm 124 143	syntactic structure
+T5	OtherScientificTerm 161 172	speech acts
+T6	Method 272 276	SPoT
+T7	Method 283 299	sentence planner
+T8	Generic 313 324	methodology
+T9	Method 353 357	SPoT
+T10	Method 492 532	randomized sentence-plan-generator (SPG)
+T11	OtherScientificTerm 582 596	sentence plans
+T12	OtherScientificTerm 611 626	text-plan input
+T13	Method 643 669	sentence-plan-ranker (SPR)
+T14	OtherScientificTerm 697 711	sentence plans
+T15	Method 761 764	SPR
+T16	OtherScientificTerm 772 785	ranking rules
+T17	Method 858 861	SPR
+T18	OtherScientificTerm 883 896	sentence plan
+T19	OtherScientificTerm 949 979	top human-ranked sentence plan
+R1	COMPARE Arg1:T18 Arg2:T19
+R2	COREF Arg1:T2 Arg2:T1
+R3	PART-OF Arg1:T3 Arg2:T2
+R4	HYPONYM-OF Arg1:T6 Arg2:T7
+R5	USED-FOR Arg1:T8 Arg2:T9
+R6	COREF Arg1:T9 Arg2:T6
+R7	USED-FOR Arg1:T10 Arg2:T11
+R8	USED-FOR Arg1:T12 Arg2:T10
+R9	USED-FOR Arg1:T13 Arg2:T14
+R10	COREF Arg1:T14 Arg2:T11
+R11	COREF Arg1:T15 Arg2:T13
+R12	USED-FOR Arg1:T16 Arg2:T15
+R13	COREF Arg1:T17 Arg2:T15
+R14	USED-FOR Arg1:T17 Arg2:T18
+R15	USED-FOR Arg1:T4 Arg2:T5

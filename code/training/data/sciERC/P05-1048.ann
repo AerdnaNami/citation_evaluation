@@ -1,0 +1,17 @@
+T1	Method 62 93	word sense disambigation models
+T2	Metric 101 142	statistical machine translation   quality
+T3	Method 257 296	Chinese word sense disambiguation model
+T4	OtherScientificTerm 309 331	translation candidates
+T5	Method 348 373	IBM statistical MT system
+T6	Method 391 416	word sense disambiguation
+T7	Metric 455 474	translation quality
+T8	Method 486 524	statistical machine translation system
+T9	Method 534 548	Error analysis
+T10	Method 654 682	statistical MT architectures
+R1	USED-FOR Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T4 Arg2:T5
+R3	COREF Arg1:T1 Arg2:T6
+R4	COMPARE Arg1:T6 Arg2:T8
+R5	EVALUATE-FOR Arg1:T7 Arg2:T8
+R6	EVALUATE-FOR Arg1:T7 Arg2:T6
+R7	USED-FOR Arg1:T1 Arg2:T2

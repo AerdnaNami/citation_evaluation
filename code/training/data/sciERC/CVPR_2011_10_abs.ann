@@ -1,0 +1,29 @@
+T1	OtherScientificTerm 0 11	Reflections
+T2	OtherScientificTerm 0 30	Reflections in image sequences
+T3	Material 15 30	image sequences
+T4	Method 115 142	image processing techniques
+T5	Task 224 241	motion estimation
+T6	Task 246 264	object recognition
+T7	Generic 298 307	technique
+T8	Task 312 352	detecting reflections in image sequences
+T9	OtherScientificTerm 366 385	motion trajectories
+T10	OtherScientificTerm 389 403	feature points
+T11	Generic 405 407	It
+T12	OtherScientificTerm 415 425	reflection
+T13	Generic 513 521	detector
+T14	Generic 555 564	detectors
+T15	OtherScientificTerm 579 585	priors
+T16	OtherScientificTerm 596 627	sparse and dense detection maps
+T17	Metric 654 668	detection rate
+T18	OtherScientificTerm 687 706	pathological motion
+T19	OtherScientificTerm 711 720	occlusion
+R1	CONJUNCTION Arg1:T5 Arg2:T6
+R2	USED-FOR Arg1:T9 Arg2:T7
+R3	FEATURE-OF Arg1:T10 Arg2:T9
+R4	COREF Arg1:T11 Arg2:T7
+R5	USED-FOR Arg1:T11 Arg2:T12
+R6	USED-FOR Arg1:T15 Arg2:T16
+R7	CONJUNCTION Arg1:T18 Arg2:T19
+R8	USED-FOR Arg1:T7 Arg2:T8
+R9	COREF Arg1:T11 Arg2:T13
+R10	USED-FOR Arg1:T14 Arg2:T13

@@ -1,0 +1,62 @@
+T1	Task 38 58	point cloud matching
+T2	Task 64 86	shape matching problem
+T3	OtherScientificTerm 121 133	point clouds
+T4	Method 141 161	shape representation
+T5	Method 173 224	Schrödinger distance transform (SDT) representation
+T6	OtherScientificTerm 256 283	static Schrödinger equation
+T7	OtherScientificTerm 313 344	static Hamilton-Jacobi equation
+T8	Method 366 384	SDT representation
+T9	OtherScientificTerm 391 410	analytic expression
+T10	OtherScientificTerm 429 459	theoretical physics literature
+T11	OtherScientificTerm 487 499	unit L2 norm
+T12	Generic 507 509	it
+T13	OtherScientificTerm 512 531	square-root density
+T14	OtherScientificTerm 571 590	unit Hilbert sphere
+T15	OtherScientificTerm 598 616	intrinsic geometry
+T16	Metric 637 654	Fisher-Rao metric
+T17	Generic 658 672	natural metric
+T18	OtherScientificTerm 681 699	space of densities
+T19	OtherScientificTerm 709 729	analytic expressions
+T20	OtherScientificTerm 738 755	geodesic distance
+T21	Generic 779 785	sphere
+T22	Method 824 844	Riemannian framework
+T23	Task 867 887	point cloud matching
+T24	Method 909 927	matching algorithm
+T25	Task 937 955	point set matching
+T26	OtherScientificTerm 962 997	rigid and non-rigid transformations
+T27	Generic 1006 1015	framework
+T28	Generic 1034 1049	transformations
+T29	Method 1065 1098	nonlinear optimization techniques
+T30	Method 1144 1153	algorithm
+T31	Method 1154 1165	dubbed SDTM
+T32	Material 1185 1217	synthetic and real data examples
+T33	Generic 1254 1281	state-of-the-art techniques
+T34	Generic 1313 1322	algorithm
+T35	Method 1352 1385	point set registration algorithms
+T36	Metric 1394 1414	quantitative metrics
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	HYPONYM-OF Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T4 Arg2:T3
+R4	COREF Arg1:T8 Arg2:T5
+R5	HYPONYM-OF Arg1:T8 Arg2:T9
+R6	USED-FOR Arg1:T19 Arg2:T20
+R7	COREF Arg1:T14 Arg2:T21
+R8	COREF Arg1:T1 Arg2:T23
+R9	USED-FOR Arg1:T22 Arg2:T23
+R10	COREF Arg1:T22 Arg2:T27
+R11	COREF Arg1:T26 Arg2:T28
+R12	USED-FOR Arg1:T29 Arg2:T28
+R13	USED-FOR Arg1:T26 Arg2:T25
+R14	USED-FOR Arg1:T27 Arg2:T25
+R15	COREF Arg1:T31 Arg2:T30
+R16	COMPARE Arg1:T30 Arg2:T33
+R17	EVALUATE-FOR Arg1:T36 Arg2:T35
+R18	COREF Arg1:T8 Arg2:T12
+R19	USED-FOR Arg1:T13 Arg2:T12
+R20	PART-OF Arg1:T11 Arg2:T8
+R21	COREF Arg1:T16 Arg2:T17
+R22	USED-FOR Arg1:T17 Arg2:T18
+R23	COMPARE Arg1:T34 Arg2:T35
+R24	COREF Arg1:T34 Arg2:T30
+R25	EVALUATE-FOR Arg1:T36 Arg2:T34
+R26	FEATURE-OF Arg1:T15 Arg2:T14

@@ -1,0 +1,34 @@
+T1	Method 2 9	GLOSSER
+T2	Task 34 54	reading and learning
+T3	Generic 104 118	language pairs
+T4	Method 144 151	GLOSSER
+T5	Material 155 172	English-Bulgarian
+T6	Material 176 192	English-Estonian
+T7	Material 196 213	English-Hungarian
+T8	Material 220 232	French-Dutch
+T9	Generic 239 246	program
+T10	OtherScientificTerm 265 295	UNIX and Windows '95 platforms
+T11	OtherScientificTerm 323 333	user-study
+T12	Task 366 401	Applied Natural Language Processing
+T13	Generic 414 424	components
+T14	Task 457 517	intelligent computer-assisted morphological analysis (ICALL)
+T15	Method 531 567	disambiguated morphological analysis
+T16	Method 574 593	lemmatized indexing
+T17	Material 603 627	aligned bilingual corpus
+R1	USED-FOR Arg1:T13 Arg2:T14
+R2	COREF Arg1:T4 Arg2:T1
+R3	CONJUNCTION Arg1:T5 Arg2:T6
+R4	CONJUNCTION Arg1:T6 Arg2:T7
+R5	CONJUNCTION Arg1:T7 Arg2:T8
+R6	COREF Arg1:T9 Arg2:T4
+R7	USED-FOR Arg1:T3 Arg2:T4
+R8	HYPONYM-OF Arg1:T5 Arg2:T3
+R9	HYPONYM-OF Arg1:T6 Arg2:T3
+R10	HYPONYM-OF Arg1:T7 Arg2:T3
+R11	HYPONYM-OF Arg1:T8 Arg2:T3
+R12	USED-FOR Arg1:T1 Arg2:T2
+R13	HYPONYM-OF Arg1:T15 Arg2:T13
+R14	HYPONYM-OF Arg1:T16 Arg2:T13
+R15	CONJUNCTION Arg1:T15 Arg2:T16
+R16	USED-FOR Arg1:T16 Arg2:T17
+R17	USED-FOR Arg1:T15 Arg2:T17

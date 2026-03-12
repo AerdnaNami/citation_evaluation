@@ -1,0 +1,28 @@
+T1	Task 3 41	real-world action recognition problems
+T2	OtherScientificTerm 43 61	low-level features
+T3	OtherScientificTerm 97 129	rich spatial-temporal structures
+T4	Material 133 146	action videos
+T5	OtherScientificTerm 226 245	high-level concepts
+T6	OtherScientificTerm 324 341	action attributes
+T7	OtherScientificTerm 355 372	action attributes
+T8	OtherScientificTerm 416 438	data-driven attributes
+T9	Method 474 501	dictionary learning methods
+T10	Method 503 533	Attribute-based representation
+T11	OtherScientificTerm 567 597	noisy and redundant attributes
+T12	Method 612 669	discriminative and compact attribute-based representation
+T13	OtherScientificTerm 695 720	discriminative attributes
+T14	Metric 755 783	attribute selection criteria
+T15	Task 817 848	submodular optimization problem
+T16	Method 852 881	greedy optimization algorithm
+T17	Material 991 1025	Olympic Sports and UCF101 datasets
+T18	Method 1056 1086	attribute-based representation
+T19	Method 1130 1159	action recognition algorithms
+T20	Method 1198 1220	recognition approaches
+R1	FEATURE-OF Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T15 Arg2:T14
+R3	EVALUATE-FOR Arg1:T17 Arg2:T18
+R4	USED-FOR Arg1:T9 Arg2:T8
+R5	USED-FOR Arg1:T13 Arg2:T12
+R6	USED-FOR Arg1:T18 Arg2:T19
+R7	COMPARE Arg1:T19 Arg2:T20
+R8	COREF Arg1:T18 Arg2:T10

@@ -1,0 +1,39 @@
+T1	Task 4 43	compact description of a video sequence
+T2	OtherScientificTerm 61 70	image map
+T3	OtherScientificTerm 77 92	dominant motion
+T4	Generic 121 128	domains
+T5	Task 140 168	video browsing and retrieval
+T6	Task 170 181	compression
+T7	Task 183 192	mosaicing
+T8	Task 198 218	visual summarization
+T9	Generic 236 250	representation
+T10	Generic 354 358	task
+T11	Method 417 443	localized motion estimates
+T12	OtherScientificTerm 476 504	lack of temporal consistency
+T13	OtherScientificTerm 484 504	temporal consistency
+T14	Generic 526 535	estimates
+T15	OtherScientificTerm 554 596	validity of the dominant motion assumption
+T16	OtherScientificTerm 570 596	dominant motion assumption
+T17	OtherScientificTerm 609 682	oscillation between different scene interpretations and poor registration
+T18	Generic 698 709	oscillation
+T19	Method 726 738	motion model
+T20	OtherScientificTerm 746 773	generic temporal constraint
+T21	Metric 794 804	robustness
+T22	Task 867 888	content summarization
+R1	CONJUNCTION Arg1:T5 Arg2:T6
+R2	CONJUNCTION Arg1:T6 Arg2:T7
+R3	CONJUNCTION Arg1:T7 Arg2:T8
+R4	HYPONYM-OF Arg1:T5 Arg2:T4
+R5	HYPONYM-OF Arg1:T6 Arg2:T4
+R6	HYPONYM-OF Arg1:T7 Arg2:T4
+R8	USED-FOR Arg1:T1 Arg2:T4
+R9	USED-FOR Arg1:T2 Arg2:T1
+R10	USED-FOR Arg1:T3 Arg2:T1
+R11	CONJUNCTION Arg1:T2 Arg2:T3
+R12	COREF Arg1:T9 Arg2:T1
+R13	USED-FOR Arg1:T11 Arg2:T10
+R14	COREF Arg1:T14 Arg2:T11
+R15	COREF Arg1:T18 Arg2:T17
+R16	USED-FOR Arg1:T20 Arg2:T19
+R17	EVALUATE-FOR Arg1:T21 Arg2:T20
+R18	USED-FOR Arg1:T20 Arg2:T22

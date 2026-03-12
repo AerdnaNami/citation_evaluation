@@ -1,0 +1,33 @@
+T1	Task 4 37	perception of transparent objects
+T2	Material 43 49	images
+T3	OtherScientificTerm 165 184	transparent objects
+T4	OtherScientificTerm 248 267	transparent objects
+T5	OtherScientificTerm 302 310	features
+T6	OtherScientificTerm 337 355	transparent object
+T7	Generic 380 385	those
+T8	Method 445 465	model-based approach
+T9	OtherScientificTerm 481 524	shapes and the poses of transparent objects
+T10	OtherScientificTerm 530 542	known motion
+T11	Generic 548 555	objects
+T12	Generic 579 583	they
+T13	OtherScientificTerm 603 618	multiple layers
+T14	OtherScientificTerm 634 652	refractive indices
+T15	Generic 736 745	algorithm
+T16	Generic 763 765	it
+T17	Material 769 780	real scenes
+T18	OtherScientificTerm 794 813	transparent objects
+T19	OtherScientificTerm 832 853	shapes of the objects
+T20	Metric 864 872	accuracy
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	COMPARE Arg1:T7 Arg2:T5
+R3	USED-FOR Arg1:T8 Arg2:T9
+R4	USED-FOR Arg1:T10 Arg2:T9
+R5	COREF Arg1:T11 Arg2:T12
+R6	PART-OF Arg1:T13 Arg2:T12
+R7	COREF Arg1:T8 Arg2:T15
+R8	FEATURE-OF Arg1:T14 Arg2:T13
+R9	COREF Arg1:T16 Arg2:T15
+R10	USED-FOR Arg1:T16 Arg2:T17
+R11	PART-OF Arg1:T18 Arg2:T17
+R12	USED-FOR Arg1:T16 Arg2:T19
+R13	EVALUATE-FOR Arg1:T20 Arg2:T19

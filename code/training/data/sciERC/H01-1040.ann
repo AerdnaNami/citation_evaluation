@@ -1,0 +1,20 @@
+T1	Generic 42 49	outputs
+T2	Method 56 91	information extraction (IE) systems
+T3	OtherScientificTerm 96 120	named entity annotations
+T4	OtherScientificTerm 127 145	scenario templates
+T5	Material 183 199	text collections
+T6	Method 217 229	text browser
+T7	Generic 280 296	prototype system
+T8	Material 355 382	pharmaceutical news archive
+T9	Metric 470 497	qualitative user evaluation
+T10	Generic 506 512	system
+T11	Method 655 680	IE-enhanced text browsers
+R1	HYPONYM-OF Arg1:T3 Arg2:T1
+R2	HYPONYM-OF Arg1:T4 Arg2:T1
+R3	CONJUNCTION Arg1:T3 Arg2:T4
+R4	USED-FOR Arg1:T6 Arg2:T5
+R5	USED-FOR Arg1:T7 Arg2:T8
+R6	COREF Arg1:T10 Arg2:T7
+R7	EVALUATE-FOR Arg1:T9 Arg2:T10
+R8	COREF Arg1:T11 Arg2:T10
+R9	USED-FOR Arg1:T1 Arg2:T5

@@ -1,0 +1,21 @@
+T1	Task 102 124	electronic discussions
+T2	Task 145 167	help-desk applications
+T3	OtherScientificTerm 306 314	features
+T4	Task 320 342	electronic discussions
+T5	Method 364 382	clustering process
+T6	Method 398 417	filtering mechanism
+T7	Method 473 507	clustering and filtering processes
+T8	Material 513 545	electronic newsgroup discussions
+T9	Generic 598 609	experiments
+T10	Task 613 636	coarse-level clustering
+T11	Task 646 667	information retrieval
+R1	EVALUATE-FOR Arg1:T8 Arg2:T7
+R2	HYPONYM-OF Arg1:T10 Arg2:T9
+R3	HYPONYM-OF Arg1:T11 Arg2:T9
+R4	EVALUATE-FOR Arg1:T9 Arg2:T7
+R5	COREF Arg1:T4 Arg2:T1
+R6	HYPONYM-OF Arg1:T5 Arg2:T7
+R7	HYPONYM-OF Arg1:T6 Arg2:T7
+R8	PART-OF Arg1:T1 Arg2:T2
+R9	FEATURE-OF Arg1:T3 Arg2:T4
+R10	EVALUATE-FOR Arg1:T9 Arg2:T7

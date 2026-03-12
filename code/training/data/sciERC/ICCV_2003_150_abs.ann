@@ -1,0 +1,30 @@
+T1	Method 13 50	single-image highlight removal method
+T2	OtherScientificTerm 69 99	illumination-based constraints
+T3	Task 105 122	image in-painting
+T4	OtherScientificTerm 131 153	occluded image regions
+T5	OtherScientificTerm 176 186	inpainting
+T6	OtherScientificTerm 188 204	highlight pixels
+T7	Task 253 271	inpainting process
+T8	OtherScientificTerm 273 284	Constraints
+T9	OtherScientificTerm 306 318	pixel colors
+T10	OtherScientificTerm 320 344	highlight color analysis
+T11	OtherScientificTerm 349 378	illumination color uniformity
+T12	Generic 399 405	method
+T13	OtherScientificTerm 417 459	estimation of the underlying diffuse color
+T14	OtherScientificTerm 484 508	illumination constraints
+T15	OtherScientificTerm 527 559	recovery of shading and textures
+T16	Task 563 573	inpainting
+T17	Method 644 650	method
+R1	USED-FOR Arg1:T1 Arg2:T3
+R2	COREF Arg1:T7 Arg2:T3
+R3	CONJUNCTION Arg1:T10 Arg2:T11
+R4	USED-FOR Arg1:T12 Arg2:T13
+R5	CONJUNCTION Arg1:T9 Arg2:T10
+R6	USED-FOR Arg1:T8 Arg2:T12
+R7	COREF Arg1:T14 Arg2:T8
+R8	COREF Arg1:T16 Arg2:T7
+R9	COREF Arg1:T12 Arg2:T1
+R10	PART-OF Arg1:T2 Arg2:T3
+R11	COREF Arg1:T17 Arg2:T12
+R12	USED-FOR Arg1:T16 Arg2:T15
+R13	USED-FOR Arg1:T14 Arg2:T15

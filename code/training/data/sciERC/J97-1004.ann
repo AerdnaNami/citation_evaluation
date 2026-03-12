@@ -1,0 +1,30 @@
+T1	Method 36 54	explanation system
+T2	OtherScientificTerm 183 214	multisentential discourse plans
+T3	OtherScientificTerm 234 249	discourse plans
+T4	Task 499 521	explanation generation
+T5	Material 529 575	semantically rich, large-scale knowledge bases
+T6	Method 609 634	robust explanation system
+T7	OtherScientificTerm 653 701	multisentential and multi-paragraph explanations
+T8	Material 715 741	large-scale knowledge base
+T9	Material 760 777	botanical anatomy
+T10	Material 779 789	physiology
+T11	Material 795 806	development
+T12	Generic 825 847	evaluation methodology
+T13	Generic 900 911	methodology
+T14	Method 971 989	explanation system
+T15	Generic 999 1009	evaluation
+R1	USED-FOR Arg1:T5 Arg2:T4
+R2	USED-FOR Arg1:T8 Arg2:T6
+R3	USED-FOR Arg1:T1 Arg2:T3
+R4	COREF Arg1:T6 Arg2:T1
+R5	USED-FOR Arg1:T6 Arg2:T7
+R6	CONJUNCTION Arg1:T9 Arg2:T10
+R7	CONJUNCTION Arg1:T10 Arg2:T11
+R8	COREF Arg1:T13 Arg2:T12
+R9	COREF Arg1:T14 Arg2:T6
+R10	EVALUATE-FOR Arg1:T13 Arg2:T14
+R11	COREF Arg1:T15 Arg2:T13
+R12	COREF Arg1:T6 Arg2:T1
+R13	FEATURE-OF Arg1:T9 Arg2:T8
+R14	FEATURE-OF Arg1:T10 Arg2:T8
+R15	FEATURE-OF Arg1:T11 Arg2:T8

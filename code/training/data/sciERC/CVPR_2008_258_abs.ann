@@ -1,0 +1,30 @@
+T1	Task 35 78	unsupervised seg-mentation of whole objects
+T2	Task 105 131	partial scene segmentation
+T3	OtherScientificTerm 152 171	soft, binary mattes
+T4	Generic 179 185	mattes
+T5	OtherScientificTerm 210 248	hypothesized object boundary fragments
+T6	Generic 394 414	contemporary methods
+T7	Task 419 448	unsupervised object discovery
+T8	OtherScientificTerm 598 626	delineation of scene objects
+T9	Generic 641 649	approach
+T10	Method 679 698	spectral clustering
+T11	Method 700 713	image matting
+T12	Method 719 737	boundary detection
+T13	Generic 739 741	It
+T14	Material 796 813	dataset of scenes
+T15	Task 850 879	unsupervised object discovery
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	COREF Arg1:T3 Arg2:T4
+R4	USED-FOR Arg1:T5 Arg2:T4
+R5	USED-FOR Arg1:T6 Arg2:T7
+R6	USED-FOR Arg1:T10 Arg2:T9
+R7	CONJUNCTION Arg1:T11 Arg2:T12
+R8	CONJUNCTION Arg1:T10 Arg2:T11
+R9	USED-FOR Arg1:T11 Arg2:T9
+R10	USED-FOR Arg1:T12 Arg2:T9
+R11	COREF Arg1:T15 Arg2:T7
+R12	COREF Arg1:T1 Arg2:T7
+R13	COREF Arg1:T13 Arg2:T9
+R14	EVALUATE-FOR Arg1:T14 Arg2:T13
+R15	USED-FOR Arg1:T13 Arg2:T15

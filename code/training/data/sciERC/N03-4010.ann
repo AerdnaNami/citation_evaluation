@@ -1,0 +1,15 @@
+T1	Method 6 20	JAVELIN system
+T2	Method 46 73	planning-based architecture
+T3	Method 94 121	language processing modules
+T4	Task 138 179	open-domain question answering capability
+T5	Method 235 242	JAVELIN
+T6	Generic 368 374	system
+T7	Generic 469 475	system
+T8	Task 489 507	question answering
+R1	PART-OF Arg1:T2 Arg2:T1
+R2	PART-OF Arg1:T3 Arg2:T1
+R3	CONJUNCTION Arg1:T3 Arg2:T2
+R4	USED-FOR Arg1:T1 Arg2:T4
+R5	COREF Arg1:T5 Arg2:T1
+R6	COREF Arg1:T6 Arg2:T5
+R7	COREF Arg1:T6 Arg2:T7

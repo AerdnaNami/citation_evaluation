@@ -1,0 +1,28 @@
+T1	Task 30 78	fine-grained sketch-based image retrieval (SBIR)
+T2	OtherScientificTerm 86 110	free-hand human sketches
+T3	Task 142 176	instance-level retrieval of images
+T4	OtherScientificTerm 228 246	visual comparisons
+T5	OtherScientificTerm 317 344	free-hand (finger) sketches
+T6	Task 373 394	fine-grained matching
+T7	Material 430 474	annotated cross-domain sketch-photo datasets
+T8	Method 543 570	machine learning techniques
+T9	Task 715 755	sketch-based image retrieval application
+T10	OtherScientificTerm 845 885	fine-grained triplet ranking annotations
+T11	Method 905 931	deep triplet-ranking model
+T12	Task 936 955	instance-level SBIR
+T13	Method 969 986	data augmentation
+T14	Method 991 1019	staged pre-training strategy
+T15	Material 1046 1085	insufficient fine-grained training data
+T16	OtherScientificTerm 1184 1200	data sufficiency
+T17	OtherScientificTerm 1205 1227	over-fitting avoidance
+T18	Method 1242 1255	deep networks
+T19	Task 1260 1299	fine-grained cross-domain ranking tasks
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T7 Arg2:T8
+R3	USED-FOR Arg1:T11 Arg2:T12
+R4	CONJUNCTION Arg1:T13 Arg2:T14
+R5	USED-FOR Arg1:T13 Arg2:T11
+R6	USED-FOR Arg1:T14 Arg2:T11
+R7	USED-FOR Arg1:T11 Arg2:T15
+R8	USED-FOR Arg1:T18 Arg2:T19
+R9	CONJUNCTION Arg1:T16 Arg2:T17

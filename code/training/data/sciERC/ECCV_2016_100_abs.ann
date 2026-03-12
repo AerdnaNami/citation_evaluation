@@ -1,0 +1,61 @@
+T1	Generic 29 37	approach
+T2	Method 53 74	visual representation
+T3	Material 84 120	raw spatiotemporal signals in videos
+T4	Generic 126 140	representation
+T5	OtherScientificTerm 160 192	supervision from semantic labels
+T6	Generic 211 217	method
+T7	Task 224 265	unsupervised sequential verification task
+T8	OtherScientificTerm 346 360	temporal order
+T9	Generic 379 383	task
+T10	OtherScientificTerm 391 406	semantic labels
+T11	Method 428 449	visual representation
+T12	Method 458 492	Convolutional Neural Network (CNN)
+T13	Generic 498 512	representation
+T14	OtherScientificTerm 522 547	complementary information
+T15	Material 569 594	supervised image datasets
+T16	Material 600 608	ImageNet
+T17	Generic 644 650	method
+T18	OtherScientificTerm 708 718	human pose
+T19	Method 733 745	pre-training
+T20	Task 750 768	action recognition
+T21	Method 771 781	our method
+T22	Method 811 841	learning without external data
+T23	Generic 845 863	benchmark datasets
+T24	Material 869 875	UCF101
+T25	Material 880 886	HMDB51
+T26	OtherScientificTerm 922 932	human pose
+T27	Task 954 969	pose estimation
+T28	Material 977 999	FLIC and MPII datasets
+T29	Generic 1037 1047	approaches
+T30	OtherScientificTerm 1073 1084	supervision
+T31	OtherScientificTerm 1086 1096	Our method
+T32	Method 1118 1144	supervised representations
+T33	Metric 1179 1187	accuracy
+R1	USED-FOR Arg1:T3 Arg2:T2
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	COREF Arg1:T2 Arg2:T4
+R4	USED-FOR Arg1:T7 Arg2:T6
+R5	COREF Arg1:T1 Arg2:T6
+R6	COREF Arg1:T7 Arg2:T9
+R7	USED-FOR Arg1:T9 Arg2:T11
+R8	USED-FOR Arg1:T12 Arg2:T11
+R9	COREF Arg1:T13 Arg2:T11
+R10	PART-OF Arg1:T14 Arg2:T13
+R11	HYPONYM-OF Arg1:T16 Arg2:T15
+R12	USED-FOR Arg1:T15 Arg2:T14
+R13	COREF Arg1:T6 Arg2:T17
+R14	USED-FOR Arg1:T19 Arg2:T20
+R15	COREF Arg1:T17 Arg2:T21
+R16	COMPARE Arg1:T21 Arg2:T22
+R17	HYPONYM-OF Arg1:T24 Arg2:T23
+R18	HYPONYM-OF Arg1:T25 Arg2:T23
+R19	CONJUNCTION Arg1:T24 Arg2:T25
+R20	EVALUATE-FOR Arg1:T23 Arg2:T22
+R21	EVALUATE-FOR Arg1:T23 Arg2:T21
+R22	USED-FOR Arg1:T21 Arg2:T19
+R23	EVALUATE-FOR Arg1:T28 Arg2:T27
+R24	COREF Arg1:T31 Arg2:T21
+R25	CONJUNCTION Arg1:T32 Arg2:T31
+R26	EVALUATE-FOR Arg1:T33 Arg2:T31
+R27	USED-FOR Arg1:T17 Arg2:T18
+R28	USED-FOR Arg1:T30 Arg2:T29

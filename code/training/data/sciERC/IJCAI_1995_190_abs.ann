@@ -1,0 +1,53 @@
+T1	Method 13 26	process model
+T2	Task 31 73	hierarchical perceptual sound organization
+T3	OtherScientificTerm 92 109	perceptual sounds
+T4	OtherScientificTerm 122 144	incoming sound signals
+T5	Task 158 187	perceptual sound organization
+T6	Task 193 215	scene analysis problem
+T7	Material 223 238	auditory domain
+T8	Generic 244 249	model
+T9	Method 271 289	processing modules
+T10	Method 296 314	hypothesis network
+T11	Method 412 429	processing module
+T12	Generic 448 454	module
+T13	Method 527 545	hypothesis network
+T14	Method 554 572	hypothesis network
+T15	Method 626 640	internal model
+T16	Material 644 661	perceptual sounds
+T17	Method 705 710	model
+T18	Method 714 741	music scene analysis system
+T19	OtherScientificTerm 765 799	acoustic signals of ensemble music
+T20	Material 818 824	rhythm
+T21	Material 826 832	chords
+T22	Material 838 868	source-separated musical notes
+T23	Generic 905 911	method
+T24	OtherScientificTerm 959 982	information integration
+T25	Method 1000 1014	internal model
+T26	Material 1018 1048	hierarchical perceptual sounds
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	PART-OF Arg1:T3 Arg2:T4
+R3	USED-FOR Arg1:T6 Arg2:T5
+R4	HYPONYM-OF Arg1:T2 Arg2:T5
+R5	CONJUNCTION Arg1:T9 Arg2:T10
+R6	PART-OF Arg1:T9 Arg2:T8
+R7	COREF Arg1:T11 Arg2:T9
+R8	COREF Arg1:T13 Arg2:T10
+R9	COREF Arg1:T14 Arg2:T13
+R10	COREF Arg1:T17 Arg2:T15
+R11	CONJUNCTION Arg1:T21 Arg2:T22
+R12	USED-FOR Arg1:T18 Arg2:T20
+R13	PART-OF Arg1:T15 Arg2:T14
+R14	FEATURE-OF Arg1:T7 Arg2:T6
+R15	PART-OF Arg1:T10 Arg2:T8
+R16	COREF Arg1:T11 Arg2:T12
+R17	USED-FOR Arg1:T15 Arg2:T16
+R18	USED-FOR Arg1:T18 Arg2:T19
+R19	CONJUNCTION Arg1:T20 Arg2:T21
+R20	USED-FOR Arg1:T18 Arg2:T21
+R21	USED-FOR Arg1:T18 Arg2:T22
+R22	COREF Arg1:T25 Arg2:T15
+R23	USED-FOR Arg1:T25 Arg2:T26
+R24	FEATURE-OF Arg1:T24 Arg2:T23
+R25	USED-FOR Arg1:T24 Arg2:T25
+R26	COREF Arg1:T23 Arg2:T8
+R27	COREF Arg1:T8 Arg2:T1

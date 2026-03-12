@@ -1,0 +1,75 @@
+T1	Method 0 16	Graphical models
+T2	Method 25 48	Bayesian Networks (BNs)
+T3	Task 91 115	computer vision problems
+T4	Method 141 143	BN
+T5	OtherScientificTerm 165 184	BN model parameters
+T6	Material 231 259	representative training data
+T7	Task 310 331	computer vision tasks
+T8	OtherScientificTerm 377 404	qualitative prior knowledge
+T9	Generic 415 420	model
+T10	Generic 427 436	knowledge
+T11	OtherScientificTerm 455 469	domain experts
+T12	OtherScientificTerm 512 545	physical or geometric constraints
+T13	OtherScientificTerm 598 616	quantitative prior
+T14	OtherScientificTerm 622 639	qualitative prior
+T15	Generic 696 700	them
+T16	Task 710 732	model learning process
+T17	Method 764 784	closed-form solution
+T18	Material 815 836	limited training data
+T19	OtherScientificTerm 855 876	qualitative knowledge
+T20	Method 881 902	BN parameter learning
+T21	Generic 920 926	method
+T22	Generic 939 941	it
+T23	Method 951 992	Maximum Likelihood (ML) estimation method
+T24	Material 999 1010	sparse data
+T25	Method 1024 1063	Expectation Maximization (EM) algorithm
+T26	Material 1070 1085	incomplete data
+T27	Task 1144 1159	computer vision
+T28	Generic 1170 1172	it
+T29	Method 1184 1192	BN model
+T30	Task 1197 1232	facial Action Unit (AU) recognition
+T31	Material 1238 1253	real image data
+T32	OtherScientificTerm 1306 1337	generic qualitative constraints
+T33	Material 1371 1384	training data
+T34	Generic 1390 1396	method
+T35	OtherScientificTerm 1438 1457	BN model parameters
+R1	HYPONYM-OF Arg1:T2 Arg2:T1
+R2	COREF Arg1:T4 Arg2:T2
+R3	USED-FOR Arg1:T1 Arg2:T3
+R4	USED-FOR Arg1:T6 Arg2:T5
+R5	USED-FOR Arg1:T6 Arg2:T7
+R6	COREF Arg1:T10 Arg2:T8
+R7	FEATURE-OF Arg1:T8 Arg2:T9
+R8	COREF Arg1:T14 Arg2:T10
+R9	USED-FOR Arg1:T12 Arg2:T10
+R10	COMPARE Arg1:T13 Arg2:T14
+R11	CONJUNCTION Arg1:T11 Arg2:T12
+R12	COREF Arg1:T15 Arg2:T14
+R13	PART-OF Arg1:T15 Arg2:T16
+R14	USED-FOR Arg1:T19 Arg2:T20
+R15	COMPARE Arg1:T22 Arg2:T23
+R16	USED-FOR Arg1:T24 Arg2:T22
+R17	USED-FOR Arg1:T24 Arg2:T23
+R18	USED-FOR Arg1:T26 Arg2:T25
+R19	COMPARE Arg1:T22 Arg2:T25
+R20	USED-FOR Arg1:T28 Arg2:T29
+R21	USED-FOR Arg1:T29 Arg2:T30
+R22	CONJUNCTION Arg1:T32 Arg2:T33
+R23	USED-FOR Arg1:T33 Arg2:T34
+R24	USED-FOR Arg1:T32 Arg2:T34
+R25	USED-FOR Arg1:T34 Arg2:T35
+R26	COREF Arg1:T4 Arg2:T29
+R27	COREF Arg1:T27 Arg2:T3
+R28	COREF Arg1:T7 Arg2:T3
+R29	USED-FOR Arg1:T11 Arg2:T10
+R30	CONJUNCTION Arg1:T18 Arg2:T19
+R31	USED-FOR Arg1:T18 Arg2:T20
+R32	USED-FOR Arg1:T20 Arg2:T17
+R33	COREF Arg1:T21 Arg2:T22
+R34	COREF Arg1:T17 Arg2:T21
+R35	USED-FOR Arg1:T26 Arg2:T22
+R36	COREF Arg1:T22 Arg2:T28
+R37	USED-FOR Arg1:T28 Arg2:T27
+R38	COREF Arg1:T34 Arg2:T28
+R39	USED-FOR Arg1:T31 Arg2:T30
+R40	COREF Arg1:T9 Arg2:T4

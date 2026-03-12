@@ -1,0 +1,26 @@
+T1	Method 21 47	verbal and nonverbal means
+T2	Task 54 63	grounding
+T3	Generic 81 87	design
+T4	Method 93 123	embodied conversational agents
+T5	Task 178 191	common ground
+T6	Task 197 223	human-computer interaction
+T7	OtherScientificTerm 240 248	eye gaze
+T8	OtherScientificTerm 253 262	head nods
+T9	OtherScientificTerm 269 286	attentional focus
+T10	Task 309 330	direction-giving task
+T11	OtherScientificTerm 355 374	nonverbal behaviors
+T12	OtherScientificTerm 411 424	dialogue move
+T13	OtherScientificTerm 501 518	negative feedback
+T14	Method 561 564	ECA
+T15	OtherScientificTerm 577 612	verbal and nonverbal grounding acts
+T16	OtherScientificTerm 625 639	dialogue state
+R1	PART-OF Arg1:T9 Arg2:T10
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	USED-FOR Arg1:T15 Arg2:T16
+R5	USED-FOR Arg1:T15 Arg2:T14
+R6	USED-FOR Arg1:T5 Arg2:T6
+R7	CONJUNCTION Arg1:T7 Arg2:T8
+R8	CONJUNCTION Arg1:T8 Arg2:T9
+R9	PART-OF Arg1:T8 Arg2:T10
+R10	PART-OF Arg1:T7 Arg2:T10

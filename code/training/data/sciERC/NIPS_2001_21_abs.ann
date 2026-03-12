@@ -1,0 +1,27 @@
+T1	Task 25 48	blind source separation
+T2	OtherScientificTerm 63 92	instantaneous linear mixtures
+T3	OtherScientificTerm 104 117	mixing matrix
+T4	OtherScientificTerm 178 197	sparsity of sources
+T5	OtherScientificTerm 249 266	signal dictionary
+T6	Metric 294 315	quality of separation
+T7	OtherScientificTerm 353 375	multi scale transforms
+T8	OtherScientificTerm 385 411	wavelet or wavelet packets
+T9	OtherScientificTerm 447 461	local features
+T10	OtherScientificTerm 486 494	sparsity
+T11	OtherScientificTerm 575 583	features
+T12	Generic 631 640	algorithm
+T13	Material 656 681	noise-free and noisy data
+T14	Material 700 717	simulated signals
+T15	Material 719 733	musical sounds
+T16	Material 738 744	images
+T17	Metric 784 802	separation quality
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	EVALUATE-FOR Arg1:T6 Arg2:T4
+R4	EVALUATE-FOR Arg1:T13 Arg2:T12
+R5	CONJUNCTION Arg1:T14 Arg2:T15
+R6	CONJUNCTION Arg1:T15 Arg2:T16
+R7	HYPONYM-OF Arg1:T8 Arg2:T7
+R8	EVALUATE-FOR Arg1:T16 Arg2:T17
+R9	EVALUATE-FOR Arg1:T15 Arg2:T17
+R10	EVALUATE-FOR Arg1:T14 Arg2:T17

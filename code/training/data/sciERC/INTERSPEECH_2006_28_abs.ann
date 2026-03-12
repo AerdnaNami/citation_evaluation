@@ -1,0 +1,42 @@
+T1	OtherScientificTerm 24 64	automatic phonetic transcriptions (APTs)
+T2	OtherScientificTerm 77 118	manually verified phonetic transcriptions
+T3	Task 159 182	pronunciation variation
+T4	Task 258 272	classification
+T5	Task 366 389	pronunciation variation
+T6	Method 402 413	classifiers
+T7	Material 421 437	speech processes
+T8	OtherScientificTerm 457 467	alignments
+T9	OtherScientificTerm 474 477	APT
+T10	OtherScientificTerm 485 488	MPT
+T11	OtherScientificTerm 496 519	canonical transcription
+T12	Material 543 554	classifiers
+T13	OtherScientificTerm 594 616	unknown transcriptions
+T14	Material 627 638	read speech
+T15	Material 642 661	telephone dialogues
+T16	Material 684 700	speech processes
+T17	Method 880 900	APT-based classifier
+T18	Metric 916 939	classification accuracy
+T19	Method 949 969	MPT-based classifier
+T20	OtherScientificTerm 989 1012	classification features
+R1	USED-FOR Arg1:T1 Arg2:T3
+R2	USED-FOR Arg1:T2 Arg2:T3
+R3	COMPARE Arg1:T1 Arg2:T2
+R4	COREF Arg1:T3 Arg2:T5
+R5	COREF Arg1:T9 Arg2:T1
+R6	COREF Arg1:T10 Arg2:T2
+R7	USED-FOR Arg1:T8 Arg2:T7
+R8	USED-FOR Arg1:T7 Arg2:T6
+R9	USED-FOR Arg1:T11 Arg2:T8
+R10	USED-FOR Arg1:T8 Arg2:T9
+R11	USED-FOR Arg1:T8 Arg2:T10
+R12	CONJUNCTION Arg1:T9 Arg2:T10
+R13	COREF Arg1:T6 Arg2:T12
+R14	USED-FOR Arg1:T13 Arg2:T14
+R15	USED-FOR Arg1:T13 Arg2:T15
+R16	CONJUNCTION Arg1:T14 Arg2:T15
+R17	USED-FOR Arg1:T12 Arg2:T13
+R18	EVALUATE-FOR Arg1:T18 Arg2:T17
+R19	COMPARE Arg1:T17 Arg2:T19
+R20	USED-FOR Arg1:T20 Arg2:T17
+R21	USED-FOR Arg1:T20 Arg2:T19
+R22	EVALUATE-FOR Arg1:T18 Arg2:T19

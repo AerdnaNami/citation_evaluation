@@ -1,0 +1,39 @@
+T1	Method 18 68	generative probabilistic model of natural language
+T2	Method 87 90	HBG
+T3	OtherScientificTerm 128 150	linguistic information
+T4	Task 164 173	ambiguity
+T5	Method 179 182	HBG
+T6	OtherScientificTerm 198 254	lexical, syntactic, semantic, and structural information
+T7	OtherScientificTerm 266 276	parse tree
+T8	Task 288 310	disambiguation process
+T9	Material 338 367	corpus of bracketed sentences
+T10	Material 381 389	Treebank
+T11	Method 414 436	decision tree building
+T12	OtherScientificTerm 478 488	parse tree
+T13	OtherScientificTerm 523 528	parse
+T14	Task 606 624	grammar  tailoring
+T15	Method 640 664	linguistic introspection
+T16	OtherScientificTerm 705 710	parse
+T17	OtherScientificTerm 718 736	head-to-head tests
+T18	Method 771 807	robust  probabilistic parsing models
+T19	Method 826 831	P-CFG
+T20	Method 839 848	HBG model
+T21	Method 877 882	P-CFG
+T22	Metric 902 924	parsing accuracy  rate
+R1	USED-FOR Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T6 Arg2:T5
+R3	COMPARE Arg1:T20 Arg2:T21
+R4	COREF Arg1:T2 Arg2:T1
+R5	COREF Arg1:T5 Arg2:T2
+R6	USED-FOR Arg1:T5 Arg2:T8
+R7	COREF Arg1:T10 Arg2:T9
+R8	CONJUNCTION Arg1:T9 Arg2:T11
+R9	USED-FOR Arg1:T11 Arg2:T12
+R10	COREF Arg1:T19 Arg2:T21
+R11	COREF Arg1:T20 Arg2:T5
+R12	USED-FOR Arg1:T15 Arg2:T14
+R13	USED-FOR Arg1:T14 Arg2:T16
+R14	USED-FOR Arg1:T9 Arg2:T12
+R15	USED-FOR Arg1:T12 Arg2:T13
+R16	EVALUATE-FOR Arg1:T22 Arg2:T20
+R17	HYPONYM-OF Arg1:T19 Arg2:T18

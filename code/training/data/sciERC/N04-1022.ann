@@ -1,0 +1,31 @@
+T1	Method 13 46	Minimum Bayes-Risk (MBR) decoding
+T2	Task 53 84	statistical machine translation
+T3	Method 92 112	statistical approach
+T4	OtherScientificTerm 131 144	expected loss
+T5	OtherScientificTerm 150 168	translation errors
+T6	OtherScientificTerm 177 191	loss functions
+T7	Task 207 218	translation
+T8	OtherScientificTerm 261 275	loss functions
+T9	OtherScientificTerm 315 337	linguistic information
+T10	OtherScientificTerm 361 384	word-to-word alignments
+T11	Method 395 404	MT system
+T12	OtherScientificTerm 412 431	syntactic structure
+T13	OtherScientificTerm 439 450	parse-trees
+T14	Method 531 543	MBR decoders
+T15	Task 551 586	Chinese-to-English translation task
+T16	Method 612 624	MBR decoding
+T17	Method 647 661	statistical MT
+T18	OtherScientificTerm 689 703	loss functions
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T9 Arg2:T8
+R3	PART-OF Arg1:T10 Arg2:T11
+R4	USED-FOR Arg1:T10 Arg2:T8
+R5	USED-FOR Arg1:T12 Arg2:T8
+R6	PART-OF Arg1:T13 Arg2:T12
+R7	COREF Arg1:T14 Arg2:T1
+R8	USED-FOR Arg1:T14 Arg2:T15
+R9	COREF Arg1:T16 Arg2:T14
+R10	USED-FOR Arg1:T16 Arg2:T18
+R11	EVALUATE-FOR Arg1:T6 Arg2:T7
+R12	USED-FOR Arg1:T16 Arg2:T17
+R13	COREF Arg1:T3 Arg2:T1

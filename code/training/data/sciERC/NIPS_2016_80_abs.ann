@@ -1,0 +1,26 @@
+T1	Generic 0 15	Fast algorithms
+T2	Task 20 48	nearest neighbor (NN) search
+T3	OtherScientificTerm 81 89	distance
+T4	Generic 110 118	approach
+T5	OtherScientificTerm 123 133	1 distance
+T6	OtherScientificTerm 175 204	distance-preserving embedding
+T7	Generic 241 245	this
+T8	Method 279 310	random-projection based methods
+T9	Task 317 326	NN search
+T10	Method 336 368	locality-sensitive hashing (LSH)
+T11	Method 372 395	random projection trees
+T12	Method 490 493	LSH
+T13	Generic 499 501	it
+T14	Generic 544 556	alternatives
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T4 Arg2:T5
+R3	COREF Arg1:T2 Arg2:T9
+R4	COREF Arg1:T4 Arg2:T7
+R5	USED-FOR Arg1:T8 Arg2:T9
+R6	CONJUNCTION Arg1:T7 Arg2:T8
+R7	HYPONYM-OF Arg1:T10 Arg2:T8
+R8	HYPONYM-OF Arg1:T11 Arg2:T8
+R9	CONJUNCTION Arg1:T10 Arg2:T11
+R10	COREF Arg1:T10 Arg2:T12
+R11	COREF Arg1:T12 Arg2:T13
+R12	COMPARE Arg1:T13 Arg2:T14

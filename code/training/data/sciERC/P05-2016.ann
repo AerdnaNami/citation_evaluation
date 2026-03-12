@@ -1,0 +1,10 @@
+T1	Method 15 67	Czech-English statistical machine translation system
+T2	Task 85 136	tree-to-tree translation  of  dependency structures
+T3	Material 150 168	bilingual resource
+T4	Material 185 217	sentence-aligned parallel corpus
+T5	Generic 328 334	system
+T6	Generic 353 369	benchmark system
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T4 Arg2:T3
+R3	COMPARE Arg1:T5 Arg2:T6
+R4	COREF Arg1:T1 Arg2:T5

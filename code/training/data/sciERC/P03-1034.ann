@@ -1,0 +1,32 @@
+T1	Method 2 53	Pipelined Natural Language Generation (NLG) systems
+T2	Method 91 112	architectural modules
+T3	OtherScientificTerm 137 161	language functionalities
+T4	OtherScientificTerm 172 193	referring expressions
+T5	OtherScientificTerm 197 211	lexical choice
+T6	OtherScientificTerm 219 227	revision
+T7	Generic 308 315	modules
+T8	Generic 324 345	overall  architecture
+T9	Material 382 402	multi-paragraph text
+T10	OtherScientificTerm 406 423	discourse markers
+T11	Method 468 504	discourse marker insertion algorithm
+T12	Method 560 586	pipelined NLG architecture
+T13	Generic 598 606	approach
+T14	Generic 626 628	it
+T15	Method 635 653	revision component
+T16	Generic 681 689	approach
+T17	Task 704 721	multi-page system
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	PART-OF Arg1:T15 Arg2:T12
+R3	HYPONYM-OF Arg1:T4 Arg2:T3
+R4	HYPONYM-OF Arg1:T5 Arg2:T3
+R5	HYPONYM-OF Arg1:T6 Arg2:T3
+R6	CONJUNCTION Arg1:T4 Arg2:T5
+R7	CONJUNCTION Arg1:T5 Arg2:T6
+R8	COREF Arg1:T2 Arg2:T7
+R9	PART-OF Arg1:T7 Arg2:T8
+R10	COREF Arg1:T1 Arg2:T8
+R11	COREF Arg1:T8 Arg2:T12
+R12	EVALUATE-FOR Arg1:T17 Arg2:T16
+R13	COREF Arg1:T11 Arg2:T14
+R14	CONJUNCTION Arg1:T14 Arg2:T15
+R15	COREF Arg1:T13 Arg2:T16

@@ -1,0 +1,35 @@
+T1	Generic 24 30	method
+T2	Task 36 60	utterance classification
+T3	Material 85 105	manual transcription
+T4	Generic 132 138	method
+T5	Method 149 183	domain independent acoustic models
+T6	Method 205 216	classifiers
+T7	Task 227 251	utterance classification
+T8	Method 336 360	word-trigram recognition
+T9	Material 373 393	manual transcription
+T10	Generic 404 410	method
+T11	Method 413 434	unsupervised training
+T12	Method 462 480	phone n-gram model
+T13	Generic 500 506	domain
+T14	Generic 551 556	model
+T15	Method 579 602	phone-string classifier
+T16	Metric 611 634	classification accuracy
+T17	Generic 643 649	method
+T18	Material 683 713	spoken language system domains
+R1	USED-FOR Arg1:T9 Arg2:T8
+R2	USED-FOR Arg1:T11 Arg2:T12
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T4 Arg2:T1
+R5	PART-OF Arg1:T5 Arg2:T4
+R6	CONJUNCTION Arg1:T6 Arg2:T5
+R7	USED-FOR Arg1:T8 Arg2:T4
+R8	COREF Arg1:T10 Arg2:T4
+R9	PART-OF Arg1:T11 Arg2:T10
+R10	USED-FOR Arg1:T11 Arg2:T13
+R11	COREF Arg1:T14 Arg2:T12
+R12	COREF Arg1:T17 Arg2:T10
+R13	EVALUATE-FOR Arg1:T18 Arg2:T17
+R14	EVALUATE-FOR Arg1:T16 Arg2:T17
+R15	USED-FOR Arg1:T4 Arg2:T7
+R16	COREF Arg1:T7 Arg2:T2
+R17	PART-OF Arg1:T6 Arg2:T4

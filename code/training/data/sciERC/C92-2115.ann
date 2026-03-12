@@ -1,0 +1,22 @@
+T1	Task 8 22	transfer phase
+T2	Task 28 60	machine translation (MT) systems
+T3	Task 111 119	analysis
+T4	Task 126 136	generation
+T5	Generic 146 148	it
+T6	OtherScientificTerm 195 208	lexical rules
+T7	Method 259 279	case-based reasoning
+T8	Task 285 304	machine translation
+T9	Task 399 401	MT
+T10	Method 440 455	transfer system
+T11	Method 469 512	Similarity-driven Transfer System (SimTran)
+T12	Task 533 553	case-based MT (CBMT)
+R1	COMPARE Arg1:T1 Arg2:T3
+R2	USED-FOR Arg1:T7 Arg2:T8
+R3	USED-FOR Arg1:T11 Arg2:T12
+R4	PART-OF Arg1:T1 Arg2:T2
+R5	CONJUNCTION Arg1:T3 Arg2:T4
+R6	COMPARE Arg1:T1 Arg2:T4
+R7	COREF Arg1:T8 Arg2:T2
+R8	COREF Arg1:T9 Arg2:T8
+R9	HYPONYM-OF Arg1:T11 Arg2:T10
+R10	COREF Arg1:T5 Arg2:T1

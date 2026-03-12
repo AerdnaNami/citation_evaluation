@@ -1,0 +1,39 @@
+T1	Generic 8 18	approaches
+T2	Task 22 49	object category recognition
+T3	Generic 58 66	datasets
+T4	OtherScientificTerm 135 146	supervision
+T5	Generic 162 170	approach
+T6	OtherScientificTerm 189 204	object category
+T7	Method 256 276	image search engines
+T8	Generic 321 326	model
+T9	Method 328 336	TSI-pLSA
+T10	Method 352 356	pLSA
+T11	OtherScientificTerm 372 384	visual words
+T12	OtherScientificTerm 397 416	spatial information
+T13	Generic 466 474	approach
+T14	OtherScientificTerm 495 518	intra-class variability
+T15	OtherScientificTerm 543 559	unrelated images
+T16	Method 572 586	search engines
+T17	Generic 604 610	models
+T18	Generic 623 632	test sets
+T19	Generic 680 687	methods
+T20	Material 699 721	hand prepared datasets
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	COREF Arg1:T5 Arg2:T8
+R5	COREF Arg1:T8 Arg2:T9
+R6	USED-FOR Arg1:T10 Arg2:T9
+R7	USED-FOR Arg1:T10 Arg2:T11
+R8	COREF Arg1:T9 Arg2:T13
+R9	USED-FOR Arg1:T13 Arg2:T14
+R10	USED-FOR Arg1:T13 Arg2:T15
+R11	CONJUNCTION Arg1:T14 Arg2:T15
+R12	USED-FOR Arg1:T16 Arg2:T15
+R13	COREF Arg1:T7 Arg2:T16
+R14	COREF Arg1:T13 Arg2:T17
+R15	EVALUATE-FOR Arg1:T18 Arg2:T17
+R16	USED-FOR Arg1:T20 Arg2:T19
+R17	COMPARE Arg1:T19 Arg2:T17
+R18	EVALUATE-FOR Arg1:T18 Arg2:T19
+R19	PART-OF Arg1:T12 Arg2:T9

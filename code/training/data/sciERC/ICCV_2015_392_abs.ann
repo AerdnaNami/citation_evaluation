@@ -1,0 +1,60 @@
+T1	Generic 32 40	approach
+T2	Task 53 85	oriented object proposals (OOPs)
+T3	Metric 100 115	detection error
+T4	OtherScientificTerm 134 160	orientations of the object
+T5	OtherScientificTerm 208 222	object regions
+T6	OtherScientificTerm 236 264	pixelwise object probability
+T7	OtherScientificTerm 292 302	objectness
+T8	Task 351 378	proposal generation problem
+T9	Method 384 415	generative proba-bilistic model
+T10	OtherScientificTerm 426 442	object proposals
+T11	OtherScientificTerm 456 462	shapes
+T12	OtherScientificTerm 470 475	sizes
+T13	OtherScientificTerm 480 492	orientations
+T14	OtherScientificTerm 526 551	local maximum likelihoods
+T15	Generic 561 569	approach
+T16	Generic 604 606	it
+T17	Method 617 632	object detector
+T18	OtherScientificTerm 661 673	orientations
+T19	OtherScientificTerm 690 713	shapes of the proposals
+T20	OtherScientificTerm 788 804	sampling windows
+T21	Generic 830 832	it
+T22	Method 840 863	massive window sampling
+T23	OtherScientificTerm 890 909	number of proposals
+T24	Metric 935 941	recall
+T25	Material 962 985	PASCAL VOC 2007 dataset
+T26	Method 1009 1012	OOP
+T27	Generic 1029 1058	state-of-the-art fast methods
+T28	OtherScientificTerm 1094 1121	rotation invariant property
+T29	Method 1130 1160	class-specific object detector
+T30	Method 1214 1241	proposal generation methods
+T31	Material 1252 1277	object rotation scenarios
+T32	Material 1281 1298	general scenarios
+T33	Task 1311 1315	OOPs
+R1	EVALUATE-FOR Arg1:T3 Arg2:T2
+R2	CONJUNCTION Arg1:T12 Arg2:T13
+R3	USED-FOR Arg1:T9 Arg2:T8
+R4	FEATURE-OF Arg1:T11 Arg2:T10
+R5	COMPARE Arg1:T26 Arg2:T27
+R6	USED-FOR Arg1:T28 Arg2:T29
+R7	COMPARE Arg1:T29 Arg2:T30
+R8	USED-FOR Arg1:T6 Arg2:T5
+R9	COMPARE Arg1:T6 Arg2:T7
+R10	COREF Arg1:T15 Arg2:T9
+R11	COREF Arg1:T21 Arg2:T15
+R12	COREF Arg1:T16 Arg2:T15
+R13	EVALUATE-FOR Arg1:T24 Arg2:T21
+R14	USED-FOR Arg1:T1 Arg2:T2
+R15	COREF Arg1:T9 Arg2:T1
+R16	USED-FOR Arg1:T17 Arg2:T18
+R17	USED-FOR Arg1:T21 Arg2:T23
+R18	EVALUATE-FOR Arg1:T25 Arg2:T26
+R19	COREF Arg1:T33 Arg2:T26
+R20	HYPONYM-OF Arg1:T12 Arg2:T11
+R21	HYPONYM-OF Arg1:T13 Arg2:T11
+R22	USED-FOR Arg1:T14 Arg2:T10
+R23	CONJUNCTION Arg1:T31 Arg2:T32
+R24	EVALUATE-FOR Arg1:T31 Arg2:T30
+R25	EVALUATE-FOR Arg1:T32 Arg2:T30
+R26	EVALUATE-FOR Arg1:T31 Arg2:T29
+R27	EVALUATE-FOR Arg1:T32 Arg2:T29

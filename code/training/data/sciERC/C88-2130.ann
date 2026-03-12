@@ -1,0 +1,11 @@
+T1	Generic 24 43	computational model
+T2	Task 127 141	discourse task
+T3	Generic 200 205	model
+T4	Generic 224 231	program
+T5	Method 234 237	APT
+T6	Method 314 353	organizational and discourse strategies
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T1
+R3	PART-OF Arg1:T3 Arg2:T4
+R4	COREF Arg1:T4 Arg2:T5
+R5	USED-FOR Arg1:T6 Arg2:T5

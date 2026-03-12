@@ -1,0 +1,27 @@
+T1	Method 31 59	unsupervised learning method
+T2	Method 72 111	Expectation-Maximization (EM) algorithm
+T3	Task 143 171	text classification problems
+T4	Generic 191 193	it
+T5	Task 198 238	word sense disambiguation (WSD) problems
+T6	Generic 254 260	method
+T7	Method 272 284	EM algorithm
+T8	OtherScientificTerm 294 318	optimum iteration number
+T9	Generic 338 344	number
+T10	Task 400 417	noun WSD problems
+T11	Task 427 451	Japanese Dictionary Task
+T12	Material 455 464	SENSEVAL2
+T13	Generic 484 490	method
+T14	Generic 536 540	task
+T15	Generic 559 566	methods
+T16	Task 608 625	verb WSD problems
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T2 Arg2:T3
+R3	COREF Arg1:T4 Arg2:T1
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	COREF Arg1:T6 Arg2:T1
+R6	COREF Arg1:T9 Arg2:T8
+R7	FEATURE-OF Arg1:T11 Arg2:T12
+R8	COREF Arg1:T14 Arg2:T11
+R9	USED-FOR Arg1:T15 Arg2:T16
+R10	COREF Arg1:T15 Arg2:T13
+R11	COREF Arg1:T13 Arg2:T6

@@ -1,0 +1,48 @@
+T1	Task 2 29	Sentence boundary detection
+T2	Material 35 41	speech
+T3	OtherScientificTerm 71 97	speech recognition  output
+T4	Generic 106 108	it
+T5	Method 207 273	hidden Markov model (HMM) and maximum entropy (Maxent) classifiers
+T6	Material 290 329	textual and prosodic  knowledge sources
+T7	Task 335 365	detecting  sentence boundaries
+T8	Method 409 439	conditional random field (CRF)
+T9	Generic 450 454	task
+T10	Generic 484 489	model
+T11	Generic 532 539	corpora
+T12	Material 541 573	conversational  telephone speech
+T13	Material 580 601	broadcast news speech
+T14	OtherScientificTerm 613 633	human transcriptions
+T15	OtherScientificTerm 640 666	speech recognition  output
+T16	Method 685 695	CRF  model
+T17	Metric 711 721	error rate
+T18	Method 732 754	HMM and Max-ent models
+T19	Material 764 801	NIST sentence boundary detection task
+T20	Material 807 813	speech
+T21	Method 890 906	three-way voting
+T22	Method 919 930	classifiers
+T23	Generic 968 973	model
+T24	Material 1032 1049	knowledge sources
+R1	USED-FOR Arg1:T6 Arg2:T5
+R2	COREF Arg1:T1 Arg2:T7
+R3	COREF Arg1:T7 Arg2:T9
+R4	USED-FOR Arg1:T8 Arg2:T9
+R5	COREF Arg1:T8 Arg2:T10
+R6	HYPONYM-OF Arg1:T12 Arg2:T11
+R7	HYPONYM-OF Arg1:T13 Arg2:T11
+R8	CONJUNCTION Arg1:T12 Arg2:T13
+R9	USED-FOR Arg1:T2 Arg2:T1
+R10	USED-FOR Arg1:T1 Arg2:T3
+R11	COREF Arg1:T3 Arg2:T4
+R12	CONJUNCTION Arg1:T14 Arg2:T15
+R13	EVALUATE-FOR Arg1:T11 Arg2:T14
+R14	EVALUATE-FOR Arg1:T11 Arg2:T15
+R15	COREF Arg1:T8 Arg2:T16
+R16	EVALUATE-FOR Arg1:T17 Arg2:T16
+R17	EVALUATE-FOR Arg1:T17 Arg2:T18
+R18	COMPARE Arg1:T16 Arg2:T18
+R19	FEATURE-OF Arg1:T20 Arg2:T19
+R20	EVALUATE-FOR Arg1:T19 Arg2:T18
+R21	EVALUATE-FOR Arg1:T19 Arg2:T16
+R22	USED-FOR Arg1:T23 Arg2:T24
+R23	USED-FOR Arg1:T5 Arg2:T7
+R24	USED-FOR Arg1:T22 Arg2:T21

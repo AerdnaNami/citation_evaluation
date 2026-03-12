@@ -1,0 +1,25 @@
+T1	Method 0 27	Regression-based techniques
+T2	Task 61 94	people counting in crowded scenes
+T3	Generic 119 129	techniques
+T4	Task 162 177	data annotation
+T5	Task 182 196	model training
+T6	OtherScientificTerm 341 359	informative frames
+T7	Task 377 387	annotation
+T8	Generic 451 464	labelled data
+T9	Material 470 494	abundant unlabelled data
+T10	Task 595 610	data annotation
+T11	Method 649 704	unified active and semi-supervised regression framework
+T12	Method 729 746	transfer learning
+T13	OtherScientificTerm 777 814	geometric structure of crowd patterns
+T14	Method 819 836	manifold analysis
+T15	Generic 894 902	approach
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T4 Arg2:T3
+R3	COREF Arg1:T4 Arg2:T7
+R4	USED-FOR Arg1:T11 Arg2:T12
+R5	COREF Arg1:T11 Arg2:T15
+R6	USED-FOR Arg1:T14 Arg2:T13
+R7	USED-FOR Arg1:T13 Arg2:T11
+R8	COREF Arg1:T7 Arg2:T10
+R9	USED-FOR Arg1:T1 Arg2:T2
+R10	COMPARE Arg1:T8 Arg2:T9

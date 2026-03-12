@@ -1,0 +1,15 @@
+T1	Generic 15 21	method
+T2	OtherScientificTerm 38 80	systematic  patterns  in  translation data
+T3	Material 89 117	part-of-speech tag sequences
+T4	Generic 141 149	analysis
+T5	Method 158 173	diagnostic tool
+T6	Method 205 232	machine translation systems
+T7	Generic 260 271	application
+T8	OtherScientificTerm 312 352	patterns  in  machine translation output
+R1	USED-FOR Arg1:T3 Arg2:T1
+R2	COREF Arg1:T1 Arg2:T4
+R3	PART-OF Arg1:T4 Arg2:T5
+R4	USED-FOR Arg1:T5 Arg2:T6
+R5	COREF Arg1:T7 Arg2:T5
+R6	USED-FOR Arg1:T1 Arg2:T2
+R7	USED-FOR Arg1:T7 Arg2:T8

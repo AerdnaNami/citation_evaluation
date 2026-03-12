@@ -1,0 +1,48 @@
+T1	Method 0 19	Joint image filters
+T2	Material 37 51	guidance image
+T3	Material 108 122	guidance image
+T4	Task 147 164	suppressing noise
+T5	Task 168 196	enhancing spatial resolution
+T6	Generic 198 214	Existing methods
+T7	Method 240 268	explicit filter construction
+T8	Method 272 305	hand-designed objective functions
+T9	Generic 367 371	them
+T10	Generic 377 395	coherent framework
+T11	Method 425 448	learning-based approach
+T12	Method 464 476	joint filter
+T13	Method 486 516	Convolution-al Neural Networks
+T14	Generic 542 549	methods
+T15	Material 573 587	guidance image
+T16	Generic 593 599	method
+T17	Task 616 643	transfer salient structures
+T18	Generic 717 722	model
+T19	Generic 752 756	data
+T20	Material 764 784	RGB and depth images
+T21	Generic 813 823	modalities
+T22	Material 831 865	Flash/Non-Flash and RGB/NIR images
+T23	Method 913 925	joint filter
+T24	Generic 961 985	state-of-the-art methods
+R1	USED-FOR Arg1:T7 Arg2:T6
+R2	USED-FOR Arg1:T8 Arg2:T6
+R3	CONJUNCTION Arg1:T7 Arg2:T8
+R4	COREF Arg1:T6 Arg2:T9
+R5	COREF Arg1:T14 Arg2:T6
+R6	USED-FOR Arg1:T15 Arg2:T14
+R7	COMPARE Arg1:T14 Arg2:T16
+R8	COREF Arg1:T18 Arg2:T16
+R9	HYPONYM-OF Arg1:T20 Arg2:T19
+R10	USED-FOR Arg1:T19 Arg2:T18
+R11	HYPONYM-OF Arg1:T22 Arg2:T21
+R12	USED-FOR Arg1:T18 Arg2:T21
+R13	COMPARE Arg1:T23 Arg2:T24
+R14	USED-FOR Arg1:T10 Arg2:T9
+R15	USED-FOR Arg1:T11 Arg2:T12
+R16	USED-FOR Arg1:T2 Arg2:T1
+R17	COREF Arg1:T1 Arg2:T12
+R18	USED-FOR Arg1:T13 Arg2:T11
+R19	COREF Arg1:T11 Arg2:T16
+R20	USED-FOR Arg1:T16 Arg2:T17
+R21	COREF Arg1:T12 Arg2:T23
+R22	USED-FOR Arg1:T1 Arg2:T4
+R23	USED-FOR Arg1:T1 Arg2:T5
+R24	CONJUNCTION Arg1:T4 Arg2:T5

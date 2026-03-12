@@ -1,0 +1,42 @@
+T1	Method 28 89	partially-blurred-image classification and analysis framework
+T2	Task 94 124	automatically detecting images
+T3	Material 118 124	images
+T4	OtherScientificTerm 136 151	blurred regions
+T5	Generic 193 200	regions
+T6	Task 228 250	blur kernel estimation
+T7	Task 255 271	image deblurring
+T8	OtherScientificTerm 292 305	blur features
+T9	OtherScientificTerm 317 328	image color
+T10	OtherScientificTerm 330 338	gradient
+T11	OtherScientificTerm 344 364	spectrum information
+T12	Method 374 400	feature parameter training
+T13	Material 422 436	blurred images
+T14	Method 442 456	blur detection
+T15	OtherScientificTerm 469 482	image patches
+T16	Method 491 530	region-wise training and classification
+T17	Generic 591 597	method
+T18	Material 634 644	image data
+T19	Task 707 731	computer vision problems
+T20	Task 741 756	motion analysis
+T21	Task 761 778	image restoration
+T22	OtherScientificTerm 790 806	blur information
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	PART-OF Arg1:T4 Arg2:T3
+R3	COREF Arg1:T5 Arg2:T4
+R4	CONJUNCTION Arg1:T6 Arg2:T7
+R5	USED-FOR Arg1:T9 Arg2:T8
+R6	USED-FOR Arg1:T10 Arg2:T8
+R7	USED-FOR Arg1:T11 Arg2:T8
+R8	CONJUNCTION Arg1:T9 Arg2:T10
+R9	CONJUNCTION Arg1:T10 Arg2:T11
+R10	USED-FOR Arg1:T12 Arg2:T13
+R11	USED-FOR Arg1:T15 Arg2:T14
+R12	USED-FOR Arg1:T16 Arg2:T14
+R13	COREF Arg1:T17 Arg2:T14
+R14	HYPONYM-OF Arg1:T20 Arg2:T19
+R15	HYPONYM-OF Arg1:T21 Arg2:T19
+R16	CONJUNCTION Arg1:T20 Arg2:T21
+R17	EVALUATE-FOR Arg1:T18 Arg2:T17
+R18	USED-FOR Arg1:T17 Arg2:T19
+R19	USED-FOR Arg1:T22 Arg2:T17
+R20	COREF Arg1:T1 Arg2:T14

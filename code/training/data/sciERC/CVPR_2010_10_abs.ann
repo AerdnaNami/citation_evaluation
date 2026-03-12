@@ -1,0 +1,55 @@
+T1	Generic 17 25	approach
+T2	Method 63 73	classifier
+T3	Task 86 99	class problem
+T4	Material 147 152	image
+T5	OtherScientificTerm 169 182	orien-tations
+T6	Generic 229 236	problem
+T7	Method 252 263	classifiers
+T8	Generic 343 351	approach
+T9	Method 360 376	estimation stage
+T10	Method 383 403	classification stage
+T11	Method 409 418	estimator
+T12	OtherScientificTerm 454 466	object poses
+T13	Method 498 508	classifier
+T14	Metric 547 562	time complexity
+T15	Generic 570 579	algorithm
+T16	Task 586 600	classification
+T17	Method 626 636	classifier
+T18	Method 673 708	boosted combination of Random Ferns
+T19	OtherScientificTerm 714 759	local histograms of oriented gradients (HOGs)
+T20	Method 787 806	pre-processing step
+T21	Method 824 843	supervised learning
+T22	OtherScientificTerm 863 877	gradient space
+T23	Generic 888 896	approach
+T24	Generic 1019 1027	database
+T25	Material 1036 1069	motorbikes under planar rotations
+T26	Generic 1092 1102	conditions
+T27	OtherScientificTerm 1111 1132	cluttered backgrounds
+T28	OtherScientificTerm 1134 1166	changing illumination conditions
+T29	OtherScientificTerm 1171 1189	partial occlusions
+R1	COREF Arg1:T8 Arg2:T1
+R2	COREF Arg1:T15 Arg2:T8
+R3	COREF Arg1:T23 Arg2:T8
+R4	COREF Arg1:T11 Arg2:T9
+R5	COREF Arg1:T13 Arg2:T10
+R6	COREF Arg1:T17 Arg2:T10
+R7	USED-FOR Arg1:T1 Arg2:T2
+R8	FEATURE-OF Arg1:T26 Arg2:T24
+R9	HYPONYM-OF Arg1:T27 Arg2:T26
+R10	HYPONYM-OF Arg1:T28 Arg2:T26
+R11	HYPONYM-OF Arg1:T29 Arg2:T26
+R12	CONJUNCTION Arg1:T27 Arg2:T28
+R13	CONJUNCTION Arg1:T28 Arg2:T29
+R14	CONJUNCTION Arg1:T9 Arg2:T10
+R15	USED-FOR Arg1:T2 Arg2:T3
+R16	COREF Arg1:T6 Arg2:T3
+R17	PART-OF Arg1:T9 Arg2:T8
+R18	PART-OF Arg1:T10 Arg2:T8
+R19	USED-FOR Arg1:T13 Arg2:T12
+R20	EVALUATE-FOR Arg1:T14 Arg2:T15
+R21	USED-FOR Arg1:T18 Arg2:T17
+R22	FEATURE-OF Arg1:T19 Arg2:T18
+R23	USED-FOR Arg1:T20 Arg2:T19
+R24	USED-FOR Arg1:T21 Arg2:T23
+R25	USED-FOR Arg1:T22 Arg2:T23
+R26	FEATURE-OF Arg1:T25 Arg2:T24

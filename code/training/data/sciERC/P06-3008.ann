@@ -1,0 +1,42 @@
+T1	OtherScientificTerm 7 27	rhetorical structure
+T2	OtherScientificTerm 34 45	punctuation
+T3	Task 69 89	discourse processing
+T4	Task 104 129	corpus annotation project
+T5	Task 156 205	discursive usage  of 6  Chinese punctuation marks
+T6	OtherScientificTerm 180 205	Chinese punctuation marks
+T7	Material 211 232	news commentary texts
+T8	OtherScientificTerm 236 241	Colon
+T9	OtherScientificTerm 245 249	Dash
+T10	OtherScientificTerm 253 261	Ellipsis
+T11	OtherScientificTerm 265 281	Exclamation Mark
+T12	OtherScientificTerm 285 298	Question Mark
+T13	OtherScientificTerm 306 315	Semicolon
+T14	OtherScientificTerm 323 342	rhetorical patterns
+T15	Generic 353 358	marks
+T16	OtherScientificTerm 381 410	patterns  around  cue phrases
+T17	OtherScientificTerm 449 474	Chinese punctuation marks
+T18	OtherScientificTerm 506 517	cue phrases
+T19	OtherScientificTerm 621 645	indicators of nuclearity
+T20	Material 650 663	Chinese texts
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	COMPARE Arg1:T17 Arg2:T18
+R3	CONJUNCTION Arg1:T1 Arg2:T2
+R4	USED-FOR Arg1:T1 Arg2:T3
+R5	PART-OF Arg1:T6 Arg2:T7
+R6	CONJUNCTION Arg1:T10 Arg2:T11
+R7	CONJUNCTION Arg1:T11 Arg2:T12
+R8	CONJUNCTION Arg1:T12 Arg2:T13
+R9	HYPONYM-OF Arg1:T8 Arg2:T6
+R10	HYPONYM-OF Arg1:T9 Arg2:T6
+R11	HYPONYM-OF Arg1:T10 Arg2:T6
+R12	HYPONYM-OF Arg1:T11 Arg2:T6
+R13	HYPONYM-OF Arg1:T12 Arg2:T6
+R14	HYPONYM-OF Arg1:T13 Arg2:T6
+R16	CONJUNCTION Arg1:T8 Arg2:T9
+R17	CONJUNCTION Arg1:T9 Arg2:T10
+R18	COREF Arg1:T6 Arg2:T15
+R19	FEATURE-OF Arg1:T14 Arg2:T15
+R20	COMPARE Arg1:T14 Arg2:T16
+R21	COREF Arg1:T17 Arg2:T15
+R22	FEATURE-OF Arg1:T20 Arg2:T19
+R23	USED-FOR Arg1:T17 Arg2:T19

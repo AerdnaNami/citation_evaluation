@@ -1,0 +1,28 @@
+T1	Method 55 97	natural language question answering system
+T2	Method 109 116	Chat-80
+T3	Method 121 128	Chat-80
+T4	Generic 224 230	system
+T5	OtherScientificTerm 259 265	Prolog
+T6	OtherScientificTerm 272 292	programming language
+T7	OtherScientificTerm 304 309	logic
+T8	Method 332 361	logic-based grammar formalism
+T9	Method 371 393	extraposition grammars
+T10	Method 398 405	Chat-80
+T11	OtherScientificTerm 448 472	Prolog   subset of logic
+T12	OtherScientificTerm 491 509	logical expression
+T13	Method 537 555	planning algorithm
+T14	OtherScientificTerm 573 579	Prolog
+T15	Method 588 606	query optimisation
+T16	Material 614 633	relational database
+T17	OtherScientificTerm 651 662	Prolog form
+R1	USED-FOR Arg1:T7 Arg2:T6
+R2	HYPONYM-OF Arg1:T2 Arg2:T1
+R3	COREF Arg1:T3 Arg2:T2
+R4	COREF Arg1:T4 Arg2:T3
+R5	USED-FOR Arg1:T5 Arg2:T4
+R6	HYPONYM-OF Arg1:T5 Arg2:T6
+R7	HYPONYM-OF Arg1:T9 Arg2:T8
+R8	COREF Arg1:T10 Arg2:T4
+R9	USED-FOR Arg1:T13 Arg2:T12
+R10	USED-FOR Arg1:T16 Arg2:T15
+R11	USED-FOR Arg1:T9 Arg2:T10

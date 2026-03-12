@@ -1,0 +1,41 @@
+T1	Method 43 86	coarse-to-fine energy minimization strategy
+T2	Task 91 119	semantic video segmenta-tion
+T3	Generic 125 133	strategy
+T4	Task 148 196	hierarchical abstraction of the supervoxel graph
+T5	OtherScientificTerm 269 278	hierarchy
+T6	OtherScientificTerm 335 349	coarser graphs
+T7	Generic 355 363	strategy
+T8	Generic 380 382	it
+T9	OtherScientificTerm 433 445	finest graph
+T10	Generic 447 449	It
+T11	Generic 468 470	it
+T12	OtherScientificTerm 499 514	energy function
+T13	Method 581 610	energy minimization algorithm
+T14	Method 618 628	graph cuts
+T15	Method 633 651	belief propagation
+T16	Generic 654 656	It
+T17	Task 692 701	inference
+T18	Generic 714 722	datasets
+T19	OtherScientificTerm 747 773	spatio-temporal continuity
+T20	Generic 827 835	strategy
+T21	Method 857 880	hierarchical approaches
+T22	Material 899 919	image and video data
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T1
+R3	USED-FOR Arg1:T4 Arg2:T3
+R4	COREF Arg1:T3 Arg2:T7
+R5	COREF Arg1:T7 Arg2:T8
+R6	COREF Arg1:T7 Arg2:T10
+R7	COREF Arg1:T10 Arg2:T11
+R8	USED-FOR Arg1:T11 Arg2:T12
+R9	USED-FOR Arg1:T13 Arg2:T12
+R10	CONJUNCTION Arg1:T11 Arg2:T13
+R11	HYPONYM-OF Arg1:T14 Arg2:T13
+R12	HYPONYM-OF Arg1:T15 Arg2:T13
+R13	CONJUNCTION Arg1:T14 Arg2:T15
+R14	COREF Arg1:T11 Arg2:T20
+R15	COMPARE Arg1:T20 Arg2:T21
+R16	COREF Arg1:T10 Arg2:T16
+R17	USED-FOR Arg1:T16 Arg2:T17
+R18	FEATURE-OF Arg1:T19 Arg2:T18
+R19	EVALUATE-FOR Arg1:T18 Arg2:T16

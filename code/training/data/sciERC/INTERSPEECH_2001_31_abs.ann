@@ -1,0 +1,43 @@
+T1	Generic 22 28	method
+T2	Task 33 72	blind estimation of reverberation times
+T3	OtherScientificTerm 76 98	reverberant enclosures
+T4	Generic 113 122	algorithm
+T5	Method 137 189	statistical model of short-term log-energy sequences
+T6	Material 194 210	echo-free speech
+T7	Method 283 351	Maximum Likelihood estimate of the room full-band reverberation time
+T8	Generic 357 374	estimation method
+T9	Generic 442 448	method
+T10	Task 482 517	robust automatic speech recognition
+T11	OtherScientificTerm 521 545	reverberant environments
+T12	Method 549 564	model selection
+T13	Generic 575 586	application
+T14	OtherScientificTerm 592 610	reverberation time
+T15	OtherScientificTerm 639 668	reverberated speech utterance
+T16	Generic 691 701	estimation
+T17	Method 734 748	acoustic model
+T18	Generic 769 775	models
+T19	OtherScientificTerm 795 829	artificial re-verberant conditions
+T20	Task 831 849	Speech recognition
+T21	OtherScientificTerm 865 908	simulated and real reverberant environments
+T22	Generic 936 944	approach
+T23	Method 972 1005	channel normaliza-tion techniques
+R1	FEATURE-OF Arg1:T3 Arg2:T2
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	COREF Arg1:T1 Arg2:T4
+R4	USED-FOR Arg1:T5 Arg2:T4
+R5	USED-FOR Arg1:T5 Arg2:T6
+R6	COREF Arg1:T8 Arg2:T7
+R7	COREF Arg1:T8 Arg2:T9
+R8	USED-FOR Arg1:T9 Arg2:T10
+R9	FEATURE-OF Arg1:T11 Arg2:T10
+R10	USED-FOR Arg1:T12 Arg2:T9
+R11	COREF Arg1:T10 Arg2:T13
+R12	USED-FOR Arg1:T15 Arg2:T14
+R13	FEATURE-OF Arg1:T21 Arg2:T20
+R14	COREF Arg1:T4 Arg2:T22
+R15	COMPARE Arg1:T23 Arg2:T22
+R16	EVALUATE-FOR Arg1:T20 Arg2:T22
+R17	EVALUATE-FOR Arg1:T20 Arg2:T23
+R18	PART-OF Arg1:T17 Arg2:T18
+R19	FEATURE-OF Arg1:T19 Arg2:T18
+R20	USED-FOR Arg1:T16 Arg2:T17

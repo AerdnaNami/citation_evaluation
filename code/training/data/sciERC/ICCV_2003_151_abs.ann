@@ -1,0 +1,61 @@
+T1	Generic 6 15	algorithm
+T2	Task 32 53	novel view generation
+T3	Task 57 97	one-to-one teleconferencing applications
+T4	Material 109 122	video streams
+T5	OtherScientificTerm 139 146	cameras
+T6	OtherScientificTerm 174 190	computer monitor
+T7	Generic 206 215	algorithm
+T8	Material 228 234	images
+T9	OtherScientificTerm 242 256	virtual camera
+T10	OtherScientificTerm 260 278	arbitrary position
+T11	OtherScientificTerm 332 343	eye contact
+T12	Generic 349 358	technique
+T13	Method 384 421	dynamic-programming, stereo algorithm
+T14	Task 436 457	novel-view generation
+T15	Method 522 539	three-plane graph
+T16	Method 544 576	dense-stereo dynamic-programming
+T17	Task 602 620	occlusion labeling
+T18	OtherScientificTerm 628 656	compact geometric derivation
+T19	Task 661 681	novel-view synthesis
+T20	Method 685 730	direct projection of the minimum-cost surface
+T21	Generic 773 782	algorithm
+T22	Task 791 833	temporal maintenance of a background model
+T23	Task 849 872	rendering of occlusions
+T24	OtherScientificTerm 884 912	temporal artefacts (flicker)
+T25	Method 920 946	cost aggregation algorithm
+T26	OtherScientificTerm 973 1010	three-dimensional matching cost space
+T27	Metric 1052 1062	robustness
+T28	Generic 1074 1083	algorithm
+T29	OtherScientificTerm 1087 1117	spatial and temporal artefacts
+T30	Material 1122 1147	long stereo video streams
+T31	Task 1181 1246	synthesis of cyclopean views of extended conversational sequences
+T32	OtherScientificTerm 1194 1209	cyclopean views
+T33	Material 1213 1246	extended conversational sequences
+T34	Task 1271 1280	synthesis
+T35	OtherScientificTerm 1295 1321	translating virtual camera
+R1	USED-FOR Arg1:T5 Arg2:T4
+R2	COREF Arg1:T1 Arg2:T7
+R3	USED-FOR Arg1:T9 Arg2:T8
+R4	FEATURE-OF Arg1:T10 Arg2:T9
+R5	USED-FOR Arg1:T7 Arg2:T11
+R6	COREF Arg1:T12 Arg2:T7
+R7	USED-FOR Arg1:T13 Arg2:T12
+R8	USED-FOR Arg1:T12 Arg2:T14
+R9	USED-FOR Arg1:T15 Arg2:T16
+R10	USED-FOR Arg1:T16 Arg2:T17
+R11	USED-FOR Arg1:T18 Arg2:T19
+R12	USED-FOR Arg1:T20 Arg2:T18
+R13	USED-FOR Arg1:T21 Arg2:T22
+R14	USED-FOR Arg1:T21 Arg2:T23
+R15	USED-FOR Arg1:T25 Arg2:T26
+R16	CONJUNCTION Arg1:T25 Arg2:T21
+R17	COREF Arg1:T12 Arg2:T21
+R18	COREF Arg1:T21 Arg2:T28
+R19	EVALUATE-FOR Arg1:T27 Arg2:T28
+R20	USED-FOR Arg1:T21 Arg2:T24
+R21	USED-FOR Arg1:T28 Arg2:T29
+R22	USED-FOR Arg1:T35 Arg2:T34
+R23	USED-FOR Arg1:T29 Arg2:T30
+R24	USED-FOR Arg1:T2 Arg2:T3
+R25	USED-FOR Arg1:T1 Arg2:T2
+R26	COREF Arg1:T2 Arg2:T14

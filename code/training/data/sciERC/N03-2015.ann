@@ -1,0 +1,25 @@
+T1	Method 23 45	unsupervised technique
+T2	Task 61 71	morphology
+T3	OtherScientificTerm 89 93	hubs
+T4	OtherScientificTerm 102 111	automaton
+T5	OtherScientificTerm 136 139	hub
+T6	OtherScientificTerm 147 151	node
+T7	OtherScientificTerm 159 164	graph
+T8	Method 248 257	word-trie
+T9	Generic 271 273	it
+T10	OtherScientificTerm 282 293	minimal DFA
+T11	OtherScientificTerm 312 316	hubs
+T12	OtherScientificTerm 327 331	hubs
+T13	OtherScientificTerm 360 364	root
+T14	OtherScientificTerm 371 377	suffix
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T1
+R3	COREF Arg1:T5 Arg2:T3
+R4	HYPONYM-OF Arg1:T5 Arg2:T6
+R5	PART-OF Arg1:T6 Arg2:T7
+R6	USED-FOR Arg1:T8 Arg2:T11
+R7	USED-FOR Arg1:T10 Arg2:T11
+R8	COREF Arg1:T11 Arg2:T5
+R9	COREF Arg1:T12 Arg2:T11
+R10	PART-OF Arg1:T3 Arg2:T4
+R11	COREF Arg1:T9 Arg2:T8

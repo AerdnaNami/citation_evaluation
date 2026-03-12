@@ -1,0 +1,12 @@
+T1	Method 8 29	LOGON MT demonstrator
+T2	Method 65 95	general-purpose NLP components
+T3	Method 105 133	machine translation pipeline
+T4	Task 178 190	demonstrator
+T5	Material 231 261	hand-built, symbolic resources
+T6	Method 268 288	stochastic processes
+R1	PART-OF Arg1:T2 Arg2:T3
+R2	COREF Arg1:T1 Arg2:T4
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	CONJUNCTION Arg1:T5 Arg2:T6
+R5	PART-OF Arg1:T5 Arg2:T4
+R6	PART-OF Arg1:T6 Arg2:T4

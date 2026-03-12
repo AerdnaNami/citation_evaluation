@@ -1,0 +1,31 @@
+T1	Method 36 69	information extraction techniques
+T2	Material 108 132	supervised training data
+T3	Task 169 202	field structured extraction tasks
+T4	Material 213 238	classified advertisements
+T5	Material 243 266	bibliographic citations
+T6	OtherScientificTerm 286 301	prior knowledge
+T7	Method 388 415	hidden Markov models (HMMs)
+T8	Method 437 453	generative model
+T9	Material 460 481	field structured text
+T10	Method 493 518	unsupervised HMM learning
+T11	OtherScientificTerm 675 690	prior knowledge
+T12	Method 750 770	unsupervised methods
+T13	Metric 784 794	accuracies
+T14	Material 806 824	unlabeled examples
+T15	Method 859 877	supervised methods
+T16	Material 886 902	labeled examples
+T17	Method 915 938	semi-supervised methods
+T18	Material 979 991	labeled data
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T6 Arg2:T3
+R3	USED-FOR Arg1:T8 Arg2:T9
+R4	USED-FOR Arg1:T18 Arg2:T17
+R5	CONJUNCTION Arg1:T4 Arg2:T5
+R6	HYPONYM-OF Arg1:T4 Arg2:T3
+R7	HYPONYM-OF Arg1:T5 Arg2:T3
+R8	USED-FOR Arg1:T7 Arg2:T8
+R9	USED-FOR Arg1:T14 Arg2:T12
+R10	EVALUATE-FOR Arg1:T13 Arg2:T12
+R11	USED-FOR Arg1:T16 Arg2:T15
+R12	COMPARE Arg1:T12 Arg2:T15
+R13	EVALUATE-FOR Arg1:T13 Arg2:T15

@@ -1,0 +1,29 @@
+T1	Material 9 25	Chinese language
+T2	Task 105 154	ambiguity resolution  of  right-side dependencies
+T3	Task 174 192	dependency parsing
+T4	Method 254 285	shift-reduce dependency parsers
+T5	Metric 310 322	connectivity
+T6	OtherScientificTerm 330 345	dependency tree
+T7	OtherScientificTerm 387 410	right-side dependencies
+T8	Method 436 476	two-phase shift-reduce dependency parser
+T9	Method 488 500	SVM learning
+T10	OtherScientificTerm 508 528	left-side dependents
+T11	OtherScientificTerm 535 564	right-side nominal dependents
+T12	OtherScientificTerm 596 624	right-side verbal dependents
+T13	Generic 692 698	method
+T14	Method 721 752	shift-reduce dependency parsers
+T15	Material 763 777	Chine language
+T16	Metric 804 823	dependency accuracy
+R1	USED-FOR Arg1:T9 Arg2:T8
+R2	EVALUATE-FOR Arg1:T15 Arg2:T14
+R3	CONJUNCTION Arg1:T10 Arg2:T11
+R4	CONJUNCTION Arg1:T12 Arg2:T11
+R5	COREF Arg1:T14 Arg2:T4
+R6	EVALUATE-FOR Arg1:T16 Arg2:T14
+R7	COREF Arg1:T13 Arg2:T8
+R8	COMPARE Arg1:T13 Arg2:T14
+R9	EVALUATE-FOR Arg1:T15 Arg2:T13
+R10	COREF Arg1:T15 Arg2:T1
+R11	EVALUATE-FOR Arg1:T16 Arg2:T13
+R12	EVALUATE-FOR Arg1:T5 Arg2:T6
+R13	USED-FOR Arg1:T2 Arg2:T3

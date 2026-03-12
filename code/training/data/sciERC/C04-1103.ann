@@ -1,0 +1,28 @@
+T1	Task 2 46	Machine transliteration/back-transliteration
+T2	Task 81 126	multilingual speech and language applications
+T3	Generic 152 161	framework
+T4	Task 167 210	machine transliteration/backtransliteration
+T5	Method 241 276	direct orthographical mapping (DOM)
+T6	Generic 337 346	framework
+T7	Method 351 393	joint source-channel transliteration model
+T8	Method 409 449	n-gram transliteration model (n-gram TM)
+T9	Method 486 509	transliteration process
+T10	Generic 537 544	methods
+T11	Task 562 597	transliteration/backtransliteration
+T12	Material 616 667	English/Chinese and English/Japanese language pairs
+T13	Generic 706 712	method
+T14	Metric 794 818	transliteration accuracy
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T4 Arg2:T5
+R3	USED-FOR Arg1:T8 Arg2:T9
+R4	COREF Arg1:T4 Arg2:T1
+R5	COREF Arg1:T8 Arg2:T7
+R6	COREF Arg1:T6 Arg2:T3
+R7	COREF Arg1:T10 Arg2:T8
+R8	COREF Arg1:T13 Arg2:T10
+R9	USED-FOR Arg1:T3 Arg2:T4
+R10	USED-FOR Arg1:T6 Arg2:T7
+R11	EVALUATE-FOR Arg1:T11 Arg2:T10
+R12	USED-FOR Arg1:T11 Arg2:T12
+R13	COREF Arg1:T11 Arg2:T1
+R14	EVALUATE-FOR Arg1:T14 Arg2:T13

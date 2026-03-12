@@ -20,6 +20,7 @@ for CAT_OBJ in "${CAT_OBJS[@]}"; do
   CAT_NAME=$(jq -r '.name' <<<"$CAT_OBJ")
   TRAIN_SCRIPT=$(jq -r '.train_script' <<<"$CAT_OBJ")
   RUN_NAME=$(jq -r '.run_name' <<<"$CAT_OBJ")
+  # MIN_LENGTH=$(jq -r '.min_pred_span_len' <<<"$CAT_OBJ")
 
   # I_WEIGHT=$(jq -r '.i_weight' <<<"$CAT_OBJ")
   # B_WEIGHT=$(jq -r '.b_weight' <<<"$CAT_OBJ")
@@ -53,6 +54,7 @@ for CAT_OBJ in "${CAT_OBJS[@]}"; do
     --config "$CONFIG" \
     --category "$CAT_NAME" \
     --run_name "$RUN_NAME" \
+    # --min_pred_span_len "$MIN_LENGTH" \
     # --o_weight "$O_WEIGHT" \
     # --i_weight "$I_WEIGHT" \
     # --b_weight "$B_WEIGHT" \

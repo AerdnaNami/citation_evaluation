@@ -1,0 +1,16 @@
+T1	OtherScientificTerm 34 72	sentence-level and text-level anaphora
+T2	Method 101 131	dependency-based grammar model
+T3	Generic 134 142	Criteria
+T4	Task 148 196	anaphora resolution  within  sentence boundaries
+T5	Method 228 247	GB's binding theory
+T6	Generic 256 261	those
+T7	OtherScientificTerm 267 286	text-level anaphora
+T8	Method 325 355	Grosz-Sidner-style focus model
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	COREF Arg1:T6 Arg2:T3
+R3	USED-FOR Arg1:T6 Arg2:T7
+R4	PART-OF Arg1:T8 Arg2:T6
+R5	HYPONYM-OF Arg1:T7 Arg2:T1
+R6	HYPONYM-OF Arg1:T4 Arg2:T1
+R7	USED-FOR Arg1:T3 Arg2:T4
+R8	USED-FOR Arg1:T5 Arg2:T3

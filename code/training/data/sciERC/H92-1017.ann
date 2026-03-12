@@ -1,0 +1,13 @@
+T1	Generic 42 73	domain-independent capabilities
+T2	Method 98 142	Paramax spoken language understanding system
+T3	Task 147 170	non-monotonic reasoning
+T4	Task 175 204	implicit reference resolution
+T5	Task 213 238	database query paraphrase
+T6	Material 286 320	February 1992 ATIS benchmark tests
+T7	Method 526 573	n-best speech/language integration architecture
+T8	Metric 589 603	OCR   accuracy
+R1	PART-OF Arg1:T1 Arg2:T2
+R2	HYPONYM-OF Arg1:T3 Arg2:T1
+R3	HYPONYM-OF Arg1:T4 Arg2:T1
+R4	HYPONYM-OF Arg1:T5 Arg2:T1
+R5	EVALUATE-FOR Arg1:T8 Arg2:T7

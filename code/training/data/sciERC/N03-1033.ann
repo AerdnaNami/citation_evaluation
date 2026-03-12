@@ -1,0 +1,21 @@
+T1	Method 19 40	part-of-speech tagger
+T2	OtherScientificTerm 131 143	tag contexts
+T3	Method 152 185	dependency network representation
+T4	OtherScientificTerm 208 224	lexical features
+T5	OtherScientificTerm 263 289	multiple consecutive words
+T6	OtherScientificTerm 317 357	priors  in  conditional loglinear models
+T7	Method 370 417	fine-grained modeling of  unknown word features
+T8	Method 464 470	tagger
+T9	Metric 488 496	accuracy
+T10	Material 506 523	Penn Treebank WSJ
+T11	Metric 531 536	error
+T12	Task 607 614	tagging
+R1	EVALUATE-FOR Arg1:T9 Arg2:T8
+R2	USED-FOR Arg1:T4 Arg2:T1
+R3	COREF Arg1:T8 Arg2:T1
+R4	EVALUATE-FOR Arg1:T10 Arg2:T8
+R5	USED-FOR Arg1:T6 Arg2:T1
+R6	USED-FOR Arg1:T7 Arg2:T1
+R7	EVALUATE-FOR Arg1:T11 Arg2:T8
+R8	USED-FOR Arg1:T2 Arg2:T1
+R9	USED-FOR Arg1:T3 Arg2:T2

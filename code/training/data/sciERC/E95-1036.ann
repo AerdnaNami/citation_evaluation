@@ -1,0 +1,31 @@
+T1	Task 37 54	temporal anaphora
+T2	OtherScientificTerm 86 112	quantification over events
+T3	Method 140 171	Discourse Representation Theory
+T4	Material 209 229	quantified sentences
+T5	OtherScientificTerm 249 268	temporal connective
+T6	OtherScientificTerm 316 335	temporal connective
+T7	OtherScientificTerm 345 363	subordinate clause
+T8	Generic 391 398	problem
+T9	OtherScientificTerm 472 490	proportion problem
+T10	Generic 504 512	solution
+T11	Method 521 552	Generalized Quantifier approach
+T12	OtherScientificTerm 620 634	reference time
+T13	Generic 682 690	solution
+T14	Generic 700 707	problem
+T15	Method 735 738	DRT
+T16	Generic 776 784	solution
+T17	Task 801 828	temporal anaphora phenomena
+T18	Material 834 854	quantified sentences
+R1	USED-FOR Arg1:T15 Arg2:T14
+R2	USED-FOR Arg1:T16 Arg2:T17
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	PART-OF Arg1:T2 Arg2:T1
+R5	USED-FOR Arg1:T11 Arg2:T8
+R6	COREF Arg1:T8 Arg2:T1
+R7	COREF Arg1:T14 Arg2:T8
+R8	COREF Arg1:T11 Arg2:T10
+R9	COREF Arg1:T16 Arg2:T13
+R10	USED-FOR Arg1:T18 Arg2:T16
+R11	USED-FOR Arg1:T13 Arg2:T14
+R12	COREF Arg1:T3 Arg2:T15
+R13	PART-OF Arg1:T6 Arg2:T7

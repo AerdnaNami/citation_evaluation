@@ -1,0 +1,30 @@
+T1	Method 2 22	model-based approach
+T2	Task 26 78	on-line cursive handwriting analysis and recognition
+T3	Generic 115 120	model
+T4	Task 122 141	on-line handwriting
+T5	Task 184 204	cycloidal pen motion
+T6	OtherScientificTerm 251 272	constant linear drift
+T7	OtherScientificTerm 391 405	pen trajectory
+T8	OtherScientificTerm 521 544	writing intelligibility
+T9	OtherScientificTerm 611 638	cycloidal motion parameters
+T10	Material 643 664	arbitrary handwriting
+T11	Method 695 732	discrete motor control representation
+T12	OtherScientificTerm 740 761	continuous pen motion
+T13	Method 818 846	motor control representation
+T14	Task 866 879	word spotting
+T15	Task 884 911	matching of cursive scripts
+T16	Method 968 990	dynamic representation
+T17	Task 1004 1035	cursive handwriting recognition
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T1
+R3	PART-OF Arg1:T4 Arg2:T5
+R4	USED-FOR Arg1:T9 Arg2:T10
+R5	USED-FOR Arg1:T11 Arg2:T12
+R6	USED-FOR Arg1:T3 Arg2:T4
+R7	CONJUNCTION Arg1:T14 Arg2:T15
+R8	USED-FOR Arg1:T13 Arg2:T14
+R9	USED-FOR Arg1:T13 Arg2:T15
+R10	COREF Arg1:T16 Arg2:T13
+R11	COREF Arg1:T13 Arg2:T11
+R12	USED-FOR Arg1:T16 Arg2:T17
+R13	HYPONYM-OF Arg1:T17 Arg2:T2

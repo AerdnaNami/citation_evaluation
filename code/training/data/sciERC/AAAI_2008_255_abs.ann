@@ -1,0 +1,29 @@
+T1	Method 38 54	base classifiers
+T2	Task 92 100	ensemble
+T3	Method 116 132	ensemble methods
+T4	Task 263 284	ensemble construction
+T5	Task 288 319	resampling pairwise constraints
+T6	OtherScientificTerm 401 421	pairwise constraints
+T7	Task 426 447	ensemble construction
+T8	Method 511 527	base classifiers
+T9	OtherScientificTerm 537 565	sampled pairwise constraints
+T10	Method 668 687	data representation
+T11	OtherScientificTerm 694 705	projections
+T12	OtherScientificTerm 718 738	pairwise constraints
+T13	Method 759 776	base clas-sifiers
+T14	Method 790 809	data representation
+T15	Task 838 869	resampling pairwise constraints
+T16	Method 893 924	Bagging and Boosting algorithms
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T6 Arg2:T7
+R3	COREF Arg1:T4 Arg2:T7
+R4	COREF Arg1:T2 Arg2:T4
+R5	COREF Arg1:T1 Arg2:T8
+R6	USED-FOR Arg1:T12 Arg2:T11
+R7	COREF Arg1:T8 Arg2:T13
+R8	USED-FOR Arg1:T5 Arg2:T4
+R9	COREF Arg1:T5 Arg2:T15
+R10	USED-FOR Arg1:T16 Arg2:T15
+R11	USED-FOR Arg1:T11 Arg2:T10
+R12	COREF Arg1:T10 Arg2:T14
+R13	USED-FOR Arg1:T14 Arg2:T13

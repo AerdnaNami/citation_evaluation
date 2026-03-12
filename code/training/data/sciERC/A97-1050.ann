@@ -1,0 +1,9 @@
+T1	Generic 35 44	algorithm
+T2	Task 49 88	translation lexicon acquisition (SABLE)
+T3	OtherScientificTerm 143 172	general  translation lexicons
+T4	Generic 186 195	algorithm
+T5	OtherScientificTerm 262 298	domain-specific translation lexicons
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	COREF Arg1:T4 Arg2:T1
+R4	USED-FOR Arg1:T1 Arg2:T3

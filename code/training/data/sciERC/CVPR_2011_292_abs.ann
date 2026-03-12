@@ -1,0 +1,32 @@
+T1	Material 0 5	Video
+T2	OtherScientificTerm 29 40	visual cues
+T3	OtherScientificTerm 49 55	motion
+T4	OtherScientificTerm 60 70	appearance
+T5	OtherScientificTerm 100 132	long-range temporal interactions
+T6	Generic 171 183	interactions
+T7	Method 212 251	intermediate-level video representation
+T8	Task 267 278	recognition
+T9	OtherScientificTerm 322 355	spatio-temporal over-segmentation
+T10	OtherScientificTerm 393 410	object boundaries
+T11	Method 559 603	spatio-temporal video segmentation algorithm
+T12	OtherScientificTerm 634 656	long-range motion cues
+T13	OtherScientificTerm 704 728	clusters of point tracks
+T14	Method 775 805	track clustering cost function
+T15	OtherScientificTerm 820 839	occlusion reasoning
+T16	OtherScientificTerm 856 882	depth ordering constraints
+T17	OtherScientificTerm 895 912	motion similarity
+T18	Generic 956 964	approach
+T19	Material 989 1021	video sequences of office scenes
+T20	Material 1042 1048	movies
+R1	CONJUNCTION Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T7 Arg2:T8
+R3	FEATURE-OF Arg1:T2 Arg2:T1
+R4	HYPONYM-OF Arg1:T3 Arg2:T2
+R5	HYPONYM-OF Arg1:T4 Arg2:T2
+R6	COREF Arg1:T6 Arg2:T5
+R7	PART-OF Arg1:T15 Arg2:T14
+R8	PART-OF Arg1:T17 Arg2:T14
+R9	USED-FOR Arg1:T13 Arg2:T12
+R10	USED-FOR Arg1:T12 Arg2:T11
+R11	EVALUATE-FOR Arg1:T19 Arg2:T18
+R12	FEATURE-OF Arg1:T16 Arg2:T15

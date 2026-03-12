@@ -1,0 +1,31 @@
+T1	Method 27 55	unsupervised learning method
+T2	OtherScientificTerm 69 91	single-snippet answers
+T3	Method 123 149	question answering systems
+T4	Method 168 186	Web search engines
+T5	Generic 193 199	method
+T6	Material 210 248	on-line encyclopedias and dictionaries
+T7	Material 308 349	positive and negative definition examples
+T8	Method 385 388	svm
+T9	Generic 460 466	method
+T10	Generic 483 485	it
+T11	Generic 502 513	alternative
+T12	Generic 531 537	system
+T13	Material 559 572	news articles
+T14	Material 578 582	trec
+T15	Generic 594 596	it
+T16	Method 608 621	search engine
+R1	USED-FOR Arg1:T6 Arg2:T7
+R2	USED-FOR Arg1:T7 Arg2:T8
+R3	COREF Arg1:T9 Arg2:T5
+R4	COREF Arg1:T1 Arg2:T5
+R5	COREF Arg1:T10 Arg2:T9
+R6	COMPARE Arg1:T10 Arg2:T11
+R7	COREF Arg1:T16 Arg2:T4
+R8	COREF Arg1:T15 Arg2:T9
+R9	USED-FOR Arg1:T15 Arg2:T16
+R10	USED-FOR Arg1:T1 Arg2:T2
+R11	USED-FOR Arg1:T3 Arg2:T4
+R12	COREF Arg1:T12 Arg2:T3
+R13	USED-FOR Arg1:T5 Arg2:T6
+R14	PART-OF Arg1:T13 Arg2:T14
+R15	USED-FOR Arg1:T13 Arg2:T12

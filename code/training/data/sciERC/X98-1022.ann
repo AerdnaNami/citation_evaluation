@@ -1,0 +1,54 @@
+T1	Task 2 25	Automatic summarization
+T2	Task 32 54	information extraction
+T3	Material 94 97	MUC
+T4	Material 104 110	SUMMAC
+T5	Task 201 224	automatic summarization
+T6	Generic 253 259	models
+T7	Task 288 306	summary generation
+T8	Generic 318 323	tasks
+T9	Material 338 346	SUMMAC-1
+T10	Task 354 373	categorization task
+T11	OtherScientificTerm 377 401	positive feature vectors
+T12	OtherScientificTerm 408 432	negative feature vectors
+T13	OtherScientificTerm 470 500	generic, indicative  summaries
+T14	Task 507 517	adhoc task
+T15	Method 522 532	text model
+T16	OtherScientificTerm 618 635	discourse segment
+T17	OtherScientificTerm 689 712	user-directed summaries
+T18	Metric 742 747	NormF
+T19	Task 803 814	adhoc tasks
+T20	Metric 842 847	NormF
+T21	Task 904 923	categorization task
+T22	Generic 952 958	system
+T23	Generic 983 989	system
+T24	Task 994 1013	categorization task
+T25	Task 1040 1050	adhoc task
+R1	CONJUNCTION Arg1:T1 Arg2:T2
+R2	COREF Arg1:T1 Arg2:T5
+R3	CONJUNCTION Arg1:T11 Arg2:T12
+R4	USED-FOR Arg1:T11 Arg2:T10
+R5	USED-FOR Arg1:T12 Arg2:T10
+R6	USED-FOR Arg1:T15 Arg2:T16
+R7	USED-FOR Arg1:T15 Arg2:T17
+R8	USED-FOR Arg1:T15 Arg2:T14
+R9	COREF Arg1:T20 Arg2:T18
+R10	EVALUATE-FOR Arg1:T20 Arg2:T21
+R11	COREF Arg1:T21 Arg2:T10
+R12	COREF Arg1:T14 Arg2:T19
+R13	COREF Arg1:T24 Arg2:T21
+R14	EVALUATE-FOR Arg1:T24 Arg2:T23
+R15	EVALUATE-FOR Arg1:T24 Arg2:T22
+R16	COMPARE Arg1:T22 Arg2:T23
+R17	USED-FOR Arg1:T12 Arg2:T13
+R18	USED-FOR Arg1:T11 Arg2:T13
+R19	USED-FOR Arg1:T6 Arg2:T7
+R20	EVALUATE-FOR Arg1:T18 Arg2:T19
+R21	EVALUATE-FOR Arg1:T25 Arg2:T24
+R22	EVALUATE-FOR Arg1:T25 Arg2:T22
+R23	COREF Arg1:T19 Arg2:T25
+R24	CONJUNCTION Arg1:T3 Arg2:T4
+R25	PART-OF Arg1:T8 Arg2:T9
+R26	HYPONYM-OF Arg1:T10 Arg2:T8
+R27	HYPONYM-OF Arg1:T14 Arg2:T8
+R28	USED-FOR Arg1:T6 Arg2:T8
+R29	COREF Arg1:T6 Arg2:T22

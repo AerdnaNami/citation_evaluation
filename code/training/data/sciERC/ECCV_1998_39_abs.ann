@@ -1,0 +1,55 @@
+T1	Method 0 36	Image sequence processing techniques
+T2	Task 55 97	exchange , growth, and transport processes
+T3	Material 129 150	environmental physics
+T4	Material 155 162	biology
+T5	Generic 170 182	applications
+T6	Metric 196 204	accuracy
+T7	Task 213 243	estimation of the motion field
+T8	Method 289 308	dynamical processes
+T9	OtherScientificTerm 334 377	first-order derivatives of the motion field
+T10	OtherScientificTerm 384 423	dynamical changes of the moving objects
+T11	Task 455 498	optimization of low-level motion estimators
+T12	Method 515 528	tensor method
+T13	Method 560 578	derivative filters
+T14	OtherScientificTerm 605 637	displacement vector fields (DVF)
+T15	Metric 646 654	accuracy
+T16	Metric 680 692	pixels/frame
+T17	Material 697 714	real-world images
+T18	Metric 720 728	accuracy
+T19	Method 736 749	tensor method
+T20	Material 767 795	computer-generated sequences
+T21	Material 802 827	calibrated image sequence
+T22	Metric 854 862	accuracy
+T23	Task 867 884	motion estimation
+T24	OtherScientificTerm 931 942	CCD sensors
+T25	OtherScientificTerm 959 981	spatial nonuni-formity
+T26	OtherScientificTerm 989 1001	responsivity
+T27	Method 1017 1038	two-point calibration
+T28	Generic 1108 1118	techniques
+T29	Task 1126 1150	analysis of plant growth
+T30	Task 1155 1206	ocean surface microturbulence in IR image sequences
+T31	Task 1215 1233	sediment transport
+R1	CONJUNCTION Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	EVALUATE-FOR Arg1:T6 Arg2:T7
+R4	HYPONYM-OF Arg1:T5 Arg2:T2
+R5	CONJUNCTION Arg1:T9 Arg2:T10
+R6	USED-FOR Arg1:T13 Arg2:T12
+R7	COREF Arg1:T19 Arg2:T12
+R8	CONJUNCTION Arg1:T20 Arg2:T21
+R9	EVALUATE-FOR Arg1:T18 Arg2:T19
+R10	EVALUATE-FOR Arg1:T22 Arg2:T23
+R11	COREF Arg1:T28 Arg2:T1
+R12	USED-FOR Arg1:T28 Arg2:T29
+R13	USED-FOR Arg1:T28 Arg2:T30
+R14	USED-FOR Arg1:T28 Arg2:T31
+R15	USED-FOR Arg1:T7 Arg2:T5
+R16	USED-FOR Arg1:T17 Arg2:T16
+R17	EVALUATE-FOR Arg1:T16 Arg2:T14
+R18	EVALUATE-FOR Arg1:T20 Arg2:T19
+R19	EVALUATE-FOR Arg1:T21 Arg2:T19
+R20	USED-FOR Arg1:T24 Arg2:T23
+R21	FEATURE-OF Arg1:T25 Arg2:T26
+R22	FEATURE-OF Arg1:T26 Arg2:T24
+R23	CONJUNCTION Arg1:T29 Arg2:T30
+R24	CONJUNCTION Arg1:T30 Arg2:T31

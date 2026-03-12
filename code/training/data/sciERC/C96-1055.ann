@@ -1,0 +1,26 @@
+T1	Task 36 56	word-sense ambiguity
+T2	Material 78 104	machine-readable resources
+T3	Task 114 160	construction of  large-scale knowledge sources
+T4	OtherScientificTerm 211 234	word-sense distinctions
+T5	Metric 255 263	accuracy
+T6	Method 269 292	semantic classification
+T7	OtherScientificTerm 354 377	word-sense distinctions
+T8	Metric 399 407	accuracy
+T9	OtherScientificTerm 523 537	verb semantics
+T10	OtherScientificTerm 544 562	syntactic behavior
+T11	OtherScientificTerm 664 684	semantic information
+T12	OtherScientificTerm 692 706	syntactic cues
+T13	OtherScientificTerm 732 746	syntactic cues
+T14	OtherScientificTerm 803 814	word senses
+T15	Generic 876 886	techniques
+T16	OtherScientificTerm 898 909	word senses
+T17	Material 934 948	online sources
+R1	CONJUNCTION Arg1:T9 Arg2:T10
+R2	USED-FOR Arg1:T2 Arg2:T1
+R3	COREF Arg1:T7 Arg2:T4
+R4	COREF Arg1:T4 Arg2:T1
+R5	USED-FOR Arg1:T15 Arg2:T16
+R6	USED-FOR Arg1:T17 Arg2:T15
+R7	USED-FOR Arg1:T2 Arg2:T3
+R8	EVALUATE-FOR Arg1:T5 Arg2:T6
+R9	USED-FOR Arg1:T12 Arg2:T11

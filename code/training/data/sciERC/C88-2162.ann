@@ -1,0 +1,30 @@
+T1	Generic 3 20	Computer programs
+T2	Task 61 81	language acquisition
+T3	Method 101 121	learning methodology
+T4	Material 138 153	general domains
+T5	Material 192 209	linguistic domain
+T6	Method 227 252	linguistic representation
+T7	Method 263 290	language processing systems
+T8	Method 343 368	linguistic representation
+T9	OtherScientificTerm 377 420	Dynamic Hierarchical Phrasal Lexicon (DHPL)
+T10	Task 449 469	language acquisition
+T11	Method 487 510	language learning model
+T12	Method 544 548	RINA
+T13	OtherScientificTerm 576 593	lexical hierarchy
+T14	OtherScientificTerm 667 686	linguistic concepts
+T15	Generic 746 755	hierarchy
+T16	OtherScientificTerm 851 868	lexical hierarchy
+T17	OtherScientificTerm 897 916	linguistic concepts
+T18	Generic 929 936	program
+R1	COMPARE Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T6 Arg2:T7
+R3	USED-FOR Arg1:T9 Arg2:T10
+R4	USED-FOR Arg1:T16 Arg2:T17
+R5	USED-FOR Arg1:T3 Arg2:T4
+R6	PART-OF Arg1:T11 Arg2:T12
+R7	PART-OF Arg1:T14 Arg2:T15
+R8	COREF Arg1:T18 Arg2:T1
+R9	HYPONYM-OF Arg1:T9 Arg2:T8
+R10	USED-FOR Arg1:T8 Arg2:T10
+R11	COREF Arg1:T17 Arg2:T14
+R12	COREF Arg1:T10 Arg2:T2

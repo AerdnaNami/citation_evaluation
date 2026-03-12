@@ -1,0 +1,41 @@
+T1	Task 2 11	Coedition
+T2	Material 19 40	natural language text
+T3	OtherScientificTerm 135 148	text revision
+T4	Material 158 167	languages
+T5	OtherScientificTerm 192 202	UNL graphs
+T6	OtherScientificTerm 428 433	graph
+T7	OtherScientificTerm 450 455	graph
+T8	Method 478 496	UNL-L0 deconverter
+T9	OtherScientificTerm 580 585	graph
+T10	Method 600 611	deconverter
+T11	OtherScientificTerm 623 628	graph
+T12	Method 642 654	deconverters
+T13	Material 880 910	original multilingual document
+T14	OtherScientificTerm 1019 1027	liaisons
+T15	Generic 1118 1127	resources
+T16	Material 1139 1179	LO-English or better a L0-UNL dictionary
+T17	Method 1185 1213	morphosyntactic parser of L0
+T18	OtherScientificTerm 1223 1258	canonical graph2tree transformation
+T19	OtherScientificTerm 1312 1323	UNL-tree+L0
+T20	OtherScientificTerm 1336 1351	MS-L0 structure
+T21	OtherScientificTerm 1358 1365	lattice
+T22	Material 1391 1401	dictionary
+T23	OtherScientificTerm 1477 1494	crossing liaisons
+T24	Task 1570 1578	pivot MT
+T25	Task 1582 1596	interactive MT
+T26	Task 1604 1631	multilingual text authoring
+R1	USED-FOR Arg1:T1 Arg2:T3
+R2	CONJUNCTION Arg1:T16 Arg2:T17
+R3	CONJUNCTION Arg1:T17 Arg2:T18
+R4	CONJUNCTION Arg1:T19 Arg2:T20
+R5	USED-FOR Arg1:T7 Arg2:T8
+R6	USED-FOR Arg1:T2 Arg2:T1
+R7	COREF Arg1:T8 Arg2:T10
+R8	COREF Arg1:T10 Arg2:T12
+R9	CONJUNCTION Arg1:T25 Arg2:T26
+R10	CONJUNCTION Arg1:T24 Arg2:T25
+R11	HYPONYM-OF Arg1:T16 Arg2:T15
+R12	HYPONYM-OF Arg1:T17 Arg2:T15
+R13	HYPONYM-OF Arg1:T18 Arg2:T15
+R14	USED-FOR Arg1:T15 Arg2:T14
+R15	USED-FOR Arg1:T22 Arg2:T21

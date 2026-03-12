@@ -1,0 +1,20 @@
+T1	Method 19 49	phrase-based translation model
+T2	Method 56 74	decoding algorithm
+T3	Method 146 177	phrase-based translation models
+T4	Generic 192 201	framework
+T5	Method 284 303	phrase-based models
+T6	Method 317 334	word-based models
+T7	Generic 497 502	means
+T8	Method 505 548	heuristic learning  of  phrase translations
+T9	Method 556 577	word-based alignments
+T10	Method 584 626	lexical weighting  of  phrase translations
+T11	Method 718 759	high-accuracy word-level alignment models
+T12	Generic 887 894	systems
+R1	COMPARE Arg1:T5 Arg2:T6
+R2	CONJUNCTION Arg1:T1 Arg2:T2
+R3	COREF Arg1:T5 Arg2:T3
+R4	COREF Arg1:T12 Arg2:T1
+R5	COREF Arg1:T4 Arg2:T1
+R6	USED-FOR Arg1:T9 Arg2:T8
+R7	HYPONYM-OF Arg1:T8 Arg2:T7
+R8	HYPONYM-OF Arg1:T10 Arg2:T7

@@ -1,0 +1,50 @@
+T1	Generic 3 9	method
+T2	Task 14 30	sense resolution
+T3	Material 62 69	WordNet
+T4	Material 75 100	on-line  lexical database
+T5	OtherScientificTerm 121 139	semantic relations
+T6	OtherScientificTerm 143 151	synonymy
+T7	OtherScientificTerm 155 163	antonymy
+T8	OtherScientificTerm 167 175	hyponymy
+T9	OtherScientificTerm 179 187	meronymy
+T10	OtherScientificTerm 191 223	causal and troponymic entailment
+T11	Material 277 284	WordNet
+T12	OtherScientificTerm 319 345	semantically related words
+T13	Task 382 398	sense resolution
+T14	Task 408 423	text processing
+T15	Generic 502 512	procedures
+T16	OtherScientificTerm 580 598	alternative senses
+T17	OtherScientificTerm 608 623	polysemous word
+T18	OtherScientificTerm 739 754	polysemous word
+T19	OtherScientificTerm 978 993	polysemous word
+T20	Material 1106 1113	WordNet
+T21	OtherScientificTerm 1150 1167	semantic distance
+T22	Generic 1372 1381	procedure
+T23	Task 1432 1453	information retrieval
+T24	Task 1457 1479	mechanical translation
+T25	Task 1483 1511	intelligent tutoring systems
+R1	USED-FOR Arg1:T11 Arg2:T12
+R2	USED-FOR Arg1:T13 Arg2:T14
+R3	USED-FOR Arg1:T20 Arg2:T21
+R4	USED-FOR Arg1:T1 Arg2:T2
+R5	USED-FOR Arg1:T3 Arg2:T1
+R6	HYPONYM-OF Arg1:T6 Arg2:T5
+R7	HYPONYM-OF Arg1:T7 Arg2:T5
+R8	HYPONYM-OF Arg1:T8 Arg2:T5
+R9	HYPONYM-OF Arg1:T9 Arg2:T5
+R10	HYPONYM-OF Arg1:T10 Arg2:T5
+R11	CONJUNCTION Arg1:T6 Arg2:T7
+R12	CONJUNCTION Arg1:T7 Arg2:T8
+R13	CONJUNCTION Arg1:T8 Arg2:T9
+R14	CONJUNCTION Arg1:T9 Arg2:T10
+R15	COREF Arg1:T11 Arg2:T3
+R16	USED-FOR Arg1:T12 Arg2:T13
+R17	COREF Arg1:T20 Arg2:T11
+R18	USED-FOR Arg1:T22 Arg2:T23
+R19	USED-FOR Arg1:T22 Arg2:T24
+R20	USED-FOR Arg1:T22 Arg2:T25
+R21	CONJUNCTION Arg1:T23 Arg2:T24
+R22	CONJUNCTION Arg1:T24 Arg2:T25
+R23	HYPONYM-OF Arg1:T22 Arg2:T15
+R24	PART-OF Arg1:T5 Arg2:T3
+R25	HYPONYM-OF Arg1:T3 Arg2:T4

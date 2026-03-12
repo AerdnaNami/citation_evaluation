@@ -1,0 +1,32 @@
+T1	Generic 24 32	approach
+T2	Task 41 83	unsupervised learning  of  parts of speech
+T3	OtherScientificTerm 102 141	morphological and syntactic information
+T4	Generic 155 160	model
+T5	Generic 183 188	those
+T6	Task 219 265	unsupervised learning  of  POS tags in English
+T7	OtherScientificTerm 284 305	syntactic information
+T8	OtherScientificTerm 375 385	morphology
+T9	OtherScientificTerm 418 428	morphology
+T10	OtherScientificTerm 479 489	word order
+T11	Generic 508 527	computational model
+T12	Task 534 546	POS learning
+T13	Generic 582 584	it
+T14	Material 589 598	Bulgarian
+T15	Material 604 619	Slavic language
+T16	OtherScientificTerm 638 653	free word order
+T17	OtherScientificTerm 660 675	rich morphology
+R1	USED-FOR Arg1:T11 Arg2:T12
+R2	HYPONYM-OF Arg1:T14 Arg2:T15
+R3	COMPARE Arg1:T9 Arg2:T10
+R4	CONJUNCTION Arg1:T16 Arg2:T17
+R5	USED-FOR Arg1:T1 Arg2:T2
+R6	USED-FOR Arg1:T3 Arg2:T1
+R7	COREF Arg1:T4 Arg2:T1
+R8	COMPARE Arg1:T4 Arg2:T5
+R9	USED-FOR Arg1:T5 Arg2:T6
+R10	USED-FOR Arg1:T7 Arg2:T5
+R11	COREF Arg1:T11 Arg2:T4
+R12	USED-FOR Arg1:T14 Arg2:T13
+R13	FEATURE-OF Arg1:T16 Arg2:T14
+R14	FEATURE-OF Arg1:T17 Arg2:T14
+R15	COREF Arg1:T13 Arg2:T11

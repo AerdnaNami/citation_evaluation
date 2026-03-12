@@ -1,0 +1,26 @@
+T1	Metric 28 48	evaluation criterion
+T2	Metric 55 79	word similarity measures
+T3	Generic 90 99	criterion
+T4	Metric 103 137	meaning-entailing substitutability
+T5	Task 160 194	semantic-oriented NLP applications
+T6	Metric 278 293	human agreement
+T7	Metric 315 333	semantic criterion
+T8	OtherScientificTerm 372 407	distributional word feature vectors
+T9	Task 428 443	word similarity
+T10	Generic 477 484	measure
+T11	Metric 501 523	feature vector quality
+T12	Method 544 584	feature weighting and selection function
+T13	OtherScientificTerm 623 638	feature vectors
+T14	Task 652 667	word similarity
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	EVALUATE-FOR Arg1:T7 Arg2:T8
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T3 Arg2:T1
+R5	COREF Arg1:T4 Arg2:T3
+R6	COREF Arg1:T7 Arg2:T3
+R7	EVALUATE-FOR Arg1:T6 Arg2:T4
+R8	USED-FOR Arg1:T8 Arg2:T9
+R9	EVALUATE-FOR Arg1:T10 Arg2:T11
+R10	USED-FOR Arg1:T12 Arg2:T13
+R11	USED-FOR Arg1:T12 Arg2:T14
+R12	CONJUNCTION Arg1:T13 Arg2:T14

@@ -1,0 +1,28 @@
+T1	Task 37 59	loss-aware predictions
+T2	Task 37 90	loss-aware predictions in image segmentation settings
+T3	Task 63 90	image segmentation settings
+T4	OtherScientificTerm 101 120	evaluation function
+T5	Metric 128 165	Intersection-over-Union (IoU) measure
+T6	Method 200 226	image segmentation systems
+T7	Generic 253 272	dominant approaches
+T8	Generic 278 283	first
+T9	OtherScientificTerm 301 326	Expected-IoU (EIoU) score
+T10	OtherScientificTerm 330 379	Expected-Intersection-over-Expected-Union (EIoEU)
+T11	Generic 389 404	second approach
+T12	OtherScientificTerm 425 429	EIoU
+T13	Task 559 584	image seg-mentation tasks
+T14	Generic 689 696	methods
+T15	OtherScientificTerm 705 710	EIoEU
+T16	Method 705 724	EIoEU approximation
+T17	Generic 807 817	approaches
+T18	Task 855 879	image segmentation tasks
+R1	EVALUATE-FOR Arg1:T5 Arg2:T6
+R2	HYPONYM-OF Arg1:T5 Arg2:T4
+R3	HYPONYM-OF Arg1:T8 Arg2:T7
+R4	HYPONYM-OF Arg1:T11 Arg2:T7
+R5	COREF Arg1:T12 Arg2:T9
+R6	USED-FOR Arg1:T16 Arg2:T14
+R7	COREF Arg1:T14 Arg2:T17
+R8	EVALUATE-FOR Arg1:T18 Arg2:T17
+R9	COREF Arg1:T13 Arg2:T18
+R10	COREF Arg1:T10 Arg2:T15

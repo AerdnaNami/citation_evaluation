@@ -1,0 +1,77 @@
+T1	Method 0 20	Probabilistic models
+T2	Task 82 122	modeling and recognition of human motion
+T3	Method 178 196	human motion model
+T4	Method 202 220	triangulated graph
+T5	Generic 250 256	models
+T6	OtherScientificTerm 271 280	positions
+T7	OtherScientificTerm 285 295	velocities
+T8	OtherScientificTerm 335 345	appearance
+T9	Method 359 377	heuristic approach
+T10	OtherScientificTerm 406 428	translation invariance
+T11	Generic 467 475	approach
+T12	Generic 494 500	models
+T13	Generic 511 515	them
+T14	Task 520 544	human motion recognition
+T15	Generic 560 568	approach
+T16	Generic 587 591	cues
+T17	OtherScientificTerm 599 608	positions
+T18	OtherScientificTerm 610 620	velocities
+T19	OtherScientificTerm 625 635	appearance
+T20	Task 650 679	learning and detection phases
+T21	OtherScientificTerm 707 723	global variables
+T22	Generic 731 736	model
+T23	OtherScientificTerm 758 775	global properties
+T24	OtherScientificTerm 784 795	translation
+T25	OtherScientificTerm 797 802	scale
+T26	OtherScientificTerm 806 815	viewpoint
+T27	Generic 821 826	model
+T28	Method 844 863	unsupervised manner
+T29	Material 869 885	un-labelled data
+T30	Method 914 941	hybrid proba-bilistic model
+T31	OtherScientificTerm 958 974	global variables
+T32	OtherScientificTerm 981 992	translation
+T33	OtherScientificTerm 1000 1015	local variables
+T34	OtherScientificTerm 1022 1040	relative positions
+T35	OtherScientificTerm 1045 1070	appearances of body parts
+T36	Metric 1087 1105	faster convergence
+T37	Task 1109 1123	learning phase
+T38	Metric 1130 1140	robustness
+T39	OtherScientificTerm 1144 1154	occlusions
+T40	Material 1174 1190	recognition rate
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T4 Arg2:T3
+R3	USED-FOR Arg1:T6 Arg2:T5
+R4	USED-FOR Arg1:T7 Arg2:T5
+R5	CONJUNCTION Arg1:T6 Arg2:T7
+R6	USED-FOR Arg1:T9 Arg2:T10
+R7	COREF Arg1:T12 Arg2:T13
+R8	USED-FOR Arg1:T13 Arg2:T14
+R9	USED-FOR Arg1:T11 Arg2:T12
+R10	COREF Arg1:T12 Arg2:T3
+R11	COREF Arg1:T15 Arg2:T11
+R12	USED-FOR Arg1:T15 Arg2:T20
+R13	HYPONYM-OF Arg1:T17 Arg2:T16
+R14	HYPONYM-OF Arg1:T18 Arg2:T16
+R15	HYPONYM-OF Arg1:T19 Arg2:T16
+R16	CONJUNCTION Arg1:T17 Arg2:T18
+R17	CONJUNCTION Arg1:T18 Arg2:T19
+R18	COREF Arg1:T15 Arg2:T22
+R19	USED-FOR Arg1:T21 Arg2:T22
+R20	HYPONYM-OF Arg1:T24 Arg2:T23
+R21	HYPONYM-OF Arg1:T25 Arg2:T23
+R22	USED-FOR Arg1:T21 Arg2:T23
+R23	HYPONYM-OF Arg1:T26 Arg2:T23
+R24	CONJUNCTION Arg1:T24 Arg2:T25
+R25	CONJUNCTION Arg1:T25 Arg2:T26
+R26	COREF Arg1:T27 Arg2:T22
+R27	USED-FOR Arg1:T28 Arg2:T27
+R28	USED-FOR Arg1:T29 Arg2:T28
+R29	USED-FOR Arg1:T31 Arg2:T30
+R30	HYPONYM-OF Arg1:T32 Arg2:T31
+R31	HYPONYM-OF Arg1:T34 Arg2:T33
+R32	HYPONYM-OF Arg1:T35 Arg2:T33
+R33	CONJUNCTION Arg1:T34 Arg2:T35
+R34	FEATURE-OF Arg1:T36 Arg2:T37
+R35	CONJUNCTION Arg1:T36 Arg2:T38
+R36	CONJUNCTION Arg1:T38 Arg2:T40
+R37	COREF Arg1:T15 Arg2:T30

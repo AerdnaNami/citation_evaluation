@@ -1,0 +1,33 @@
+T1	Material 37 71	object category detection datasets
+T2	Task 84 113	per-object 3D reconstructions
+T3	Method 148 188	ground truth figure-ground segmentations
+T4	Method 208 228	keypoint annotations
+T5	Generic 243 252	algorithm
+T6	OtherScientificTerm 269 285	camera viewpoint
+T7	OtherScientificTerm 292 319	rigid structure-from-motion
+T8	OtherScientificTerm 339 352	object shapes
+T9	OtherScientificTerm 372 393	visual hull proposals
+T10	OtherScientificTerm 404 451	loose within-class shape similarity assumptions
+T11	Method 457 485	visual hull sampling process
+T12	OtherScientificTerm 520 535	projection cone
+T13	Generic 662 668	method
+T14	Task 699 728	per-object 3D reconstructions
+T15	Material 769 803	object-category detection datasets
+T16	Material 805 815	PASCAL VOC
+T17	Method 859 911	geometry-oriented model-based recognition approaches
+R1	USED-FOR Arg1:T5 Arg2:T6
+R2	USED-FOR Arg1:T7 Arg2:T5
+R3	USED-FOR Arg1:T10 Arg2:T9
+R4	USED-FOR Arg1:T9 Arg2:T8
+R5	USED-FOR Arg1:T5 Arg2:T8
+R6	USED-FOR Arg1:T13 Arg2:T14
+R7	USED-FOR Arg1:T15 Arg2:T13
+R8	HYPONYM-OF Arg1:T16 Arg2:T15
+R9	COREF Arg1:T13 Arg2:T5
+R10	COREF Arg1:T2 Arg2:T14
+R11	USED-FOR Arg1:T1 Arg2:T2
+R12	USED-FOR Arg1:T3 Arg2:T2
+R13	USED-FOR Arg1:T4 Arg2:T2
+R14	CONJUNCTION Arg1:T3 Arg2:T4
+R15	COREF Arg1:T15 Arg2:T1
+R16	COREF Arg1:T11 Arg2:T9

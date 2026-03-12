@@ -1,0 +1,22 @@
+T1	Method 32 83	projective unifocal, bifo-cal, and trifocal tensors
+T2	OtherScientificTerm 91 102	affine case
+T3	Generic 121 128	tensors
+T4	OtherScientificTerm 152 170	registered tensors
+T5	OtherScientificTerm 230 251	affine specialization
+T6	Method 360 374	affine cameras
+T7	Method 446 461	trifocal tensor
+T8	OtherScientificTerm 486 510	geometric interpretation
+T9	Task 537 562	estimation of the tensors
+T10	Generic 555 562	tensors
+T11	OtherScientificTerm 568 589	point correspondences
+T12	Method 610 623	factorization
+T13	Generic 641 651	estimation
+T14	OtherScientificTerm 657 677	line correspondences
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T1
+R3	HYPONYM-OF Arg1:T7 Arg2:T1
+R4	COREF Arg1:T10 Arg2:T7
+R5	USED-FOR Arg1:T12 Arg2:T10
+R6	USED-FOR Arg1:T14 Arg2:T13
+R7	USED-FOR Arg1:T11 Arg2:T9
+R8	COREF Arg1:T13 Arg2:T9

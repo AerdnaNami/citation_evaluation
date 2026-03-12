@@ -1,0 +1,37 @@
+T1	Generic 13 19	method
+T2	Task 39 123	relative pose of two calibrated or uncalibrated non-overlapping surveillance cameras
+T3	Task 193 222	missing point correspondences
+T4	Method 243 256	SfM pipelines
+T5	Generic 289 297	paradigm
+T6	OtherScientificTerm 312 329	non-linear nature
+T7	Generic 337 344	problem
+T8	Generic 362 373	assumptions
+T9	OtherScientificTerm 380 402	surveillance scenarios
+T10	OtherScientificTerm 467 481	gravity vector
+T11	Generic 492 503	assumptions
+T12	Generic 516 523	problem
+T13	Task 529 557	Quadratic Eigenvalue Problem
+T14	OtherScientificTerm 594 613	nonlinear monomials
+T15	Method 631 657	quasi closed-form solution
+T16	Task 701 718	bundle adjustment
+T17	Method 750 770	closed form solution
+T18	Generic 796 803	problem
+T19	Task 815 833	video surveillance
+T20	Generic 905 913	approach
+R1	USED-FOR Arg1:T4 Arg2:T3
+R2	COREF Arg1:T5 Arg2:T4
+R3	COREF Arg1:T7 Arg2:T3
+R4	FEATURE-OF Arg1:T6 Arg2:T7
+R5	COREF Arg1:T11 Arg2:T8
+R6	COREF Arg1:T12 Arg2:T7
+R7	USED-FOR Arg1:T13 Arg2:T12
+R8	USED-FOR Arg1:T13 Arg2:T14
+R9	USED-FOR Arg1:T13 Arg2:T15
+R10	USED-FOR Arg1:T15 Arg2:T16
+R11	COREF Arg1:T18 Arg2:T12
+R12	USED-FOR Arg1:T17 Arg2:T18
+R13	FEATURE-OF Arg1:T19 Arg2:T18
+R14	COREF Arg1:T17 Arg2:T15
+R15	USED-FOR Arg1:T1 Arg2:T2
+R16	COREF Arg1:T20 Arg2:T1
+R17	COREF Arg1:T20 Arg2:T17

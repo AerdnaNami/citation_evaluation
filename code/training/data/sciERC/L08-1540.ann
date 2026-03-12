@@ -1,0 +1,58 @@
+T1	Material 50 74	large Czech MWE database
+T2	OtherScientificTerm 110 114	MWEs
+T3	OtherScientificTerm 129 142	lexical units
+T4	Generic 146 148	It
+T5	Material 194 207	encyclopedias
+T6	Material 214 226	dictionaries
+T7	Material 229 279	public  databases  of  proper names  and  toponyms
+T8	Generic 283 295	collocations
+T9	Material 312 325	Czech WordNet
+T10	Material 328 368	lists of  botanical and zoological terms
+T11	Generic 416 424	database
+T12	OtherScientificTerm 451 455	MWEs
+T13	Material 516 529	MWEs database
+T14	Material 560 581	Czech National Corpus
+T15	OtherScientificTerm 669 673	MWEs
+T16	Generic 708 714	corpus
+T17	OtherScientificTerm 797 801	MWEs
+T18	Generic 824 833	technique
+T19	Task 850 868	Word Sketch Engine
+T20	OtherScientificTerm 901 923	statistical parameters
+T21	OtherScientificTerm 947 951	MWEs
+T22	OtherScientificTerm 1020 1024	MWEs
+T23	Generic 1064 1072	database
+T24	Task 1107 1114	tagging
+T25	Task 1121 1134	lemmatization
+T26	OtherScientificTerm 1180 1184	MWEs
+T27	Generic 1217 1221	them
+T28	OtherScientificTerm 1235 1248	lexical units
+T29	Task 1266 1273	tagging
+T30	Task 1280 1293	lemmatization
+R1	COREF Arg1:T9 Arg2:T8
+R2	FEATURE-OF Arg1:T20 Arg2:T19
+R3	USED-FOR Arg1:T23 Arg2:T24
+R4	COREF Arg1:T4 Arg2:T1
+R5	USED-FOR Arg1:T5 Arg2:T4
+R6	USED-FOR Arg1:T6 Arg2:T4
+R7	USED-FOR Arg1:T8 Arg2:T4
+R8	CONJUNCTION Arg1:T5 Arg2:T6
+R9	COREF Arg1:T11 Arg2:T4
+R10	COREF Arg1:T13 Arg2:T11
+R11	COREF Arg1:T16 Arg2:T14
+R12	COREF Arg1:T17 Arg2:T15
+R13	USED-FOR Arg1:T18 Arg2:T19
+R14	COREF Arg1:T22 Arg2:T21
+R15	CONJUNCTION Arg1:T24 Arg2:T25
+R16	USED-FOR Arg1:T23 Arg2:T25
+R17	COREF Arg1:T27 Arg2:T26
+R18	COREF Arg1:T15 Arg2:T12
+R19	COREF Arg1:T23 Arg2:T13
+R20	USED-FOR Arg1:T26 Arg2:T29
+R21	USED-FOR Arg1:T26 Arg2:T30
+R22	CONJUNCTION Arg1:T29 Arg2:T30
+R23	USED-FOR Arg1:T7 Arg2:T4
+R24	USED-FOR Arg1:T10 Arg2:T4
+R25	CONJUNCTION Arg1:T10 Arg2:T8
+R26	USED-FOR Arg1:T14 Arg2:T13
+R27	COREF Arg1:T29 Arg2:T24
+R28	COREF Arg1:T30 Arg2:T25

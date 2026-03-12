@@ -1,0 +1,29 @@
+T1	Method 36 51	training method
+T2	Method 60 99	localized phrase-based prediction model
+T3	Task 106 143	statistical machine translation (SMT)
+T4	Generic 152 157	model
+T5	Task 205 229	local phrase re-ordering
+T6	OtherScientificTerm 243 271	maximum likelihood criterion
+T7	Method 285 314	log-linear block bigram model
+T8	OtherScientificTerm 328 348	real-valued features
+T9	OtherScientificTerm 359 379	language model score
+T10	OtherScientificTerm 395 410	binary features
+T11	Method 489 507	training algorithm
+T12	OtherScientificTerm 540 548	features
+T13	Generic 561 567	system
+T14	Generic 606 614	baseline
+T15	Task 631 662	Arabic-English translation task
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T8 Arg2:T7
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T2 Arg2:T4
+R5	USED-FOR Arg1:T4 Arg2:T5
+R6	HYPONYM-OF Arg1:T9 Arg2:T8
+R7	USED-FOR Arg1:T6 Arg2:T7
+R8	COREF Arg1:T11 Arg2:T1
+R9	USED-FOR Arg1:T12 Arg2:T11
+R10	COMPARE Arg1:T13 Arg2:T14
+R11	EVALUATE-FOR Arg1:T15 Arg2:T14
+R12	EVALUATE-FOR Arg1:T15 Arg2:T13
+R13	USED-FOR Arg1:T10 Arg2:T7
+R14	CONJUNCTION Arg1:T8 Arg2:T10

@@ -1,0 +1,40 @@
+T1	Metric 3 32	Automatic  evaluation metrics
+T2	Task 39 71	Machine Translation (MT) systems
+T3	Metric 84 88	BLEU
+T4	Metric 94 98	NIST
+T5	Generic 133 137	they
+T6	Task 164 193	assessment of  language pairs
+T7	OtherScientificTerm 179 193	language pairs
+T8	OtherScientificTerm 201 216	English-Chinese
+T9	OtherScientificTerm 222 238	English-Japanese
+T10	Task 258 283	word segmentation problem
+T11	Metric 355 359	BLEU
+T12	Method 365 377	word n-grams
+T13	OtherScientificTerm 407 423	character  level
+T14	Metric 437 441	BLEU
+T15	OtherScientificTerm 451 467	character  level
+T16	Task 484 509	word segmentation problem
+T17	Generic 513 515	it
+T18	Method 554 572	commercial systems
+T19	Method 625 647	statistical MT systems
+R1	USED-FOR Arg1:T11 Arg2:T12
+R2	CONJUNCTION Arg1:T3 Arg2:T4
+R3	HYPONYM-OF Arg1:T8 Arg2:T7
+R4	HYPONYM-OF Arg1:T9 Arg2:T7
+R5	CONJUNCTION Arg1:T8 Arg2:T9
+R6	COREF Arg1:T14 Arg2:T11
+R7	COREF Arg1:T11 Arg2:T3
+R8	COMPARE Arg1:T18 Arg2:T19
+R9	COREF Arg1:T17 Arg2:T14
+R10	COREF Arg1:T16 Arg2:T10
+R11	CONJUNCTION Arg1:T12 Arg2:T13
+R12	USED-FOR Arg1:T11 Arg2:T13
+R13	USED-FOR Arg1:T14 Arg2:T15
+R14	EVALUATE-FOR Arg1:T17 Arg2:T18
+R15	EVALUATE-FOR Arg1:T17 Arg2:T19
+R16	USED-FOR Arg1:T14 Arg2:T16
+R17	EVALUATE-FOR Arg1:T1 Arg2:T2
+R18	HYPONYM-OF Arg1:T3 Arg2:T1
+R19	HYPONYM-OF Arg1:T4 Arg2:T1
+R20	COREF Arg1:T1 Arg2:T5
+R21	USED-FOR Arg1:T5 Arg2:T6

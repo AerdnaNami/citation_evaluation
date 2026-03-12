@@ -1,0 +1,30 @@
+T1	Task 15 32	modeling problems
+T2	Material 41 54	discrete data
+T3	Method 95 135	multinomial or categorical distributions
+T4	Material 150 179	nucleotides in a DNA sequence
+T5	Material 229 243	text documents
+T6	Method 274 299	multinomial distributions
+T7	OtherScientificTerm 381 391	nucleotide
+T8	OtherScientificTerm 415 425	DNA strand
+T9	OtherScientificTerm 444 465	preceding nucleotides
+T10	Method 636 669	Dirichlet-multinomial formulation
+T11	Method 691 729	logistic stick-breaking representation
+T12	Task 756 780	Pólya-gamma augmentation
+T13	Method 801 825	multinomial distribution
+T14	OtherScientificTerm 838 854	latent variables
+T15	OtherScientificTerm 860 888	jointly Gaussian likelihoods
+T16	Method 933 962	Bayesian inference techniques
+T17	Method 967 982	Gaussian models
+T18	OtherScientificTerm 988 1004	minimal overhead
+R1	HYPONYM-OF Arg1:T6 Arg2:T3
+R2	USED-FOR Arg1:T6 Arg2:T4
+R3	USED-FOR Arg1:T6 Arg2:T5
+R4	USED-FOR Arg1:T16 Arg2:T17
+R5	FEATURE-OF Arg1:T18 Arg2:T17
+R6	USED-FOR Arg1:T12 Arg2:T13
+R7	USED-FOR Arg1:T11 Arg2:T13
+R8	FEATURE-OF Arg1:T15 Arg2:T14
+R9	PART-OF Arg1:T14 Arg2:T13
+R10	COREF Arg1:T13 Arg2:T6
+R11	USED-FOR Arg1:T2 Arg2:T1
+R12	USED-FOR Arg1:T3 Arg2:T1

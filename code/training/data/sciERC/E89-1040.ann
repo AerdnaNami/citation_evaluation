@@ -1,0 +1,26 @@
+T1	Task 38 57	machine translation
+T2	Generic 123 132	formalism
+T3	Task 217 228	translation
+T4	Method 286 305	anaphoric component
+T5	Method 315 329	Mimo formalism
+T6	Task 361 397	translation  of  anaphoric relations
+T7	OtherScientificTerm 479 502	strict compositionality
+T8	OtherScientificTerm 509 513	Mimo
+T9	Task 521 557	translation  of  anaphoric relations
+T10	Method 582 601	anaphoric component
+T11	OtherScientificTerm 622 642	linguistic phenomena
+T12	OtherScientificTerm 653 664	wh-movement
+T13	OtherScientificTerm 667 724	the  passive  and the  binding of reflexives and pronouns
+T14	OtherScientificTerm 844 855	wh-movement
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T10 Arg2:T11
+R3	COREF Arg1:T5 Arg2:T2
+R4	COREF Arg1:T8 Arg2:T5
+R5	COREF Arg1:T10 Arg2:T4
+R6	HYPONYM-OF Arg1:T12 Arg2:T11
+R7	COREF Arg1:T14 Arg2:T12
+R8	PART-OF Arg1:T4 Arg2:T5
+R9	COREF Arg1:T9 Arg2:T6
+R10	USED-FOR Arg1:T8 Arg2:T9
+R11	HYPONYM-OF Arg1:T13 Arg2:T11
+R12	CONJUNCTION Arg1:T12 Arg2:T13

@@ -1,0 +1,26 @@
+T1	Method 25 55	unsupervised learning approach
+T2	OtherScientificTerm 81 114	relations between  named entities
+T3	OtherScientificTerm 135 165	lexical and syntactic features
+T4	Generic 189 191	It
+T5	OtherScientificTerm 214 226	eigenvectors
+T6	OtherScientificTerm 235 265	adjacency graph  's  Laplacian
+T7	OtherScientificTerm 281 292	submanifold
+T8	OtherScientificTerm 310 335	high dimensionality space
+T9	Task 358 383	cluster number estimation
+T10	OtherScientificTerm 393 405	eigenvectors
+T11	Material 432 443	ACE corpora
+T12	Method 461 495	spectral clustering based approach
+T13	Method 520 538	clustering methods
+R1	USED-FOR Arg1:T3 Arg2:T1
+R2	COMPARE Arg1:T12 Arg2:T13
+R3	COREF Arg1:T1 Arg2:T4
+R4	FEATURE-OF Arg1:T6 Arg2:T5
+R5	USED-FOR Arg1:T5 Arg2:T4
+R6	USED-FOR Arg1:T4 Arg2:T7
+R7	COREF Arg1:T5 Arg2:T10
+R8	USED-FOR Arg1:T9 Arg2:T10
+R9	EVALUATE-FOR Arg1:T11 Arg2:T12
+R10	EVALUATE-FOR Arg1:T11 Arg2:T13
+R11	USED-FOR Arg1:T1 Arg2:T2
+R12	USED-FOR Arg1:T8 Arg2:T7
+R13	USED-FOR Arg1:T9 Arg2:T4

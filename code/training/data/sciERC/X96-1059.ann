@@ -1,0 +1,64 @@
+T1	Task 2 29	Recognition of proper nouns
+T2	OtherScientificTerm 17 29	proper nouns
+T3	Material 35 48	Japanese text
+T4	Task 109 131	morphological analysis
+T5	Task 137 161	Japanese text processing
+T6	Generic 174 176	It
+T7	Task 220 251	Japanese information extraction
+T8	Generic 280 288	approach
+T9	Task 296 331	Multi-lingual Evaluation Task (MET)
+T10	Material 337 350	Japanese text
+T11	Generic 377 381	task
+T12	Task 388 418	morphological analysis problem
+T13	Material 424 432	Japanese
+T14	Method 440 462	morphological analyzer
+T15	Task 505 587	recognition and classification of proper names, numerical and temporal expressions
+T16	OtherScientificTerm 539 587	proper names, numerical and temporal expressions
+T17	OtherScientificTerm 594 617	Named Entity (NE) items
+T18	Material 627 640	Japanese text
+T19	Generic 648 656	analyzer
+T20	Method 668 676	"Amorph"
+T21	Method 678 684	Amorph
+T22	OtherScientificTerm 697 705	NE items
+T23	Method 723 740	dictionary lookup
+T24	Method 747 763	rule application
+T25	Generic 773 775	it
+T26	OtherScientificTerm 799 811	dictionaries
+T27	OtherScientificTerm 833 859	Japanese character strings
+T28	Method 915 938	dictionary lookup stage
+T29	OtherScientificTerm 951 956	rules
+T30	OtherScientificTerm 1018 1026	NE items
+T31	OtherScientificTerm 1065 1072	NE item
+R1	PART-OF Arg1:T1 Arg2:T4
+R2	USED-FOR Arg1:T4 Arg2:T5
+R3	USED-FOR Arg1:T8 Arg2:T9
+R4	USED-FOR Arg1:T9 Arg2:T10
+R5	COREF Arg1:T9 Arg2:T11
+R6	USED-FOR Arg1:T12 Arg2:T11
+R7	USED-FOR Arg1:T13 Arg2:T12
+R8	COREF Arg1:T12 Arg2:T4
+R9	COREF Arg1:T10 Arg2:T3
+R10	COREF Arg1:T10 Arg2:T13
+R11	COREF Arg1:T1 Arg2:T6
+R12	USED-FOR Arg1:T7 Arg2:T6
+R13	COREF Arg1:T19 Arg2:T14
+R14	COREF Arg1:T20 Arg2:T19
+R15	COREF Arg1:T21 Arg2:T20
+R16	USED-FOR Arg1:T21 Arg2:T22
+R17	CONJUNCTION Arg1:T23 Arg2:T24
+R18	PART-OF Arg1:T23 Arg2:T21
+R19	PART-OF Arg1:T24 Arg2:T21
+R20	COREF Arg1:T21 Arg2:T25
+R21	USED-FOR Arg1:T26 Arg2:T27
+R22	USED-FOR Arg1:T26 Arg2:T25
+R23	COREF Arg1:T28 Arg2:T23
+R24	USED-FOR Arg1:T14 Arg2:T15
+R25	HYPONYM-OF Arg1:T17 Arg2:T16
+R26	PART-OF Arg1:T17 Arg2:T18
+R27	COREF Arg1:T13 Arg2:T18
+R28	USED-FOR Arg1:T29 Arg2:T30
+R29	PART-OF Arg1:T2 Arg2:T3
+R30	USED-FOR Arg1:T28 Arg2:T29
+R31	COREF Arg1:T17 Arg2:T30
+R32	COREF Arg1:T31 Arg2:T30
+R33	COREF Arg1:T22 Arg2:T17

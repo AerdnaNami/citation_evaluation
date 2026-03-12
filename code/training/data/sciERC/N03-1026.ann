@@ -1,0 +1,47 @@
+T1	Method 31 89	ambiguity packing and stochastic disambiguation techniques
+T2	Method 96 129	Lexical-Functional Grammars (LFG)
+T3	Task 149 170	sentence condensation
+T4	Generic 178 184	system
+T5	Method 201 228	linguistic parser/generator
+T6	Method 235 238	LFG
+T7	Method 245 263	transfer component
+T8	Task 270 285	parse reduction
+T9	OtherScientificTerm 301 321	packed parse forests
+T10	Method 332 353	maximum-entropy model
+T11	Task 360 387	stochastic output selection
+T12	Method 436 461	parser evaluation methods
+T13	Metric 497 519	summarization  quality
+T14	Method 524 553	sentence condensation systems
+T15	Metric 590 612	summarization  quality
+T16	Method 652 684	automatic parse-based evaluation
+T17	Method 693 710	manual evaluation
+T18	Metric 746 768	summarization  quality
+T19	Generic 785 791	system
+T20	Metric 830 844	grammaticality
+T21	Method 890 923	constraint-based parser/generator
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T7 Arg2:T8
+R4	USED-FOR Arg1:T10 Arg2:T11
+R5	USED-FOR Arg1:T1 Arg2:T3
+R6	PART-OF Arg1:T5 Arg2:T4
+R7	PART-OF Arg1:T7 Arg2:T4
+R8	CONJUNCTION Arg1:T5 Arg2:T7
+R9	USED-FOR Arg1:T9 Arg2:T8
+R10	CONJUNCTION Arg1:T7 Arg2:T10
+R11	COMPARE Arg1:T16 Arg2:T17
+R12	COREF Arg1:T19 Arg2:T14
+R13	USED-FOR Arg1:T21 Arg2:T19
+R14	COREF Arg1:T12 Arg2:T16
+R15	COREF Arg1:T14 Arg2:T4
+R16	EVALUATE-FOR Arg1:T18 Arg2:T19
+R17	COREF Arg1:T4 Arg2:T1
+R18	COREF Arg1:T15 Arg2:T18
+R19	EVALUATE-FOR Arg1:T13 Arg2:T14
+R20	EVALUATE-FOR Arg1:T12 Arg2:T13
+R21	COREF Arg1:T15 Arg2:T13
+R22	COREF Arg1:T15 Arg2:T13
+R23	EVALUATE-FOR Arg1:T15 Arg2:T16
+R24	EVALUATE-FOR Arg1:T20 Arg2:T19
+R25	COREF Arg1:T2 Arg2:T6
+R26	PART-OF Arg1:T10 Arg2:T4

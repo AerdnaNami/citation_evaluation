@@ -1,0 +1,30 @@
+T1	Generic 33 52	autonomous pipeline
+T2	Method 64 114	personalized parametric model (pose-driven avatar)
+T3	OtherScientificTerm 123 142	single depth sensor
+T4	Generic 148 154	method
+T5	Method 298 325	template fitting techniques
+T6	OtherScientificTerm 341 355	human template
+T7	OtherScientificTerm 400 430	global consistency constraints
+T8	Method 458 475	watertight models
+T9	Method 517 533	parametric model
+T10	Method 562 574	SCAPE method
+T11	Method 585 601	parametric model
+T12	Generic 612 614	it
+T13	OtherScientificTerm 633 651	anim-itable avatar
+T14	Method 687 704	dynamic 3D models
+T15	Material 710 734	single-view depth videos
+T16	Generic 794 800	system
+T17	Method 812 826	dynamic models
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T4 Arg2:T1
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	USED-FOR Arg1:T6 Arg2:T5
+R5	USED-FOR Arg1:T8 Arg2:T9
+R6	USED-FOR Arg1:T10 Arg2:T9
+R7	COREF Arg1:T9 Arg2:T11
+R8	COREF Arg1:T11 Arg2:T12
+R9	USED-FOR Arg1:T15 Arg2:T14
+R10	USED-FOR Arg1:T12 Arg2:T14
+R11	USED-FOR Arg1:T12 Arg2:T13
+R12	USED-FOR Arg1:T16 Arg2:T17
+R13	COREF Arg1:T4 Arg2:T16

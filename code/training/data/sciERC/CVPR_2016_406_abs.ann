@@ -1,0 +1,39 @@
+T1	Task 0 14	Image matching
+T2	Task 43 58	Computer Vision
+T3	Task 78 100	feature-based matching
+T4	Method 102 106	SIFT
+T5	OtherScientificTerm 189 209	ultra-wide baselines
+T6	Material 229 242	aerial images
+T7	OtherScientificTerm 258 280	large camera rotations
+T8	OtherScientificTerm 286 306	appearance variation
+T9	Method 332 336	SIFT
+T10	Method 341 347	RANSAC
+T11	Method 376 417	data-driven, deep learning-based approach
+T12	OtherScientificTerm 433 453	local correspondence
+T13	Generic 469 476	problem
+T14	Task 482 501	classification task
+T15	OtherScientificTerm 537 558	local correspondences
+T16	Method 607 626	attention mechanism
+T17	Generic 727 733	models
+T18	Material 739 770	dataset of urban aerial imagery
+T19	Generic 864 871	problem
+T20	Method 878 889	human study
+T21	Material 895 934	annotations from Amazon Mechanical Turk
+T22	Generic 960 966	models
+T23	Generic 982 998	state-of-the-art
+T24	Task 1002 1030	ultra-wide baseline matching
+T25	Metric 1044 1058	human accuracy
+R1	HYPONYM-OF Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T18 Arg2:T17
+R3	COREF Arg1:T22 Arg2:T17
+R4	COMPARE Arg1:T22 Arg2:T25
+R5	USED-FOR Arg1:T20 Arg2:T19
+R6	USED-FOR Arg1:T21 Arg2:T20
+R7	USED-FOR Arg1:T14 Arg2:T13
+R8	USED-FOR Arg1:T4 Arg2:T3
+R9	FEATURE-OF Arg1:T7 Arg2:T6
+R10	COREF Arg1:T4 Arg2:T9
+R11	CONJUNCTION Arg1:T9 Arg2:T10
+R12	COMPARE Arg1:T22 Arg2:T23
+R13	EVALUATE-FOR Arg1:T24 Arg2:T23
+R14	EVALUATE-FOR Arg1:T24 Arg2:T22

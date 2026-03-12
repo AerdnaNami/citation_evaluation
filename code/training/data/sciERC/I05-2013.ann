@@ -1,0 +1,25 @@
+T1	Generic 15 19	tool
+T2	Method 30 35	ILIMP
+T3	Material 62 82	raw text  in  French
+T4	Generic 269 273	tool
+T5	Task 325 352	anaphoric occurrences of il
+T6	Method 369 395	anaphora resolution system
+T7	Metric 544 558	precision rate
+T8	Method 565 570	ILIMP
+T9	Generic 630 635	tasks
+T10	Generic 648 654	method
+T11	Method 671 676	ILIMP
+T12	Method 724 729	ILIMP
+T13	Method 736 770	modular  syntactic analysis system
+R1	EVALUATE-FOR Arg1:T7 Arg2:T8
+R2	USED-FOR Arg1:T10 Arg2:T9
+R3	COREF Arg1:T2 Arg2:T1
+R4	COREF Arg1:T1 Arg2:T4
+R5	USED-FOR Arg1:T4 Arg2:T5
+R6	USED-FOR Arg1:T6 Arg2:T5
+R7	USED-FOR Arg1:T10 Arg2:T11
+R8	COREF Arg1:T12 Arg2:T11
+R9	COREF Arg1:T11 Arg2:T8
+R10	COREF Arg1:T8 Arg2:T4
+R11	USED-FOR Arg1:T3 Arg2:T1
+R12	USED-FOR Arg1:T12 Arg2:T13

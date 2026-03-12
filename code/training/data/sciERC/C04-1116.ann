@@ -1,0 +1,24 @@
+T1	Method 15 33	text mining method
+T2	OtherScientificTerm 48 70	synonymous expressions
+T3	OtherScientificTerm 86 111	distributional hypothesis
+T4	Generic 171 182	methodology
+T5	Metric 199 207	accuracy
+T6	Method 215 238	term aggregation system
+T7	Generic 295 303	approach
+T8	OtherScientificTerm 445 469	similar context features
+T9	OtherScientificTerm 513 535	synonymous expressions
+T10	Generic 551 557	method
+T11	Metric 572 580	accuracy
+T12	Method 590 613	term aggregation system
+T13	Generic 633 641	approach
+R1	USED-FOR Arg1:T3 Arg2:T1
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	COREF Arg1:T4 Arg2:T1
+R4	COREF Arg1:T7 Arg2:T4
+R5	COREF Arg1:T10 Arg2:T7
+R6	COREF Arg1:T12 Arg2:T6
+R7	EVALUATE-FOR Arg1:T6 Arg2:T4
+R8	EVALUATE-FOR Arg1:T12 Arg2:T10
+R9	COREF Arg1:T13 Arg2:T10
+R10	EVALUATE-FOR Arg1:T5 Arg2:T6
+R11	EVALUATE-FOR Arg1:T11 Arg2:T12

@@ -1,0 +1,25 @@
+T1	Material 26 74	under-explored language genre of spoken language
+T2	Material 75 90	lyrics in music
+T3	Method 106 129	unsuper-vised induction
+T4	Method 136 177	SMT-style stochastic transduction grammar
+T5	Material 182 196	hip hop lyrics
+T6	Method 209 262	fully-automatically learned challenge-response system
+T7	Material 277 291	rhyming lyrics
+T8	Material 357 371	hip hop lyrics
+T9	Generic 442 450	approach
+T10	OtherScientificTerm 507 546	priori linguistic or phonetic knowledge
+T11	Generic 606 611	model
+T12	OtherScientificTerm 661 677	human evaluators
+T13	Method 730 753	phrase-based SMT models
+T14	Generic 768 772	task
+R1	USED-FOR Arg1:T6 Arg2:T7
+R2	HYPONYM-OF Arg1:T2 Arg2:T1
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	USED-FOR Arg1:T3 Arg2:T4
+R5	FEATURE-OF Arg1:T5 Arg2:T4
+R6	COREF Arg1:T9 Arg2:T6
+R7	COREF Arg1:T11 Arg2:T9
+R8	USED-FOR Arg1:T3 Arg2:T6
+R9	COMPARE Arg1:T11 Arg2:T13
+R10	EVALUATE-FOR Arg1:T14 Arg2:T13
+R11	EVALUATE-FOR Arg1:T14 Arg2:T11

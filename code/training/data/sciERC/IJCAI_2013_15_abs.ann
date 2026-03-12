@@ -1,0 +1,44 @@
+T1	Method 4 25	Interval Algebra (IA)
+T2	Method 46 78	Region Connection Calculus (RCC)
+T3	Method 87 92	RCC-8
+T4	Method 111 145	Artificial Intelligence approaches
+T5	Task 150 229	representing and reasoning about qualitative temporal and topological relations
+T6	OtherScientificTerm 183 229	qualitative temporal and topological relations
+T7	OtherScientificTerm 249 272	qualitative information
+T8	Method 296 332	Qualitative Constraint Network (QCN)
+T9	Task 365 395	minimal labeling problem (MLP)
+T10	Generic 414 423	algorithm
+T11	Method 483 486	QCN
+T12	Generic 492 501	algorithm
+T13	Method 512 524	chordal QCNs
+T14	OtherScientificTerm 543 562	partial consistency
+T15	OtherScientificTerm 582 597	◆ G-consistency
+T16	Generic 621 630	algorithm
+T17	OtherScientificTerm 688 706	patchwork property
+T18	Method 766 769	QCN
+T19	Method 794 798	QCNs
+T20	Method 794 814	QCNs of IA and RCC-8
+T21	Method 802 804	IA
+T22	Method 809 814	RCC-8
+T23	Generic 862 870	approach
+R1	HYPONYM-OF Arg1:T3 Arg2:T2
+R2	USED-FOR Arg1:T4 Arg2:T5
+R3	HYPONYM-OF Arg1:T2 Arg2:T4
+R4	HYPONYM-OF Arg1:T1 Arg2:T4
+R5	CONJUNCTION Arg1:T1 Arg2:T2
+R6	COREF Arg1:T6 Arg2:T7
+R7	USED-FOR Arg1:T8 Arg2:T7
+R8	COREF Arg1:T8 Arg2:T11
+R9	USED-FOR Arg1:T10 Arg2:T11
+R10	HYPONYM-OF Arg1:T15 Arg2:T14
+R11	COREF Arg1:T12 Arg2:T16
+R12	COREF Arg1:T1 Arg2:T21
+R13	COREF Arg1:T3 Arg2:T22
+R14	PART-OF Arg1:T13 Arg2:T12
+R15	COREF Arg1:T10 Arg2:T12
+R16	PART-OF Arg1:T14 Arg2:T12
+R17	CONJUNCTION Arg1:T13 Arg2:T14
+R18	COREF Arg1:T18 Arg2:T19
+R19	COREF Arg1:T12 Arg2:T23
+R20	EVALUATE-FOR Arg1:T20 Arg2:T23
+R21	COREF Arg1:T18 Arg2:T11

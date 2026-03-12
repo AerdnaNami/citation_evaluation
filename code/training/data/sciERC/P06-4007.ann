@@ -1,0 +1,14 @@
+T1	Method 25 31	FERRET
+T2	Method 39 82	interactive question-answering (Q/A) system
+T3	Task 122 191	integrating  automatic Q/A  applications into real-world environments
+T4	Method 194 200	FERRET
+T5	Generic 219 227	approach
+T6	Method 232 235	Q/A
+T7	Method 247 269	predictive questioning
+R1	HYPONYM-OF Arg1:T1 Arg2:T2
+R2	COREF Arg1:T4 Arg2:T1
+R3	USED-FOR Arg1:T5 Arg2:T6
+R4	USED-FOR Arg1:T5 Arg2:T4
+R5	COREF Arg1:T7 Arg2:T5
+R6	COREF Arg1:T2 Arg2:T6
+R7	USED-FOR Arg1:T1 Arg2:T3

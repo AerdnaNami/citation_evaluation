@@ -1,0 +1,27 @@
+T1	Method 60 87	adaptive learning procedure
+T2	Task 127 157	syntactic ambiguity resolution
+T3	OtherScientificTerm 186 212	insufficient training data
+T4	OtherScientificTerm 219 238	approximation error
+T5	Method 259 273	language model
+T6	Method 290 312	statistical approaches
+T7	OtherScientificTerm 331 342	ambiguities
+T8	Method 380 405	maximum likelihood method
+T9	Generic 479 485	method
+T10	Generic 501 509	problems
+T11	Generic 601 610	algorithm
+T12	OtherScientificTerm 744 761	separation margin
+T13	Metric 880 893	accuracy rate
+T14	Task 899 923	syntactic disambiguation
+T15	Generic 976 984	approach
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T8 Arg2:T6
+R3	CONJUNCTION Arg1:T3 Arg2:T4
+R4	USED-FOR Arg1:T6 Arg2:T7
+R5	COREF Arg1:T11 Arg2:T9
+R6	COREF Arg1:T14 Arg2:T2
+R7	EVALUATE-FOR Arg1:T13 Arg2:T14
+R8	COREF Arg1:T9 Arg2:T1
+R9	HYPONYM-OF Arg1:T3 Arg2:T10
+R10	HYPONYM-OF Arg1:T4 Arg2:T10
+R11	COREF Arg1:T15 Arg2:T11
+R12	EVALUATE-FOR Arg1:T14 Arg2:T15

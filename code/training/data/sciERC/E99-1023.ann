@@ -1,0 +1,29 @@
+T1	Task 1 41	Dividing  sentences  in  chunks of words
+T2	Task 79 86	parsing
+T3	Task 90 112	information extraction
+T4	Task 119 140	information retrieval
+T5	Method 202 221	data representation
+T6	Task 228 236	chunking
+T7	Generic 252 254	it
+T8	Task 261 273	tagging task
+T9	Method 323 343	data representations
+T10	Task 364 395	recognizing  noun phrase chunks
+T11	Method 421 440	data representation
+T12	Task 475 483	chunking
+T13	Method 539 558	data representation
+T14	Method 566 595	memory-based learning chunker
+T15	Task 637 645	chunking
+T16	Material 671 679	data set
+R1	USED-FOR Arg1:T5 Arg2:T6
+R2	CONJUNCTION Arg1:T2 Arg2:T3
+R3	CONJUNCTION Arg1:T3 Arg2:T4
+R4	USED-FOR Arg1:T13 Arg2:T14
+R5	EVALUATE-FOR Arg1:T16 Arg2:T14
+R6	USED-FOR Arg1:T1 Arg2:T2
+R7	USED-FOR Arg1:T1 Arg2:T3
+R8	USED-FOR Arg1:T1 Arg2:T4
+R9	COREF Arg1:T6 Arg2:T1
+R10	COREF Arg1:T7 Arg2:T6
+R11	USED-FOR Arg1:T9 Arg2:T10
+R12	COREF Arg1:T6 Arg2:T12
+R13	COREF Arg1:T12 Arg2:T15

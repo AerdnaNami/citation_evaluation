@@ -1,0 +1,48 @@
+T1	Method 6 30	exemplar-based framework
+T2	Task 40 56	image completion
+T3	Task 59 76	texture synthesis
+T4	Task 81 97	image inpainting
+T5	Method 146 163	greedy techniques
+T6	Generic 171 176	tasks
+T7	Task 204 240	discrete global optimization problem
+T8	OtherScientificTerm 248 279	well defined objective function
+T9	Generic 298 305	problem
+T10	Method 314 333	optimization scheme
+T11	Method 342 353	Priority-BP
+T12	Generic 400 410	extensions
+T13	Method 425 448	belief propagation (BP)
+T14	Method 452 485	priority-based message scheduling
+T15	Method 494 515	dynamic label pruning
+T16	Generic 529 539	extensions
+T17	OtherScientificTerm 577 613	intolerable computational cost of BP
+T18	Method 611 613	BP
+T19	Generic 675 685	extensions
+T20	Method 734 753	MRF energy function
+T21	Generic 788 794	method
+T22	Material 832 857	image completion examples
+R1	CONJUNCTION Arg1:T2 Arg2:T3
+R2	CONJUNCTION Arg1:T3 Arg2:T4
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	USED-FOR Arg1:T1 Arg2:T3
+R5	USED-FOR Arg1:T1 Arg2:T4
+R6	HYPONYM-OF Arg1:T2 Arg2:T6
+R7	HYPONYM-OF Arg1:T3 Arg2:T6
+R8	HYPONYM-OF Arg1:T4 Arg2:T6
+R9	FEATURE-OF Arg1:T7 Arg2:T6
+R10	COMPARE Arg1:T5 Arg2:T6
+R11	COREF Arg1:T9 Arg2:T7
+R12	HYPONYM-OF Arg1:T11 Arg2:T10
+R13	USED-FOR Arg1:T10 Arg2:T9
+R14	CONJUNCTION Arg1:T14 Arg2:T15
+R15	HYPONYM-OF Arg1:T14 Arg2:T12
+R16	HYPONYM-OF Arg1:T15 Arg2:T12
+R17	USED-FOR Arg1:T13 Arg2:T12
+R18	COREF Arg1:T16 Arg2:T12
+R19	PART-OF Arg1:T12 Arg2:T10
+R20	COREF Arg1:T18 Arg2:T13
+R21	USED-FOR Arg1:T16 Arg2:T17
+R22	COREF Arg1:T19 Arg2:T16
+R23	USED-FOR Arg1:T19 Arg2:T20
+R24	COREF Arg1:T21 Arg2:T19
+R25	USED-FOR Arg1:T22 Arg2:T21
+R26	FEATURE-OF Arg1:T8 Arg2:T7

@@ -1,0 +1,42 @@
+T1	OtherScientificTerm 28 56	priori geometric constraints
+T2	Method 62 94	3–D stereo reconstruction scheme
+T3	OtherScientificTerm 129 146	image information
+T4	OtherScientificTerm 193 202	3–D shape
+T5	Generic 208 216	approach
+T6	Method 233 276	iterative deformation of a 3–D surface mesh
+T7	OtherScientificTerm 292 310	objective function
+T8	Method 335 354	anisotropic meshing
+T9	Method 362 384	non-quadratic approach
+T10	OtherScientificTerm 388 402	regularization
+T11	Task 437 451	reconstruction
+T12	OtherScientificTerm 466 480	triangulations
+T13	OtherScientificTerm 490 498	vertices
+T14	OtherScientificTerm 500 535	Structural or numerical constraints
+T15	Method 569 591	reconstruction process
+T16	Method 602 633	constrained optimization scheme
+T17	Generic 635 639	They
+T18	Task 652 666	reconstruction
+T19	OtherScientificTerm 712 728	priori knowledge
+T20	OtherScientificTerm 735 747	object shape
+T21	OtherScientificTerm 776 795	modeling properties
+T22	OtherScientificTerm 799 820	differential features
+T23	Generic 826 830	them
+T24	Task 892 910	3–D reconstruction
+R1	USED-FOR Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T6 Arg2:T5
+R3	USED-FOR Arg1:T6 Arg2:T7
+R4	CONJUNCTION Arg1:T8 Arg2:T9
+R5	USED-FOR Arg1:T9 Arg2:T10
+R6	PART-OF Arg1:T1 Arg2:T2
+R7	USED-FOR Arg1:T8 Arg2:T11
+R8	USED-FOR Arg1:T9 Arg2:T11
+R9	USED-FOR Arg1:T12 Arg2:T11
+R10	USED-FOR Arg1:T14 Arg2:T15
+R11	USED-FOR Arg1:T16 Arg2:T14
+R12	COREF Arg1:T18 Arg2:T11
+R13	COREF Arg1:T14 Arg2:T17
+R14	USED-FOR Arg1:T17 Arg2:T18
+R15	FEATURE-OF Arg1:T20 Arg2:T19
+R16	COREF Arg1:T23 Arg2:T17
+R17	USED-FOR Arg1:T23 Arg2:T24
+R18	COREF Arg1:T24 Arg2:T18

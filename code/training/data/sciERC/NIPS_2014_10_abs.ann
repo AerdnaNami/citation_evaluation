@@ -1,0 +1,29 @@
+T1	Method 13 60	reweighted version of the Kikuchi approximation
+T2	Method 39 60	Kikuchi approximation
+T3	Task 80 128	log partition function of a product distribution
+T4	OtherScientificTerm 144 156	region graph
+T5	OtherScientificTerm 201 210	concavity
+T6	OtherScientificTerm 218 247	reweighted objective function
+T7	OtherScientificTerm 260 278	weight assignments
+T8	OtherScientificTerm 286 303	Kikuchi expansion
+T9	Method 321 368	reweighted version of the sum product algorithm
+T10	OtherScientificTerm 384 404	Kikuchi region graph
+T11	OtherScientificTerm 418 431	global optima
+T12	Method 439 460	Kikuchi approximation
+T13	Generic 474 483	algorithm
+T14	OtherScientificTerm 504 516	region graph
+T15	Method 552 571	Bethe approximation
+T16	OtherScientificTerm 616 625	concavity
+T17	OtherScientificTerm 714 723	concavity
+T18	OtherScientificTerm 740 755	cycle structure
+T19	OtherScientificTerm 763 775	region graph
+T20	Method 845 872	reweighted Kikuchi approach
+R1	FEATURE-OF Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T1 Arg2:T3
+R3	USED-FOR Arg1:T9 Arg2:T10
+R4	FEATURE-OF Arg1:T11 Arg2:T12
+R5	COREF Arg1:T12 Arg2:T2
+R6	FEATURE-OF Arg1:T18 Arg2:T19
+R7	COREF Arg1:T1 Arg2:T20
+R8	FEATURE-OF Arg1:T5 Arg2:T6
+R9	COREF Arg1:T9 Arg2:T13

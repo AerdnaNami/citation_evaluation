@@ -1,0 +1,10 @@
+T1	Generic 147 153	system
+T2	Method 155 160	FROFF
+T3	OtherScientificTerm 361 376	typing location
+T4	OtherScientificTerm 543 551	commands
+T5	OtherScientificTerm 556 561	rules
+T6	OtherScientificTerm 640 664	mathematical expressions
+R1	USED-FOR Arg1:T5 Arg2:T6
+R2	COREF Arg1:T2 Arg2:T1
+R3	USED-FOR Arg1:T4 Arg2:T6
+R4	CONJUNCTION Arg1:T4 Arg2:T5

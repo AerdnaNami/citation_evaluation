@@ -1,0 +1,23 @@
+T1	Method 30 63	fully automated extraction system
+T2	Method 73 78	IntEx
+T3	Task 94 123	gene and protein interactions
+T4	Material 129 144	biomedical text
+T5	Generic 151 159	approach
+T6	OtherScientificTerm 253 268	syntactic roles
+T7	OtherScientificTerm 286 305	biological entities
+T8	OtherScientificTerm 325 361	biomedical and linguistic ontologies
+T9	OtherScientificTerm 447 462	syntactic roles
+T10	Method 520 537	extraction system
+T11	OtherScientificTerm 581 613	multiple and nested interactions
+T12	Method 700 718	extraction systems
+T13	Method 739 751	IntEx system
+T14	OtherScientificTerm 812 843	pattern engineering requirement
+R1	COMPARE Arg1:T13 Arg2:T12
+R2	HYPONYM-OF Arg1:T2 Arg2:T1
+R3	USED-FOR Arg1:T1 Arg2:T3
+R4	USED-FOR Arg1:T4 Arg2:T3
+R5	COREF Arg1:T5 Arg2:T1
+R6	USED-FOR Arg1:T8 Arg2:T7
+R7	COREF Arg1:T10 Arg2:T5
+R8	USED-FOR Arg1:T10 Arg2:T11
+R9	COREF Arg1:T13 Arg2:T10

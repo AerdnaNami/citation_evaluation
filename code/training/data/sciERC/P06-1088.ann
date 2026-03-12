@@ -1,0 +1,38 @@
+T1	Metric 29 37	accuracy
+T2	Material 44 58	newspaper text
+T3	Task 62 90	part of speech (pos) tagging
+T4	Method 177 183	parser
+T5	OtherScientificTerm 197 214	pos tag ambiguity
+T6	Method 260 278	grammar formalisms
+T7	OtherScientificTerm 296 331	fine-grained grammatical categories
+T8	OtherScientificTerm 347 350	tag
+T9	OtherScientificTerm 357 360	ccg
+T10	Metric 364 380	tagging accuracy
+T11	Generic 417 427	formalisms
+T12	OtherScientificTerm 430 461	premature  ambiguity resolution
+T13	Task 470 477	parsing
+T14	Method 506 528	multi-tagging approach
+T15	OtherScientificTerm 567 593	lexical category ambiguity
+T16	Task 623 634	ccg parsing
+T17	Method 653 675	multi-tagging approach
+T18	OtherScientificTerm 685 694	pos level
+T19	OtherScientificTerm 753 761	pos tags
+T20	Metric 774 794	pos tagging accuracy
+T21	OtherScientificTerm 826 843	pos tag ambiguity
+T22	Method 853 881	language processing pipeline
+T23	Method 909 925	ccg supertagging
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T7 Arg2:T6
+R3	USED-FOR Arg1:T14 Arg2:T16
+R4	EVALUATE-FOR Arg1:T1 Arg2:T3
+R5	EVALUATE-FOR Arg1:T2 Arg2:T3
+R6	HYPONYM-OF Arg1:T8 Arg2:T7
+R7	HYPONYM-OF Arg1:T9 Arg2:T7
+R8	EVALUATE-FOR Arg1:T10 Arg2:T6
+R9	COREF Arg1:T6 Arg2:T11
+R10	USED-FOR Arg1:T13 Arg2:T11
+R11	FEATURE-OF Arg1:T15 Arg2:T14
+R12	COREF Arg1:T14 Arg2:T17
+R13	USED-FOR Arg1:T17 Arg2:T18
+R14	FEATURE-OF Arg1:T21 Arg2:T22
+R15	USED-FOR Arg1:T21 Arg2:T23

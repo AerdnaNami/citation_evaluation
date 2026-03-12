@@ -1,0 +1,36 @@
+T1	Generic 31 37	system
+T2	Task 44 99	acquiring adjectival subcategorization frames  ( scfs )
+T3	OtherScientificTerm 65 99	subcategorization frames  ( scfs )
+T4	Material 143 164	English   corpus data
+T5	Generic 172 178	system
+T6	Method 196 220	decision-tree classifier
+T7	OtherScientificTerm 274 304	grammatical relations  ( grs )
+T8	Method 326 352	robust  statistical parser
+T9	Generic 355 357	It
+T10	OtherScientificTerm 375 400	pattern-matching language
+T11	OtherScientificTerm 415 418	grs
+T12	OtherScientificTerm 472 496	inheritance-based lexica
+T13	Generic 532 538	system
+T14	Metric 580 589	precision
+T15	Metric 600 606	recall
+T16	Generic 621 625	tool
+T17	Task 632 663	linguistic annotation  of  scfs
+T18	OtherScientificTerm 659 663	scfs
+T19	Material 760 782	training and test data
+T20	Task 789 818	subcategorization acquisition
+R1	PART-OF Arg1:T6 Arg2:T5
+R2	USED-FOR Arg1:T19 Arg2:T20
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	COREF Arg1:T1 Arg2:T5
+R5	USED-FOR Arg1:T6 Arg2:T7
+R6	COREF Arg1:T11 Arg2:T7
+R7	USED-FOR Arg1:T10 Arg2:T11
+R8	COREF Arg1:T5 Arg2:T9
+R9	USED-FOR Arg1:T10 Arg2:T9
+R10	COREF Arg1:T13 Arg2:T9
+R11	EVALUATE-FOR Arg1:T14 Arg2:T13
+R12	EVALUATE-FOR Arg1:T15 Arg2:T13
+R13	CONJUNCTION Arg1:T14 Arg2:T15
+R14	USED-FOR Arg1:T16 Arg2:T17
+R15	COREF Arg1:T3 Arg2:T18
+R16	COREF Arg1:T2 Arg2:T20

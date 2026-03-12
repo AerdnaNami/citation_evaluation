@@ -1,0 +1,26 @@
+T1	Task 37 84	automatic acquisition  of  entailment relations
+T2	Generic 114 118	task
+T3	Task 144 167	paraphrases acquisition
+T4	OtherScientificTerm 193 213	semantic equivalence
+T5	Task 255 277	entailment acquisition
+T6	OtherScientificTerm 294 331	asymmetric, or directional, relations
+T7	OtherScientificTerm 390 424	local structure  of  coherent text
+T8	Generic 440 446	method
+T9	Task 463 478	verb entailment
+T10	OtherScientificTerm 502 521	discourse relations
+T11	Material 557 570	parsed corpus
+T12	Generic 619 625	method
+T13	OtherScientificTerm 656 677	verb entailment types
+T14	Task 695 718	mapping  between  verbs
+T15	OtherScientificTerm 725 759	highly varied  argument structures
+R1	USED-FOR Arg1:T5 Arg2:T6
+R2	COMPARE Arg1:T2 Arg2:T3
+R3	USED-FOR Arg1:T8 Arg2:T9
+R4	USED-FOR Arg1:T10 Arg2:T8
+R5	USED-FOR Arg1:T11 Arg2:T10
+R6	COREF Arg1:T12 Arg2:T8
+R7	COREF Arg1:T2 Arg2:T1
+R8	COREF Arg1:T5 Arg2:T2
+R9	USED-FOR Arg1:T3 Arg2:T4
+R10	USED-FOR Arg1:T12 Arg2:T14
+R11	FEATURE-OF Arg1:T15 Arg2:T14

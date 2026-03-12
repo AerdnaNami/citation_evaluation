@@ -1,0 +1,15 @@
+T1	Task 27 56	automatic abstracting systems
+T2	Material 87 105	training resources
+T3	Method 169 186	annotation scheme
+T4	Material 192 211	scientific articles
+T5	Generic 247 255	resource
+T6	Generic 307 313	scheme
+T7	Method 329 364	rhetorical moves  of  argumentation
+T8	Generic 407 413	scheme
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	USED-FOR Arg1:T3 Arg2:T5
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	COREF Arg1:T6 Arg2:T3
+R5	COREF Arg1:T8 Arg2:T6
+R6	COREF Arg1:T5 Arg2:T2
+R7	USED-FOR Arg1:T7 Arg2:T6

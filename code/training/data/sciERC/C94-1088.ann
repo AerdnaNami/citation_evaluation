@@ -1,0 +1,16 @@
+T1	Method 25 68	characters-based Chinese collocation system
+T2	Generic 102 104	it
+T3	Method 125 142	word-based system
+T4	Material 198 218	Chinese text corpora
+T5	Method 224 258	character-based collocation system
+T6	Task 287 322	avoiding  pre-processing distortion
+T7	Task 337 371	accessing  sub-lexical information
+T8	OtherScientificTerm 388 423	word-based collocational properties
+T9	Method 452 495	auxiliary module of  automatic segmentation
+R1	COREF Arg1:T2 Arg2:T1
+R2	COMPARE Arg1:T2 Arg2:T3
+R3	COREF Arg1:T5 Arg2:T2
+R4	FEATURE-OF Arg1:T6 Arg2:T5
+R5	FEATURE-OF Arg1:T7 Arg2:T5
+R6	CONJUNCTION Arg1:T6 Arg2:T7
+R7	USED-FOR Arg1:T9 Arg2:T8

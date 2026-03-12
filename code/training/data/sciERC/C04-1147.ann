@@ -1,0 +1,32 @@
+T1	Generic 14 23	framework
+T2	Task 32 78	fast  computation  of  lexical affinity models
+T3	Generic 85 94	framework
+T4	Generic 118 127	algorithm
+T5	OtherScientificTerm 156 182	co-occurrence distribution
+T6	Method 214 232	independence model
+T7	Method 242 267	parametric affinity model
+T8	Generic 299 305	models
+T9	OtherScientificTerm 355 365	similarity
+T10	OtherScientificTerm 391 407	lexical affinity
+T11	Method 420 437	sequential models
+T12	Generic 467 473	models
+T13	OtherScientificTerm 500 522	co-occurrence patterns
+T14	Generic 597 606	framework
+T15	Generic 694 696	it
+T16	Material 720 735	terabyte corpus
+T17	Task 748 770	natural language tests
+R1	USED-FOR Arg1:T10 Arg2:T11
+R2	COREF Arg1:T3 Arg2:T1
+R3	PART-OF Arg1:T4 Arg2:T3
+R4	PART-OF Arg1:T6 Arg2:T3
+R5	PART-OF Arg1:T7 Arg2:T3
+R6	COMPARE Arg1:T12 Arg2:T8
+R7	USED-FOR Arg1:T12 Arg2:T13
+R8	USED-FOR Arg1:T4 Arg2:T5
+R9	COREF Arg1:T14 Arg2:T3
+R10	COREF Arg1:T15 Arg2:T14
+R11	EVALUATE-FOR Arg1:T16 Arg2:T15
+R12	USED-FOR Arg1:T15 Arg2:T17
+R13	USED-FOR Arg1:T1 Arg2:T2
+R14	CONJUNCTION Arg1:T4 Arg2:T6
+R15	CONJUNCTION Arg1:T6 Arg2:T7

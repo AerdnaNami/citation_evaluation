@@ -1,0 +1,33 @@
+T1	Task 5 47	classifying high-dimensional sequence data
+T2	Method 76 80	HMMs
+T3	Method 82 86	CRFs
+T4	OtherScientificTerm 140 151	overfitting
+T5	Method 167 191	dimensionality reduction
+T6	Method 218 248	low-dimensional representation
+T7	Task 258 272	classification
+T8	Generic 303 319	Existing methods
+T9	Task 324 359	supervised dimensionality reduction
+T10	OtherScientificTerm 417 445	neighborhood graph structure
+T11	OtherScientificTerm 492 510	known distribution
+T12	Method 512 553	Sufficient dimension reduction techniques
+T13	Method 568 598	low dimensional representation
+T14	Method 730 782	sequence kernel dimension reduction approach (S-KDR)
+T15	Generic 788 796	approach
+T16	OtherScientificTerm 869 911	Spatial, temporal and periodic information
+T17	OtherScientificTerm 963 971	manifold
+T18	Generic 991 999	end-task
+T19	Generic 1041 1049	approach
+T20	Task 1081 1134	discrimination of human gesture and motion categories
+T21	Material 1152 1180	database of dynamic textures
+R1	CONJUNCTION Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T2 Arg2:T1
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	USED-FOR Arg1:T5 Arg2:T6
+R5	USED-FOR Arg1:T6 Arg2:T7
+R6	USED-FOR Arg1:T8 Arg2:T9
+R7	USED-FOR Arg1:T12 Arg2:T13
+R8	COREF Arg1:T14 Arg2:T15
+R9	USED-FOR Arg1:T17 Arg2:T18
+R10	EVALUATE-FOR Arg1:T20 Arg2:T19
+R11	EVALUATE-FOR Arg1:T21 Arg2:T19
+R12	COREF Arg1:T15 Arg2:T19

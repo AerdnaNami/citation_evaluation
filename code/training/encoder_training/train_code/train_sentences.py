@@ -455,14 +455,19 @@ def main():
     defaults = cfg.get("defaults", {})
     base_model = cfg.get("base_model", "xlm-roberta-base")
 
-    cat_cfg = next(c for c in cfg["categories"] if c["name"] == args.category)
+    cat_cfg = next(
+        c for c in cfg["categories"]
+        if c["name"] == args.category and c.get("run_name") == args.run_name
+    )
     train_path = cat_cfg["train_path"]
     dev_path = cat_cfg.get("dev_path", cat_cfg.get("eval_path"))
     eval_path = cat_cfg.get("eval_path", cat_cfg.get("dev_path"))
 
     output_root = Path(cfg.get("output_root", "./runs"))
     run_name = cat_cfg.get("run_name", args.category)
+    print(f"RUN NAME: {run_name}")
     output_dir = output_root / run_name
+    print(f"OUTPUT DIRECTORY: {output_dir}")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     train_raw = load_ner_json(train_path)

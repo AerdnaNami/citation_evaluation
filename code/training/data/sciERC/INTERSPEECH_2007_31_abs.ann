@@ -1,0 +1,14 @@
+T1	Method 40 60	HMM-based TTS system
+T2	Material 72 85	German speech
+T3	OtherScientificTerm 180 196	context features
+T4	Generic 215 221	system
+T5	Material 251 273	football announcements
+T6	Material 316 333	expressive speech
+T7	Method 356 360	HMMs
+T8	Material 388 422	intelligible neutral German speech
+T9	Material 529 545	football dataset
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T1 Arg2:T4
+R3	USED-FOR Arg1:T4 Arg2:T5
+R4	USED-FOR Arg1:T4 Arg2:T6
+R5	USED-FOR Arg1:T7 Arg2:T8

@@ -1,0 +1,33 @@
+T1	Task 8 23	auction domains
+T2	Generic 264 270	domain
+T3	Method 281 303	combinatorial auctions
+T4	Generic 327 331	they
+T5	OtherScientificTerm 340 381	violations of individual rationality (IR)
+T6	OtherScientificTerm 354 381	individual rationality (IR)
+T7	Task 460 498	design of core-selecting payment rules
+T8	Generic 508 515	domains
+T9	Generic 556 562	domain
+T10	OtherScientificTerm 588 600	payment rule
+T11	OtherScientificTerm 685 690	rules
+T12	OtherScientificTerm 841 854	IR violations
+T13	OtherScientificTerm 870 890	core-selecting rules
+T14	OtherScientificTerm 911 913	IR
+T15	Generic 962 967	rules
+T16	Method 981 1026	computational Bayes-Nash equilibrium analysis
+T17	Generic 1066 1071	rules
+T18	Metric 1127 1156	rate of ex-post IR violations
+T19	OtherScientificTerm 1171 1191	core-selecting rules
+R1	COREF Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T4
+R3	COREF Arg1:T2 Arg2:T8
+R4	USED-FOR Arg1:T7 Arg2:T8
+R5	COREF Arg1:T8 Arg2:T9
+R6	COREF Arg1:T5 Arg2:T12
+R7	COREF Arg1:T6 Arg2:T14
+R8	USED-FOR Arg1:T13 Arg2:T14
+R9	COREF Arg1:T13 Arg2:T15
+R10	USED-FOR Arg1:T16 Arg2:T15
+R11	COREF Arg1:T15 Arg2:T17
+R12	COMPARE Arg1:T17 Arg2:T19
+R13	EVALUATE-FOR Arg1:T18 Arg2:T17
+R14	EVALUATE-FOR Arg1:T18 Arg2:T19

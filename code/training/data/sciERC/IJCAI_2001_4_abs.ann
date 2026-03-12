@@ -1,0 +1,17 @@
+T1	Generic 6 15	algorithm
+T2	Task 38 75	dimensional container packing problem
+T3	Generic 112 121	algorithm
+T4	Method 152 190	approach of wall building and layering
+T5	Generic 192 194	It
+T6	Generic 288 294	method
+T7	Material 329 339	OR-Library
+T8	Generic 384 393	algorithm
+T9	Metric 416 443	average packing utilization
+R1	EVALUATE-FOR Arg1:T9 Arg2:T8
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	COREF Arg1:T1 Arg2:T3
+R4	COMPARE Arg1:T3 Arg2:T4
+R5	COREF Arg1:T3 Arg2:T5
+R6	COREF Arg1:T5 Arg2:T6
+R7	EVALUATE-FOR Arg1:T7 Arg2:T6
+R8	COREF Arg1:T5 Arg2:T8

@@ -1,0 +1,40 @@
+T1	Method 41 69	Lagrangian Particle Dynamics
+T2	Task 86 126	segmentation of high density crowd flows
+T3	Task 131 162	detection of flow instabilities
+T4	OtherScientificTerm 184 194	flow field
+T5	OtherScientificTerm 210 222	moving crowd
+T6	Method 240 266	aperiodic dynamical system
+T7	OtherScientificTerm 270 287	grid of particles
+T8	OtherScientificTerm 307 317	flow field
+T9	Method 343 371	numerical integration scheme
+T10	OtherScientificTerm 377 399	evolution of particles
+T11	Method 436 444	Flow Map
+T12	OtherScientificTerm 452 469	spatial gradients
+T13	Method 503 534	Cauchy Green Deformation tensor
+T14	OtherScientificTerm 651 669	maximum eigenvalue
+T15	Generic 677 683	tensor
+T16	OtherScientificTerm 707 749	Finite Time Lyapunov Exponent (FTLE) field
+T17	OtherScientificTerm 769 805	Lagrangian Coherent Structures (LCS)
+T18	OtherScientificTerm 842 845	LCS
+T19	OtherScientificTerm 930 961	boundaries of the flow segments
+T20	Method 967 992	normalized cuts framework
+T21	Material 1232 1244	Google Video
+T22	Material 1251 1282	National Geographic documentary
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T1 Arg2:T3
+R3	USED-FOR Arg1:T5 Arg2:T4
+R4	USED-FOR Arg1:T6 Arg2:T4
+R5	COREF Arg1:T4 Arg2:T8
+R6	COREF Arg1:T15 Arg2:T13
+R7	FEATURE-OF Arg1:T14 Arg2:T15
+R8	USED-FOR Arg1:T14 Arg2:T16
+R9	USED-FOR Arg1:T16 Arg2:T17
+R10	COREF Arg1:T18 Arg2:T17
+R11	USED-FOR Arg1:T18 Arg2:T19
+R12	USED-FOR Arg1:T20 Arg2:T19
+R13	CONJUNCTION Arg1:T21 Arg2:T22
+R14	CONJUNCTION Arg1:T2 Arg2:T3
+R15	USED-FOR Arg1:T7 Arg2:T8
+R16	USED-FOR Arg1:T9 Arg2:T7
+R17	USED-FOR Arg1:T11 Arg2:T10
+R18	USED-FOR Arg1:T12 Arg2:T13

@@ -1,0 +1,37 @@
+T1	Material 42 60	measurable signals
+T2	Method 66 86	frequency components
+T3	OtherScientificTerm 102 132	rotational speed of the engine
+T4	OtherScientificTerm 153 163	vibrations
+T5	OtherScientificTerm 165 196	electrical system voltage level
+T6	OtherScientificTerm 202 215	ambient sound
+T7	Generic 223 230	signals
+T8	Task 273 312	speed and related states of the vehicle
+T9	Method 410 430	frequency components
+T10	OtherScientificTerm 439 444	speed
+T11	OtherScientificTerm 459 464	gears
+T12	OtherScientificTerm 551 569	gear scale factors
+T13	Generic 575 588	training data
+T14	OtherScientificTerm 608 626	speed measurements
+T15	Task 675 693	estimation problem
+T16	Task 713 750	maximum likelihood estimation problem
+T17	Method 755 765	heuristics
+T18	Task 803 840	numerical evaluation of the estimator
+T19	Generic 831 840	estimator
+T20	Method 916 933	estimation method
+T21	Material 949 958	real data
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	HYPONYM-OF Arg1:T4 Arg2:T1
+R3	HYPONYM-OF Arg1:T5 Arg2:T1
+R4	HYPONYM-OF Arg1:T6 Arg2:T1
+R5	CONJUNCTION Arg1:T4 Arg2:T5
+R6	CONJUNCTION Arg1:T5 Arg2:T6
+R7	COREF Arg1:T1 Arg2:T7
+R8	USED-FOR Arg1:T7 Arg2:T8
+R9	USED-FOR Arg1:T13 Arg2:T12
+R10	USED-FOR Arg1:T16 Arg2:T15
+R11	USED-FOR Arg1:T17 Arg2:T18
+R12	COREF Arg1:T19 Arg2:T20
+R13	EVALUATE-FOR Arg1:T21 Arg2:T20
+R14	FEATURE-OF Arg1:T10 Arg2:T11
+R15	CONJUNCTION Arg1:T9 Arg2:T10
+R16	FEATURE-OF Arg1:T2 Arg2:T3

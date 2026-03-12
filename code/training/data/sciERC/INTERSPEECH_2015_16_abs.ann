@@ -1,0 +1,47 @@
+T1	Method 10 37	Stacked Auto-Encoders (SAE)
+T2	Task 70 98	learning imbalanced datasets
+T3	Method 155 180	Neural Network classifier
+T4	Method 197 210	SAE structure
+T5	Method 253 294	Automatic Speech Recognition (ASR) system
+T6	Task 296 311	Error detection
+T7	Material 318 341	automatic transcription
+T8	Method 367 377	ASR system
+T9	Metric 403 418	word error rate
+T10	Method 545 563	binary classi-fier
+T11	Method 625 636	classifiers
+T12	Task 641 675	automatically detecting ASR errors
+T13	Generic 691 694	one
+T14	Method 706 739	stacked auto-encoder architecture
+T15	Material 827 851	automatic transcriptions
+T16	Material 858 872	English corpus
+T17	Material 888 897	TED talks
+T18	Method 932 942	classifier
+T19	Metric 965 990	receiving operating curve
+T20	Generic 1001 1008	measure
+T21	Metric 1017 1036	mean absolute error
+T22	Metric 1093 1108	word error rate
+T23	Method 1144 1154	classifier
+T24	Method 1164 1167	SAE
+T25	OtherScientificTerm 1180 1190	ASR errors
+T26	Method 1213 1235	classification methods
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T4 Arg2:T1
+R3	USED-FOR Arg1:T4 Arg2:T3
+R4	USED-FOR Arg1:T3 Arg2:T5
+R5	USED-FOR Arg1:T6 Arg2:T7
+R6	COREF Arg1:T8 Arg2:T5
+R7	USED-FOR Arg1:T11 Arg2:T12
+R8	HYPONYM-OF Arg1:T13 Arg2:T11
+R9	USED-FOR Arg1:T14 Arg2:T13
+R10	COREF Arg1:T14 Arg2:T1
+R11	USED-FOR Arg1:T17 Arg2:T16
+R12	FEATURE-OF Arg1:T16 Arg2:T15
+R13	COREF Arg1:T21 Arg2:T20
+R14	EVALUATE-FOR Arg1:T19 Arg2:T18
+R15	EVALUATE-FOR Arg1:T20 Arg2:T18
+R16	CONJUNCTION Arg1:T19 Arg2:T20
+R17	COREF Arg1:T24 Arg2:T14
+R18	USED-FOR Arg1:T24 Arg2:T23
+R19	USED-FOR Arg1:T23 Arg2:T25
+R20	COMPARE Arg1:T23 Arg2:T26
+R21	USED-FOR Arg1:T26 Arg2:T25

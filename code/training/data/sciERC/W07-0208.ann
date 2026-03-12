@@ -1,0 +1,27 @@
+T1	Method 38 60	labeled directed graph
+T2	OtherScientificTerm 93 114	linguistic structures
+T3	Generic 136 140	this
+T4	Task 161 170	NLP tasks
+T5	Task 176 197	graph transformations
+T6	Method 221 227	method
+T7	Generic 247 262	transformations
+T8	Material 273 289	annotated corpus
+T9	Generic 325 337	applications
+T10	Generic 345 351	method
+T11	Task 354 393	identification of non-local depenencies
+T12	Material 403 421	Penn Treebank data
+T13	Task 429 451	semantic role labeling
+T14	Material 461 482	Proposition Bank data
+R1	USED-FOR Arg1:T12 Arg2:T11
+R2	USED-FOR Arg1:T14 Arg2:T13
+R3	USED-FOR Arg1:T1 Arg2:T2
+R4	USED-FOR Arg1:T1 Arg2:T4
+R5	COREF Arg1:T3 Arg2:T1
+R6	USED-FOR Arg1:T3 Arg2:T4
+R7	USED-FOR Arg1:T6 Arg2:T7
+R8	COREF Arg1:T7 Arg2:T5
+R9	USED-FOR Arg1:T8 Arg2:T6
+R10	COREF Arg1:T10 Arg2:T6
+R11	HYPONYM-OF Arg1:T11 Arg2:T9
+R12	HYPONYM-OF Arg1:T13 Arg2:T9
+R13	USED-FOR Arg1:T10 Arg2:T9

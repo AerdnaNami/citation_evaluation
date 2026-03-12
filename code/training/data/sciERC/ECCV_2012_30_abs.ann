@@ -1,0 +1,28 @@
+T1	Task 36 86	reconstructing the motion of a 3D articulated tree
+T2	OtherScientificTerm 92 116	2D point correspondences
+T3	OtherScientificTerm 133 147	temporal prior
+T4	OtherScientificTerm 159 172	smooth motion
+T5	OtherScientificTerm 201 217	trajectory basis
+T6	Task 230 256	hard combinatorial problem
+T7	Metric 262 277	time complexity
+T8	Method 325 352	Branch and bound strategies
+T9	Generic 392 402	complexity
+T10	OtherScientificTerm 422 439	global optimality
+T11	Generic 450 454	they
+T12	Method 505 522	exhaustive search
+T13	Method 594 619	compact high-pass filters
+T14	Method 634 662	dynamic programming approach
+T15	OtherScientificTerm 755 774	filter interactions
+T16	Method 789 806	affine projection
+T17	Task 815 829	reconstruction
+T18	Method 838 856	estimating cameras
+R1	USED-FOR Arg1:T5 Arg2:T4
+R2	USED-FOR Arg1:T8 Arg2:T9
+R3	COREF Arg1:T9 Arg2:T7
+R4	COREF Arg1:T8 Arg2:T11
+R5	COMPARE Arg1:T11 Arg2:T12
+R6	USED-FOR Arg1:T16 Arg2:T17
+R7	FEATURE-OF Arg1:T10 Arg2:T8
+R8	EVALUATE-FOR Arg1:T7 Arg2:T6
+R9	USED-FOR Arg1:T2 Arg2:T1
+R10	COREF Arg1:T1 Arg2:T17

@@ -1,0 +1,42 @@
+T1	Method 122 150	Chinese-to-English SMT model
+T2	Task 165 190	word sense disambiguation
+T3	Method 222 248	WSD evaluation methodology
+T4	Material 275 313	Senseval-3 Chinese lexical sample task
+T5	Method 370 419	dedicated  word sense disambiguation (WSD) models
+T6	Material 447 476	Senseval  series of workshops
+T7	Metric 528 539	BLEU scores
+T8	Task 545 582	statistical machine translation (SMT)
+T9	Method 599 609	SMT models
+T10	Task 645 656	translation
+T11	Metric 733 747	WSD   accuracy
+T12	Method 753 763	SMT models
+T13	Generic 808 812	that
+T14	Method 820 841	dedicated  WSD models
+T15	Metric 892 906	WSD   accuracy
+T16	Method 928 938	SMT models
+T17	Generic 971 975	that
+T18	Method 987 1008	dedicated  WSD models
+T19	Method 1118 1128	SMT models
+T20	Method 1169 1190	dedicated  WSD models
+T21	Method 1204 1207	SMT
+T22	Method 1265 1275	WSD models
+R1	EVALUATE-FOR Arg1:T2 Arg2:T1
+R2	EVALUATE-FOR Arg1:T7 Arg2:T8
+R3	USED-FOR Arg1:T9 Arg2:T10
+R4	COREF Arg1:T21 Arg2:T19
+R5	COREF Arg1:T19 Arg2:T16
+R6	COREF Arg1:T16 Arg2:T12
+R7	EVALUATE-FOR Arg1:T4 Arg2:T1
+R8	EVALUATE-FOR Arg1:T3 Arg2:T1
+R9	EVALUATE-FOR Arg1:T11 Arg2:T12
+R10	COREF Arg1:T12 Arg2:T9
+R11	EVALUATE-FOR Arg1:T15 Arg2:T16
+R12	COREF Arg1:T14 Arg2:T18
+R13	COREF Arg1:T20 Arg2:T18
+R14	COMPARE Arg1:T19 Arg2:T20
+R15	USED-FOR Arg1:T22 Arg2:T21
+R16	EVALUATE-FOR Arg1:T6 Arg2:T5
+R17	COREF Arg1:T14 Arg2:T5
+R18	COREF Arg1:T22 Arg2:T20
+R19	COMPARE Arg1:T17 Arg2:T15
+R20	COMPARE Arg1:T13 Arg2:T11

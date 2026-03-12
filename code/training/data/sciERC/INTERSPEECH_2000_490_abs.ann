@@ -1,0 +1,14 @@
+T1	Method 11 24	N-gram models
+T2	Task 72 101	statistical language modeling
+T3	Method 162 177	language models
+T4	Method 191 217	artificial neural networks
+T5	Method 231 245	language model
+T6	Method 284 298	neural network
+T7	Method 311 325	language model
+T8	Method 373 392	statistical methods
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T5 Arg2:T3
+R3	USED-FOR Arg1:T4 Arg2:T5
+R4	COREF Arg1:T6 Arg2:T4
+R5	USED-FOR Arg1:T6 Arg2:T7
+R6	COMPARE Arg1:T6 Arg2:T8

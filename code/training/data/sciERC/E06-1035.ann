@@ -1,0 +1,48 @@
+T1	Task 60 90	predicting  segment boundaries
+T2	Material 96 122	spoken multiparty dialogue
+T3	Generic 175 185	approaches
+T4	Task 215 248	predicting top-level topic shifts
+T5	Task 269 300	identifying subtopic boundaries
+T6	OtherScientificTerm 358 368	ASR output
+T7	OtherScientificTerm 385 404	human transcription
+T8	OtherScientificTerm 438 446	features
+T9	Task 460 515	predicting top-level and predicting subtopic boundaries
+T10	Generic 534 539	tasks
+T11	Task 549 580	predicting  subtopic boundaries
+T12	Method 589 620	lexical cohesion-based approach
+T13	Task 670 701	predicting top-level boundaries
+T14	Method 710 735	machine learning approach
+T15	OtherScientificTerm 752 796	lexical-cohesion and conversational features
+T16	OtherScientificTerm 822 841	conversational cues
+T17	OtherScientificTerm 854 865	cue phrases
+T18	OtherScientificTerm 872 890	overlapping speech
+T19	Generic 905 915	indicators
+T20	Generic 924 949	top-level prediction task
+T21	OtherScientificTerm 974 994	transcription errors
+T22	OtherScientificTerm 1011 1021	ASR output
+T23	Generic 1049 1055	models
+T24	OtherScientificTerm 1070 1114	lexical-cohesion and conversational features
+T25	Generic 1183 1188	tasks
+R1	COMPARE Arg1:T6 Arg2:T7
+R2	USED-FOR Arg1:T14 Arg2:T13
+R3	FEATURE-OF Arg1:T21 Arg2:T22
+R4	FEATURE-OF Arg1:T4 Arg2:T5
+R5	USED-FOR Arg1:T3 Arg2:T5
+R6	HYPONYM-OF Arg1:T5 Arg2:T9
+R7	PART-OF Arg1:T13 Arg2:T9
+R8	CONJUNCTION Arg1:T15 Arg2:T14
+R9	HYPONYM-OF Arg1:T17 Arg2:T16
+R10	HYPONYM-OF Arg1:T18 Arg2:T16
+R11	CONJUNCTION Arg1:T18 Arg2:T17
+R12	COREF Arg1:T19 Arg2:T16
+R13	USED-FOR Arg1:T19 Arg2:T20
+R14	COREF Arg1:T20 Arg2:T13
+R15	CONJUNCTION Arg1:T23 Arg2:T24
+R16	COREF Arg1:T10 Arg2:T9
+R17	COREF Arg1:T25 Arg2:T10
+R18	COREF Arg1:T23 Arg2:T14
+R19	USED-FOR Arg1:T3 Arg2:T4
+R20	PART-OF Arg1:T11 Arg2:T9
+R21	COREF Arg1:T11 Arg2:T5
+R22	USED-FOR Arg1:T12 Arg2:T11
+R23	USED-FOR Arg1:T2 Arg2:T1

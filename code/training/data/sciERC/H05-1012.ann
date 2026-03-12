@@ -1,0 +1,21 @@
+T1	Method 24 64	maximum entropy word alignment algorithm
+T2	Material 71 85	Arabic-English
+T3	Material 97 121	supervised training data
+T4	Material 171 188	training material
+T5	Task 207 226	machine translation
+T6	Method 251 286	supervised and unsupervised methods
+T7	Method 325 344	probabilistic model
+T8	Task 359 368	alignment
+T9	Task 391 405	link decisions
+T10	Method 451 476	word alignment techniques
+T11	OtherScientificTerm 522 547	machine translation tests
+T12	Generic 570 579	algorithm
+T13	OtherScientificTerm 600 616	human annotation
+R1	USED-FOR Arg1:T3 Arg2:T1
+R2	USED-FOR Arg1:T7 Arg2:T8
+R3	USED-FOR Arg1:T2 Arg2:T1
+R4	USED-FOR Arg1:T4 Arg2:T5
+R5	USED-FOR Arg1:T7 Arg2:T9
+R6	USED-FOR Arg1:T10 Arg2:T11
+R7	COREF Arg1:T12 Arg2:T1
+R8	COMPARE Arg1:T12 Arg2:T13

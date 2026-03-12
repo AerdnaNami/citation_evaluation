@@ -1,0 +1,20 @@
+T1	Method 36 53	Cooperative Model
+T2	Task 60 90	natural language understanding
+T3	Task 98 113	dialogue system
+T4	Generic 126 130	this
+T5	Method 146 170	Finite State Model (FSM)
+T6	Method 177 209	Statistical Learning Model (SLM)
+T7	Method 214 217	FSM
+T8	Task 248 270	language understanding
+T9	Method 337 357	Statistical approach
+T10	Method 399 416	Cooperative Model
+R1	COREF Arg1:T4 Arg2:T1
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T6 Arg2:T4
+R4	CONJUNCTION Arg1:T5 Arg2:T6
+R5	COREF Arg1:T7 Arg2:T5
+R6	USED-FOR Arg1:T7 Arg2:T8
+R7	COREF Arg1:T9 Arg2:T6
+R8	COREF Arg1:T10 Arg2:T1
+R9	USED-FOR Arg1:T2 Arg2:T3
+R10	USED-FOR Arg1:T1 Arg2:T2

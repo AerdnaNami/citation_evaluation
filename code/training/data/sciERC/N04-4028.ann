@@ -1,0 +1,38 @@
+T1	Method 2 35	Information extraction techniques
+T2	Material 59 79	structured databases
+T3	Material 87 112	unstructured data sources
+T4	Material 127 130	Web
+T5	Material 135 153	newswire documents
+T6	Generic 187 194	systems
+T7	Metric 197 205	accuracy
+T8	Generic 318 324	system
+T9	Method 380 409	information extraction system
+T10	Method 438 481	linear-chain conditional random field (CRF)
+T11	Method 487 506	probabilistic model
+T12	Task 537 565	information extraction tasks
+T13	OtherScientificTerm 601 633	arbitrary, overlapping  features
+T14	Generic 643 648	input
+T15	Method 656 668	Markov model
+T16	Generic 692 702	techniques
+T17	Generic 741 757	extracted fields
+T18	Material 771 790	multi-field records
+T19	Metric 807 824	average precision
+T20	Material 877 896	multi-field records
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T10 Arg2:T9
+R3	USED-FOR Arg1:T11 Arg2:T12
+R4	USED-FOR Arg1:T3 Arg2:T1
+R5	HYPONYM-OF Arg1:T4 Arg2:T3
+R6	HYPONYM-OF Arg1:T5 Arg2:T3
+R7	CONJUNCTION Arg1:T4 Arg2:T5
+R8	COREF Arg1:T8 Arg2:T1
+R9	COREF Arg1:T6 Arg2:T1
+R10	HYPONYM-OF Arg1:T10 Arg2:T11
+R11	EVALUATE-FOR Arg1:T19 Arg2:T16
+R12	CONJUNCTION Arg1:T17 Arg2:T18
+R13	COREF Arg1:T20 Arg2:T18
+R14	EVALUATE-FOR Arg1:T7 Arg2:T6
+R15	COREF Arg1:T9 Arg2:T8
+R16	FEATURE-OF Arg1:T13 Arg2:T14
+R17	PART-OF Arg1:T13 Arg2:T15
+R18	USED-FOR Arg1:T11 Arg2:T13

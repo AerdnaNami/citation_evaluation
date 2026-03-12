@@ -1,0 +1,51 @@
+T1	Method 25 55	unsupervised learning approach
+T2	Task 72 100	non-English (Arabic) stemmer
+T3	Method 109 123	stemming model
+T4	Method 138 169	statistical machine translation
+T5	Generic 175 177	it
+T6	Method 187 202	English stemmer
+T7	Material 233 248	parallel corpus
+T8	Material 289 302	parallel text
+T9	Material 344 373	Monolingual, unannotated text
+T10	Method 411 418	stemmer
+T11	Generic 432 434	it
+T12	Material 519 525	Arabic
+T13	Generic 537 545	approach
+T14	OtherScientificTerm 590 603	affix removal
+T15	Method 612 636	resource-frugal approach
+T16	Metric 656 665	agreement
+T17	Method 705 719	Arabic stemmer
+T18	OtherScientificTerm 734 739	rules
+T19	Material 744 755	affix lists
+T20	Material 764 784	human annotated text
+T21	Method 807 829	unsupervised component
+T22	Method 834 855	Task-based evaluation
+T23	Task 864 892	Arabic information retrieval
+T24	Metric 933 950	average precision
+T25	Material 958 972	unstemmed text
+T26	Method 1023 1030	stemmer
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T4 Arg2:T3
+R3	COREF Arg1:T3 Arg2:T5
+R4	USED-FOR Arg1:T6 Arg2:T5
+R5	USED-FOR Arg1:T7 Arg2:T5
+R6	USED-FOR Arg1:T9 Arg2:T10
+R7	COREF Arg1:T10 Arg2:T11
+R8	COREF Arg1:T2 Arg2:T3
+R9	COREF Arg1:T5 Arg2:T10
+R10	COREF Arg1:T1 Arg2:T13
+R11	USED-FOR Arg1:T18 Arg2:T17
+R12	USED-FOR Arg1:T19 Arg2:T17
+R13	USED-FOR Arg1:T20 Arg2:T17
+R14	CONJUNCTION Arg1:T18 Arg2:T19
+R15	CONJUNCTION Arg1:T19 Arg2:T20
+R16	USED-FOR Arg1:T21 Arg2:T17
+R17	CONJUNCTION Arg1:T20 Arg2:T21
+R18	COMPARE Arg1:T15 Arg2:T17
+R19	EVALUATE-FOR Arg1:T16 Arg2:T17
+R20	EVALUATE-FOR Arg1:T16 Arg2:T15
+R21	COREF Arg1:T13 Arg2:T15
+R22	COREF Arg1:T17 Arg2:T26
+R23	USED-FOR Arg1:T23 Arg2:T22
+R24	EVALUATE-FOR Arg1:T24 Arg2:T22
+R25	EVALUATE-FOR Arg1:T24 Arg2:T25

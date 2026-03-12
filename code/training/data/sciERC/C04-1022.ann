@@ -1,0 +1,26 @@
+T1	Method 2 31	Statistical language modeling
+T2	Generic 55 59	task
+T3	Material 80 110	morphologically rich languages
+T4	Generic 127 137	approaches
+T5	Method 148 172	factored language models
+T6	Generic 226 232	models
+T7	OtherScientificTerm 283 305	conditioning variables
+T8	OtherScientificTerm 350 385	morphological or syntactic features
+T9	OtherScientificTerm 433 449	model parameters
+T10	Method 547 593	entirely data-driven model selection procedure
+T11	Method 605 619	genetic search
+T12	Method 657 704	knowledge-based and random selection procedures
+T13	Task 724 747	language modeling tasks
+T14	Material 751 757	Arabic
+T15	Material 764 771	Turkish
+R1	USED-FOR Arg1:T11 Arg2:T10
+R2	USED-FOR Arg1:T12 Arg2:T13
+R3	COREF Arg1:T6 Arg2:T4
+R4	USED-FOR Arg1:T5 Arg2:T4
+R5	COMPARE Arg1:T10 Arg2:T12
+R6	HYPONYM-OF Arg1:T8 Arg2:T7
+R7	HYPONYM-OF Arg1:T14 Arg2:T13
+R8	HYPONYM-OF Arg1:T15 Arg2:T13
+R9	CONJUNCTION Arg1:T14 Arg2:T15
+R10	COREF Arg1:T2 Arg2:T1
+R11	USED-FOR Arg1:T2 Arg2:T3

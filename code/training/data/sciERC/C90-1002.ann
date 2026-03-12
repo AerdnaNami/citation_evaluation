@@ -1,0 +1,41 @@
+T1	Method 4 24	deterministic parser
+T2	Method 94 115	deterministic parsers
+T3	Generic 125 127	it
+T4	Method 143 180	symbolic and connectionist components
+T5	Method 187 210	connectionist component
+T6	OtherScientificTerm 235 243	patterns
+T7	Method 263 297	rules  of a  deterministic grammar
+T8	Method 341 360	hybrid architecture
+T9	Method 377 383	parser
+T10	Method 417 437	deterministic parser
+T11	Method 480 499	training techniques
+T12	Task 531 546	decision-making
+T13	Method 556 579	connectionist component
+T14	Method 589 604	parsing process
+T15	Generic 612 620	approach
+T16	OtherScientificTerm 664 669	rules
+T17	Method 681 702	deterministic parsers
+T18	Task 779 786	parsing
+T19	Method 887 917	connectionist (neural) network
+T20	OtherScientificTerm 933 949	linguistic rules
+T21	Material 967 999	expected (grammatical) sentences
+T22	Material 1023 1071	(ungrammatical or lexically ambiguous) sentences
+R1	USED-FOR Arg1:T11 Arg2:T12
+R2	PART-OF Arg1:T13 Arg2:T14
+R3	USED-FOR Arg1:T19 Arg2:T21
+R4	COREF Arg1:T3 Arg2:T1
+R5	PART-OF Arg1:T4 Arg2:T3
+R6	HYPONYM-OF Arg1:T5 Arg2:T4
+R7	COREF Arg1:T8 Arg2:T4
+R8	COMPARE Arg1:T9 Arg2:T10
+R9	COREF Arg1:T9 Arg2:T1
+R10	USED-FOR Arg1:T13 Arg2:T12
+R11	COREF Arg1:T15 Arg2:T11
+R12	COREF Arg1:T17 Arg2:T10
+R13	USED-FOR Arg1:T20 Arg2:T19
+R14	COMPARE Arg1:T1 Arg2:T2
+R15	USED-FOR Arg1:T8 Arg2:T9
+R16	USED-FOR Arg1:T19 Arg2:T22
+R17	CONJUNCTION Arg1:T21 Arg2:T22
+R18	USED-FOR Arg1:T6 Arg2:T5
+R19	USED-FOR Arg1:T7 Arg2:T6

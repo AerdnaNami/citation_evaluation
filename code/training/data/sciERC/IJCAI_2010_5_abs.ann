@@ -1,0 +1,26 @@
+T1	Task 19 40	linear classification
+T2	Generic 61 73	applications
+T3	Task 82 105	document classification
+T4	Method 178 194	training methods
+T5	OtherScientificTerm 251 266	computer memory
+T6	Generic 274 281	methods
+T7	Generic 310 314	data
+T8	OtherScientificTerm 331 346	memory capacity
+T9	OtherScientificTerm 358 371	random access
+T10	OtherScientificTerm 379 383	disk
+T11	Method 410 438	block minimization framework
+T12	Generic 443 447	data
+T13	OtherScientificTerm 464 475	memory size
+T14	OtherScientificTerm 525 529	disk
+T15	Method 553 569	learning methods
+T16	Generic 622 631	framework
+T17	Method 636 656	primal and dual SVMs
+T18	Generic 893 899	method
+R1	HYPONYM-OF Arg1:T3 Arg2:T2
+R2	COREF Arg1:T6 Arg2:T4
+R3	USED-FOR Arg1:T11 Arg2:T12
+R4	COREF Arg1:T11 Arg2:T16
+R5	USED-FOR Arg1:T16 Arg2:T17
+R6	COREF Arg1:T18 Arg2:T16
+R7	COMPARE Arg1:T7 Arg2:T8
+R8	COMPARE Arg1:T12 Arg2:T13

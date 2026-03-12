@@ -1,0 +1,35 @@
+T1	Method 30 92	corpus-based supervised word sense disambiguation (WSD) system
+T2	Material 99 104	Dutch
+T3	Method 122 148	statistical classification
+T4	Method 152 167	maximum entropy
+T5	OtherScientificTerm 176 198	linguistic information
+T6	Method 233 244	classifiers
+T7	OtherScientificTerm 251 269	ambiguous wordform
+T8	Method 288 308	lemma-based approach
+T9	Generic 339 345	method
+T10	Generic 354 356	it
+T11	OtherScientificTerm 371 386	inflected forms
+T12	OtherScientificTerm 395 409	ambiguous word
+T13	Method 419 429	classifier
+T14	Generic 495 504	algorithm
+T15	Method 520 537	lemma-based model
+T16	Material 547 573	Dutch Senseval-2 test data
+T17	Method 634 648	wordform model
+T18	Method 662 688	WSD system based on lemmas
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COMPARE Arg1:T6 Arg2:T8
+R3	FEATURE-OF Arg1:T11 Arg2:T12
+R4	EVALUATE-FOR Arg1:T16 Arg2:T15
+R5	COREF Arg1:T4 Arg2:T3
+R6	CONJUNCTION Arg1:T5 Arg2:T4
+R7	PART-OF Arg1:T3 Arg2:T1
+R8	PART-OF Arg1:T5 Arg2:T1
+R9	PART-OF Arg1:T4 Arg2:T1
+R10	USED-FOR Arg1:T7 Arg2:T6
+R11	COREF Arg1:T9 Arg2:T8
+R12	COREF Arg1:T14 Arg2:T9
+R13	COMPARE Arg1:T15 Arg2:T17
+R14	COREF Arg1:T18 Arg2:T15
+R15	COREF Arg1:T15 Arg2:T14
+R16	COREF Arg1:T8 Arg2:T1
+R17	COREF Arg1:T10 Arg2:T9

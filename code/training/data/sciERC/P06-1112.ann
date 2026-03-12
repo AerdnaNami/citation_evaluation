@@ -1,0 +1,21 @@
+T1	OtherScientificTerm 27 68	correlation of  dependency relation paths
+T2	Task 100 117	answer extraction
+T3	Metric 131 150	correlation measure
+T4	OtherScientificTerm 165 185	dependency relations
+T5	Method 349 385	approximate phrase mapping algorithm
+T6	OtherScientificTerm 408 421	mapping score
+T7	Metric 433 452	correlation measure
+T8	Generic 459 471	correlations
+T9	Method 505 540	Maximum Entropy-based ranking model
+T10	Generic 623 629	method
+T11	Method 674 706	syntactic relation-based methods
+T12	Metric 725 728	MRR
+R1	PART-OF Arg1:T6 Arg2:T7
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	COREF Arg1:T1 Arg2:T8
+R5	PART-OF Arg1:T8 Arg2:T9
+R6	COMPARE Arg1:T10 Arg2:T11
+R7	EVALUATE-FOR Arg1:T12 Arg2:T11
+R8	EVALUATE-FOR Arg1:T12 Arg2:T10
+R9	COREF Arg1:T5 Arg2:T10

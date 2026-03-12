@@ -16,23 +16,19 @@
 
   "categories": [
     {
-      "name": "lacks_synthesis",
+      "name": "unsupported_claim",
+      "train_script": "encoder_training/train_code/train_short_unsupp_claim.py",
+      "train_path": "data/unsupported_claim/sciERC_train.json",
+      "eval_path": "data/unsupported_claim/sciERC_eval.json",
+      "run_name": "4_unsupported_short_scibert"
+    },
+    {
+      "name": "",
       "train_script": "encoder_training/train_code/train_paragraph.py",
       "train_path": "data/lacks_synthesis/lacks_synthesis_ner_train.json",
       "eval_path": "data/lacks_synthesis/lacks_synthesis_ner_eval.json",
       "run_name": "4_lacksynth_scibert",
       "coverage_threshold": 0.5
-    },
-    {
-      "name": "unsupported_claim",
-      "train_script": "encoder_training/train_code/train_sentences.py",
-      "train_path": "data/unsupported_claim/unsupported_claim_ner_train_short_1_5w.json",
-      "eval_path": "data/unsupported_claim/unsupported_claim_ner_eval_short_1_5w.json",
-      "run_name": "4_unsupported_short_scibert",
-      "o_weight": 1.0,
-      "b_weight": 1.5,
-      "i_weight": 3.0,
-      "min_pred_span_len": 1
     },
     {
       "name": "unsupported_claim",

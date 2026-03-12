@@ -1,0 +1,26 @@
+T1	Method 13 44	unified variational formulation
+T2	Task 49 89	joint motion estimation and segmentation
+T3	Method 95 122	explicit occlusion handling
+T4	Method 142 186	multi-label representation of the flow field
+T5	Task 222 261	parametric representation of the motion
+T6	Method 272 290	convex formulation
+T7	Method 298 321	multi-label Potts model
+T8	Metric 357 392	asymmetric map-uniqueness criterion
+T9	Generic 420 431	formulation
+T10	OtherScientificTerm 444 462	convex constraints
+T11	Method 464 491	Explicit occlusion handling
+T12	OtherScientificTerm 535 549	regularization
+T13	OtherScientificTerm 554 564	occlusions
+T14	OtherScientificTerm 583 600	object boundaries
+T15	Method 661 682	primal-dual algorithm
+T16	OtherScientificTerm 721 736	motion segments
+T17	Task 767 796	classical motion segmentation
+T18	Task 801 813	optical flow
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T1
+R3	COREF Arg1:T6 Arg2:T9
+R4	PART-OF Arg1:T8 Arg2:T9
+R5	USED-FOR Arg1:T6 Arg2:T7
+R6	USED-FOR Arg1:T10 Arg2:T9
+R7	COREF Arg1:T3 Arg2:T11
+R8	USED-FOR Arg1:T15 Arg2:T16

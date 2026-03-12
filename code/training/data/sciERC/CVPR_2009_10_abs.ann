@@ -1,0 +1,55 @@
+T1	Method 19 42	probabilistic framework
+T2	Task 56 93	visual models of 3D object categories
+T3	OtherScientificTerm 107 129	appearance information
+T4	OtherScientificTerm 134 155	geometric constraints
+T5	OtherScientificTerm 239 267	3D viewpoint transformations
+T6	OtherScientificTerm 298 320	salient image features
+T7	Method 324 344	generative framework
+T8	Generic 368 373	model
+T9	OtherScientificTerm 438 460	discretized viewpoints
+T10	Method 495 523	mixture of viewpoints models
+T11	Generic 530 535	model
+T12	OtherScientificTerm 599 609	viewpoints
+T13	Material 643 648	image
+T14	Task 650 659	detection
+T15	Task 664 678	classification
+T16	OtherScientificTerm 711 719	position
+T17	OtherScientificTerm 724 733	viewpoint
+T18	Metric 761 779	recognition scores
+T19	Generic 810 818	approach
+T20	Method 851 886	generative proba-bilistic framework
+T21	Task 891 915	3D object categorization
+T22	Generic 929 938	algorithm
+T23	Task 946 960	detection task
+T24	Task 969 998	viewpoint classification task
+T25	Material 1064 1088	PASCAL VOC 2006 datasets
+T26	Task 1128 1172	detection and viewpoint classification tasks
+T27	Generic 1198 1206	datasets
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T1
+R3	USED-FOR Arg1:T4 Arg2:T1
+R4	USED-FOR Arg1:T7 Arg2:T8
+R5	USED-FOR Arg1:T16 Arg2:T15
+R6	USED-FOR Arg1:T17 Arg2:T15
+R7	USED-FOR Arg1:T16 Arg2:T14
+R8	USED-FOR Arg1:T17 Arg2:T14
+R9	USED-FOR Arg1:T20 Arg2:T21
+R10	COREF Arg1:T19 Arg2:T11
+R11	COREF Arg1:T22 Arg2:T19
+R12	EVALUATE-FOR Arg1:T25 Arg2:T22
+R13	HYPONYM-OF Arg1:T25 Arg2:T27
+R14	COMPARE Arg1:T11 Arg2:T10
+R15	USED-FOR Arg1:T13 Arg2:T14
+R16	USED-FOR Arg1:T13 Arg2:T15
+R17	CONJUNCTION Arg1:T14 Arg2:T15
+R18	CONJUNCTION Arg1:T16 Arg2:T17
+R19	COREF Arg1:T20 Arg2:T19
+R20	USED-FOR Arg1:T22 Arg2:T23
+R21	USED-FOR Arg1:T22 Arg2:T24
+R22	CONJUNCTION Arg1:T23 Arg2:T24
+R23	EVALUATE-FOR Arg1:T27 Arg2:T26
+R24	HYPONYM-OF Arg1:T23 Arg2:T26
+R25	HYPONYM-OF Arg1:T24 Arg2:T26
+R26	COREF Arg1:T11 Arg2:T8
+R27	COREF Arg1:T8 Arg2:T1
+R28	CONJUNCTION Arg1:T3 Arg2:T4

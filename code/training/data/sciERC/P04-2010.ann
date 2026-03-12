@@ -1,0 +1,32 @@
+T1	Method 30 56	ensemble learning approach
+T2	OtherScientificTerm 72 87	German pronouns
+T3	Method 91 99	Boosting
+T4	Method 184 195	classifiers
+T5	Generic 255 263	approach
+T6	Method 289 313	decision-tree classifier
+T7	Method 343 360	standalone system
+T8	OtherScientificTerm 377 385	pronouns
+T9	Material 391 407	unannotated text
+T10	Method 449 470	preprocessing modules
+T11	Task 489 514	manual annotation process
+T12	Generic 530 536	system
+T13	Material 569 583	textual domain
+T14	Generic 621 623	it
+T15	Task 639 669	open-domain question answering
+T16	Task 676 694	text summarisation
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T7 Arg2:T9
+R3	COMPARE Arg1:T13 Arg2:T15
+R4	COREF Arg1:T3 Arg2:T5
+R5	COMPARE Arg1:T5 Arg2:T6
+R6	USED-FOR Arg1:T7 Arg2:T8
+R7	PART-OF Arg1:T8 Arg2:T9
+R8	USED-FOR Arg1:T10 Arg2:T11
+R9	USED-FOR Arg1:T10 Arg2:T7
+R10	COREF Arg1:T7 Arg2:T12
+R11	EVALUATE-FOR Arg1:T13 Arg2:T12
+R12	COREF Arg1:T12 Arg2:T14
+R13	USED-FOR Arg1:T14 Arg2:T15
+R14	USED-FOR Arg1:T14 Arg2:T16
+R15	CONJUNCTION Arg1:T15 Arg2:T16
+R16	COREF Arg1:T1 Arg2:T7

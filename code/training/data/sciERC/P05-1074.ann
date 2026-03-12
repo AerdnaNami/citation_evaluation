@@ -1,0 +1,29 @@
+T1	Material 25 53	monolingual parallel corpora
+T2	OtherScientificTerm 80 91	paraphrases
+T3	Generic 113 117	task
+T4	Material 137 163	bilingual parallel corpora
+T5	Method 218 238	alignment techniques
+T6	Task 246 290	phrase-based statistical machine translation
+T7	OtherScientificTerm 307 318	paraphrases
+T8	OtherScientificTerm 418 440	paraphrase probability
+T9	OtherScientificTerm 455 466	paraphrases
+T10	Material 486 511	bilingual parallel corpus
+T11	OtherScientificTerm 533 558	translation probabilities
+T12	Generic 575 577	it
+T13	OtherScientificTerm 602 624	contextual information
+T14	Method 657 698	paraphrase extraction and ranking methods
+T15	Material 716 738	manual word alignments
+T16	Metric 760 767	quality
+T17	OtherScientificTerm 775 786	paraphrases
+T18	OtherScientificTerm 804 824	automatic alignments
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	PART-OF Arg1:T9 Arg2:T10
+R3	PART-OF Arg1:T17 Arg2:T18
+R4	COREF Arg1:T4 Arg2:T1
+R5	USED-FOR Arg1:T4 Arg2:T3
+R6	USED-FOR Arg1:T5 Arg2:T6
+R7	USED-FOR Arg1:T11 Arg2:T9
+R8	COREF Arg1:T8 Arg2:T12
+R9	USED-FOR Arg1:T13 Arg2:T12
+R10	EVALUATE-FOR Arg1:T15 Arg2:T14
+R11	EVALUATE-FOR Arg1:T16 Arg2:T17

@@ -1,0 +1,46 @@
+T1	Method 23 29	method
+T2	OtherScientificTerm 43 69	intrinsic object structure
+T3	Task 74 96	robust visual tracking
+T4	OtherScientificTerm 143 169	parameterized object state
+T5	OtherScientificTerm 180 204	low dimensional manifold
+T6	Method 293 350	dimensionality reduction and density estimation algorithm
+T7	Task 355 411	unsupervised learning of object intrinsic representation
+T8	Method 380 411	object intrinsic representation
+T9	OtherScientificTerm 426 456	non-rigid part of object state
+T10	Method 500 515	dynamical model
+T11	Method 553 577	intrinsic representation
+T12	OtherScientificTerm 599 625	intrinsic object structure
+T13	Method 647 676	particle-filter style tracker
+T14	Method 701 732	intrinsic object representation
+T15	Method 802 817	dynamical model
+T16	Method 824 853	particle-filter style tracker
+T17	Generic 914 921	tracker
+T18	Generic 957 965	trackers
+T19	Task 973 1010	tracking of complex non-rigid motions
+T20	OtherScientificTerm 985 1010	complex non-rigid motions
+T21	OtherScientificTerm 1019 1032	fish twisting
+T22	OtherScientificTerm 1038 1052	self-occlusion
+T23	OtherScientificTerm 1063 1085	inter-frame lip motion
+T24	Generic 1100 1106	method
+T25	Task 1153 1170	tracking problems
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	FEATURE-OF Arg1:T5 Arg2:T4
+R4	USED-FOR Arg1:T6 Arg2:T7
+R5	COREF Arg1:T11 Arg2:T8
+R6	USED-FOR Arg1:T11 Arg2:T10
+R7	PART-OF Arg1:T12 Arg2:T13
+R8	COREF Arg1:T14 Arg2:T11
+R9	USED-FOR Arg1:T15 Arg2:T16
+R10	COREF Arg1:T17 Arg2:T16
+R11	COMPARE Arg1:T17 Arg2:T18
+R12	USED-FOR Arg1:T17 Arg2:T19
+R13	USED-FOR Arg1:T18 Arg2:T19
+R14	HYPONYM-OF Arg1:T21 Arg2:T20
+R15	CONJUNCTION Arg1:T22 Arg2:T23
+R16	FEATURE-OF Arg1:T22 Arg2:T21
+R17	FEATURE-OF Arg1:T23 Arg2:T21
+R18	USED-FOR Arg1:T24 Arg2:T25
+R19	COREF Arg1:T15 Arg2:T10
+R20	COREF Arg1:T12 Arg2:T11
+R21	COREF Arg1:T24 Arg2:T1

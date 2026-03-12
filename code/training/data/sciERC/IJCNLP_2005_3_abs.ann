@@ -1,0 +1,46 @@
+T1	Task 0 26	Automatic image annotation
+T2	Task 83 107	semantic image retrieval
+T3	Material 112 129	text descriptions
+T4	Task 156 197	automatically labeling the image contents
+T5	OtherScientificTerm 224 232	keywords
+T6	OtherScientificTerm 270 285	image semantics
+T7	Method 289 325	Maximum Entropy Model-based approach
+T8	Task 341 367	automatic image annotation
+T9	Task 411 419	training
+T10	OtherScientificTerm 429 446	visual vocabulary
+T11	OtherScientificTerm 461 472	blob-tokens
+T12	OtherScientificTerm 489 502	image content
+T13	Generic 535 559	statistical relationship
+T14	OtherScientificTerm 583 594	blob-tokens
+T15	OtherScientificTerm 599 607	keywords
+T16	Method 613 634	Maximum Entropy Model
+T17	Task 704 714	annotation
+T18	OtherScientificTerm 767 775	keywords
+T19	OtherScientificTerm 806 820	blob-token set
+T20	Material 885 914	medium-sized image collection
+T21	Material 943 958	Corel Photo CDs
+T22	Task 1007 1017	annotation
+T23	Generic 1038 1044	method
+T24	Method 1074 1092	annotation methods
+T25	Metric 1108 1122	mean precision
+T26	Method 1151 1172	Maximum Entropy Model
+T27	Task 1188 1214	automatic image annotation
+R1	USED-FOR Arg1:T7 Arg2:T8
+R2	USED-FOR Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T3 Arg2:T2
+R4	USED-FOR Arg1:T19 Arg2:T18
+R5	USED-FOR Arg1:T10 Arg2:T12
+R6	USED-FOR Arg1:T16 Arg2:T13
+R7	USED-FOR Arg1:T26 Arg2:T27
+R8	EVALUATE-FOR Arg1:T25 Arg2:T24
+R9	USED-FOR Arg1:T21 Arg2:T20
+R10	USED-FOR Arg1:T1 Arg2:T2
+R11	USED-FOR Arg1:T5 Arg2:T4
+R12	COREF Arg1:T1 Arg2:T8
+R13	PART-OF Arg1:T11 Arg2:T10
+R14	COMPARE Arg1:T23 Arg2:T24
+R15	COREF Arg1:T8 Arg2:T17
+R16	COREF Arg1:T17 Arg2:T22
+R17	USED-FOR Arg1:T23 Arg2:T22
+R18	USED-FOR Arg1:T24 Arg2:T22
+R19	COREF Arg1:T16 Arg2:T26

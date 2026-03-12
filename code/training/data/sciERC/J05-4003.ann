@@ -1,0 +1,28 @@
+T1	Generic 21 27	method
+T2	Task 33 63	discovering parallel sentences
+T3	Material 69 101	comparable, non-parallel corpora
+T4	Method 117 143	maximum entropy classifier
+T5	Generic 269 277	approach
+T6	Material 291 304	parallel data
+T7	Material 318 377	Chinese, Arabic, and English non-parallel newspaper corpora
+T8	Generic 445 447	it
+T9	Method 496 534	statistical machine translation system
+T10	Method 572 581	MT system
+T11	Material 640 655	parallel corpus
+T12	Material 700 719	non-parallel corpus
+T13	Generic 733 739	method
+T14	Material 809 826	scarce  resources
+R1	USED-FOR Arg1:T3 Arg2:T2
+R2	PART-OF Arg1:T6 Arg2:T7
+R3	USED-FOR Arg1:T11 Arg2:T10
+R4	USED-FOR Arg1:T1 Arg2:T2
+R5	COREF Arg1:T5 Arg2:T1
+R6	USED-FOR Arg1:T5 Arg2:T6
+R7	COREF Arg1:T10 Arg2:T9
+R8	USED-FOR Arg1:T12 Arg2:T10
+R9	CONJUNCTION Arg1:T11 Arg2:T12
+R10	COREF Arg1:T5 Arg2:T8
+R11	USED-FOR Arg1:T8 Arg2:T9
+R12	COREF Arg1:T5 Arg2:T4
+R13	USED-FOR Arg1:T14 Arg2:T13
+R14	COREF Arg1:T8 Arg2:T13

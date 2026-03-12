@@ -1,0 +1,49 @@
+T1	Task 2 45	Automatic estimation  of  word significance
+T2	OtherScientificTerm 28 45	word significance
+T3	Task 61 100	speech-based Information Retrieval (IR)
+T4	OtherScientificTerm 127 139	significance
+T5	Task 164 166	IR
+T6	Task 170 204	automatic speech recognition (ASR)
+T7	Metric 247 278	weighted word error rate (WWER)
+T8	Task 337 339	IR
+T9	Metric 354 375	word error rate (WER)
+T10	Method 417 434	decoding strategy
+T11	Metric 452 456	WWER
+T12	Method 470 498	Minimum Bayes-Risk framework
+T13	Task 553 556	ASR
+T14	Task 563 565	IR
+T15	Method 616 643	automatic estimation method
+T16	OtherScientificTerm 650 677	word significance (weights)
+T17	Task 706 708	IR
+T18	Metric 758 777	evaluation measures
+T19	Task 783 786	ASR
+T20	Task 793 795	IR
+T21	Generic 835 841	method
+T22	Task 848 889	speech-based information retrieval system
+T23	Task 912 921	IR system
+T24	Generic 942 948	method
+R1	USED-FOR Arg1:T12 Arg2:T10
+R2	CONJUNCTION Arg1:T13 Arg2:T14
+R3	EVALUATE-FOR Arg1:T15 Arg2:T16
+R4	COREF Arg1:T4 Arg2:T2
+R5	COREF Arg1:T8 Arg2:T5
+R6	COMPARE Arg1:T9 Arg2:T7
+R7	USED-FOR Arg1:T10 Arg2:T11
+R8	EVALUATE-FOR Arg1:T18 Arg2:T19
+R9	EVALUATE-FOR Arg1:T18 Arg2:T20
+R10	CONJUNCTION Arg1:T19 Arg2:T20
+R11	USED-FOR Arg1:T21 Arg2:T22
+R12	HYPONYM-OF Arg1:T22 Arg2:T23
+R13	COREF Arg1:T24 Arg2:T21
+R14	COREF Arg1:T21 Arg2:T15
+R15	COREF Arg1:T16 Arg2:T4
+R16	COREF Arg1:T17 Arg2:T14
+R17	COREF Arg1:T14 Arg2:T8
+R18	COREF Arg1:T19 Arg2:T13
+R19	COREF Arg1:T11 Arg2:T7
+R20	COREF Arg1:T6 Arg2:T13
+R21	EVALUATE-FOR Arg1:T7 Arg2:T6
+R22	COREF Arg1:T20 Arg2:T17
+R23	COREF Arg1:T23 Arg2:T20
+R24	COREF Arg1:T22 Arg2:T3
+R25	USED-FOR Arg1:T1 Arg2:T3

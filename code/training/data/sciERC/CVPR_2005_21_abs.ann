@@ -1,0 +1,38 @@
+T1	Method 0 19	Active shape models
+T2	Material 69 87	complex image data
+T3	Method 101 126	models of shape variation
+T4	Method 139 156	search algorithms
+T5	OtherScientificTerm 166 183	pri-ori knowledge
+T6	OtherScientificTerm 237 246	linearity
+T7	Method 250 253	PCA
+T8	OtherScientificTerm 255 270	non-linearities
+T9	OtherScientificTerm 276 285	rotations
+T10	Method 391 435	non-linear extensions of active shape models
+T11	Method 416 435	active shape models
+T12	OtherScientificTerm 542 558	user interaction
+T13	Task 608 641	build-ing/choosing optimal models
+T14	Generic 731 740	algorithm
+T15	Method 754 790	minimum description length principle
+T16	Method 868 883	linear modeling
+T17	Generic 978 983	model
+T18	OtherScientificTerm 996 1015	modes of variations
+T19	Generic 1030 1036	method
+T20	Material 1053 1067	synthetic data
+T21	Material 1069 1083	medical images
+T22	Material 1088 1101	hand contours
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T4 Arg2:T3
+R3	USED-FOR Arg1:T5 Arg2:T4
+R4	FEATURE-OF Arg1:T6 Arg2:T7
+R5	HYPONYM-OF Arg1:T9 Arg2:T8
+R6	COREF Arg1:T11 Arg2:T1
+R7	USED-FOR Arg1:T12 Arg2:T10
+R8	USED-FOR Arg1:T15 Arg2:T14
+R9	FEATURE-OF Arg1:T18 Arg2:T17
+R10	COREF Arg1:T19 Arg2:T17
+R11	COREF Arg1:T17 Arg2:T14
+R12	EVALUATE-FOR Arg1:T20 Arg2:T19
+R13	EVALUATE-FOR Arg1:T21 Arg2:T19
+R14	EVALUATE-FOR Arg1:T22 Arg2:T19
+R15	CONJUNCTION Arg1:T20 Arg2:T21
+R16	CONJUNCTION Arg1:T21 Arg2:T22

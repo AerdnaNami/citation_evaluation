@@ -1,0 +1,21 @@
+T1	Generic 14 23	algorithm
+T2	Task 28 70	calibrated camera relative pose estimation
+T3	OtherScientificTerm 179 196	relative rotation
+T4	OtherScientificTerm 241 261	relative translation
+T5	Generic 310 319	framework
+T6	Generic 392 401	algorithm
+T7	Material 408 431	synthetic and real data
+T8	Generic 457 466	algorithm
+T9	Method 482 513	hypothesize-and-test frameworks
+T10	Method 522 528	RANSAC
+T11	Generic 534 542	approach
+T12	OtherScientificTerm 559 588	urban and indoor environments
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T6 Arg2:T5
+R3	COREF Arg1:T5 Arg2:T1
+R4	USED-FOR Arg1:T7 Arg2:T6
+R5	COREF Arg1:T8 Arg2:T6
+R6	HYPONYM-OF Arg1:T10 Arg2:T9
+R7	COREF Arg1:T11 Arg2:T8
+R8	USED-FOR Arg1:T11 Arg2:T12
+R9	CONJUNCTION Arg1:T8 Arg2:T9

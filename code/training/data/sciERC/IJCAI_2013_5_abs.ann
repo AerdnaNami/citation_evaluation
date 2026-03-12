@@ -1,0 +1,43 @@
+T1	Method 0 22	Constraint propagation
+T2	Method 55 77	constraint programming
+T3	Method 128 177	Special-purpose constraint propagation algorithms
+T4	Method 488 516	general purpose prop-agators
+T5	OtherScientificTerm 532 542	constraint
+T6	Method 672 681	SHORTSTR2
+T7	Method 704 744	Simple Tabular Reduction algorithm STR2+
+T8	Method 759 768	SHORTSTR2
+T9	Method 813 821	SHORTGAC
+T10	Method 826 835	HAGGISGAC
+T11	OtherScientificTerm 898 908	constraint
+T12	OtherScientificTerm 924 938	short supports
+T13	OtherScientificTerm 944 961	short support set
+T14	OtherScientificTerm 1000 1023	full-length support set
+T15	Method 1035 1044	SHORTSTR2
+T16	OtherScientificTerm 1076 1087	constraints
+T17	Method 1093 1098	STR2+
+T18	Method 1147 1156	SHORTSTR2
+T19	Generic 1187 1196	algorithm
+T20	OtherScientificTerm 1209 1223	short supports
+T21	OtherScientificTerm 1229 1249	full-length supports
+T22	OtherScientificTerm 1273 1292	drop-in replacement
+T23	Method 1297 1302	STR2+
+R1	COMPARE Arg1:T8 Arg2:T9
+R2	COMPARE Arg1:T8 Arg2:T10
+R3	CONJUNCTION Arg1:T9 Arg2:T10
+R4	COREF Arg1:T6 Arg2:T8
+R5	COREF Arg1:T8 Arg2:T15
+R6	COREF Arg1:T15 Arg2:T18
+R7	COMPARE Arg1:T13 Arg2:T14
+R8	CONJUNCTION Arg1:T19 Arg2:T18
+R9	USED-FOR Arg1:T19 Arg2:T20
+R10	USED-FOR Arg1:T18 Arg2:T20
+R11	USED-FOR Arg1:T21 Arg2:T18
+R12	USED-FOR Arg1:T21 Arg2:T18
+R13	USED-FOR Arg1:T21 Arg2:T19
+R14	USED-FOR Arg1:T21 Arg2:T19
+R15	USED-FOR Arg1:T22 Arg2:T23
+R16	USED-FOR Arg1:T18 Arg2:T22
+R17	COREF Arg1:T23 Arg2:T7
+R18	COREF Arg1:T17 Arg2:T23
+R19	USED-FOR Arg1:T7 Arg2:T6
+R20	PART-OF Arg1:T1 Arg2:T2

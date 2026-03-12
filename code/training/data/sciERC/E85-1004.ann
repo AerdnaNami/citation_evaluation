@@ -1,0 +1,21 @@
+T1	Method 112 131	analytical inverses
+T2	OtherScientificTerm 138 164	compositional syntax rules
+T3	Method 197 231	Definite Clause Grammar techniques
+T4	Task 259 301	parser  returning  Montague analysis trees
+T5	Method 307 318	parser MDCC
+T6	Method 354 391	augmented Friedman - Warren algorithm
+T7	OtherScientificTerm 405 421	post referencing
+T8	OtherScientificTerm 459 492	intenslonal logic translator LILT
+T9	OtherScientificTerm 516 536	derivational history
+T10	OtherScientificTerm 556 575	reduced IL formulae
+T11	Method 601 615	Montague's PTQ
+T12	Method 626 645	basic DCG mechanism
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T6 Arg2:T5
+R3	FEATURE-OF Arg1:T10 Arg2:T9
+R4	FEATURE-OF Arg1:T7 Arg2:T6
+R5	USED-FOR Arg1:T9 Arg2:T8
+R6	COREF Arg1:T12 Arg2:T3
+R7	USED-FOR Arg1:T3 Arg2:T4
+R8	CONJUNCTION Arg1:T11 Arg2:T12
+R9	USED-FOR Arg1:T1 Arg2:T3

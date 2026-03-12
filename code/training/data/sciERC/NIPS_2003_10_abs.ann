@@ -1,0 +1,39 @@
+T1	Task 25 46	visual classification
+T2	Method 68 115	psy-chophysical and machine learning techniques
+T3	OtherScientificTerm 117 145	Frontal views of human faces
+T4	Task 162 188	gender classification task
+T5	OtherScientificTerm 236 251	gender judgment
+T6	OtherScientificTerm 253 266	reaction time
+T7	OtherScientificTerm 271 288	confidence rating
+T8	Method 312 342	hyperplane learning algorithms
+T9	Task 365 384	classification task
+T10	OtherScientificTerm 395 430	Principal Components of the texture
+T11	Method 435 472	flowfield representation of the faces
+T12	Task 478 492	classification
+T13	Method 512 531	learning algorithms
+T14	Task 556 569	face database
+T15	OtherScientificTerm 755 792	hyperplane of the learning algorithms
+T16	Method 773 792	learning algorithms
+T17	Task 819 839	human classification
+T18	Method 863 884	hyperplane algorithms
+T19	OtherScientificTerm 892 905	feature space
+T20	Task 919 933	classification
+T21	OtherScientificTerm 994 1004	hyperplane
+T22	Generic 1014 1019	those
+R1	USED-FOR Arg1:T18 Arg2:T17
+R2	EVALUATE-FOR Arg1:T14 Arg2:T13
+R3	USED-FOR Arg1:T2 Arg2:T1
+R4	USED-FOR Arg1:T3 Arg2:T4
+R5	USED-FOR Arg1:T8 Arg2:T9
+R6	USED-FOR Arg1:T10 Arg2:T8
+R7	CONJUNCTION Arg1:T11 Arg2:T10
+R8	USED-FOR Arg1:T11 Arg2:T8
+R9	COREF Arg1:T12 Arg2:T9
+R10	COREF Arg1:T9 Arg2:T1
+R11	USED-FOR Arg1:T13 Arg2:T12
+R12	COREF Arg1:T16 Arg2:T13
+R13	COREF Arg1:T13 Arg2:T8
+R14	COREF Arg1:T20 Arg2:T17
+R15	COREF Arg1:T21 Arg2:T15
+R16	FEATURE-OF Arg1:T19 Arg2:T18
+R17	COMPARE Arg1:T21 Arg2:T22

@@ -1,0 +1,40 @@
+T1	Generic 20 30	approaches
+T2	Task 60 96	monocular nonrigid 3D reconstruction
+T3	Method 98 120	Template-based methods
+T4	Method 125 167	Non-rigid Structure from Motion techniques
+T5	Generic 185 189	ones
+T6	OtherScientificTerm 223 247	poorly-textured surfaces
+T7	Generic 249 253	they
+T8	Method 283 297	3D shape model
+T9	Task 307 321	reconstruction
+T10	Generic 347 351	ones
+T11	OtherScientificTerm 374 388	shape template
+T12	Material 446 460	video sequence
+T13	OtherScientificTerm 496 520	poorly-textured surfaces
+T14	Method 552 574	template-free approach
+T15	OtherScientificTerm 595 630	poorly-textured, deformable surface
+T16	Method 657 673	surface isometry
+T17	Task 688 705	3D reconstruction
+T18	Task 713 779	joint problem of non-rigid image registration and depth estimation
+T19	Generic 818 826	approach
+T20	Task 853 871	3D reconstructions
+T21	Generic 877 904	state-of-the-art techniques
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	HYPONYM-OF Arg1:T3 Arg2:T1
+R3	HYPONYM-OF Arg1:T4 Arg2:T1
+R4	COREF Arg1:T3 Arg2:T5
+R5	USED-FOR Arg1:T5 Arg2:T6
+R6	COREF Arg1:T5 Arg2:T7
+R7	USED-FOR Arg1:T8 Arg2:T7
+R8	COREF Arg1:T4 Arg2:T10
+R9	USED-FOR Arg1:T14 Arg2:T15
+R10	USED-FOR Arg1:T18 Arg2:T17
+R11	COREF Arg1:T14 Arg2:T19
+R12	CONJUNCTION Arg1:T3 Arg2:T4
+R13	COMPARE Arg1:T19 Arg2:T21
+R14	EVALUATE-FOR Arg1:T20 Arg2:T19
+R15	EVALUATE-FOR Arg1:T20 Arg2:T21
+R16	USED-FOR Arg1:T16 Arg2:T17
+R17	COREF Arg1:T17 Arg2:T20
+R18	COREF Arg1:T2 Arg2:T17
+R19	COREF Arg1:T2 Arg2:T9

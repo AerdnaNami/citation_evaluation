@@ -1,0 +1,47 @@
+T1	Generic 26 34	approach
+T2	Task 49 63	fast detection
+T3	OtherScientificTerm 85 97	distribution
+T4	Material 101 131	positive and negative examples
+T5	Task 155 169	face detection
+T6	Task 173 191	database retrieval
+T7	Method 212 241	cascade of simple classifiers
+T8	Method 230 241	classifiers
+T9	Metric 271 286	detection rates
+T10	Metric 291 318	modest false positive rates
+T11	Generic 337 345	detector
+T12	OtherScientificTerm 366 374	features
+T13	Metric 391 406	detection rates
+T14	Metric 417 437	false positive rates
+T15	Metric 443 459	fast performance
+T16	Metric 486 501	detection rates
+T17	Metric 515 524	low error
+T18	Method 563 590	machine learning algorithms
+T19	Method 620 628	AdaBoost
+T20	OtherScientificTerm 668 679	classifiers
+T21	Generic 692 699	cascade
+T22	Task 739 753	face detection
+T23	Method 763 781	training algorithm
+T24	Method 847 855	AdaBoost
+T25	Method 867 888	face detection system
+T26	Metric 941 950	detection
+T27	Metric 958 977	false positive rate
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	CONJUNCTION Arg1:T5 Arg2:T6
+R3	COMPARE Arg1:T16 Arg2:T17
+R4	FEATURE-OF Arg1:T12 Arg2:T11
+R5	COREF Arg1:T13 Arg2:T9
+R6	COREF Arg1:T16 Arg2:T13
+R7	USED-FOR Arg1:T20 Arg2:T21
+R8	USED-FOR Arg1:T19 Arg2:T20
+R9	COMPARE Arg1:T24 Arg2:T23
+R10	USED-FOR Arg1:T23 Arg2:T22
+R11	USED-FOR Arg1:T24 Arg2:T22
+R12	EVALUATE-FOR Arg1:T9 Arg2:T8
+R13	EVALUATE-FOR Arg1:T10 Arg2:T8
+R14	CONJUNCTION Arg1:T9 Arg2:T10
+R15	USED-FOR Arg1:T7 Arg2:T11
+R16	COREF Arg1:T21 Arg2:T7
+R17	COREF Arg1:T20 Arg2:T8
+R18	COREF Arg1:T22 Arg2:T5
+R19	COREF Arg1:T25 Arg2:T1
+R20	CONJUNCTION Arg1:T26 Arg2:T27

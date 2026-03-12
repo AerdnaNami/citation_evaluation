@@ -1,0 +1,21 @@
+T1	Task 0 30	Joint matrix triangularization
+T2	OtherScientificTerm 64 84	joint eigenstructure
+T3	Task 130 147	signal processing
+T4	Task 152 168	machine learning
+T5	Task 197 239	approximate joint matrix triangularization
+T6	OtherScientificTerm 400 423	first-order upper bound
+T7	Method 452 484	approximate joint triangularizer
+T8	Method 515 541	exact joint triangularizer
+T9	Generic 568 573	bound
+T10	Method 718 732	triangularizer
+T11	OtherScientificTerm 869 885	posteriori bound
+T12	Task 890 916	joint matrix decomposition
+T13	Material 946 960	synthetic data
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	CONJUNCTION Arg1:T3 Arg2:T4
+R3	USED-FOR Arg1:T2 Arg2:T3
+R4	USED-FOR Arg1:T2 Arg2:T4
+R5	HYPONYM-OF Arg1:T5 Arg2:T1
+R6	CONJUNCTION Arg1:T7 Arg2:T8
+R7	COREF Arg1:T9 Arg2:T6
+R8	USED-FOR Arg1:T11 Arg2:T12

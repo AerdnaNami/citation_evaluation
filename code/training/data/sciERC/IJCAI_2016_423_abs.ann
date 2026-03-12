@@ -1,0 +1,38 @@
+T1	Task 0 29	Learning video representation
+T2	OtherScientificTerm 386 395	semantics
+T3	OtherScientificTerm 402 421	context information
+T4	Method 465 506	intrinsic representation of a video frame
+T5	Generic 542 550	approach
+T6	Method 564 589	deep video representation
+T7	OtherScientificTerm 608 635	local and holistic contexts
+T8	Method 664 690	triplet sampling mechanism
+T9	OtherScientificTerm 705 751	local temporal relationship of adjacent frames
+T10	Method 767 787	deep representations
+T11	OtherScientificTerm 821 849	graph structure of the video
+T12	OtherScientificTerm 856 862	priori
+T13	Generic 939 947	approach
+T14	Method 988 1046	end-to-end deep convolutional neu-ral network architecture
+T15	Generic 1091 1113	learned representation
+T16	Task 1146 1169	video recognition tasks
+T17	Task 1171 1180	retrieval
+T18	Task 1183 1197	classification
+T19	Task 1203 1222	highlight detection
+T20	Generic 1241 1262	video representations
+R1	USED-FOR Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T7 Arg2:T5
+R4	USED-FOR Arg1:T8 Arg2:T9
+R5	USED-FOR Arg1:T11 Arg2:T12
+R6	COREF Arg1:T5 Arg2:T13
+R7	USED-FOR Arg1:T14 Arg2:T13
+R8	HYPONYM-OF Arg1:T17 Arg2:T16
+R9	HYPONYM-OF Arg1:T18 Arg2:T16
+R10	HYPONYM-OF Arg1:T19 Arg2:T16
+R11	CONJUNCTION Arg1:T17 Arg2:T18
+R12	CONJUNCTION Arg1:T18 Arg2:T19
+R13	COMPARE Arg1:T15 Arg2:T20
+R14	EVALUATE-FOR Arg1:T16 Arg2:T15
+R15	EVALUATE-FOR Arg1:T16 Arg2:T20
+R16	COREF Arg1:T6 Arg2:T15
+R17	COREF Arg1:T6 Arg2:T10
+R18	USED-FOR Arg1:T10 Arg2:T8

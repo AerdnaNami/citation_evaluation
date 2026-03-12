@@ -1,0 +1,44 @@
+T1	Material 23 32	text data
+T2	Material 50 53	web
+T3	Method 65 80	language models
+T4	Task 85 113	Automatic Speech Recognition
+T5	Task 118 132	Keyword Search
+T6	Material 137 159	Low Resource Languages
+T7	Generic 190 196	genres
+T8	Material 207 212	blogs
+T9	Material 214 225	online news
+T10	Material 227 247	translated TED talks
+T11	Material 253 262	subtitles
+T12	Method 270 307	linearly interpolated language models
+T13	Material 322 327	blogs
+T14	Material 332 347	movie subtitles
+T15	Method 370 422	language modeling of conversational telephone speech
+T16	OtherScientificTerm 454 480	out-of-vocabulary keywords
+T17	Material 512 520	web data
+T18	Metric 533 560	Term Error Rate Performance
+T19	Metric 582 609	Maximum Term-Weighted Value
+T20	Task 613 627	Keyword Search
+T21	OtherScientificTerm 694 730	reduction of out-of-vocabulary items
+R1	USED-FOR Arg1:T3 Arg2:T4
+R2	USED-FOR Arg1:T6 Arg2:T5
+R3	FEATURE-OF Arg1:T2 Arg2:T1
+R4	USED-FOR Arg1:T1 Arg2:T3
+R5	HYPONYM-OF Arg1:T8 Arg2:T7
+R6	HYPONYM-OF Arg1:T9 Arg2:T7
+R7	HYPONYM-OF Arg1:T10 Arg2:T7
+R8	HYPONYM-OF Arg1:T11 Arg2:T7
+R9	CONJUNCTION Arg1:T8 Arg2:T9
+R10	CONJUNCTION Arg1:T9 Arg2:T10
+R11	CONJUNCTION Arg1:T10 Arg2:T11
+R12	USED-FOR Arg1:T14 Arg2:T15
+R13	USED-FOR Arg1:T13 Arg2:T15
+R14	CONJUNCTION Arg1:T13 Arg2:T14
+R15	EVALUATE-FOR Arg1:T19 Arg2:T20
+R16	COREF Arg1:T8 Arg2:T13
+R17	COREF Arg1:T11 Arg2:T14
+R18	CONJUNCTION Arg1:T4 Arg2:T5
+R19	USED-FOR Arg1:T17 Arg2:T20
+R20	EVALUATE-FOR Arg1:T18 Arg2:T20
+R21	USED-FOR Arg1:T3 Arg2:T5
+R22	USED-FOR Arg1:T6 Arg2:T4
+R23	USED-FOR Arg1:T12 Arg2:T15

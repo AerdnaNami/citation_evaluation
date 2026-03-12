@@ -1,0 +1,19 @@
+T1	Method 52 62	clustering
+T2	Task 67 98	inducing  semantic verb classes
+T3	Material 105 133	undisambiguated  corpus data
+T4	Generic 155 163	approach
+T5	Task 179 235	clustering  subcategorization frame (SCF)  distributions
+T6	Method 247 302	Information Bottleneck  and  nearest neighbour  methods
+T7	Task 359 386	clustering  polysemic verbs
+T8	OtherScientificTerm 371 386	polysemic verbs
+T9	Generic 399 416	evaluation scheme
+T10	OtherScientificTerm 464 472	polysemy
+T11	OtherScientificTerm 482 490	clusters
+T12	Task 560 611	semantically classifying   undisambiguated SCF data
+R1	FEATURE-OF Arg1:T10 Arg2:T11
+R2	USED-FOR Arg1:T1 Arg2:T2
+R3	USED-FOR Arg1:T3 Arg2:T1
+R4	PART-OF Arg1:T5 Arg2:T4
+R5	USED-FOR Arg1:T9 Arg2:T10
+R6	USED-FOR Arg1:T6 Arg2:T5
+R7	EVALUATE-FOR Arg1:T9 Arg2:T12

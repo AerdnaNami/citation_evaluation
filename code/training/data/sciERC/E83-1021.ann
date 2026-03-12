@@ -1,0 +1,35 @@
+T1	Task 50 71	conceptual operations
+T2	Material 110 131	natural language (NL)
+T3	Method 145 194	Structured Inheritance Network (SI-Nets) paradigm
+T4	Generic 201 211	operations
+T5	OtherScientificTerm 245 260	formal language
+T6	Generic 309 319	operations
+T7	Method 340 347	SI-Nets
+T8	Generic 365 375	operations
+T9	Method 380 387	SI-Nets
+T10	OtherScientificTerm 425 448	epistemological objects
+T11	Method 543 560	conceptual system
+T12	Material 566 568	NL
+T13	Method 620 626	KL-ONE
+T14	OtherScientificTerm 650 671	epistemological level
+T15	Generic 688 709	experimental language
+T16	Method 712 719	KL-Conc
+T17	OtherScientificTerm 738 754	conceptual level
+T18	Method 757 764	KL-Conc
+T19	Method 836 843	SI-Nets
+R1	USED-FOR Arg1:T12 Arg2:T11
+R2	FEATURE-OF Arg1:T14 Arg2:T13
+R3	FEATURE-OF Arg1:T17 Arg2:T16
+R4	COREF Arg1:T6 Arg2:T4
+R5	COREF Arg1:T7 Arg2:T3
+R6	USED-FOR Arg1:T6 Arg2:T7
+R7	COREF Arg1:T9 Arg2:T7
+R8	COREF Arg1:T8 Arg2:T6
+R9	COREF Arg1:T12 Arg2:T2
+R10	COREF Arg1:T18 Arg2:T16
+R11	COREF Arg1:T19 Arg2:T9
+R12	COMPARE Arg1:T13 Arg2:T16
+R13	USED-FOR Arg1:T8 Arg2:T9
+R14	COREF Arg1:T4 Arg2:T1
+R15	USED-FOR Arg1:T2 Arg2:T3
+R16	COREF Arg1:T16 Arg2:T15

@@ -1,0 +1,26 @@
+T1	Task 2 16	Link detection
+T2	Task 66 125	Topic Detection and Tracking tasks  of  new event detection
+T3	Task 157 177	story link detection
+T4	Task 184 203	new event detection
+T5	Task 209 235	information retrieval task
+T6	Metric 271 280	precision
+T7	Metric 287 293	recall
+T8	Generic 303 310	systems
+T9	Method 371 403	performance enhancing techniques
+T10	Method 415 437	part of speech tagging
+T11	Method 446 465	similarity measures
+T12	OtherScientificTerm 471 491	expanded  stop lists
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T5 Arg2:T3
+R4	CONJUNCTION Arg1:T3 Arg2:T4
+R5	HYPONYM-OF Arg1:T4 Arg2:T8
+R6	HYPONYM-OF Arg1:T3 Arg2:T8
+R7	EVALUATE-FOR Arg1:T7 Arg2:T8
+R8	EVALUATE-FOR Arg1:T6 Arg2:T8
+R9	CONJUNCTION Arg1:T6 Arg2:T7
+R10	PART-OF Arg1:T10 Arg2:T9
+R11	PART-OF Arg1:T11 Arg2:T9
+R12	CONJUNCTION Arg1:T10 Arg2:T11
+R13	PART-OF Arg1:T12 Arg2:T9
+R14	CONJUNCTION Arg1:T11 Arg2:T12

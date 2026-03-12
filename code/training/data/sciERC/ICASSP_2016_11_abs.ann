@@ -1,0 +1,31 @@
+T1	Task 15 96	blind separation of underdetermined instantaneous mixtures of independent signals
+T2	Generic 120 126	method
+T3	OtherScientificTerm 138 153	nonstationarity
+T4	OtherScientificTerm 161 177	original signals
+T5	Generic 183 190	signals
+T6	Generic 346 353	signals
+T7	Method 395 427	first-order autoregressive model
+T8	Generic 434 439	model
+T9	Task 477 520	blind separation of natural speech signals.
+T10	Method 523 540	separation method
+T11	OtherScientificTerm 623 646	Cramér-Rao lower bound)
+T12	Generic 682 695	assumed model
+T13	OtherScientificTerm 712 734	natural speech signals
+T14	Generic 741 747	method
+T15	Metric 765 784	separation accuracy
+T16	Generic 818 825	methods
+R1	USED-FOR Arg1:T3 Arg2:T2
+R2	COREF Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T2 Arg2:T1
+R4	COREF Arg1:T6 Arg2:T5
+R5	USED-FOR Arg1:T7 Arg2:T6
+R6	COREF Arg1:T8 Arg2:T7
+R7	USED-FOR Arg1:T8 Arg2:T9
+R8	COMPARE Arg1:T14 Arg2:T16
+R9	EVALUATE-FOR Arg1:T15 Arg2:T14
+R10	EVALUATE-FOR Arg1:T15 Arg2:T16
+R11	USED-FOR Arg1:T14 Arg2:T13
+R12	USED-FOR Arg1:T16 Arg2:T13
+R13	COREF Arg1:T14 Arg2:T10
+R14	COREF Arg1:T8 Arg2:T12
+R15	FEATURE-OF Arg1:T11 Arg2:T10

@@ -1,0 +1,32 @@
+T1	Task 52 76	object recognition tasks
+T2	Material 109 128	uncontrolled images
+T3	OtherScientificTerm 142 152	illuminant
+T4	Generic 179 186	methods
+T5	Task 191 206	color constancy
+T6	Method 219 249	surface re-flectance estimates
+T7	Material 260 279	uncalibrated images
+T8	OtherScientificTerm 327 343	background scene
+T9	Task 353 391	recognition and retrieval applications
+T10	Task 607 622	color constancy
+T11	Task 641 675	multi-view color constancy problem
+T12	Generic 691 697	method
+T13	Task 709 753	estimates of underlying surface re-flectance
+T14	OtherScientificTerm 789 807	surface properties
+T15	OtherScientificTerm 816 827	illuminants
+T16	Generic 860 866	method
+T17	OtherScientificTerm 879 900	image correspondences
+T18	Method 921 941	alignment techniques
+T19	OtherScientificTerm 973 1003	matching local region features
+T20	OtherScientificTerm 1027 1049	multi-view constraints
+T21	Task 1076 1150	estimates of both scene illuminants and object color (surface reflectance)
+T22	Method 1170 1197	baseline single-view method
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T4 Arg2:T6
+R3	USED-FOR Arg1:T7 Arg2:T6
+R4	USED-FOR Arg1:T12 Arg2:T13
+R5	USED-FOR Arg1:T16 Arg2:T17
+R6	USED-FOR Arg1:T18 Arg2:T17
+R7	USED-FOR Arg1:T20 Arg2:T21
+R8	COMPARE Arg1:T22 Arg2:T20
+R9	COREF Arg1:T5 Arg2:T10
+R10	COREF Arg1:T16 Arg2:T12

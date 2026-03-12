@@ -1,0 +1,25 @@
+T1	Task 43 65	semantic role labeling
+T2	Method 100 123	independent classifiers
+T3	Method 159 180	label sequence models
+T4	Method 187 203	Viterbi decoding
+T5	OtherScientificTerm 274 293	core argument frame
+T6	Method 389 421	joint model  of  argument frames
+T7	OtherScientificTerm 445 453	features
+T8	Method 491 523	discriminative log-linear models
+T9	Generic 531 537	system
+T10	Metric 551 566	error reduction
+T11	Method 646 669	independent  classifier
+T12	OtherScientificTerm 676 701	gold-standard parse trees
+T13	Material 707 715	PropBank
+R1	USED-FOR Arg1:T2 Arg2:T1
+R2	PART-OF Arg1:T7 Arg2:T8
+R3	CONJUNCTION Arg1:T2 Arg2:T3
+R4	COREF Arg1:T6 Arg2:T9
+R5	COMPARE Arg1:T11 Arg2:T9
+R6	PART-OF Arg1:T12 Arg2:T13
+R7	COREF Arg1:T2 Arg2:T11
+R8	EVALUATE-FOR Arg1:T10 Arg2:T9
+R9	EVALUATE-FOR Arg1:T10 Arg2:T11
+R10	USED-FOR Arg1:T4 Arg2:T3
+R11	EVALUATE-FOR Arg1:T12 Arg2:T11
+R12	EVALUATE-FOR Arg1:T12 Arg2:T9

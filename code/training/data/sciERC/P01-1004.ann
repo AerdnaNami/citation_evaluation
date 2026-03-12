@@ -1,0 +1,33 @@
+T1	OtherScientificTerm 52 65	segment order
+T2	OtherScientificTerm 70 82	segmentation
+T3	OtherScientificTerm 89 107	segment contiguity
+T4	Task 117 126	retrieval
+T5	Method 146 171	translation memory system
+T6	Method 204 270	bag-of-words and segment order-sensitive string comparison methods
+T7	Material 298 332	character- and word-segmented data
+T8	Method 368 399	local segment contiguity models
+T9	Method 418 425	N-grams
+T10	Task 475 483	indexing
+T11	Method 506 523	character bigrams
+T12	Metric 537 555	retrieval accuracy
+T13	Method 588 606	word N-gram models
+T14	Method 654 674	bag-of-words methods
+T15	Method 707 738	segment order-sensitive methods
+T16	Metric 753 771	retrieval accuracy
+R1	USED-FOR Arg1:T7 Arg2:T6
+R2	USED-FOR Arg1:T11 Arg2:T10
+R3	COMPARE Arg1:T14 Arg2:T15
+R4	EVALUATE-FOR Arg1:T4 Arg2:T5
+R5	CONJUNCTION Arg1:T8 Arg2:T6
+R6	FEATURE-OF Arg1:T9 Arg2:T8
+R7	CONJUNCTION Arg1:T1 Arg2:T2
+R8	CONJUNCTION Arg1:T2 Arg2:T3
+R9	USED-FOR Arg1:T1 Arg2:T5
+R10	USED-FOR Arg1:T2 Arg2:T5
+R11	USED-FOR Arg1:T3 Arg2:T5
+R12	COMPARE Arg1:T11 Arg2:T13
+R13	EVALUATE-FOR Arg1:T16 Arg2:T15
+R14	EVALUATE-FOR Arg1:T16 Arg2:T14
+R15	COREF Arg1:T16 Arg2:T12
+R16	EVALUATE-FOR Arg1:T12 Arg2:T13
+R17	EVALUATE-FOR Arg1:T12 Arg2:T11

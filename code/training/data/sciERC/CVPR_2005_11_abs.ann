@@ -1,0 +1,22 @@
+T1	Method 21 37	real-time system
+T2	Task 42 84	multiple object tracking in dynamic scenes
+T3	Generic 117 123	system
+T4	OtherScientificTerm 152 188	long-duration and complete occlusion
+T5	OtherScientificTerm 199 214	prior knowledge
+T6	OtherScientificTerm 225 230	shape
+T7	OtherScientificTerm 234 251	motion of objects
+T8	Generic 257 263	system
+T9	Task 290 298	tracking
+T10	OtherScientificTerm 312 322	frame rate
+T11	OtherScientificTerm 340 350	image size
+T12	Material 420 435	video sequences
+T13	OtherScientificTerm 487 524	long-duration and complete occlusions
+T14	OtherScientificTerm 528 547	changing background
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T1 Arg2:T3
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	COREF Arg1:T3 Arg2:T8
+R5	EVALUATE-FOR Arg1:T9 Arg2:T8
+R6	FEATURE-OF Arg1:T5 Arg2:T6
+R7	FEATURE-OF Arg1:T5 Arg2:T7
+R8	CONJUNCTION Arg1:T6 Arg2:T7

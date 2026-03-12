@@ -1,0 +1,27 @@
+T1	Method 4 28	domain independent model
+T2	Task 51 98	automated interpretation  of  nominal compounds
+T3	OtherScientificTerm 81 98	nominal compounds
+T4	Material 104 111	English
+T5	Generic 120 125	model
+T6	OtherScientificTerm 152 186	productive rules of interpretation
+T7	OtherScientificTerm 217 262	morpho-syntactic and semantic characteristics
+T8	OtherScientificTerm 272 292	nominal constituents
+T9	Method 335 359	Pustejovsky's principles
+T10	OtherScientificTerm 376 399	predicative information
+T11	OtherScientificTerm 418 426	nominals
+T12	OtherScientificTerm 483 516	generalizable semantic principles
+T13	OtherScientificTerm 523 559	domain-specific semantic information
+T14	Generic 611 616	model
+T15	Task 640 669	interpretation  of  compounds
+T16	OtherScientificTerm 717 737	semantic information
+R1	FEATURE-OF Arg1:T7 Arg2:T8
+R2	FEATURE-OF Arg1:T11 Arg2:T10
+R3	COMPARE Arg1:T12 Arg2:T13
+R4	COREF Arg1:T5 Arg2:T1
+R5	USED-FOR Arg1:T5 Arg2:T6
+R6	USED-FOR Arg1:T7 Arg2:T6
+R7	COREF Arg1:T14 Arg2:T5
+R8	COREF Arg1:T8 Arg2:T3
+R9	USED-FOR Arg1:T1 Arg2:T2
+R10	FEATURE-OF Arg1:T4 Arg2:T3
+R11	USED-FOR Arg1:T14 Arg2:T15

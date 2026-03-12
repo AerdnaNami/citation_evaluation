@@ -1,0 +1,26 @@
+T1	Method 30 69	bidirectional grammar generation system
+T2	Method 79 116	feature structure-directed generation
+T3	Task 137 164	dialogue translation system
+T4	Generic 172 178	system
+T5	OtherScientificTerm 189 213	typed feature structures
+T6	OtherScientificTerm 231 250	top-down derivation
+T7	Method 280 297	generation system
+T8	OtherScientificTerm 310 340	disjunctive feature structures
+T9	OtherScientificTerm 381 396	derivation tree
+T10	Method 405 412	grammar
+T11	Generic 424 433	generator
+T12	OtherScientificTerm 473 492	speaker's intention
+T13	OtherScientificTerm 500 518	telephone dialogue
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	USED-FOR Arg1:T5 Arg2:T6
+R3	USED-FOR Arg1:T8 Arg2:T7
+R4	USED-FOR Arg1:T10 Arg2:T11
+R5	HYPONYM-OF Arg1:T2 Arg2:T1
+R6	USED-FOR Arg1:T1 Arg2:T3
+R7	COREF Arg1:T4 Arg2:T2
+R8	USED-FOR Arg1:T5 Arg2:T4
+R9	COREF Arg1:T7 Arg2:T4
+R10	COREF Arg1:T11 Arg2:T7
+R11	FEATURE-OF Arg1:T13 Arg2:T12
+R12	USED-FOR Arg1:T10 Arg2:T12
+R13	USED-FOR Arg1:T8 Arg2:T9

@@ -1,0 +1,26 @@
+T1	Generic 14 23	framework
+T2	Task 29 43	word alignment
+T3	Method 55 72	log-linear models
+T4	Material 80 97	knowledge sources
+T5	OtherScientificTerm 115 132	feature functions
+T6	Method 250 267	Log-linear models
+T7	Method 276 304	statistical alignment models
+T8	OtherScientificTerm 346 367	syntactic information
+T9	OtherScientificTerm 393 428	IBM Model 3 alignment probabilities
+T10	OtherScientificTerm 432 450	POS correspondence
+T11	OtherScientificTerm 458 487	bilingual dictionary coverage
+T12	OtherScientificTerm 493 501	features
+T13	Method 531 548	log-linear models
+T14	Method 576 598	IBM translation models
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T6 Arg2:T7
+R3	USED-FOR Arg1:T11 Arg2:T12
+R4	COMPARE Arg1:T13 Arg2:T14
+R5	USED-FOR Arg1:T1 Arg2:T2
+R6	USED-FOR Arg1:T3 Arg2:T1
+R7	USED-FOR Arg1:T8 Arg2:T6
+R8	USED-FOR Arg1:T10 Arg2:T12
+R9	USED-FOR Arg1:T9 Arg2:T12
+R10	CONJUNCTION Arg1:T9 Arg2:T10
+R11	CONJUNCTION Arg1:T10 Arg2:T11
+R12	COREF Arg1:T6 Arg2:T13

@@ -1,0 +1,28 @@
+T1	Task 32 78	full scale two-level morphological description
+T2	Material 121 144	Turkish word structures
+T3	Generic 151 162	description
+T4	Method 195 215	PC-KIMMO environment
+T5	Material 253 270	root word lexicon
+T6	OtherScientificTerm 354 390	phonological and morphological rules
+T7	Material 416 423	Turkish
+T8	Material 432 454	agglutinative language
+T9	OtherScientificTerm 462 477	word structures
+T10	OtherScientificTerm 490 554	productive affixations of derivational and inflectional suffixes
+T11	Material 574 581	Turkish
+T12	OtherScientificTerm 588 600	finite-state
+T13	OtherScientificTerm 650 659	Morphemes
+T14	OtherScientificTerm 742 758	verbal structure
+T15	OtherScientificTerm 790 810	adverbial constructs
+T16	Task 818 871	surface realizations  of  morphological constructions
+T17	OtherScientificTerm 918 932	phonetic rules
+T18	OtherScientificTerm 943 956	vowel harmony
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T3 Arg2:T1
+R3	USED-FOR Arg1:T4 Arg2:T3
+R4	USED-FOR Arg1:T5 Arg2:T3
+R5	HYPONYM-OF Arg1:T7 Arg2:T8
+R6	COREF Arg1:T11 Arg2:T7
+R7	PART-OF Arg1:T10 Arg2:T9
+R8	HYPONYM-OF Arg1:T18 Arg2:T17
+R9	USED-FOR Arg1:T17 Arg2:T16
+R10	FEATURE-OF Arg1:T9 Arg2:T8

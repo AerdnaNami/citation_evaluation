@@ -1,0 +1,30 @@
+T1	Method 6 26	TIPSTER Architecture
+T2	Task 80 97	text applications
+T3	Method 116 146	common text processing modules
+T4	OtherScientificTerm 156 171	user interfaces
+T5	Generic 215 227	applications
+T6	OtherScientificTerm 270 306	user interface styles or conventions
+T7	OtherScientificTerm 330 364	TIPSTER Architecture specification
+T8	Task 443 463	TIPSTER applications
+T9	OtherScientificTerm 504 544	Graphical User Interface (GUI) functions
+T10	OtherScientificTerm 554 558	GUIs
+T11	Method 584 627	CRL's TIPSTER User Interface Toolkit (TUIT)
+T12	Method 631 635	TUIT
+T13	Method 643 659	software library
+T14	OtherScientificTerm 692 728	multilingual TIPSTER user interfaces
+T15	Method 779 783	TUIT
+T16	Method 821 836	TIPSTER modules
+T17	Method 976 980	TUIT
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T2
+R3	USED-FOR Arg1:T4 Arg2:T5
+R4	USED-FOR Arg1:T9 Arg2:T8
+R5	COREF Arg1:T10 Arg2:T9
+R6	USED-FOR Arg1:T11 Arg2:T10
+R7	COREF Arg1:T12 Arg2:T11
+R8	HYPONYM-OF Arg1:T12 Arg2:T13
+R9	USED-FOR Arg1:T12 Arg2:T14
+R10	COREF Arg1:T15 Arg2:T12
+R11	USED-FOR Arg1:T15 Arg2:T16
+R12	COREF Arg1:T17 Arg2:T15
+R13	COREF Arg1:T16 Arg2:T1

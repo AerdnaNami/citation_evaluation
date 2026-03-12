@@ -1,0 +1,28 @@
+T1	Material 22 58	out-of-domain acoustic training data
+T2	Method 72 89	speech recognizer
+T3	Material 170 199	Wallstreet Journal (WSJ) data
+T4	Method 211 221	recognizer
+T5	Material 261 277	Phonebook domain
+T6	OtherScientificTerm 296 324	common language (US English)
+T7	OtherScientificTerm 376 408	microphone vs. telephone channel
+T8	OtherScientificTerm 410 427	continuous speech
+T9	OtherScientificTerm 432 446	isolated words
+T10	Method 548 570	WSJ-trained recognizer
+T11	Material 581 596	adaptation data
+T12	Material 613 638	Phonebook training corpus
+T13	Task 677 688	recognition
+T14	OtherScientificTerm 732 740	mismatch
+T15	Task 780 791	recognition
+T16	Method 809 850	Phonebook-trained baseline acoustic model
+T17	Material 871 898	out-of-domain training data
+T18	Method 924 963	adaptation and normalization techniques
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T4
+R3	EVALUATE-FOR Arg1:T5 Arg2:T4
+R4	PART-OF Arg1:T11 Arg2:T12
+R5	USED-FOR Arg1:T11 Arg2:T10
+R6	USED-FOR Arg1:T10 Arg2:T13
+R7	USED-FOR Arg1:T16 Arg2:T15
+R8	USED-FOR Arg1:T17 Arg2:T16
+R9	COREF Arg1:T13 Arg2:T15
+R10	COREF Arg1:T2 Arg2:T4

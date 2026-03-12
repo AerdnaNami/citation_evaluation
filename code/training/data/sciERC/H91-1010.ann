@@ -1,0 +1,24 @@
+T1	Method 45 63	Lincoln CSR system
+T2	Method 90 108	semiphone modeling
+T3	Method 152 166	duration model
+T4	Metric 185 195	error rate
+T5	Method 219 249	triphone and semiphone systems
+T6	Method 259 276	training strategy
+T7	Method 408 434	rapid adaptation technique
+T8	Method 450 460	recognizer
+T9	Method 488 519	bigram back-off language models
+T10	Generic 526 532	system
+T11	Task 564 571	RM task
+T12	Task 581 594	ATIS CSR task
+T13	Task 701 722	RM and ATIS CSR tasks
+R1	USED-FOR Arg1:T9 Arg2:T8
+R2	USED-FOR Arg1:T3 Arg2:T5
+R3	HYPONYM-OF Arg1:T2 Arg2:T5
+R4	HYPONYM-OF Arg1:T11 Arg2:T13
+R5	HYPONYM-OF Arg1:T12 Arg2:T13
+R6	USED-FOR Arg1:T10 Arg2:T11
+R7	USED-FOR Arg1:T10 Arg2:T12
+R8	CONJUNCTION Arg1:T11 Arg2:T12
+R9	EVALUATE-FOR Arg1:T4 Arg2:T5
+R10	COREF Arg1:T1 Arg2:T10
+R11	USED-FOR Arg1:T7 Arg2:T6

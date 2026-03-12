@@ -1,0 +1,20 @@
+T1	Method 26 30	Paul
+T2	Method 37 68	computer text generation system
+T3	Material 90 103	cohesive text
+T4	OtherScientificTerm 125 146	lexical substitutions
+T5	Generic 169 175	system
+T6	OtherScientificTerm 225 242	pronominalization
+T7	OtherScientificTerm 247 273	superordinate substitution
+T8	OtherScientificTerm 281 314	definite  noun phrase reiteration
+T9	Generic 322 328	system
+T10	Task 355 375	antecedence recovery
+T11	OtherScientificTerm 394 415	lexical substitutions
+R1	COMPARE Arg1:T6 Arg2:T7
+R2	USED-FOR Arg1:T10 Arg2:T11
+R3	HYPONYM-OF Arg1:T1 Arg2:T2
+R4	USED-FOR Arg1:T2 Arg2:T3
+R5	COREF Arg1:T1 Arg2:T5
+R6	COREF Arg1:T5 Arg2:T9
+R7	COMPARE Arg1:T7 Arg2:T8
+R8	USED-FOR Arg1:T9 Arg2:T10
+R9	USED-FOR Arg1:T4 Arg2:T1

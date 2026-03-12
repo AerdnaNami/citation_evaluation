@@ -1,0 +1,62 @@
+T1	Method 28 73	digital signal processor (DSP) implementation
+T2	Method 77 120	real-time statistical voice conversion (VC)
+T3	Task 125 150	silent speech enhancement
+T4	Task 155 190	electrolaryngeal speech enhancement
+T5	OtherScientificTerm 197 220	silent speech interface
+T6	Material 234 258	non-audible murmur (NAM)
+T7	Material 298 312	audible speech
+T8	Material 332 355	Electrolaryngeal speech
+T9	Material 387 404	alaryngeal speech
+T10	Method 432 447	speaking method
+T11	OtherScientificTerm 452 466	laryngectomees
+T12	Metric 481 494	sound quality
+T13	Material 498 501	NAM
+T14	Material 498 529	NAM and electrolaryngeal speech
+T15	Method 564 566	VC
+T16	Generic 645 647	it
+T17	Generic 685 692	devices
+T18	Material 698 732	sufficient computational resources
+T19	Generic 755 762	devices
+T20	Material 797 828	limited computational resources
+T21	Method 911 923	real-time VC
+T22	OtherScientificTerm 929 932	DSP
+T23	Method 955 981	speech enhancement systems
+T24	Method 991 1003	real-time VC
+T25	Generic 1005 1008	one
+T26	Material 1014 1017	NAM
+T27	Material 1023 1038	whispered voice
+T28	Generic 1047 1052	other
+T29	Material 1058 1081	electrolaryngeal speech
+T30	Material 1087 1100	natural voice
+T31	Generic 1121 1128	methods
+T32	Metric 1142 1160	computational cost
+T33	Metric 1178 1197	conversion accuracy
+T34	Method 1249 1261	real-time VC
+T35	OtherScientificTerm 1289 1292	DSP
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T2 Arg2:T3
+R3	USED-FOR Arg1:T2 Arg2:T4
+R4	CONJUNCTION Arg1:T3 Arg2:T4
+R5	HYPONYM-OF Arg1:T8 Arg2:T9
+R6	USED-FOR Arg1:T10 Arg2:T11
+R7	USED-FOR Arg1:T10 Arg2:T9
+R8	COREF Arg1:T13 Arg2:T6
+R9	EVALUATE-FOR Arg1:T12 Arg2:T14
+R10	USED-FOR Arg1:T22 Arg2:T21
+R11	COREF Arg1:T21 Arg2:T24
+R12	COREF Arg1:T6 Arg2:T26
+R13	EVALUATE-FOR Arg1:T32 Arg2:T31
+R14	CONJUNCTION Arg1:T32 Arg2:T33
+R15	EVALUATE-FOR Arg1:T33 Arg2:T31
+R16	COREF Arg1:T24 Arg2:T34
+R17	COREF Arg1:T22 Arg2:T35
+R18	USED-FOR Arg1:T35 Arg2:T34
+R19	USED-FOR Arg1:T24 Arg2:T23
+R20	HYPONYM-OF Arg1:T25 Arg2:T23
+R21	HYPONYM-OF Arg1:T28 Arg2:T23
+R22	CONJUNCTION Arg1:T25 Arg2:T28
+R23	COREF Arg1:T15 Arg2:T16
+R24	FEATURE-OF Arg1:T18 Arg2:T17
+R25	FEATURE-OF Arg1:T20 Arg2:T19
+R26	USED-FOR Arg1:T17 Arg2:T16
+R27	COREF Arg1:T2 Arg2:T21

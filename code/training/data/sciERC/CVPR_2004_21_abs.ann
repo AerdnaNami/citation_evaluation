@@ -1,0 +1,48 @@
+T1	Task 0 20	Uncertainty handling
+T2	Task 52 66	shape tracking
+T3	Method 100 171	fusion of measurement information with system dynamics and shape priors
+T4	Task 193 201	tracking
+T5	Material 223 235	noisy images
+T6	Material 244 264	ultrasound sequences
+T7	Generic 291 299	approach
+T8	OtherScientificTerm 309 328	user initialization
+T9	Method 336 352	tracking process
+T10	Task 376 409	automatic initial-ization problem
+T11	Method 424 447	boosted shape detection
+T12	Method 453 480	generic measurement process
+T13	Generic 497 499	it
+T14	Method 507 525	tracking framework
+T15	OtherScientificTerm 556 585	local detection uncertainties
+T16	OtherScientificTerm 556 614	local detection uncertainties of multiple shape candidates
+T17	OtherScientificTerm 622 637	shape alignment
+T18	OtherScientificTerm 655 676	predicted shape prior
+T19	OtherScientificTerm 694 714	subspace constraints
+T20	Method 797 818	posterior shape model
+T21	OtherScientificTerm 841 859	maximum likelihood
+T22	Generic 865 874	framework
+T23	Task 894 927	automatic tracking of endocardium
+T24	OtherScientificTerm 916 927	endocardium
+T25	Material 931 970	ultrasound sequences of the human heart
+T26	Task 981 990	detection
+T27	Task 1002 1010	tracking
+T28	Generic 1058 1068	approaches
+T29	OtherScientificTerm 1073 1096	inter-expert variations
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	COREF Arg1:T4 Arg2:T2
+R3	HYPONYM-OF Arg1:T6 Arg2:T5
+R4	USED-FOR Arg1:T11 Arg2:T10
+R5	USED-FOR Arg1:T8 Arg2:T9
+R6	USED-FOR Arg1:T8 Arg2:T7
+R7	USED-FOR Arg1:T12 Arg2:T11
+R8	COREF Arg1:T10 Arg2:T13
+R9	PART-OF Arg1:T13 Arg2:T14
+R10	USED-FOR Arg1:T21 Arg2:T20
+R11	USED-FOR Arg1:T22 Arg2:T23
+R12	CONJUNCTION Arg1:T28 Arg2:T29
+R13	COREF Arg1:T4 Arg2:T27
+R14	CONJUNCTION Arg1:T26 Arg2:T27
+R15	COREF Arg1:T22 Arg2:T14
+R16	USED-FOR Arg1:T4 Arg2:T5
+R17	COREF Arg1:T3 Arg2:T7
+R18	USED-FOR Arg1:T3 Arg2:T4
+R19	PART-OF Arg1:T24 Arg2:T25

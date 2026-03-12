@@ -1,0 +1,10 @@
+T1	OtherScientificTerm 33 55	computational problems
+T2	Method 74 106	probabilistic translation models
+T3	Task 162 181	machine translation
+T4	Generic 192 198	models
+T5	Method 227 262	probabilistic context-free grammars
+T6	OtherScientificTerm 367 395	exponential time lower-bound
+R1	FEATURE-OF Arg1:T1 Arg2:T2
+R2	FEATURE-OF Arg1:T5 Arg2:T4
+R3	USED-FOR Arg1:T2 Arg2:T3
+R4	COREF Arg1:T4 Arg2:T2

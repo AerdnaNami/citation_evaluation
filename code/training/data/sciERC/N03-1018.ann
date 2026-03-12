@@ -1,0 +1,29 @@
+T1	Method 32 98	generative probabilistic optical character recognition (OCR) model
+T2	Method 145 168	noisy channel framework
+T3	OtherScientificTerm 273 283	OCR system
+T4	Generic 292 297	model
+T5	Task 323 339	error correction
+T6	Task 360 375	post-processing
+T7	OtherScientificTerm 382 415	output  of black-box  OCR systems
+T8	OtherScientificTerm 404 415	OCR systems
+T9	Generic 434 436	it
+T10	Task 454 463	NLP tasks
+T11	Generic 504 509	model
+T12	Method 521 540	finite-state models
+T13	Generic 561 566	model
+T14	Metric 604 633	character and word error rate
+T15	Task 679 725	automatic extraction  of  translation lexicons
+T16	Material 733 745	printed text
+R1	USED-FOR Arg1:T4 Arg2:T5
+R2	USED-FOR Arg1:T12 Arg2:T11
+R3	EVALUATE-FOR Arg1:T14 Arg2:T13
+R4	COREF Arg1:T4 Arg2:T1
+R5	USED-FOR Arg1:T4 Arg2:T6
+R6	PART-OF Arg1:T6 Arg2:T5
+R7	USED-FOR Arg1:T9 Arg2:T10
+R8	COREF Arg1:T11 Arg2:T4
+R9	COREF Arg1:T7 Arg2:T9
+R10	COREF Arg1:T3 Arg2:T8
+R11	COREF Arg1:T13 Arg2:T11
+R12	USED-FOR Arg1:T16 Arg2:T15
+R13	EVALUATE-FOR Arg1:T15 Arg2:T13

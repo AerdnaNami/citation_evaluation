@@ -1,0 +1,37 @@
+T1	Generic 19 28	algorithm
+T2	Task 54 100	3D geometric structure of outdoor video scenes
+T3	Method 113 147	spatio-temporal video segmentation
+T4	OtherScientificTerm 164 177	dynamic scene
+T5	OtherScientificTerm 203 220	geometric classes
+T6	Method 251 269	region-classifiers
+T7	OtherScientificTerm 290 320	appearance and motion features
+T8	OtherScientificTerm 409 438	segmentation hierarchy levels
+T9	OtherScientificTerm 477 497	granularity a priori
+T10	Generic 527 534	dataset
+T11	OtherScientificTerm 538 564	geometric context of video
+T12	Generic 581 587	method
+T13	OtherScientificTerm 625 649	annotated outdoor videos
+T14	Generic 704 711	dataset
+T15	Method 726 760	semi-supervised learning framework
+T16	Material 783 795	labeled data
+T17	OtherScientificTerm 801 828	high confidence predictions
+T18	OtherScientificTerm 843 857	unlabeled data
+T19	Generic 863 869	system
+T20	OtherScientificTerm 905 931	geometric context of video
+T21	Metric 946 954	accuracy
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T6 Arg2:T5
+R3	USED-FOR Arg1:T3 Arg2:T4
+R4	PART-OF Arg1:T13 Arg2:T10
+R5	USED-FOR Arg1:T15 Arg2:T16
+R6	USED-FOR Arg1:T7 Arg2:T6
+R7	EVALUATE-FOR Arg1:T10 Arg2:T12
+R8	COREF Arg1:T12 Arg2:T1
+R9	USED-FOR Arg1:T18 Arg2:T17
+R10	USED-FOR Arg1:T17 Arg2:T15
+R11	EVALUATE-FOR Arg1:T21 Arg2:T19
+R12	USED-FOR Arg1:T19 Arg2:T20
+R13	PART-OF Arg1:T5 Arg2:T4
+R14	COREF Arg1:T12 Arg2:T19
+R15	FEATURE-OF Arg1:T11 Arg2:T10
+R16	COREF Arg1:T10 Arg2:T14

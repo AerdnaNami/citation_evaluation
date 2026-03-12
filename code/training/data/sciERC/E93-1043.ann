@@ -1,0 +1,25 @@
+T1	Method 18 41	morphological component
+T2	OtherScientificTerm 112 125	derived words
+T3	Generic 145 151	system
+T4	OtherScientificTerm 174 194	two-level morphology
+T5	Method 233 259	feature-based word grammar
+T6	OtherScientificTerm 276 296	hierarchical lexicon
+T7	OtherScientificTerm 300 319	Polymorphemic stems
+T8	OtherScientificTerm 373 401	compositional interpretation
+T9	Generic 417 423	system
+T10	OtherScientificTerm 480 493	derived words
+T11	OtherScientificTerm 557 576	words formed ad-hoc
+T12	Generic 611 617	system
+T13	Method 636 646	CommonLisp
+T14	Material 685 702	German derivation
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T6 Arg2:T5
+R3	FEATURE-OF Arg1:T8 Arg2:T7
+R4	CONJUNCTION Arg1:T4 Arg2:T5
+R5	USED-FOR Arg1:T4 Arg2:T3
+R6	COREF Arg1:T3 Arg2:T1
+R7	COREF Arg1:T10 Arg2:T2
+R8	COREF Arg1:T9 Arg2:T3
+R9	COREF Arg1:T12 Arg2:T9
+R10	EVALUATE-FOR Arg1:T14 Arg2:T12
+R11	USED-FOR Arg1:T13 Arg2:T12

@@ -1,0 +1,31 @@
+T1	Method 31 74	range concatenation grammar [RCG] formalism
+T2	Task 138 141	NLP
+T3	OtherScientificTerm 161 196	range concatenation languages [RCL]
+T4	OtherScientificTerm 216 231	polynomial time
+T5	Method 253 275	grammatical formalisms
+T6	Method 312 316	RCGs
+T7	Metric 344 378	worst-case parsing time complexity
+T8	Method 435 438	RCG
+T9	Method 447 469	tree adjoining grammar
+T10	OtherScientificTerm 489 499	O(n6) time
+T11	Method 530 547	parsing technique
+T12	Method 606 617	RCL parsers
+T13	Method 626 651	non-deterministic parsing
+T14	Method 669 680	main parser
+T15	OtherScientificTerm 689 699	language L
+T16	OtherScientificTerm 743 767	shared derivation forest
+T17	Method 788 798	RCL parser
+T18	Generic 879 885	method
+T19	Method 892 921	wide coverage English grammar
+R1	USED-FOR Arg1:T1 Arg2:T2
+R2	FEATURE-OF Arg1:T4 Arg2:T3
+R3	FEATURE-OF Arg1:T10 Arg2:T9
+R4	USED-FOR Arg1:T11 Arg2:T12
+R5	COREF Arg1:T1 Arg2:T6
+R6	EVALUATE-FOR Arg1:T7 Arg2:T5
+R7	COREF Arg1:T6 Arg2:T8
+R8	USED-FOR Arg1:T14 Arg2:T15
+R9	EVALUATE-FOR Arg1:T19 Arg2:T18
+R10	COREF Arg1:T12 Arg2:T17
+R11	COREF Arg1:T11 Arg2:T18
+R12	USED-FOR Arg1:T17 Arg2:T16

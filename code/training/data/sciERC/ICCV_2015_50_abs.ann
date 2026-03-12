@@ -1,0 +1,44 @@
+T1	Task 0 51	Detecting fine-grained subtle changes among a scene
+T2	Method 98 122	change detection methods
+T3	Task 136 177	detecting large-scale significant changes
+T4	Method 231 250	end-to-end approach
+T5	Generic 271 278	problem
+T6	Method 294 318	active camera relocation
+T7	Metric 429 450	detection sensitivity
+T8	Metric 455 463	accuracy
+T9	OtherScientificTerm 546 559	illuminations
+T10	Task 680 709	fine-grained change detection
+T11	Task 715 741	joint optimization problem
+T12	Generic 759 766	factors
+T13	OtherScientificTerm 774 806	normal-aware lighting difference
+T14	OtherScientificTerm 808 839	camera geometry correction flow
+T15	OtherScientificTerm 845 867	real scene change mask
+T16	Generic 888 895	factors
+T17	OtherScientificTerm 901 922	coarse-to-fine manner
+T18	OtherScientificTerm 944 959	change decision
+T19	Method 963 980	rank minimization
+T20	Material 997 1016	real-world datasets
+T21	Task 1030 1080	fine-grained change detection of misaligned scenes
+T22	OtherScientificTerm 1087 1122	varied multiple lighting conditions
+T23	Generic 1183 1191	approach
+T24	Method 1214 1238	change detection methods
+T25	OtherScientificTerm 1270 1288	real scene changes
+T26	OtherScientificTerm 1315 1334	lighting variations
+R1	USED-FOR Arg1:T2 Arg2:T3
+R2	COREF Arg1:T3 Arg2:T5
+R3	USED-FOR Arg1:T4 Arg2:T5
+R4	USED-FOR Arg1:T11 Arg2:T10
+R5	HYPONYM-OF Arg1:T13 Arg2:T12
+R6	HYPONYM-OF Arg1:T14 Arg2:T12
+R7	HYPONYM-OF Arg1:T15 Arg2:T12
+R8	FEATURE-OF Arg1:T12 Arg2:T11
+R9	COREF Arg1:T12 Arg2:T16
+R10	USED-FOR Arg1:T17 Arg2:T16
+R11	USED-FOR Arg1:T19 Arg2:T18
+R12	FEATURE-OF Arg1:T22 Arg2:T21
+R13	EVALUATE-FOR Arg1:T20 Arg2:T21
+R14	COMPARE Arg1:T23 Arg2:T24
+R15	USED-FOR Arg1:T23 Arg2:T25
+R16	CONJUNCTION Arg1:T13 Arg2:T14
+R17	CONJUNCTION Arg1:T14 Arg2:T15
+R18	COREF Arg1:T4 Arg2:T23

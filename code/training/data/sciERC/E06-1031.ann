@@ -1,0 +1,33 @@
+T1	Metric 24 43	evaluation measures
+T2	Task 50 69	machine translation
+T3	Metric 252 270	evaluation measure
+T4	OtherScientificTerm 297 313	block reordering
+T5	OtherScientificTerm 322 336	edit operation
+T6	Generic 345 352	measure
+T7	OtherScientificTerm 384 398	quadratic time
+T8	Metric 438 457	evaluation measures
+T9	OtherScientificTerm 499 532	word-dependent substitution costs
+T10	Generic 564 571	measure
+T11	OtherScientificTerm 579 593	human judgment
+T12	Material 650 664	language pairs
+T13	Generic 708 710	it
+T14	Generic 754 764	approaches
+T15	Metric 769 795	sentence-level correlation
+T16	OtherScientificTerm 830 863	word dependent substitution costs
+T17	Metric 929 958	automatic evaluation measures
+T18	OtherScientificTerm 965 979	human judgment
+R1	EVALUATE-FOR Arg1:T1 Arg2:T2
+R2	USED-FOR Arg1:T3 Arg2:T4
+R3	USED-FOR Arg1:T9 Arg2:T8
+R4	CONJUNCTION Arg1:T17 Arg2:T18
+R5	COREF Arg1:T6 Arg2:T3
+R6	FEATURE-OF Arg1:T7 Arg2:T6
+R7	COMPARE Arg1:T10 Arg2:T11
+R8	COREF Arg1:T10 Arg2:T8
+R9	COREF Arg1:T8 Arg2:T6
+R10	COREF Arg1:T13 Arg2:T10
+R11	COMPARE Arg1:T13 Arg2:T14
+R12	EVALUATE-FOR Arg1:T15 Arg2:T14
+R13	COREF Arg1:T17 Arg2:T13
+R14	USED-FOR Arg1:T5 Arg2:T4
+R15	EVALUATE-FOR Arg1:T15 Arg2:T13
